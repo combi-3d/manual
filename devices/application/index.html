@@ -1,0 +1,917 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Manual of CoMBI">
+      
+      
+      
+        <meta name="author" content="TJK">
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
+    
+    
+      
+        <title>アプリケーション - Manual of CoMBI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Manual of CoMBI" class="md-header-nav__button md-logo" aria-label="Manual of CoMBI">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Manual of CoMBI
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              アプリケーション
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Manual of CoMBI" class="md-nav__button md-logo" aria-label="Manual of CoMBI">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Manual of CoMBI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../index.html" class="md-nav__link">
+      ホーム
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" data-md-state="indeterminate" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      CoMBIの導入
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="CoMBIの導入" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        CoMBIの導入
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../system/index.html" class="md-nav__link">
+      CoMBI装置の概要
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../camera/index.html" class="md-nav__link">
+      カメラと周辺部品
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../selfmade/index.html" class="md-nav__link">
+      自作装置
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../computer/index.html" class="md-nav__link">
+      コンピュータと画像ファイル
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="index.html" class="md-nav__link">
+      アプリケーション
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" data-md-state="indeterminate" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      CoMBIの操作
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="CoMBIの操作" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        CoMBIの操作
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../operation/combi-c/index.html" class="md-nav__link">
+      クリオスタット型CoMBI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../operation/combi-s/index.html" class="md-nav__link">
+      新型CoMBI coming soon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../operation/combi-r/index.html" class="md-nav__link">
+      新型CoMBI ccoming soon
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" data-md-state="indeterminate" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      画像処理
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="画像処理" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        画像処理
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../image-processing/introduction/index.html" class="md-nav__link">
+      画像処理で生成されるファイル
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../image-processing/rawjpeg/index.html" class="md-nav__link">
+      RAW-JPEG変換
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../image-processing/scale/index.html" class="md-nav__link">
+      画像の縮小
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../image-processing/registration/index.html" class="md-nav__link">
+      ズレ補正（Image registration）
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../image-processing/3dslicer/index.html" class="md-nav__link">
+      3D再構築、3D slicer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../image-processing/horos/index.html" class="md-nav__link">
+      3D再構築、Horos/OsiriX
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../gallery/gallery/index.html" class="md-nav__link">
+      作品集
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../publication/publication/index.html" class="md-nav__link">
+      発表論文など
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    やること
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    連続画像の処理をするアプリ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d" class="md-nav__link">
+    3Dイメージング用のアプリ
+  </a>
+  
+    <nav class="md-nav" aria-label="3Dイメージング用のアプリ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    比較表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-slicer" class="md-nav__link">
+    3D slicer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#horos" class="md-nav__link">
+    Horos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osirix" class="md-nav__link">
+    OsiriX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zen-lite" class="md-nav__link">
+    Zen lite
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paraview" class="md-nav__link">
+    Paraview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    その他
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    調査中
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d_1" class="md-nav__link">
+    実際、3D用アプリでやっていること一覧
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    用語解説
+  </a>
+  
+    <nav class="md-nav" aria-label="用語解説">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-planer-reconstruction-mpr" class="md-nav__link">
+    多平面再構築、multiple planer reconstruction, MPR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-rendering-vr" class="md-nav__link">
+    ボリュームレンダリング volume rendering, VR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mprvr" class="md-nav__link">
+    MPR/VRから動画をつくれます
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    セグメンテーション
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">アプリケーション</h1>
+<h2 id="_2">やること</h2>
+<ol>
+<li>
+<p>連続画像の処理</p>
+<ol>
+<li>RAW-JPEG変換</li>
+<li>縮小、クロップ、グレースケール変換</li>
+<li>ズレ補正</li>
+</ol>
+</li>
+<li>
+<p>3Dイメージング</p>
+<ol>
+<li>データリストの管理、</li>
+<li>連続画像の閲覧、</li>
+<li>多平面再構築、</li>
+<li>ボリュームレンダリング、</li>
+<li>セグメンテーション</li>
+</ol>
+</li>
+</ol>
+<p>すべて無料のアプリでやりとおせます。まずは無料アプリでやってみるのでいいでしょう。有料アプリは、大変便利だったり、安定していたりします。安定性を感じるのは、連続画像の自動処理や、3Dイメージングのセグメンテーションです。上記の3Dイメージングの5項目は、順にPCにとって高負荷になります。画像処理の安定性は、アプリだけでなく、もちろんPCのスペックも影響します。</p>
+<hr />
+<h2 id="_3">連続画像の処理をするアプリ</h2>
+<p>連続画像を一括処理できるものを選んでください。Photoshopは有料ですがあると便利です。便利さを感じる場面は、連続画像の自動処理と、3Dイメージング・セグメンテーションの色域選択です。AdobeCC教育機関向けは、32340円/年（2021年現在）です。大学が契約している場合もあると思います。利用条件は、「２台まで同時使用できること、台数を超えたインストールもできるが同時使用は2台までであること」です。ラボでの運用の参考にしてください。</p>
+<ul>
+<li>
+<p>RAW-JPEG変換（下のいずれかを使う）</p>
+<ol>
+<li>Adobe Bridge（有料、日英表示）、Lightroomも可。</li>
+<li>Sony Imaging Edge（無料、日英表示）</li>
+<li>Nikon Capture NX-D（無料、日英表示）</li>
+<li>Canon Digital Photo Professional（無料、日英表示）</li>
+</ol>
+</li>
+<li>
+<p>縮小、クロップ、グレースケール変換（下のいずれかを使う）</p>
+<ol>
+<li>Adobe Photoshop（有料、日英表示）</li>
+<li>ImageJ/FIJI（無料、英表示のみ）</li>
+<li>GIMP、plug-in BIMP（無料、、日英表示、使ったことないです）</li>
+</ol>
+</li>
+<li>
+<p>ズレ補正（Registration）、おすすめはImageJ/FIJIです</p>
+<ol>
+<li>ImageJ/FIJI, Plug-in Image Stabilizer（無料、英表示のみ）</li>
+<li>Amira（有料、使ったことありませんが、できるらしい）</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h2 id="3d">3Dイメージング用のアプリ</h2>
+<p>MacならHoros、3D slicer、Windowsなら3D sclicerがおすすめです。どちらも無料で使えます。</p>
+<p>私は複数のアプリを使っていますが、CoMBIはどれかひとつでできます。使っているのは、OsiriX（Mac, 以前から持っていたので）+ Horos（Mac, サブマシンに、教育用に）+ 3D slicer（Win, Mac, セグメンテーション用）です。</p>
+<p>3D imagingのアプリは数多くあります。しかし、医療用のDICOM形式専用だとか、高価だったり、端くれ研究者にはやさしくありません。アプリの選定では、1.無料であること、2.JPEG画像が扱えること、3.改良が続いていること、を基準としました。OsiriXはかつて無料で、今は有料になりましたが、比較的安い3Dアプリです。</p>
+<h3 id="_4">比較表</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>3D slicer</th>
+<th>Horos</th>
+<th>OsiriX</th>
+<th>ZEN lite</th>
+<th>Paraview</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>対応OS</td>
+<td>Win, Mac, Linux</td>
+<td>Mac</td>
+<td>Mac</td>
+<td>Win</td>
+<td>Win, Mac, Linux</td>
+</tr>
+<tr>
+<td>価格</td>
+<td>無料</td>
+<td>無料</td>
+<td>有料（買取¥82667など、条件多様）</td>
+<td>無料</td>
+<td>無料（工学系で利用）</td>
+</tr>
+<tr>
+<td>JPEG</td>
+<td>OK, JPEGのままで</td>
+<td>プラグインJPEG to DICOMで、DICOMへ変換</td>
+<td>プラグプラグインJPEG to DICOMで、DICOMへ変換</td>
+<td>OK, 個別のJPEGをZ-stackとしてImport</td>
+<td>OK, JPEGのままで</td>
+</tr>
+<tr>
+<td>開発</td>
+<td>Brigham and Women's Hospital and the MIT Artificial Intelligence Laboratory from 1998</td>
+<td>Horos is based on OsiriX open-source version 3.5.</td>
+<td>OsiriX started in 2004 at UCLA, and currently became a commercial ware.</td>
+<td>Zeiss　（一般にはコンフォーカル付属、Zeissに申請してダウンロードし、各自PCにインストールする）</td>
+<td>The ParaView project started in 2000 by Kitware Inc. and Los Alamos National Laboratory.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3d-slicer">3D slicer</h3>
+<p>初めて見たときにとっつきにくい印象ですが、すぐ慣れます。動作は安定しています。ごく一般的なWinノートパソコン（Core i5, RAM 8GB, Iris）でも安定していました。とくに、セグメンテーションで利用しています。お気に入り作業環境は、3D slicer + MacBookPro + iPadPro(sidecar) + ApplePenです。</p>
+<p><a href=https://www.slicer.org>https://www.slicer.org</a></p>
+<h3 id="horos">Horos</h3>
+<p>使い始めは簡単です。データ一覧、明るさコントラスト調整（DICOMでいう、ウィンドウレベル、ウィンドウウィドゥス）といった基本操作が簡単です。研究向けの数値データも出せますが、いじり進めると不安定さを感じます。また、Mac版しかないので、利用者が限定されます。</p>
+<p><a href=https://horosproject.org>https://horosproject.org</a></p>
+<h3 id="osirix">OsiriX</h3>
+<p>Horosとほぼ同じです。Horosよりもバグは少ないです。</p>
+<h3 id="zen-lite">Zen lite</h3>
+<p>（インストールはしました、検証待ち）</p>
+<h3 id="paraview">Paraview</h3>
+<p>無料でよさそうです。しかし、一点だけ気がかりがあって、ごく一般的なWinノートパソコン（Core i5, RAM 8GB, Iris）では、落ちることがしばしばです。ただし、3D用としてはかなり低スペックなPCで、無茶な検証です。</p>
+<p><a href=https://www.paraview.org>https://www.paraview.org</a></p>
+<h3 id="_5">その他</h3>
+<ul>
+<li>Amiraは、以前から論文でよく使われている有料アプリです。私自身は持っていません。見物したことがある程度です。</li>
+<li>DragonflyやImarisは、有料アプリとして、聞く名前です。</li>
+<li>CTvox（iOS, Android, Burker）, ITK-SNAP（Win Mac, UPenn, NYU）は、CT装置由来のDICOMしか対応しません。CoMBIのJPEGを、Horos/OsiriXで、JPEG-DICOM変換しても、そのデータを扱えません。</li>
+<li>本来は有料だけどデモ版は無料というアプリはたくさんあります。たいてい、扱える連続画像枚数に上限がある、3D再構築はできない、といった制限があります。評価するためのサービスですので、本格的には使えなくて当然でしょう。</li>
+</ul>
+<h3 id="_6">調査中</h3>
+<p>いいようなことが書いてあるけど、まいどデモは電顕か、培養細胞。CoMBIのようなフルカラーの連続画像はめずらしく、便利なのかなあ。まだ試していない。</p>
+<ul>
+<li>
+<p>ilastic　3Dデータセット、セグメンテーションを機械学習で　Nature Methods, 2019 </p>
+<p><a href=https://www.ilastik.org>https://www.ilastik.org/</a></p>
+</li>
+<li>
+<p>MIB　3Dデータセット、セグメンテーション　PLoS Biology, 2016</p>
+<p><a href=http://mib.helsinki.fi>http://mib.helsinki.fi/</a></p>
+</li>
+</ul>
+<hr />
+<h2 id="3d_1">実際、3D用アプリでやっていること一覧</h2>
+<p>注意：すべての項目は、どのアプリでも<strong>可能</strong>ではあります。感じた利便性、安定性をまとめたものです。不安定でも回避策があります。不安定さに関しては、それぞれの使い方ページのTipsに記載しています。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>3D slicer &nbsp;</th>
+<th>Horos &nbsp;</th>
+<th>　OsiriX &nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>インストール先</td>
+<td>iMac, MacBookPro</td>
+<td>MacBookPro, iMac</td>
+<td>iMac</td>
+</tr>
+<tr>
+<td>データを一括管理</td>
+<td>o</td>
+<td>oo</td>
+<td>oo</td>
+</tr>
+<tr>
+<td>連続画像閲覧</td>
+<td>o</td>
+<td>o <br>x v4.0.0RC5 起動しない</td>
+<td>o</td>
+</tr>
+<tr>
+<td>多平面再構築MPR</td>
+<td>oo カラーデータのとき、安定しているし、VRによる像と重ねやすい。</td>
+<td>o</td>
+<td>o</td>
+</tr>
+<tr>
+<td>ボリュームレンダリングVR</td>
+<td>o</td>
+<td>oo</td>
+<td>oo</td>
+</tr>
+<tr>
+<td>MPRから動画作成</td>
+<td>o 研究データとしては十分ですが、Horos/OsiriXほどの滑らかさ、美しさを作りにくい。</td>
+<td>△ v3.3.6 一辺500pixelと小さい動画になるバグ<br>△ v4.0.0RC4 一辺700pixelと小さい動画になるバグ<br></td>
+<td>o 問題なし</td>
+</tr>
+<tr>
+<td>VRから動画作成</td>
+<td>o 研究データとしては十分ですが、Horos/OsiriXほどの滑らかさ、美しさを作りにくい。</td>
+<td>o v3.3.6 とてもきれい<br>x v4.0.0RC4 座標がずれて不可</td>
+<td>o　とてもきれい</td>
+</tr>
+<tr>
+<td>Segmentation作業</td>
+<td>oo 簡便、ApplePenでスイスイ</td>
+<td>o</td>
+<td>o</td>
+</tr>
+<tr>
+<td>Segmentationからの数値解析</td>
+<td>oo</td>
+<td>o 不安定</td>
+<td>o</td>
+</tr>
+<tr>
+<td>初見の印象</td>
+<td>難しそうだけど、作業はどこまでも安定。</td>
+<td>簡単そうで、実際、操作は簡単！作業が込み入ってくると不安定さが露見する</td>
+<td>安定している。Horosで生じる不安定さはない</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_7">用語解説</h2>
+<h4 id="multiple-planer-reconstruction-mpr">多平面再構築、multiple planer reconstruction, MPR</h4>
+<p>自由な面で内部を観察できます。<strong>距離の数値データ比較</strong>もできます。例えば、多数個体間で、主気管支の形態比較に使いました。</p>
+<h4 id="volume-rendering-vr">ボリュームレンダリング volume rendering, VR</h4>
+<p>典型的な3D画像に、感動します。しかし、<strong>見た目よし、一品勝負のデータ</strong>にはなります。ただし、カラー画像からは不可、距離数値をだせますが、あやふや、体積数値を出せない、といった制限があります。</p>
+<p>最終的に論文データとしては、下記のセグメンテーションをやったほうが良いことが多いでしょう。世間にあふれるボリュームレンダリングした画像では、キレイにできそうな印象をもちますが、実際やってみるとあまりうまくいきません。グレー画像でしかできないので、特定の構造物のみを描出することが難しいのです。</p>
+<h4 id="mprvr">MPR/VRから動画をつくれます</h4>
+<p>プレゼンにはインパクトが大きいです。論文にも載せられますが、投稿時データ量の制限があったりして、気遣いが必要になります。VRはうまくいけば、見た目のよい画像・動画として採用しています。</p>
+<h4 id="_8">セグメンテーション</h4>
+<p>研究では、試料中の特定の構造物・領域（関心領域）に、色塗りをします（セグメンテーション）。色塗りできた関心領域から、<strong>体積の数値データ</strong>を利用できます。</p>
+<p>CoMBIのカラー連続画像は、CTのグレー画像とくらべると、構造物をヒトの目で認識しやすいです。しかし、いざアプリでセグメンテーションしようとなると、全自動では難しいことが多く、なにかと手書き作業がはいってきます。世間には自動化の試みがあって、デモをみますが、たいていヒトCT、電顕画像、培養細胞の蛍光像を用いています。CoMBIのようなフルカラー連続画像は、めずらしいのだと思います。</p>
+<p>パソコン環境をととのえて、カラー連続画像を使ったセグメンテーション作業を安定して扱えるようにしたいものです。</p>
+<hr />
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            TJK
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.expand'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

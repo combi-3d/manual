@@ -1,0 +1,656 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Manual of CoMBI">
+      
+      
+      
+        <meta name="author" content="TJK">
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
+    
+    
+      
+        <title>RAW-JPEG変換 - Manual of CoMBI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#raw-jpeg" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Manual of CoMBI" class="md-header-nav__button md-logo" aria-label="Manual of CoMBI">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Manual of CoMBI
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              RAW-JPEG変換
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Manual of CoMBI" class="md-nav__button md-logo" aria-label="Manual of CoMBI">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Manual of CoMBI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../index.html" class="md-nav__link">
+      ホーム
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" data-md-state="indeterminate" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      CoMBIの導入
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="CoMBIの導入" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        CoMBIの導入
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../devices/system/index.html" class="md-nav__link">
+      CoMBI装置の概要
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../devices/camera/index.html" class="md-nav__link">
+      カメラと周辺部品
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../devices/selfmade/index.html" class="md-nav__link">
+      自作装置
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../devices/computer/index.html" class="md-nav__link">
+      コンピュータと画像ファイル
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../devices/application/index.html" class="md-nav__link">
+      アプリケーション
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" data-md-state="indeterminate" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      CoMBIの操作
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="CoMBIの操作" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        CoMBIの操作
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../operation/combi-c/index.html" class="md-nav__link">
+      クリオスタット型CoMBI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../operation/combi-s/index.html" class="md-nav__link">
+      新型CoMBI coming soon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../operation/combi-r/index.html" class="md-nav__link">
+      新型CoMBI ccoming soon
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" data-md-state="indeterminate" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      画像処理
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="画像処理" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        画像処理
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/index.html" class="md-nav__link">
+      画像処理で生成されるファイル
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="index.html" class="md-nav__link">
+      RAW-JPEG変換
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../scale/index.html" class="md-nav__link">
+      画像の縮小
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../registration/index.html" class="md-nav__link">
+      ズレ補正（Image registration）
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../3dslicer/index.html" class="md-nav__link">
+      3D再構築、3D slicer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../horos/index.html" class="md-nav__link">
+      3D再構築、Horos/OsiriX
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../gallery/gallery/index.html" class="md-nav__link">
+      作品集
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../publication/publication/index.html" class="md-nav__link">
+      発表論文など
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    アプリケーション
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adobe-bridge" class="md-nav__link">
+    手順　Adobe Bridge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sony-imaging-edge" class="md-nav__link">
+    手順　Sony Imaging Edge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure-by-nikon-capture-nx-d" class="md-nav__link">
+    Procedure by Nikon Capture NX-D
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure-by-canon-digital-photo-professional" class="md-nav__link">
+    Procedure by Canon Digital Photo Professional
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    Tips
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="raw-jpeg">RAW-JPEG変換</h1>
+<h2 id="_1">アプリケーション</h2>
+<p>下記のどれかを使います</p>
+<ul>
+<li>Adobe Bridge</li>
+<li>Nikon Capture NX-D</li>
+<li>Sony Imaging Edge</li>
+<li>Canon Digital Photo Professional</li>
+</ul>
+<p>2014年頃は、Adobe Bridgeだけが安定していたので、以来、Bridgeを使っています。いまでは、カメラ会社のカメラ付属アプリでも安定して行えます。Adobe Lightroomも多数の画像を扱えるアプリで、RAW現像できます。</p>
+<h2 id="adobe-bridge">手順　Adobe Bridge</h2>
+<ol>
+<li>一枚画像を選んで、右クリック、Camera RAWで開く</li>
+<li>明るさ、コントラスト、カラーなどを調整する。</li>
+<li>クロップして、ブロック外の不要な領域を除く。ブロック外周は残すこと。</li>
+<li><code>完了</code>で、Camera RAWをとじる</li>
+<li>調整した一枚の上で、右クリック。<code>Develop settings</code>&gt; <code>Copy setting</code></li>
+<li>すべての画像を選んで、右クリック。right-crick, <code>Develop settings</code>&gt; <code>Paste setting</code></li>
+<li><code>Check all</code>, <code>OK</code></li>
+<li>JPEGに書き出す。Bridgeのバージョンによって異なる。<code>Select all</code>, <code>open in camera RAW</code>,再び<code>select all</code>して、<code>convert to JPEG</code>。もしくは、<code>select all</code>, 左の画面へ<code>drag and drop to Export tag</code>、<code>convert</code></li>
+</ol>
+<h2 id="sony-imaging-edge">手順　Sony Imaging Edge</h2>
+<ol>
+<li>Edit<ol>
+<li><code>編集</code>&gt; <code>画像処理設定</code>, <code>保存</code></li>
+</ol>
+</li>
+<li>Viewerの場合<ol>
+<li>連続画像を<code>選択</code>、</li>
+<li><code>Exportボタン</code>、または、<code>ファイル</code>&gt; <code>現像出力</code></li>
+<li><code>任意の画像処理設定をすべてに適用</code></li>
+<li>保存しておいた設定ファイルを選択する</li>
+</ol>
+</li>
+<li>Editの場合<ol>
+<li>画像処理設定を適用したい画像を表示</li>
+<li><code>編集</code>&gt; <code>画像処理設定</code>&gt; <code>読み込み（適用）</code></li>
+<li>設定ファイルを選択し、<code>開く</code></li>
+</ol>
+</li>
+</ol>
+<p>参考：<a href="https://support.d-imaging.sony.co.jp/app/imagingedge/ja/instruction/5_3_save_adjustment.php">ソニーの解説サイト、画像処理設定の保存・適用/一括適用</a></p>
+<h2 id="procedure-by-nikon-capture-nx-d">Procedure by Nikon Capture NX-D</h2>
+<p>参考：<a href="https://nikonimglib.com/ncnxd/onlinehelp/ja/05_useful_03.html">ニコンの解説サイト、複数の画像に同じ処理を適用する（バッチ処理）</a></p>
+<h2 id="procedure-by-canon-digital-photo-professional">Procedure by Canon Digital Photo Professional</h2>
+<p>参考：キャノンの説明書に「大量のRAW画像処理」「一括してJPEG画像、TIFF画像で保存する(バッチ処理)」という項目があります。ネットではPDFとして見つかります。</p>
+<h2 id="tips">Tips</h2>
+<ul>
+<li>CPUが働きます。<br></li>
+<li>メモリを喰います。約100枚変換すると1GBうまります。開放されないのでメモリがいっぱいになると、変換作業が遅くなります。<br></li>
+<li>設定ファイルの扱いがアプリによって異なります。多数の画像を一括変換する場合、Bridgeでは、現像設定ファイルが、各RAWにひとつづつできます。一方、Sony Imaging Edgeでは、設定ファイルがひとつできると、それを呼び出しながら、JPEG変換＆保存をします。生成される設定ファイルはひとつだけで済みます。<br></li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            TJK
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.expand'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

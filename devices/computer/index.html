@@ -1,0 +1,844 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Manual of CoMBI">
+      
+      
+      
+        <meta name="author" content="TJK">
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
+    
+    
+      
+        <title>コンピュータと画像ファイル - Manual of CoMBI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Manual of CoMBI" class="md-header-nav__button md-logo" aria-label="Manual of CoMBI">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Manual of CoMBI
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              コンピュータと画像ファイル
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Manual of CoMBI" class="md-nav__button md-logo" aria-label="Manual of CoMBI">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Manual of CoMBI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../index.html" class="md-nav__link">
+      ホーム
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" data-md-state="indeterminate" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      CoMBIの導入
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="CoMBIの導入" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        CoMBIの導入
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../system/index.html" class="md-nav__link">
+      CoMBI装置の概要
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../camera/index.html" class="md-nav__link">
+      カメラと周辺部品
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../selfmade/index.html" class="md-nav__link">
+      自作装置
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="index.html" class="md-nav__link">
+      コンピュータと画像ファイル
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../application/index.html" class="md-nav__link">
+      アプリケーション
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" data-md-state="indeterminate" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      CoMBIの操作
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="CoMBIの操作" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        CoMBIの操作
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../operation/combi-c/index.html" class="md-nav__link">
+      クリオスタット型CoMBI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../operation/combi-s/index.html" class="md-nav__link">
+      新型CoMBI coming soon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../operation/combi-r/index.html" class="md-nav__link">
+      新型CoMBI ccoming soon
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" data-md-state="indeterminate" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      画像処理
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="画像処理" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        画像処理
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../image-processing/introduction/index.html" class="md-nav__link">
+      画像処理で生成されるファイル
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../image-processing/rawjpeg/index.html" class="md-nav__link">
+      RAW-JPEG変換
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../image-processing/scale/index.html" class="md-nav__link">
+      画像の縮小
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../image-processing/registration/index.html" class="md-nav__link">
+      ズレ補正（Image registration）
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../image-processing/3dslicer/index.html" class="md-nav__link">
+      3D再構築、3D slicer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../image-processing/horos/index.html" class="md-nav__link">
+      3D再構築、Horos/OsiriX
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../gallery/gallery/index.html" class="md-nav__link">
+      作品集
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../publication/publication/index.html" class="md-nav__link">
+      発表論文など
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    コンピュータ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    CPU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpu" class="md-nav__link">
+    GPU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    メモリ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ストレージ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    画像ファイルのサイズ
+  </a>
+  
+    <nav class="md-nav" aria-label="画像ファイルのサイズ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    画像形式と一枚のサイズ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagej" class="md-nav__link">
+    ImageJで扱う連続画像
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagej_1" class="md-nav__link">
+    ImageJに割り当てるメモリ量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-slicer" class="md-nav__link">
+    3D slicerで扱う連続画像
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">コンピュータと画像ファイル</h1>
+<h2 id="_2">コンピュータ</h2>
+<p>これまでに、私がCoMBIのデータを扱ってきたパソコン一覧です。お手元のパソコンでできるかどうかを知るために、参考にしてください。</p>
+<table>
+<thead>
+<tr>
+<th>model</th>
+<th>year</th>
+<th>CPU</th>
+<th>GPU</th>
+<th>RAM</th>
+<th>Storage</th>
+<th>comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iMac27</td>
+<td>2017-</td>
+<td>Core i7</td>
+<td>Radeon 580X<br>DDR5 8GB</td>
+<td>64GB</td>
+<td>SSD 1TB</td>
+<td>Currently working well.</td>
+</tr>
+<tr>
+<td>MacBookPro15</td>
+<td>2018-</td>
+<td>Core i9</td>
+<td>Vega20<br>HBM2 4GB</td>
+<td>32GB</td>
+<td>SSD 1TB</td>
+<td>Currently working well.</td>
+</tr>
+<tr>
+<td>iMac27</td>
+<td>2012-2017</td>
+<td>Core i7</td>
+<td>Radeon<br>DDR4 2GB</td>
+<td>32GB</td>
+<td>HDD 2TB Fusion</td>
+<td>Works well on 2012. Recall HDD and stand. GPU and Power failure.</td>
+</tr>
+<tr>
+<td>MacBookPro13</td>
+<td>2015-2018</td>
+<td>Core i7</td>
+<td>Intel<br>Iris</td>
+<td>16GB</td>
+<td>SSD 512GB</td>
+<td>Not recommended, small RAM, weak graphics</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cpu">CPU</h2>
+<p>CPUのコア数と周波数が、RAW現像と、Photoshop自動処理に効きます。Photoshopではhyperthreding (HT)は、効きませんでした（2019年）。いまどきのIntel i5, i7, i9なら、どれでもよく働きます。</p>
+<h2 id="gpu">GPU</h2>
+<p>DDR5 8GBやHBM2 4GBで十分働きます。GPUは、3Dレンダリングに効きます。規格はDDR4, DDR5, DDR6, HBM2の順で高性能になります。HBM2規格は高性能だがコストがかかる、DDR6規格は高性能かつ安い（2020年)、と評されます。Apple M1は、どうやら、DDR5 4GB (560X)相当らしく、総合的には3Dイメージングの能力がありそうです。</p>
+<h2 id="_3">メモリ</h2>
+<p>最低容量は16GBですが余裕はありません。32GBから余裕がでてきます。64GBあれば安心です。</p>
+<p>ImageJで連続画像を処理するとき、容量が大きいほうがいいです。16GBでも画像処理を実行できますが、慎重に行う必要があります。具体的には、連続画像は、メモリに展開せず、virtual stackやmacro機能をつかって、メモリに優しく作業をすすめます。32GB以上あれば、このような気配りはいらなくなり、余裕がでてきます。くわしくは、下記の「ImageJで扱う連続画像」「ImageJに割り当てるメモリ量」をご覧ください。</p>
+<p>ImageJ以外では、RAW−JPEG変換がメモリを要求します。変換中、メモリが開放されないようで、約100枚の変換ごとに1GBのメモリが喰われていきます。メモリオーバーになると、変換が非常にゆっくりになり、「つづきはまた明日」となるでしょう。</p>
+<h2 id="_4">ストレージ</h2>
+<p>SSDには寿命があります。SSDの寿命は、容量が大きいほど長く、単純に比例します。大容量のメリットとして、保存できるデータ量が増えることと、長寿命であることも挙げられます。</p>
+<p>外付けSSDは、CoMBIデータを一時的に保管し、画像処理の作業をする場所として利用しています。理由は、データの読み書きが早いことと、PC本体のSSDを守れるかもという期待があるからです。外付け512GBSSDをCoMBIで使い続けたところ、4年後にディスクが読めなくなり寿命を迎えました。ゲームでSSDをよく使うひとも、同じ感覚（早さの恩恵、4年程度の寿命を覚悟）をもって512GB SSDを使っているそうです。いつ寿命が来てもいいように、画像処理の作業中は、元データのRAWファイルはSSD以外（SDカードかHDD）にも確保しています。</p>
+<p>CoMBIでRAW撮影する場合、１標本で10〜100GB、年間1〜1.5TBになります。もちろん実験の勢いにもよります。HDDを準備する際は、多めに見積もって、「1標本50GB」「20サンプル/1年/1TB」にしておけば、しばらくもつと思います。データは、念の為、RAIDで2枚のディスクに保存し、かつ、MacのTimeMachineでもう1枚のディスクにバックアップしています。</p>
+<hr />
+<h2 id="_5">画像ファイルのサイズ</h2>
+<p>連続画像は重いといっても、どれくらいメモリをくうのか、実際はどのくらいのデータサイズになるでしょうか。ファイル形式は、RAW, TIFF, JPEGどれで撮影するのが良いのでしょうか。</p>
+<h3 id="_6">画像形式と一枚のサイズ</h3>
+<p>表は、各種画像形式でのカラー画像一枚のサイズです。JPEGは、おおかたのサイズです。圧縮形式なので変動します。もしCoMBIで1000枚撮影すれば、MBをGBと読んでください。保存ディスクの容量を見積もるのに役立ててください。フルサイズ（Full-size）センサーなら、full-sizeで撮影するか、APS−C相当にクロップするかを、選べます。広くも撮れるし、データサイズの節約も使用と思えばできます。RAWは、豊かな階調数をもっているので、元データに最適です。結局、CoMBIの撮影では、<strong>RAWで撮影、JPEGで画像処理</strong>をしています。</p>
+<table>
+<thead>
+<tr>
+<th>Format &nbsp;</th>
+<th>Nikon D810<br>full-size<br>7360×4912 &nbsp;&nbsp;</th>
+<th>Nikon D810<br>APS-C<br>4800×3200&nbsp;&nbsp;</th>
+<th>Spec</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RAW</td>
+<td>42 MB</td>
+<td>26 MB</td>
+<td>12, 16 bit</td>
+</tr>
+<tr>
+<td>JPEG</td>
+<td>3 MB</td>
+<td>2 MB</td>
+<td>8 bit</td>
+</tr>
+<tr>
+<td>TIFF</td>
+<td>100 MB</td>
+<td>40 MB</td>
+<td>8, 12, 16 bit</td>
+</tr>
+</tbody>
+</table>
+<p>元データは、一辺8000ピクセル弱と、大きな画像です。ここからクロップや縮小をかけて、一辺500 - 1000くらいの連続画像をいくつかつくり、ImageJのImage Stabilizerにかけています。<br></p>
+<h3 id="imagej">ImageJで扱う連続画像</h3>
+<p>ImageJで連続画像をひらくと、ピクセル数に応じた容量でメモリを喰います。連続JPEG画像なら、圧縮された容量でディスクに保存されていますが、いざ、ImageJでstackとして開くと、圧縮前のサイズでメモリを使用します。表は、様々なサイズと枚数の8 bit画像の合計サイズをしめします。
+経験的にも、計算上（下記）も、ImageJで軽快に扱える限界は、ざっと1000x1000x1000=3GBあたりまでと思って、画像処理の計画を立てています。グレースケール画像なら、カラー画像の3分の1の容量になります。</p>
+<table>
+<thead>
+<tr>
+<th>Image size <br>in Pixels</th>
+<th>Number of<br>images</th>
+<th>Data<br>Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>500x500</td>
+<td>500</td>
+<td>0.4 GB</td>
+</tr>
+<tr>
+<td>1000x1000</td>
+<td>500</td>
+<td>1.5 GB</td>
+</tr>
+<tr>
+<td>700x700</td>
+<td>1000</td>
+<td>1.5 GB</td>
+</tr>
+<tr>
+<td><strong>1000x1000</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>3 GB</strong></td>
+</tr>
+<tr>
+<td><strong>1200x1200</strong></td>
+<td><strong>1000</strong></td>
+<td><strong>4.3 GB</strong></td>
+</tr>
+<tr>
+<td>1600x1200</td>
+<td>1000</td>
+<td>5.8 GB</td>
+</tr>
+<tr>
+<td>1600x1200</td>
+<td>1500</td>
+<td>8.6 GB</td>
+</tr>
+<tr>
+<td>1500x1500</td>
+<td>1500</td>
+<td>10 GB</td>
+</tr>
+</tbody>
+</table>
+<p><em>表：連続画像の容量ほんの一例。計算：8bitカラー画像1枚の容量、1ピクセル＝2の8乗＝256階調、8ビット×3色＝24ビット＝3バイト。8bit＝1Byte（バイト）</em></p>
+<h3 id="imagej_1">ImageJに割り当てるメモリ量</h3>
+<p>ImageJに割り当てるメモリサイズは、PC搭載メモリの70％がよいとされています。表は、PC搭載メモリとImageJで使用可能なメモリサイズを計算したものです。MacでOSと常駐アプリを7GB、ImageJへの割当を70%としました。結果、<strong>最小構成は16GBです。おすすめは32GBで余裕をもたす</strong>です。</p>
+<p>ImageJで使用できる最大と、半値を示しています。半値を下回る連続画像であれば、ImageStabilizer処理前と処理後の連続画像を両方開いて比較できます。ImageJでは、メモリを食わないモード、virtual stackがあります。しかし、virtualモードでは、プラグインによっては動作しない場合があるため、やっぱり、メモリは潤沢にあって、データはすべてメモリに展開できたほうが安心です。</p>
+<p>実際には、スワップもあって、常駐部分は少なくてもよさそうですが、連続画像を軽快に扱うためにはメモリは潤沢であるのに越したことはありません。</p>
+<table>
+<thead>
+<tr>
+<th>RAM<br>total&nbsp;</th>
+<th>OS<br>etc</th>
+<th>ImageJ &nbsp;&nbsp;</th>
+<th>(ImageJ 1/2)</th>
+<th>余剰</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8 GB</td>
+<td>7 GB</td>
+<td>1 GB</td>
+<td>(0.5 GB)</td>
+<td>0</td>
+</tr>
+<tr>
+<td>16 GB</td>
+<td>7 GB</td>
+<td>9 GB</td>
+<td>(4.5 GB)</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>32 GB</strong></td>
+<td>7 GB</td>
+<td>22.4 GB</td>
+<td>(11.2 GB)</td>
+<td>2.6 GB</td>
+</tr>
+<tr>
+<td>64 GB</td>
+<td>7 GB</td>
+<td>44.8 GB</td>
+<td>(22.4 GB)</td>
+<td>12.2 GB</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3d-slicer">3D slicerで扱う連続画像</h3>
+<p>3D slicerが推奨する画像データサイズの限界は、「搭載GPUのVRAMの半値」です。例えば、GPU DDR5 8GBなら、4GBが半値となり、おおかたカラー画像1200x1200x1000枚 = 4.3GBに相当します。経験的にも、Horos/OsiriXでも、そのへんが限界です。ただし、グレースケールなら容量は3分の1になります。グレースケール由来のVolume Renderingを行うときは、もうちょっと大きめの、多数の画像をあつかえます。3Dの作業中、表示画質を落とすといった工夫も、必要に応じてやっています。</p>
+<hr />
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            TJK
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.expand'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

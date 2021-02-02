@@ -1,0 +1,877 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Manual of CoMBI">
+      
+      
+      
+        <meta name="author" content="TJK">
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
+    
+    
+      
+        <title>CoMBIの操作 - Manual of CoMBI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#combi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Manual of CoMBI" class="md-header-nav__button md-logo" aria-label="Manual of CoMBI">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            Manual of CoMBI
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              CoMBIの操作
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Manual of CoMBI" class="md-nav__button md-logo" aria-label="Manual of CoMBI">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Manual of CoMBI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../index.html" class="md-nav__link">
+      ホーム
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" data-md-state="indeterminate" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      CoMBIの導入
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="CoMBIの導入" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        CoMBIの導入
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../devices/system/index.html" class="md-nav__link">
+      CoMBI装置の概要
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../devices/camera/index.html" class="md-nav__link">
+      カメラと周辺部品
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../devices/selfmade/index.html" class="md-nav__link">
+      自作装置
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../devices/computer/index.html" class="md-nav__link">
+      コンピュータと画像ファイル
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../devices/application/index.html" class="md-nav__link">
+      アプリケーション
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" data-md-state="indeterminate" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      CoMBIの操作
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="CoMBIの操作" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        CoMBIの操作
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="index.html" class="md-nav__link">
+      クリオスタット型CoMBI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../combi-s/index.html" class="md-nav__link">
+      新型CoMBI coming soon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../combi-r/index.html" class="md-nav__link">
+      新型CoMBI ccoming soon
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" data-md-state="indeterminate" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      画像処理
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="画像処理" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        画像処理
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../image-processing/introduction/index.html" class="md-nav__link">
+      画像処理で生成されるファイル
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../image-processing/rawjpeg/index.html" class="md-nav__link">
+      RAW-JPEG変換
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../image-processing/scale/index.html" class="md-nav__link">
+      画像の縮小
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../image-processing/registration/index.html" class="md-nav__link">
+      ズレ補正（Image registration）
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../image-processing/3dslicer/index.html" class="md-nav__link">
+      3D再構築、3D slicer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../image-processing/horos/index.html" class="md-nav__link">
+      3D再構築、Horos/OsiriX
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../gallery/gallery/index.html" class="md-nav__link">
+      作品集
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../publication/publication/index.html" class="md-nav__link">
+      発表論文など
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    凍結ブロックの準備
+  </a>
+  
+    <nav class="md-nav" aria-label="凍結ブロックの準備">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    手順
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    ヒント
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combi_1" class="md-nav__link">
+    CoMBI装置の設定
+  </a>
+  
+    <nav class="md-nav" aria-label="CoMBI装置の設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    手順
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    ヒント
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    ブロック面の撮影
+  </a>
+  
+    <nav class="md-nav" aria-label="ブロック面の撮影">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    手順
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    ヒント
+  </a>
+  
+    <nav class="md-nav" aria-label="ヒント">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    カメラ関連
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    その他
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="combi">CoMBIの操作</h1>
+<h2 id="_1">凍結ブロックの準備</h2>
+<h3 id="_2">手順</h3>
+<ol>
+<li>プラスティック製モールドを組み立てる</li>
+<li>標本をOCTコンパウンドにうめる</li>
+<li>液体窒素と冷媒（2-メチルブタン）を使って、急速に凍結する</li>
+<li>クリオスタット庫内に10分放置し、温度を安定させる</li>
+<li>OCTコンパウンドを塗って、試料台に貼り付ける。ブロックのOCTの色と、接着用OCTの色は、違えておく。</li>
+<li>5分放置、温度を安定させる</li>
+</ol>
+<h3 id="_3">ヒント</h3>
+<ul>
+<li>
+<p>ブロックの形状は、直方体または直円筒がいいです。</p>
+<p>プラスティック製の円筒（15 ml tubeなどを切ったもの）をモールドとして利用する。または、アクリル板から工作したモールドを使う。</p>
+<p>ブロック面像にうつるブロック面周囲の形状が一定になる（円または長方形）。のちのズレ補正、Image registration（ImageJ, Image Stabilizer)を安定的に行える。</p>
+</li>
+<li>
+<p>モールドの材質は、プラスティックがよい。</p>
+<p>結氷時の膨張による変形が最低限に抑えられる。</p>
+<p>プラスティックは熱の伝導が遅く、ブロックが凍る際に、底面からだけ、凍る。結氷時の膨張による変形が最低限に抑えられる。</p>
+<p>金属の場合、熱伝導が良すぎて、ブロックは、底面からも側面（モールド面）からも結氷・膨張し、試料の中心部がひどく変形する。</p>
+</li>
+<li>
+<p>凍結は、液体窒素とジメチルブタンを用いて、急速かつ底面からのみ行うのがよい。</p>
+<p>冷凍庫やクリオスタット庫内ではおそすぎる、30-45分。窒素なら1-2分。全方向からの凍結や遅い凍結では、氷の膨張による変形やクラックを生じやすい。</p>
+</li>
+<li>
+<p>凍結による膨張がどうしても気になる試料の場合、ブロックの底面側に寄せて包埋・凍結する。</p>
+<p>底面は、液体窒素の冷却が一番に進む場所で、膨張の影響が最も少ない。本番の切削では、底面から行えば、面出しが容易です。</p>
+</li>
+<li>
+<p>スクロース浸漬の必要性は、試料の種類によって異なる。</p>
+<p>神経組織はクラックができやすいが、スクロース浸漬によって、クラックを抑止できる。</p>
+</li>
+<li>
+<p>OCTコンパウンドに、絵の具を混ぜると、OCTの透明度がさがり、標本表面を詳細に3D描出できる。</p>
+<p>色は、白または黒。濃度は、5-10% w/v。用事調整、時間がたつと分離するため。</p>
+<p>絵の具は、ぺんてるFがよい。顔料粒子が細かいため拡大撮影しても粒子がみえにくい。</p>
+<p>ポスターカラーや粉末顔料では、拡大すると粒子が見えてしまう。黒ならば万年筆インクでもよいが、水彩絵の具より高価。</p>
+</li>
+<li>
+<p>凍結ブロックをチャックに接着するとき、白ブロックは、黒OCTで接着する。</p>
+<p>反対に、黒ブロックなら、白OCTで接着する。</p>
+<p>ロック周囲の形状が、はっきりする。明瞭かつ同一形状のブロック周囲像は、のちのズレ補正を安定的に行うために有効である。</p>
+</li>
+</ul>
+<h2 id="combi_1">CoMBI装置の設定</h2>
+<h3 id="_4">手順</h3>
+<ol>
+<li>コントローラ、センサー、ブラシ、照明を設置する</li>
+<li>カメラを、コントローラ、電源、パソコンにつなげる</li>
+<li>センサーの位置調整、シャッタータイミングの調整</li>
+<li>カメラの設定</li>
+</ol>
+<h3 id="_5">ヒント</h3>
+<ul>
+<li>
+<p>コントローラは磁石でクリオスタット本体につく</p>
+</li>
+<li>
+<p>センサーの位置調整</p>
+<p>電動ハンドルの場合、センサーが検知する位置は、ブロックがすこし下ったところ。自動運転時のウィンドウ内に収まること。</p>
+<p>手動ハンドルの場合は、ブロックが最も上にきたところ。単振動（高校物理）なので、端で撮影したほうが、ズレが少ない。</p>
+</li>
+<li>
+<p>LED照明は、斜めから二灯にしている</p>
+<p>正面一投と比較すると、斜めのほうがブロック面像において、陰影ができやすく、構造物を認識しやすくなる。</p>
+</li>
+<li>
+<p>リモートケーブルで、カメラと接続する</p>
+<p>CoMBI側の端子は、2.5 mm、3 pinである（2019年以降のCoMBI）</p>
+<p>CoMBI2017年モデルはNikon バナナプラグである。一方、カメラ側の端子は、各社異なる。ケーブルに、エツミ社のリモートケーブル（リモートスイッチの一部）を使えば、各社カメラ端子がすべて、2.5 mm, 3pinとなり、CoMBIに繋げられる。</p>
+</li>
+<li>
+<p>パソコンをカメラにつなげると便利（必須ではない）</p>
+<p>画像を大きなモニタで表示できて、フォーカスの確認、画像の確認をしやすい。</p>
+<p>ソニーやニコンの一部機種では、撮影中にUSB給電できる。バッテリ残量の心配がなくなる、給電用別売りアクセサリが不要になる。</p>
+</li>
+<li>
+<p>ブラシでブロック面をきれいに保つ</p>
+<p>切りくずが、ブロック面をおおってしまうことがあるが、ブラシで低減できる。</p>
+<p>モータ壊れやすい。ブラシが動かなくなっても気にせず設置する。静置でも効果がある。</p>
+</li>
+<li>
+<p>アンチロールプレートのほうが切りくず除去の効果は高い。</p>
+<p>アンチロールプレートと共にブラシも使い、ブロック面撮影を成功させる。</p>
+</li>
+</ul>
+<p>カメラの設定</p>
+<ul>
+<li>
+<p>メニューで、「レンズなしシャッターを許可」</p>
+<p>CoMBIのリリースケーブルによる制御を許可するためです。</p>
+</li>
+<li>
+<p>画像の広さ</p>
+<p>Nikonなら、FX（フルサイズ）、DX（APS-Cサイズ）、比率3:2, 5:4, 1:1などから選び、データ量を節約します。Sonyなら、フルサイズ、APS-Cサイズから選びます。</p>
+</li>
+<li>
+<p>RAW画像</p>
+<p>階調数は、12bit, 16bit。どちらでもよく、データ量の節約には12bitです。のちに変換するJPEG形式では8bitしかないので、どちらでも豊かな階調数をもち、画像調整にも耐えられます。Nikonでは圧縮RAWを選んでいます。</p>
+</li>
+<li>
+<p>シャッター速度と感度</p>
+<p>シャッター速度は、1/125〜1/250。ゆっくりでも動いているブロックを撮影するので、短めにしてあります。</p>
+<p>ISO 100-400（Nikon D810）、ISO100-1600（Sony a7RIII、裏面照射型）、機種によって感度性能が異なります。ノイズが目立たない設定にしています。</p>
+<p>テレコンを2枚で、4倍撮影にチャレンジするなら、「1/500、ISO800-3200、絞り開放」でまずは試して、ブレがないか、ノイズが許容できるか、を評価しましょう。</p>
+</li>
+<li>
+<p>レンズの絞り</p>
+<p>開放より一つ絞ったところ（カメラ用語の、1/3段絞ったことろに該当）を使っています。シャープで明るいところを選びました。</p>
+<p>NikonカメラにFマウントレンズの時はカメラ本体でひと目盛り絞ったところに設定します。Fマウントレンズを他社製カメラにつけるとき（SonyカメラとKenkoまたはReyqualのアダプタを使うとき）は、アダプタでひと目盛り絞ったところを使っています。</p>
+<p>2017年の論文ではF8を使っていました。これは、焦点深度を広げ、ブロック面全体のフォーカスが容易に合わせられることを優先しようとした結果です。おおよそ深さ1 mmの範囲で焦点が合います。いまでは、カメラ設置を厳密行えば、開放F値（焦点深度が浅い、約0.3 mm）でも、面全体にフォーカスが合和せられることが分かっています。</p>
+<p>一般的に、「開放F値よりひとつ絞ったところが最もシャープに写る」といわれています。手前のマクロレンズ6本で試したところ、ひとつ絞ったところが最もシャープ、場合によっては、開放でもシャープでした。実際の撮影で画質に影響するのは、レンズの光学特性とともに、絞ると暗くなってセンサー側でノイズが増えることも考慮します。</p>
+</li>
+<li>
+<p>結局カメラ設定はなにがいいの？</p>
+<p>カメラの設定は、ぶれずに撮影でき、ノイズが許容範囲であればよし。</p>
+<p>レンズの絞りは、カメラ設置を丁寧にやれば、ひとつ絞るか開放でよく、明るさをキープしたいです。</p>
+<p>結局は、解析したい試料で、見たい構造物が見えることが誰しも必要です。研究データとしては比較群間、同一条件で撮影するのが大切な場合もあるでしょう。そのあとも同一条件での画像処理や、再現性を保証する作業記録も研究では大切です。</p>
+</li>
+</ul>
+<h2 id="_6">ブロック面の撮影</h2>
+<h3 id="_7">手順</h3>
+<ol>
+<li>面出し1回目、かるく。ブロック上面の凹凸が無くなる程度。</li>
+<li>カメラを設置。慎重にブロックの真ん前に設置する。CM3050の場合、下げ角35度。</li>
+<li>LED照明を設置し、ON。</li>
+<li>ブロックの角度調整。ブロックの長軸と、レンズの軸が一直線になるよう、調節する。フォーカスを、ブロックの上面に合わせる、底面に合わせるを繰り返す。軸が合えば、底面の4辺が見えるようになる。</li>
+<li>ブロック側面に着色OCTを塗る。白ブロックなら黒OCTを側面に塗る。黒OCTなら白OCTを側面に。場所は、上面は必須。上面1箇所でもよいが、念のため上面と側面ひとつ。この作業は、後のズレ補正を成功に導くためです。</li>
+<li>面出し2回目、しっかりと。試料が見え始めるまで。</li>
+<li>フォーカスを合わせる。ブロック周囲4辺がどこでも合うことを確認する。</li>
+<li>スケールを撮影する。手動。Focus Hold、Release レバーを使う。</li>
+<li>SDカードに十分な容量があるか。前の実験の画像がたまっていないか。</li>
+<li>アンチロールプレートを使う。切りくずがブロック面にかぶらないようになる。効果絶大。</li>
+<li>いよいよ、連続撮影。Focus Hold ON、Sensor ON、(Brush ON)。</li>
+<li>切片を取りたいときは、一時停止する</li>
+</ol>
+<h3 id="_8">ヒント</h3>
+<h4 id="_9">カメラ関連</h4>
+<ul>
+<li>
+<p>センサーがおかしい？やたらとシャッターを切る</p>
+<p>ハンドルを掃除する。中性洗剤で汚れを落とす。よく使用していると手垢で汚れていきます。禁忌：アルコール液は使わない。クリオスタットの塗装がハゲます。</p>
+<p>センサーとハンドル面の距離が適切でないかもしれません。近すぎ？　連絡ください。調整用スペーサを送ります。その他、センサー値チェッカー（自作）も送れます。コロナ前には、出張修理をしていましたが、いまはオンライン相談とスペーサ、チェッカーを送ることで簡単に修正できます。センサーの説明書では6 mmが最も鋭敏とありますが、実際は幅広く作動し、CoMBIは、10 mm位で運転しています。</p>
+</li>
+<li>
+<p>あれ？シャッター切ってない。さっきまで順調だったのに。</p>
+<p>SDカードがいっぱいになっていませんか？前の実験の画像がたまっていたりして。データ管理はどうか丁寧に、自戒を込めて。</p>
+<p>もしかして、電子接点付きマウントコンバータを使っていますか？電子接点付きでは、まれに、シャッターが切れません。例えば、Sonyカメラ＋Commliteアダプタ＋SigmaのNikonFレンズ、で経験しました。シンプルなアダプタ（ReyqualやKenko）を使ってください。問題なく安定稼働します。</p>
+</li>
+<li>
+<p>CoMBIコントローラが動かない？</p>
+<p>経験したことがあるのは、リリースケーブルの断線（新しくした）、レバースイッチ内の断線（これにはビックリした）。</p>
+</li>
+<li>
+<p>カメラが操作不能？</p>
+<p>Focus Holdが入ったままかもしれません。Focus Hold中は、カメラ本体の各種ボタンやMenuがいじれない仕様です。これは、改訂しようと考え中です（2021年）</p>
+</li>
+<li>
+<p>画像転送ミス</p>
+<p>まれに画像転送ミスが起こります。Nikonの場合、SDカードに残っているのがデフォルトの設定です。Sonyの場合、かつ、Sony Imaging Edgeを使用している場合、できれば、PC転送の設定を、SDカードにも残す、にしてください。</p>
+</li>
+<li>
+<p>写真がボケている</p>
+<p>様々な要因があります。カメラの設置があまかった。最初から調整ミス。途中レンズにぶつかった、途中クリオスタットに寄りかかった、手をついた。実験室の床が不安定。三脚が丈夫ではなく不安定なのを使ってしまっている。</p>
+</li>
+<li>
+<p>カメラが日時を記憶しなくなった。</p>
+<p>電源をOFFにすると、日付がリセットされてしまうという症状で、カメラ内の蓄電池が寿命です。そのままでも撮影はできます。実験のタイミングを考慮して、修理にだすのでいいでしょう。</p>
+</li>
+<li>
+<p>シャッターの耐用回数</p>
+<p>Nikon D810は20万回、Nikonは2014年から4年間で30万回を超え、シャッターに明確な不具合が出ていたわけではありませんが、上記の内蔵電池の修理の時に、交換してもらいました。修理料金は、内蔵電池交換とシャッター交換をあわせて、2万円台でした。
+Sony a7RIIIは50万回で、2017年からCoMBIにつかっていますが、順調です。</p>
+</li>
+</ul>
+<h4 id="_10">その他</h4>
+<ul>
+<li>
+<p>照明が暗い？</p>
+<p>LEDもへたります。なんとなく暗くなってきたなと、ヒトの目でも感じるようになったら、交換です。連絡をいただくか、秋月で買えます。短命なときで1年くらいです。</p>
+<p>使用後は、湿気を吸わないように、クリオスタット庫外へ出します。私は暖まるまで、ビニール袋に入れています。</p>
+</li>
+<li>
+<p>ブラシがうごかない？</p>
+<p>サーボモータは、もっともよく壊れるところです。でも心配ありません。ブラシは動かなくても効果的です。キュッキュと動かしたのは、半分ウケねらいでして、すみません。</p>
+</li>
+<li>
+<p>クリオスタット庫内をよごしてしまう、、、</p>
+<p>クリオスタットの使用後、70%EtOHをティッシュにつけて、拭き掃除できます。みごとにきれいに元通りになります。約束ごととして、安全第一で、かならず刃をはずすこと。機器保全のため、EtOHは噴霧しないこと。</p>
+<p>CoMBIでは多くの削りカスがでます。クリオスタットの汚れが気になります。とくに共通機器の場合はなおさら気がかりですが、上記でキレイになります。</p>
+</li>
+<li>
+<p>切りくずがよくブロック面にかぶる</p>
+<p>アンチロールプレートが効果絶大です。</p>
+</li>
+<li>
+<p>切りくずがブロック周辺につきやすい</p>
+<p>ブロックの温度が高いのかも知れません。温度を下げます。温度を幅5度以内で調整します。</p>
+<p>もしくはLED照明を暗くします。通常は12Vで点灯させていますが、9Vで暗めになります。</p>
+<p>黒OCTを使っている場合、照明のせいで温度が上がりやすいようです。9Vにするには、2020年版CoMBIコントローラを使用するか、電源（スイッチングACアダプタ、9V、1A程度、700円）を別に用意するかします。</p>
+</li>
+<li>
+<p>試料周囲に糸状のゴミが出やすい</p>
+<p>試料周囲とは、ブロック周囲ではなく、試料とOCTの境界部のことです。この場合、温度をさげます。幅5度以内で調整。</p>
+</li>
+<li>
+<p>温度はどれがいいか</p>
+<p>基本的にいつもつかっている厚さと温度で撮影できます。厚めなら温度をあげ、薄めなら温度を下げます。具体的には、標準の8-10 µm切片なら-20度。厚め20-40 µmなら-15度。薄め5 µmなら、-22度。試料によっても異なります。Leicaクリオスタットの説明書や、書籍（細胞・組織染色の達人、羊土社）を参考に。</p>
+</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            TJK
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.expand'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
