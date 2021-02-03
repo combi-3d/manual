@@ -616,60 +616,112 @@
 <li>連続画像をひらく　フォルダごとImageJのバーにドラッグアンドドロップ。搭載メモリと相談ですが、おおかた1000x1000x10000枚の画像が限度です。メモリに展開してください。かつてはVirtual Stackでもできましたが、ImageJのバージョンアップ後、逐次保存ができなくなりました。</li>
 <li><code>Plug-ins</code>, <code>Image Stabilizer</code>　このとき一番前の画像を開いておけば、前から順にに補正をかけます。一番後ろの画像を開いておけば、後ろから補正します。Logファイルを生成するに必ずチェックをいれます。もし、メモリが潤沢なら、結果を別ファイルで表示するにチェックしたほうがよく、補正の成否確認に便利です。</li>
 <li>パラパラとめくってみて、成功していれば、ラッキー。完了です。</li>
-<li>保存は、<code>Save as</code>, <code>Image Sequense...</code> 元のファイル名を使うに、チェック。</li>
-<li>もし失敗箇所があれば、メモをとります。</li>
+<li>補正に成功した連続画像を保存するには、<code>Save as</code>, <code>Image Sequense...</code> 元のファイル名を使うに、チェック。</li>
+<li>ログファイルも保存します。拡張子は、.logで、テキストファイルです。<ul>
+<li>前から補正したlogファイルと、後ろから補正したlogファイルがあれば、区別できるようにファイル名をつけて保存します。例、<strong>前から.log、後から.logとか</strong>（以降の説明ではこの名称を使います）、forward.log、backward.logとか。</li>
+</ul>
+</li>
+<li>補正に失敗した場合、失敗箇所（前から何枚目か）のメモをとります。このメモと、logファイルさえあれば、失敗連続画像を保存する必要はありません。</li>
 </ol>
 <h2 id="log">Logファイルを修正する</h2>
-<p>失敗してもあきらめず、Logファイルをエクセルなどで修正します。補正失敗には2種類あって、一枚だけが飛び出ている場合と、1箇所ずれるとそれ以降が移動しっぱなしというのがあります。下の例では、前から補正の699、742枚目で一枚だけ飛び出ています。また、前から補正の762、後ろから補正の318で、移動が起こっています。Logファイルの補正では、前からLogの正しいところと、後ろからLogの正しいところを合体させれば、全体が正しいLogファイルを作れます。Logファイルには、4列の数値があって、</p>
+<p>Logファイルには、4列の数値があって、</p>
 <ol>
 <li>画像の順番、</li>
 <li>前に進んだか後に進んだか（1、-1）、</li>
 <li>ヨコの補正距離、</li>
 <li>タテの補正距離</li>
 </ol>
-<p>これらが収録されています。補正後の画像で確認しながら、失敗箇所をメモします。</p>
-<p><img alt="3D slicer open" src="../img/imagestabilizer01.png" title="open" />
-<em>例、前から補正と後ろから補正の結果</em></p>
+<p>これらが収録されています。ズレ補正に失敗があっても、あきらめません。Logファイルをエクセルなどで修正します。補正失敗には2通りあり、失敗箇所のメモでは区別して記載します。</p>
 <ol>
-<li>Excelで、Sheet1に、<code>File</code>&gt;<code>Import</code>、<code>Text file</code>、<code>Importボタン</code>ファイルをえらんで<code>Get Data</code></li>
-<li>Text import wizard, <code>Delimited</code>にチェック、File originは、MacならMacintosh。<code>Nextボタン</code></li>
-<li><code>Commma</code>にチェック、<code>Finishボタン</code></li>
-<li>Existing sheet, sheet1, <code>OKボタン</code></li>
-<li>Excelで、Sheet2を用意し、上記と同様に、後ろからLogをsheet2に開きます。</li>
-<li>後ろからLogは降順になっているので、昇順になおします。4列を選んでから、<code>タブData</code>, <code>Sort</code>, Sort by <code>Column A</code>, Order <code>A-Z</code>, <code>OKボタン</code></li>
-<li>後ろからLog（Sheet2）を、前からLog（Sheet1）の隣にコピペ。</li>
-<li>失敗位置を修正する<ol>
+<li>一枚だけが飛び出ている</li>
+<li>1箇所ずれるとそれ以降がごっそり移動しっぱなし</li>
+</ol>
+<p>という2種類です。下の例では、前から補正の699、742枚目で一枚だけ飛び出ています。また、前から補正の762、後ろから補正の318で、移動が起こっています。</p>
+<p><img alt="3D slicer open" src="../img/imagestabilizer01.png" title="open" /></p>
+<p><em>例、前から補正と後ろから補正の結果</em>
+<br><br>
+Logファイルを修正する戦略は、「前から.logの正しいところと、後ろから.logの正しいところを合体させて、全体が正しいlogファイルを新しく作る」というものです。</p>
+<ol>
+<li>用意するものは、前から.log、後から.log、失敗箇所のメモ</li>
+<li>Excelで、Sheet1に前から.logをインポートします。<code>File</code>&gt; <code>Import</code>、<code>Text file</code>、<code>Importボタン</code>ファイルをえらんで<code>Get Data</code></li>
+<li>Text import wizard<ol>
+<li><code>Delimited</code>にチェック、</li>
+<li>File originは、Macなら<code>Macintosh</code>　</li>
+<li>ボタン<code>Next</code></li>
+<li><code>Commma</code>にチェック、</li>
+<li>ボタン<code>Finish</code></li>
+<li>Existing sheet, sheet1, </li>
+<li>ボタン<code>OK</code></li>
+</ol>
+</li>
+<li>Excelで、Sheet2を用意し、上記と同様に、後から.logをsheet2にインポートします。</li>
+<li>後から.logは降順になっているので、昇順になおします。<ol>
+<li>4列とも、選択する。</li>
+<li>タブ<code>Data</code></li>
+<li><code>Sort</code>, Sort by <code>Column A</code>, Order <code>A-Z</code>, </li>
+<li>ボタン<code>OK</code></li>
+</ol>
+</li>
+<li>前から.log（Sheet1）のすぐ隣に、後から.log（Sheet2）をコピペする</li>
+<li>
+<p>失敗位置を修正する</p>
+<ol>
 <li>失敗箇所を、色を違えるなどして、マークする。</li>
-<li>一枚だけの場合、そこだけ、比較して、差分を加算</li>
-<li>1箇所以降移動の場合、まず、ズレはじめの箇所を補正。つぎにそこ以降を補正します。
+<li>
+<p>「一枚だけ飛び出ている」場合</p>
+<ul>
+<li>失敗場所だけ、<strong>差分</strong>を加算する。下の式。</li>
+<li>（失敗場所の本来の移動距離）=(失敗場所のひとつ前）+（正しいlogの同じ場所 - 正しいlogのひとつ前）</li>
+<li>ヨコの補正距離、タテの補正距離、の両方に施すこと。</li>
+</ul>
+</li>
+<li>
+<p>「1箇所以降ごっそり移動」の場合</p>
+<ol>
+<li>新しい列で作業します。</li>
+<li>まず、ズレはじめの場所で、差分を加算して修正し（上記の式）、正しい移動距離を新しい列に記載します。</li>
+<li>つぎに、正しい移動距離数値より以降のセルに、正しい移動距離をつくります。<ul>
+<li>（以降の正しい移動距離）=(前項でつくった正しい移動距離）+（正しいlogの同じ場所 - 正しいlogのひとつ前）</li>
+</ul>
+</li>
+<li>以降セルすべてに適用します。Auto Fillという機能で、選択したセルの四角いマークを下へ伸ばします。
 <br>
 <img alt="IS log補正" src="../img/imagestabilizer02.png" title="log" />
-<em>699以降で移動している例（上の図とは異なります）　まず新しい699のヨコ補正距離を緑枠の位置に計算している</em>
+<em>699以降で移動している例（上の図とは異なります）　まず、新しい列で、699の正しいヨコ補正距離を計算している（緑枠）</em>
 <br>
 <img alt="IS log補正" src="../img/imagestabilizer03.png" title="log" />
-<em>次にタテ補正距離も計算し、以降の移動をただす</em>
+<em>（タテ補正距離も計算したあと）、つぎに、正しい移動距離数値より以降のセルに、正しい移動距離をつくる</em>
 <br></li>
 </ol>
 </li>
-<li>修正がすんだら、元のLogファイルと同様の「4列×タイトル行＋枚数だけの行数」にします。計算結果の数値をコピペする作業です。Excelなら、<code>Edit</code>, <code>Paste Special...</code>, <code>Valuesチェック</code>, <code>OKボタン</code>を使います。</li>
+</ol>
+</li>
+<li>
+<p>修正がすんだら、元のLogファイルと同様の「4列×タイトル行＋枚数だけの行数」にします。</p>
+<ol>
+<li>新しいシートをつくる</li>
+<li>そこに、計算結果の数値をコピペする。Excelなら、<code>Edit</code>, <code>Paste Special...</code>, <code>Valuesチェック</code>, <code>OKボタン</code>を使います。</li>
+</ol>
+</li>
 <li>ここで、いったん、xlsx形式で保存しておきます。</li>
-<li>次に、別名保存で、csvを作ります。<code>File</code>, <code>Save as</code>, File Format: <code>csv</code>　CSVファイルは、Sheetごとにしか保存できません。</li>
-<li>Finderで、保存したcsvファイル名の拡張子を書き換えます。<code>.csv</code>から<code>.log</code>へ。メッセージに<code>use log</code>。</li>
-<li>ファイルをテキストエディタで開く。<code>右クリック</code>, <code>Open with</code>, <code>TextEdit.app</code></li>
+<li>次に、別名保存で、csv形式で保存します。<code>File</code>&gt; <code>Save as</code>, File Format:<code>csv</code>　CSVファイルは、Sheetごとにしか保存できません。</li>
+<li>Finderで、保存したcsvファイル名の拡張子を書き換えます。<code>.csv</code>から<code>.log</code>へ。メッセージがでて、ボタン<code>use log</code>をクリック。</li>
+<li>Finderで、そのファイルをテキストエディタで開く。<code>右クリック</code>, <code>Open with</code>, <code>TextEdit.app</code></li>
 <li>
 <p>余計な文字を削除する。1行目の「"」6個、「,」3個、2行目の「,」3個を削除。（この作業を忘れると、のちのLog Applierで認識してくれません。）
     <img alt="IS log補正" src="../img/imagestabilizer04.png" title="log" />
     <em>余計な文字を削除</em></p>
 </li>
 <li>
-<p>保存。これで修正Logファイルの完成です。</p>
+<p>保存、<code>File</code>&gt; <code>Save</code>。これで修正Logファイルの完成です。</p>
 </li>
-<li>ImageJ/FIJI, <code>Plug-ins</code>, <code>Image Stabilizer Log Applier</code>にかけます。連続画像と、Logファイルを開いておいてから、Applierを実行します。（注、最新FIJIには、開くときのバグがあります。対策は下記）</li>
+<li>ImageJ/FIJI, <code>Plug-ins</code>, <code>Image Stabilizer Log Applier</code>にかけます。連続画像と、修正したlogファイルを開いておいてから、Applierを実行します。（注、最新のImageJ/FIJIには、logファイルを開くときにバグがあります。対策は下記）</li>
 </ol>
 <h2 id="log_1">Logファイルを倍加する</h2>
-<p>例えば、500x500でimage Stabilizer（ズレ補正）に成功すれば、Logファイルの数値ぜんぶを2倍にして、1000x1000の画像に、Image Stabilizer Log Applierをあてられます。
-ブロック周囲形状をズレ補正の基準にしているので、ズレ補正は、広く写った画像にしか適用できません。試料のごく一部を高精細画像でズレ補正したいときの工夫です。
-小さい画像でつくったLogファイルを、Excelでいじって、倍加Logファイルを作ります。</p>
+<p>例えば、「500x500 pixels, 40 µm/pixel」の連続画像で、Image Stabilizer（ズレ補正）に成功すれば、Logファイルの数値ぜんぶを2倍にして、「1000x1000 pixels, 20 µm/pixel」の連続画像に、Image Stabilizer Log Applierをかけることができます。Log Applierはパソコンへの負荷が低いので、重い連続画像でズレ補正する際に、重宝しています。</p>
+<p>では、4倍にして、「2000x2000 pixels, 10µm/pixel」の連続画像にかける？これは、データ量が多くなるので、ちょっと工夫が必要になるかもしれません。<strong>高精細さはそのままに、観たいところだけクロップ</strong>した連続画像「例、1000x1000, 10µm/pixel」を用意すれば、Applierにかけられ、高精細観察ができます。</p>
+<p>最初に行う、Image Stabilizerは、ブロック周囲形状をズレ補正の基準にしているので、ズレ補正は、広く写った画像にしか適用できません。一方、Image Stabilizer Log Applierでは、ブロック周囲形状は、もはや必要ありません。「試料全体で低倍率の3D観察」と「観たいところだけで高精細の3D観察」を分けて行っています。倍加logファイルがそういう観察を可能にしてくれています。</p>
+<p>倍加logでは、2倍、4倍までなら、余裕でキレイに補正してくれます。8倍、10倍は？ズレ補正が甘い場合があります、うまくいくときはうまくいきます。10倍以上の倍加は？通常そんなに倍加することはありません。オリジナル画像は最大約8000x6000 pixelsで、10分の1だと800x600 pixels。余裕でズレ補正できる軽さになるからです。</p>
 <h2 id="tips">Tips</h2>
 <h3 id="_3">おそい</h3>
 <ul>

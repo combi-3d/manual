@@ -520,7 +520,7 @@
         
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    起動
+    起動、モジュール
   </a>
   
 </li>
@@ -608,12 +608,18 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    ファイル名一括変換、必要に応じて
-  </a>
+      </ul>
+    </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    ファイル名一括変換、必要に応じて、縮小作業の前に
+  </a>
+  
+    <nav class="md-nav" aria-label="ファイル名一括変換、必要に応じて、縮小作業の前に">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#load" class="md-nav__link">
@@ -665,7 +671,7 @@
         
           <li class="md-nav__item">
   <a href="#sceneview" class="md-nav__link">
-    位置を記憶できる　モジュールSceneView
+    表示位置を保存する　モジュールSceneView
   </a>
   
 </li>
@@ -806,8 +812,8 @@ Win, Mac, Linux対応</p>
 <hr />
 <h2 id="dicom">DICOM編</h2>
 <p>アプリの基本操作に慣れる。サンプルDICOMデータで練習できる。</p>
-<h3 id="_2">起動</h3>
-<p>初期は、<code>Module</code> <code>Welcome to Slicer</code>が表示される。モジュールとは、各種機能のこと。
+<h3 id="_2">起動、モジュール</h3>
+<p>初期は、<code>Module</code> <code>Welcome to Slicer</code>が表示される。<strong>モジュール</strong>とは、各種機能のこと。あとにつづく説明で頻繁に出てくる用語。
 <img alt="3D slicer open" src="../img/slicer01.png" title="open" />
 <em>起動とサンプルデータ</em></p>
 <h3 id="dicom_1">DICOMデータ読込</h3>
@@ -837,7 +843,7 @@ Win, Mac, Linux対応</p>
 <p>青画面（3D View）は、2つの機能がある。</p>
 <ol>
 <li>
-<p>Volume Rendring　<code>Module</code> <code>Volume Rendering</code>を選ぶ</p>
+<p>Volume Rendring　モジュール<code>Volume Rendering</code>を選ぶ</p>
 <ul>
 <li><code>眼の印</code>（Volumeの左側）をON/OFFすると、青画面でのVolume Rendering像を表示/非表示</li>
 <li>青画面左上<code>中央寄せ</code>ボタン（迷子になったとき）</li>
@@ -871,8 +877,51 @@ Win, Mac, Linux対応</p>
 一度、3D slicerを再起動させると、変更が反映される。<code>メニューバー</code>、<code>Slicer 4.11</code>, <code>Quit Slicer</code></p>
 <h3 id="jpeg">連続JPEG画像の準備</h3>
 <p>CoMBIではJPEG形式で連続画像をつくる。3D slicerは、各種画像形式に対応しており、JPEGも直接扱える。ちなみに、PNG形式はダメなようだ。loadはできるが、Volume Renderingにかさねることができない。平面表示ではめくれているけれど、Volume Rendering上の表示は、一枚だけで不変。透明効果は反映されず、白になる。</p>
-<h3 id="_8">ファイル名一括変換、必要に応じて</h3>
-<p>3D slicerでは、完全な連番が必要。連番のうしろに残しておいた、元ファイル名が飛び飛びの場合、連続画像とは認識されない。Horosでは、頭に連番さえあればよかったけれど。CoMBIの撮影が通常に成功した場合は、必要ない。ファイル名が9999から0001に戻ったとか、特別な事情があるときに、ファイル名を変える。</p>
+<h2 id="_8">ファイル名一括変換、必要に応じて、縮小作業の前に</h2>
+<p>CoMBIの撮影が通常に成功した場合は、必要ありません。ファイル名が9999から0001に戻ったとか、特別な事情があるときに、ファイル名を一括で変換します。</p>
+<p>3D slicerの場合、完全な連番が必要です。連番のうしろに残しておいた元ファイル名が飛び飛びの場合、連続画像とは認識されません。完全な連番にしたとき、元データとの照合（実験の再現性）ができるように、メモを残してください。</p>
+<p>Horosの場合、頭に連番さえあればよい。</p>
+<table>
+<thead>
+<tr>
+<th>変換前</th>
+<th>よい例　</th>
+<th>3Dslicerではダメな例<br>ただしHorosではよい</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DSC_9997.jpg</td>
+<td>0001.jpg</td>
+<td>0001_DSC_9997.jpg</td>
+</tr>
+<tr>
+<td>DSC_9998.jpg</td>
+<td>0002.jpg</td>
+<td>0002_DSC_9998.jpg</td>
+</tr>
+<tr>
+<td>DSC_9999.jpg</td>
+<td>0003.jpg</td>
+<td>0003_DSC_9999.jpg</td>
+</tr>
+<tr>
+<td>DSC_0001.jpg</td>
+<td>0004.jpg</td>
+<td>0004_DSC_0001.jpg</td>
+</tr>
+<tr>
+<td>DSC_0002.jpg</td>
+<td>0005.jpg</td>
+<td>0005_DSC_0002.jpg</td>
+</tr>
+<tr>
+<td>DSC_0003.jpg</td>
+<td>0006.jpg</td>
+<td>0006_DSC_0003.jpg</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li>Windows OSで一括変換：<code>Explore</code>で<code>複数選択</code>、<code>名称変更</code>すると、「入力文字(1).jpg」と、カッコつき連番数字になる。元のファイル名は残らないので注意。</li>
 <li>Mac OSで一括変換：<code>Finder</code>で<code>複数選択</code>、<code>右クリック（副メニュー）</code>より、ファイル名を変更。完全変更や連番追記など、ある程度カスタマイズできる。</li>
@@ -880,22 +929,22 @@ Win, Mac, Linux対応</p>
 </ul>
 <h3 id="load">連続画像の読み込み（Loadとよぶ）</h3>
 <ul>
-<li>連続JPEG画像の読み込みには、<code>最初の1枚をドラッグ</code>する。新しいウィンドウ、<code>Add data into the scene</code>がでる。</li>
+<li>連続JPEG画像の読み込みには、フォルダごとドラッグする。または、最初の1枚をドラッグする。新しいウィンドウ<code>Add data into the scene</code>がでる。</li>
 <li>自動で連続画像を認識するはずだが、念の為、<code>Show options</code>にチェックをいれてオプション表示させ、<code>Single file</code>に<strong>チェックがないこと</strong>を確認する。</li>
-<li>連続画像の呼び名をきめられる。ウィンドウ、<code>Add data into the scene</code>において、呼び名を入力する。もしくは、のちに<code>Module</code>, <code>Volumes</code>, <code>Active volume</code>の<code>プルダウンメニュー</code>で、<code>Rename current volume</code>でも変更できる<blockquote>
+<li>連続画像の呼び名をきめられる。ウィンドウ<code>Add data into the scene</code>において、呼び名を入力する。もしくは、のちに<code>Module</code>, <code>Volumes</code>, <code>Active volume</code>の<code>プルダウンメニュー</code>で、<code>Rename current volume</code>でも変更できる<blockquote>
 <p>3D slicerは、連続画像セットを、複数セット同時に扱える。医療画像における、PET-MRIの重ね合わせ（fusion）のような使い方である。CoMBIであれば、グレースケール連続画像から Volume Renderingを構築し、カラーの断面像 (MPR)を 3面重ねて表示させるといった使い方ができる。3D slicer内での呼び名を決めておき、区別したほうが作業しやすい。デフォルトは、先頭の画像ファイル名になる。これを自由な名称、例えば、Gray for 3Dや Color series などに変更する。<br></p>
 </blockquote>
 </li>
 </ul>
 <h3 id="_9">連続画像の設定</h3>
 <ul>
-<li>ボクセルサイズ、XYZを手入力する。<code>Module</code>, <code>Volumes</code>, ▽<code>Volume information</code>で、<code>Image Spacing</code>に、入力する。XYは画像のピクセルサイズ、Zは切削厚。</li>
-<li>階調数の指定する。<code>Module</code>、<code>Volumes、Threshold</code>で、JPEGなら、0-255。Autoにすると、0-255になる。デフォルトはCT値っぽい、±1000になってしまう。ここで設定した階調数は、<code>Module</code> <code>Volume Rendering</code>に連動していて、そのときの色付け作業が容易になる。</li>
+<li>ボクセルサイズ、XYZを手入力する。モジュール<code>Volumes</code>, ▽<code>Volume information</code>で、<code>Image Spacing</code>に、入力する。XYは画像のピクセルサイズ、Zは切削厚。</li>
+<li>階調数を指定する。モジュール<code>Volumes、Threshold</code>で、JPEGなら、0-255。Autoにすると、0-255になる。デフォルトはCT値っぽい、±1000になってしまう。ここで設定した階調数は、<code>Module</code> <code>Volume Rendering</code>に連動していて、そのときの色付け作業が容易になる。</li>
 </ul>
 <h3 id="volume-rendering">Volume Rendering</h3>
 <h4 id="_10">準備</h4>
 <ul>
-<li><code>Module</code>, <code>Volume Rendering</code></li>
+<li>モジュール<code>Volume Rendering</code></li>
 <li><code>眼のマーク</code>で表示をON/OFFする</li>
 <li>青画面左上、<code>中央寄せマーク</code></li>
 <li><code>マウススクロール</code>で拡大縮小</li>
@@ -904,10 +953,12 @@ Win, Mac, Linux対応</p>
 <li>▽<code>Display</code>、<code>Rendering</code>プルダウンより、dGPUがあれば、GPUを選んだ方が動作が安定する</li>
 </ul>
 <h4 id="_11">色付け</h4>
-<p>▽<code>Advanced...</code>において、
-* 色の指定　<code>Scalar Color Mapping</code>。<code>点をダブルクリック</code>、または<code>点をクリック</code>で選択しておいて、<code>Point</code>の隣のボタンで、<code>色</code>を指定する。Point選択や色指定は、右上のプルダウンメニューからもできる。
-（今回は3色指定した。血管の明るいシグナルは赤、心筋を黄色、脂肪の暗いシグナルを青に。）</p>
+<p>▽<code>Advanced...</code>において</p>
 <ul>
+<li>
+<p>色の指定　<code>Scalar Color Mapping</code>。<code>点をダブルクリック</code>、または<code>点をクリック</code>で選択しておいて、<code>Point</code>の隣のボタンで、<code>色</code>を指定する。Point選択や色指定は、右上のプルダウンメニューからもできる。
+（今回は3色指定した。血管の明るいシグナルは赤、心筋を黄色、脂肪の暗いシグナルを青に。）</p>
+</li>
 <li>
 <p>次に透明度（各領域）を決める　<code>Scalar Opacity Mapping</code> 点をつかんで移動する。または、点をクリックして、<code>O</code>に数値入力。点は追加できる。ライン上でクリック。点を削除するときは、キーボードのdelete。</p>
 </li>
@@ -920,23 +971,41 @@ Win, Mac, Linux対応</p>
 </ul>
 <h4 id="_12">固まったとき</h4>
 <p>どきどき青画面3D viewだけ、固まることがある。カーソルでは3Dイメージをぐりぐりできなくなる。ビューワのメニュー（<code>押しピンマーク</code>）から、<code>自動回転ボタン</code>を選んで、動かしてみると、カーソルが復帰する場合がある。それでもだめなら、しばらく待つと直っている。</p>
-<h3 id="sceneview">位置を記憶できる　モジュール<code>SceneView</code></h3>
-<p>3D ビューワや2D ビューワでの表示位置を保存しておくと、いつでも戻ってこられる。ただし、色つけの変化は記憶されない。</p>
+<h3 id="sceneview">表示位置を保存する　モジュール<code>SceneView</code></h3>
+<p>3D ビューワや2D ビューワでの表示位置を保存しておくと、いつでも戻ってこられる。ただし、色付けの調整などは保存されていない。</p>
 <ul>
-<li><code>Module</code>, <code>Scene Veiws</code> または、<code>カメラマークの右隣のマーク</code> </li>
-<li>新しいウィンドウ<code>3D Slicer SceneView</code>がでる。記録した画面を指定できる。</li>
+<li>モジュール<code>Scene Veiws</code> または、<code>カメラマークの右隣のマーク</code> </li>
+<li>新しいウィンドウ<code>3D Slicer SceneView</code>がでる。保存したい画面（R, G, Y, B）を指定できる。</li>
 <li><code>OK</code>。</li>
 <li>保存したSceneを読み込むときは、<code>カメラマークのふたつとなり</code></li>
 </ul>
 <h3 id="_13">動画</h3>
-<p>２段階になっていて、ステップ1:モジュール <code>sequences</code>で操作の様子を記録し、ステップ2:モジュール<code>Utilities</code>&gt; <code>Screen Capture</code>で、記録したsequenceを呼び出して、動画ファイルに書き出す。<br></p>
+<p>２段階になっていて、ステップ1:モジュール <code>sequences</code>で操作の様子を記録し、ステップ2:モジュール<code>Utilities</code>&gt; <code>Screen Capture</code>で、記録したsequenceを呼び出して、動画ファイルに書き出す。事前設定が必要。</p>
 <h4 id="videompeg-setting-up-ffmpeg">Video(mpeg 書き出し)には、 事前設定 Setting up ffmpeg が必要</h4>
-<p>未設定の場合、ステップ2で、▽<code>Advance</code>のところに<code>赤字のエラー</code>がでて、その横に<code>Help...リンク</code>ができる。クリックすると、<code>3D Slicerのサイト</code>に行く。<br>
-記載に従い、Macなら <code>Terminalアプリ</code>を使って、<code>Homebrewインストール</code>（<code>Xcodeインストール</code>またはアップデートも含む）、と<code>ffmpegインストール</code>を行う。セットアップには時間がかかった、Xcodeアップデート30分、homebrew30分、ffmpeg15分、計75分（自宅wifi夜）、大学LANでも合計16分間かかった。<br>
-ffmpegは、フレーム画像（連続 PNG）から動画に変換する機能。連続PNGをつくる段階には、ffmpegは関わらない。3D slicerの動画作成の挙動をみていると、いったんPNGの連続画像にしてから、動画変換をしている様子。<br>
-<code>ffmpeg executable</code>の欄に、ffmpegのアドレスを入力する。<code>/usr/local/bin/ffmpeg</code></p>
+<ul>
+<li>
+<p>未設定の場合、下記の手順を進めていくとステップ2で、▽<code>Advance</code>のところに<code>赤字のエラー</code>がでて、その横に<code>Help...リンク</code>ができる。クリックすると、<code>3D Slicerのサイト</code>に行く。</p>
+</li>
+<li>
+<p>記載に従い、Macならアプリ<code>Terminal</code>を使って、</p>
+<ol>
+<li><code>Homebrew</code>をインストール</li>
+<li>Homebrewのとき、<code>Xcode</code>インストールまたはアップデートも要求される。</li>
+<li>
+<p><code>ffmpeg</code>インストールを行う</p>
+<p>セットアップには時間がかかった、Xcodeアップデート30分、homebrew30分、ffmpeg15分、計75分（自宅wifi夜）、大学LANでも合計16分間かかった。</p>
+</li>
+</ol>
+</li>
+<li>
+<p><code>ffmpeg executable</code>の欄に、ffmpegのアドレスを入力する。<code>/usr/local/bin/ffmpeg</code></p>
+<blockquote>
+<p>ffmpegは、フレーム画像（連続 PNG）から動画に変換する機能。連続PNGをつくる段階には、ffmpegは関わらない。3D slicerの動画作成の挙動をみていると、いったんPNGの連続画像にしてから、動画変換をしている様子。</p>
+</blockquote>
+</li>
+</ul>
 <h4 id="1">ステップ 1</h4>
-<p>操作している様子を録画できる。画面指定可能。Red, green, yellow, camera（3Dの画面）</p>
+<p>操作している様子を記録できる。画面、Red, green, yellow, camera（3Dの画面）のどれかを指定できる。</p>
 <ul>
 <li>モジュール<code>sequences</code></li>
 <li>▽<code>Browsing</code>, <code>Sequence browser</code>のプルダウンより、<code>Create new sequence browser as...</code>, 新しいウィンドウ<code>Rename sequence</code>で、名前を決めて入力。図ではdemoとした。</li>
@@ -947,9 +1016,9 @@ ffmpegは、フレーム画像（連続 PNG）から動画に変換する機能�
 <li>▽ <code>Browsing</code> <code>緑三角ボタン</code>で再生、停止。</li>
 </ul>
 <h4 id="2">ステップ２</h4>
-<p>録画したものから、動画ファイルをつくる。</p>
+<p>記録したものから、動画ファイルをつくる。</p>
 <ul>
-<li><code>Module</code>, <code>Utilities</code>, <code>Screen Capture</code></li>
+<li>モジュール<code>Utilities</code>, <code>Screen Capture</code></li>
 <li>
 <p>▽ Input<br>
 <code>Master View:</code><br>
@@ -972,7 +1041,7 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <ul>
 <li>一般のビデオは、30frame/secondである。このデモでは4秒分、120枚のPNGを書き出した。もし、10秒動画300枚とすると、だいぶ時間がかかる。</li>
 <li>もし、青ウィンドウ、3D View を大きく表示していると、時間がかかる。</li>
-<li>連続PNGやビデオ変換かかる時間は、パソコンのスペックによるし、待てる時間はひとそれぞれなので、なんどかやってみよう。</li>
+<li>連続PNGやビデオ変換かかる時間は、パソコンのスペックによるし、待てる時間はひとそれぞれなので、なんどかやってみる。</li>
 </ul>
 <h3 id="_15">保存</h3>
 <p>画像データも作業内容もひとつのファイルとして保存できる</p>
@@ -987,7 +1056,7 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <p><code>Paint</code>と<code>Fill between slices</code>だけを使った手作業の手順を示す。セグメンテーションの情報は、mrbファイルに一括して保存される。他にも領域限局やシグナル強度の範囲指定など、さまざまなモードが備わっている（練習中）。くわしくは、公式ホームページのDocumentや動画解説へおねがいします。公式以外にもネットでいろいろ見つかります。
 作業には、タッチペンがあるとよい。私はMacBookProにiPad（SideCar）をつなげ、Apple Penで描いています。Windowsノートなら元々タッチパネルの場合もあるでしょう。WindowsマシンにiPadをつなげるアプリもあるようです。</p>
 <ul>
-<li><code>Module</code>, <code>segmentation</code>, <code>segment editor</code></li>
+<li>モジュール<code>segmentation</code>, <code>segment editor</code></li>
 <li><code>Addボタン</code>で、新規セグメント<code>Segment_1</code>をつくる。名前は自由に。このときは大動脈を塗ることにした。</li>
 <li><code>Paint</code>で、大動脈を塗りつぶした。画像とびとびに塗る。<code>Show 3D</code>ボタンを押しておくと、青画面（3D view）にリアルタイムで表示されていく。青画面には、Volume Renderingとセグメントと同時に表示できるが、動作が鈍くなる。塗りつぶし作業中はVolume renderingを表示しないでおき、ときどき確認のために表示させると良いでしょう。</li>
 <li><code>Erase</code>で塗りすぎたところは修正</li>
@@ -997,8 +1066,8 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <li><code>Add</code>ボタン<code>Segment_2</code>もつくる。<code>Paint</code>で肺動脈もつくった。</li>
 <li><code>Segmentation</code>ボタンで、詳細設定、色や、透明度を変えられる。 (大動脈を赤、肺動脈を青に変えた)</li>
 <li><code>Edit selected</code>ボタンで、元にの塗るモードに戻る</li>
-<li>Volume Renderingとセグメントをかさねてみる。<code>Module</code>, <code>Volume rendering</code>青画面へ表示ON。動作が鈍くなるので注意。</li>
-<li><code>Module</code>, <code>Segment Editor</code>にもどって、<code>Show 3D</code>でセグメントを青画面に表示または非表示する。</li>
+<li>Volume Renderingとセグメントをかさねてみる。モジュール<code>Volume rendering</code>青画面へ表示ON。動作が鈍くなるので注意。</li>
+<li>モジュール<code>Segment Editor</code>にもどって、<code>Show 3D</code>でセグメントを青画面に表示または非表示する。</li>
 <li><code>アイコン</code>, <code>カメラマーク</code>（Capture Screenshot）で、静止画に描き出した例</li>
 </ul>
 <h4 id="_18">体積の数値を読む</h4>

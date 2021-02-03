@@ -504,6 +504,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    作業計画
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ファイル名一括変換、必要に応じて
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#photoshop" class="md-nav__link">
     手順　Photoshop
   </a>
@@ -512,10 +526,10 @@
       
         <li class="md-nav__item">
   <a href="#imagejfiji" class="md-nav__link">
-    手順 ImageJ/FIJI
+    手順　ImageJ/FIJI
   </a>
   
-    <nav class="md-nav" aria-label="手順 ImageJ/FIJI">
+    <nav class="md-nav" aria-label="手順　ImageJ/FIJI">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -538,7 +552,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     ヒント
   </a>
   
@@ -565,6 +579,103 @@
 <li>ImageJ/FIJI, Macro</li>
 </ul>
 <p>Photoshopのアクション・自動処理・バッチでは、複雑な操作も記録できます。ImageJ/FIJIでもMacroを使ってできますが、記録できることがPhotoshopよりも少ない感じです。もしかしたら、熟達者ならPhotoshop相当に複雑に記録できるのかもしれませんが、よくわかりませんでした。</p>
+<h2 id="_3">作業計画</h2>
+<p>たいてい元画像のピクセルサイズは、割り切れない数字になります。縮小の目的は、ズレ補正用の軽い連続画像をつくること、および、3D用のグレースケール画像も作ることです。ついでにピクセルサイズをキリの良い数値にして整理整頓、作業しやすくしています。</p>
+<p>一例、Nikon D810で1倍、フルサイズ撮影し、スケールを確認すると、</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>µm/pixel</th>
+<th>pixels</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>元画像</td>
+<td>4.88</td>
+<td>7360×4912</td>
+<td>color</td>
+</tr>
+<tr>
+<td>縮小1</td>
+<td>5</td>
+<td>7541x5032</td>
+<td>color, gray</td>
+</tr>
+<tr>
+<td>縮小2</td>
+<td>10</td>
+<td>3770x2516</td>
+<td>color, gray</td>
+</tr>
+<tr>
+<td>縮小3</td>
+<td>20</td>
+<td>1885x1258</td>
+<td>color, gray</td>
+</tr>
+<tr>
+<td>縮小4</td>
+<td>40</td>
+<td>942x629</td>
+<td>color, gray</td>
+</tr>
+</tbody>
+</table>
+<p>最大で4通りの縮小連続画像をつくることになります。ズレ補正で扱える1000x1000以下の軽いシリーズができるまで、縮小します。実際は、RAW-JPEG変換時などで、ブロック周囲が入る程度にクロップするので、これらより小さな画像を扱い、縮小は2通り、3通りで済むことが多いです。ズレ補正が終わってから、さらにクロップして、ブロック周囲を除去します。</p>
+<p>それぞれの縮小連続画像で、カラーもグレースケールも作っておけば、もうそれ以外の縮小作業はありません。</p>
+<h2 id="_4">ファイル名一括変換、必要に応じて</h2>
+<p>CoMBIの撮影が通常に成功した場合は、必要ありません。ファイル名が9999から0001に戻ったとか、特別な事情があるときに、ファイル名を一括で変換します。</p>
+<p>3D slicerの場合、完全な連番が必要です。連番のうしろに残しておいた元ファイル名が飛び飛びの場合、連続画像とは認識されません。完全な連番にしたとき、元データとの照合（実験の再現性）ができるように、メモを残してください。</p>
+<p>Horosの場合、頭に連番さえあればよい。</p>
+<table>
+<thead>
+<tr>
+<th>変換前</th>
+<th>よい例　</th>
+<th>3Dslicerではダメな例<br>ただしHorosではよい</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DSC_9997.jpg</td>
+<td>0001.jpg</td>
+<td>0001_DSC_9997.jpg</td>
+</tr>
+<tr>
+<td>DSC_9998.jpg</td>
+<td>0002.jpg</td>
+<td>0002_DSC_9998.jpg</td>
+</tr>
+<tr>
+<td>DSC_9999.jpg</td>
+<td>0003.jpg</td>
+<td>0003_DSC_9999.jpg</td>
+</tr>
+<tr>
+<td>DSC_0001.jpg</td>
+<td>0004.jpg</td>
+<td>0004_DSC_0001.jpg</td>
+</tr>
+<tr>
+<td>DSC_0002.jpg</td>
+<td>0005.jpg</td>
+<td>0005_DSC_0002.jpg</td>
+</tr>
+<tr>
+<td>DSC_0003.jpg</td>
+<td>0006.jpg</td>
+<td>0006_DSC_0003.jpg</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Windows OSで一括変換：<code>Explore</code>で<code>複数選択</code>、<code>名称変更</code>すると、「入力文字(1).jpg」と、カッコつき連番数字になる。元のファイル名は残らないので注意。</li>
+<li>Mac OSで一括変換：<code>Finder</code>で<code>複数選択</code>、<code>右クリック（副メニュー）</code>より、ファイル名を変更。完全変更や連番追記など、ある程度カスタマイズできる。</li>
+<li>便利に一括変換：Adobe Bridge（有料アプリ）なら細かく設定ができる。</li>
+</ul>
 <h2 id="photoshop">手順　Photoshop</h2>
 <ol>
 <li>スケール画像で、ピクセルサイズを計算する。Refering to the scale image taken beforehand, caliculate the pixel size of the original blockface image in micrometer/pixel. </li>
@@ -574,7 +685,7 @@
 <li>いざ実行。<code>File</code>&gt;<code>Auto</code>&gt;<code>Batch</code> 記録したアクションと、実行させたい連続画像入りフォルダを指定し、実行。
 （batchとは別に、dropletというやり方もあるようです。記録したアクションをファイルとして保存して、画像のサムネイルにドラッグするらしい。結果は同じです。）</li>
 </ol>
-<h2 id="imagejfiji">手順 ImageJ/FIJI</h2>
+<h2 id="imagejfiji">手順　ImageJ/FIJI</h2>
 <ol>
 <li>スケール画像で、ピクセルサイズを計算する。Refering to the scale image taken beforehand, caliculate the pixel size of the original blockface image in micrometer/pixel. </li>
 <li>縮小させる計画をたて、1のピクセルサイズを参考に縮小後の画像サイズを計算しておく。ピクセルサイズが、きりの良い数字になるように縮小している（のちの3Dイメージングに便利）。最小は一片500pixel程度になるように計画する（のちのズレ補正では、軽い画像シリーズから試す）。のちのズレ補正に Cariculate the reduced image size to make 5, 10, 20, or 40 µm/pixel image series.</li>
@@ -608,7 +719,7 @@
 makeRectangle(181, 96, 278, 278);
 run(&quot;Crop&quot;);
 </code></pre>
-<h2 id="_3">ヒント</h2>
+<h2 id="_5">ヒント</h2>
 <ul>
 <li>ImageJ Macroでは、別名保存を細かく設定できませんでした。作りたい画像シリーズが何個もある場合、（たとえば、5 µm series, 10 µm series, color series, grayscale series）、別々のマクロを組んだほうがいいようです。Photoshopの場合、別名保存もふくめ、複雑な作業を全部記録してくれます。</li>
 <li>メモリに展開できる画像データの量については、別のページ、「コンピュータと画像ファイル」へ</li>
