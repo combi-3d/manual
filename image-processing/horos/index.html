@@ -696,6 +696,19 @@
     Photoshop
   </a>
   
+    <nav class="md-nav" aria-label="Photoshop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    ヒント
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1017,12 +1030,14 @@ ROIを指定する方法として、一般的な画像（グレースケール�
 <li>準備 カラー連続画像は、Photoshop色域指定用、 グレースケール連続画像は、Horos, VR用。フォルダを新規にひとつつくる（二値化白黒連続画像用）</li>
 <li>カラー画像のうち、色域指定に使えそうな一枚だけ開く</li>
 <li>アクションで記録開始<ol>
-<li>Photoshopで、特定の色を選ぶ。<code>選択範囲</code>&gt;<code>色域指定</code>　許容量を少なめ（5とか）にして、スポイトで指定する。追加 (+)や削減(ー)を使って調節する。</li>
+<li>Photoshopで、特定の色を選ぶ。<code>選択範囲 Select</code>&gt;<code>色域指定 Color Range...</code>　許容量を少なめ（5とか）にして、スポイトで指定する。追加 (+)や削減(ー)を使って調節する。</li>
 <li>二値化白黒画像とする<ol>
-<li>OKボタンをおすと、選択領域が表示される。<code>キーボードDelete</code>で<code>選択範囲を削除</code>、削除後の色は<code>白</code>を指定</li>
-<li><code>選択範囲</code>を<code>反転</code></li>
-<li><code>キーボードDelete</code>で<code>選択範囲を削除</code>、削除後の色は<code>黒</code>を指定</li>
-<li><code>イメージ</code>, <code>8 ビットグレースケール</code> </li>
+<li>OKボタンをおすと、選択領域が表示される。</li>
+<li>キーボード<code>Delete</code>で選択範囲を削除する。削除後の色は<code>White</code>を指定する</li>
+<li>（必要なら、境界線をなめらかにする。<code>選択範囲 Select</code>&gt; <code>選択範囲の変更 Modify</code>&gt; <code>滑らかに Smooth...</code>）</li>
+<li>選択範囲を反転させる。<code>選択範囲 Select</code>&gt; <code>反転 Inverse</code></li>
+<li>キーボード<code>Delete</code>で選択範囲を削除する。削除後の色は<code>Black</code>を指定する</li>
+<li><code>イメージ Image</code>&gt; <code>モード Mode</code>&gt; <code>グレースケール grayscale</code> </li>
 </ol>
 </li>
 <li>別名で保存　<code>Save as</code>新しく作っておいたフォルダを指定して保存する</li>
@@ -1030,8 +1045,11 @@ ROIを指定する方法として、一般的な画像（グレースケール�
 </ol>
 </li>
 <li>アクションの記録停止</li>
-<li>連続画像に、記録したアクションを一括処理する　<code>自動処理</code>、<code>バッチ</code></li>
+<li>連続画像に、記録したアクションを一括処理する　<code>ファイル File</code>&gt; <code>自動処理 Automate</code>&gt; <code>バッチ Batch...</code></li>
 </ol>
+<h5 id="_11">ヒント</h5>
+<p>アクションが途中で止まる：選択領域が全くない場合、選択範囲の反転で、止まっていました。対策として、すべての画像の端っこに、指定したい色で極小の四角を描きました。これで、すべての連続画像にわずかでも選択範囲が存在することになり、アクションが正常に行われました。</p>
+<p>忘れた：二値化画像をRGBのまま保存すると、以降のHorosでうまくROIが選べない。グレースケールにするのを忘れずに。</p>
 <h4 id="horososirix_1">Horos/OsiriX</h4>
 <ol>
 <li>二値化白黒連続画像をHorosに読み込む　<code>plug-in</code>, <code>JPEG to DICOM</code> 
