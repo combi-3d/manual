@@ -18,7 +18,7 @@
     
     
       
-        <title>Operation - Manual of CoMBI</title>
+        <title>3D像に切片位置を示す - Manual of CoMBI</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#operation" class="md-skip">
+        <a href="#3d" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Operation
+              3D像に切片位置を示す
             
           </span>
         </div>
@@ -302,7 +302,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../combi-c/index.html" class="md-nav__link">
+    <a href="../../operation/combi-c/index.html" class="md-nav__link">
       クリオスタット型CoMBI
     </a>
   </li>
@@ -315,7 +315,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../combi-s/index.html" class="md-nav__link">
+    <a href="../../operation/combi-s/index.html" class="md-nav__link">
       新型CoMBI coming soon
     </a>
   </li>
@@ -328,7 +328,7 @@
 
 
   <li class="md-nav__item">
-    <a href="index.html" class="md-nav__link">
+    <a href="../../operation/combi-r/index.html" class="md-nav__link">
       新型CoMBI ccoming soon
     </a>
   </li>
@@ -370,7 +370,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../image-processing/introduction/index.html" class="md-nav__link">
+    <a href="../introduction/index.html" class="md-nav__link">
       画像処理の概要
     </a>
   </li>
@@ -383,7 +383,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../image-processing/rawjpeg/index.html" class="md-nav__link">
+    <a href="../rawjpeg/index.html" class="md-nav__link">
       RAW-JPEG変換
     </a>
   </li>
@@ -396,7 +396,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../image-processing/scale/index.html" class="md-nav__link">
+    <a href="../scale/index.html" class="md-nav__link">
       画像の縮小
     </a>
   </li>
@@ -409,7 +409,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../image-processing/registration/index.html" class="md-nav__link">
+    <a href="../registration/index.html" class="md-nav__link">
       ズレ補正（Image registration）
     </a>
   </li>
@@ -422,7 +422,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../image-processing/3dslicer/index.html" class="md-nav__link">
+    <a href="../3dslicer/index.html" class="md-nav__link">
       3D再構築、3D slicer
     </a>
   </li>
@@ -435,7 +435,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../image-processing/horos/index.html" class="md-nav__link">
+    <a href="../horos/index.html" class="md-nav__link">
       3D再構築、Horos/OsiriX
     </a>
   </li>
@@ -448,7 +448,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../image-processing/correlation/index.html" class="md-nav__link">
+    <a href="index.html" class="md-nav__link">
       3D像に切片位置を示す
     </a>
   </li>
@@ -503,21 +503,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#combi-r" class="md-nav__link">
-    CoMBI R
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -529,9 +514,18 @@
               
                 
                 
-                <h1 id="operation">Operation</h1>
-<h2 id="combi-r">CoMBI R</h2>
-<p>Coming soon</p>
+                <h1 id="3d">3D像に切片位置を示す</h1>
+<p>CoMBIの特徴的なデータになります。</p>
+<ol>
+<li>カラー連続画像、まはた、グレースケール連続画像を複製する。</li>
+<li>切片に対応したブロック面画像を削除し、代わりに新規画像をつくる。<ul>
+<li>新規画像は、カラー連続画像の場合、このみの色、一色でべた塗りします。MPRの画像のなかで、切片位置が線として表示されます。</li>
+<li>グレー連続画像の場合、真っ白か、50%グレーのべた塗り画像、です。どちらがいいかは、Volume Renderingのときの表示条件によります。</li>
+</ul>
+</li>
+<li>3Dビューワ（Horos, 3D slicer）に読み込む。</li>
+<li>カラー連続画像はMPR用、グレースケール連続画像はボリュームレンダリング用に使用する。</li>
+</ol>
                 
               
               
