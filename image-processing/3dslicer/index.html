@@ -760,6 +760,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    作業が重い
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segmentation" class="md-nav__link">
+    Segmentationの結果が粗い
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1081,7 +1095,8 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <ul>
 <li>モジュール<code>segmentation</code>, <code>segment editor</code></li>
 <li>ボタン<code>Add</code>で、新規セグメント<code>Segment_1</code>をつくる。名前は自由に。このときは大動脈を塗ることにした。</li>
-<li><code>Paint</code>で、大動脈を塗りつぶした。画像とびとびに塗る。<code>Show 3D</code>ボタンを押しておくと、青画面（3D view）にリアルタイムで表示されていく。青画面には、Volume Renderingとセグメントと同時に表示できるが、動作が鈍くなる。塗りつぶし作業中はVolume renderingを表示しないでおき、ときどき確認のために表示させると良いでしょう。</li>
+<li><code>Paint</code>で、大動脈を塗りつぶした。全画像で塗る必要はなく、10枚に1枚の画像で塗るとか、とびとびでよい。<code>Show 3D</code>ボタンを押しておくと、青画面（3D view）にリアルタイムで表示されていく。青画面には、Volume Renderingとセグメントと同時に表示できるが、動作が鈍くなる。塗りつぶし作業中はVolume renderingを表示しないでおき、ときどき確認のために表示させると良いでしょう。</li>
+<li><code>Draw</code>は、描いた線の内側をすべて塗りつぶすモードです。今回の輪状に塗りたいときは不向きです。使い方は、<code>Draw</code>+ <code>Return, Enter</code>です。Drawで線を描いたあとにリターンキーをおすと、その内部が塗りつぶされます。Drawのときは、円形でもいいですし、弧でもかまいません。PawerPointやIllustratorの、線と塗りつぶしの関係です。</li>
 <li><code>Erase</code>で塗りすぎたところは修正</li>
 <li><code>Fill between slices</code>で補完する</li>
 <li><code>Show 3D</code>で様子を見る。がたついていたら、<code>Paint</code>で修正をつづける。<code>Auto update</code>にチェックをいれて おくと、<code>Paint</code>の修正中に、<code>Fill between slices</code>の像に反映されていく。</li>
@@ -1095,9 +1110,13 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 </ul>
 <h4 id="_19">体積の数値を読む</h4>
 <ul>
-<li>モジュール<code>segmentation</code>&gt;<code>Quantification</code>&gt;<code>Segment statistics</code></li>
+<li>モジュール<code>segmentation</code>&gt;<code>Quantification</code>&gt;<code>Segment statistics</code>
+練習中</li>
 </ul>
-<p>練習中</p>
+<h4 id="_20">作業が重い</h4>
+<p>もし、Segmentationの数が10個〜20個と多いとき、動作が鈍くなっていきます。3D datasetは、カラーJPEGで500x500x500枚程度が限度のようでした（MacBookPro15, i9, 4GB-HBM2, 32GB)。もっとも、パソコンのスペックにもよるとは思います。高画質シリーズ（1000x1000x1000）を参考にしながら、縮小/減数シリーズ（500x500x500）でセグメンテーションするのがいいかもしれません。</p>
+<h4 id="segmentation">Segmentationの結果が粗い</h4>
+<p>最初は、とびとびに塗っていき、まずは結果を見てみます。Fill between slicesの結果に満足できなければ、塗る枚数を増やします。サンプルや塗りたい領域によってどのくらい丁寧に塗れば良いかはことなります。何度かやり直して、納得のいく質のSegmentationを得ます。最悪、すべての画像で塗れば確実ではあります。Segmentation結果のSmoothを調節するパラメータがあります（いじったけど、どこだったか覚えていません）。対象物によっては、Smoothを変更しても良いでしょう。</p>
                 
               
               
