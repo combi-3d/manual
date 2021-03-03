@@ -525,22 +525,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mprvr" class="md-nav__link">
-    MPR/VRからの動画描きだし
+  <a href="#202103" class="md-nav__link">
+    プラグインをインストールできない 2021.03
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    セグメンテーション後
+  <a href="#mprvr-202012" class="md-nav__link">
+    MPR/VRからの動画描きだし 2020.12
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#horos_1" class="md-nav__link">
-    新しいHorosが起動しない
+  <a href="#2020" class="md-nav__link">
+    セグメンテーション後 2020
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#horos-2020" class="md-nav__link">
+    新しいHorosが起動しない 2020
   </a>
   
 </li>
@@ -551,7 +558,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     インストール、プラグイン追加（初回だけ）
   </a>
   
@@ -559,14 +566,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     インストール
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     プラグイン
   </a>
   
@@ -578,7 +585,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#horos_2" class="md-nav__link">
+  <a href="#horos_1" class="md-nav__link">
     Horosの基礎、ウィンドウについて
   </a>
   
@@ -592,28 +599,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     データベース（患者名）を整理する
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     グレースケール連続画像の利用
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     カラー連続画像の利用
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     基本操作
   </a>
   
@@ -664,7 +671,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     準備
   </a>
   
@@ -685,7 +692,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     体積の数値
   </a>
   
@@ -713,7 +720,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     ヒント
   </a>
   
@@ -780,24 +787,27 @@
 </ol>
 <hr />
 <h2 id="horos">Horosのバグ</h2>
-<h3 id="mprvr">MPR/VRからの動画描きだし</h3>
+<h3 id="202103">プラグインをインストールできない 2021.03</h3>
+<p>v3.3.6をインストール後、プラグイン（JPEG-DICOM）を追加しようと思ったら、一覧が出てきません。「No Horos plug-in server available.」となります。以前にインストールされたHorosとJPEG-DICOMはそのまま使えますが、やはり一覧がでません。アプリからサーバにアクセスできないようです。ただし、コンテンツ（下記）は存在しているようです。下記のサイトから、JPEGtoDICOMへ移動し、その中のJPEGtoDICOM.horosplugin.zipをダウンロードします。Horosを起動した状態で、ダウンロードしたファイルをダブルクリックするとインストールができるようです。</p>
+<p>https://horosproject.org/horos-content/plugins/horos/</p>
+<h3 id="mprvr-202012">MPR/VRからの動画描きだし 2020.12</h3>
 <p>Horos 3.3.6やそれ以前のバージョンで、MPR(多平面再構築)から動画を描き出したいとき、Movie Exportを行います。しかし、書き出される動画が小さく(たてよこのピクセル数が少なく)なってしまうというバグがあります。v4.0.0 Release Candidate4では、やや大きくなるので実用的ですが、こんどはVolume Renderingでバグがります。いまのところ、新旧を使い分けるくらいしか、対応策がありません。新旧のバージョン両方をインストールして、区別するために名称変更して使っています。データベースフォルダは共通で使えるので、データベースが倍増することはありません。OsiriXでは問題ありません。</p>
 <ul>
 <li>Horos 3.3.6:MPR動画は小さくて使いにくい(一辺約500 pixel)。VR動画は正常。</li>
 <li>Horos 4.0.0RC4:MPR動画はやや大きくなってなんとか使える(一辺約700 pixel)。VR動画はFly Thruの座標がずれるので使えない。</li>
 <li>OsiriX MD v11(有料版):MPR動画は大きくて実用的。VR動画は正常。</li>
 </ul>
-<h3 id="_1">セグメンテーション後</h3>
+<h3 id="2020">セグメンテーション後 2020</h3>
 <p>Segmentationした領域の体積数値をみようとしたら、落ちました。いちおう回避策はありますが、この件でも、セグメンテーションは、3D slicerにしようと思いました。</p>
-<h3 id="horos_1">新しいHorosが起動しない</h3>
+<h3 id="horos-2020">新しいHorosが起動しない 2020</h3>
 <p>Horos 4.0.0 RC5（2020.12）は、2Dビューワが起動しません。MBP13（2105）、OS11.1 Big Sur。</p>
 <hr />
-<h2 id="_2">インストール、プラグイン追加（初回だけ）</h2>
-<h3 id="_3">インストール</h3>
+<h2 id="_1">インストール、プラグイン追加（初回だけ）</h2>
+<h3 id="_2">インストール</h3>
 <p>https://horosproject.org ここからダウンロード、インストールする。日本語環境が用意されているが、フリーズするので、英語のまま使用すること。開くと、いろいろメッセージが出てくるけれど、とりあえず使ってみる。<code>Continue</code>ボタン。</p>
-<h3 id="_4">プラグイン</h3>
+<h3 id="_3">プラグイン</h3>
 <p>プラグイン「JPEG to DICOM」をインストール、<code>Plug-ins</code> <code>Plug-in Manager</code>で、新しいウィンドウが開く。上部の<code>Horos Plugins</code>をクリックし、プルダウンで<code>JPEG to DICOM</code>を選ぶ。下部の<code>Download &amp; Install</code>をクリック。この作業は、インストール後の使い始めに一度行うだけです。</p>
-<h2 id="horos_2">Horosの基礎、ウィンドウについて</h2>
+<h2 id="horos_1">Horosの基礎、ウィンドウについて</h2>
 <p>ウィンドウは、大きく分けて3種類あり、さらに派生したウィンドウもある。よく使うウィンドウを下記に5種類挙げた。データベースウィンドウで、見たいデータをダブルクリックして、2Dビューワを出す。2Dビューワで、メニューやボタンを使って、3Dビューワを出す。</p>
 <ol>
 <li>データベース（起動時のウィンドウ）</li>
@@ -878,7 +888,7 @@
 <li>Mac OSで一括変換：<code>Finder</code>で<code>複数選択</code>、<code>右クリック（副メニュー）</code>より、ファイル名を変更。完全変更や連番追記など、ある程度カスタマイズできる。</li>
 <li>便利に一括変換：Adobe Bridge（有料アプリ）なら細かく設定ができる。</li>
 </ul>
-<h2 id="_5">データベース（患者名）を整理する</h2>
+<h2 id="_4">データベース（患者名）を整理する</h2>
 <p>同一標本から、複数の連続画像シリーズ（カラーシリーズとグレースケールシリーズ、サイズ違い）ができる。それぞれで取り込むと、リストには 2行、3行と、複数患者として表示されてしまう。これを、同一標本なら1行（1患者名）にして、派生したシリーズ（複数の検査項目）をまとめて表示させられます。</p>
 <ol>
 <li>まとめたい行(患者名)を複数選択する。<code>Shift + click</code></li>
@@ -886,7 +896,7 @@
 <li>チェック項目では、上2つの項目にチェックが入っていることを確認する。<code>Use same Patient ID</code>, <code>Merge as a single study</code></li>
 <li><code>OK</code></li>
 </ol>
-<h2 id="_6">グレースケール連続画像の利用</h2>
+<h2 id="_5">グレースケール連続画像の利用</h2>
 <p>すべての3D再構築法に利用できる。2D orthogonal MPR, 3D MPR, 3D curved MPR, 3D MIP, 3D volume rendering, 3D surface rendering, 3D endoscopy。</p>
 <ol>
 <li><code>3D viewer</code>または<code>歯車マーク</code>より、</li>
@@ -916,7 +926,7 @@
 </ol>
 </li>
 </ul>
-<h2 id="_7">カラー連続画像の利用</h2>
+<h2 id="_6">カラー連続画像の利用</h2>
 <p>面の再構築にだけ利用できる。2D orthogonal MPR, 3D MPR</p>
 <ol>
 <li><code>3D viewer</code>または<code>歯車マーク</code>より、</li>
@@ -929,7 +939,7 @@
 <li>まれに、<code>歯車マーク</code>（2D/3D再構築)が消えてしまうことがあります。こうなると「Volume dataではありません」というたぐいのメッセージがでて、先に進めません。原因不明です。解決することはしますが、いいかげんです。次の３つのうちどれかです。1)そのまま数秒待つと出てきた。2)次の日にはできた。3)ほかのパソコンではできた。いずれも同一のデータセットです。</li>
 </ul>
 <hr />
-<h2 id="_8">基本操作</h2>
+<h2 id="_7">基本操作</h2>
 <p>下図、左から、明るさとコントラストの調整、移動、拡大縮小、回転、3D回転（Volume Rendering用）。画面を上下左右にドラッグする。ツール選択は、それぞれのボタンを押すか、ショーロカットキーを押すか。ショートカットキーのほうが断然便利です。連続画像をめくるのは、マウススクロールなど。</p>
 <p><img alt="horos" src="../img/horos01.png" title="basic tools" /></p>
 <p><em>いつもつかう、基本のツール</em></p>
@@ -1004,7 +1014,7 @@ ROIを指定する方法として、一般的な画像（グレースケール�
 <li>ROI/Grow Region</li>
 </ol>
 <h3 id="2roi">2.手作業でROI指定</h3>
-<h4 id="_9">準備</h4>
+<h4 id="_8">準備</h4>
 <ol>
 <li>直行面MPRのウィンドウで行います（3D MPRでもできます）</li>
 <li>グレーでもカラー画像でも使えます。</li>
@@ -1042,7 +1052,7 @@ ROIを指定する方法として、一般的な画像（グレースケール�
 「3D ROI manager」というウィンドウが開く。読み込んだROIのリストが表示される (メニュー表記は同じだが、上記の 2DViewer モードのときは異なるウィンドウ)</li>
 <li>ROI表示のオンオフと着色　左端のチェック欄に、チェックを入れると、VRに重ねて表示される。 表示色を変更できる。透明度も調整できる。</li>
 </ol>
-<h4 id="_10">体積の数値</h4>
+<h4 id="_9">体積の数値</h4>
 <p>3通りあるがHorosで安定しているのは１だけ。</p>
 <ol>
 <li><code>2D viewerのROI manager</code>、<code>Volume</code>が表示される。
@@ -1075,7 +1085,7 @@ ROIを指定する方法として、一般的な画像（グレースケール�
 <li>アクションの記録停止</li>
 <li>連続画像に、記録したアクションを一括処理する　<code>ファイル File</code>&gt; <code>自動処理 Automate</code>&gt; <code>バッチ Batch...</code></li>
 </ol>
-<h5 id="_11">ヒント</h5>
+<h5 id="_10">ヒント</h5>
 <p>アクションが途中で止まる：選択領域が全くない場合、選択範囲の反転で、止まっていました。対策として、すべての画像の端っこに、指定したい色で極小の四角を描きました。これで、すべての連続画像にわずかでも選択範囲が存在することになり、アクションが正常に行われました。</p>
 <p>忘れた：二値化画像をRGBのまま保存すると、以降のHorosでうまくROIが選べない。グレースケールにするのを忘れずに。</p>
 <p>アクションをDropletファイルとして保存しておけば、別の実験での同一処理につかえます。</p>
