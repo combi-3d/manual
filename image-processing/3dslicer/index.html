@@ -685,10 +685,17 @@
         
           <li class="md-nav__item">
   <a href="#_13" class="md-nav__link">
-    動画
+    動画（簡易）
   </a>
   
-    <nav class="md-nav" aria-label="動画">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    動画（公式）
+  </a>
+  
+    <nav class="md-nav" aria-label="動画（公式）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -713,7 +720,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_15" class="md-nav__link">
     動作が重いとき
   </a>
   
@@ -725,14 +732,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_16" class="md-nav__link">
     保存
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     セグメンテーション
   </a>
   
@@ -740,14 +747,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     とりあえずはじめてみる
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
+  <a href="#_19" class="md-nav__link">
     体積の数値を読む
   </a>
   
@@ -886,7 +893,7 @@ Win, Mac, Linux対応</p>
 <p>CoMBIではJPEG形式で連続画像をつくる。3D slicerは、各種画像形式に対応しており、JPEGも直接扱える。ちなみに、PNG形式はダメなようだ。loadはできるが、Volume Renderingにかさねることができない。平面表示ではめくれているけれど、Volume Rendering上の表示は、一枚だけで不変。透明効果は反映されず、白になる。</p>
 <h3 id="_8">ファイル名一括変換、必要に応じて、縮小作業の前に</h3>
 <p>CoMBIの撮影が通常に成功した場合は、必要ありません。ファイル名が9999から0001に戻ったとか、特別な事情があるときに、ファイル名を一括で変換します。</p>
-<p>3D slicerの場合、完全な連番が必要です。連番のうしろに残しておいた元ファイル名が飛び飛びの場合、連続画像とは認識されません。完全な連番にしたとき、元データとの照合（実験の再現性）ができるように、メモを残してください。</p>
+<p>3D slicerの場合、完全な連番が必要です。連番のうしろに残しておいた元ファイル名が飛び飛びの場合、連続画像とは認識されません。完全な連番にしたとき、元データとの照合（実験の再現性確保）ができるように、メモを残してください。</p>
 <p>Horosの場合、頭に連番さえあればよい。</p>
 <table>
 <thead>
@@ -990,8 +997,10 @@ Win, Mac, Linux対応</p>
 <li><code>OK</code>。</li>
 <li>保存したSceneを読み込むときは、<code>カメラマークのふたつとなり</code></li>
 </ul>
-<h3 id="_13">動画</h3>
-<p>２段階になっていて、ステップ1:モジュール <code>sequences</code>で操作の様子を記録し、ステップ2:モジュール<code>Utilities</code>&gt; <code>Screen Capture</code>で、記録したsequenceを呼び出して、動画ファイルに書き出す。事前設定が必要。</p>
+<h3 id="_13">動画（簡易）</h3>
+<p>macOS付属Screen Shot（Applications&gt; Utilities&gt; ScreenShot.app）や、Windows10付属Game Bar（Windows button+G, Setting&gt; Game Bar&gt; ON）で録画する。メリットは、あらゆる動きが録画できることです。デメリットは、マウスやトラックパッドで3Dイメージを動すので、少々ぎこちなさが残ることです。上記のSceneViewを利用したり、あとで動画アプリで編集することも考えれば、けっこう自由に動画をつくれます。</p>
+<h3 id="_14">動画（公式）</h3>
+<p>2段階になっていて、ステップ1:モジュール <code>sequences</code>で操作の様子を記録し、ステップ2:モジュール<code>Utilities</code>&gt; <code>Screen Capture</code>で、記録したsequenceを呼び出して、動画ファイルに書き出す。事前設定が必要。</p>
 <h4 id="videompeg-setting-up-ffmpeg">Video(mpeg 書き出し)には、 事前設定 Setting up ffmpeg が必要</h4>
 <ul>
 <li>
@@ -1048,13 +1057,13 @@ Win, Mac, Linux対応</p>
 Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画ファイルを開く<br></p>
 </li>
 </ul>
-<h4 id="_14">動作が重いとき</h4>
+<h4 id="_15">動作が重いとき</h4>
 <ul>
 <li>一般のビデオは、30frame/secondである。このデモでは4秒分、120枚のPNGを書き出した。もし、10秒動画300枚とすると、だいぶ時間がかかる。</li>
 <li>もし、青ウィンドウ、3D View を大きく表示していると、時間がかかる。</li>
 <li>連続PNGやビデオ変換かかる時間は、パソコンのスペックによるし、待てる時間はひとそれぞれなので、なんどかやってみる。</li>
 </ul>
-<h3 id="_15">保存</h3>
+<h3 id="_16">保存</h3>
 <p>画像データも作業内容もひとつのファイルとして保存できる</p>
 <ul>
 <li>アイコン<code>SAVE</code> 全体ウィンドウの左上。新しいウィンドウ<code>Save Scene and Unsaved Data</code>がでてくる。</li>
@@ -1062,9 +1071,9 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <li>mrbファイルを開くときは、3D slicer のウィンドウへ、ドラッグする。保存したときの作業状態が再現される。</li>
 <li>外付けディスクを保存先に指定する場合、ファイル右横のマーク<code>...</code>から指定すること。下の横長ボタン<code>Change directory for selected files</code>では、外付けディスクを指定できない。</li>
 </ul>
-<h3 id="_16">セグメンテーション</h3>
+<h3 id="_17">セグメンテーション</h3>
 <p>（まえもってPhotoshopなどで二値化連続画像をつくる方法もあります、Horosのページに書きました。<a href="../horos/index.html#3">こちらの「色域指定」です</a>）</p>
-<h4 id="_17">とりあえずはじめてみる</h4>
+<h4 id="_18">とりあえずはじめてみる</h4>
 <p><code>Paint</code>と<code>Fill between slices</code>だけを使った手作業の手順を示す。セグメンテーションの情報は、mrbファイルに一括して保存される。他にも領域限局やシグナル強度の範囲指定など、さまざまなモードが備わっている（練習中）。くわしくは、公式ホームページのDocumentや動画解説へおねがいします。公式以外にもネットでいろいろ見つかります。
 作業には、タッチペンがあるとよい。私はMacBookProにiPad（SideCar）をつなげ、Apple Penで描いています。Windowsノートなら元々タッチパネルの場合もあるでしょう。WindowsマシンにiPadをつなげるアプリもあるようです。</p>
 <p><img alt="segmetation" src="../img/3dslicer_seg.png" /></p>
@@ -1084,7 +1093,7 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <li>モジュール<code>Segment Editor</code>にもどって、<code>Show 3D</code>でセグメントを青画面に表示または非表示する。</li>
 <li>アイコン<code>Camera-like mark</code>（Capture Screenshot）で、静止画に描き出した例</li>
 </ul>
-<h4 id="_18">体積の数値を読む</h4>
+<h4 id="_19">体積の数値を読む</h4>
 <ul>
 <li>モジュール<code>segmentation</code>&gt;<code>Quantification</code>&gt;<code>Segment statistics</code></li>
 </ul>
