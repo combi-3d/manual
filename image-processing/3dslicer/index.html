@@ -755,21 +755,21 @@
         
           <li class="md-nav__item">
   <a href="#_19" class="md-nav__link">
-    体積の数値を読む
+    工夫しながらやってみる
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_20" class="md-nav__link">
-    作業が重い
+    体積の数値を読む
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#segmentation" class="md-nav__link">
-    Segmentationの結果が粗い
+  <a href="#_21" class="md-nav__link">
+    ヒント
   </a>
   
 </li>
@@ -1108,14 +1108,46 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <li>モジュール<code>Segment Editor</code>にもどって、<code>Show 3D</code>でセグメントを青画面に表示または非表示する。</li>
 <li>アイコン<code>Camera-like mark</code>（Capture Screenshot）で、静止画に描き出した例</li>
 </ul>
-<h4 id="_19">体積の数値を読む</h4>
+<h4 id="_19">工夫しながらやってみる</h4>
+<ul>
+<li>対象物によって、ツールを選びます。まず一度、セグメンテーションをおおざっぱにやってみて、使うツールや完成形の見通しをたてて、次に本番のセグメンテーションをやることが多いです。</li>
+<li>色や形がはっきりしていそうなら、<code>Level tracing</code>を使います。マウスポインターがある色と類似の色を島状に選択してくれます。<code>mouse over</code>+<code>Left click</code>。</li>
+<li>色が淡く、境界がぼんやりしている場合は、<code>Paint</code>, <code>Draw</code>, <code>Erase</code>を使います。</li>
+<li>塗る画像は等間隔（2, 5, 10枚ごと）のほうが、のちの修正がラク。画像めくりはキーボードの矢印キー。</li>
+<li>1面（赤画面）だけよりは、2面（緑か、黄）で塗ると仕上がりが良い。あいまいな境界を判定しやすい。3面でもよいが時間がかかる。</li>
+<li><code>Fill between slice</code>ではガタツキが残る。<code>Smoothing</code>を使う。いろいろモード（median, gausianなど）があって、いまいち違いは分かりませんが、<code>Joint smoothing</code>を使ったことがあります。</li>
+</ul>
+<h4 id="_20">体積の数値を読む</h4>
 <ul>
 <li>モジュール<code>segmentation</code>&gt;<code>Quantification</code>&gt;<code>Segment statistics</code>（練習中）</li>
 </ul>
-<h4 id="_20">作業が重い</h4>
+<h4 id="_21">ヒント</h4>
+<ul>
+<li>
+<p>作業が重い</p>
 <p>もし、Segmentationの数が10個〜20個と多いとき、動作が鈍くなっていきます。3D datasetは、カラーJPEGで500x500x500枚程度が限度のようでした（MacBookPro15, i9, 4GB-HBM2, 32GB)。もっとも、パソコンのスペックにもよるとは思います。高画質シリーズ（1000x1000x1000）を参考にしながら、縮小/減数シリーズ（500x500x500）でセグメンテーションするのがいいかもしれません。</p>
-<h4 id="segmentation">Segmentationの結果が粗い</h4>
-<p>最初は、とびとびに塗っていき、まずは結果を見てみます。Fill between slicesの結果に満足できなければ、塗る枚数を増やします。サンプルや塗りたい領域によってどのくらい丁寧に塗れば良いかはことなります。何度かやり直して、納得のいく質のSegmentationを得ます。最悪、すべての画像で塗れば確実ではあります。Segmentation結果のSmoothを調節するパラメータがあります（いじったけど、どこだったか覚えていません）。対象物によっては、Smoothを変更しても良いでしょう。</p>
+</li>
+<li>
+<p>Segmentationの結果が粗い</p>
+<p>最初は、とびとびに塗っていき、まずは結果を見てみます。<code>Fill between slices</code>の結果に満足できなければ、塗る枚数を増やします。サンプルや塗りたい領域によってどのくらい丁寧に塗れば良いかはことなります。あとで<code>Smoothing</code>を使うとかなりなめらかになります。</p>
+</li>
+<li>
+<p>キーボードの矢印キーが効かない</p>
+<p>いちどズームイン・ズームアウトすると、効くようになることがあります。そのうちに効くようになることもあります。</p>
+</li>
+<li>
+<p>Drawが効かない</p>
+<p><code>Draw</code>で描いたあと<code>Retrun</code>を押しても反応しないときがあります。いちどズームイン・ズームアウトする。もしくは、ツールを矢印<code>None</code>に一旦切り替えてから、改めて<code>Draw</code>を選ぶと、効くようになることがあります。</p>
+</li>
+<li>
+<p>iPad, Side car, Apple penで表示位置が飛ぶ</p>
+<p>ズームイン・ズームアウト（ピンチイン・ピンチアウト）して、元の見たい位置に戻します。入力デバイスが多く（Apple Pen、マウス、トラックパッド、キーボード）どこかに触れてしまうとずれる時がありました。</p>
+</li>
+<li>
+<p>青画面に断面像を表示できない</p>
+<p>眼のマーク<code>Eye mark</code>でON,OFFしてもなにも起こらなかったり、真っ黒な画像が表示されたりすることがありました。いったん、モジュール<code>Data</code>で、連続画像を捨てて、改めて連続画像を読み込みます。<code>Data Load</code>または、<code>Drag &amp; Drop</code>。この症状が見られたのは、Volume renderingとSegmentationと断面を同時に表示をさせようとしたときでした。かなり重い作業です。</p>
+</li>
+</ul>
                 
               
               
