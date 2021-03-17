@@ -594,6 +594,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    閉じ方
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -608,7 +615,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     単位設定
   </a>
   
@@ -622,7 +629,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     ファイル名一括変換、必要に応じて、縮小作業の前に
   </a>
   
@@ -636,7 +643,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     連続画像の設定
   </a>
   
@@ -651,21 +658,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     準備
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     色付け
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     固まったとき
   </a>
   
@@ -684,7 +691,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     動画（簡易）
   </a>
   
@@ -720,7 +727,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_15" class="md-nav__link">
     動作が重いとき
   </a>
   
@@ -732,14 +739,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_16" class="md-nav__link">
     保存
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     セグメンテーション
   </a>
   
@@ -747,28 +754,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     とりあえずはじめてみる
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
+  <a href="#_19" class="md-nav__link">
     工夫しながらやってみる
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
+  <a href="#_20" class="md-nav__link">
     体積の数値を読む
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
+  <a href="#_21" class="md-nav__link">
     ヒント
   </a>
   
@@ -897,15 +904,20 @@ https://www.slicer.org/wiki/Main_Page</p>
 <li><code>Save as...</code>　ファイル名と場所を指定する。形式はPNGのみ。</li>
 <li><code>OK</code></li>
 </ol>
+<h3 id="_7">閉じ方</h3>
+<ol>
+<li>アプリを閉じる場合、 <code>Slicer4.11</code>&gt; <code>Quit slicer</code>。またはショートカット、<code>command + Q</code>(Mac)</li>
+<li>データだけを閉じる場合、<code>File</code>&gt; <code>Close scene</code></li>
+</ol>
 <hr />
 <h2 id="combijpeg">CoMBI、JPEG 編</h2>
-<h3 id="_7">単位設定</h3>
+<h3 id="_8">単位設定</h3>
 <p>CoMBIなら、μm表示をえらびたい。デフォルトはmm。<br>
 メニューバー<code>Menu bar</code>より、<code>Edit</code>&gt; <code>Application Settings</code>&gt; <code>Units</code>&gt; <code>Show advanced options</code>にチェックを入れる。▽<code>Length</code> において、<code>Preset</code>&gt; <code>Select a preset</code>より、<code>Micrometer</code>を選ぶ。<code>OK</code><br>
 一度、3D slicerを再起動させると、変更が反映される。メニューバー<code>Menu bar</code>&gt; <code>Slicer 4.11</code>&gt; <code>Quit Slicer</code></p>
 <h3 id="jpeg">連続JPEG画像の準備</h3>
 <p>CoMBIではJPEG形式で連続画像をつくる。3D slicerは、各種画像形式に対応しており、JPEGも直接扱える。ちなみに、PNG形式はダメなようだ。loadはできるが、Volume Renderingにかさねることができない。平面表示ではめくれているけれど、Volume Rendering上の表示は、一枚だけで不変。透明効果は反映されず、白になる。</p>
-<h3 id="_8">ファイル名一括変換、必要に応じて、縮小作業の前に</h3>
+<h3 id="_9">ファイル名一括変換、必要に応じて、縮小作業の前に</h3>
 <p>CoMBIの撮影が通常に成功した場合は、必要ありません。ファイル名が9999から0001に戻ったとか、特別な事情があるときに、ファイル名を一括で変換します。</p>
 <p>3D slicerの場合、完全な連番が必要です。連番のうしろに残しておいた元ファイル名が飛び飛びの場合、連続画像とは認識されません。完全な連番にしたとき、元データとの照合（実験の再現性確保）ができるように、メモを残してください。</p>
 <p>Horosの場合、頭に連番さえあればよい。</p>
@@ -957,20 +969,20 @@ https://www.slicer.org/wiki/Main_Page</p>
 </ul>
 <h3 id="load">連続画像の読み込み（Loadとよぶ）</h3>
 <ul>
-<li>連続JPEG画像の読み込みには、フォルダごとドラッグする。または、最初の1枚をドラッグする。新しいウィンドウ<code>Add data into the scene</code>がでる。</li>
-<li>自動で連続画像を認識するはずだが、念の為、<code>Show options</code>にチェックをいれてオプション表示させ、<code>Single file</code>に<strong>チェックがないこと</strong>を確認する。</li>
+<li>連続JPEG画像の読み込みには、フォルダごとドラッグする。または、最初の1枚をドラッグする。新しいウィンドウ<code>Select a reader</code>が出る。プルダウンメニューより、<code>Any data</code>を選び、<code>OK</code>。</li>
+<li>新しいウィンドウ<code>Add data into the scene</code>がでる。自動で連続画像を認識するはずだが、念の為、<code>Show options</code>にチェックをいれてオプション表示させ、<code>Single file</code>に<strong>チェックがないこと</strong>を確認する。</li>
 <li>連続画像の呼び名をきめられる。ウィンドウ<code>Add data into the scene</code>において、呼び名を入力する。もしくは、のちに<code>Module</code>, <code>Volumes</code>, <code>Active volume</code>のプルダウンメニュー、<code>Rename current volume</code>でも変更できる<blockquote>
 <p>3D slicerは、連続画像セットを、複数セット同時に扱える。医療画像における、PET-MRIの重ね合わせ（fusion）のような使い方である。CoMBIであれば、グレースケール連続画像から Volume Renderingを構築し、カラーの断面像 (MPR)を 3面重ねて表示させるといった使い方ができる。3D slicer内での呼び名を決めておき、区別したほうが作業しやすい。デフォルトは、先頭の画像ファイル名になる。これを自由な名称、例えば、Gray for 3Dや Color series などに変更する。<br></p>
 </blockquote>
 </li>
 </ul>
-<h3 id="_9">連続画像の設定</h3>
+<h3 id="_10">連続画像の設定</h3>
 <ul>
 <li>ボクセルサイズ、XYZを手入力する。モジュール<code>Volumes</code>, ▽<code>Volume information</code>で、<code>Image Spacing</code>に、入力する。XYは画像のピクセルサイズ、Zは切削厚。</li>
 <li>階調数を指定する。モジュール<code>Volumes、Threshold</code>で、JPEGなら、0-255。Autoにすると、0-255になる。デフォルトはCT値っぽい、±1000になってしまう。ここで設定した階調数は、<code>Module</code> <code>Volume Rendering</code>に連動していて、そのときの色付け作業が容易になる。</li>
 </ul>
 <h3 id="volume-rendering">Volume Rendering</h3>
-<h4 id="_10">準備</h4>
+<h4 id="_11">準備</h4>
 <p><img alt="segmetation" src="../img/3dslicer_VR.png" /></p>
 <p><em>眼のマークと中央寄せマークです</em></p>
 <ul>
@@ -982,7 +994,7 @@ https://www.slicer.org/wiki/Main_Page</p>
 <li>複数の連続画像セットを読み込んでいる場合、<code>Volume</code>のプルダウンより、表示させたい連続画像セットを選択する。</li>
 <li>▽<code>Display</code>、<code>Rendering</code>プルダウンより、dGPUがあれば、GPUを選んだ方が動作が安定する</li>
 </ul>
-<h4 id="_11">色付け</h4>
+<h4 id="_12">色付け</h4>
 <p><img alt="segmetation" src="../img/3dslicer_color.png" /></p>
 <p><em>このようなのをつくっていく手順です</em></p>
 <p>▽<code>Advanced...</code>において</p>
@@ -1001,7 +1013,7 @@ https://www.slicer.org/wiki/Main_Page</p>
 <p>面をVolume rendering像にかさねて表示することもできる。各画面の押しピンマーク<code>Pin like mark</code>から眼のマーク<code>Eye mark</code>で表示ON/OFF。</p>
 </li>
 </ul>
-<h4 id="_12">固まったとき</h4>
+<h4 id="_13">固まったとき</h4>
 <p>どきどき青画面3D viewだけ、固まることがある。カーソルでは3Dイメージをぐりぐりできなくなる。ビューワのメニュー（押しピンマーク<code>Pin like mark</code>）から、<code>Auto rotation, 自動回転ボタン</code>を選んで、動かしてみると、カーソルが復帰する場合がある。それでもだめなら、しばらく待つと直っている。</p>
 <h3 id="sceneview">表示位置を保存する　モジュール<code>SceneView</code></h3>
 <p>3D ビューワや2D ビューワでの表示位置を保存しておくと、いつでも戻ってこられる。ただし、色付けの調整などは保存されていない。</p>
@@ -1011,7 +1023,7 @@ https://www.slicer.org/wiki/Main_Page</p>
 <li><code>OK</code>。</li>
 <li>保存したSceneを読み込むときは、<code>カメラマークのふたつとなり</code></li>
 </ul>
-<h3 id="_13">動画（簡易）</h3>
+<h3 id="_14">動画（簡易）</h3>
 <p>macOS付属Screen Shot（Applications&gt; Utilities&gt; ScreenShot.app）で動画と静止画を保存できる。Windows10付属Game Bar（Windows button+G, Setting&gt; Game Bar&gt; ON）で録画、Windows付属Snipping Toolで静止画面を保存できる。メリットは、あらゆる動きが録画できることです。デメリットは、マウスやトラックパッドで3Dイメージを動すので、少々ぎこちなさが残ることです。単純な横回転なら、青画面のメニュー（押しピンマーク）にあり、スムースな動きを表現できます。上記のSceneViewを利用したり、あとで動画アプリ（iMovie, Adobe Premiereなど）で編集することも考えれば、けっこう自由に動画をつくれます。実際、素材として、動画や静止画を様々なパターン；色違いのVolume Rendering、断面表示のON/OFF、SegmentationのON/OFFなどで作っておき、あとでそれらを組み合わせ、動画制作しています。</p>
 <h3 id="2016">動画（公式 2016年〜）</h3>
 <p>2段階になっていて、ステップ1:モジュール <code>sequences</code>で操作の様子を記録し、ステップ2:モジュール<code>Utilities</code>&gt; <code>Screen Capture</code>で、記録したsequenceを呼び出して、動画ファイルに書き出す。事前設定が必要。</p>
@@ -1071,13 +1083,13 @@ https://www.slicer.org/wiki/Main_Page</p>
 Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画ファイルを開く<br></p>
 </li>
 </ul>
-<h4 id="_14">動作が重いとき</h4>
+<h4 id="_15">動作が重いとき</h4>
 <ul>
 <li>一般のビデオは、30frame/secondである。このデモでは4秒分、120枚のPNGを書き出した。もし、10秒動画300枚とすると、だいぶ時間がかかる。</li>
 <li>もし、青ウィンドウ、3D View を大きく表示していると、時間がかかる。</li>
 <li>連続PNGやビデオ変換かかる時間は、パソコンのスペックによるし、待てる時間はひとそれぞれなので、なんどかやってみる。</li>
 </ul>
-<h3 id="_15">保存</h3>
+<h3 id="_16">保存</h3>
 <p>画像データも作業内容もひとつのファイルとして保存できる</p>
 <ul>
 <li>アイコン<code>SAVE</code> 全体ウィンドウの左上。新しいウィンドウ<code>Save Scene and Unsaved Data</code>がでてくる。</li>
@@ -1085,9 +1097,9 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <li>mrbファイルを開くときは、3D slicer のウィンドウへ、ドラッグする。保存したときの作業状態が再現される。</li>
 <li>外付けディスクを保存先に指定する場合、ファイル右横のマーク<code>...</code>から指定すること。下の横長ボタン<code>Change directory for selected files</code>では、外付けディスクを指定できない。</li>
 </ul>
-<h3 id="_16">セグメンテーション</h3>
+<h3 id="_17">セグメンテーション</h3>
 <p>（まえもってPhotoshopなどで二値化連続画像をつくる方法もあります、Horosのページに書きました。<a href="../horos/index.html#3">こちらの「色域指定」です</a>）</p>
-<h4 id="_17">とりあえずはじめてみる</h4>
+<h4 id="_18">とりあえずはじめてみる</h4>
 <p><code>Paint</code>と<code>Fill between slices</code>だけを使った手作業の手順を示す。セグメンテーションの情報は、mrbファイルに一括して保存される。他にも領域限局やシグナル強度の範囲指定など、さまざまなモードが備わっている（練習中）。くわしくは、公式ホームページのDocumentや動画解説へおねがいします。公式以外にもネットでいろいろ見つかります。
 作業には、タッチペンがあるとよい。私はMacBookProにiPad（SideCar）をつなげ、Apple Penで描いています。Windowsノートなら元々タッチパネルの場合もあるでしょう。WindowsマシンにiPadをつなげるアプリもあるようです。</p>
 <p><img alt="segmetation" src="../img/3dslicer_seg.png" /></p>
@@ -1108,7 +1120,7 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <li>モジュール<code>Segment Editor</code>にもどって、<code>Show 3D</code>でセグメントを青画面に表示または非表示する。</li>
 <li>アイコン<code>Camera-like mark</code>（Capture Screenshot）で、静止画に描き出した例</li>
 </ul>
-<h4 id="_18">工夫しながらやってみる</h4>
+<h4 id="_19">工夫しながらやってみる</h4>
 <ul>
 <li>対象物によって、ツールを選びます。まず一度、セグメンテーションをおおざっぱにやってみて、使うツールや完成形の見通しをたてて、次に本番のセグメンテーションをやることが多いです。</li>
 <li>色や形がはっきりしていそうなら、<code>Level tracing</code>を使います。マウスポインターがある色と類似の色を島状に選択してくれます。<code>mouse over</code>+<code>Left click</code>。</li>
@@ -1117,11 +1129,11 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <li>1面（赤画面）だけよりは、2面（緑か、黄）で塗ると仕上がりが良い。あいまいな境界を判定しやすい。3面でもよいが時間がかかる。</li>
 <li><code>Fill between slice</code>ではガタツキが残る。仕上げとして、<code>Smoothing</code>を使う。いろいろモード（median, gausianなど）があって、いまいち違いは分かりませんが、<code>Joint smoothing</code>を使っています。つくったSegmentすべてにSmooth処理をします。複数あれば、複数のSegmentに。一見、重そうですがこれが一番動作が軽いです。設定値はデフォルトの0.5をまずためしてください。</li>
 </ul>
-<h4 id="_19">体積の数値を読む</h4>
+<h4 id="_20">体積の数値を読む</h4>
 <ul>
 <li>モジュール<code>segmentation</code>&gt;<code>Quantification</code>&gt;<code>Segment statistics</code>（練習中）</li>
 </ul>
-<h4 id="_20">ヒント</h4>
+<h4 id="_21">ヒント</h4>
 <ul>
 <li>
 <p>作業が重い</p>
