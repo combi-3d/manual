@@ -678,6 +678,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    なんだか重い
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -691,8 +698,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    動画（簡易）
+  <a href="#_15" class="md-nav__link">
+    動画（簡易、おすすめ）
   </a>
   
 </li>
@@ -727,7 +734,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_16" class="md-nav__link">
     動作が重いとき
   </a>
   
@@ -739,14 +746,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     保存
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     セグメンテーション
   </a>
   
@@ -754,28 +761,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
+  <a href="#_19" class="md-nav__link">
     とりあえずはじめてみる
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
+  <a href="#_20" class="md-nav__link">
     工夫しながらやってみる
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
+  <a href="#_21" class="md-nav__link">
     体積の数値を読む
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
+  <a href="#_22" class="md-nav__link">
     ヒント
   </a>
   
@@ -875,11 +882,12 @@ https://www.slicer.org/wiki/Main_Page</p>
 <li>方法 2 <code>Module</code> <code>Volumes</code>　なかほどのプルダウンメニューで、<code>Auto W/L</code>, <code>Manual W/L</code>, <code>Manual Min/Max</code>を選ぶ。その下に、<code>スクロールバー</code>。</li>
 </ul>
 <h3 id="3d-view">青画面（3D View）</h3>
-<p>青画面（3D View）は、2つの機能がある。</p>
+<p>青画面（3D View）は、3つの機能がある。</p>
 <ol>
 <li>
-<p>Volume Rendring　モジュール<code>Volume Rendering</code>を選ぶ</p>
+<p>Volume Rendringの画像を表示</p>
 <ul>
+<li>モジュール<code>Volume Rendering</code>を選ぶ</li>
 <li>眼の印<code>Eye mark</code>（Volumeの左側）をON/OFFすると、青画面でのVolume Rendering像を表示/非表示</li>
 <li>青画面左上のボタン<code>Centering</code>で、中央に表示させる。迷子になったときに便利です</li>
 <li>ドラッグして、向きを変えられる。このとき、アイコン矢印のマーク<code>Select tool</code>にしておく </li>
@@ -893,7 +901,13 @@ https://www.slicer.org/wiki/Main_Page</p>
 <li>
 <p>スライスを青画面に表示（画像一枚を青画面に表示）</p>
 <ul>
-<li>赤画面の左上、押しピンマーク<code>Pin like mark</code>からでたメニューのうち、眼の印<code>Eye mark</code>で表示のON/OFF。緑、黄でも同様に。</li>
+<li>赤画面の左上、押しピンマーク<code>Pin like mark</code>からでたメニューのうち、眼の印<code>Eye mark</code>で表示のON/OFF。緑、黄でも同様に。   </li>
+</ul>
+</li>
+<li>
+<p>セグメンテーションの結果を表示</p>
+<ul>
+<li>モジュール<code>Segmentation Editor</code>を選ぶ。ボタン<code>Show 3D</code>で表示/非表示を切り替えます。</li>
 </ul>
 </li>
 </ol>
@@ -1015,6 +1029,8 @@ https://www.slicer.org/wiki/Main_Page</p>
 </ul>
 <h4 id="_13">固まったとき</h4>
 <p>どきどき青画面3D viewだけ、固まることがある。カーソルでは3Dイメージをぐりぐりできなくなる。ビューワのメニュー（押しピンマーク<code>Pin like mark</code>）から、<code>Auto rotation, 自動回転ボタン</code>を選んで、動かしてみると、カーソルが復帰する場合がある。それでもだめなら、しばらく待つと直っている。</p>
+<h4 id="_14">なんだか重い</h4>
+<p>表示画質をさげてみます。モジュール<code>Volume Rendering</code>&gt; <code>Advanced</code>&gt; <code>Techniques</code>&gt; <code>Quality:</code>で、描出の質を3種から選べます。もっとも動作が軽快な<code>Normal</code>を選んでみる。デフォルトは<code>Adaptive</code>。<code>Maximum</code>はかなり重いようでほぼ固まります。3種どれでも画質はほとんで変わらず、Normalで十分きれいに描出するようです。</p>
 <h3 id="sceneview">表示位置を保存する　モジュール<code>SceneView</code></h3>
 <p>3D ビューワや2D ビューワでの表示位置を保存しておくと、いつでも戻ってこられる。ただし、色付けの調整などは保存されていない。</p>
 <ul>
@@ -1023,7 +1039,7 @@ https://www.slicer.org/wiki/Main_Page</p>
 <li><code>OK</code>。</li>
 <li>保存したSceneを読み込むときは、<code>カメラマークのふたつとなり</code></li>
 </ul>
-<h3 id="_14">動画（簡易）</h3>
+<h3 id="_15">動画（簡易、おすすめ）</h3>
 <p>macOS付属Screen Shot（Applications&gt; Utilities&gt; ScreenShot.app）で動画と静止画を保存できる。Windows10付属Game Bar（Windows button+G, Setting&gt; Game Bar&gt; ON）で録画、Windows付属Snipping Toolで静止画面を保存できる。メリットは、あらゆる動きが録画できることです。デメリットは、マウスやトラックパッドで3Dイメージを動すので、少々ぎこちなさが残ることです。単純な横回転なら、青画面のメニュー（押しピンマーク）にあり、スムースな動きを表現できます。上記のSceneViewを利用したり、あとで動画アプリ（iMovie, Adobe Premiereなど）で編集することも考えれば、けっこう自由に動画をつくれます。実際、素材として、動画や静止画を様々なパターン；色違いのVolume Rendering、断面表示のON/OFF、SegmentationのON/OFFなどで作っておき、あとでそれらを組み合わせ、動画制作しています。</p>
 <h3 id="2016">動画（公式 2016年〜）</h3>
 <p>2段階になっていて、ステップ1:モジュール <code>sequences</code>で操作の様子を記録し、ステップ2:モジュール<code>Utilities</code>&gt; <code>Screen Capture</code>で、記録したsequenceを呼び出して、動画ファイルに書き出す。事前設定が必要。</p>
@@ -1083,13 +1099,13 @@ https://www.slicer.org/wiki/Main_Page</p>
 Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画ファイルを開く<br></p>
 </li>
 </ul>
-<h4 id="_15">動作が重いとき</h4>
+<h4 id="_16">動作が重いとき</h4>
 <ul>
 <li>一般のビデオは、30frame/secondである。このデモでは4秒分、120枚のPNGを書き出した。もし、10秒動画300枚とすると、だいぶ時間がかかる。</li>
 <li>もし、青ウィンドウ、3D View を大きく表示していると、時間がかかる。</li>
 <li>連続PNGやビデオ変換かかる時間は、パソコンのスペックによるし、待てる時間はひとそれぞれなので、なんどかやってみる。</li>
 </ul>
-<h3 id="_16">保存</h3>
+<h3 id="_17">保存</h3>
 <p>画像データも作業内容もひとつのファイルとして保存できる</p>
 <ul>
 <li>アイコン<code>SAVE</code> 全体ウィンドウの左上。新しいウィンドウ<code>Save Scene and Unsaved Data</code>がでてくる。</li>
@@ -1097,9 +1113,9 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <li>mrbファイルを開くときは、3D slicer のウィンドウへ、ドラッグする。保存したときの作業状態が再現される。</li>
 <li>外付けディスクを保存先に指定する場合、ファイル右横のマーク<code>...</code>から指定すること。下の横長ボタン<code>Change directory for selected files</code>では、外付けディスクを指定できない。</li>
 </ul>
-<h3 id="_17">セグメンテーション</h3>
+<h3 id="_18">セグメンテーション</h3>
 <p>（まえもってPhotoshopなどで二値化連続画像をつくる方法もあります、Horosのページに書きました。<a href="../horos/index.html#3">こちらの「色域指定」です</a>）</p>
-<h4 id="_18">とりあえずはじめてみる</h4>
+<h4 id="_19">とりあえずはじめてみる</h4>
 <p><code>Paint</code>と<code>Fill between slices</code>だけを使った手作業の手順を示す。セグメンテーションの情報は、mrbファイルに一括して保存される。他にも領域限局やシグナル強度の範囲指定など、さまざまなモードが備わっている（練習中）。くわしくは、公式ホームページのDocumentや動画解説へおねがいします。公式以外にもネットでいろいろ見つかります。
 作業には、タッチペンがあるとよい。私はMacBookProにiPad（SideCar）をつなげ、Apple Penで描いています。Windowsノートなら元々タッチパネルの場合もあるでしょう。WindowsマシンにiPadをつなげるアプリもあるようです。</p>
 <p><img alt="segmetation" src="../img/3dslicer_seg.png" /></p>
@@ -1120,7 +1136,7 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <li>モジュール<code>Segment Editor</code>にもどって、<code>Show 3D</code>でセグメントを青画面に表示または非表示する。</li>
 <li>アイコン<code>Camera-like mark</code>（Capture Screenshot）で、静止画に描き出した例</li>
 </ul>
-<h4 id="_19">工夫しながらやってみる</h4>
+<h4 id="_20">工夫しながらやってみる</h4>
 <ul>
 <li>対象物によって、ツールを選びます。まず一度、セグメンテーションをおおざっぱにやってみて、使うツールや完成形の見通しをたてて、次に本番のセグメンテーションをやることが多いです。</li>
 <li>色や形がはっきりしていそうなら、<code>Level tracing</code>を使います。マウスポインターがある色と類似の色を島状に選択してくれます。<code>mouse over</code>+<code>Left click</code>。</li>
@@ -1129,11 +1145,11 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <li>1面（赤画面）だけよりは、2面（緑か、黄）で塗ると仕上がりが良い。あいまいな境界を判定しやすい。3面でもよいが時間がかかる。</li>
 <li><code>Fill between slice</code>ではガタツキが残る。仕上げとして、<code>Smoothing</code>を使う。いろいろモード（median, gausianなど）があって、いまいち違いは分かりませんが、<code>Joint smoothing</code>を使っています。つくったSegmentすべてにSmooth処理をします。複数あれば、複数のSegmentに。一見、重そうですがこれが一番動作が軽いです。設定値はデフォルトの0.5をまずためしてください。</li>
 </ul>
-<h4 id="_20">体積の数値を読む</h4>
+<h4 id="_21">体積の数値を読む</h4>
 <ul>
 <li>モジュール<code>segmentation</code>&gt;<code>Quantification</code>&gt;<code>Segment statistics</code>（練習中）</li>
 </ul>
-<h4 id="_21">ヒント</h4>
+<h4 id="_22">ヒント</h4>
 <ul>
 <li>
 <p>作業が重い</p>
