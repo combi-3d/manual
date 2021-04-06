@@ -545,14 +545,14 @@
       
         <li class="md-nav__item">
   <a href="#helicon-focus" class="md-nav__link">
-    手順　Helicon Focus
+    手順　Helicon Focus（処理が速く、操作簡単）
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#imagej" class="md-nav__link">
-    手順　ImageJ あまり使ったことありません
+    手順　ImageJ （あまり使ったことない）
   </a>
   
 </li>
@@ -571,37 +571,41 @@
                 
                 
                 <h1 id="_1">深度合成（おまけ）</h1>
-<p>CoMBIではありませんが、備忘録としても掲載しておきます。CoMBIで撮影する前に標本をスナップ撮影することがよくあります。奥行き深くまで焦点があった画像を得るには、異なるフォーカスで複数枚の画像を撮影し、あとでフォーカスのあった画像を合成します。</p>
+<p>CoMBIではありませんが、備忘録として掲載しておきます。CoMBIで撮影する前に標本をスナップ撮影することがよくあります。奥行き深くまで焦点があった画像を得るには、異なるフォーカスで複数枚の画像を撮影し、あとでフォーカスのあった画像を合成します。</p>
 <h2 id="_2">アプリケーション　以下のどれか</h2>
 <ul>
 <li>Adobe Photoshop (有料、年額)</li>
 <li>Helicon Focus（有料、年額や買取など多様。例: ver. Lite $115 Lifetime license（2021.4））</li>
-<li>ImageJ （無料だけど、合成結果があまりよくない。）</li>
+<li>ImageJ （無料。上記アプリと比較して、合成結果はあまりよくない。）</li>
 </ul>
 <h2 id="_3">機材　どれかがあると便利</h2>
 <p>普段使っているマクロ撮影機材でいいですが、以下のどれかがあると便利でしょう。</p>
 <ul>
 <li>フォーカシングレール</li>
 <li>フォーカスシフト撮影ができるカメラ（Nikon Z 6, 6II, 7, 7II, D850)</li>
-<li>微動ステージ（標本が液中なら動いてしまって不便かも）</li>
+<li>微動ステージ（標本が液中にある場合、動いてしまって不便かも）</li>
 </ul>
 <h2 id="photoshop">手順　Photoshop</h2>
 <ol>
-<li>フォーカス面を少しずつ変えながら、複数枚の画像を撮影する。JPEGへ変換。</li>
-<li><code>File</code>、<code>Script</code>, <code>Loat files into stack</code>を実行する</li>
+<li>フォーカス面を少しずつ変えながら、複数枚の画像を撮影する。RAW-JPEG変換。</li>
+<li>使えそうな画像を前もって選んでおく。</li>
+<li><code>File</code>&gt; <code>Script</code>&gt; <code>Load files into stack</code>で複数画像をレイヤーとして読み込む</li>
 <li>まずは、ズレを補正する。すべてのレイヤーを選択して、<code>Edit</code>, <code>Auto-Align layers</code></li>
 <li>次に深度合成。すべてのレイヤーを選択して、<code>Edit</code>, <code>Auto-Blend layers</code></li>
-<li><code>File</code>, <code>Save as</code></li>
+<li><code>File</code>&gt; <code>Save as</code> JPEGでもなんででも保存</li>
 </ol>
-<h2 id="helicon-focus">手順　Helicon Focus</h2>
+<h2 id="helicon-focus">手順　Helicon Focus（処理が速く、操作簡単）</h2>
 <ol>
-<li>フォーカス面を少しずつ変えながら、複数枚の画像を撮影する。JPEGへ変換。</li>
-<li>ドラッグ＆ドロップで読み込ませる。</li>
+<li>フォーカス面を少しずつ変えながら、複数枚の画像を撮影する。RAW-JPEG変換。</li>
+<li>ドラッグ＆ドロップで読み込ませる。撮影した画像全部。</li>
+<li>使えそうな画像を選んでチェックを入れる。</li>
 <li>深度合成を実行。設定はデフォルトでたいていうまくいく。</li>
+<li>（もし失敗したら、画像を減らすなどしてみる）</li>
+<li>保存</li>
 </ol>
-<h2 id="imagej">手順　ImageJ あまり使ったことありません</h2>
+<h2 id="imagej">手順　ImageJ （あまり使ったことない）</h2>
 <ol>
-<li>フォーカス面を少しずつ変えながら、複数枚の画像を撮影する。JPEGへ変換。</li>
+<li>フォーカス面を少しずつ変えながら、複数枚の画像を撮影する。RAW-JPEG変換。</li>
 <li>Open as a stack</li>
 <li><code>plug-ins</code>, <code>Extended depth of field</code></li>
 </ol>
