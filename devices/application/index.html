@@ -559,7 +559,7 @@
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    比較表
+    主なアプリの比較
   </a>
   
 </li>
@@ -567,6 +567,13 @@
           <li class="md-nav__item">
   <a href="#3d-slicer" class="md-nav__link">
     3D slicer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#icy" class="md-nav__link">
+    Icy
   </a>
   
 </li>
@@ -600,15 +607,57 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    その他
+  <a href="#imagejfiji" class="md-nav__link">
+    ImageJ/FIJI
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    調査中
+  <a href="#ilastic" class="md-nav__link">
+    ilastic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mib" class="md-nav__link">
+    MIB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amira" class="md-nav__link">
+    Amira
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dragonfly" class="md-nav__link">
+    Dragonfly
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imaris" class="md-nav__link">
+    Imaris
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctvoxios-android-burker" class="md-nav__link">
+    CTvox（iOS, Android, Burker）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#itk-snapwin-mac-upenn-nyu" class="md-nav__link">
+    ITK-SNAP（Win Mac, UPenn, NYU）
   </a>
   
 </li>
@@ -626,7 +675,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     用語解説
   </a>
   
@@ -655,7 +704,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     セグメンテーション
   </a>
   
@@ -733,15 +782,16 @@
 </ul>
 <hr />
 <h2 id="3d">3Dイメージング用のアプリ</h2>
-<p>Macなら3D slicer、Horos、Windowsなら3D sclicerがおすすめです。どちらも無料で使えます。</p>
-<p>私は複数のアプリを使っていますが、CoMBIはどれかひとつでできます。使っているのは、OsiriX（Mac, 以前から持っていたので）+ Horos（Mac, サブマシンに、教育用に）+ 3D slicer（Mac, セグメンテーション用）です。</p>
-<p>3D imagingのアプリは数多くあります。しかし、医療用のDICOM形式専用だとか、高価だったり、端くれ研究者にはやさしくありません。アプリの選定では、1.無料であること、2.JPEG画像が扱えること、3.改良が続いていること、を基準としました。OsiriXはかつて無料で、今は有料になりましたが、比較的安い3Dアプリです。</p>
-<h3 id="_4">比較表</h3>
+<p>Macなら3D slicer、Horos、Windowsなら3D sclicerがおすすめです。どちらも無料で使えます。Icyもよさそうです（最近2021年に気づいて練習中。Mac, Winなどに対応）</p>
+<p>私は複数のアプリを使っていますが、CoMBIはどれかひとつでできます。使っているのは、OsiriX（Mac, 以前から持っていたので）+ Horos（Mac, サブマシンに、教育用に）+ 3D slicer（Mac, セグメンテーション用）です。使い始めは医学部における画像教育でしたので、医療用として開発されたものを選んでいました。</p>
+<p>3D imagingのアプリは数多くあります。しかし、医療用のDICOM形式専用だとか、高価だったり、端くれ研究者にはやさしくありません。アプリの選定では、1.無料であること、2.JPEG画像が扱えること、3.改良が続いていること、を基準としました。OsiriXはかつて無料で、今は有料になりましたが、比較的安い3Dアプリです。本来は有料だけどデモ版は無料というアプリがたくさんあります。たいてい、扱える連続画像枚数に上限がある、3D再構築はできない、といった制限があります。評価するためのサービスですので、本格的には使えなくて当然でしょう。</p>
+<h3 id="_4">主なアプリの比較</h3>
 <table>
 <thead>
 <tr>
 <th></th>
 <th>3D slicer</th>
+<th>Icy</th>
 <th>Horos</th>
 <th>OsiriX</th>
 <th>ZEN lite</th>
@@ -750,7 +800,8 @@
 </thead>
 <tbody>
 <tr>
-<td>対応OS</td>
+<td>OS</td>
+<td>Win, Mac, Linux</td>
 <td>Win, Mac, Linux</td>
 <td>Mac</td>
 <td>Mac</td>
@@ -758,64 +809,68 @@
 <td>Win, Mac, Linux</td>
 </tr>
 <tr>
-<td>価格</td>
-<td>無料</td>
-<td>無料</td>
-<td>有料（買取¥82667など、条件多様）</td>
-<td>無料</td>
-<td>無料（工学系で利用）</td>
+<td>Price</td>
+<td>Free</td>
+<td>Free</td>
+<td>Free</td>
+<td>¥82667 etc</td>
+<td>Free</td>
+<td>Free</td>
 </tr>
 <tr>
 <td>JPEG</td>
-<td>OK, JPEGのままで</td>
-<td>プラグインJPEG to DICOMで、DICOMへ変換</td>
-<td>プラグプラグインJPEG to DICOMで、DICOMへ変換</td>
-<td>OK, 個別のJPEGをZ-stackとしてImport</td>
-<td>OK, JPEGのままで</td>
+<td>OK</td>
+<td>OK</td>
+<td>via <code>Plug-in JPEG to DICOM</code></td>
+<td>via <code>Plug-in JPEG to DICOM</code></td>
+<td>OK, <code>Import</code> as Z-stack</td>
+<td>OK</td>
 </tr>
 <tr>
-<td>開発</td>
-<td>Brigham and Women's Hospital and the MIT Artificial Intelligence Laboratory from 1998</td>
-<td>Horos is based on OsiriX open-source version 3.5.</td>
-<td>OsiriX started in 2004 at UCLA, and currently became a commercial ware.</td>
-<td>Zeiss　（一般にはコンフォーカル付属、Zeissに申請してダウンロードし、各自PCにインストールする）</td>
-<td>The ParaView project started in 2000 by Kitware Inc. and Los Alamos National Laboratory.</td>
+<td>Start</td>
+<td>1998</td>
+<td>2011</td>
+<td>2013</td>
+<td>2004</td>
+<td>Zeiss</td>
+<td>2000</td>
 </tr>
 </tbody>
 </table>
 <h3 id="3d-slicer">3D slicer</h3>
-<p>初めて見たときにとっつきにくい印象ですが、すぐ慣れます。動作は安定しています。ごく一般的なWinノートパソコン（Core i5, RAM 8GB, Iris）でも安定していました。とくに、セグメンテーションで利用しています。お気に入り作業環境は、3D slicer + MacBookPro + iPadPro(sidecar) + ApplePenです。</p>
+<p>初めて見たときにとっつきにくい印象ですが、すぐ慣れます。動作は安定しています。ごく一般的なWinノートパソコン（Core i5, RAM 8GB, Iris）でも安定していました。とくに、セグメンテーションで利用しています。お気に入り作業環境は、3D slicer + MacBookPro + iPadPro(sidecar) + ApplePenです。開発しているのは、米国Brigham and Women's Hospital and the MIT Artificial Intelligence Laboratoryです。</p>
 <p><a href=https://www.slicer.org>https://www.slicer.org</a></p>
+<h3 id="icy">Icy</h3>
+<p>バイオイメージングのために開発されました。良さそうなので練習中です。Icy is free and open source, started in 2011 with the BioImage Analysis Lab at Institut Pasteur and licensed under GPLv3.</p>
+<p><a href=http://icy.bioimageanalysis.org>http://icy.bioimageanalysis.org</a></p>
 <h3 id="horos">Horos</h3>
-<p>使い始めは簡単です。データ一覧、明るさコントラスト調整（DICOMでいう、ウィンドウレベル、ウィンドウウィドゥス）といった基本操作が簡単です。研究向けのデータ、数値やセグメンテーションなどのために、いじり進めると不安定さを感じます。また、Mac版しかないので、利用者が限定されます。</p>
+<p>使い始めは簡単です。データ一覧、明るさコントラスト調整（DICOMでいう、ウィンドウレベル、ウィンドウウィドゥス）といった基本操作が簡単です。研究向けのデータ、数値やセグメンテーションなどのために、いじり進めると不安定さを感じます。また、Mac版しかないので、利用者が限定されます。Horosは、オープンソースだった頃のOsiriX version 3.5をもとに作られているため、見た目はOsiriXとほぼ同じです。</p>
 <p><a href=https://horosproject.org>https://horosproject.org</a></p>
 <h3 id="osirix">OsiriX</h3>
-<p>Horosとほぼ同じです。Horosよりもバグは少ないです。有料のおかげか。</p>
+<p>2004年UCLAでの開発当初では、オープンソースプロジェクトで無料でした。その後、有料になりました。医療向けをうたったアプリとしては格安です。有料のおかげか、Horosでみられるようなバグはほとんどありません。</p>
 <h3 id="zen-lite">Zen lite</h3>
-<p>（Winのみ。インストールはしました、検証待ち）</p>
+<p>Winのみ。一般にはコンフォーカル付属なので、使い慣れた方にはいいでしょう。各自のPCにインストールするためには、Zeissに申請し、ダウンロード・インストールします。私は、インストールはしましたが、その後いじっていません。</p>
 <h3 id="paraview">Paraview</h3>
-<p>無料でよさそうです。しかし、一点だけ気がかりがあって、ごく一般的なWinノートパソコン（Core i5, RAM 8GB, Iris）では、落ちることがしばしばです。ただし、3D用としてはかなり低スペックなPCで、無茶な検証です。</p>
+<p>無料でよさそうです。工学系で利用されています。しかし、一点だけ気がかりがあって、ごく一般的なWinノートパソコン（Core i5, RAM 8GB, Iris）では、落ちることがしばしばです。ただし、3D用としてはかなり低スペックなPCで、無茶な検証です。The ParaView project started in 2000 by Kitware Inc. and Los Alamos National Laboratory.</p>
 <p><a href=https://www.paraview.org>https://www.paraview.org</a></p>
-<h3 id="_5">その他</h3>
-<ul>
-<li>ImageJ/FIJIでも、MPRとVolume Renderingができます。<code>Plug-ins</code>&gt; <code>Volume Viewer</code>です。使いにくいところは、CLUTが手書きなのところです。それをどうやって保存するか（再現性の確保）について、勉強不足です。このプラグイン内ではSegmentationはできないので、別のプラグイン（<code>Plug-ins</code>&gt; <code>Segmentation</code>&gt; に多種）を使うようです。</li>
-<li>Amiraは、以前から論文でよく使われている有料アプリです。私自身は持っていません。見物したことがある程度です。</li>
-<li>DragonflyやImarisは、有料アプリとして、聞く名前です。</li>
-<li>CTvox（iOS, Android, Burker）, ITK-SNAP（Win Mac, UPenn, NYU）は、CT装置由来のDICOMしか対応しません。CoMBIのJPEGを、Horos/OsiriXで、JPEG-DICOM変換しても、そのデータを扱えません。</li>
-<li>本来は有料だけどデモ版は無料というアプリはたくさんあります。たいてい、扱える連続画像枚数に上限がある、3D再構築はできない、といった制限があります。評価するためのサービスですので、本格的には使えなくて当然でしょう。</li>
-</ul>
-<h3 id="_6">調査中</h3>
-<p>いいようなことが書いてあるけど、まいどデモは電顕か、培養細胞。CoMBIのようなフルカラーの連続画像はめずらしく、便利なのかなあ。まだ試していない。</p>
-<ul>
-<li>
-<p>ilastic　3Dデータセット、セグメンテーションを機械学習で　Nature Methods, 2019 </p>
+<h3 id="imagejfiji">ImageJ/FIJI</h3>
+<p>MPRとVolume Renderingができます。<code>Plug-ins</code>&gt; <code>Volume Viewer</code>です。使いにくいところは、CLUTが手書きなのところです。それをどうやって保存するか（再現性の確保）について、勉強不足です。このプラグイン内ではSegmentationはできないので、別のプラグイン（<code>Plug-ins</code>&gt; <code>Segmentation</code>&gt; に多種）を使うようです。</p>
+<h3 id="ilastic">ilastic</h3>
+<p>セグメンテーションを機械学習で行う。3Dデータセットを扱えるようだが、built-in 3D Viewerはないらしい（Nature Methods, 2019）</p>
 <p><a href=https://www.ilastik.org>https://www.ilastik.org/</a></p>
-</li>
-<li>
-<p>MIB　3Dデータセット、セグメンテーション　PLoS Biology, 2016</p>
+<h3 id="mib">MIB</h3>
+<p>3Dデータセット、セグメンテーション　（PLoS Biology, 2016）</p>
 <p><a href=http://mib.helsinki.fi>http://mib.helsinki.fi/</a></p>
-</li>
-</ul>
+<h3 id="amira">Amira</h3>
+<p>以前から論文でよく使われている有料アプリです。私自身は持っていません。見物したことがある程度です。</p>
+<h3 id="dragonfly">Dragonfly</h3>
+<p>有料アプリ、バイオイメージング</p>
+<h3 id="imaris">Imaris</h3>
+<p>有料アプリ、バイオイメージング</p>
+<h3 id="ctvoxios-android-burker">CTvox（iOS, Android, Burker）</h3>
+<p>iOSでいけるのかと試してみましたが、CT装置由来のDICOMしか対応しません。CoMBIのJPEGを、別のアプリでJPEG-DICOM変換しても、そのDICOMを扱えません。</p>
+<h3 id="itk-snapwin-mac-upenn-nyu">ITK-SNAP（Win Mac, UPenn, NYU）</h3>
+<p>CT装置由来のDICOMしか対応しません。CoMBIのJPEGを、別のアプリでJPEG-DICOM変換しても、そのDICOMを扱えません。</p>
 <hr />
 <h2 id="3d_1">実際、3D用アプリでやっていること一覧</h2>
 <p>注意：すべての項目は、どのアプリでも<strong>可能</strong>ではあります。感じた利便性、安定性をまとめたものです。不安定でも回避策があります。不安定さに関しては、それぞれの使い方ページのTipsに記載しています。</p>
@@ -826,6 +881,7 @@
 <th>3D slicer &nbsp;</th>
 <th>Horos &nbsp;</th>
 <th>　OsiriX &nbsp;</th>
+<th>Icy</th>
 </tr>
 </thead>
 <tbody>
@@ -834,17 +890,20 @@
 <td>iMac, MacBookPro</td>
 <td>MacBookPro, iMac</td>
 <td>iMac</td>
+<td>iMac</td>
 </tr>
 <tr>
 <td>データを一括管理</td>
 <td>o</td>
 <td>oo</td>
 <td>oo</td>
+<td>練習中</td>
 </tr>
 <tr>
 <td>連続画像閲覧</td>
 <td>o</td>
 <td>o <br>x v4.0.0RC5 起動しない</td>
+<td>o</td>
 <td>o</td>
 </tr>
 <tr>
@@ -852,46 +911,53 @@
 <td>oo カラーデータのとき、安定しているし、VRによる像と重ねやすい。</td>
 <td>o</td>
 <td>o</td>
+<td>練習中</td>
 </tr>
 <tr>
 <td>ボリュームレンダリングVR</td>
 <td>o</td>
 <td>oo</td>
 <td>oo</td>
+<td>練習中</td>
 </tr>
 <tr>
 <td>MPRから動画作成</td>
 <td>o 研究データとしては十分ですが、Horos/OsiriXほどの滑らかさ、美しさを作りにくい。</td>
 <td>△ v3.3.6 一辺500pixelと小さい動画になるバグ<br>△ v4.0.0RC4 一辺700pixelと小さい動画になるバグ<br></td>
 <td>o 問題なし</td>
+<td>練習中</td>
 </tr>
 <tr>
 <td>VRから動画作成</td>
 <td>o 研究データとしては十分ですが、Horos/OsiriXほどの滑らかさ、美しさを作りにくい。</td>
 <td>o v3.3.6 とてもきれい<br>x v4.0.0RC4 座標がずれて不可</td>
 <td>o　とてもきれい</td>
+<td>練習中</td>
 </tr>
 <tr>
 <td>Segmentation作業</td>
 <td>oo 簡便、ApplePenでスイスイ</td>
 <td>o</td>
 <td>o</td>
+<td>練習中</td>
 </tr>
 <tr>
 <td>Segmentationからの数値解析</td>
 <td>oo</td>
 <td>o 不安定</td>
 <td>o</td>
+<td>練習中</td>
 </tr>
 <tr>
 <td>初見の印象</td>
 <td>難しそうだけど、作業はどこまでも安定。</td>
 <td>簡単そうで、実際、操作は簡単！作業が込み入ってくると不安定さが露見する</td>
 <td>安定している。Horosで生じる不安定さはない</td>
+<td>練習中</td>
 </tr>
 </tbody>
 </table>
-<h2 id="_7">用語解説</h2>
+<h2 id="_5">用語解説</h2>
 <h4 id="multiple-planer-reconstruction-mpr">多平面再構築、multiple planer reconstruction, MPR</h4>
 <p>自由な面で内部を観察できます。<strong>距離の数値データ比較</strong>もできます。例えば、多数個体間で、主気管支の形態比較に使いました。</p>
 <h4 id="volume-rendering-vr">ボリュームレンダリング volume rendering, VR</h4>
@@ -899,7 +965,7 @@
 <p>最終的に論文データとしては、下記のセグメンテーションをやったほうが良いことが多いでしょう。世間にあふれるボリュームレンダリングした画像では、キレイにできそうな印象をもちますが、実際やってみるとあまりうまくいきません。グレー画像でしかできないので、特定の構造物のみを描出することが難しいのです。</p>
 <h4 id="mprvr">MPR/VRから動画をつくれます</h4>
 <p>プレゼンにはインパクトが大きいです。論文にも載せられますが、投稿時データ量の制限があったりして、気遣いが必要になります。VRはうまくいけば、見た目のよい画像・動画として採用しています。</p>
-<h4 id="_8">セグメンテーション</h4>
+<h4 id="_6">セグメンテーション</h4>
 <p>研究では、試料中の特定の構造物・領域（関心領域）に、色塗りをします（セグメンテーション）。色塗りできた関心領域から、<strong>体積の数値データ</strong>を利用できます。</p>
 <p>CoMBIのカラー連続画像は、CTのグレー画像とくらべると、構造物をヒトの目で認識しやすいです。しかし、いざアプリでセグメンテーションしようとなると、全自動では難しいことが多く、なにかと手書き作業がはいってきます。世間には自動化の試みがあって、デモ動画では美しく仕上がっているのをみますが、たいていヒトCT、電顕画像、培養細胞の蛍光像を用いています。CoMBIのようなフルカラー連続画像は、めずらしいのだと思います。</p>
 <p>パソコン環境をととのえて、カラー連続画像を使ったセグメンテーション作業を安定して扱えるようにしたいものです。</p>
