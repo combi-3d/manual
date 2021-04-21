@@ -18,7 +18,7 @@
     
     
       
-        <title>RAW-JPEG変換 - Manual of CoMBI</title>
+        <title>RAW to JPEG conversion/RAW現像 - Manual of CoMBI</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#raw-jpeg" class="md-skip">
+        <a href="#raw-to-jpeg-conversionraw" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              RAW-JPEG変換
+              RAW to JPEG conversion/RAW現像
             
           </span>
         </div>
@@ -536,37 +536,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    アプリケーション
+  <a href="#applications" class="md-nav__link">
+    Applications
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#procedures" class="md-nav__link">
+    Procedures/手順
+  </a>
+  
+    <nav class="md-nav" aria-label="Procedures/手順">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#adobe-bridge" class="md-nav__link">
-    手順　Adobe Bridge
+    Adobe Bridge
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#sony-imaging-edge" class="md-nav__link">
-    手順　Sony Imaging Edge
+    Sony Imaging Edge
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#nikon-capture-nx-d-nx-studio-20213-" class="md-nav__link">
-    手順　Nikon Capture NX-D, NX studio (2021.3-)
+    Nikon Capture NX-D, NX studio (2021.3-)
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#canon-digital-photo-professional" class="md-nav__link">
-    手順　Canon Digital Photo Professional
+    Canon Digital Photo Professional
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -590,30 +603,63 @@
               
                 
                 
-                <h1 id="raw-jpeg">RAW-JPEG変換</h1>
-<h2 id="_1">アプリケーション</h2>
-<p>下記のどれかを使います</p>
+                <h1 id="raw-to-jpeg-conversionraw">RAW to JPEG conversion/RAW現像</h1>
+<h2 id="applications">Applications</h2>
+<p>Use one of the apps below. In 2014, the beginning of CoMBI development, Adobe Bridge was the only app that could stably convert more than 1000 images. I'm using Bridge since then. Currently, all apps below works well.</p>
+<p>下記のいずれかを使用します。2014年頃は、Adobe Bridgeだけが安定していたので、以来、Bridgeを使っています。いまでは、カメラ会社のカメラ付属アプリでも安定して行えます。</p>
 <ul>
 <li>Adobe Bridge</li>
-<li>Nikon Capture NX-D, NX studio (2021.3-)</li>
-<li>Sony Imaging Edge</li>
-<li>Canon Digital Photo Professional</li>
+<li>Adone Lightroom</li>
+<li>Nikon Capture NX-D, NX studio (2021.3-) (free)</li>
+<li>Sony Imaging Edge (free)</li>
+<li>Canon Digital Photo Professional (free)</li>
 </ul>
-<p>2014年頃は、Adobe Bridgeだけが安定していたので、以来、Bridgeを使っています。いまでは、カメラ会社のカメラ付属アプリでも安定して行えます。Adobe Lightroomも多数の画像を扱えるアプリで、RAW現像できます。</p>
-<h2 id="adobe-bridge">手順　Adobe Bridge</h2>
+<h2 id="procedures">Procedures/手順</h2>
+<h3 id="adobe-bridge">Adobe Bridge</h3>
+<ol>
+<li>Select an image and right click. <code>Open in Camera RAW</code></li>
+<li>Adjust brightness, contrast, color balance etc. </li>
+<li>Crop to exclude needless region. Keep ｃircumference of the block.</li>
+<li>Close Camera RAW by clicking <code>Done</code>.</li>
+<li>Right click on the adjusted image. <code>Develop settings</code>&gt; <code>Copy setting</code></li>
+<li>Select ALL images and right-crick, <code>Develop settings</code>&gt; <code>Paste setting</code></li>
+<li><code>Check all</code>, <code>OK</code></li>
+<li>Convert to JPEG. <code>select all</code>, drag and drop to Export tag in the left window, then <code>convert</code>.</li>
+</ol>
+<hr />
 <ol>
 <li>一枚画像を選んで、右クリック、Camera RAWで開く</li>
 <li>明るさ、コントラスト、カラーなどを調整する。</li>
 <li>クロップして、ブロック外の不要な領域を除く。ブロック外周は残すこと。</li>
-<li><code>完了</code>で、Camera RAWをとじる</li>
-<li>調整した一枚の上で、右クリック。<code>Develop settings</code>&gt; <code>Copy setting</code></li>
-<li>すべての画像を選んで、右クリック。right-crick, <code>Develop settings</code>&gt; <code>Paste setting</code></li>
+<li><code>完了</code>を押して、Camera RAWをとじる</li>
+<li>調整した一枚の上で、右クリック、<code>Develop settings</code>&gt; <code>Copy setting</code></li>
+<li>すべての画像を選んで、右クリック、<code>Develop settings</code>&gt; <code>Paste setting</code></li>
 <li><code>Check all</code>, <code>OK</code></li>
-<li>JPEGに書き出す。Bridgeのバージョンによって異なる。<code>Select all</code>, <code>open in camera RAW</code>,再び<code>select all</code>して、<code>convert to JPEG</code>。もしくは、<code>select all</code>, 左の画面へ<code>drag and drop to Export tag</code>、<code>convert</code></li>
+<li>JPEGに書き出す。<code>select all</code>, 左のウィンドウのタグへドラッグする。<code>convert</code></li>
 </ol>
-<h2 id="sony-imaging-edge">手順　Sony Imaging Edge</h2>
+<h3 id="sony-imaging-edge">Sony Imaging Edge</h3>
 <ol>
-<li>Edit<ol>
+<li>"Edit" Adjust an image, then save setting file. <ol>
+<li><code>Edit</code>&gt; <code>Image Processing Settings</code>, <code>Save...</code></li>
+</ol>
+</li>
+<li>"Viewer"<ol>
+<li>Select all images</li>
+<li><code>Export</code> button or <code>File</code>&gt; <code>Export...</code></li>
+<li><code>任意の画像処理設定をすべてに適用</code></li>
+<li>保存しておいた設定ファイルを選択する</li>
+</ol>
+</li>
+<li>"Edit"<ol>
+<li>画像処理設定を適用したい画像を表示</li>
+<li><code>編集</code>&gt; <code>画像処理設定</code>&gt; <code>読み込み（適用）</code></li>
+<li>設定ファイルを選択し、<code>開く</code></li>
+</ol>
+</li>
+</ol>
+<hr />
+<ol>
+<li>Editで画像調製したのち、設定ファイルを保存する<ol>
 <li><code>編集</code>&gt; <code>画像処理設定</code>, <code>保存</code></li>
 </ol>
 </li>
@@ -632,9 +678,9 @@
 </li>
 </ol>
 <p>参考：<a href="https://support.d-imaging.sony.co.jp/app/imagingedge/ja/instruction/5_3_save_adjustment.php">ソニーの解説サイト、画像処理設定の保存・適用/一括適用</a></p>
-<h2 id="nikon-capture-nx-d-nx-studio-20213-">手順　Nikon Capture NX-D, NX studio (2021.3-)</h2>
+<h3 id="nikon-capture-nx-d-nx-studio-20213-">Nikon Capture NX-D, NX studio (2021.3-)</h3>
 <p>参考：<a href="https://nikonimglib.com/ncnxd/onlinehelp/ja/05_useful_03.html">ニコンの解説サイト、複数の画像に同じ処理を適用する（バッチ処理）</a></p>
-<h2 id="canon-digital-photo-professional">手順　Canon Digital Photo Professional</h2>
+<h3 id="canon-digital-photo-professional">Canon Digital Photo Professional</h3>
 <p>参考：キャノンの説明書に「大量のRAW画像処理」「一括してJPEG画像、TIFF画像で保存する(バッチ処理)」という項目があります。ネットではPDFとして見つかります。</p>
 <h2 id="tips">Tips</h2>
 <ul>
