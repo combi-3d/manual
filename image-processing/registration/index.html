@@ -787,12 +787,12 @@ Logファイルを修正する戦略は、「前から.logの正しいところ�
 <li>どうしてもダメなら、ご連絡ください。</li>
 </ul>
 <h3 id="imagejfijiimage-stabilizer-log-applier">新版ImageJ/FIJIのバグ、Image Stabilizer Log Applierができない？</h3>
-<p>ImageJ/FIJIを最新にアップデートしたら、Image Stabilizer Log ApplierでLogファイルをひらくと、改行がなくなってしまい、使えなくなります。いつもどおり、Image Stabilizerはできるし、Logファイルも正しく生成はされます。一旦保存したLogファイルを再び開くときだけのバグです。改行コードの扱いに関するようにもみえるし、FIJIがテキストファイルを認識するとき、利用するウィンドウ種の選択がおかしくなったようにもみえます。FIJIのサイトによると、2020年8月に大型アップデートを施したそうです。2020年8月Mac OS 10.15.6、および2020年10月Windows10で検証しました。いまのところ、以下の対策<strong>いずれか</strong>で使えるようになります。</p>
+<p>ImageJ/FIJIを最新にアップデートしたら、Image Stabilizer Log ApplierでLogファイルをひらくと、改行がなくなってしまい、使えなくなります。いつもどおり、Image Stabilizerはできるし、Logファイルも正しく生成はされます。一旦保存したLogファイルを再び開くときだけのバグです。改行コードの扱いに関するようにもみえるし、FIJIがテキストファイルを認識するとき、利用するウィンドウ種の選択がおかしくなったようにもみえます。FIJIのサイトによると、2020年8月に大型アップデートを施したそうです。2020年8月Mac OS 10.15.6、および2020年10月Windows10、2021年4月Linux/Ubuntu20.04でも同様の症状がでます（Thank you! T)。いまのところ、以下の対策<strong>いずれか</strong>で使えるようになります。</p>
 <h4 id="1">対策1、テキストとしてコピペ</h4>
 <ol>
-<li>Logファイルをテキストとして開く。Macの場合、Finderで保存したLogファイル上で右クリック、アプリ指定で開く Open with... TextEdit.app。Windowsの場合、メモ帳で開く。</li>
-<li>FIJIで、新規のテキストウィンドウを作る。<code>Plug-ins</code>, <code>New</code>,<code>Text Window...</code> (width, heightはなんでもよい) </li>
-<li>上記1で開いたLog (Mac: TextEdit.app、Win: メモ帳）をすべて、コピーする。そして、上記2で作ったFIJIの新規Text Windowへ、すべてペーストする。これで、Logファイル が正常に開いた状態になる。（以降は通常のImage Stabilizer Log Applierの手順です。）</li>
+<li>Logファイルをテキストとして開く。Macの場合、Finderで保存したLogファイル上で右クリック、アプリ指定で開く Open with... TextEdit.app。Windowsの場合、メモ帳で開く。すべて選択してコピー。</li>
+<li>ImageJ/FIJIで、新規のテキストウィンドウを作る。Linux, Win, Macの場合、<code>New</code>&gt;<code>System clipboard</code>　上記でコピーしておいたデータがすでにペーストされています。Macの場合、<code>Plug-ins</code>&gt;<code>New</code>&gt;<code>Text Window...</code> (width, heightはなんでもよい) でもできます、手動でペーストします。（以前、Plug-ins由来のこの方法は、Mac, Winでできると記していましたが、Macだけの対応でした。すみません訂正します。2021.4）</li>
+<li>これでLogファイルが正常に開いた状態になります。以降は通常のImage Stabilizer Log Applierの手順です。</li>
 <li>ImageJ/FIJIで、連続画像を開く</li>
 <li>ImageJ/FIJI　Plug-ins &gt; Image Stabilizer Log Applier</li>
 </ol>
