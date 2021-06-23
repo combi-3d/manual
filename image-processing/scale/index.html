@@ -18,7 +18,7 @@
     
     
       
-        <title>画像の縮小 - Manual of CoMBI</title>
+        <title>Resize/画像の縮小 - Manual of CoMBI</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#resize" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              画像の縮小
+              Resize/画像の縮小
             
           </span>
         </div>
@@ -303,7 +303,7 @@
 
   <li class="md-nav__item">
     <a href="../../operation/combi-c/index.html" class="md-nav__link">
-      CoMBI-Cryostat
+      CoMBI-C (Cryostat)
     </a>
   </li>
 
@@ -316,7 +316,20 @@
 
   <li class="md-nav__item">
     <a href="../../operation/combi-s/index.html" class="md-nav__link">
-      新型CoMBI coming soon
+      CoMBI-S (Sliding, motorized)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../operation/combi-s-m/index.html" class="md-nav__link">
+      CoMBI-S (Sliding, manual)
     </a>
   </li>
 
@@ -329,7 +342,7 @@
 
   <li class="md-nav__item">
     <a href="../../operation/combi-r/index.html" class="md-nav__link">
-      新型CoMBI ccoming soon
+      CoMBI-R (Rotary, manual)
     </a>
   </li>
 
@@ -371,7 +384,7 @@
 
   <li class="md-nav__item">
     <a href="../introduction/index.html" class="md-nav__link">
-      画像処理の概要
+      Overview/画像処理の概要
     </a>
   </li>
 
@@ -384,7 +397,7 @@
 
   <li class="md-nav__item">
     <a href="../rawjpeg/index.html" class="md-nav__link">
-      RAW-JPEG変換
+      RAW to JPEG conversion/RAW現像
     </a>
   </li>
 
@@ -397,7 +410,7 @@
 
   <li class="md-nav__item">
     <a href="index.html" class="md-nav__link">
-      画像の縮小
+      Resize/画像の縮小
     </a>
   </li>
 
@@ -410,7 +423,7 @@
 
   <li class="md-nav__item">
     <a href="../registration/index.html" class="md-nav__link">
-      ズレ補正（Image registration）
+      Image Registration/ズレ補正
     </a>
   </li>
 
@@ -423,7 +436,7 @@
 
   <li class="md-nav__item">
     <a href="../3dslicer/index.html" class="md-nav__link">
-      3D再構築、3D slicer
+      3D Reconstruction, 3D slicer
     </a>
   </li>
 
@@ -436,7 +449,7 @@
 
   <li class="md-nav__item">
     <a href="../icy/index.html" class="md-nav__link">
-      3D再構築、Icy
+      3D Reconstruction, Icy
     </a>
   </li>
 
@@ -449,7 +462,7 @@
 
   <li class="md-nav__item">
     <a href="../horos/index.html" class="md-nav__link">
-      3D再構築、Horos/OsiriX
+      3D Reconstruction, Horos/OsiriX
     </a>
   </li>
 
@@ -462,7 +475,7 @@
 
   <li class="md-nav__item">
     <a href="../correlation/index.html" class="md-nav__link">
-      3D像に切片位置を示す
+      Correlation of 2D and 3D images/3D像に切片位置を示す
     </a>
   </li>
 
@@ -475,7 +488,7 @@
 
   <li class="md-nav__item">
     <a href="../EDF/index.html" class="md-nav__link">
-      深度合成（メモ）
+      Extended Depth of Field/深度合成
     </a>
   </li>
 
@@ -536,21 +549,21 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     アプリケーション
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     縮小の計画
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     縮小の手順
   </a>
   
@@ -573,7 +586,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     ヒント
   </a>
   
@@ -600,7 +613,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     ヒント
   </a>
   
@@ -617,14 +630,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     連続画像のファイル名一括変換
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     枚数を減らして、連続画像を軽くする
   </a>
   
@@ -643,15 +656,16 @@
               
                 
                 
-                <h1 id="_1">画像の縮小</h1>
-<h2 id="_2">アプリケーション</h2>
+                <h1 id="resize">Resize/画像の縮小</h1>
+<p>(This page is still in Japanease only.)</p>
+<h2 id="_1">アプリケーション</h2>
 <p>下記のどれか使います。</p>
 <ul>
 <li>Adobe Photoshop, Action and Batch. </li>
 <li>ImageJ/FIJI, Macro</li>
 </ul>
 <p>Photoshopのアクション・自動処理・バッチでは、複雑な操作も記録できます。ImageJ/FIJIでもMacroを使ってできますが、記録できることがPhotoshopよりも少ない感じです。もしかしたら、熟達者ならPhotoshop相当に複雑に記録できるのかもしれませんが、よくわかりませんでした。</p>
-<h2 id="_3">縮小の計画</h2>
+<h2 id="_2">縮小の計画</h2>
 <p>たいてい元画像のピクセルサイズは、割り切れない数字になります。縮小の目的は、ズレ補正用の軽い連続画像をつくること、および、3D用のグレースケール画像も作ることです。ついでにピクセルサイズをキリの良い数値にして整理整頓、作業しやすくしています。</p>
 <p>一例、「Nikon D810でおおよそ1倍、フルサイズ撮影した。スケールを確認すると4.88µm/pixelだった」</p>
 <table>
@@ -698,7 +712,7 @@
 </table>
 <p>この例では、4通りの縮小連続画像をつくることになります。ズレ補正で扱える1000x1000以下の軽いシリーズができるまで、縮小します。実際は、RAW-JPEG変換時などで、ブロック周囲が入る程度にクロップするので、これらより小さな画像を扱右ことが多く、縮小は2通り、3通りで済みます。</p>
 <p>それぞれの縮小連続画像で、カラーもグレースケールも作っておけば、もうそれ以外の縮小作業はありません。</p>
-<h2 id="_4">縮小の手順</h2>
+<h2 id="_3">縮小の手順</h2>
 <p>Photoshop 2通り、ImageJ 1通りの、計3通り記します。</p>
 <h3 id="photoshop-action-batch">Photoshop, Action, Batch処理</h3>
 <ol>
@@ -716,7 +730,7 @@
 <li>拡張子<code>.app</code>のdropletファイルができる。</li>
 <li>処理したい連続画像が入ったフォルダをドラッグして、ドロップレットファイルに重ねる。</li>
 </ol>
-<h4 id="_5">ヒント</h4>
+<h4 id="_4">ヒント</h4>
 <p>保存先までアクションに入れておくと、特定のフォルダに返還後のファイルが保存されます。もし、別の実験で同一処理をかけたいときは、保存先を指定したアクション中の一行を削除して、新しい保存先を追記録します。</p>
 <h3 id="imagejfiji">ImageJ/FIJI</h3>
 <ol>
@@ -748,14 +762,14 @@
 makeRectangle(181, 96, 278, 278);
 run(&quot;Crop&quot;);
 </code></pre>
-<h4 id="_6">ヒント</h4>
+<h4 id="_5">ヒント</h4>
 <ul>
 <li>Macroでは、ファイルの「開く」と「閉じる」は、記録不要で、実行時に指定します。</li>
 <li>ImageJ Macroでは、別名保存を細かく設定できませんでした。作りたい画像シリーズが何個もある場合、（たとえば、5 µm series, 10 µm series, color series, grayscale series）、別々のマクロを組んだほうがいいようです。Photoshopの場合、別名保存もふくめ、複雑な作業を全部記録してくれます。</li>
 <li>メモリに展開できる画像データの量については、別のページ、「コンピュータと画像ファイル」へ</li>
 <li>参考書：ImageJではじめる生物画像解析（学研メディカル秀潤社、2016）</li>
 </ul>
-<h2 id="_7">連続画像のファイル名一括変換</h2>
+<h2 id="_6">連続画像のファイル名一括変換</h2>
 <p>CoMBIの撮影が通常に成功した場合は、必要ありません。ファイル名が9999から0001に戻ったとか、特別な事情があるときに、ファイル名を一括で変換します。</p>
 <p>Photoshopでは、フォルダ内にあれば一括して処理してくれますので、縮小が終わった後に、ファイル名の一括変換を行います。</p>
 <p>ImageJのImage Stabilizerでは、頭に連番が必要です。</p>
@@ -806,7 +820,7 @@ run(&quot;Crop&quot;);
 <li>Mac OSで一括変換：<code>Finder</code>で<code>複数選択</code>、<code>右クリック（副メニュー）</code>より、ファイル名を変更。完全変更や連番追記など、ある程度カスタマイズできる。</li>
 <li>便利に一括変換：Adobe Bridge（有料アプリ）なら細かく設定ができる。</li>
 </ul>
-<h2 id="_8">枚数を減らして、連続画像を軽くする</h2>
+<h2 id="_7">枚数を減らして、連続画像を軽くする</h2>
 <p>連続画像を1つ飛びにすれば、容量が半分になる。薄く切りすぎて、枚数が増えすぎたとき。解析にはそんなに枚数はいらないとき。3D解析で軽くしたいとき。
 MacではFinder、WindowsではExploreで操作します。</p>
 <ul>

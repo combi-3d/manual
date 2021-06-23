@@ -18,7 +18,7 @@
     
     
       
-        <title>ズレ補正、Image Registration - Manual of CoMBI</title>
+        <title>Image Registration/ズレ補正 - Manual of CoMBI</title>
       
     
     
@@ -93,7 +93,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              ズレ補正、Image Registration
+              Image Registration/ズレ補正
             
           </span>
         </div>
@@ -303,7 +303,7 @@
 
   <li class="md-nav__item">
     <a href="../../operation/combi-c/index.html" class="md-nav__link">
-      CoMBI-Cryostat
+      CoMBI-C (Cryostat)
     </a>
   </li>
 
@@ -316,7 +316,20 @@
 
   <li class="md-nav__item">
     <a href="../../operation/combi-s/index.html" class="md-nav__link">
-      新型CoMBI coming soon
+      CoMBI-S (Sliding, motorized)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../operation/combi-s-m/index.html" class="md-nav__link">
+      CoMBI-S (Sliding, manual)
     </a>
   </li>
 
@@ -329,7 +342,7 @@
 
   <li class="md-nav__item">
     <a href="../../operation/combi-r/index.html" class="md-nav__link">
-      新型CoMBI ccoming soon
+      CoMBI-R (Rotary, manual)
     </a>
   </li>
 
@@ -371,7 +384,7 @@
 
   <li class="md-nav__item">
     <a href="../introduction/index.html" class="md-nav__link">
-      画像処理の概要
+      Overview/画像処理の概要
     </a>
   </li>
 
@@ -384,7 +397,7 @@
 
   <li class="md-nav__item">
     <a href="../rawjpeg/index.html" class="md-nav__link">
-      RAW-JPEG変換
+      RAW to JPEG conversion/RAW現像
     </a>
   </li>
 
@@ -397,7 +410,7 @@
 
   <li class="md-nav__item">
     <a href="../scale/index.html" class="md-nav__link">
-      画像の縮小
+      Resize/画像の縮小
     </a>
   </li>
 
@@ -410,7 +423,7 @@
 
   <li class="md-nav__item">
     <a href="index.html" class="md-nav__link">
-      ズレ補正（Image registration）
+      Image Registration/ズレ補正
     </a>
   </li>
 
@@ -423,7 +436,7 @@
 
   <li class="md-nav__item">
     <a href="../3dslicer/index.html" class="md-nav__link">
-      3D再構築、3D slicer
+      3D Reconstruction, 3D slicer
     </a>
   </li>
 
@@ -436,7 +449,7 @@
 
   <li class="md-nav__item">
     <a href="../icy/index.html" class="md-nav__link">
-      3D再構築、Icy
+      3D Reconstruction, Icy
     </a>
   </li>
 
@@ -449,7 +462,7 @@
 
   <li class="md-nav__item">
     <a href="../horos/index.html" class="md-nav__link">
-      3D再構築、Horos/OsiriX
+      3D Reconstruction, Horos/OsiriX
     </a>
   </li>
 
@@ -462,7 +475,7 @@
 
   <li class="md-nav__item">
     <a href="../correlation/index.html" class="md-nav__link">
-      3D像に切片位置を示す
+      Correlation of 2D and 3D images/3D像に切片位置を示す
     </a>
   </li>
 
@@ -475,7 +488,7 @@
 
   <li class="md-nav__item">
     <a href="../EDF/index.html" class="md-nav__link">
-      深度合成（メモ）
+      Extended Depth of Field/深度合成
     </a>
   </li>
 
@@ -536,14 +549,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    アプリケーション
+  <a href="#applications" class="md-nav__link">
+    Applications/アプリケーション
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     手順
   </a>
   
@@ -572,21 +585,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     おそい
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     うまくいかない
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     どうしてもだめ
   </a>
   
@@ -637,20 +650,21 @@
               
                 
                 
-                <h1 id="image-registration">ズレ補正、Image Registration</h1>
-<h2 id="_1">アプリケーション</h2>
+                <h1 id="image-registration">Image Registration/ズレ補正</h1>
+<p>(This page is still in Japanease only.)</p>
+<h2 id="applications">Applications/アプリケーション</h2>
 <ul>
 <li>
-<p>ImageJ/FIJI, plug-in "Image Stabilizer"と、"Image Stabilizer Log Applier"</p>
+<p>ImageJ/FIJI, plug-ins "Image Stabilizer" and "Image Stabilizer Log Applier"</p>
 <p><a href="https://imagej.net/Image_Stabilizer">https://imagej.net/Image_Stabilizer</a></p>
 </li>
 <li>
-<p>MS Excel、または、Apple Numbers</p>
+<p>MS Excel, or Apple Numbers</p>
 </li>
 </ul>
 <p>ImageJ/FIJIに上記リンクを参考に、プラグインをインストールします。Macの場合、Finderで操作します。<code>/Application/Fiji.app</code>の上で、<code>右クリック</code>、<code>Show packege contents</code>。<code>/plugins</code>のなかにダウンロードしたファイルをドラッグ・アンド・ドロップし、ImageJ/FIJIを再起動、です。<br>
 数あるRegistrationツールの中から、Image Stabilizerをえらびました。移動させた距離（ピクセル）をLogファイルとして記録シてくれるのがポイントです。万が一、ズレ補正に失敗する箇所があっても、Logファイルの数値を修正することで、ズレ補正を成功に導けます。さらに、Logファイルの数値を倍加することで、大きな画像にもズレ補正をかけられます。</p>
-<h2 id="_2">手順</h2>
+<h2 id="_1">手順</h2>
 <ol>
 <li>連続画像をひらく　フォルダごとImageJのバーにドラッグアンドドロップ。搭載メモリと相談ですが、おおかた1000x1000x10000枚の画像が限度です。メモリに展開してください。かつてはVirtual Stackでもできましたが、ImageJのバージョンアップ後、逐次保存ができなくなりました。</li>
 <li><code>Plug-ins</code>, <code>Image Stabilizer</code>　このとき一番前の画像を開いておけば、前から順にに補正をかけます。一番後ろの画像を開いておけば、後ろから補正します。Logファイルを生成するに必ずチェックをいれます。もし、メモリが潤沢なら、結果を別ファイルで表示するにチェックしたほうがよく、補正の成否確認に便利です。</li>
@@ -762,14 +776,14 @@ Logファイルを修正する戦略は、「前から.logの正しいところ�
 <p>最初に行う、Image Stabilizerは、ブロック周囲形状をズレ補正の基準にしているので、ズレ補正は、広く写った画像にしか適用できません。一方、Image Stabilizer Log Applierでは、ブロック周囲形状は、もはや必要ありません。「試料全体で低倍率の3D観察」と「観たいところだけで高精細の3D観察」を分けて行っています。倍加logファイルがそういう観察を可能にしてくれています。</p>
 <p>倍加logでは、2倍、4倍までなら、余裕でキレイに補正してくれます。8倍、10倍は？ズレ補正が甘い場合があります、うまくいくときはうまくいきます。10倍以上の倍加は？通常そんなに倍加することはありません。オリジナル画像は最大約8000x6000 pixelsで、10分の1だと800x600 pixels。余裕でズレ補正できる軽さになるからです。</p>
 <h2 id="tips">Tips</h2>
-<h3 id="_3">おそい</h3>
+<h3 id="_2">おそい</h3>
 <ul>
 <li>画像が大きすぎませんか。はじめは小さく縮小した連続画像からやってみて、Logファイルをゲットします。具体的には、はじめは500x500程度で、成功率は高いです。つぎに750x750程度、さらに1000x1000程度で成功すればラッキーです。Logファイルさえ入手できれば、そのまま使うもよし、数値を倍加するなどして、大きなままの連続画像に対してLog Applierするもよし。</li>
 <li>画像のデータ量を少なくする、基本の技1。縮小やクロップで少なくしています。クロップは、RAW−JPEG変換時またはPhotoshop, ImageJで縮小するときにやっていて、ブロック面と周辺少しが残る程度にしています。</li>
 <li>画像のデータ量を少なくする、基本の技2。カラー画像よりも、グレースケール画像のほうが軽いです。3分の1。</li>
 <li>画像データ量を少なくする、別の技。奇数番号だけ、偶数番号だけにしたこともあります。これは、切削を薄くしすぎた、過剰だったときに行ないます。Macの場合、まず、Finderを縦に細長く表示させ、アイコン表示にします。2列に表示されれば、マウスで片方の列だけ選択して、新しいフォルダにまとめます。</li>
 </ul>
-<h3 id="_4">うまくいかない</h3>
+<h3 id="_3">うまくいかない</h3>
 <p>一発でうまくいくときから、まれに2日間ほど悩むときもあります。しかし、これまで200サンプル以上のCoMBI撮影を経験し、ズレ補正に失敗したことはありません。きっとどうにかできるはずです。うまくいったときの最速記録は、8サンプルのCoMBI撮影からズレ補正までを丸2日間で成功させたというものです。</p>
 <ul>
 <li>Image Stabilizerを最初の画像からやってみてだめなら、後ろからやってみる。</li>
@@ -782,7 +796,7 @@ Logファイルを修正する戦略は、「前から.logの正しいところ�
 <li>撮影に失敗した箇所で、ズレ補正が失敗することがあります。たとえば撮影ポイントを通り過ぎてしまった一コマなど。手動クリオスタットの場合にときどきあります。ひどい場合は、捨てて隣で補完します。惜しいときは、クロップ（RAW-JPEG変換時か、PhotoshopやImageJでやったか）するときに、手動でクロップ位置を修正します。</li>
 <li>コントラストが低すぎると、うまくいかないかもしれません。コントラストをどぎつくしたバーションもつくってみて、Image Stabilizerをやってみます。Logファイルさえ手に入れば、好みのコントラストシリーズにもLog Applierをかけられます。</li>
 </ul>
-<h3 id="_5">どうしてもだめ</h3>
+<h3 id="_4">どうしてもだめ</h3>
 <ul>
 <li>どうしてもダメなら、ご連絡ください。</li>
 </ul>

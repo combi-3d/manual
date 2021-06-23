@@ -18,7 +18,7 @@
     
     
       
-        <title>3D像に切片位置を示す - Manual of CoMBI</title>
+        <title>Correlation of 2D and 3D images/3D像に切片位置を示す - Manual of CoMBI</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#3d" class="md-skip">
+        <a href="#correlation-of-2d-and-3d-images3d" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              3D像に切片位置を示す
+              Correlation of 2D and 3D images/3D像に切片位置を示す
             
           </span>
         </div>
@@ -303,7 +303,7 @@
 
   <li class="md-nav__item">
     <a href="../../operation/combi-c/index.html" class="md-nav__link">
-      CoMBI-Cryostat
+      CoMBI-C (Cryostat)
     </a>
   </li>
 
@@ -316,7 +316,20 @@
 
   <li class="md-nav__item">
     <a href="../../operation/combi-s/index.html" class="md-nav__link">
-      新型CoMBI coming soon
+      CoMBI-S (Sliding, motorized)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../operation/combi-s-m/index.html" class="md-nav__link">
+      CoMBI-S (Sliding, manual)
     </a>
   </li>
 
@@ -329,7 +342,7 @@
 
   <li class="md-nav__item">
     <a href="../../operation/combi-r/index.html" class="md-nav__link">
-      新型CoMBI ccoming soon
+      CoMBI-R (Rotary, manual)
     </a>
   </li>
 
@@ -371,7 +384,7 @@
 
   <li class="md-nav__item">
     <a href="../introduction/index.html" class="md-nav__link">
-      画像処理の概要
+      Overview/画像処理の概要
     </a>
   </li>
 
@@ -384,7 +397,7 @@
 
   <li class="md-nav__item">
     <a href="../rawjpeg/index.html" class="md-nav__link">
-      RAW-JPEG変換
+      RAW to JPEG conversion/RAW現像
     </a>
   </li>
 
@@ -397,7 +410,7 @@
 
   <li class="md-nav__item">
     <a href="../scale/index.html" class="md-nav__link">
-      画像の縮小
+      Resize/画像の縮小
     </a>
   </li>
 
@@ -410,7 +423,7 @@
 
   <li class="md-nav__item">
     <a href="../registration/index.html" class="md-nav__link">
-      ズレ補正（Image registration）
+      Image Registration/ズレ補正
     </a>
   </li>
 
@@ -423,7 +436,7 @@
 
   <li class="md-nav__item">
     <a href="../3dslicer/index.html" class="md-nav__link">
-      3D再構築、3D slicer
+      3D Reconstruction, 3D slicer
     </a>
   </li>
 
@@ -436,7 +449,7 @@
 
   <li class="md-nav__item">
     <a href="../icy/index.html" class="md-nav__link">
-      3D再構築、Icy
+      3D Reconstruction, Icy
     </a>
   </li>
 
@@ -449,7 +462,7 @@
 
   <li class="md-nav__item">
     <a href="../horos/index.html" class="md-nav__link">
-      3D再構築、Horos/OsiriX
+      3D Reconstruction, Horos/OsiriX
     </a>
   </li>
 
@@ -462,7 +475,7 @@
 
   <li class="md-nav__item">
     <a href="index.html" class="md-nav__link">
-      3D像に切片位置を示す
+      Correlation of 2D and 3D images/3D像に切片位置を示す
     </a>
   </li>
 
@@ -475,7 +488,7 @@
 
   <li class="md-nav__item">
     <a href="../EDF/index.html" class="md-nav__link">
-      深度合成（メモ）
+      Extended Depth of Field/深度合成
     </a>
   </li>
 
@@ -529,6 +542,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#showing-the-section-position-as-a-flat-plane" class="md-nav__link">
+    Showing the section position as a flat plane/切片位置を平面で示す
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#placing-a-microscope-image-into-a-3d-iamge3d" class="md-nav__link">
+    Placing a microscope image into a 3D iamge/顕微鏡画像を3D画像内に配置する
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -540,17 +575,47 @@
               
                 
                 
-                <h1 id="3d">3D像に切片位置を示す</h1>
-<p>これぞCoMBIならではのデータ表現になります。3Dデータと2Dデータの相関をします。</p>
+                <h1 id="correlation-of-2d-and-3d-images3d">Correlation of 2D and 3D images/3D像に切片位置を示す</h1>
+<p>This is the unique feature of CoMBI: the correlation between 3D data and 2D data. I' ll introduce two methods: one to show the position of section as a solid plane in the 3D image, and the other to place the micrograph itself into the 3D image.</p>
+<p><span style="color:#444C99;">これぞCoMBIならではのワザで、3Dデータと2Dデータの相関です。べた塗りの平面で示す方法と、顕微鏡写真そのものを3D画像内に配置する方法を紹介します。使用するアプリは、3D slicerです。</span></p>
+<h2 id="showing-the-section-position-as-a-flat-plane">Showing the section position as a flat plane/切片位置を平面で示す</h2>
 <ol>
-<li>カラー連続画像、まはた、グレースケール連続画像を複製する。</li>
-<li>切片に対応したブロック面画像を削除し、代わりに新規画像をつくる。<ul>
-<li>新規画像は、カラー連続画像の場合、このみの色、一色でべた塗りします。MPRの画像のなかで、切片位置が線として表示されます。</li>
-<li>グレー連続画像（黒背景）の場合、真っ白か、50%グレーのべた塗り画像、です。どちらがいいかは、Volume Renderingのときの表示条件によります。</li>
+<li>(Explore_win, Finder_mac) Duplicate a color serial block-face image or a grayscale serial block-face image. </li>
+<li>Delete the block-face image corresponding to the section, and create a new image in its place.<ul>
+<li>For a color image series, the new image will be filled with prefered color.</li>
+<li>For a gray image series (black background), the image will be either pure white or 50% gray. Which one is better depends on the settings for volume rendering. </li>
 </ul>
 </li>
-<li>3Dビューワ（Horos, 3D slicer）に読み込む。</li>
-<li>カラー連続画像はMPR用、グレースケール連続画像はボリュームレンダリング用に使用する。</li>
+<li>Load the image into a 3D viewer (3D slicer or Horos). </li>
+<li>Use the color image series for MPR, and the grayscale image series for volume rendering.</li>
+</ol>
+<p><img alt="correlation" src="../img/160411_Fig_rev02b-02_600.png" title="how to show positions of sections as planes" /></p>
+<ol>
+<li><span style="color:#444C99;">フォルダ操作で、カラー連続画像、まはた、グレースケール連続画像を複製する。</span></li>
+<li><span style="color:#444C99;">切片に対応したブロック面画像を削除し、代わりに新規画像をつくる。</span><ul>
+<li><span style="color:#444C99;">新規画像は、カラー連続画像の場合、このみの色、一色でべた塗りします。MPRの画像のなかで、切片位置が線として表示されます。</span></li>
+<li><span style="color:#444C99;">グレー連続画像（黒背景）の場合、真っ白か、50%グレーのべた塗り画像、です。どちらがいいかは、Volume Renderingのときの表示条件によります。</span></li>
+</ul>
+</li>
+<li><span style="color:#444C99;">3Dビューワ（3D slicerまたはHoros）に読み込む。</span></li>
+<li><span style="color:#444C99;">カラー連続画像はMPR用、グレースケール連続画像はボリュームレンダリング用に使用する。</span></li>
+</ol>
+<h2 id="placing-a-microscope-image-into-a-3d-iamge3d">Placing a microscope image into a 3D iamge/顕微鏡画像を3D画像内に配置する</h2>
+<ol>
+<li>Load serial images into 3D slicer.</li>
+<li>Load microscopic imaga, also. Caliculate pixel size and check the position among serial images.</li>
+<li>Go to Module <code>Volume</code>.</li>
+<li>For setting serial image,  <code>Volume</code> &gt; <code>Active Volume</code> &gt; select serial image, and <code>Volume Information</code> &gt; <code>Image Spacing</code> &gt; input voxel size.</li>
+<li>For setting microscopic image, <code>Volume</code> &gt; <code>Active Volume</code> &gt; select microscopic image, and <code>Volume Information</code> &gt; <code>Image Spacing</code> &gt; input pixel size, and <code>Image Origin</code> &gt; input Z positon at first according to the position among serial images. The value to be input can be caliculated as distance from the first plane. Then, adjust XY position manually, referring block-face image, reconstructed plane, volume rendered image and microscopic image. </li>
+</ol>
+<p><img alt="correlation" src="../img/210421_correlation.png" title="how to correlate" /></p>
+<p><em>There are 3 kinds of data; grayscale serial images, segmentation data, and microscopic data. This data was used in Sci Rep 2021, Fig.5</em></p>
+<ol>
+<li><span style="color:#444C99;">3D sclicerに連続画像をとりこみます。</span></li>
+<li><span style="color:#444C99;">顕微鏡画像も取り込みます。前もって、ピクセルサイズを計算しておき、採取した場所（対応するブロック面の位置）のメモを用意します。</span></li>
+<li><span style="color:#444C99;">モジュール <code>Volume</code>へ。</span></li>
+<li><span style="color:#444C99;">連続画像の設定は、<code>Volume</code> &gt; <code>Active Volume</code> &gt; 連続画像データをえらんで <code>Volume Information</code> &gt; <code>Image Spacing</code> &gt; ボクセルサイズを入力。（ピクセルサイズと切削厚）</span></li>
+<li><span style="color:#444C99;">顕微鏡写真の設定は、<code>Volume</code> &gt; <code>Active Volume</code> &gt; 顕微鏡画像データをえらんで、<code>Volume Information</code> &gt; <code>Image Spacing</code> &gt; ピクセルサイズを入力します。<code>Image Origin</code> &gt; まずは、Z位置を入力します。採取した場所の記録から、端から何マイクロかを計算します。つぎに、XY位置を手入力で調節します。対応するブロック面や再構築像、顕微鏡像を相互に比べながら調節します。 </span></li>
 </ol>
                 
               

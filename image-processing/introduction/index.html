@@ -18,7 +18,7 @@
     
     
       
-        <title>画像処理の概要 - Manual of CoMBI</title>
+        <title>Overview of Image Processing/画像処理の概要 - Manual of CoMBI</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#overview-of-image-processing" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              画像処理の概要
+              Overview of Image Processing/画像処理の概要
             
           </span>
         </div>
@@ -303,7 +303,7 @@
 
   <li class="md-nav__item">
     <a href="../../operation/combi-c/index.html" class="md-nav__link">
-      CoMBI-Cryostat
+      CoMBI-C (Cryostat)
     </a>
   </li>
 
@@ -316,7 +316,20 @@
 
   <li class="md-nav__item">
     <a href="../../operation/combi-s/index.html" class="md-nav__link">
-      新型CoMBI coming soon
+      CoMBI-S (Sliding, motorized)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../operation/combi-s-m/index.html" class="md-nav__link">
+      CoMBI-S (Sliding, manual)
     </a>
   </li>
 
@@ -329,7 +342,7 @@
 
   <li class="md-nav__item">
     <a href="../../operation/combi-r/index.html" class="md-nav__link">
-      新型CoMBI ccoming soon
+      CoMBI-R (Rotary, manual)
     </a>
   </li>
 
@@ -371,7 +384,7 @@
 
   <li class="md-nav__item">
     <a href="index.html" class="md-nav__link">
-      画像処理の概要
+      Overview/画像処理の概要
     </a>
   </li>
 
@@ -384,7 +397,7 @@
 
   <li class="md-nav__item">
     <a href="../rawjpeg/index.html" class="md-nav__link">
-      RAW-JPEG変換
+      RAW to JPEG conversion/RAW現像
     </a>
   </li>
 
@@ -397,7 +410,7 @@
 
   <li class="md-nav__item">
     <a href="../scale/index.html" class="md-nav__link">
-      画像の縮小
+      Resize/画像の縮小
     </a>
   </li>
 
@@ -410,7 +423,7 @@
 
   <li class="md-nav__item">
     <a href="../registration/index.html" class="md-nav__link">
-      ズレ補正（Image registration）
+      Image Registration/ズレ補正
     </a>
   </li>
 
@@ -423,7 +436,7 @@
 
   <li class="md-nav__item">
     <a href="../3dslicer/index.html" class="md-nav__link">
-      3D再構築、3D slicer
+      3D Reconstruction, 3D slicer
     </a>
   </li>
 
@@ -436,7 +449,7 @@
 
   <li class="md-nav__item">
     <a href="../icy/index.html" class="md-nav__link">
-      3D再構築、Icy
+      3D Reconstruction, Icy
     </a>
   </li>
 
@@ -449,7 +462,7 @@
 
   <li class="md-nav__item">
     <a href="../horos/index.html" class="md-nav__link">
-      3D再構築、Horos/OsiriX
+      3D Reconstruction, Horos/OsiriX
     </a>
   </li>
 
@@ -462,7 +475,7 @@
 
   <li class="md-nav__item">
     <a href="../correlation/index.html" class="md-nav__link">
-      3D像に切片位置を示す
+      Correlation of 2D and 3D images/3D像に切片位置を示す
     </a>
   </li>
 
@@ -475,7 +488,7 @@
 
   <li class="md-nav__item">
     <a href="../EDF/index.html" class="md-nav__link">
-      深度合成（メモ）
+      Extended Depth of Field/深度合成
     </a>
   </li>
 
@@ -529,56 +542,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    撮影
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#raw-jpeg" class="md-nav__link">
-    RAW-JPEG変換
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    縮小
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    ズレ補正
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    クロップ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3d" class="md-nav__link">
-    3Dイメージング
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -590,77 +553,43 @@
               
                 
                 
-                <h1 id="_1">画像処理の概要</h1>
-<p>画像処理で生成されるファイルを列記します。</p>
-<h2 id="_2">撮影</h2>
-<ul>
-<li>RAW形式の連続画像<ul>
-<li>撮影した元画像、重い、12bitや16bit</li>
-</ul>
-</li>
-</ul>
-<h2 id="raw-jpeg">RAW-JPEG変換</h2>
-<ul>
-<li>JPEG形式の連続画像<ul>
-<li>カラーのJPEG連続画像　8bit、Nikon D810で1倍なら、4.7 µm/pixel、まだまだ重い</li>
-</ul>
-</li>
-</ul>
-<h2 id="_3">縮小</h2>
-<ul>
-<li>縮小したJPEG連続画像（カラーでもグレーでも）<ul>
-<li>ズレ補正のために、軽くする</li>
-<li>ついでにキリの良いピクセルサイズで扱いやすい。たとえば5, 10, 20, 40 µm/pixelの連続画像をつくっておく。小さいほうの連続画像が500x500~1000x1000 pixelsになるまで、縮小する。</li>
-</ul>
-</li>
-</ul>
-<h2 id="_4">ズレ補正</h2>
-<ul>
-<li>ズレ補正したJPEG連続画像</li>
-<li>Logファイル（ズレ補正での移動距離の記録）<ul>
-<li>クリオスタットで動いているブロックを撮影したので、上下にずれている。</li>
-<li>ブロック外周を基準にズレ補正する。つまり、広い範囲が写った状態で行う。</li>
-<li>搭載メモリにもよるが、軽い画像シリーズでしかできない。500x500~1000x1000の画像で行う。</li>
-<li>経験から、40 µm/pixelや20 µm/pixelで行うことが多い。Logファイルをいじって、高精細画像でも補正は可能。</li>
-<li>グレースケール連続画像のほうが軽いので、ズレ補正の操作が軽快になるかも。</li>
-</ul>
-</li>
-</ul>
-<h2 id="_5">クロップ</h2>
-<ul>
-<li>クロップしたJPEG連続画像（カラー、グレースケール、ピクセルサイズ各種）<ul>
-<li>必要なところ（試料）だけを切り抜いた連続画像</li>
-<li>上記のズレ補正した画像をのこさず、こちらだけでもよい。</li>
-<li>これらを3Dイメージングのアプリに読み込む。</li>
-</ul>
-</li>
-</ul>
-<h2 id="3d">3Dイメージング</h2>
-<ul>
+                <h1 id="overview-of-image-processing">Overview of Image Processing/画像処理の概要</h1>
+<p>This page lists the image processing steps and the files generated at each step.</p>
+<p><span style="color:#444C99;">画像処理とそれで生成されるファイルを列記します。</span></p>
+<ol>
 <li>
-<p>上記でつくったJPEG連続画像（カラー、グレー、ズレ補正済み）を3Dアプリに読み込ませる</p>
-<ul>
-<li>Horosなら、Horos Databaseに、DICOMに変換されて、蓄積される。</li>
-<li>3D slicerなら、連続画像と各種操作記録を一体化したデータで保存する。</li>
-</ul>
+<p>Imaging/撮影</p>
+<p>Serial images in RAW, original data, 12 bit or 16 bit, regulary 10 to 50 GB, so heavy !</p>
+<p><span style="color:#444C99;">RAW形式の連続画像、元データ、12bitや16bit、10-50ギガバイト、重い。</span></p>
 </li>
 <li>
-<p>3D再構築像</p>
-<ul>
-<li>グレースケール連続画像はMPR, VRに使える。</li>
-<li>カラー連続画像はMPRのみで利用。</li>
-<li>3D再構築像から、静止画や動画を書き出せる。</li>
-</ul>
+<p>RAW-JPEG conversion/変換</p>
+<p>Serial images in JPEG, 8 bit color, less than 1 GB but still heavy for processing.</p>
+<p><span style="color:#444C99;">JPEG形式の連続画像、8bit カラー、1GBに収まるけれど、処理するにはまだまだ重い。</span></p>
 </li>
 <li>
-<p>セグメンテーション</p>
-<ul>
-<li>マークした領域だけ3D画像になる。作業は、MPR（カラー、グレー）で行い、VRで表示させたもの。</li>
-<li>Horos/OsiriXでセグメンテーションをやると、保存すべきファイルが増えていきます。例えば、「リンパ節を9個、マークできた」となると、9個のファイルができます。ちゃんと管理すればいいですが、どれがどれだか、ネーミングに困ります。</li>
-<li>3D slicerでは、保存形式は二通りから選べます。画像データやセグメンテーションデータを個別ファイルとして保存するやり方と、それらをプロジェクトとして一体ファイルとして保存するやり方、です。一体型は重くなりますが、ファイル管理の面倒がなくなるので、気に入っています。</li>
-</ul>
+<p>Resize/縮小</p>
+<p>Resized serial images in JPEG, 8 bit color or grayscale. Make pixel size 5, 10, 20, 40 etc µm/pixel, images size between 500x500 to 1000x1000. Lighten the data size for image registration (next step).</p>
+<p><span style="color:#444C99;">縮小したJPEG連続画像、カラーでもグレーでも、ズレ補正のために、軽くする、ついでにキリの良いピクセルサイズで扱いやすい。たとえば5, 10, 20, 40 µm/pixelの連続画像をつくっておく。小さいほうの連続画像が500x500~1000x1000 pixelsになるまで、縮小する。</span></p>
 </li>
-</ul>
+<li>
+<p>Image registration/ズレ補正</p>
+<p>This step creates registrated serial images in JPEG, and a Log file recording distance value used for registration. In CoMBI-C, R (cryostat, or rotating type), a moving block is imaged, so there may be vertical misalignment between images. For CoMBI-S (sliding type), this step is not required. The block circumference is used as the reference for registration. Registration is done using a light image series (roughly 500x500 to 1000x1000). The amount of data that can be handled depends on the installed memory size. In my experience, registration is often done using serial images with a pixel size of 40 µm/pixel or 20 µm/pixel. When applying registration to a high-resolution image, first registrate a small serial image, and then apply the registration to the a large (high-resolution) serial image using a Log file.</p>
+<p><span style="color:#444C99;">ズレ補正されたJPEG連続画像、Logファイル（ズレ補正での移動距離の記録）が生成されます。CoMBI-C, R (クリオスタットなど回転式）では、動いているブロックを撮影するので、画像間で上下にズレていることがあり、これを補正します。CoMBI-S (滑走式)では、このステップは不要です。補正の基準として、ブロック外周を利用します。軽い画像シリーズ（おおよそ500x500〜1000x1000）で行う。扱えるデータ量は、搭載メモリに依存する。経験上、ピクセルサイズを40 µm/pixelや20 µm/pixelにした連続画像で行うことが多い。高精細画像に補正をかけるときは、いったん軽い画像でズレ補正し、Logファイルを利用して高精細画像に補正を適用できる。</span></p>
+</li>
+<li>
+<p>Crop/切り抜き</p>
+<p>Croped serial images in JPEG. color and grayscale. The above registration process required the block periphery, but it can/should be removed to lighten the data for the 3D reconstruction.</p>
+<p><span style="color:#444C99;">必要なところ（試料）だけを切り抜いた連続画像（カラー、グレースケール、ピクセルサイズ各種）。上記のズレ補正ではブロック外周が必要でしたが、ズレ補正に成功すれば、次の3Dイメージングのために、外周の領域は除去して、データを軽くします。</span></p>
+</li>
+<li>
+<p>3D reconstruction/3D再構築</p>
+<p>JPEG serial images (color, gray, and registrated) can be loaded into a 3D application; 3D slicer saves the serial images and various operation records as a single data set; Horos converts the data to DICOM and stores it in the "Horos Database" folder.</p>
+<p>Grayscale sequential images can be used for MPR and VR, while color sequential images can only be used for MPR. Still images and movies can be exported from each 3D reconstructed image. In 3D slicer, you can choose between two saving formats; the image data and segmentation data as separate files, or as an integrated project file. When doing segmentation in Horos/OsiriX, the number of files to be saved increases. For example, if you mark 9 lymph nodes, you will have 9 files. You need to manage them properly.</p>
+<p><span style="color:#444C99;">JPEG連続画像（カラー、グレー、ズレ補正済み）を3Dアプリに読み込ませる。3D slicerなら、連続画像と各種操作記録を一体化したデータで保存する。Horosなら、DICOMに変換されて、"Horos Database"フォルダに、蓄積される。</span></p>
+<p><span style="color:#444C99;">グレースケール連続画像はMPR, VRに利用し、カラー連続画像はMPRのみで利用できます。それぞれの3D再構築像から、静止画や動画を書き出せます。セグメンテーションとは、マークした領域だけを3D画像にすること。3D slicerでは、保存形式は二通りから選べます。画像データやセグメンテーションデータを個別ファイルとして保存するやり方と、それらをプロジェクトとして一体ファイルとして保存するやり方、です。一体型は重くなりますが、ファイル管理の面倒がなくなるので、気に入っています。Horos/OsiriXでセグメンテーションをやると、保存すべきファイルが増えていきます。例えば、「リンパ節を9個、マークできた」となると、9個のファイルができます。ちゃんと管理すればいいですが、どれがどれだか、ネーミングに困ります。</span></p>
+</li>
+</ol>
                 
               
               
