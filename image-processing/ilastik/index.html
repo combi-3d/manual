@@ -587,7 +587,7 @@
 <li>
 <p><strong>「5. Batch Processing」</strong> <code>Select RAW Data Files</code>より、連続画像を選ぶ。Shiftを押しながら。左カラムのボタン、<code>Process all files</code>。しばらく待つ。結構掛かる。</p>
 <ul>
-<li>出力されるtifファイルでは、0-255のうち、0と1にデータが入る。（二値化されているようす。アイコンは真っ黒画像。そのまま3D slicerでいいのか？？？）</li>
+<li>出力されるtifファイルでは、8bit(0-255)のうち、0と1にデータが入る。（0は黒、1は白）（二値化はされているけれど、0と1、アイコンは真っ黒画像。Export Image SettingsのTransformation, renormalizeで0,1を0.255に変換できるはずだが、出来なかった。のちに別アプリで二値化すること。0,1をそのまま3D slicerでいいのか？？？）</li>
 </ul>
 </li>
 <li>
@@ -599,9 +599,14 @@
 </ul>
 </li>
 <li>
-<p>ImageJ/FIJIやPhotoshopで二値化する。</p>
+<p>ImageJ/FIJIやPhotoshopで、利用しやすい二値化画像にする。</p>
 <ul>
-<li>ImageJ/FIJIでは、<code>Image</code>&gt; <code>Adjust</code>&gt; <code>Threshold...</code>。数値は、<code>0, 1</code>。Macroを使って、連続画像を処理する。</li>
+<li>ImageJ/FIJIでは、<code>Image</code>&gt; <code>Adjust</code>&gt; <code>Threshold...</code><ul>
+<li><code>Dark Background</code>にチェックして、数値は<code>2, 255</code>。選択部位が白、背景が黒。（もし、チェックなしで、数値を、<code>0, 1</code>とすると、選択部位が黒、背景白になり、反転した画像になる。）</li>
+<li><code>Apply</code>, <code>Save as</code></li>
+<li>（Macroを使って、連続画像を処理する）</li>
+</ul>
+</li>
 <li>Photoshopでは、<code>Image</code>&gt; <code>Adjustments</code>&gt; <code>Threshold</code>。指定する数値は、<code>2</code>。ActionとBatchを使って連続画像を処理する。</li>
 </ul>
 </li>
