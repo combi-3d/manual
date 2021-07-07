@@ -574,7 +574,7 @@
 <li><strong>「2. Feature selection」</strong>　全部にチェックするので良いが、マシンパワー（CPU）によっては、減らした方がよい。カラム下方にリストが出てきて、各種フィルタがかかった状態を確認できる。</li>
 <li><strong>「3. Training」</strong>　Label1, Label2の二種類に塗り分けてみる。（多種類できるがマシンパワーが必要）。選び出したい領域を、Label1の黄色いペンで印をいれる。それ以外の領域をLabel2青いペンで印を入れる。完全に塗りつぶす必要はない。<code>Live Update</code>で様子を見る。Live OFFにして、<code>Suggest Features</code>, <code>Filter Method (recommended)</code>, Number of Feartures <code>0</code> (auto), <code>Run Feature Selection</code>。しばらく待つ。下段の<code>Select Feature Set</code>。</li>
 <li><strong>「4. Prediction Export」</strong> <ul>
-<li>Source: とりあえず<code>Simple Segmentation</code>、白黒ハッキリしたやつ。</li>
+<li>Source: とりあえず<code>Simple Segmentation</code>、白黒ハッキリしたやつ、二値化（2階調）。</li>
 <li>ボタン<code>Choose Export Image Settings</code>より、<ul>
 <li>yxcはチェックのまま、らしい。</li>
 <li>Transformationでは、チェックなし、らしい。</li>
@@ -582,13 +582,14 @@
 <li>File: では、保存先を指定するが、よくわからないので、デフォルトの<code>{dataset_dir}/{nickname}_{result_type}.tif</code>を入力する。これで、「同じフォルダに、同じファイル名_Simple Segmentation.tif」になる。</li>
 </ul>
 </li>
-<li>学習に使用した数枚の画像だけで、セグメンテーションする場合は、上カラムの<code>Export</code>ボタンまたは左の<code>Export All</code>ボタンをおして、作業は終了する。CoMBIの連続画像に同一処理のセグメンテーション作業を施す場合は、次の項目へ。</li>
+<li>学習に使用した数枚の画像だけで、セグメンテーション画像が欲しい場合は、上カラムの<code>Export</code>ボタンまたは左の<code>Export All</code>ボタンをおして、作業は終了する。</li>
+<li>CoMBIの連続画像に同一処理のセグメンテーション作業を施す場合は、次の項目「5」へ。</li>
 </ul>
 </li>
 <li>
-<p><strong>「5. Batch Processing」</strong> <code>Select RAW Data Files</code>より、連続画像を選ぶ。Shiftを押しながら。左カラムのボタン、<code>Process all files</code>。しばらく待つ。結構掛かる。</p>
+<p><strong>「5. Batch Processing」</strong>　<code>Select RAW Data Files</code>より、連続画像を選ぶ。Shiftを押しながら、複数画像を選択する。左カラムのボタン、<code>Process all files</code>。しばらく待つ。結構掛かる。マシンパワーに自信がなければ、少しずつ（100枚ずつなど）試してみる。</p>
 <ul>
-<li>出力されるtifファイルでは、8bit(0-255)のうち、0と1にデータが入る。（0は黒、1は白）（二値化はされているけれど、0と1、アイコンは真っ黒画像。Export Image SettingsのTransformation, renormalizeで0,1を0.255に変換できるはずだが、出来なかった。のちに別アプリで二値化すること。0,1をそのまま3D slicerでいいのか？？？）</li>
+<li>出力されるtifファイルでは、8bit(0-255)のうち、0と1にデータが入る。（0は黒、1は白。二値化はされているけれど、8bitの、00000000と00000001になる。それぞれ、学習時のデフォルトLabelのうち、Label1-黄色とLabel2-青色があてがわれる。Finderで表示されるアイコンは真っ黒画像になるのでビックリするが、それでよい。<code>Export Image Settings</code>の<code>Transformation</code>, <code>renormalize</code>で0,1を0.255に変換できるはずだが、出来なかった。また、ここでの設定条件はプロジェクトファイル（.ilp）には保存されない（Mac OS 11, ilastik 1.4.0b, 正式対応していないバージョン）。のちに別アプリで扱いやすい二値化画像にする（0,1を、0, 255にする、下記） 。（考え中；0,1をそのまま3D slicerに持って行っていいのか？？？）</li>
 </ul>
 </li>
 <li>
@@ -602,17 +603,23 @@
 <li>
 <p>ImageJ/FIJIやPhotoshopで、利用しやすい二値化画像にする。</p>
 <ul>
-<li>ImageJ/FIJIでは、<code>Image</code>&gt; <code>Adjust</code>&gt; <code>Threshold...</code><ul>
+<li>ImageJ/FIJIの場合<ul>
+<li><code>Image</code>&gt; <code>Adjust</code>&gt; <code>Threshold...</code></li>
 <li><code>Dark Background</code>にチェックして、数値は<code>2, 255</code>。選択部位が白、背景が黒。（もし、チェックなしで、数値を、<code>0, 1</code>とすると、選択部位が黒、背景白になり、反転した画像になる。）</li>
 <li><code>Apply</code>, <code>Save as</code></li>
 <li>（Macroを使って、連続画像を処理する）</li>
 </ul>
 </li>
-<li>Photoshopでは、<code>Image</code>&gt; <code>Adjustments</code>&gt; <code>Threshold</code>。指定する数値は、<code>2</code>。ActionとBatchを使って連続画像を処理する。</li>
+<li>Photoshopの場合<ul>
+<li><code>Image</code>&gt; <code>Adjustments</code>&gt; <code>Threshold</code></li>
+<li>指定する数値は、<code>2</code></li>
+<li>（ActionとBatchを使って連続画像を処理する。）</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
-<p>3D slicerに入れて、Segmentation、3D再構築。</p>
+<p>3D slicerに入れて、Segmentation、3D再構築。もしくは、SegmentationしないならVolume Renderingだけでも。</p>
 </li>
 </ol>
                 
