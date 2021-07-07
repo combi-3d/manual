@@ -567,29 +567,50 @@
                 
                 
                 <h1 id="segmentation-by-ilastik">Segmentation by ilastik</h1>
-<p>(under construction)</p>
+<p>CoMBIで撮影したブロック面、特定の構造物（領域）をSegmentationしたい。</p>
 <ol>
 <li>Create New Projectより、<code>Pixel Classification</code>。プロジェクトファイル、拡張子ilpとして保存する。（右のカラムの1番から5番に従って進めます）</li>
-<li><strong>「1. Input Data」</strong>　学習させるための画像を開く。CoMBIの連続画像のうち、全体を代表できるような数枚を選ぶ。<code>Drag and Drop</code> または、プルダウンメニュー<code>Add New</code>&gt; <code>Add separate image(s)</code></li>
-<li><strong>「2. Feature selection」</strong>　全部にチェックするので良いが、マシンパワー（CPU）によっては、減らした方がよい。カラム下方にリストが出てきて、各種フィルタがかかった状態を確認できる。</li>
-<li><strong>「3. Training」</strong>　Label1, Label2の二種類に塗り分けてみる。（多種類できるがマシンパワーが必要）。選び出したい領域を、Label1の黄色いペンで印をいれる。それ以外の領域をLabel2青いペンで印を入れる。完全に塗りつぶす必要はない。<code>Live Update</code>で様子を見る。Live OFFにして、<code>Suggest Features</code>, <code>Filter Method (recommended)</code>, Number of Feartures <code>0</code> (auto), <code>Run Feature Selection</code>。しばらく待つ。下段の<code>Select Feature Set</code>。</li>
+<li><strong>「1. Input Data」</strong><ul>
+<li>学習させるための画像を開く。CoMBIの連続画像のうち、全体を代表できるような数枚を選ぶ。<code>Drag and Drop</code> または、プルダウンメニュー<code>Add New</code>&gt; <code>Add separate image(s)</code></li>
+</ul>
+</li>
+<li><strong>「2. Feature selection」</strong>　<ul>
+<li>全部にチェックするので良いが、マシンパワー（CPU）によっては、減らした方がよい。カラム下方にリストが出てきて、各種フィルタがかかった状態を確認できる。</li>
+</ul>
+</li>
+<li><strong>「3. Training」</strong><ul>
+<li>Label1, Label2の二種類に塗り分けてみる。（多種類できるがマシンパワーが必要）。</li>
+<li>選び出したい領域を、Label1の黄色いペンで印をいれる。</li>
+<li>それ以外の領域をLabel2青いペンで印を入れる。完全に塗りつぶす必要はないが、丁寧にやったほうが結果が良い。</li>
+<li><code>Live Update</code>で結果を様子見しながら、作業できる。</li>
+<li>要不要？（Live OFFにして、<code>Suggest Features</code>, <code>Filter Method (recommended)</code>, Number of Feartures <code>0</code> (auto), <code>Run Feature Selection</code>。しばらく待つ。下段の<code>Select Feature Set</code>。）</li>
+</ul>
+</li>
 <li><strong>「4. Prediction Export」</strong> <ul>
-<li>Source: とりあえず<code>Simple Segmentation</code>、白黒ハッキリしたやつ、二値化（2階調）。</li>
+<li>Source: とりあえず<code>Simple Segmentation</code>　白黒ハッキリしたやつ、二値化（2階調, 1 bit）情報になる。</li>
 <li>ボタン<code>Choose Export Image Settings</code>より、<ul>
 <li>yxcはチェックのまま、らしい。</li>
 <li>Transformationでは、チェックなし、らしい。</li>
-<li>Format: <code>tif</code> がよいらしい。白黒ハッキリしたいので。</li>
-<li>File: では、保存先を指定するが、よくわからないので、デフォルトの<code>{dataset_dir}/{nickname}_{result_type}.tif</code>を入力する。これで、「同じフォルダに、同じファイル名_Simple Segmentation.tif」になる。</li>
+<li>Format: <code>tif</code> がよいらしい。白黒ハッキリしたいので。たぶんJPEGでは境界がへんになりそう。</li>
+<li>File: では、保存先を指定する。よくわからないので、デフォルトの<code>{dataset_dir}/{nickname}_{result_type}.tif</code>を入力する。これで出力<code>Export</code>されるファイルは、「同じフォルダに保存され、同じファイル名_Simple Segmentation.tif」になる。</li>
 </ul>
 </li>
-<li>学習に使用した数枚の画像だけで、セグメンテーション画像が欲しい場合は、上カラムの<code>Export</code>ボタンまたは左の<code>Export All</code>ボタンをおして、作業は終了する。</li>
-<li>CoMBIの連続画像に同一処理のセグメンテーション作業を施す場合は、次の項目「5」へ。</li>
+<li>学習に使用した数枚の画像だけで、セグメンテーション画像が欲しい場合：　上カラムの<code>Export</code>ボタンまたは左の<code>Export All</code>ボタンをおして、作業は終了する。</li>
+<li>CoMBIの連続画像に同一処理のセグメンテーション作業を施す場合：　次の項目「5」へ。</li>
 </ul>
 </li>
 <li>
-<p><strong>「5. Batch Processing」</strong>　<code>Select RAW Data Files</code>より、連続画像を選ぶ。Shiftを押しながら、複数画像を選択する。左カラムのボタン、<code>Process all files</code>。しばらく待つ。結構掛かる。マシンパワーに自信がなければ、少しずつ（100枚ずつなど）試してみる。</p>
+<p><strong>「5. Batch Processing」</strong></p>
 <ul>
-<li>出力されるtifファイルでは、8bit(0-255)のうち、0と1にデータが入る。（0は黒、1は白。二値化はされているけれど、8bitの、00000000と00000001になる。それぞれ、学習時のデフォルトLabelのうち、Label1-黄色とLabel2-青色があてがわれる。Finderで表示されるアイコンは真っ黒画像になるのでビックリするが、それでよい。<code>Export Image Settings</code>の<code>Transformation</code>, <code>renormalize</code>で0,1を0.255に変換できるはずだが、出来なかった。また、ここでの設定条件はプロジェクトファイル（.ilp）には保存されない（Mac OS 11, ilastik 1.4.0b, 正式対応していないバージョン）。のちに別アプリで扱いやすい二値化画像にする（0,1を、0, 255にする、下記） 。（考え中；0,1をそのまま3D slicerに持って行っていいのか？？？）</li>
+<li><code>Select RAW Data Files</code>より、連続画像を選ぶ。Shiftを押しながら、複数画像を選択する。</li>
+<li>左カラムのボタン、<code>Process all files</code>。しばらく待つ。結構掛かるし、フリーズもした。マシンパワーに自信がなければ、少しずつ（100枚ずつなど）試してみる。<ul>
+<li>出力されるtifファイルは8bit(0-255)であるが、二値化された情報を、0と1に入れている。つまり、0は黒、1は白。8bitで表記すると、00000000と00000001になる。それぞれ、学習時のデフォルトLabelのうち、Label1-黄色と、Label2-青色である。</li>
+<li>Finderで表示されるアイコンは真っ黒画像になるのでビックリするが、アイコンはそれでよい。</li>
+<li>「4」での設定した条件のうち、<code>Export Image Settings</code>の<code>Transformation</code>, <code>renormalize</code>は、0,1を0,255に変換する機能のようだが、働かなかった。設定した条件はプロジェクトファイル（.ilp）には保存されないので、「5」を、別の日、別のパソコンで実行する場合は、注意すること（Mac OS 11, ilastik 1.4.0b, 正式対応していないバージョン）。</li>
+<li>のちに別アプリで「扱いやすい二値化画像」にする（0,1ではなく、0, 255にする。下記） 。</li>
+<li>（考え中；0,1をそのまま3D slicerに持って行っていいのか？？？）</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
