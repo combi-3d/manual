@@ -567,23 +567,25 @@
                 
                 
                 <h1 id="segmentation-by-ilastik">Segmentation by ilastik</h1>
-<p>CoMBIで撮影したブロック面、特定の構造物（領域）をSegmentationしたい。</p>
+<p>CoMBIで撮影したブロック面、特定の構造物（領域）をSegmentationしたい。色調のちがいや境界を利用して。「とある臓器に正常部位と傷害部位。正常部位だけSegmentationしたい」、これをお題に、手順を記します。</p>
 <ol>
 <li>Create New Projectより、<code>Pixel Classification</code>。プロジェクトファイル、拡張子ilpとして保存する。（右のカラムの1番から5番に従って進めます）</li>
 <li><strong>「1. Input Data」</strong><ul>
-<li>学習させるための画像を開く。CoMBIの連続画像のうち、全体を代表できるような数枚を選ぶ。<code>Drag and Drop</code> または、プルダウンメニュー<code>Add New</code>&gt; <code>Add separate image(s)</code></li>
+<li>学習させるための画像を開く。CoMBIの連続画像のうち、標本全体や実験群全体を代表するような数枚を選ぶ。2〜4枚で行った。<code>Drag and Drop</code> または、プルダウンメニュー<code>Add New</code>&gt; <code>Add separate image(s)</code></li>
 </ul>
 </li>
 <li><strong>「2. Feature selection」</strong>　<ul>
-<li>全部にチェックするので良いが、マシンパワー（CPU）によっては、減らした方がよい。カラム下方にリストが出てきて、各種フィルタがかかった状態を確認できる。</li>
+<li>全部にチェックするので良いが、マシンパワー（CPU）による。</li>
+<li>「Core i5, 内蔵グラフィクス、メモリ8GB」では、チェック項目を減らした。σとびとびで半分にチェック。</li>
+<li>（カラム下方にリストが出てきて、各種フィルタがかかった画像を確認できる。）</li>
 </ul>
 </li>
 <li><strong>「3. Training」</strong><ul>
-<li>Label1, Label2の二種類に塗り分けてみる。（多種類できるがマシンパワーが必要）。</li>
-<li>選び出したい領域を、Label1の黄色いペンで印をいれる。</li>
-<li>それ以外の領域をLabel2青いペンで印を入れる。完全に塗りつぶす必要はないが、丁寧にやったほうが結果が良い。</li>
+<li>Label1, Label2の二種類に塗り分けてみる。（デフォルトは2種類。追加して多種類できるがマシンパワーが必要）</li>
+<li>選び出したい領域を、Label1の黄色いペンで印をいれる。（正常部位）</li>
+<li>それ以外の領域をLabel2青いペンで印を入れる。完全に塗りつぶす必要はないが、丁寧にやったほうが結果が良い。（傷害部位と背景も）</li>
 <li><code>Live Update</code>で結果を様子見しながら、作業できる。</li>
-<li>要不要？（Live OFFにして、<code>Suggest Features</code>, <code>Filter Method (recommended)</code>, Number of Feartures <code>0</code> (auto), <code>Run Feature Selection</code>。しばらく待つ。下段の<code>Select Feature Set</code>。）</li>
+<li>要不要？たぶんいらない：（Live OFFにして、<code>Suggest Features</code>, <code>Filter Method (recommended)</code>, Number of Feartures <code>0</code> (auto), <code>Run Feature Selection</code>。しばらく待つ。下段の<code>Select Feature Set</code>。）</li>
 </ul>
 </li>
 <li><strong>「4. Prediction Export」</strong> <ul>
@@ -616,7 +618,7 @@
 <li>
 <p>ファイルを整理する</p>
 <ul>
-<li>MacならFinderで、リスト表示<code>as List</code>、</li>
+<li>MacならFinderで、リスト表示<code>as List</code></li>
 <li>ファイルの種類で並べ替え<code>Kind</code>、元画像JPEGと、二値化した画像tifで分かれる。</li>
 <li>tifだけ選んで、新しいフォルダに収める。</li>
 </ul>
@@ -645,7 +647,7 @@
 </ul>
 </li>
 <li>
-<p>3D slicerに入れて、Segmentation、3D再構築。もしくは、SegmentationしないならVolume Renderingだけでも。</p>
+<p>3D slicerに入れて、Segmentation（Threshold）、3D再構築。もしくは、Segmentationしないで、Volume Renderingで色付けだけ。</p>
 </li>
 </ol>
                 
