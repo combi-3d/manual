@@ -616,7 +616,7 @@
 </ul>
 </li>
 <li>
-<p>ファイルを整理する</p>
+<p>ファイル・フォルダを整理する</p>
 <ul>
 <li>MacならFinderで、リスト表示<code>as List</code></li>
 <li>ファイルの種類で並べ替え<code>Kind</code>、元画像JPEGと、二値化した画像tifで分かれる。</li>
@@ -624,18 +624,20 @@
 </ul>
 </li>
 <li>
-<p>ImageJ/FIJIやPhotoshopで、利用しやすい二値化画像にする。</p>
+<p>ImageJ/FIJIやPhotoshopで、利用しやすい二値化画像にする（0,1ではなく、0,255にする）。</p>
 <ul>
 <li>ImageJ/FIJIの場合<ul>
-<li><code>Image</code>&gt; <code>Adjust</code>&gt; <code>Threshold...</code><ul>
-<li><code>Dark Background</code>にチェックして、数値は<code>2, 255</code>。選択部位が白、背景が黒。</li>
-<li>（もし、チェックなしで、数値を、<code>0, 1</code>とすると、選択部位が黒、背景白になり、反転した画像になる。）</li>
+<li><code>Image</code>&gt; <code>Adjust</code>&gt; <code>Threshold...</code>　（この作業は安定しない、数値入力ではじかれたり。下記のどれかうまくいくやつを探してください）<ul>
+<li><code>Dark Background</code>にチェックして、数値は<code>2, 255</code>。選択部位が白、背景が黒</li>
+<li>（チェックなしで、数値を、<code>0, 1</code>とすると、選択部位が黒、背景白になり、反転した画像になる）</li>
 <li>（チェックなしで、<code>1, 1</code>なら、選択部位が白、背景が黒）</li>
-<li>（試しているところ。数値を打つとはじかれたり、スライダーを動かすとうまくいったり。なんだか不安定。）</li>
+<li>（<code>Set</code>を押して数値を入力し、確定させたらうまくいったことがある。）</li>
+<li>（スライダーを動かしてから、数値入力したら、うまくいったことがある。）</li>
 </ul>
 </li>
-<li><code>Apply</code>, <code>Save as</code></li>
-<li>（Macroを使って、連続画像を処理する）</li>
+<li><code>Apply</code>をおして、適用する。</li>
+<li>一枚だけ変換したい場合は、ここで<code>Save as</code>（うまくいけば、まっ黒にしか見えなかった画像・アイコンが、白黒画像・白黒アイコンになります。）</li>
+<li>連続画像を変換したい場合は、<code>Threshold</code>から<code>Apply</code>までを、Macroに記録し、Batch処理する）</li>
 </ul>
 </li>
 <li>Photoshopの場合<ul>
@@ -647,7 +649,7 @@
 </ul>
 </li>
 <li>
-<p>3D slicerに入れて、Segmentation（Threshold）、3D再構築。もしくは、Segmentationしないで、Volume Renderingで色付けだけ。</p>
+<p>3D slicerに<code>Load</code>して、<code>Segmentation</code>（Threshold）して、<code>Volume Rendering</code>で、3D画像を再構築する。</p>
 </li>
 </ol>
                 
