@@ -583,15 +583,16 @@
 <li><strong>「3. Training」</strong><ul>
 <li>Label1, Label2の二種類に塗り分けてみる。（デフォルトは2種類。追加して多種類できるがマシンパワーが必要）</li>
 <li>選び出したい領域を、Label1の黄色いペンで印をいれる。（正常部位）</li>
-<li>それ以外の領域をLabel2青いペンで印を入れる。完全に塗りつぶす必要はないが、丁寧にやったほうが結果が良い。（傷害部位と背景も）</li>
+<li>それ以外の領域をLabel2青いペンで印を入れる。（傷害部位と背景も）</li>
+<li>完全に塗りつぶす必要はないが、丁寧に印を入れれば入れるほど、結果が良くなる。</li>
 <li><code>Live Update</code>で結果を様子見しながら、作業できる。</li>
-<li>要不要？たぶんいらない：（Live OFFにして、<code>Suggest Features</code>, <code>Filter Method (recommended)</code>, Number of Feartures <code>0</code> (auto), <code>Run Feature Selection</code>。しばらく待つ。下段の<code>Select Feature Set</code>。）</li>
+<li>要不要？：（Live OFFにして、<code>Suggest Features</code>, <code>Filter Method (recommended)</code>, Number of Feartures <code>0</code> (auto), <code>Run Feature Selection</code>。しばらく待つ。下段の<code>Select Feature Set</code>。）</li>
 </ul>
 </li>
 <li><strong>「4. Prediction Export」</strong> <ul>
 <li>Source: とりあえず<code>Simple Segmentation</code>　白黒ハッキリしたやつ、二値化（2階調, 1 bit）情報になる。</li>
 <li>ボタン<code>Choose Export Image Settings</code>より、<ul>
-<li>yxcはチェックのまま、らしい。</li>
+<li>yxcはチェックあり、らしい。</li>
 <li>Transformationでは、チェックなし、らしい。</li>
 <li>Format: <code>tif</code> がよいらしい。白黒ハッキリしたいので。たぶんJPEGでは境界がへんになりそう。</li>
 <li>File: では、保存先を指定する。よくわからないので、デフォルトの<code>{dataset_dir}/{nickname}_{result_type}.tif</code>を入力する。これで出力<code>Export</code>されるファイルは、「同じフォルダに保存され、同じファイル名_Simple Segmentation.tif」になる。</li>
