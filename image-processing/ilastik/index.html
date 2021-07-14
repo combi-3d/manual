@@ -567,7 +567,7 @@
                 
                 
                 <h1 id="segmentation-by-ilastik">Segmentation by ilastik</h1>
-<p>セグメンテーションを機械学習で行うアプリです（Nature Methods, 2019）。機械学習の知識がなくても、操作できるようにデザインされています。<a href="https://www.ilastik.org/">https://www.ilastik.org</a>からダウンロードしてインストールします。CoMBIで撮影したブロック面画像で特定の構造物（領域）をSegmentationするのに良さそうです。「とある臓器に正常部位と傷害部位がある。正常部位だけSegmentationしたい」、これをお題に、手順を記します。</p>
+<p>セグメンテーションを機械学習で行うアプリです（Nature Methods, 2019）。機械学習の知識がなくても、操作できるようにデザインされています。<a href="https://www.ilastik.org/">https://www.ilastik.org</a>からダウンロードしてインストールします。CoMBIで撮影したブロック面画像で特定の構造物（領域）をSegmentationするのに良さそうです。「とある臓器に正常部位と傷害部位がある。正常部位だけSegmentationしたい」、これをお題に、手順を記します。日本語の簡単な手順書です。本家のサイトには詳しい英語説明ページ（<a href="https://www.ilastik.org/documentation/index.html">Documentation</a>）があります。</p>
 <ol>
 <li>Create New Projectより、<code>Pixel Classification</code>。プロジェクトファイル、拡張子ilpとして保存する。（右のカラムの1番から5番に従って進めます）</li>
 <li><strong>「1. Input Data」</strong><ul>
@@ -576,7 +576,7 @@
 </li>
 <li><strong>「2. Feature selection」</strong>　<ul>
 <li>全部にチェックするので良いが、マシンパワー（CPU）による。色と明るさ、輪郭線、テクスチャ（模様、行列）を計算してくれるらしい。</li>
-<li>「Core i5, 内蔵グラフィクス、メモリ8GB」では、チェック項目を減らした。σとびとびで半分にチェック。</li>
+<li>「Core i5, 内蔵グラフィクス、メモリ8GB」では、チェック項目を減らした。σとびとびで半分にチェック。シグマは、認識させたい構造物が小さいか大きいかを決める設定値。</li>
 <li>（カラム下方にリストが出てきて、各種フィルタがかかった画像を確認できる。）</li>
 </ul>
 </li>
