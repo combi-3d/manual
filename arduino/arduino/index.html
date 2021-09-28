@@ -611,8 +611,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#upload-a-sketch" class="md-nav__link">
-    Upload a sketch
+  <a href="#upload-a-sketch-to-atmega328p-via-usb-serial-converter" class="md-nav__link">
+    Upload a sketch to ATmega328P via USB-serial converter.
   </a>
   
 </li>
@@ -637,35 +637,33 @@
                 
                 <h1 id="using-an-atmega328p-standalone">Using an ATmega328P standalone.</h1>
 <p>Reference, official</p>
-<p><a href="https://www.arduino.cc/en/Tutorial/ArduinoISP">https://www.arduino.cc/en/Tutorial/ArduinoISP</a></p>
-<p><a href="https://www.arduino.cc/en/Tutorial/ArduinoToBreadboard">https://www.arduino.cc/en/Tutorial/ArduinoToBreadboard</a></p>
+<p><a href="https://www.arduino.cc/en/Tutorial/BuiltInExamples/ArduinoToBreadboard">From Arduino to a Microcontroller on a Breadboard, 2018</a></p>
 <p>Reference in Japanease</p>
-<p><a href="https://voltechno.com/blog/arduino-bootloader/">https://voltechno.com/blog/arduino-bootloader/</a></p>
-<p><a href="https://synapse.kyoto/hard/bootloader_sketch/page003.html">https://synapse.kyoto/hard/bootloader_sketch/page003.html</a></p>
-<p><a href="https://www.dorapro.co.jp/engineerblog/?p=760">https://www.dorapro.co.jp/engineerblog/?p=760</a></p>
-<p><a href="https://hwswsgps.hatenablog.com/entry/2018/12/10/222518#3-ブートローダの書き込み">https://hwswsgps.hatenablog.com/entry/2018/12/10/222518#3-ブートローダの書き込み</a></p>
+<p><a href="https://voltechno.com/blog/arduino-bootloader/">Voltechno.com/壊れたArduinoを修理！ブートローダーの書き換えで修理する方法, 2018-2021</a></p>
+<p><a href="https://hwswsgps.hatenablog.com/entry/2018/12/10/222518#3-ブートローダの書き込み">音遊び日記/atmega328にブートローダとスケッチを書き込む, 2018</a></p>
+<p><span style="color:#444C99;">ネット上には情報はたくさんあります。新しいArduino IDE 1.8.x(2021時点)の記事がよいと思います。公式ページには、1.0.x用の方法と、それ以外(1.6, 1.8)用の方法が記載されています。</span></p>
 <h2 id="preparation">Preparation</h2>
 <ul>
 <li>Arduino Uno</li>
-<li>Bootloader writing circuit</li>
+<li>Bootloader writing circuit (a 16 MHz crystal, a 10k resistor, and two 18 to 22 picofarad (ceramic) capacitors, a zero-pressure 28-pin socket)</li>
 <li>USB-serial convirsion cable</li>
-<li>Sketch (code) writing circuit</li>
+<li>Sketch writing circuit with USB-serial converter (USB-serial converter, a zero-pressure 28-pin socket)</li>
 <li>Jumper wire</li>
 <li>Computer</li>
 </ul>
 <h2 id="dont-forget">Don't forget !</h2>
 <p>Install a driver for USB-serial converter. 
-Download site (FTDI:</p>
-<p><a href="https://www.ftdichip.com/Drivers/VCP.htm">https://www.ftdichip.com/Drivers/VCP.htm</a></p>
+Download site (FTDI):</p>
+<p><a href="https://www.ftdichip.com/Drivers/VCP.htm">ftdichip.com, Drivers</a></p>
 <p>Reference in Japanease (Switch Science):</p>
-<p><a href="https://mag.switch-science.com/2013/01/23/install_vcp_driver_to_mac/">https://mag.switch-science.com/2013/01/23/install_vcp_driver_to_mac/</a></p>
+<p><a href="https://mag.switch-science.com/2013/01/23/install_vcp_driver_to_mac/">Switch-science.com, magazine 2013/01/23</a></p>
 <h2 id="procedure">Procedure</h2>
 <h3 id="make-arduino-uno-as-arduino-isp-in-system-programmer">Make Arduino Uno as Arduino ISP (in-system programmer)</h3>
 <ol>
 <li>Open the sketch <code>File</code> &gt; <code>Examples</code> &gt; <code>11. ArduinoISP</code>.</li>
 <li>Connect Arduino Uno with PC using USB cable.</li>
 <li>
-<p>Upload the sketch to Aruduino Uno with the settings below; </p>
+<p>Upload the sketch to Aruduino Uno with the settings as usual; </p>
 <ul>
 <li><code>Tools</code> &gt; <code>Board</code>: Arduino Uno</li>
 <li><code>Tools</code> &gt; <code>Port</code>: /dev/cu.usbserial-A104UQHR</li>
@@ -677,9 +675,10 @@ Download site (FTDI:</p>
 <h3 id="burn-bootloader-on-atmega328p-using-arduino-isp">Burn bootloader on ATmega328P using Arduino ISP</h3>
 <ol>
 <li>
-<p>Connect Arduino Uno with an ATmega328P on the bootloader writer circuit.</p>
+<p>Connect Arduino Uno (D10-13, 5V, GND) to an ATmega328P on the bootloader writer circuit.</p>
 <ul>
-<li><code>Tools</code> &gt; <code>Board</code>: Arduino Pro or Pro mini</li>
+<li><code>Tools</code> &gt; <code>Board</code>: <code>Arduino Duemilanove or Nano w/ ATmega328</code> 
+公式サイトには、「もしくは<code>ATmega328 on a breadboard (8 MHz internal clock)</code> 水晶発振子を使わない場合」とある。たぶんまえもって、board情報をダウンロードし、ArduinoフォルダにHardwareフォルダをつくって格納しておくやつ。)</li>
 <li><code>Tools</code> &gt; <code>Port</code>: /dev/cu.usbserial-A104UQHR</li>
 <li><code>Tools</code> &gt; <code>Programmer</code>: Arduino as ISP</li>
 </ul>
@@ -692,7 +691,9 @@ Download site (FTDI:</p>
 <p>Remove ATmega328P from the bootloader writer circuit.</p>
 </li>
 </ol>
-<h3 id="upload-a-sketch">Upload a sketch</h3>
+<h3 id="upload-a-sketch-to-atmega328p-via-usb-serial-converter">Upload a sketch to ATmega328P via USB-serial converter.</h3>
+<p>There is anothor way using <strong>USB-serial convert function on Arduino Uno board</strong>. However, ATmega328P chip on Arduino needs to be removed to use such function. Since I'm not confident that I can repeat the removal and insertion without damaging the ATmega pins, I bought <strong>USB-serial converter</strong> from Switch Science. Installation of a driver (FDTI) is needed before use.</p>
+<p><span style="color:#444C99;">「Arduino Unoボードの**USB-シリアル変換機能」を利用する方法もあります。しかし、この機能を使うためには、ArduinoのATmega328Pチップを取り外す必要があるそうです（公式サイトによる。種々の情報では外さずにスケッチ書き込みまでやる記載もあるけれど）。私は、ATmegaのピンを傷つけずに抜き差しを繰り返す自信がないので、スイッチサイエンスの「USB-serial converter」を購入しました。使用するにはドライバ(FDTI社)のインストールが必要です。</span></p>
 <ol>
 <li>Connect the sketch writer circuit to PC via USB-serial converter.</li>
 <li>Put ATmega328P onto the sketch writer circuit.</li>
@@ -703,11 +704,11 @@ Download site (FTDI:</p>
 <li><code>Tools</code> &gt; <code>Board</code>: Arduino Pro or Pro mini</li>
 <li><code>Tools</code> &gt; <code>Port</code>: /dev/cu.usbserial-A104UQHR</li>
 <li><code>Tools</code> &gt; <code>Processor</code>: ATmega328P(3.3V, 8MHz)</li>
-<li><code>Tools</code> &gt; <code>Programmer</code>: AVRISPmkII or Arduino as ISP</li>
+<li><code>Tools</code> &gt; <code>Programmer</code>: AVRISPmkII or Arduino as ISP　（関係ない？）</li>
 </ul>
 </li>
 <li>
-<p>You will find <code>Done Burning bootloader</code></p>
+<p>You will find <code>Done Uploading</code></p>
 </li>
 </ol>
 <hr />
