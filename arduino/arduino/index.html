@@ -582,8 +582,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dont-forget" class="md-nav__link">
-    Don't forget !
+  <a href="#dont-forget-1" class="md-nav__link">
+    Don't forget ! 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dont-forget-2" class="md-nav__link">
+    Don't forget ! 2
   </a>
   
 </li>
@@ -651,22 +658,36 @@
 <li>Jumper wire</li>
 <li>Computer</li>
 </ul>
-<h2 id="dont-forget">Don't forget !</h2>
+<h2 id="dont-forget-1">Don't forget ! 1</h2>
 <p>Install a driver for USB-serial converter. 
-Download site (FTDI):</p>
+ドライバをインストールしておきます。</p>
 <p><a href="https://www.ftdichip.com/Drivers/VCP.htm">ftdichip.com, Drivers</a></p>
+<p>2021.9.29 I tried to install v1.4.7 (2021-5-18 for macOS11).
+    Put downloaded app "FTDI USB Serual Dext VCP" into "Applications" folder.
+    Approve to open the app at "System Preference/Security and Privacy".
+    Push bottun "Install FTDI USB Serial Dext VCP".
+    Install will be succeeded shortly.</p>
 <p>Reference in Japanease (Switch Science):</p>
 <p><a href="https://mag.switch-science.com/2013/01/23/install_vcp_driver_to_mac/">Switch-science.com, magazine 2013/01/23</a></p>
+<h2 id="dont-forget-2">Don't forget ! 2</h2>
+<pre><code>Add hardware information obtained from [Arduino site](https://www.arduino.cc/en/Tutorial/BuiltInExamples/ArduinoToBreadboard). 
+ハードウェア情報をArduinoIDEアプリに追加しておきます。
+
+You will file a file name "breadboard-1-6-x.zip" around the middle of the page.
+Create the new folder "Hardware" at /(Documents)/Arduino/
+Put downloaded file (a folder namely "breadboard") at /(Documents)/Arduino/Hardware/
+Restart Arduino IDE, you will see "ATmega328 on a breadboard (8 MHz internal clock)" in the Tools &gt; Board menu.
+</code></pre>
 <h2 id="procedure">Procedure</h2>
 <h3 id="make-arduino-uno-as-arduino-isp-in-system-programmer">Make Arduino Uno as Arduino ISP (in-system programmer)</h3>
 <ol>
-<li>Open the sketch <code>File</code> &gt; <code>Examples</code> &gt; <code>11. ArduinoISP</code>.</li>
+<li>Open the sketch <code>File</code> &gt; <code>Examples</code> &gt; <code>11. ArduinoISP</code> &gt; AruduinoISP</li>
 <li>Connect Arduino Uno with PC using USB cable.</li>
 <li>
 <p>Upload the sketch to Aruduino Uno with the settings as usual; </p>
 <ul>
-<li><code>Tools</code> &gt; <code>Board</code>: Arduino Uno</li>
-<li><code>Tools</code> &gt; <code>Port</code>: /dev/cu.usbserial-A104UQHR</li>
+<li><code>Tools</code> &gt; <code>Board</code>: Arduino Uno </li>
+<li><code>Tools</code> &gt; <code>Port</code>: /dev/cu.usbserial-....</li>
 <li><code>Tools</code> &gt; <code>Programmer</code>: AVRISPmkII</li>
 </ul>
 <p>You will find <code>Done Uploading</code></p>
@@ -677,18 +698,21 @@ Download site (FTDI):</p>
 <li>
 <p>Connect Arduino Uno (D10-13, 5V, GND) to an ATmega328P on the bootloader writer circuit.</p>
 <ul>
-<li><code>Tools</code> &gt; <code>Board</code>: <code>Arduino Duemilanove or Nano w/ ATmega328</code> 
-公式サイトには、「もしくは<code>ATmega328 on a breadboard (8 MHz internal clock)</code> 水晶発振子を使わない場合」とある。たぶんまえもって、board情報をダウンロードし、ArduinoフォルダにHardwareフォルダをつくって格納しておくやつ。)</li>
-<li><code>Tools</code> &gt; <code>Port</code>: /dev/cu.usbserial-A104UQHR</li>
-<li><code>Tools</code> &gt; <code>Programmer</code>: Arduino as ISP</li>
+<li><code>Tools</code> &gt; <code>Board</code> &gt; <code>breadboard AVR (in sketchbook) boards</code> : ATmega328 on a breadboard (8 MHz internal clock)</li>
+<li><code>Tools</code> &gt; <code>Processor</code> : ATmega328P</li>
+<li><code>Tools</code> &gt; <code>Port</code> : /dev/cu.usbserial-....</li>
+<li><code>Tools</code> &gt; <code>Programmer</code> : Arduino as ISP</li>
 </ul>
 </li>
 <li>
 <p><code>Tools</code> &gt; <code>Burn bootloader</code>.
-    You will find <code>Done Burning bootloader</code></p>
+    You will find <code>...may take minutes...</code> then <code>Done Burning bootloader</code></p>
 </li>
 <li>
 <p>Remove ATmega328P from the bootloader writer circuit.</p>
+<p>Unoでうまくいった。Leonardoはダメだった。
+公式サイトには、Arduino Duemilanove or Nano w/ ATmega328の記載もあるが、うまくいかなかった。うまくいくのは、ATmega328 on a breadboard (8 MHz internal clock)で、これは、「水晶発振子を使わない場合」とあり、よくわからないが、これでいいや。前もって、board情報をダウンロードし、ArduinoフォルダにHardwareフォルダをつくって格納しておくやつ。
+Bootloaderがうまく行けば、次のスケッチライターに載せたとき、D13のLEDが点滅する。</p>
 </li>
 </ol>
 <h3 id="upload-a-sketch-to-atmega328p-via-usb-serial-converter">Upload a sketch to ATmega328P via USB-serial converter.</h3>
@@ -701,10 +725,10 @@ Download site (FTDI):</p>
 <li>
 <p>Upload with the settings below;</p>
 <ul>
-<li><code>Tools</code> &gt; <code>Board</code>: Arduino Pro or Pro mini</li>
-<li><code>Tools</code> &gt; <code>Port</code>: /dev/cu.usbserial-A104UQHR</li>
+<li><code>Tools</code> &gt; <code>Board</code> &gt; <code>Arduino AVR boards</code> : Arduino Pro or Pro mini</li>
+<li><code>Tools</code> &gt; <code>Port</code>: /dev/cu.usbserial-....</li>
 <li><code>Tools</code> &gt; <code>Processor</code>: ATmega328P(3.3V, 8MHz)</li>
-<li><code>Tools</code> &gt; <code>Programmer</code>: AVRISPmkII or Arduino as ISP　（関係ない？）</li>
+<li><code>Tools</code> &gt; <code>Programmer</code>: (AVRISPmkII or Arduino as ISP)</li>
 </ul>
 </li>
 <li>
