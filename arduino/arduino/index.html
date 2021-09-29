@@ -653,12 +653,18 @@
 <h2 id="preparation">Preparation</h2>
 <ul>
 <li>Arduino Uno</li>
-<li>Bootloader writing circuit (a 16 MHz crystal, a 10k resistor, and two 18 to 22 picofarad (ceramic) capacitors, a zero-pressure 28-pin socket)</li>
+<li>Bootloader writer (a 16 MHz crystal, a 10k resistor, and two 18 to 22 picofarad (ceramic) capacitors, a zero-pressure 28-pin socket)</li>
 <li>USB-serial convirsion cable</li>
-<li>Sketch writing circuit with USB-serial converter (USB-serial converter, a zero-pressure 28-pin socket)</li>
+<li>Sketch writer with USB-serial converter (USB-serial converter, a zero-pressure 28-pin socket)</li>
 <li>Jumper wire</li>
 <li>Computer</li>
 </ul>
+<p><img alt="bootloader" src="../img/boot.png" title="bootloader" />
+<img alt="bootloader" src="../img/bootc.png" title="bootloader" /></p>
+<p><em>Bootloader writer and its circuit</em></p>
+<p><img alt="USBserial" src="../img/serial.png" title="USB_serial" />
+<img alt="USBserial" src="../img/serialc.png" title="USB_serial" /></p>
+<p><em>Sketch writer and its circuit</em></p>
 <h2 id="dont-forget-1">Don't forget ! 1</h2>
 <p>Install a driver for USB-serial converter. ドライバをインストールしておきます。</p>
 <ul>
@@ -696,7 +702,7 @@
 <h3 id="burn-bootloader-on-atmega328p-using-arduino-isp">Burn bootloader on ATmega328P using Arduino ISP</h3>
 <ol>
 <li>
-<p>Connect Arduino Uno (D10-13, 5V, GND) to an ATmega328P on the bootloader writer circuit.</p>
+<p>Connect Arduino Uno (D10-13, 5V, GND) to an ATmega328P on the bootloader writer.</p>
 <ul>
 <li><code>Tools</code> &gt; <code>Board</code> &gt; <code>breadboard AVR (in sketchbook) boards</code> : ATmega328 on a breadboard (8 MHz internal clock)</li>
 <li><code>Tools</code> &gt; <code>Processor</code> : ATmega328P</li>
@@ -709,7 +715,7 @@
     You will find <code>...may take minutes...</code> then <code>Done Burning bootloader</code></p>
 </li>
 <li>
-<p>Remove ATmega328P from the bootloader writer circuit.</p>
+<p>Remove ATmega328P from the bootloader writer.</p>
 <p>メモ：Unoでうまくいった。Leonardoはダメだった。
 公式サイトには、Arduino Duemilanove or Nano w/ ATmega328の記載もあるが、うまくいかなかった。うまくいくのは、ATmega328 on a breadboard (8 MHz internal clock)で、これは、「水晶発振子を使わない場合」とあり、よくわからないが、これでいいや。前もって、board情報をダウンロードし、ArduinoフォルダにHardwareフォルダをつくって格納しておくやつ。
 Bootloaderがうまく行けば、次のスケッチライターに載せたとき、D13のLEDが点滅する。</p>
@@ -718,7 +724,7 @@ Bootloaderがうまく行けば、次のスケッチライターに載せたと�
 <h3 id="upload-a-sketch-to-atmega328p-via-usb-serial-converter">Upload a sketch to ATmega328P via USB-serial converter.</h3>
 <ol>
 <li>Connect the sketch writer circuit to PC via USB-serial converter.</li>
-<li>Put ATmega328P onto the sketch writer circuit.</li>
+<li>Put ATmega328P onto the sketch writer.</li>
 <li>Open the sketch to be uploaded.</li>
 <li>
 <p>Upload with the settings below;</p>
