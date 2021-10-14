@@ -877,7 +877,8 @@ Logファイルを修正する戦略は、「前から.logの正しいところ�
 <li>ImageJ/FIJIで、新規のテキストウィンドウを作る。Linux, Win, Macの場合、<code>File</code>&gt; <code>New</code>&gt; <code>System clipboard</code>　上記でコピーしておいたデータがすでにペーストされています。Macの場合、<code>Plug-ins</code>&gt;<code>New</code>&gt;<code>Text Window...</code> (width, heightはなんでもよい) でもできます、手動でペーストします。（以前、Plug-ins由来のこの方法は、Mac, Winでできると記していましたが、Macだけの対応でした。すみません訂正します。2021.4）</li>
 <li>これでLogファイルが正常に開いた状態になります。以降は通常のImage Stabilizer Log Applierの手順です。</li>
 <li>ImageJ/FIJIで、連続画像を開く</li>
-<li>ImageJ/FIJI　Plug-ins &gt; Image Stabilizer Log Applier</li>
+<li>ImageJ/FIJI　Plug-ins &gt; Image Stabilizer Log Applier
+    エラー 「Invarid log: For input string: "0 "」が出る場合、2行目の「0」のとなりにスペースが入ってしまっているかも知れません。2行目のスペースを削除してください。なお、1行目および3行目以降にも、末尾スペースがありますが、削除する必要はありません。</li>
 </ol>
 <h4 id="2imagejfiji">対策2、旧版のImageJ/FIJIを使う</h4>
 <p>下記リンク、過去のバージョンリスト(2019.10.27-2020.8.10)には20種のバージョンがあます。
