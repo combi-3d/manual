@@ -662,14 +662,16 @@
 </li>
 <li><strong>「3. Training」</strong><ul>
 <li>Label1, Label2の二種類に塗り分けてみる。（デフォルトは2種類。追加して多種類できるがマシンパワーが必要）</li>
-<li>選び出したい領域を、Label1の黄色いペンで印をいれる。（正常部位）</li>
-<li>それ以外の領域をLabel2青いペンで印を入れる。（傷害部位と背景も）</li>
+<li>選び出したい領域を、Label1の黄色いペンで印をいれる。（例：正常部位。ペンの太さは、1〜7くらいで動作が軽い。太くなると計算時間が長くなる。）</li>
+<li>それ以外の領域をLabel2青いペンで印を入れる。（例：傷害部位＋背景。）</li>
 <li>完全に塗りつぶす必要はないが、丁寧に印を入れれば入れるほど、結果が良くなる。</li>
 <li><code>Live Update</code>で結果を様子見しながら、作業できる。</li>
 <li>要不要？：（Live OFFにして、<code>Suggest Features</code>, <code>Filter Method (recommended)</code>, Number of Feartures <code>0</code> (auto), <code>Run Feature Selection</code>。しばらく待つ。下段の<code>Select Feature Set</code>。）やらなくても進められる、これなんやろう？、やると重くてフリーズすることもある。</li>
 </ul>
 </li>
-<li><strong>「4. Prediction Export」</strong> <ul>
+<li>
+<p><strong>「4. Prediction Export」</strong> </p>
+<ul>
 <li>Source: とりあえず<code>Simple Segmentation</code>　白黒ハッキリしたやつ、二値化（2階調, 1 bit）情報になる。</li>
 <li>ボタン<code>Choose Export Image Settings</code>より、<ul>
 <li>yxcはチェックあり、らしい。</li>
@@ -677,17 +679,17 @@
 <li>Format: <code>tif</code> がよいらしい。白黒ハッキリしたいので。たぶんJPEGでは境界がへんになりそう。</li>
 <li><code>unsigned 8 bit</code>を使っている。</li>
 <li>File: では、保存先を指定する。よくわからないので、デフォルトの<code>{dataset_dir}/{nickname}_{result_type}.tif</code>を入力する。これで出力<code>Export</code>されるファイルは、「同じフォルダに保存され、同じファイル名_Simple Segmentation.tif」になる。</li>
+<li>CoMBIの連続画像に同一処理のセグメンテーション作業を施す場合：　ここの<code>Export</code>は使用せず、次の項目「5」へ。</li>
+<li>Trainingに使用した数枚の画像だけで、セグメンテーション画像が欲しい場合：　上カラムの<code>Export</code>ボタンまたは左の<code>Export All</code>ボタンをおして、作業は終了する。</li>
 </ul>
 </li>
-<li>Trainingに使用した数枚の画像だけで、セグメンテーション画像が欲しい場合：　上カラムの<code>Export</code>ボタンまたは左の<code>Export All</code>ボタンをおして、作業は終了する。</li>
-<li>CoMBIの連続画像に同一処理のセグメンテーション作業を施す場合は、ここの<code>Export</code>は使用せず、次の項目「5」へ。</li>
 </ul>
 </li>
 <li>
 <p><strong>「5. Batch Processing」</strong></p>
 <ul>
 <li><code>Select RAW Data Files</code>より、連続画像を選ぶ。Shiftを押しながら、複数画像を選択する。</li>
-<li>左カラムのボタン、<code>Process all files</code>。しばらく待つ。結構掛かるし、フリーズもした。マシンパワーに自信がなければ、少しずつ（100枚ずつなど）試してみる。<ul>
+<li>左カラムのボタン、<code>Process all files</code>。しばらく待つ。結構掛かるし、フリーズもしたし、抜け落ちたりもした。マシンパワーに自信がなければ、少しずつ（100枚ずつなど）試してみる。<ul>
 <li>出力されるtifファイルは、一見まっくろけ。画像は、8bit(0-255)であり、二値化された情報を0と1に入れている。8bitで表記すると、00000000と00000001になる。それぞれ、Training時のデフォルトLabelのうち、Label1-黄色と、Label2-青色である。ImageJ/FIJIで開いて、カーソル位置の値をみると、Value1とValue2だけで構成された画像であることが確認できる。</li>
 <li>Finderで表示されるアイコンは真っ黒画像になるのでビックリするが、アイコンはそれでよい。</li>
 <li>「4」での設定した条件のうち、<code>Export Image Settings</code>の<code>Transformation</code>, <code>renormalize</code>は、0,1を0,255に変換する機能のようだが、働かなかった。</li>
@@ -707,7 +709,7 @@
 </ul>
 </li>
 <li>
-<p>ImageJ/FIJIやPhotoshopで、利用しやすい二値化画像にする（0,1ではなく、0,255にする）。</p>
+<p>ImageJ/FIJIまたはPhotoshopをつかって、「別のアプリで利用しやすい二値化画像（0,1ではなく、0,255）」にする。</p>
 <ul>
 <li>ImageJ/FIJIの場合<ul>
 <li><code>Image</code>&gt; <code>Adjust</code>&gt; <code>Threshold...</code>　（この作業は安定しない、数値入力ではじかれたり。下記のどれかうまくいくやつを探してください）<ul>
@@ -718,7 +720,7 @@
 <li>（スライダーを動かしてから、数値入力したら、うまくいったことがある。）</li>
 </ul>
 </li>
-<li><code>Apply</code>をおして、適用する。</li>
+<li><code>Apply</code>をおして、適用する。Method:Default, Background: Dark, Check on Calculate th..., Uncheck others.</li>
 <li>一枚だけ変換したい場合は、ここで<code>Save as</code>（うまくいけば、まっ黒にしか見えなかった画像・アイコンが、白黒画像・白黒アイコンになります。）</li>
 <li>連続画像を変換したい場合は、<code>Threshold</code>から<code>Apply</code>までを、Macroに記録し、Batch処理する）</li>
 </ul>
@@ -726,6 +728,7 @@
 <li>Photoshopの場合<ul>
 <li><code>Image</code>&gt; <code>Adjustments</code>&gt; <code>Threshold</code></li>
 <li>指定する数値は、<code>2</code></li>
+<li><code>Image</code>&gt; <code>Adjustments</code>&gt; <code>Invert</code>（黒バックになる。3D再構築用に）</li>
 <li>（ActionとBatchを使って連続画像を処理する。）</li>
 </ul>
 </li>
@@ -741,7 +744,7 @@
 <ul>
 <li>Live Updateの動作が重い、500x700（20um/pix)を3-4枚。350x350に切り抜いて、Featureを3.5と5だけにしたらやっと動いた。おそらく、認識させたい構造が複雑になる（パターンが複雑、似ているけど異なる構造があるなど）。また、マークする筆を太くすると、動作が鈍くなる。単純なマシンパワー不足だけではなく、画像とSegmentation対象の性質にもよると思う。</li>
 <li>どうやら2回（2プロジェクト、.ilp）は行うのがいいようだ。<strong>1回目</strong>：連続画像を代表するような数枚を、適当に選んで、Segmentationする。Export, Simple Segmentationを行い、画像を確認すると、かならず失敗作が含まれる。次に、<strong>2回目</strong>：失敗作だけをつかってSegmentationを行う。その結果、すべての連続切片でおおむねSegmentationが成功している。場合によっては、<strong>3回目</strong>：同様に。3回目でうまくいったことがある。</li>
-<li>学習させる画像は、3枚までが限度か。使っているのは、Core i7 4-core、HT対応（iMac 2017）。もっとコア数があればいいのかもしれない。</li>
+<li>学習させる画像は、3枚までが限度か。使っているのは、Core i7 4.2 GHz 4-core、HT対応（iMac 2017）。もっとコア数があればいいのかもしれない。</li>
 </ul>
                 
               
