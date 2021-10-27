@@ -302,6 +302,19 @@
 
 
   <li class="md-nav__item">
+    <a href="../../operation/combi-u/index.html" class="md-nav__link">
+      CoMBI-U (Universal)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
     <a href="../../operation/combi-c/index.html" class="md-nav__link">
       CoMBI-C (Cryostat)
     </a>
@@ -800,7 +813,7 @@ If you plan to use ilastik for segmentatin, get more cores as possible. ilastik 
 <p><span style="color:#444C99;">CPUのコア数と周波数が、RAW現像と、Photoshop自動処理に効きます。Photoshopではhyperthreding (HT)は、効きませんでした（2019年）。いまどきのIntel i5, i7, i9なら、どれでもよく働きます。もし、ilastikで、Segmentationをするなら、コア数は多い方がいいです。ilastik作業は、CPUだけに負荷が掛かり、かなり高負荷です。4コア8スレッドのiMacでは眠くなります。</span></p>
 <h3 id="gpu">GPU</h3>
 <p>GPUs work well for 3D rendering, and 8GB of DDR5 or 4GB of HBM2 is enough. There are memory standards include DDR5, DDR6, and HBM2. HBM2 is referred to as the most powerful but expensive, and DDR6 as more powerful and inexpensive (2020).  The Apple M1 seems to be equivalent to 4GB of DDR5 (560X), and may be capable of 3D imaging. </p>
-<p><span style="color:#444C99;">DDR5 8GBやHBM2 4GBで十分働きます。GPUは、3Dレンダリングに効きます。規格はDDR4, DDR5, DDR6, HBM2の順で高性能になります。HBM2規格は高性能だが高い、DDR6規格は高性能で安い（2020年)、と評されます。Apple M1は、どうやら、DDR5 4GB (560X)相当らしく、総合的には3Dイメージングの能力がありそうです。</span></p>
+<p><span style="color:#444C99;">DDR5 8GBやHBM2 4GBで十分働きます。GPUは、3Dレンダリングに効きます。規格はDDR4, DDR5, DDR6, HBM2の順で高性能になります。HBM2規格は高性能だが高い、DDR6規格は高性能で安い（2020年)、と評されます。Apple M1は、どうやら、DDR5 4GB (560X)相当らしく、なんとか3Dイメージングはできそうですが、はやり、M1 pro, M1 max (5700XT, 16GB DDR6相当）のほうがいいでしょう。</span></p>
 <h3 id="memory">Memory/メモリ</h3>
 <p>Minimum;16GB, Recommended;32GB, Maximum;64GB.</p>
 <p>The tasks that require more memory are serial image processing and RAW-JPEG conversion in ImageJ. If you have 16GB, you should use a virtual stack for opening a series of images instead of expanding them into memory. For serial image processing, you should use macro. For RAW-JPEG conversion, you might wait for overnight. This is because RAW-JPEG conversion takes up 1GB of memory for about every 100 conversions, then memory overload occurs, and the conversion becomes very slow. With 32GB or more, you don't have to pay attention or worry about those issues.</p>

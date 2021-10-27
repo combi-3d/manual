@@ -302,6 +302,19 @@
 
 
   <li class="md-nav__item">
+    <a href="../../operation/combi-u/index.html" class="md-nav__link">
+      CoMBI-U (Universal)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
     <a href="../../operation/combi-c/index.html" class="md-nav__link">
       CoMBI-C (Cryostat)
     </a>
@@ -617,11 +630,11 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#combi-c-cryostat" class="md-nav__link">
-    CoMBI-C (cryostat)
+  <a href="#combi-universal-type-202110-current" class="md-nav__link">
+    CoMBI-Universal type, 2021.10-current
   </a>
   
-    <nav class="md-nav" aria-label="CoMBI-C (cryostat)">
+    <nav class="md-nav" aria-label="CoMBI-Universal type, 2021.10-current">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -657,6 +670,54 @@
     Codes/コード
   </a>
   
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combi-c-cryostat-2017-2021" class="md-nav__link">
+    CoMBI-C (cryostat) 2017-2021
+  </a>
+  
+    <nav class="md-nav" aria-label="CoMBI-C (cryostat) 2017-2021">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#controller_1" class="md-nav__link">
+    Controller/コントローラー
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor_1" class="md-nav__link">
+    Sensor/センサー
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#led-lampsled_1" class="md-nav__link">
+    LED lamps/LED照明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brush_1" class="md-nav__link">
+    Brush/ブラシ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codes_1" class="md-nav__link">
+    Codes/コード
+  </a>
+  
     <nav class="md-nav" aria-label="Codes/コード">
       <ul class="md-nav__list">
         
@@ -676,6 +737,13 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parts" class="md-nav__link">
+    Parts/部品
+  </a>
   
 </li>
         
@@ -707,15 +775,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#combi-s-motorized-type" class="md-nav__link">
-    CoMBI-S motorized type
+  <a href="#combi-s-motorized-type-20217-current" class="md-nav__link">
+    CoMBI-S motorized type (2021.7-current)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#combi-s-manual-type" class="md-nav__link">
-    CoMBI-S manual type
+  <a href="#combi-s-manual-type-20217-202110" class="md-nav__link">
+    CoMBI-S manual type (2021.7-2021.10)
   </a>
   
 </li>
@@ -739,29 +807,51 @@
                 
                 
                 <h1 id="self-made-devices">Self-made devices/自作装置</h1>
-<p>If you are considering installing one, please feel free to contact me and I can provide the devices. Or, if you are familiar with electronic engineering using a soldering iron, you can make essential devices by yourself. However, the plastic case is made of acrylic boards using a laser cutter, which may not familiar in the lab. Development is based on Arduino. All information, including parts and prices, is available in Scientific Reports 2017,7:3645. I purchase the parts from the following stores in Japan; Akitsuki, Sengoku, Switch Science, Marutsu, and Cainz.</p>
+<p>If you are considering installing one, please feel free to contact me and I can provide the devices. Or, if you are familiar with electronic engineering using a soldering iron, you can make essential devices by yourself. However, the plastic case is made of acrylic boards using a laser cutter, which may not familiar in the lab. Development is based on Arduino. </p>
 <p><span style="color:#444C99;">
-導入をお考えでしたら、お気軽に連絡をください、こちらで工作した物を用意できます。もしくは、ハンダごてをつかって電子工作をされている方なら、すべて自作することも可能です。ただし、ケースに関しては、アクリル板をレーザー加工して自作しています。開発のベースはArduinoです。使用する部品、価格など、すべての情報は、公開されています（Scientific Reports 2017,7:3645）。部品は、秋月、千石、スイッチサイエンス、マルツ、カインズで購入しています。</span></p>
+導入をお考えでしたら、お気軽に連絡をください、こちらで工作した物を用意できます。もしくは、ハンダごてをつかって電子工作をされている方なら、すべて自作することも可能です。ただし、ケースに関しては、アクリル板をレーザー加工して自作しています。開発のベースはArduinoです。</span></p>
 <hr />
-<h2 id="combi-c-cryostat">CoMBI-C (cryostat)</h2>
+<h2 id="combi-universal-type-202110-current">CoMBI-Universal type, 2021.10-current</h2>
+<p>for any type of microtome, including a cryostat, rotary microtome, and sliding microtome</p>
+<p><img alt="CoMBI-U" src="../img/DSC_1665ss.jpg" title="CoMBI-U" /></p>
 <h3 id="controller">Controller/コントローラー</h3>
-<p>The controller controls the camera, sensor, brush, and LED lamps. The microcontroller ATiny85 synchronizes the camera shutter and the sensor using optocoupler.</p>
-<p><img alt="controller" src="../img/controller.jpg" title="controller" /></p>
+<p>The controller controls the camera, sensor, and LED lamps. The microcontroller ATmega328P synchronizes the camera shutter and the sensor using optocoupler.</p>
 <p><span style="color:#444C99;">
-コントローラは、カメラ、センサー、ブラシ、LEDランプを制御します。マイコンが、カメラのシャッターとセンサーを同期しています。主な部品は、ATtiy85とフォトカプラ（optocoupler）です。</span></p>
+コントローラは、カメラ、センサー、LEDランプを制御します。マイコンが、カメラのシャッターとセンサーを同期しています。主な部品は、ATmega328P、フォトカプラ（optocoupler）です。</span></p>
 <h3 id="sensor">Sensor/センサー</h3>
-<p>An infrared reflective sensor detects the position of the handle. The white handle is attached with a piece of black low-reflective sheet, which is detected by the sensor.</p>
+<p>A Hall sensor detects the position of the handle. The magnet on the handle is detected by the sensor.</p>
 <p><span style="color:#444C99;">
-赤外線反射センサーが、ハンドル位置を検知します。白いハンドルに黒い低反射シート片を張ってあり、それをセンサーが検知します。</span></p>
+ホールセンサーが、ハンドル位置を検知します。ハンドルにネオジム磁石を貼っておいて、それをセンサーが検知します。</span></p>
 <h3 id="led-lampsled">LED lamps/LED照明</h3>
 <p>Two lights illuminate the block surface diagonally. Compared with a single frontal light and two diagonal lights, the two diagonal lights produce more contrast on the block surface image.</p>
 <p><span style="color:#444C99;">
 斜めから2灯で、ブロック面を照らします。正面１灯と、斜め2灯を比較したところ、斜め2灯のほうが、ブロック面像で陰影が出やすいので、斜めを採用しました。</span></p>
 <h3 id="brush">Brush/ブラシ</h3>
+<p>The brush keeps the block face clean.</p>
+<p><span style="color:#444C99;">
+ブロック面をキレイに保ちます。</span></p>
+<h3 id="codes">Codes/コード</h3>
+<p><a href="https://github.com/combi-3d/CoMBI-Universal">Codes for CoMBI-U are available on GitHub / コードは公開しています</a></p>
+<hr />
+<h2 id="combi-c-cryostat-2017-2021">CoMBI-C (cryostat) 2017-2021</h2>
+<h3 id="controller_1">Controller/コントローラー</h3>
+<p>The controller controls the camera, sensor, brush, and LED lamps. The microcontroller ATiny85 synchronizes the camera shutter and the sensor using optocoupler.</p>
+<p><img alt="controller" src="../img/controller.jpg" title="controller" /></p>
+<p><span style="color:#444C99;">
+コントローラは、カメラ、センサー、ブラシ、LEDランプを制御します。マイコンが、カメラのシャッターとセンサーを同期しています。主な部品は、ATtiy85とフォトカプラ（optocoupler）です。</span></p>
+<h3 id="sensor_1">Sensor/センサー</h3>
+<p>An infrared reflective sensor detects the position of the handle. The white handle is attached with a piece of black low-reflective sheet, which is detected by the sensor.</p>
+<p><span style="color:#444C99;">
+赤外線反射センサーが、ハンドル位置を検知します。白いハンドルに黒い低反射シート片を張ってあり、それをセンサーが検知します。</span></p>
+<h3 id="led-lampsled_1">LED lamps/LED照明</h3>
+<p>Two lights illuminate the block surface diagonally. Compared with a single frontal light and two diagonal lights, the two diagonal lights produce more contrast on the block surface image.</p>
+<p><span style="color:#444C99;">
+斜めから2灯で、ブロック面を照らします。正面１灯と、斜め2灯を比較したところ、斜め2灯のほうが、ブロック面像で陰影が出やすいので、斜めを採用しました。</span></p>
+<h3 id="brush_1">Brush/ブラシ</h3>
 <p>The brush keeps the block face clean. I install the motor to move brush left and right, but brush can keep the block surface clean without movement.</p>
 <p><span style="color:#444C99;">
 ブロック面をキレイに保ちます。モータで左右に動かしていますが、動かなくてもブロック面をキレイに保ちます。</span></p>
-<h3 id="codes">Codes/コード</h3>
+<h3 id="codes_1">Codes/コード</h3>
 <h4 id="sensor-and-camera">Sensor and camera/センサーとカメラシャッター</h4>
 <p>Development was done in Arduino IDE, and the components used were ATtiny85, Rohm RPR-220, Toshiba TLP785GB, and LEDs. In the published paper, the threshold was set to 250. Recently, I prefer to use 400-500. I set the threshold with enough allowance because I have found that the degree of whiteness varies among cryostat handles in various locations, and that sensor value varies depending on the lot of sensors and the quality of self-made devices.</p>
 <p><span style="color:#444C99;">
@@ -842,10 +932,12 @@ delay(300);
 SoftwareServo::refresh();
 }
 </code></pre>
+<h3 id="parts">Parts/部品</h3>
+<p>All information, including parts and prices, is available in Scientific Reports 2017,7:3645. I purchase the parts from the following stores in Japan; Akitsuki, Sengoku, Switch Science, Marutsu, and Cainz.</p>
+<p><span style="color:#444C99;">使用する部品、価格など、すべての情報は、公開されています（Scientific Reports 2017,7:3645）。部品は、秋月、千石、スイッチサイエンス、マルツ、カインズで購入しています。</span></p>
 <h3 id="printed-board">Printed board/プリント基板</h3>
 <p>Optional. This is a memo when I made a printed circuit board at P-board.com.</p>
-<p><span style="color:#444C99;">
-プリント基板をP板.comで作ったときのメモです。</span></p>
+<p><span style="color:#444C99;">プリント基板をP板.comで作ったときのメモです。</span></p>
 <ul>
 <li>CADLUS X (Win), Nisol, Version X is a freeware, specific for P板-com, Jpn　（I use this app and site to make printed board for CoMBI.）</li>
 <li>KiCAD (Win, Mac), Open-source, Eng, Jpn (in practicing)</li>
@@ -860,13 +952,13 @@ SoftwareServo::refresh();
 リモートでセンサーを調整できるように、センサーチェッカーをつくりました。2020.11</span></p>
 <hr />
 <h2 id="combi-s-sliding-microtome">CoMBI-S (Sliding microtome)</h2>
-<h3 id="combi-s-motorized-type">CoMBI-S motorized type</h3>
+<h3 id="combi-s-motorized-type-20217-current">CoMBI-S motorized type (2021.7-current)</h3>
 <p>See <a href="https://www.nature.com/articles/s41598-021-92485-5">Scientific Reports (2021)</a> for detail.</p>
 <p>Alminium frame, motor and camera controller were made to order at KIRYU DENSHI (Gunma, Japan). Ask me if you need.
 LED lights are self-made. Two 3W LED lumps (MR16 type) illuminate block-face diagonally.</p>
 <p><span style="color:#444C99;">
 アルミ製フレームと、モータ、カメラ制御装置は、オーダーメイドできます。桐生電子（群馬県）。LEDランプは、3Wの電球タイプを斜め照射するように設置します。</span></p>
-<h3 id="combi-s-manual-type">CoMBI-S manual type</h3>
+<h3 id="combi-s-manual-type-20217-202110">CoMBI-S manual type (2021.7-2021.10)</h3>
 <p>You can make using an Arduino, optocouplars, and infrared-reflective sensors.
 The circuit is available on <a href="https://www.nature.com/articles/s41598-021-92485-5">Scientific Reports (2021)</a> as supplimentary information. 
 Codes for "CoMBI-S manual type" are available on <a href="https://github.com/combi-3d/CoMBI-Sliding-microtome">GitHub</a></p>
