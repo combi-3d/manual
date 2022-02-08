@@ -1113,7 +1113,7 @@ https://www.slicer.org/wiki/Main_Page</p>
 <h3 id="_8">単位設定</h3>
 <p>CoMBIなら、μm表示をえらびたい。デフォルトはmm。<br>
 メニューバー<code>Menu bar</code>より、<code>Edit</code>&gt; <code>Application Settings</code>&gt; <code>Units</code>&gt; <code>Show advanced options</code>にチェックを入れる。▽<code>Length</code> において、<code>Preset</code>&gt; <code>Select a preset</code>より、<code>Micrometer</code>を選ぶ。<code>OK</code><br>
-一度、3D slicerを再起動させると、変更が反映される。メニューバー<code>Menu bar</code>&gt; <code>Slicer 4.11</code>&gt; <code>Quit Slicer</code></p>
+一度、3D slicerを再起動させると、変更が反映される。メニューバー<code>Menu bar</code>&gt; <code>Slicer 4.11</code>&gt; <code>Quit Slicer</code><br>ただし、単位を真面目に10µmなどにすると、アプリが落ちることがある。画像は10µm/pixelだったとしても、デフォルトの1mm付近にしたほうが安定する。XYZの比だけ正しくしておき、計測値が必要な場合は、あとで正してから利用する。パソコン環境やスペックが影響するかもしれない。</p>
 <h3 id="jpeg">連続JPEG画像の準備</h3>
 <p>CoMBIではJPEG形式で連続画像をつくる。3D slicerは、各種画像形式に対応しており、JPEGも直接扱える。ちなみに、PNG形式はダメなようだ。loadはできるが、Volume Renderingにかさねることができない。平面表示ではめくれているけれど、Volume Rendering上の表示は、一枚だけで不変。透明効果は反映されず、白になる。</p>
 <h3 id="_9">ファイル名一括変換、必要に応じて、縮小作業の前に</h3>
