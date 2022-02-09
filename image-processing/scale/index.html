@@ -888,16 +888,20 @@
 <p>準備として、処理後の保存先フォルダを新規につくっておく。</p>
 </li>
 <li>一枚だけ画像を開く</li>
-<li>Macroの記録開始　<code>Plugins</code>&gt; <code>Macros</code>&gt; <code>Record</code>　ウィンドウ「Recorder」</li>
+<li>Macroの記録開始。<code>Plugins</code>&gt; <code>Macros</code>&gt; <code>Record</code> ウィンドウ「Recorder」</li>
 <li>縮小する<code>Image</code>&gt; <code>Adjust</code>&gt; <code>Size</code></li>
-<li>切り抜く　切り抜きたい領域を選択し、<code>Image</code>&gt; <code>Crop</code></li>
-<li>マクロファイル（.ijm）を保存します。　<code>Create</code>ボタン。別ウィンドウが開く。</li>
+<li>切り抜く（ブロック周囲がちょうど含まれる画像にしたい）<ol>
+<li>メニューバーの左端、四角いアイコンを使って、切り抜きたい領域を選択します。</li>
+<li>切り抜きます。<code>Image</code>&gt; <code>Crop</code></li>
+</ol>
+</li>
+<li>マクロファイル（.ijm）を保存します。 <code>Create</code>ボタン。別ウィンドウが開く。</li>
 <li>別ウィンドウで、<code>File</code>&gt; <code>Save as</code>。拡張子.ijmのファイルを保存する。</li>
 <li>
 <p>画像を閉じる（保存する必要はない）。別ウィンドウも「Recorder」も閉じる。</p>
 </li>
 <li>
-<p>いざMacroを実行します　<code>Process</code>&gt;<code>Batch</code>&gt;<code>Macro...</code>　ウィンドウ「Batch Process」が開く</p>
+<p>いざMacroを実行します。<code>Process</code>&gt;<code>Batch</code>&gt;<code>Macro...</code>　ウィンドウ「Batch Process」が開く</p>
 </li>
 <li><code>Input</code>, <code>Output</code>　入力フォルダ（元画像連続JPEG）と出力フォルダ（新規フォルダ、空、保存先）を指定。（ヒント：前もって出力フォルダを作っておくこと）</li>
 <li><code>Open</code>　保存したijmを指定し、読み込む</li>
@@ -912,7 +916,8 @@ run(&quot;Crop&quot;);
 <h4 id="_5">ヒント</h4>
 <ul>
 <li>Macroでは、ファイルの「開く」と「閉じる」は、記録不要で、実行時に指定します。</li>
-<li>ImageJ Macroでは、別名保存を細かく設定できませんでした。作りたい画像シリーズが何個もある場合、（たとえば、5 µm series, 10 µm series, color series, grayscale series）、別々のマクロを組んだほうがいいようです。Photoshopの場合、別名保存もふくめ、複雑な作業を全部記録してくれます。</li>
+<li>ImageJ Macroでは、別名保存を細かく設定できませんでした。作りたい画像シリーズが何個もある場合、（たとえば、5 µm series, 10 µm series, color series, grayscale series）、別々のマクロを組んだほうがいいようです。Photoshopの場合、別名保存もふくめ、複雑な作業を全部記録してくれます。</li>
+<li>上記の例では、「縮小＋切り抜き」でブロック周囲をぴったり含む画像にしましたが、もしRAW-JPEG変換時にすでに切り抜いている場合は、ImageJマクロでの「切り抜き」は不要です。</li>
 <li>メモリに展開できる画像データの量については、別のページ、「コンピュータと画像ファイル」へ</li>
 <li>参考書：ImageJではじめる生物画像解析（学研メディカル秀潤社、2016）</li>
 </ul>
@@ -925,7 +930,7 @@ run(&quot;Crop&quot;);
 <thead>
 <tr>
 <th>変換前</th>
-<th>3Dslicer用の良い例　</th>
+<th>3Dslicer用の良い例</th>
 <th>3Dslicerではダメで<br>Horos, ImageJでは良い例</th>
 </tr>
 </thead>
@@ -963,7 +968,7 @@ run(&quot;Crop&quot;);
 </tbody>
 </table>
 <ul>
-<li>Windows OSで一括変換：<code>Explore</code>で<code>複数選択</code>、<code>名称変更</code>すると、「入力文字(1).jpg」と、カッコつき連番数字になる。元のファイル名は残らないので注意。</li>
+<li>Windows OSで一括変換：<code>Explore</code>で<code>複数選択</code>、<code>名称変更</code>すると、「入力文字(1).jpg」と、カッコつき連番数字になる。元のファイル名は残らないので注意。</li>
 <li>Mac OSで一括変換：<code>Finder</code>で、複数選択<code>Select multiple files</code>、右クリック（副メニュー）<code>Right click, sub-menu</code>より、ファイル名を変更 <code>Rename</code>。完全変更や連番追記など、ある程度カスタマイズできる。プルダウンメニューの<code>Format</code>, 次のプルダウン、<code>Name and Counter</code>を使う。</li>
 <li>便利に一括変換：Adobe Bridge（有料アプリ）なら細かく設定ができる。</li>
 </ul>
