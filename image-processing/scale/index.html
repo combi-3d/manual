@@ -866,14 +866,14 @@
 <li>縮小させる計画をたて、1のピクセルサイズを参考に縮小後の画像サイズを計算しておく。ピクセルサイズが、きりの良い数字になるように縮小している（のちの3Dイメージングに便利）。最小は一片500pixel程度になるように計画する（のちのズレ補正では、軽い画像シリーズから試す）。のちのズレ補正に Cariculate the reduced image size to make 5, 10, 20, or 40 µm/pixel image series.</li>
 <li>新規フォルダを必要数作成する。縮小した画像シリーズを保存するため。</li>
 <li>
-<p><code>Action</code>に記録する。作業ウィンドウが出ていなければ、<code>Window</code>&gt;<code>action</code>で表示させる。新規アクションを<code>白い紙のマーク</code>で新規アクションを作成する。記録が始まっていれば、<code>赤い丸</code>が表示されている。記録できるのは、画像縮小1、別名保存、グレースケール、別名保存、もとに戻す、画像縮小2、、、閉じるなど、さまざま。記録を停止するときは、<code>四角ボタン</code>。</p>
+<p><code>Action</code>に記録する。作業ウィンドウが出ていなければ、<code>Window</code>&gt;<code>action</code>で表示させる。新規アクションを<code>白い紙のマーク</code>で新規アクションを作成する。名称はデフォルトでも変更しても、あとで利用するときに分かれば良い。記録が始まっていれば、<code>赤い丸</code>が表示されている。記録できるのは、画像縮小1、別名保存、グレースケール、別名保存、もとに戻す、画像縮小2、、、閉じるなど、さまざま。記録を停止するときは、<code>四角ボタン</code>。</p>
 <ol>
 <li>画像縮小1 <code>Image</code>&gt;<code>Image Size...</code> Resamplingモードは、<code>Preserve Details 2.0</code>または<code>Bicubic Sharper (reduction)</code>を選ぶ。<img alt="segmetation" src="../img/resample_menu_600.png" /></li>
 <li>別名保存（カラー画像、JPEGなら圧縮率<code>10</code>。TIFFでもよいがデータ量が多いのでディスクに十分な空きを。）</li>
 <li>グレースケールへ変換。<code>Image</code>&gt;<code>Mode</code>&gt;<code>Grayscale</code></li>
 <li>別名保存（グレースケール画像）</li>
-<li>画像縮小2</li>
-<li>（同様に）</li>
+<li>画像縮小2（縮小1と同様に、Image Size、別名保存、Grayscale、別名保存）</li>
+<li>アクションを停止する<code>四角ボタン</code>。</li>
 </ol>
 </li>
 <li>
@@ -894,37 +894,37 @@
 <h3 id="imagejfiji">ImageJ/FIJI</h3>
 <ol>
 <li>（準備）スケール画像を参照して、ピクセルサイズ（µm/pixel）を計算する。</li>
-<li>（準備）縮小させる計画をたて、先のピクセルサイズを参考に縮小後の画像サイズを計算しておく。ピクセルサイズが、きりの良い数字になるように縮小している。例えば、5, 10, 20, or 40 µm/pixelの画像シリーズ。管理上便利だかです。最も縮小するシリーズは、一辺が500pixel程度になるようにしたい。のちのズレ補正をスムースに実行できるように。いくつものシリーズを作るときは、各シリーズ個別にマクロを記録するのがいいようです。</li>
+<li>（準備）縮小させる計画をたて、先のピクセルサイズを参考に縮小後のピクセル数（画像サイズ）を計算しておく。ピクセルサイズが、きりの良い数字になるように縮小している。例えば、5, 10, 20, or 40 µm/pixelの画像シリーズ。管理上便利だかです。最も縮小するシリーズは、一辺が500pixel程度になるようにしたい。のちのズレ補正をスムースに実行できるように。いくつものシリーズを作るときは、各シリーズ個別にマクロを記録するのがいいようです。</li>
 <li>（準備）処理後の保存先フォルダを新規につくっておく。</li>
 <li>一枚だけ画像を開く</li>
 <li>Macroの記録開始。<code>Plugins</code>&gt; <code>Macros</code>&gt; <code>Record</code> ウィンドウ「Recorder」</li>
-<li>縮小する<code>Image</code>&gt; <code>Adjust</code>&gt; <code>Size</code>. Interpolationモードは、<code>None</code>または<code>Bicubic</code>を推奨する。チェックボタン<code>Average when reduction</code>には、チェックを入れておく。</li>
+<li>縮小する<code>Image</code>&gt; <code>Adjust</code>&gt; <code>Size</code>. 上記で計算しておいたピクセル数（画像サイズ）を入力する。Aspect retioを保つにチェックしてあれば、一辺の入力で済む。Interpolationモードは、<code>None</code>または<code>Bicubic</code>を推奨する。チェックボタン<code>Average when reduction</code>には、チェックを入れておく。<img alt="segmetation" src="../img/ImageJ_resample.png" /></li>
 <li>切り抜く（ブロック周囲がちょうど含まれる画像にしたい。すでに切り抜いてある場合は不要です。）<ol>
 <li>メニューバーの左端、四角いアイコンを使って、切り抜きたい領域を選択します。</li>
 <li>切り抜きます。<code>Image</code>&gt; <code>Crop</code></li>
 </ol>
 </li>
-<li>マクロファイル（.ijm）を保存します。 <code>Create</code>ボタン。別ウィンドウが開く。</li>
-<li>別ウィンドウで、<code>File</code>&gt; <code>Save as</code>。拡張子.ijmのファイルを保存する。</li>
+<li>マクロファイル（.ijm）を保存します。 <code>Create</code>ボタン。別ウィンドウ「Macro.ijm.ijm」が開く。</li>
+<li>その別ウィンドウがアクティブな状態で、<code>File</code>&gt; <code>Save as</code>。名前を決めて、拡張子.ijmのファイルを保存する。</li>
 <li>
-<p>画像を閉じる（保存する必要はない）。別ウィンドウも「Recorder」も閉じる。</p>
+<p>画像を閉じる（保存する必要はない）。別ウィンドウ「Macro.ijm.ijm」も「Recorder」も閉じる。</p>
 </li>
 <li>
 <p>いざMacroを実行し、連続画像を一括縮小します。<code>Process</code>&gt;<code>Batch</code>&gt;<code>Macro...</code>　ウィンドウ「Batch Process」が開かれる。</p>
 </li>
 <li><code>Input</code>, <code>Output</code>　入力フォルダ（元画像連続JPEG）と出力フォルダ（新規フォルダ、空、保存先）を指定。（ヒント：前もって出力フォルダを作っておくこと）</li>
-<li><code>Open</code>　保存したijmを指定し、読み込む</li>
+<li><code>Open</code>　保存しておいたマクロファイル（.ijm）を指定し、読み込む</li>
 <li><code>Process</code>ボタン</li>
 </ol>
 <h4 id="ijm">マクロファイル（拡張子ijm）の例</h4>
-<p><code>画像サイズを600x450</code>にして、指定の座標で<code>Crop 切り抜き</code>すると、こんなファイルができます。ijmには<code>開く</code>や、<code>閉じる</code>、<code>保存</code>は記録不要で、それらは実行時に指定します。</p>
+<p><code>画像サイズを600x450</code>にして、指定の座標で<code>Crop 切り抜き</code>すると、下記のようなマクロファイル（.ijm）ができます。マクロファイルには<code>開く</code>や、<code>閉じる</code>、<code>保存</code>は記録不要で、それらは実行時に指定します。ここで例示したサイズ縮小や切り抜き以外にも、Grayscale変換なども記録して、CoMBI連続画像を処理できます。</p>
 <pre><code>run(&quot;Size...&quot;, &quot;width=600 height=450 constrain average interpolation=Bicubic&quot;);
 makeRectangle(181, 96, 278, 278);
 run(&quot;Crop&quot;);
 </code></pre>
 <h4 id="_5">ヒント</h4>
 <ul>
-<li>Macroでは、ファイルの「開く」と「閉じる」は、記録不要で、実行時に指定します。</li>
+<li>Macro記録では、ファイルの「開く」、「閉じる」、「保存」は、不要です。一括処理を実行するときに保存先を指定できます。Photoshopとは異なるところです。</li>
 <li>ImageJ Macroでは、別名保存を細かく設定できませんでした。作りたい画像シリーズが何個もある場合、（たとえば、5 µm/pixel series, 10 µm/pixel series, color series, grayscale series）、別々のマクロを組んだほうがいいようです。Photoshopの場合、別名保存もふくめ、複雑な作業を全部記録してくれます。</li>
 <li>上記の例では、「縮小＋切り抜き」でブロック周囲をぴったり含む画像にしましたが、もしRAW-JPEG変換時にすでに切り抜いている場合は、ImageJマクロでの「切り抜き」は不要です。</li>
 <li>メモリに展開できる画像データの量については、別のページ、「コンピュータと画像ファイル」へ</li>
