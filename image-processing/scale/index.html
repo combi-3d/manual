@@ -859,14 +859,22 @@
 <p>この例では、4通りの縮小連続画像をつくることになります。ズレ補正で扱える1000x1000以下の軽いシリーズができるまで、縮小します。実際は、RAW-JPEG変換時などで、ブロック周囲が入る程度にクロップするので、これらより小さな画像を扱右ことが多く、縮小は2通り、3通りで済みます。</p>
 <p>それぞれの縮小連続画像で、カラーもグレースケールも作っておけば、もうそれ以外の縮小作業はありません。</p>
 <h2 id="_3">縮小の手順</h2>
-<p>Photoshop 2通り、ImageJ 1通りの、計3通り記します。どれかで行います。</p>
+<p>Photoshop 2通り、ImageJ 1通りの、計3通り記します。どれかで行います。WindowsOSの拡張機能や、macOSのAutomator.appを利用した方法もありますが、圧縮率や補完法の選択ができないようで、検証をすすめていません。</p>
 <h3 id="photoshop-action-batch">Photoshop, Action, Batch処理</h3>
 <ol>
 <li>スケール画像で、ピクセルサイズを計算する。Refering to the scale image taken beforehand, caliculate the pixel size of the original blockface image in micrometer/pixel. </li>
 <li>縮小させる計画をたて、1のピクセルサイズを参考に縮小後の画像サイズを計算しておく。ピクセルサイズが、きりの良い数字になるように縮小している（のちの3Dイメージングに便利）。最小は一片500pixel程度になるように計画する（のちのズレ補正では、軽い画像シリーズから試す）。のちのズレ補正に Cariculate the reduced image size to make 5, 10, 20, or 40 µm/pixel image series.</li>
-<li><code>Action</code>に記録する。作業ウィンドウが出ていなければ、<code>Window</code>&gt;<code>action</code>で表示させる。新規アクション、<code>白い紙のマーク</code>。
-記録できるのは、画像縮小1、別名保存、グレースケール、別名保存、もとに戻す、画像縮小2、、、閉じるなど、さまざま。記録中は、<code>赤い丸</code>、記録を停止するときは、<code>四角ボタン</code>。</li>
-<li>いざ実行。<code>File</code>&gt;<code>Auto</code>&gt;<code>Batch</code> 記録したアクションと、実行させたい連続画像入りフォルダを指定し、実行。</li>
+<li>新規フォルダを必要数作成する。縮小した画像シリーズを保存するため。</li>
+<li><code>Action</code>に記録する。作業ウィンドウが出ていなければ、<code>Window</code>&gt;<code>action</code>で表示させる。新規アクションを<code>白い紙のマーク</code>で新規アクションを作成する。記録が始まっていれば、<code>赤い丸</code>が表示されている。記録できるのは、画像縮小1、別名保存、グレースケール、別名保存、もとに戻す、画像縮小2、、、閉じるなど、さまざま。記録を停止するときは、<code>四角ボタン</code>。<ol>
+<li>画像縮小1 <code>Image</code>&gt;<code>Image Size...</code> Resamplingモードは、<code>Preserve Details 2.0</code>または<code>Bicubic Sharper (reduction)</code>を選ぶ</li>
+<li>別名保存（カラー画像、JPEGなら圧縮率<code>10</code>。TIFFでもよいがデータ量が多いのでディスクに十分な空きを。）</li>
+<li>グレースケールへ変換。<code>Image</code>&gt;<code>Mode</code>&gt;<code>Grayscale</code></li>
+<li>別名保存（グレースケール画像）</li>
+<li>画像縮小2</li>
+<li>（同様に）</li>
+</ol>
+</li>
+<li>いざ連続画像を一括して縮小。<code>File</code>&gt;<code>Automate</code>&gt;<code>Batch...</code> 記録したアクションと、実行させたい連続画像入りフォルダを指定し、実行する。</li>
 </ol>
 <hr />
 <h3 id="photoshop-droplet">Photoshop, Droplet機能</h3>
@@ -886,8 +894,8 @@
 <li>（準備）処理後の保存先フォルダを新規につくっておく。</li>
 <li>一枚だけ画像を開く</li>
 <li>Macroの記録開始。<code>Plugins</code>&gt; <code>Macros</code>&gt; <code>Record</code> ウィンドウ「Recorder」</li>
-<li>縮小する<code>Image</code>&gt; <code>Adjust</code>&gt; <code>Size</code></li>
-<li>切り抜く（ブロック周囲がちょうど含まれる画像にしたい）<ol>
+<li>縮小する<code>Image</code>&gt; <code>Adjust</code>&gt; <code>Size</code>. Interpolationモードは、<code>None</code>または<code>Bicubic</code>を推奨する。チェックボタン<code>Average when reduction</code>には、チェックを入れておく。</li>
+<li>切り抜く（ブロック周囲がちょうど含まれる画像にしたい。すでに切り抜いてある場合は不要です。）<ol>
 <li>メニューバーの左端、四角いアイコンを使って、切り抜きたい領域を選択します。</li>
 <li>切り抜きます。<code>Image</code>&gt; <code>Crop</code></li>
 </ol>
@@ -898,7 +906,7 @@
 <p>画像を閉じる（保存する必要はない）。別ウィンドウも「Recorder」も閉じる。</p>
 </li>
 <li>
-<p>いざMacroを実行します。<code>Process</code>&gt;<code>Batch</code>&gt;<code>Macro...</code>　ウィンドウ「Batch Process」が開く</p>
+<p>いざMacroを実行し、連続画像を一括縮小します。<code>Process</code>&gt;<code>Batch</code>&gt;<code>Macro...</code>　ウィンドウ「Batch Process」が開かれる。</p>
 </li>
 <li><code>Input</code>, <code>Output</code>　入力フォルダ（元画像連続JPEG）と出力フォルダ（新規フォルダ、空、保存先）を指定。（ヒント：前もって出力フォルダを作っておくこと）</li>
 <li><code>Open</code>　保存したijmを指定し、読み込む</li>
