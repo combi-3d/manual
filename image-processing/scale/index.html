@@ -865,22 +865,25 @@
 <li>スケール画像で、ピクセルサイズを計算する。Refering to the scale image taken beforehand, caliculate the pixel size of the original blockface image in micrometer/pixel. </li>
 <li>縮小させる計画をたて、1のピクセルサイズを参考に縮小後の画像サイズを計算しておく。ピクセルサイズが、きりの良い数字になるように縮小している（のちの3Dイメージングに便利）。最小は一片500pixel程度になるように計画する（のちのズレ補正では、軽い画像シリーズから試す）。のちのズレ補正に Cariculate the reduced image size to make 5, 10, 20, or 40 µm/pixel image series.</li>
 <li>新規フォルダを必要数作成する。縮小した画像シリーズを保存するため。</li>
-<li><code>Action</code>に記録する。作業ウィンドウが出ていなければ、<code>Window</code>&gt;<code>action</code>で表示させる。新規アクションを<code>白い紙のマーク</code>で新規アクションを作成する。記録が始まっていれば、<code>赤い丸</code>が表示されている。記録できるのは、画像縮小1、別名保存、グレースケール、別名保存、もとに戻す、画像縮小2、、、閉じるなど、さまざま。記録を停止するときは、<code>四角ボタン</code>。<ol>
-<li>画像縮小1 <code>Image</code>&gt;<code>Image Size...</code> Resamplingモードは、<code>Preserve Details 2.0</code>または<code>Bicubic Sharper (reduction)</code>を選ぶ</li>
+<li>
+<p><code>Action</code>に記録する。作業ウィンドウが出ていなければ、<code>Window</code>&gt;<code>action</code>で表示させる。新規アクションを<code>白い紙のマーク</code>で新規アクションを作成する。記録が始まっていれば、<code>赤い丸</code>が表示されている。記録できるのは、画像縮小1、別名保存、グレースケール、別名保存、もとに戻す、画像縮小2、、、閉じるなど、さまざま。記録を停止するときは、<code>四角ボタン</code>。</p>
+<ol>
+<li>画像縮小1 <code>Image</code>&gt;<code>Image Size...</code> Resamplingモードは、<code>Preserve Details 2.0</code>または<code>Bicubic Sharper (reduction)</code>を選ぶ
+<img alt="segmetation" src="../img/resample_menu_600.png" /></li>
 <li>別名保存（カラー画像、JPEGなら圧縮率<code>10</code>。TIFFでもよいがデータ量が多いのでディスクに十分な空きを。）</li>
 <li>グレースケールへ変換。<code>Image</code>&gt;<code>Mode</code>&gt;<code>Grayscale</code></li>
 <li>別名保存（グレースケール画像）</li>
 <li>画像縮小2</li>
 <li>（同様に）</li>
-</ol>
-</li>
 <li>いざ連続画像を一括して縮小。<code>File</code>&gt;<code>Automate</code>&gt;<code>Batch...</code> 記録したアクションと、実行させたい連続画像入りフォルダを指定し、実行する。</li>
 </ol>
 <hr />
 <h3 id="photoshop-droplet">Photoshop, Droplet機能</h3>
 <p>Batchとは別に、Dropletというやり方もあります。記録したアクションをドロップレットファイルとして保存して、画像のサムネイルにドラッグします。結果は同じです。Dropletは、単にアクションを保存しておく目的でも使えます。別の実験で同一処理をかけたいときや、別の人のコンピュータで同一処理をしたいときに利用できるでしょう。</p>
-<ol>
-<li>（上記のアクションを記録するところまでは同じ）</li>
+</li>
+<li>
+<p>（上記のアクションを記録するところまでは同じ）</p>
+</li>
 <li>作ったアクションをファイルとして保存する　<code>File</code> &gt; <code>Automate</code> &gt; <code>Create Droplet…</code></li>
 <li>拡張子<code>.app</code>のdropletファイルができる。</li>
 <li>処理したい連続画像が入ったフォルダをドラッグして、ドロップレットファイルに重ねる。</li>
