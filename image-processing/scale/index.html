@@ -914,7 +914,7 @@
 </ol>
 <h4 id="ijm">マクロファイル（拡張子ijm）の例</h4>
 <p><code>画像サイズを600x450</code>にして、指定の座標で<code>Crop 切り抜き</code>すると、こんなファイルができます。ijmには<code>開く</code>や、<code>閉じる</code>、<code>保存</code>は記録不要で、それらは実行時に指定します。</p>
-<pre><code>run(&quot;Size...&quot;, &quot;width=600 height=450 constrain average interpolation=Bilinear&quot;);
+<pre><code>run(&quot;Size...&quot;, &quot;width=600 height=450 constrain average interpolation=Bicubic&quot;);
 makeRectangle(181, 96, 278, 278);
 run(&quot;Crop&quot;);
 </code></pre>
