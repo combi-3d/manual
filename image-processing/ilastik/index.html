@@ -750,7 +750,9 @@
 <li>オプション、ボタン<code>Suggest Features</code>について：前項「2. Feature Selection」を3通り評価してくれる。いったん、Live OFFにして、ボタン<code>Suggest Features</code>で別ウィンドウが開く。 <code>Filter Method (recommended)</code>, Number of Feartures <code>0</code> (=auto), <code>Run Feature Selection</code>。しばらく待つ、けっこう待つ。プルダウンから、「自身で選んだチェック、自動チェック、全チェック」の3通りを比較/選択できる。自身のチェック以外を選び直したいときは、下段のボタン<code>Select Feature Set</code>を押す。上記では、Number of Featuresが、0=自動チェックの例だったが、ここで1-10のどれかを入力すると、例えば、3を入力するとsize 3通りなどを試してくれる。（Set Size Penaltyは、いじっていない、デフォルトの0.1。）　セグメンテーションの正確さと計算時間との兼ね合い、落としどころを見つける。このオブションはやらなくても進められる。</li>
 </ul>
 </li>
-<li><strong>「4. Prediction Export」</strong> <ul>
+<li>
+<p><strong>「4. Prediction Export」</strong> </p>
+<ul>
 <li>Source: とりあえず<code>Simple Segmentation</code>　白黒ハッキリした画像（二値化、2階調、1 bitの画像）になる。（デフォルトは<code>Probability</code>で、グレースケール画像になる。後に使用するアプリ（FIJI or Photoshop?）によって、ファイル形式(HDF5 or TIFF?)を選ぶ必要がある（後述）。）</li>
 <li>ボタン<code>Choose Export Image Settings</code>より、<ul>
 <li>yxcでは、すべてチェックするとLabel1, 2がChannel1,2となる。らしい。Label1だけでよいときは、「c」のチェックを外して、start 0, stop 1にする。</li>
@@ -763,10 +765,8 @@
 </ul>
 </li>
 </ul>
+<p><img alt="Export Settings" src="../img/ilastik_export.png" title="Export" /> * Export Settings, Default (left) settings and settings for Simple Segmentation&gt;TIFF&gt;unsigned8bit&gt;export folder.*</p>
 </li>
-</ol>
-<p><img alt="Export Settings" src="../img/ilastik_export.png" title="Export" /> Export Settings, Default (left) settings and settings for Simple Segmentation&gt;TIFF&gt;unsigned8bit&gt;export folder.</p>
-<ol>
 <li>
 <p><strong>「5. Batch Processing」</strong></p>
 <ul>
