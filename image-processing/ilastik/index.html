@@ -699,6 +699,75 @@
     Precedure
   </a>
   
+    <nav class="md-nav" aria-label="Precedure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-new-projectpixel-classificationilp15" class="md-nav__link">
+    Create New Projectより、Pixel Classification。プロジェクトファイル、拡張子ilpとして保存する。（右のカラムの1番から5番に従って進めます）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-input-data" class="md-nav__link">
+    「1. Input Data」
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-feature-selection" class="md-nav__link">
+    「2. Feature selection」
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-training" class="md-nav__link">
+    「3. Training」
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-prediction-export" class="md-nav__link">
+    「4. Prediction Export」
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-batch-processing" class="md-nav__link">
+    「5. Batch Processing」
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    ファイル・フォルダを整理する
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imagejfijiphotoshop010255" class="md-nav__link">
+    ImageJ/FIJIまたはPhotoshopをつかって、「別のアプリで利用しやすい二値化画像（0,1ではなく、0,255）」にする。
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-slicer" class="md-nav__link">
+    3D slicerで再構築
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -726,20 +795,20 @@
 <p><span style="color:#444C99;">ilastikは、セグメンテーションを機械学習で行うアプリです（Nature Methods, 2019）。機械学習の知識がなくても、操作できるようにデザインされています。<a href="https://www.ilastik.org/">https://www.ilastik.org</a>からダウンロードしてインストールします。CoMBIで撮影したフルカラーのブロック面画像で特定の構造物（関心領域）をSegmentationするのに良さそうです。「とある臓器に正常部位と傷害部位がある。正常部位だけSegmentationしたい」、これをお題に、手順を記します。日本語の簡単な手順書です。本家のサイトには詳しい英語説明ページ（<a href="https://www.ilastik.org/documentation/index.html">Documentation</a>）があります。</span></p>
 <hr />
 <h2 id="precedure">Precedure</h2>
-<ol>
-<li>Create New Projectより、<code>Pixel Classification</code>。プロジェクトファイル、拡張子ilpとして保存する。（右のカラムの1番から5番に従って進めます）</li>
-<li><strong>「1. Input Data」</strong><ul>
+<h3 id="create-new-projectpixel-classificationilp15">Create New Projectより、<code>Pixel Classification</code>。プロジェクトファイル、拡張子ilpとして保存する。（右のカラムの1番から5番に従って進めます）</h3>
+<h3 id="1-input-data">「1. Input Data」</h3>
+<ul>
 <li>学習させるための画像を開く。CoMBIの連続画像のうち、標本全体や実験群全体を代表するような数枚を選ぶ。2〜4枚で行った。<code>Drag and Drop</code> または、プルダウンメニュー<code>Add New</code>&gt; <code>Add separate image(s)</code></li>
 </ul>
-</li>
-<li><strong>「2. Feature selection」</strong>　<ul>
+<h3 id="2-feature-selection">「2. Feature selection」</h3>
+<ul>
 <li>全部にチェックするので良いが、マシンパワー（おもにCPU）による。色と明るさ、輪郭線、テクスチャ（模様、行列）を計算してくれるらしい。</li>
 <li>「Core i9, HBM2-2GB, メモリ32GB」では全部チェックした。「Core i5, 内蔵グラフィクス、メモリ8GB」では、チェック項目を減らした。σとびとびで半分にチェック。シグマは、認識させたい構造物が小さいか大きいかを決める設定値。</li>
 <li>（左カラム下方に、各種フィルタがかかった画像リストがでてくる。クリックすると画像を確認できる。）</li>
 <li>（最初は、どうすればいいのかさっぱり分からない作業です。とりあえず、飛ばし飛ばしで半数にチェックするくらいで進めてください。次のステップ「3. Training」において、推奨チェックを自動で探してくれるオプションがあります。）</li>
 </ul>
-</li>
-<li><strong>「3. Training」</strong><ul>
+<h3 id="3-training">「3. Training」</h3>
+<ul>
 <li>Label1, Label2の二種類に塗り分けてみる。（デフォルトは2種類。追加して多種類できるがマシンパワーが必要）</li>
 <li>選び出したい領域を、Label1の黄色いペンで印をいれる。（例：正常部位。ペンの太さは、1〜7くらいで動作が軽い。太くなると計算時間が長くなる。）</li>
 <li>それ以外の領域をLabel2青いペンで印を入れる。（例：傷害部位＋背景。）</li>
@@ -749,9 +818,7 @@
 <li>メモ：Label1, Lable２などは、事項「4. Prediction Export」では、Channel1, Channel2などと呼ばれ、表記は「c」となります。複数のChannelをTIFFやHDFにすると、FIJIで開いたとき、Channel1, 2...となります。</li>
 <li>オプション：ボタン<code>Suggest Features</code>について。前項「2. Feature Selection」を3通り評価してくれる。いったん、Live OFFにして、ボタン<code>Suggest Features</code>で別ウィンドウが開く。 <code>Filter Method (recommended)</code>, Number of Feartures <code>0</code> (=auto), <code>Run Feature Selection</code>。しばらく待つ、けっこう待つ。プルダウンから、「自身で選んだチェック、自動チェック、全チェック」の3通りを比較/選択できる。自身のチェック以外を選び直したいときは、下段のボタン<code>Select Feature Set</code>を押す。上記では、Number of Featuresが、0=自動チェックの例だったが、ここで1-10のどれかを入力すると、例えば、3を入力するとsize 3通りなどを試してくれる。（Set Size Penaltyは、いじっていない、デフォルトの0.1。）　セグメンテーションの正確さと計算時間との兼ね合い、落としどころを見つける。このオブションはやらなくても進められる。</li>
 </ul>
-</li>
-<li>
-<p><strong>「4. Prediction Export」</strong> </p>
+<h3 id="4-prediction-export">「4. Prediction Export」</h3>
 <ul>
 <li>Source: デフォルトは<code>Probability</code>で、グレースケール画像になる。<code>Simple Segmentation</code>は、白黒ハッキリした画像（二値化、2階調、1 bitの画像）になる。</li>
 <li>ボタン<code>Choose Export Image Settings</code>より、<ul>
@@ -767,33 +834,24 @@
 </ul>
 <p><img alt="Export Settings" src="../img/ilastik_export.png" title="Export" /> <br>
 <i> Export Settings, Default (left) settings and settings for Simple Segmentation&gt;TIFF&gt;unsigned8bit&gt;export folder (right).</i></p>
-</li>
-<li>
-<p><strong>「5. Batch Processing」</strong></p>
+<h3 id="5-batch-processing">「5. Batch Processing」</h3>
 <ul>
 <li><code>Select RAW Data Files</code>より、連続画像を選ぶ。Shiftを押しながら、複数画像を選択する。</li>
-<li>左カラムのボタン、<code>Process all files</code>。しばらく待つ。結構時間が掛かる。途中で、フリーズもしたし、変換されない画像があったり（抜け落ちたり）もした。マシンパワーに自信がなければ、少しずつ（100枚ずつなど）試してみる。<ul>
-<li>出力されるtifファイルは、一見まっくろけ。画像は、sign-8bitでは、ピクセルは輝度0-255を持つ。二値化された情報は、0と1になっている（8bitで表記すると、00000000と00000001になっている）。それぞれ、Training時のデフォルトLabelsのうち、Label1-黄色と、Label2-青色である。ImageJ/FIJIで開いて、カーソル位置の値をみると、Value1とValue2だけで構成された画像であることが確認できる。</li>
-<li>Finderで表示されるアイコンは真っ黒画像になるのでビックリするが、アイコンはそれでよい。</li>
-<li>「4」での設定した条件のうち、<code>Export Image Settings</code>の<code>Transformation</code>, <code>renormalize</code>は、0,1を0,255に変換する機能のようだが、働かなかった。</li>
-<li><code>Export Image Settings</code>で設定した条件はプロジェクトファイル（.ilp）には保存されない。もし、「5」を、別の日、別のパソコンで実行する場合は、注意すること（Mac OS 11, ilastik 1.4.0b, 正式対応していないバージョンのせいか？）。</li>
-<li>のちに別アプリで「扱いやすい二値化画像」にする（0,1ではなく、0, 255にする。下記） 。</li>
-<li>（0,1のまま3D slicerにいれても、Volume renderingでは色の調節ができませんでした。）</li>
+<li>左カラムのボタン、<code>Process all files</code>。しばらく待つ。結構時間が掛かる。数百枚で行おうとしたとき、途中でフリーズしたし、変換されない画像があったり（抜け落ちたり）もした。マシンパワーに自信がなければ、少しずつ（100枚ずつなど）やってみるとうまくいく。<ul>
+<li>Simple Segmentationの場合、出力されたtifファイルは、一見真っ黒である。一般の画像8bitでは、ピクセルは輝度0-255を持つ。Simple Segmentationでは、二値化され（Renormalizeされなかった）画像は、0と1になっている。8bitで表記すると、00000000と00000001になっている。それぞれ、Training時のデフォルトLabelsのうち、Label1-黄色と、Label2-青色である。ImageJ/FIJIで開いて、カーソル位置の値をみると、Value1とValue2だけで構成された画像であることが確認できる。Finderで表示されるアイコンは真っ黒画像になるのでビックリするが、アイコンはそれでよい。のちに0,1を0,255に変換できる（下記）。</li>
+<li><code>Export Image Settings</code>で設定した条件はプロジェクトファイル（.ilp）には保存されないことがある。もし、「5」を、別の日、別のパソコンで実行する場合は、確認すること（macOS 11, ilastik 1.4.0b, 正式対応していないバージョンのせいか？）。</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>
-<p>ファイル・フォルダを整理する</p>
+<hr />
+<h2 id="_1">ファイル・フォルダを整理する</h2>
 <ul>
 <li>（別フォルダにExportしたなら、この作業は必要ありません。）</li>
 <li>MacならFinderで、リスト表示<code>as List</code></li>
 <li>ファイルの種類<code>Kind</code>で並べ替えると、元画像（例 .jpeｇ）と、二値化した画像（例 ..._Simple Segmentation.tif）が分かれて並ぶ。</li>
 <li>二値化画像（.tif）だけ選んで、新しいフォルダに収める。</li>
 </ul>
-</li>
-<li>
-<p>ImageJ/FIJIまたはPhotoshopをつかって、「別のアプリで利用しやすい二値化画像（0,1ではなく、0,255）」にする。</p>
+<h2 id="imagejfijiphotoshop010255">ImageJ/FIJIまたはPhotoshopをつかって、「別のアプリで利用しやすい二値化画像（0,1ではなく、0,255）」にする。</h2>
 <ul>
 <li>ImageJ/FIJIの場合<ul>
 <li><code>Image</code>&gt; <code>Adjust</code>&gt; <code>Threshold...</code>　（この作業は安定しない、数値入力ではじかれたり。下記のどれかうまくいくやつを探してください）<ul>
@@ -817,11 +875,13 @@
 </ul>
 </li>
 </ul>
-</li>
-<li>
-<p>3D slicerに<code>Load</code>して、<code>Segmentation</code>（Threshold）して、<code>Volume Rendering</code>で、3D画像を再構築する。</p>
-</li>
-</ol>
+<h2 id="3d-slicer">3D slicerで再構築</h2>
+<ul>
+<li><code>Load</code>して</li>
+<li>オプション: <code>Segmentation</code>（Threshold）して</li>
+<li><code>Volume Rendering</code>で、3D画像を再構築する。</li>
+<li>（Simple Segmentationを0,1のまま3D slicerにいれてみたけど、Volume renderingでは色の調節ができませんでした。0-255への変換を経たほうがいいようです。）</li>
+</ul>
 <hr />
 <h2 id="tips">Tips</h2>
 <p>2021-8-26</p>
