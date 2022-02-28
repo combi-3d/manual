@@ -703,8 +703,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-new-projectpixel-classificationilp15" class="md-nav__link">
-    Create New Projectより、Pixel Classification。プロジェクトファイル、拡張子ilpとして保存する。（右のカラムの1番から5番に従って進めます）
+  <a href="#create-new-projectpixel-classification" class="md-nav__link">
+    Create New Projectより、Pixel Classification
   </a>
   
 </li>
@@ -758,8 +758,28 @@
       
         <li class="md-nav__item">
   <a href="#imagejfijiphotoshop010255" class="md-nav__link">
-    ImageJ/FIJIまたはPhotoshopをつかって、「別のアプリで利用しやすい二値化画像（0,1ではなく、0,255）」にする。
+    ImageJ/FIJIまたはPhotoshopで、二値化画像を0,1から0,255にする
   </a>
+  
+    <nav class="md-nav" aria-label="ImageJ/FIJIまたはPhotoshopで、二値化画像を0,1から0,255にする">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imagejfiji" class="md-nav__link">
+    ImageJ/FIJIの場合
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#photoshop" class="md-nav__link">
+    Photoshopの場合
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -795,7 +815,11 @@
 <p><span style="color:#444C99;">ilastikは、セグメンテーションを機械学習で行うアプリです（Nature Methods, 2019）。機械学習の知識がなくても、操作できるようにデザインされています。<a href="https://www.ilastik.org/">https://www.ilastik.org</a>からダウンロードしてインストールします。CoMBIで撮影したフルカラーのブロック面画像で特定の構造物（関心領域）をSegmentationするのに良さそうです。「とある臓器に正常部位と傷害部位がある。正常部位だけSegmentationしたい」、これをお題に、手順を記します。日本語の簡単な手順書です。本家のサイトには詳しい英語説明ページ（<a href="https://www.ilastik.org/documentation/index.html">Documentation</a>）があります。</span></p>
 <hr />
 <h2 id="precedure">Precedure</h2>
-<h3 id="create-new-projectpixel-classificationilp15">Create New Projectより、<code>Pixel Classification</code>。プロジェクトファイル、拡張子ilpとして保存する。（右のカラムの1番から5番に従って進めます）</h3>
+<h3 id="create-new-projectpixel-classification">Create New Projectより、<code>Pixel Classification</code></h3>
+<ul>
+<li>プロジェクトファイル、拡張子ilpとして保存する。</li>
+<li>この後は、右のカラムの1番から5番に従って進めます。</li>
+</ul>
 <h3 id="1-input-data">「1. Input Data」</h3>
 <ul>
 <li>学習させるための画像を開く。CoMBIの連続画像のうち、標本全体や実験群全体を代表するような数枚を選ぶ。2〜4枚で行った。<code>Drag and Drop</code> または、プルダウンメニュー<code>Add New</code>&gt; <code>Add separate image(s)</code></li>
@@ -832,14 +856,14 @@
 </ul>
 </li>
 </ul>
-<p><img alt="Export Settings" src="../img/ilastik_export.png" title="Export" /> <br>
-<i> Export Settings, Default (left) settings and settings for Simple Segmentation&gt;TIFF&gt;unsigned8bit&gt;export folder (right).</i></p>
+<p><img alt="Export Settings" src="../img/ilastik_export.png" title="Export" /> </p>
+<p><em>Export Settings, Default (left) settings and settings for Simple Segmentation, TIFF, Unsigned 8bit, and Select folder (right).</em></p>
 <h3 id="5-batch-processing">「5. Batch Processing」</h3>
 <ul>
 <li><code>Select RAW Data Files</code>より、連続画像を選ぶ。Shiftを押しながら、複数画像を選択する。</li>
 <li>左カラムのボタン、<code>Process all files</code>。しばらく待つ。結構時間が掛かる。数百枚で行おうとしたとき、途中でフリーズしたし、変換されない画像があったり（抜け落ちたり）もした。マシンパワーに自信がなければ、少しずつ（100枚ずつなど）やってみるとうまくいく。<ul>
 <li>Simple Segmentationの場合、出力されたtifファイルは、一見真っ黒である。一般の画像8bitでは、ピクセルは輝度0-255を持つ。Simple Segmentationでは、二値化され（Renormalizeされなかった）画像は、0と1になっている。8bitで表記すると、00000000と00000001になっている。それぞれ、Training時のデフォルトLabelsのうち、Label1-黄色と、Label2-青色である。ImageJ/FIJIで開いて、カーソル位置の値をみると、Value1とValue2だけで構成された画像であることが確認できる。Finderで表示されるアイコンは真っ黒画像になるのでビックリするが、アイコンはそれでよい。のちに0,1を0,255に変換できる（下記）。</li>
-<li><code>Export Image Settings</code>で設定した条件はプロジェクトファイル（.ilp）には保存されないことがある。もし、「5」を、別の日、別のパソコンで実行する場合は、確認すること（macOS 11, ilastik 1.4.0b, 正式対応していないバージョンのせいか？）。</li>
+<li><code>Export Image Settings</code>で設定した条件はプロジェクトファイル（.ilp）には保存されないことがある。もし、「5. Batch Processing」を、別の日、別のパソコンで実行する場合は、設定を確認すること（macOS 11, ilastik 1.4.0b, 正式対応していないバージョンのせいか？）。</li>
 </ul>
 </li>
 </ul>
@@ -851,9 +875,10 @@
 <li>ファイルの種類<code>Kind</code>で並べ替えると、元画像（例 .jpeｇ）と、二値化した画像（例 ..._Simple Segmentation.tif）が分かれて並ぶ。</li>
 <li>二値化画像（.tif）だけ選んで、新しいフォルダに収める。</li>
 </ul>
-<h2 id="imagejfijiphotoshop010255">ImageJ/FIJIまたはPhotoshopをつかって、「別のアプリで利用しやすい二値化画像（0,1ではなく、0,255）」にする。</h2>
+<h2 id="imagejfijiphotoshop010255">ImageJ/FIJIまたはPhotoshopで、二値化画像を0,1から0,255にする</h2>
+<p>0, 255にしておくと、3D slicerで、3D再構築しやすいため。</p>
+<h3 id="imagejfiji">ImageJ/FIJIの場合</h3>
 <ul>
-<li>ImageJ/FIJIの場合<ul>
 <li><code>Image</code>&gt; <code>Adjust</code>&gt; <code>Threshold...</code>　（この作業は安定しない、数値入力ではじかれたり。下記のどれかうまくいくやつを探してください）<ul>
 <li><code>Dark Background</code>にチェックして、数値は<code>2, 255</code>。選択部位が白、背景が黒</li>
 <li>（チェックなしで、数値を、<code>0, 1</code>とすると、選択部位が黒、背景白になり、反転した画像になる）</li>
@@ -866,14 +891,12 @@
 <li>一枚だけ変換したい場合は、ここで<code>Save as</code>（うまくいけば、まっ黒にしか見えなかった画像・アイコンが、白黒画像・白黒アイコンになります。）</li>
 <li>連続画像を変換したい場合は、<code>Threshold</code>から<code>Apply</code>までを、Macroに記録し、Batch処理する）</li>
 </ul>
-</li>
-<li>Photoshopの場合<ul>
+<h3 id="photoshop">Photoshopの場合</h3>
+<ul>
 <li><code>Image</code>&gt; <code>Adjustments</code>&gt; <code>Threshold</code></li>
 <li>指定する数値は、<code>2</code></li>
 <li><code>Image</code>&gt; <code>Adjustments</code>&gt; <code>Invert</code>（黒バックになる。3D再構築用に）</li>
 <li>（ActionとBatchを使って連続画像を処理する。）</li>
-</ul>
-</li>
 </ul>
 <h2 id="3d-slicer">3D slicerで再構築</h2>
 <ul>
