@@ -745,22 +745,22 @@
 <li>それ以外の領域をLabel2青いペンで印を入れる。（例：傷害部位＋背景。）</li>
 <li>完全に塗りつぶす必要はないが、丁寧に印を入れれば入れるほど、結果が良くなる。</li>
 <li><code>Live Update</code>で結果を様子見しながら、作業できる。ただし、Liveオンのままでは、動作が鈍くなりがちです。</li>
-<li>オプション、Label1などの名称は、変更できます。</li>
-<li>メモ、Label1, Lable２などは、事項「4. Prediction Export」では、Channel1, Channel2などと呼ばれ、表記は「c」となります。複数のChannelをTIFFやHDFにすると、FIJIで開いたとき、Channel1, 2...となります。</li>
-<li>オプション、ボタン<code>Suggest Features</code>について：前項「2. Feature Selection」を3通り評価してくれる。いったん、Live OFFにして、ボタン<code>Suggest Features</code>で別ウィンドウが開く。 <code>Filter Method (recommended)</code>, Number of Feartures <code>0</code> (=auto), <code>Run Feature Selection</code>。しばらく待つ、けっこう待つ。プルダウンから、「自身で選んだチェック、自動チェック、全チェック」の3通りを比較/選択できる。自身のチェック以外を選び直したいときは、下段のボタン<code>Select Feature Set</code>を押す。上記では、Number of Featuresが、0=自動チェックの例だったが、ここで1-10のどれかを入力すると、例えば、3を入力するとsize 3通りなどを試してくれる。（Set Size Penaltyは、いじっていない、デフォルトの0.1。）　セグメンテーションの正確さと計算時間との兼ね合い、落としどころを見つける。このオブションはやらなくても進められる。</li>
+<li>オプション：Label1などの名称は、変更できます。</li>
+<li>メモ：Label1, Lable２などは、事項「4. Prediction Export」では、Channel1, Channel2などと呼ばれ、表記は「c」となります。複数のChannelをTIFFやHDFにすると、FIJIで開いたとき、Channel1, 2...となります。</li>
+<li>オプション：ボタン<code>Suggest Features</code>について。前項「2. Feature Selection」を3通り評価してくれる。いったん、Live OFFにして、ボタン<code>Suggest Features</code>で別ウィンドウが開く。 <code>Filter Method (recommended)</code>, Number of Feartures <code>0</code> (=auto), <code>Run Feature Selection</code>。しばらく待つ、けっこう待つ。プルダウンから、「自身で選んだチェック、自動チェック、全チェック」の3通りを比較/選択できる。自身のチェック以外を選び直したいときは、下段のボタン<code>Select Feature Set</code>を押す。上記では、Number of Featuresが、0=自動チェックの例だったが、ここで1-10のどれかを入力すると、例えば、3を入力するとsize 3通りなどを試してくれる。（Set Size Penaltyは、いじっていない、デフォルトの0.1。）　セグメンテーションの正確さと計算時間との兼ね合い、落としどころを見つける。このオブションはやらなくても進められる。</li>
 </ul>
 </li>
 <li>
 <p><strong>「4. Prediction Export」</strong> </p>
 <ul>
-<li>Source: とりあえず<code>Simple Segmentation</code>　白黒ハッキリした画像（二値化、2階調、1 bitの画像）になる。（デフォルトは<code>Probability</code>で、グレースケール画像になる。後に使用するアプリ（FIJI or Photoshop?）によって、ファイル形式(HDF5 or TIFF?)を選ぶ必要がある（後述）。）</li>
+<li>Source: デフォルトは<code>Probability</code>で、グレースケール画像になる。<code>Simple Segmentation</code>は、白黒ハッキリした画像（二値化、2階調、1 bitの画像）になる。</li>
 <li>ボタン<code>Choose Export Image Settings</code>より、<ul>
-<li>yxcでは、すべてチェックするとLabel1, 2がChannel1,2となる。らしい。Label1だけでよいときは、「c」のチェックを外して、start 0, stop 1にする。</li>
-<li>Transformation, Convert to Data Type: <code>unsigned 8-bit</code></li>
-<li>Transformation, Renormalize...: 黒白を、0, 1から0, 255へ配置、（できるはずがうまく働かない、あとでPhotoshopかImageJ/FIJIで変換した。）</li>
-<li>Output File Info, Format: <code>tif</code> がよいでしょう。白黒ハッキリしたいので。たぶんJPEGでは境界がへんになりそう。</li>
-<li>File: では、保存先を指定する。デフォルトの<code>{dataset_dir}/{nickname}_{result_type}.tif</code>を入力すると、出力<code>Export</code>されるファイルは、「同じフォルダに保存され、同じファイル名プラス_Simple Segmentation.tif」になる。もし、別のフォルダを指定したい場合、<code>{dataset_dir}</code>のところに、そのアドレスを指定<code>Select...</code>し、<code>slash</code>の後に、デフォルトのファイル名様式<code>{nickname}_{result_type}.tif</code>をおすすめします。アドレス指定後に、ファイル名の様式を入力する必要があります。</li>
-<li>CoMBIの連続画像に同一処理のセグメンテーション作業を施したい場合：　ここの<code>Export</code>は使用しません。次の項目「5. Batch Processing」へ進む。</li>
+<li>yxc: Label1だけ指定してExportするには、「c」のチェックを外して、start 0, stop 1にする。Label2指定なら、1,2とする。（ただし、このLabel指定はProbabilityでのみ有効。Simple Segmentatinでは効かない。バグ？macOS12, ilastik1_4_0b。「c」のチェックをONにすると、出力結果が不安定だった。3-labelsで検証したとき、ProbabilityではRGBになり、Simple Segmentationでは0,1,2になった。別の日には、Channelに入ったこともあった。Channelになると、PhotoshopではLayerになったり、開けなかったりする。）</li>
+<li>Transformation, Convert to Data Type: <code>unsigned 8-bit</code>。TIFFで普通の階調数。16bitなどへ増やせるけど、Segmentationデータなので必要ないと思います。</li>
+<li>Transformation, Renormalize...: Probabilityでは、チェックONが必須（OFFにすると二値化するため）。Simple Segmentationでは、チェックOFFが必須（ONにすると真っ白になったり、ただ効かなかったりする。あとでPhotoshopかImageJ/FIJIで変換する。）</li>
+<li>Output File Info, Format: <code>tif</code>または<code>tiff</code>がよいでしょう。たぶんJPEGでは境界がへんになりそうです。</li>
+<li>File: では、保存先を指定する。デフォルトの<code>{dataset_dir}/{nickname}_{result_type}.tif</code>を入力すると、出力<code>Export</code>されるファイルは、「同じフォルダに保存され、同じファイル名プラス_Simple Segmentation.tif」などになる。もし、別のフォルダを指定したい場合、ボタン<code>Select...</code>より、フォルダを指定し、<code>slash</code>の後に、デフォルトのファイル名様式<code>{nickname}_{result_type}.tif</code>を入力します。アドレス指定後に、デフォルトのファイル名様式は全部消えてしまうので、改めてファイル名様式を手入力する必要があります。</li>
+<li>CoMBIの大量の連続画像に同一のセグメンテーション処理を施す場合は、ここの<code>Export</code>は使用しません。次の項目「5. Batch Processing」へ進んでください。</li>
 <li>Trainingに使用した数枚の画像だけで、セグメンテーション画像が欲しい場合：　上カラムの<code>Export</code>ボタンまたは左の<code>Export All</code>ボタンを押すと、セグメンテーション画像を保存できます。</li>
 </ul>
 </li>
@@ -836,12 +836,12 @@
 <li>Featureでは、Colorを重視し、EdgeとTextureは少なめに選択するなど、目的に合わせると同時に動作を軽くした。</li>
 <li>3D slicerで表示するとき、Segmentation by iLastikは200x300を使用し、MPRやVRは400x600などの高画質を使用した。解像度が異なっても、XYZサイズを入力すれば正確に重ねられる。iLastik作業を軽くすると同時に、VR, MPRは高画質で示せた。</li>
 </ul>
-<p>2022-2-25</p>
+<p>2022-2-25　（下記のうちTIFFの症状は再現できず。2022-2-28、下記）</p>
 <ul>
 <li>「4. Prediction Export」で、Probabilityを出力した。Simple Segmentation（二値化した画像）とは異なり、グラデーションのあるグレースケール画像になる。画像形式では、tifかHDF5にする。</li>
 <li>のちにPhotoshopを使う場合は、tifで、FIJIで開く場合はHDF5。</li>
 <li>Convertでは、sign-8bit (0-255), sign-16bit (0-65535), unsign-16bit (-32768 - +32768), floating-32bitいろいろある。</li>
-<li>Photoshop用のtifなら、floating-32bitを選ぶ。もしくは、チェックしない（デフォルトでfloating32bitになる）。Photoshopで開くと、レイヤーとしてProbabilityの像が表示される。ふつうの画像にする場合は、Layer&gt;Flatten。（floating-32bit以外を選ぶと、空っぽの画像ファイルになり、Photoshopでは、なんにもなしのレイヤーができるだけ）</li>
+<li>Photoshop用のtifなら、floating-32bitを選ぶ。もしくは、チェックしない（デフォルトでfloating32bitになる）。Photoshopで開くと、レイヤーとしてProbabilityの像が表示される。ふつうの画像にする場合は、Layer&gt;Flatten。（floating-32bit以外を選ぶと、空っぽの画像ファイルになり、Photoshopでは、なんにもなしのレイヤーができるだけ。）</li>
 <li>FIJI用のHDF5なら、チェックなし（デフォルトのfloating-32bit）。</li>
 <li>FIJIでHDF5を開く前に、iLastik提供のプラグインが必要。
     Help&gt; ImageJ Updater
@@ -855,6 +855,13 @@
     反転画像もあって、2枚として開いている。
     普通の画像に変換するには、まず、8bitに変換、TIFFででも保存。
     ただし、Save as TIFFからは、最初の一枚しか保存できない。白バックにグレーのProbabilityのみ。表示を変えていてもだめ。それで良ければ良い。もし、白バックも黒バック（反転像）も直接保存したい場合は、Save as Image Sequenceから、TIFFへ。末尾に01, 02がついて、2枚の画像が書き出される。</li>
+</ul>
+<p>2021-2-28　上記の症状は再現できないが、TIFFでできることが分かった</p>
+<ul>
+<li>Label1,2...が、Channel1,2...となることに気づいた。</li>
+<li>Probabilityの場合。Exportで、Label (Channel)をひとつだけ指定できた。0,1を0,255へ変換できた。Channelを複数を指定すると適当な着色がなされる、Label3種はR,G,Bになった。</li>
+<li>Simple Segmentationの場合。バグか。Exportで、Label(Channel)を指定できない。Renormal（0,1を0,255へ変換）できない、真っ白一辺倒の画像ができてしまう場合がある。できたのは、Label(Channel)指定しない（チェックON）、かつRenormalしない（チェックOFF）とき、Label2種から0,1へ、Label3種から0,1,2へExportできた。</li>
+<li>いろいろTIFFでやってみて、PhotoshopでもFIJIでも素直に開けた。（Channelに入るという症状がなかった）</li>
 </ul>
                 
               
