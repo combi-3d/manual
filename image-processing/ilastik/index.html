@@ -703,43 +703,43 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-new-projectpixel-classification" class="md-nav__link">
-    Create New Projectより、Pixel Classification
+  <a href="#create-new-project" class="md-nav__link">
+    Create New Project
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#1-input-data" class="md-nav__link">
-    「1. Input Data」
+    1. Input Data
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#2-feature-selection" class="md-nav__link">
-    「2. Feature selection」
+    2. Feature selection
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#3-training" class="md-nav__link">
-    「3. Training」
+    3. Training
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#4-prediction-export" class="md-nav__link">
-    「4. Prediction Export」
+    4. Prediction Export
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#5-batch-processing" class="md-nav__link">
-    「5. Batch Processing」
+    5. Batch Processing
   </a>
   
 </li>
@@ -815,57 +815,71 @@
 <p><span style="color:#444C99;">ilastikは、セグメンテーションを機械学習で行うアプリです（Nature Methods, 2019）。機械学習の知識がなくても、操作できるようにデザインされています。<a href="https://www.ilastik.org/">https://www.ilastik.org</a>からダウンロードしてインストールします。CoMBIで撮影したフルカラーのブロック面画像で特定の構造物（関心領域）をSegmentationするのに良さそうです。「とある臓器に正常部位と傷害部位がある。正常部位だけSegmentationしたい」、これをお題に、手順を記します。日本語の簡単な手順書です。本家のサイトには詳しい英語説明ページ（<a href="https://www.ilastik.org/documentation/index.html">Documentation</a>）があります。</span></p>
 <hr />
 <h2 id="precedure">Precedure</h2>
-<h3 id="create-new-projectpixel-classification">Create New Projectより、<code>Pixel Classification</code></h3>
+<p>This is a simple procedure written in Japanese, to do "Choosing normal area and damaged area in a certain organ". My computer environment is macOS11 or 12, ilastik v1.4.0b. According to official site, this versions of OS and app are not fully work yet. In the Export Settings, Label/Channel may not be specified in some cases, or conversion from 0,1 to 0,255  (renormalize) may not work in certain cases.</p>
+<p><span style="color:#444C99;">例題として「とある臓器に再生部位と傷害残存部位がある。再生部位だけSegmentationしたい」、これの手順を簡潔に記します。作業環境は、macOS11 or 12, iLastik v1.4.0bで、公式にはフルサポートしていないバージョンの組み合わせです。Export設定において、Label/Channelの指定ができない場合があったり、0,1&gt;0,255変換ができない場合があるようです。</span></p>
+<h3 id="create-new-project">Create New Project</h3>
 <ul>
+<li>今回は、<code>Pixel Classification</code></li>
 <li>プロジェクトファイル、拡張子ilpとして保存する。</li>
 <li>この後は、右のカラムの1番から5番に従って進めます。</li>
 </ul>
-<h3 id="1-input-data">「1. Input Data」</h3>
+<h3 id="1-input-data">1. Input Data</h3>
 <ul>
-<li>学習させるための画像を開く。CoMBIの連続画像のうち、標本全体や実験群全体を代表するような数枚を選ぶ。2〜4枚で行った。<code>Drag and Drop</code> または、プルダウンメニュー<code>Add New</code>&gt; <code>Add separate image(s)</code></li>
+<li>学習させるための画像を開く。<code>Drag and Drop</code> または、プルダウンメニュー<code>Add New</code>&gt; <code>Add separate image(s)</code></li>
+<li>CoMBIの連続画像（500-1000枚がCoMBIでは典型的）のうち、標本全体や実験群全体を代表するような数枚を選ぶ。2〜4枚がおすすめ。</li>
+<li>枚数は、多すぎると処理が遅くなり、少なすぎると正確性が劣る。</li>
+<li>どの画像が良いか、最初は分からない。一度やってみて、結果に満足しなければ、もう一度やっている。2回目でたいてい成功する。</li>
 </ul>
-<h3 id="2-feature-selection">「2. Feature selection」</h3>
+<h3 id="2-feature-selection">2. Feature selection</h3>
 <ul>
 <li>全部にチェックするので良いが、マシンパワー（おもにCPU）による。色と明るさ、輪郭線、テクスチャ（模様、行列）を計算してくれるらしい。</li>
 <li>「Core i9, HBM2-2GB, メモリ32GB」では全部チェックした。「Core i5, 内蔵グラフィクス、メモリ8GB」では、チェック項目を減らした。σとびとびで半分にチェック。シグマは、認識させたい構造物が小さいか大きいかを決める設定値。</li>
 <li>（左カラム下方に、各種フィルタがかかった画像リストがでてくる。クリックすると画像を確認できる。）</li>
-<li>（最初は、どうすればいいのかさっぱり分からない作業です。とりあえず、飛ばし飛ばしで半数にチェックするくらいで進めてください。次のステップ「3. Training」において、推奨チェックを自動で探してくれるオプションがあります。）</li>
+<li>（これも、最初はどうすればいいのかさっぱり分からない作業です。とりあえず、とびとびで半数にチェックすれば軽快に作業できる。結果をみて、チェックを増やすか、もしくは、次の項目「3. Training」の中に、推奨チェックを探してくれるオプションがあるので、それを利用してみるか、検討する。）</li>
 </ul>
-<h3 id="3-training">「3. Training」</h3>
+<h3 id="3-training">3. Training</h3>
 <ul>
-<li>Label1, Label2の二種類に塗り分けてみる。（デフォルトは2種類。追加して多種類できるがマシンパワーが必要）</li>
-<li>選び出したい領域を、Label1の黄色いペンで印をいれる。（例：正常部位。ペンの太さは、1〜7くらいで動作が軽い。太くなると計算時間が長くなる。）</li>
-<li>それ以外の領域をLabel2青いペンで印を入れる。（例：傷害部位＋背景。）</li>
-<li>完全に塗りつぶす必要はないが、丁寧に印を入れれば入れるほど、結果が良くなる。</li>
-<li><code>Live Update</code>で結果を様子見しながら、作業できる。ただし、Liveオンのままでは、動作が鈍くなりがちです。</li>
-<li>オプション：Label1などの名称は、変更できます。</li>
-<li>メモ：Label1, Lable２などは、事項「4. Prediction Export」では、Channel1, Channel2などと呼ばれ、表記は「c」となります。複数のChannelをTIFFやHDFにすると、FIJIで開いたとき、Channel1, 2...となる、場合があります。</li>
-<li>オプション：ボタン<code>Suggest Features</code>について。前項「2. Feature Selection」を3通り評価してくれる。いったん、Live OFFにして、ボタン<code>Suggest Features</code>で別ウィンドウが開く。 <code>Filter Method (recommended)</code>, Number of Feartures <code>0</code> (=auto), <code>Run Feature Selection</code>。しばらく待つ、けっこう待つ。プルダウンから、「自身で選んだチェック、自動チェック、全チェック」の3通りを比較/選択できる。自身のチェック以外を選び直したいときは、下段のボタン<code>Select Feature Set</code>を押す。上記では、Number of Featuresが、0=自動チェックの例だったが、ここで1-10のどれかを入力すると、例えば、3を入力するとsize 3通りなどを試してくれる。（Set Size Penaltyは、いじっていない、デフォルトの0.1。）　セグメンテーションの正確さと計算時間との兼ね合い、落としどころを見つける。このオブションはやらなくても進められる。</li>
+<li>Label1, Label2の二種類に塗り分ける。（メモ：デフォルトは2種類。追加して多種類できるがマシンパワーが必要。Label1などの名称は、長押しで変更できる。）</li>
+<li>選び出したい領域を、Label1の黄色いペンで印をいれる。（例：再生部位。ペンの太さは、1〜7くらいが動作が軽い。太くなると計算時間が長くなる。）</li>
+<li>それ以外の領域をLabel2青いペンで印を入れる。（例：傷害部位と周辺OCTの両方）</li>
+<li>完全に塗りつぶす必要はない。公式動画参照。丁寧に印を入れれば入れるほど、結果が良くなる。とくに境界線で丁寧に。</li>
+<li>ボタン<code>Live Update</code>をONにすると、Segmentationの結果を見ながら、作業できる。ただし、Live Update ONのままでは、動作が鈍くなりがちです。</li>
+<li>オプション：ボタン<code>Suggest Features</code>は必須ではない。前項「2. Feature Selection」を3通り評価し、自身のチェックがよかったかどうか、判断できる。<ul>
+<li>いったん、Live OFFにして、ボタン<code>Suggest Features</code>で別ウィンドウが開く。 </li>
+<li><code>Filter Method (recommended)</code>, Number of Feartures <code>0</code> (=auto), <code>Run Feature Selection</code>。Number of Featuresを変更することもできる。0=自動チェック以外に、数値1〜10のどれかを入力する。例えば、3を入力するとsize 3通りなどを試してくれる。Set Size Penaltyは、まだ検証しておらず、デフォルトの0.1を利用している。セグメンテーションの正確さと計算時間との兼ね合い、落としどころを見つける。このオブションはやらなくても進められる。</li>
+<li>しばらく待つ、けっこう待つ。</li>
+<li>プルダウンから、「自身で選んだチェック、自動チェック、全チェック」の3通りを比較/選択できる。もし、2. Feature selectionにおいて自身でチェックしたパターンから、変更しほうが良さそうであれば、下段のボタン<code>Select Feature Set</code>を押して変更を決定する。変更する必要がなければ、Cancelでよい。</li>
+<li>（チェックが増えると、Segmentationの正確性が向上するが、処理に時間が掛かる。折り合いを付ける。）</li>
 </ul>
-<h3 id="4-prediction-export">「4. Prediction Export」</h3>
+</li>
+<li>（メモ：Label1, Lable2などは、事項「4. Prediction Export」では、Channel1, Channel2などと呼ばれ、表記は「c」となる。複数のChannelをTIFFやHDFにすると、ImageJ/FIJIで開いたとき、Channel1, 2...となる、場合がある。）</li>
+</ul>
+<h3 id="4-prediction-export">4. Prediction Export</h3>
 <ul>
 <li>Source: デフォルトは<code>Probability</code>で、グレースケール画像になる。<code>Simple Segmentation</code>は、白黒ハッキリした画像（二値化、2階調、1 bitの画像）になる。</li>
 <li>ボタン<code>Choose Export Image Settings</code>より、<ul>
-<li>yxc: Label1だけ指定してExportするには、「c」のチェックを外して、start 0, stop 1にする。Label2指定なら、1,2とする。（ただし、このLabel指定はProbabilityでのみ有効。Simple Segmentatinでは効かない。バグ？macOS12, ilastik1_4_0b。「c」のチェックをONにすると、出力結果が不安定だった。3-labelsで検証したとき、ProbabilityではRGBになり、Simple Segmentationでは0,1,2になった。別の日には、Channelに入ったこともあった。Channelになると、PhotoshopではLayerになったり、開けなかったりする。）</li>
-<li>Transformation, Convert to Data Type: <code>unsigned 8-bit</code>。TIFFで普通の階調数。16bitなどへ増やせるけど、Segmentationデータなので必要ないと思います。</li>
-<li>Transformation, Renormalize...: Probabilityでは、チェックONが必須（OFFにすると二値化するため）。Simple Segmentationでは、チェックOFFが必須（ONにすると真っ白になったり、ただ効かなかったりする。あとでPhotoshopかImageJ/FIJIで変換する。）</li>
-<li>Output File Info, Format: <code>tif</code>または<code>tiff</code>がよいでしょう。たぶんJPEGでは境界がへんになりそうです。</li>
-<li>File: では、保存先を指定する。デフォルトの<code>{dataset_dir}/{nickname}_{result_type}.tif</code>を入力すると、出力<code>Export</code>されるファイルは、「同じフォルダに保存され、同じファイル名プラス_Simple Segmentation.tif」などになる。もし、別のフォルダを指定したい場合、ボタン<code>Select...</code>より、フォルダを指定し、<code>slash</code>の後に、デフォルトのファイル名様式<code>{nickname}_{result_type}.tif</code>を入力します。アドレス指定後に、デフォルトのファイル名様式は全部消えてしまうので、改めてファイル名様式を手入力する必要があります。</li>
-<li>CoMBIの大量の連続画像に同一のセグメンテーション処理を施す場合は、ここの<code>Export</code>は使用しません。次の項目「5. Batch Processing」へ進んでください。</li>
-<li>Trainingに使用した数枚の画像だけで、セグメンテーション画像が欲しい場合：　上カラムの<code>Export</code>ボタンまたは左の<code>Export All</code>ボタンを押すと、セグメンテーション画像を保存できます。</li>
+<li>yxc: Label1だけ指定してExportするには、「c」のチェックを外して、start 0, stop 1にする。Label2指定なら、1,2とする。（ただし、このLabel指定はProbabilityでのみ有効。Simple Segmentatinでは効かない。OSとappのバージョンのせいかもしれない。「c」のチェックをONにすると、出力結果が不安定だった。3-labelsで検証したとき、ProbabilityではRGBになり、Simple Segmentationでは0,1,2になった。別の日には、Channelに入ったこともあった。Channelになると、PhotoshopではLayerになったり、開けなかったりする。）</li>
+<li>Transformation, Convert to Data Type: <code>unsigned 8-bit</code>。TIFFで普通の階調数。16bitなどへ増やせるけど、Segmentationデータなので必要ないと思う。</li>
+<li>Transformation, Renormalize...: <ul>
+<li>Probabilityでは、チェックONが必須（OFFにすると二値化されてしまう）</li>
+<li>Simple Segmentationでは、チェックOFFが必須（ONにすると真っ白になったり、ただ効かなかったりする。あとでPhotoshopかImageJ/FIJIで変換する）</li>
 </ul>
 </li>
+<li>Output File Info, Format: <code>tif</code>または<code>tiff</code>でいいだろう。JPEGでは境界がへんになりそう。</li>
+<li>File: では、保存先を指定する。デフォルトの<code>{dataset_dir}/{nickname}_{result_type}.tif</code>を入力すると、出力<code>Export</code>されるファイルは、「同じフォルダに保存され、同じファイル名プラス_Simple Segmentation.tif」などになる。もし、別のフォルダを指定したい場合、ボタン<code>Select...</code>より、フォルダを指定し、<code>\</code>の後に、デフォルトのファイル名様式<code>{nickname}_{result_type}.tif</code>を入力する。アドレス指定後に、デフォルトのファイル名様式は全部消えてしまうので、改めてファイル名様式を手入力する必要がある。</li>
+</ul>
+</li>
+<li>CoMBIの大量の連続画像に同一のセグメンテーション処理を施す場合は、ここの<code>Export</code>は使用しない。次の項目「5. Batch Processing」へ進む。</li>
+<li>Trainingに使用した数枚の画像だけで、セグメンテーション画像が欲しい場合：　上カラムの<code>Export</code>ボタンまたは左の<code>Export All</code>ボタンを押すと、セグメンテーション画像を保存できる。</li>
+<li><code>Export Image Settings</code>で設定した条件はプロジェクトファイル（.ilp）には保存されないことがある。もし、次項「5. Batch Processing」を、別の日、別のパソコンで実行する場合は、設定を確認すること（macOS 11, ilastik 1.4.0b, 正式対応していないバージョンのせいか？）。</li>
 </ul>
 <p><img alt="Export Settings" src="../img/ilastik_export.png" title="Export" /> </p>
 <p><em>Export Settings, Default (left) settings and settings for Simple Segmentation, TIFF, Unsigned 8bit, and Select folder (right).</em></p>
-<h3 id="5-batch-processing">「5. Batch Processing」</h3>
+<h3 id="5-batch-processing">5. Batch Processing</h3>
 <ul>
 <li><code>Select RAW Data Files</code>より、連続画像を選ぶ。Shiftを押しながら、複数画像を選択する。</li>
-<li>左カラムのボタン、<code>Process all files</code>。しばらく待つ。結構時間が掛かる。数百枚で行おうとしたとき、途中でフリーズしたし、変換されない画像があったり（抜け落ちたり）もした。マシンパワーに自信がなければ、少しずつ（100枚ずつなど）やってみるとうまくいく。<ul>
+<li>左カラムのボタン、<code>Process all files</code>。しばらく待つ。結構時間が掛かる。数百枚で行おうとしたとき、途中でフリーズしたし、変換されない画像があったり（抜け落ちたり）もした。マシンパワーに自信がなければ、少しずつ（100枚ずつなど）やってみるとうまくいく。</li>
 <li>Simple Segmentationの場合、出力されたtifファイルは、一見真っ黒である。一般の画像8bitでは、ピクセルは輝度0-255を持つ。Simple Segmentationでは、二値化され（Renormalizeされなかった）画像は、0と1になっている。8bitで表記すると、00000000と00000001になっている。それぞれ、Training時のデフォルトLabelsのうち、Label1-黄色と、Label2-青色である。ImageJ/FIJIで開いて、カーソル位置の値をみると、Value1とValue2だけで構成された画像であることが確認できる。Finderで表示されるアイコンは真っ黒画像になるのでビックリするが、アイコンはそれでよい。のちに0,1を0,255に変換できる（下記）。</li>
-<li><code>Export Image Settings</code>で設定した条件はプロジェクトファイル（.ilp）には保存されないことがある。もし、「5. Batch Processing」を、別の日、別のパソコンで実行する場合は、設定を確認すること（macOS 11, ilastik 1.4.0b, 正式対応していないバージョンのせいか？）。</li>
-</ul>
-</li>
 </ul>
 <hr />
 <h2 id="_1">ファイル・フォルダを整理する</h2>
@@ -876,7 +890,7 @@
 <li>二値化画像（.tif）だけ選んで、新しいフォルダに収める。</li>
 </ul>
 <h2 id="imagejfijiphotoshop010255">ImageJ/FIJIまたはPhotoshopで、二値化画像を0,1から0,255にする</h2>
-<p>0, 255にしておくと、3D slicerで、3D再構築しやすいため。</p>
+<p>0,255にしておくと、3D slicerで、3D再構築しやすいため。</p>
 <h3 id="imagejfiji">ImageJ/FIJIの場合</h3>
 <ul>
 <li><code>Image</code>&gt; <code>Adjust</code>&gt; <code>Threshold...</code>　（この作業は安定しない、数値入力ではじかれたり。下記のどれかうまくいくやつを探してください）<ul>
