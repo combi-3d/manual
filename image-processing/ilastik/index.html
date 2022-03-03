@@ -811,7 +811,7 @@
                 
                 
                 <h1 id="segmentation-by-ilastik">Segmentation by ilastik</h1>
-<p>ilastik is an application for segmentation by machine learning (Nature Methods, 2019). It is designed so that biologists can operate without any knowledge of machine learning. For installation, visit developer's site <a href="https://www.ilastik.org/">https://www.ilastik.org</a>. It seems to be suitable for segmentation of specific structures (regions of interest) in full-color blockface images obtained by CoMBI. Here is a simple procedure written in Japanese, to do "Choosing normal area and damaged area in a certain organ". There is a detailed documentation in English in the official site (<a href="https://www.ilastik.org/documentation/index.html">Documentation</a>).</p>
+<p>ilastik is an application for segmentation by machine learning (Nature Methods, 2019). It is designed so that biologists can operate without any knowledge of machine learning. iLastik seems to be suitable for processing full-color blockface images obtained by CoMBI. For installation, visit developer's site <a href="https://www.ilastik.org/">https://www.ilastik.org</a>. Here is a simple procedure written in Japanese, to do "Choosing regenerated area and damaged area in a certain organ". There is a detailed documentation in English in the official site (<a href="https://www.ilastik.org/documentation/index.html">Documentation</a>).</p>
 <p><span style="color:#444C99;">ilastikは、セグメンテーションを機械学習で行うアプリです（Nature Methods, 2019）。機械学習の知識がなくても、操作できるようにデザインされています。<a href="https://www.ilastik.org/">https://www.ilastik.org</a>からダウンロードしてインストールします。CoMBIで撮影したフルカラーのブロック面画像で特定の構造物（関心領域）をSegmentationするのに良さそうです。「とある臓器に正常部位と傷害部位がある。正常部位だけSegmentationしたい」、これをお題に、手順を記します。日本語の簡単な手順書です。本家のサイトには詳しい英語説明ページ（<a href="https://www.ilastik.org/documentation/index.html">Documentation</a>）があります。</span></p>
 <hr />
 <h2 id="procedure">Procedure</h2>
@@ -869,7 +869,7 @@
 </thead>
 <tbody>
 <tr>
-<td>(Image type)</td>
+<td>(Purpose)</td>
 <td>(grayscale)</td>
 <td>(binary)</td>
 </tr>
@@ -921,9 +921,9 @@
 </ul>
 <h3 id="5-batch-processing">5. Batch Processing</h3>
 <ul>
-<li><code>Select RAW Data Files</code>より、連続画像を選ぶ。Shiftを押しながら、複数画像を選択する。</li>
-<li>左カラムのボタン、<code>Process all files</code>。しばらく待つ。結構時間が掛かる。数百枚で行おうとしたとき、途中でフリーズしたし、変換されない画像があったり（抜け落ちたり）もした。マシンパワーに自信がなければ、少しずつ（100枚ずつなど）やってみるとうまくいく。</li>
-<li>Simple Segmentationの場合、出力されたtifファイルは、一見真っ黒である。一般の画像8bitでは、ピクセルは輝度0-255を持つ。Simple Segmentationでは、二値化され（Renormalizeされなかった）画像は、0と1になっている。8bitで表記すると、00000000と00000001になっている。それぞれ、Training時のデフォルトLabelsのうち、Label1-黄色と、Label2-青色である。ImageJ/FIJIで開いて、カーソル位置の値をみると、Value1とValue2だけで構成された画像であることが確認できる。Finderで表示されるアイコンは真っ黒画像になるのでビックリするが、アイコンはそれでよい。のちに0,1を0,255に変換できる（下記）。</li>
+<li><code>Select RAW Data Files</code>より、連続画像を選ぶ。Shiftを押しながら、複数画像を選択する。または、ドラッグ＆ドロップ。</li>
+<li>左カラムのボタン、<code>Process all files</code>。しばらく待つ。結構時間が掛かる。数百枚を一気に行うと、途中でフリーズしたり、変換されない画像がでたり（抜け落ちたり）した。少しずつやってみるとよい。経験上、100枚ずつなら失敗なし、200枚でも抜け落ちないときがあった。</li>
+<li>Simple Segmentationの場合、出力されたtifファイルは、一見真っ黒である。一般の画像8bitでは、ピクセルは輝度0-255を持つ。Simple Segmentationでは、二値化され、画像は、0と1になっている。8bitで表記すると、00000000と00000001になっている。それぞれ、Training時のデフォルトLabelsのうち、Label1-黄色と、Label2-青色である。ImageJ/FIJIで開いて、カーソル位置の値をみると、Value1とValue2だけで構成された画像であることが確認できる。Finderで表示されるアイコンは真っ黒画像になるのでビックリするが、アイコンはそれでよい。のちに0,1を0,255に変換できる（下記）。直接Renormalize 0, 255するメニューはあるが、SimpleSegmentationでは効かなかった（上記 4.Prediction Export）。</li>
 </ul>
 <hr />
 <h2 id="_1">ファイル・フォルダを整理する</h2>
@@ -958,8 +958,8 @@
 </ul>
 <h2 id="3d-slicer">3D slicerで再構築</h2>
 <ul>
-<li><code>Load</code>して</li>
-<li>オプション: <code>Segmentation</code>（Threshold）して</li>
+<li><code>Load</code>, <code>Any data</code></li>
+<li>オプション: <code>Segmentation</code>（Threshold）してもよい。数値化などの目的があれば。</li>
 <li><code>Volume Rendering</code>で、3D画像を再構築する。</li>
 <li>（Simple Segmentationを0,1のまま3D slicerにいれてみたけど、Volume renderingでは色の調節ができなかった。0-255への変換するのがよい。）</li>
 </ul>
