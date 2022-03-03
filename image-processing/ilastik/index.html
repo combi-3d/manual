@@ -857,24 +857,68 @@
 <h3 id="4-prediction-export">4. Prediction Export</h3>
 <ul>
 <li>Source: デフォルトは<code>Probability</code>で、グレースケール画像になる。<code>Simple Segmentation</code>は、白黒ハッキリした画像（二値化、2階調、1 bitの画像）になる。</li>
-<li>ボタン<code>Choose Export Image Settings</code>より、<ul>
-<li>yxc: Label1だけ指定してExportするには、「c」のチェックを外して、start 0, stop 1にする。Label2指定なら、1,2とする。（ただし、このLabel指定はProbabilityでのみ有効。Simple Segmentatinでは効かない。OSとappのバージョンのせいかもしれない。「c」のチェックをONにすると、出力結果が不安定だった。3-labelsで検証したとき、ProbabilityではRGBになり、Simple Segmentationでは0,1,2になった。別の日には、Channelに入ったこともあった。Channelになると、PhotoshopではLayerになったり、開けなかったりする。）</li>
-<li>Transformation, Convert to Data Type: <code>unsigned 8-bit</code>。TIFFで普通の階調数。16bitなどへ増やせるけど、Segmentationデータなので必要ないと思う。</li>
-<li>Transformation, Renormalize...: <ul>
-<li>Probabilityでは、チェックONが必須（OFFにすると二値化されてしまう）</li>
-<li>Simple Segmentationでは、チェックOFFが必須（ONにすると真っ白になったり、ただ効かなかったりする。あとでPhotoshopかImageJ/FIJIで変換する）</li>
-</ul>
+<li>
+<p>ボタン<code>Choose Export Image Settings</code>より、</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Probability</th>
+<th>Simple Segmentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(Image type)</td>
+<td>(grayscale)</td>
+<td>(binary)</td>
+</tr>
+<tr>
+<td>"c" in yxc</td>
+<td><b>OFF</b> to select label <br> (ON unstable)</td>
+<td><b>ON</b>  <br> (OFF doesn't work)</td>
+</tr>
+<tr>
+<td>Convert to Data Type</td>
+<td>unsigned 8-bit</td>
+<td>unsigned 8-bit</td>
+</tr>
+<tr>
+<td>Renormalize</td>
+<td><b>ON</b>   <br> (OFF creates binary images)</td>
+<td><b> OFF</b>  <br> (ON unstable)</td>
+</tr>
+<tr>
+<td>Format</td>
+<td>TIFF or TIF</td>
+<td>TIFF or TIF</td>
+</tr>
+<tr>
+<td>File</td>
+<td><code>{dataset_dir}/{nickname}_{result_type}.tiff</code><br> or <code>selected folder/{nickname}_{result_type}.tiff</code></td>
+<td><code>{dataset_dir}/{nickname}_{result_type}.tiff</code><br> or <code>selected folder/{nickname}_{result_type}.tiff</code></td>
+</tr>
+</tbody>
+</table>
+<p><em>Table: Settigns of my favorite. Some are nessesory to avoid possible bugs, others are variable as you like.</em></p>
+<p><img alt="Export Settings" src="../img/ilastik_export.png" title="Export" /> </p>
+<p><em>Fig. Export Settings, Default (left) settings and settings for Simple Segmentation, TIFF, Unsigned 8bit, and Select folder (right).</em></p>
 </li>
-<li>Output File Info, Format: <code>tif</code>または<code>tiff</code>でいいだろう。JPEGでは境界がへんになりそう。</li>
-<li>File: では、保存先を指定する。デフォルトの<code>{dataset_dir}/{nickname}_{result_type}.tif</code>を入力すると、出力<code>Export</code>されるファイルは、「同じフォルダに保存され、同じファイル名プラス_Simple Segmentation.tif」などになる。もし、別のフォルダを指定したい場合、ボタン<code>Select...</code>より、フォルダを指定し、<code>\</code>の後に、デフォルトのファイル名様式<code>{nickname}_{result_type}.tif</code>を入力する。アドレス指定後に、デフォルトのファイル名様式は全部消えてしまうので、改めてファイル名様式を手入力する必要がある。</li>
 </ul>
-</li>
+<p><br></p>
+<blockquote>
+<p>yxc: Label1だけ指定してExportするには、「c」のチェックを外して、start 0, stop 1にする。Label2指定なら、1,2とする。（ただし、このLabel指定はProbabilityでのみ有効。Simple Segmentatinでは効かない。OSとappのバージョンのせいかもしれない。「c」のチェックをONにすると、出力結果が不安定だった。3-labelsで検証したとき、ProbabilityではRGBになり、Simple Segmentationでは0,1,2になった。別の日には、Channelに入ったこともあった。Channelになると、PhotoshopではLayerになったり、開けなかったりする。）</p>
+<p>Transformation, Convert to Data Type: <code>unsigned 8-bit</code>。TIFFで普通の階調数。16bitなどへ増やせるけど、Segmentationデータなので必要ないと思う。</p>
+<p>Transformation, Renormalize...: Probabilityでは、チェックONが必須（OFFにすると二値化されてしまう）。Simple Segmentationでは、チェックOFFが必須（ONにすると真っ白になったり、ただ効かなかったりする。あとでPhotoshopかImageJ/FIJIで変換する）</p>
+<p>Output File Info, Format: <code>tif</code>または<code>tiff</code>でいいだろう。JPEGでは境界がへんになりそう。</p>
+<p>File: では、保存先を指定する。デフォルトの<code>{dataset_dir}/{nickname}_{result_type}.tif</code>を入力すると、出力<code>Export</code>されるファイルは、「同じフォルダに保存され、同じファイル名プラス_Simple Segmentation.tif」などになる。もし、別のフォルダを指定したい場合、ボタン<code>Select...</code>より、フォルダを指定し、<code>\</code>の後に、デフォルトのファイル名様式<code>{nickname}_{result_type}.tif</code>を入力する。アドレス指定後に、デフォルトのファイル名様式は全部消えてしまうので、改めてファイル名様式を手入力する必要がある。</p>
+</blockquote>
+<p><br></p>
+<ul>
 <li>CoMBIの大量の連続画像に同一のセグメンテーション処理を施す場合は、ここの<code>Export</code>は使用しない。次の項目「5. Batch Processing」へ進む。</li>
 <li>Trainingに使用した数枚の画像だけで、セグメンテーション画像が欲しい場合：　上カラムの<code>Export</code>ボタンまたは左の<code>Export All</code>ボタンを押すと、セグメンテーション画像を保存できる。</li>
 <li><code>Export Image Settings</code>で設定した条件はプロジェクトファイル（.ilp）には保存されないことがある。もし、次項「5. Batch Processing」を、別の日、別のパソコンで実行する場合は、設定を確認すること（macOS 11, ilastik 1.4.0b, 正式対応していないバージョンのせいか？）。</li>
 </ul>
-<p><img alt="Export Settings" src="../img/ilastik_export.png" title="Export" /> </p>
-<p><em>Export Settings, Default (left) settings and settings for Simple Segmentation, TIFF, Unsigned 8bit, and Select folder (right).</em></p>
 <h3 id="5-batch-processing">5. Batch Processing</h3>
 <ul>
 <li><code>Select RAW Data Files</code>より、連続画像を選ぶ。Shiftを押しながら、複数画像を選択する。</li>
