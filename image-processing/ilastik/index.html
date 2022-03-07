@@ -826,7 +826,7 @@
 <h3 id="1-input-data">1. Input Data</h3>
 <ul>
 <li>学習させるための画像を開く。<code>Drag and Drop</code> または、プルダウンメニュー<code>Add New</code>&gt; <code>Add separate image(s)</code></li>
-<li>CoMBIの連続画像（500-1000枚が典型的）のうち、標本全体や実験群全体を代表するような数枚を選ぶ。2〜4枚がおすすめ。</li>
+<li>CoMBIの連続画像（500-1000枚が典型的）のうち、標本全体や実験群全体を代表するような数枚を選ぶ。2〜4枚がおすすめ。（マシンパワーによる、iMac2017-4coreでは500x500x5枚まで。MBP2-21-M1maxなら、1000x1000x10枚まで。)</li>
 <li>枚数は、多すぎると処理が遅くなり、少なすぎると正確性が劣る。</li>
 <li>どの画像が良いか、最初は分からない。一度やってみて、結果に満足しなければ、もう一度やっている。2回目でたいてい成功する。</li>
 </ul>
@@ -997,12 +997,17 @@
     普通の画像に変換するには、まず、8bitに変換、TIFFででも保存。
     ただし、Save as TIFFからは、最初の一枚しか保存できない。白バックにグレーのProbabilityのみ。表示を変えていてもだめ。それで良ければ良い。もし、白バックも黒バック（反転像）も直接保存したい場合は、Save as Image Sequenceから、TIFFへ。末尾に01, 02がついて、2枚の画像が書き出される。</li>
 </ul>
-<p>2021-2-28　上記の症状は再現できないが、TIFFでできることが分かった</p>
+<p>2022-2-28　上記の症状は再現できないが、TIFFでできることが分かった</p>
 <ul>
 <li>Label1,2...が、Channel1,2...となることに気づいた。</li>
 <li>Probabilityの場合。Exportで、Label (Channel)をひとつだけ指定できた。0,1を0,255へ変換できた。Channelを複数を指定すると適当な着色がなされる、Label3種はR,G,Bになった。</li>
 <li>Simple Segmentationの場合。バグか。Exportで、Label(Channel)を指定できない。Renormal（0,1を0,255へ変換）できない、真っ白一辺倒の画像ができてしまう場合がある。できたのは、Label(Channel)指定しない（チェックON）、かつRenormalしない（チェックOFF）とき、Label2種から0,1へ、Label3種から0,1,2へExportできた。</li>
 <li>いろいろTIFFでやってみて、PhotoshopでもFIJIでも素直に開けた。（Channelに入るという症状がなかった）</li>
+</ul>
+<p>2022-3-4, 3-7</p>
+<ul>
+<li>快適に学習できる枚数。iMac2017-i7-4core: 500x500 pixels x　5枚。MacBookPro16-2021-M1mac-10core: 1000x1000 pixels x 10枚。</li>
+<li>手順案、1000枚の連続画像があるとき：学習5〜10枚、Exportテスト100枚、Export本番1000枚。段階的にやって、Segmentationの失敗箇所を確認・修正する。時間の節約になる。急がば回れ。</li>
 </ul>
                 
               
