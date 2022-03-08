@@ -1299,32 +1299,53 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <li>外付けディスクを保存先に指定する場合、ファイル右横のマーク<code>...</code>から指定すること。下の横長ボタン<code>Change directory for selected files</code>では、外付けディスクを指定できない。</li>
 </ul>
 <h3 id="_18">セグメンテーション</h3>
-<p>（まえもってiLastikで二値化連続画像をつくる方法もあります、iLastikのページに書きました。<a href="../ilastik/index.html">こちらの「Segmentation by iLastik」です</a>。この場合、3D slicerに読み込み、<code>Segmentation</code>, <code>Threshold</code>を使います。また、Photoshopなどで二値化連続画像をつくる方法もあります、Horosのページに書きました。<a href="../horos/index.html#3">こちらの「色域指定」です</a>）</p>
+<p>3D slicerではマニュアルでセグメンテーションしています。抽出したい対象物によっては、iLastikでSegmentationして、二値化やグレースケール連続画像を得ることもあります。こちらのページ<a href="../ilastik/index.html">「Segmentation by iLastik」</a>に記しました。また、Photoshopの「色域指定」で二値化連続画像をつくる方法もあります。Horosのページの中の<a href="../horos/index.html#3">「色域指定」</a>に記しました。これらの場合、二値化やグレースケール連続画像を3D slicerに読み込み、<code>Volume Rendering</code>を使います。<code>Segmentation</code>, <code>Threshold</code>も組み合わせることもあります。</p>
 <h4 id="_19">とりあえずはじめてみる</h4>
-<p><code>Paint</code>と<code>Fill between slices</code>だけを使った手作業の手順を示す。セグメンテーションの情報は、mrbファイルに一括して保存される。他にも領域限局やシグナル強度の範囲指定など、さまざまなモードが備わっている（練習中）。くわしくは、公式ホームページのDocumentや動画解説へおねがいします。公式以外にもネットでいろいろ見つかります。
-作業には、タッチペンがあるとよい。私はMacBookProにiPad（SideCar）をつなげ、Apple Penで描いています。Windowsノートなら元々タッチパネルの場合もあるでしょう。WindowsマシンにiPadをつなげるアプリもあるようです。</p>
+<ul>
+<li><code>Paint</code>と<code>Fill between slices</code>だけを使った手作業の手順を示します。Paint以外にも他にも領域限局やシグナル強度の範囲指定など、さまざまなモードが備わっていますが、CoMBIのフルカラー画像なら、基本の<code>Paint</code>と<code>Draw</code>が役立つでしょう。</li>
+<li>推奨の作業環境は、タッチペンです。私はMacBookPro15 2018, MacBookPro16 2021にiPad Pro 2018 A12X（SideCar）をつなげ、Apple Penで描いています。Windowsノートなら元々タッチパネルの場合があって便利そうです。WindowsマシンにiPadをつなげるアプリもいくつかあるようですが、私は試していません。</li>
+<li>Segmentaionのデータは、mrbファイルなら一括して保存されます。Segmentaionデータだけの独立ファイルとして保存することも選べます。その場合、別のmrbに移入させられます。Segmentation作業は必要最低限のデータセットで軽快に行い、本番用の重いデータセット（RGB, grayscale, ilastik, WT-Hetero-Knockoutなど）に移入させるといった使い方ができます。</li>
+</ul>
 <p><img alt="segmetation" src="../img/3dslicer_seg.png" /></p>
 <p><em>このようなのをつくっていく手順です</em></p>
-<ul>
-<li>モジュール<code>segmentation</code>, <code>segment editor</code></li>
-<li>ボタン<code>Add</code>で、新規セグメント<code>Segment_1</code>をつくる。名前は自由に。このときは大動脈を塗ることにした。</li>
-<li><code>Paint</code>で、大動脈を塗りつぶした。全画像で塗る必要はなく、10枚に1枚の画像で塗るとか、とびとびでよい。<code>Show 3D</code>ボタンを押しておくと、青画面（3D view）にリアルタイムで表示されていく。青画面には、Volume Renderingとセグメントと同時に表示できるが、動作が鈍くなる。塗りつぶし作業中はVolume renderingを表示しないでおき、ときどき確認のために表示させると良いでしょう。</li>
-<li><code>Draw</code>は、描いた線の内側をすべて塗りつぶすモードです。今回の輪状に塗りたいときは不向きです。使い方は、<code>Draw</code>+ <code>Return, Enter</code>です。Drawで線を描いたあとにリターンキーをおすと、その内部が塗りつぶされます。Drawのときは、円形でもいいですし、弧でもかまいません。PawerPointやIllustratorの、線と塗りつぶしの関係です。</li>
-<li><code>Erase</code>で塗りすぎたところは修正</li>
-<li><code>Fill between slices</code>で補完する</li>
-<li><code>Show 3D</code>で様子を見る。がたついていたら、<code>Paint</code>で修正をつづける。<code>Auto update</code>にチェックをいれて おくと、<code>Paint</code>の修正中に、<code>Fill between slices</code>の像に反映されていく。</li>
-<li><code>Apply</code>で完了</li>
-<li><code>Add</code>ボタンで、<code>Segment_2</code>もつくる。<code>Paint</code>で肺動脈もつくった。</li>
-<li><code>Segmentation</code>ボタンで、詳細設定、色や、透明度を変えられる。 (大動脈を赤、肺動脈を青に変えた)</li>
-<li><code>Edit selected</code>ボタンで、元にの塗るモードに戻る</li>
-<li>Volume Renderingとセグメントをかさねてみる。モジュール<code>Volume rendering</code>青画面へ表示ON。動作が鈍くなるので注意。</li>
-<li>モジュール<code>Segment Editor</code>にもどって、<code>Show 3D</code>でセグメントを青画面に表示または非表示する。</li>
-<li>アイコン<code>Camera-like mark</code>（Capture Screenshot）で、静止画に描き出した例</li>
+<ol>
+<li>モジュール<code>Segmentation</code>の場合、Active segmentation: より、Create new segmentation。モジュール<code>Segment editor</code>の場合、Segmentation: より、Create new segmentation。ここで作るSegmentationは、フォルダのようなもの。フォルダの中に複数のSegment（例、動脈と静脈）が収まる。二つのモジュール、<code>Segmentation</code>と<code>Segment editor</code>の間を行き来するには、ボタン<code>Segmentation...</code>やボタン<code>Edit selected</code>である。</li>
+<li>ボタン<code>Add segment</code>で、新規セグメント<code>Segment_1</code>をつくる。名前は自由に変えられる。このときは大動脈を塗ることにしたので、名称を「Artery」とした。</li>
+<li><code>Paint</code>で、大動脈を塗りつぶした。<ul>
+<li>全画像で塗る必要はなく、5枚に1枚とか、10枚に1枚の画像で塗るとか、とびとびでよい。のちに補完できるので（Fill between slices)。</li>
+<li>少々がたついていても大丈夫。のちに<code>Smooth</code>をかけるので。</li>
+<li><code>Show 3D</code>ボタンを押しておくと、青画面（3D view）にリアルタイムで表示されていく。さらに、モジュール<code>Volume Rendering</code>で、VR像も表示させると、セグメントと同時に確認できる。しかし、動作が鈍くなため、塗りつぶし作業中はShow 3D OFF, Volume rendering OFFとしておき、ときどき確認のために表示させている。</li>
+<li><code>Draw</code>は、描いた線の内側をすべて塗りつぶすモード。使い方は、<code>Draw</code>+ <code>Return, Enter</code>。Drawで線を描いたあとにリターンキーをおすと、その内部が塗りつぶされる。Drawのときは、円形でも、弧でもよい。PawerPointやIllustratorの、線と塗りつぶしの関係です。今回の例題、輪状に塗りたいときは<code>Draw</code>は不向きだったので、<code>Paint</code>を使った。</li>
 </ul>
+</li>
+<li><code>Erase</code>で塗りすぎたところは修正する</li>
+<li><code>Fill between slices</code>で補完<ol>
+<li><code>Initialize</code> すこし待つ</li>
+<li><code>Show 3D</code> ONで青画面に表示させる。スライドバーで描いたセグメントと補完したセグメントの透明度を調整し見やすくする</li>
+<li>がたつきがひどければ、<code>Paint</code>と<code>Erase</code>で修正する。<code>Auto update</code>にチェックをいれて おくと、修正中に、<code>Fill between slices</code>の像に反映されていく。</li>
+<li><code>Apply</code>で完了。もとには戻せないので、ちゃんと完成したと思ってから行う。（多少の修正は、<code>Erase</code>を使ったりして、あとでもできる）</li>
+<li>Apply後に修正が必要なら、<code>Erase</code>などで修正する。変な突起ができたり、近接構造が融合したりして、修正したことがある。</li>
+</ol>
+</li>
+<li>ボタン<code>Add segment</code>で、<code>Segment_2</code>もつくる。「Vein」と名称をつけて、<code>Paint</code>で肺動脈を塗った。</li>
+<li><code>Segmentation...</code>ボタンで、詳細設定、色や、透明度を変えられる。例では大動脈を赤、肺動脈を青に変えた。<code>Edit selected</code>ボタンで、元にの塗るモードに戻る。</li>
+<li><code>Smooth</code>で滑らかにする（モジュール<code>Segment Editor</code>）<ul>
+<li>Medianは、選択中のセグメントだけを処理する。Joint smoothingは、表示中のSegmentを処理する。</li>
+<li>Medianの設定では、長さを入力するが、となりに pixelsが表示される。1x1x1だと変化なし、3x3x1だとトゲがなくなる。7x7x7, 11x11x7などで滑らかになるが処理時間が長くなる。</li>
+<li>Joint smoothingの設定では、数値を入力する。0.4-0.5で、medianの11x11x7 pixelより強めの平滑化。処理時間は短い。</li>
+<li><code>Apply</code>で完了。</li>
+<li>効果が弱ければ、数値を増やしてもう一度行う。</li>
+<li>修正が必要なら、<code>Erase</code>などを使用する。</li>
+</ul>
+</li>
+<li>Volume Renderingとセグメントを重ねて表示し確認できる。モジュール<code>Volume rendering</code>、マーク<code>Eye</code>で、青画面への表示をON。動作が鈍くなるのでOFFにして作業に戻る。</li>
+<li>アイコン<code>Camera</code>（Capture Screenshot）で、静止画に描き出せる</li>
+<li>Saveのとき、一括ファイルか、Segmentationのみの個別ファイルかを選べる。別のプロジェクトへ移入させたいときは個別ファイルにする。</li>
+</ol>
 <h4 id="_20">工夫しながらやってみる</h4>
 <ul>
-<li>対象物によって、ツールを選びます。まず一度、セグメンテーションをおおざっぱにやってみて、使うツールや完成形の見通しをたてて、次に本番のセグメンテーションをやることが多いです。</li>
-<li>色や形がはっきりしていそうなら、<code>Level tracing</code>を使います。マウスポインターがある色と類似の色を島状に選択してくれます。<code>mouse over</code>+<code>Left click</code>。</li>
+<li>まず一度、セグメンテーションをおおざっぱにやってみて、使うツールや完成形の見通しをたてて、次に本番のセグメンテーションをやっています。</li>
+<li>色と形がはっきりしていれば、<code>Level tracing</code>を使います。マウスポインターがある色と類似の色を島状に選択してくれます。<code>mouse over</code>+<code>Left click</code>。CoMBIの画像ではあまり出番がありません。</li>
 <li>色が淡く、境界がぼんやりしている場合は、<code>Paint</code>, <code>Draw</code>, <code>Erase</code>を使います。</li>
 <li>塗る画像は等間隔（2, 5, 10枚ごと）のほうが、のちの修正がラク。画像めくりはキーボードの矢印キー。</li>
 <li>1面（赤画面）だけよりは、2面（緑か、黄）で塗ると仕上がりが良い。あいまいな境界を判定しやすい。3面でもよいが時間がかかる。</li>
@@ -1349,8 +1370,8 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <p>いちどズームイン・ズームアウトすると、効くようになることがあります。そのうちに効くようになることもあります。</p>
 </li>
 <li>
-<p>Drawが効かない</p>
-<p><code>Draw</code>で描いたあと<code>Retrun</code>を押しても反応しないときがあります。いちどズームイン・ズームアウトする。もしくは、ツールを矢印<code>None</code>に一旦切り替えてから、改めて<code>Draw</code>を選ぶと、効くようになることがあります。</p>
+<p>DrawやPaintが効かない</p>
+<p><code>Draw</code>で描いたあと<code>Retrun</code>を押しても反応しないときや、Paintが無反応になるときがあります。いちどズームイン・ズームアウトする。もしくは、ツールを矢印<code>None</code>に一旦切り替えてから、改めて<code>Draw</code>を選ぶと、効くようになることがあります。</p>
 </li>
 <li>
 <p>iPad, Side car, Apple penで表示位置が飛ぶ</p>
