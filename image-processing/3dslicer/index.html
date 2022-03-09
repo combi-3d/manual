@@ -997,10 +997,30 @@
     保存
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="保存">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_17" class="md-nav__link">
+    画像データも作業内容もひとつのファイルに保存する（公式サイトでは推奨）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    作業内容を個別に保存する（なにかとメリットはある）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
     セグメンテーション
   </a>
   
@@ -1015,14 +1035,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
+  <a href="#_20" class="md-nav__link">
     体積の数値を読む
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
+  <a href="#_21" class="md-nav__link">
     工夫やヒント
   </a>
   
@@ -1030,6 +1050,13 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d" class="md-nav__link">
+    3Dプリンタ
+  </a>
   
 </li>
         
@@ -1056,34 +1083,31 @@
 <h2 id="3d-slicer">3D slicerでやること</h2>
 <ol>
 <li>インストール</li>
-<li>DICOM編、アプリの操作に慣れる<ol>
-<li>DICOMデータ読込</li>
-<li>画面表示　B、R、G、Y　青、赤、緑、黄</li>
-<li>スライス閲覧</li>
-<li>拡大縮小</li>
-<li>移動</li>
-<li>CT値の調節</li>
-<li>青画面（3D View）</li>
-<li>スクリーンショット</li>
-</ol>
-</li>
-<li>CoMBI, JPEG編、本番です。<ol>
-<li>単位設定</li>
-<li>連続JPEG画像の準備</li>
-<li>ファイル名一括変換、必要に応じて</li>
-<li>連続画像の読み込み（Loadとよぶ）</li>
-<li>連続画像の設定</li>
-<li>Volume Rendering</li>
-<li>動画</li>
-<li>保存</li>
-<li>セグメンテーション、体積</li>
-</ol>
-</li>
+<li>DICOM編、アプリの操作に慣れる<br>
+    DICOMデータ読込<br>
+    画面表示　B、R、G、Y　青、赤、緑、黄<br>
+    スライス閲覧<br>
+    拡大縮小<br>
+    移動<br>
+    CT値の調節<br>
+    青画面（3D View）<br>
+    スクリーンショット<br></li>
+<li>CoMBI, JPEG編、本番です。<br>
+    単位設定<br>
+    連続JPEG画像の準備<br>
+    ファイル名一括変換、必要に応じて<br>
+    連続画像の読み込み（Loadとよぶ）<br>
+    連続画像の設定<br>
+    Volume Rendering<br>
+    動画<br>
+    保存<br>
+    セグメンテーション、体積<br>
+    3Dプリンタ<br></li>
 </ol>
 <p>3D slicer は、無料のオープンソースソフトウェアです。、米国ブリガム・アンド・ウィメンズ病院（ハーバード大学関連病院）が 2002年から開発しています。対応OSは、Windows、Mac、Linuxと幅広く、現在もアップデートや機能拡張（Extensions = plug-ins）が続けられています。<br>
-CoMBI 開発当初の2014年頃、JPEG連続画像が扱える3Dビューワを検討し、多機能で動作が軽い OsiriX を選択しました。しかし、OsiriX がのちに有料化したり、オープンソース版Horosは動画書き出しにちょっとバグあったり、OsiriX/HorosにはMac版しかなかったり、CoMBI普及の観点からはベストな状況ではありませんでした。かつては、OsiriXと3D slicerとの間に機能的な違いがありましたが、現在はどちらもできることは同じです。（かつては、動画描きだしが簡単にできるOrisiX、できない3D slicerでしたが、2016年の3D slicer v4.6以降は、動画書き出し機能が実装されています。）<br>
-3D slicer はノートパソコンでも安定して動作するのを確認しています(2018年製,i5-8250U 1.6-1.8GHz, RAM8GB、および、i5-7300U 2.6-2.7GHz, RAM8GB, 共に統合グラフィクス、Windows10)。アプリ本体の容量は、Horos 150MBに対して、3D slicerは1.2GBとなっていますので、ディスク残量だけは気になる状況があるかもしれません。<br>
-本書での3D slicer利用環境は、3D slicer v4.11 (2020.9.30), macOS 10.15.7 iMac 2017 (4.2GHz Quad-Core Intel Core i7, ,64GB 2400 MHz DDR4, Radeon Pro 580 8 GB). MacBookPro2018 (2.9GHz 6-Core Intel Core i9, 32 GB 2400 MHz DDR4, Radeon Pro Vega20 4GB) です。3D slicer 公式の推奨環境は、「メモリ最低4GB 推奨8GB〜、単体GPU推奨、データ量より大きいVRAM、CPUマルチスレッド推奨」となっています。
+CoMBI 開発当初の2014年頃、JPEG連続画像が扱える3Dビューワを検討し、多機能で動作が軽い OsiriX を選択しました。しかし、OsiriXは有料化し、オープンソース版Horosは動画書き出しバグがあり、OsiriX/HorosにはMac版しかなく、CoMBI普及の観点からはベストな状況ではありませんでした。かつては、OsiriXと3D slicerとの間に機能的な違いがありましたが、現在はどちらもできることは同じです。（かつては、動画描きだしが簡単にできるOrisiX、できない3D slicerでしたが、2016年の3D slicer v4.6以降は、動画書き出し機能が実装されています。）<br>
+3D slicer はノートパソコンでも安定して動作するのを確認しています(2018年製,i5-8250U 1.6-1.8GHz, RAM8GB、および、i5-7300U 2.6-2.7GHz, RAM8GB, 共に統合グラフィクス、Windows10)。アプリ本体の容量は、Horos 150MBに対して、3D slicerは1.2GBとなっていますので、ディスク残量だけは気になる場合があるかもしれません。<br>
+本書での3D slicer利用環境は、3D slicer v4.11 (2020.9.30), macOS 10.15.7 iMac 2017 (4.2GHz Quad-Core Intel Core i7, ,64GB 2400 MHz DDR4, Radeon Pro 580 8 GB). MacBookPro15 (2018, 2.9GHz 6-Core Intel Core i9, 32 GB 2400 MHz DDR4, Radeon Pro Vega20 4GB), MacBookPro16 (2021, M1 max, 64GB unified) です。3D slicer 公式の推奨環境は、「メモリ最低4GB 推奨8GB〜、単体GPU推奨、データ量より大きいVRAM、CPUマルチスレッド推奨」です。
 公式Documentが3D slicerのホームページにあります。また解説動画もネットで多数見つかります。筆者は 3D slicer の練習中で、とくに「動画」「セグメンテーション」はあいまいさ、不完全さがのこります。くわしくはぜひ公式サイトへ<br>
 https://www.slicer.org/wiki/Main_Page</p>
 <hr />
@@ -1347,14 +1371,26 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <li>連続PNGやビデオ変換かかる時間は、パソコンのスペックによるし、待てる時間はひとそれぞれなので、なんどかやってみる。</li>
 </ul>
 <h3 id="_16">保存</h3>
-<p>画像データも作業内容もひとつのファイルとして保存できる</p>
-<ul>
-<li>アイコン<code>SAVE</code> 全体ウィンドウの左上。新しいウィンドウ<code>Save Scene and Unsaved Data</code>がでてくる。</li>
-<li>ファイル形式は、mrb形式を推奨している。画像、着色、シーンなどの設定を一括して保存できる。プレゼント箱みたいなアイコン<code>Present box-like</code>で、mrbの指定をON/OFF。もし、mrbをOFFにした場合、画像や設定データを選択的に保存することになる。</li>
-<li>mrbファイルを開くときは、3D slicer のウィンドウへ、ドラッグする。保存したときの作業状態が再現される。</li>
-<li>外付けディスクを保存先に指定する場合、ファイル右横のマーク<code>...</code>から指定すること。下の横長ボタン<code>Change directory for selected files</code>では、外付けディスクを指定できない。</li>
-</ul>
-<h3 id="_17">セグメンテーション</h3>
+<p>2通りある。画像データや作業内容を、まとめてひとつのファイルとして保存する方法と、個別にする方法がある</p>
+<h4 id="_17">画像データも作業内容もひとつのファイルに保存する（公式サイトでは推奨）</h4>
+<p>拡張子はmdb。画像、着色、シーンなどの設定を一括して保存できる</p>
+<ol>
+<li>アイコン<code>SAVE</code> ウィンドウの左上。新しいウィンドウ<code>Save Scene and Unsaved Data</code>がでてくる。</li>
+<li>プレゼント箱みたいなアイコン<code>Present box-like</code>をONにして、mrbを指定</li>
+<li>保存先を指定する。外付けディスクを指定する場合だけ注意：ファイル右横のマーク<code>...</code>から指定すること。下のボタン<code>Change directory for selected files</code>では指定できない。</li>
+<li>開くときは、mrbファイルを3D slicer のウィンドウへ、ドラッグ&amp;ドロップする。保存したときの作業状態が再現される。</li>
+</ol>
+<h4 id="_18">作業内容を個別に保存する（なにかとメリットはある）</h4>
+<p>生成されるファイルのうち、.mrml（シーン設定）、.png（シーン、アイコンの代わり）、.nrrd（連続画像）は、必須のファイル。もし、作業していれば、.seg.nrrd（セグメントをまとめたファイル）や、.h5（Transformのファイル）など追加で生成される。シーンとは、作業していたウィンドウの状況.mrmlと、見た目.pngのことである。見た目のpngのおかげで、次に開くときに作業内容を思い出しやすい。個別ファイルが使いやすい場面として、複数サンプルに同一処理、たとえば、Volume Renderingで、複数サンプルに同じ着色をしたいときや、セグメンテーションは軽い連続画像でやっておいて、できあがったらセグメンテーションだけを重い連続画像と合わせたいときが考えられる。また、上書き保存が速いというメリットもある。</p>
+<ol>
+<li>アイコン<code>SAVE</code> ウィンドウの左上。新しいウィンドウ<code>Save Scene and Unsaved Data</code>がでてくる。</li>
+<li>mrbをOFF。<code>プレゼント箱ボタン</code></li>
+<li>保存先はデフォルトなら、.mrml, .png, /Data。連続画像と作業ファイルは「Data」フォルダに保存される。変更してもよいが、階層構造をのちのち保つこと。変更する場合は、マーク<code>...</code>で個別に、下のボタン<code>Change directory for selected files</code>で一括して行う</li>
+<li>開くときは、.mrmlファイルのみを3D slicerのウィンドウにドラッグドロップする。ほかはリンクされていて、自動で一括して開かれる。ただし、保存時の階層構造を保っておく必要がある。</li>
+<li>上書き保存では、ボタン<code>SAVE</code>をおすと、別ウィンドウがでて、左のボタン<code>Select Scene &amp; Modidied Data Only</code>にチェックが入っている。これで、.mrml（シーン設定）、.png（シーン、アイコンの代わり）と、更新したファイルのみが保存される。となりの<code>Modidied Data Only</code>にすると、シーンが更新されない。</li>
+<li>ヒント：Segmentのファイル名は、[Active segmentation].seg.nrrdになっている。モジュールSegmentationsでCreate New Segmentationsでつくった名称＝複数のセグメントをまとめているところの名称。</li>
+</ol>
+<h3 id="_19">セグメンテーション</h3>
 <ul>
 <li>3Dslicerだけで手作業でSegmentationする手順を下に示します。使用するツールは、<code>Paint</code>と<code>Fill between slices</code>と<code>Smooth</code>だけにしてシンプルです。他に領域限局やシグナル強度の範囲指定など、さまざまなツールが備わっていますが、CoMBIのフルカラー画像なら、基本の<code>Paint</code>と<code>Draw</code>が役立つでしょう</li>
 <li>抽出したい対象物によっては、3D slicerだけでは不便な場合もあるでしょう。iLastikは、機械学習でSegmentationして、二値化やグレースケール連続画像をつくってくれます。こちらのページ<a href="../ilastik/index.html">「Segmentation by iLastik」</a>に記しました。また、Photoshopは、「色域指定」で二値化連続画像をつくれます。こちら<a href="../horos/index.html#3">Horosのページの中の「色域指定」</a>に記しました。iLastikやPhotoshopでつくった二値化やグレースケール連続画像は、3D slicerで<code>Volume Rendering</code>したり、<code>Segmentation</code>, <code>Threshold</code>を施したりします。</li>
@@ -1412,11 +1448,11 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <li>アイコン<code>Camera</code>（Capture Screenshot）で、静止画に描き出せる</li>
 <li>Saveのとき、一括ファイルか、Segmentationのみの個別ファイルかを選べる。別のプロジェクトへ移入させたいときは個別ファイルにする</li>
 </ol>
-<h4 id="_18">体積の数値を読む</h4>
+<h4 id="_20">体積の数値を読む</h4>
 <ul>
 <li>モジュール<code>segmentation</code>&gt;<code>Quantification</code>&gt;<code>Segment statistics</code>（このモジュールをクリックすると、ウィンドウデザインが変わって、数値一覧がでる。CSVにでも書き出せば、Excelなどで使える。練習中）</li>
 </ul>
-<h4 id="_19">工夫やヒント</h4>
+<h4 id="_21">工夫やヒント</h4>
 <ul>
 <li>
 <p>最初はうまく行かないもの</p>
@@ -1470,6 +1506,32 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <p>単位設定を忘れてた！　</p>
 <p>単位をµmに変えるのを忘れ、mmのままでSegmentation作業を進めてから気づいたことがありました。そんなとき、あとでモジュール<code>Transform</code>で修正できます。例として、60x60x80mmではなく、60x60x40µmにしたいとき、行列表示に、0.06, 0.06, 0.08と斜めに入力します<br>
 ただし、µmにすると、動作が鈍くなる気がします。mm表示のままで、5µmなら5mmと入力してしまった方が、動作が軽快になる、と思います。</p>
+</li>
+</ul>
+<h3 id="3d">3Dプリンタ</h3>
+<p>モジュール<code>Segmentations</code>から、3Dプリンタ用なら、STLなど外部へのExportを行う。モジュール<code>Segmentations</code>には、別のExportもあって、3D slicer内のモジュール<code>Model</code>へのExportである。ややこしい。</p>
+<ul>
+<li>
+<p>3Dプリンタ用のデータを出力する。<code>Export to files</code> ファイルとして、外部にExportされる。きっと3Dプリンタ用。</p>
+<ol>
+<li>Destination folderをきめる。保存先。</li>
+<li>Visble segments only; このみでチェック。</li>
+<li>Reference vol: わからないがデフォルト、連続画像セットの名称が記されている。</li>
+<li>File format: STL</li>
+<li>Scale size: CoMBIのデータなら、実際のスケールµmと、入力した数値mmを考慮して。</li>
+<li>ボタン<code>Export</code></li>
+</ol>
+</li>
+<li>
+<p>3D slicer内のモジュール<code>Model</code>へ出力する。<code>Export/Import models and labelmaps</code></p>
+<ol>
+<li>Operation: <code>Export</code>, </li>
+<li>Output type: Models, Output node: </li>
+<li>Export models to new folder (デフォルト、赤い矢印ボタンでデフォルトに戻る)</li>
+<li>Advancedはいじらないで。</li>
+<li>ボタン<code>Export</code></li>
+<li>モジュール<code>Model</code>にSegmentがうつった。モジュール<code>Data</code>にデータが増えたことを確認できる。3D slicer内でのExport。きっと、いろんないろつけ。Segmentの表面をレインボーカラーなどカラフルにしたり、各スライスでの色を違えたりできる。</li>
+</ol>
 </li>
 </ul>
 
