@@ -9,12 +9,11 @@
         <meta name="description" content="Manual of CoMBI">
       
       
-      
         <meta name="author" content="Tajika Y.">
       
       
-      <link rel="shortcut icon" href="../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
+      <link rel="icon" href="../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.11">
     
     
       
@@ -22,10 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50e68009.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -35,13 +34,14 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7C&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <style>:root{--md-text-font:"Roboto";--md-code-font:""}</style>
       
     
     
-    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+
     
     
   </head>
@@ -53,8 +53,8 @@
     
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
-      
   
+    
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -71,26 +71,27 @@
       
     </div>
     
+    
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="../.." title="Manual of CoMBI" class="md-header-nav__button md-logo" aria-label="Manual of CoMBI">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Manual of CoMBI" class="md-header__button md-logo" aria-label="Manual of CoMBI" data-md-component="logo">
       
   <img src="../../img/logo.png" alt="logo">
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      <div class="md-header-nav__ellipsis">
-        <div class="md-header-nav__topic">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
           <span class="md-ellipsis">
             Manual of CoMBI
           </span>
         </div>
-        <div class="md-header-nav__topic">
+        <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
               3D slicer （Win, Mac, Linux）
@@ -100,22 +101,27 @@
       </div>
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -132,11 +138,14 @@
     
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
+        
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -144,17 +153,15 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
 
-
-
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Manual of CoMBI" class="md-nav__button md-logo" aria-label="Manual of CoMBI">
+    <a href="../.." title="Manual of CoMBI" class="md-nav__button md-logo" aria-label="Manual of CoMBI" data-md-component="logo">
       
   <img src="../../img/logo.png" alt="logo">
 
@@ -168,506 +175,559 @@
       
       
 
-
-
-  <li class="md-nav__item">
-    <a href="../../index.html" class="md-nav__link">
-      Top page
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        Top page
+      </a>
+    </li>
+  
 
     
       
       
       
-
-
 
   
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
     
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" data-md-state="indeterminate" type="checkbox" id="nav-2" checked>
-    
-    <label class="md-nav__link" for="nav-2">
-      Installation/導入
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Installation/導入" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        <span class="md-nav__icon md-icon"></span>
-        Installation/導入
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Installation/導入
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation/導入" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installation/導入
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devices/system/index.html" class="md-nav__link">
+        System Overview/概要
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devices/camera/index.html" class="md-nav__link">
+        Imaging devices/カメラなど
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devices/selfmade/index.html" class="md-nav__link">
+        Self-made devices/自作装置
+      </a>
+    </li>
+  
 
-
-
-  <li class="md-nav__item">
-    <a href="../../devices/system/index.html" class="md-nav__link">
-      System Overview/概要
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devices/computer/index.html" class="md-nav__link">
+        Computer and storage/コンピュータとストレージ
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devices/application/index.html" class="md-nav__link">
+        Applications/アプリケーション
+      </a>
+    </li>
+  
+
+            
           
-
-
-
-  <li class="md-nav__item">
-    <a href="../../devices/camera/index.html" class="md-nav__link">
-      Imaging devices/カメラなど
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../devices/selfmade/index.html" class="md-nav__link">
-      Self-made devices/自作装置
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../devices/computer/index.html" class="md-nav__link">
-      Computer and storage/コンピュータとストレージ
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../devices/application/index.html" class="md-nav__link">
-      Applications/アプリケーション
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
-
-
 
   
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
     
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" data-md-state="indeterminate" type="checkbox" id="nav-3" checked>
-    
-    <label class="md-nav__link" for="nav-3">
-      Instruction/操作
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Instruction/操作" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon"></span>
-        Instruction/操作
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Instruction/操作
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Instruction/操作" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Instruction/操作
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/frozenblock/index.html" class="md-nav__link">
+        Frozen Block
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/paraffinblock/index.html" class="md-nav__link">
+        Paraffin Block
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/camerasettings/index.html" class="md-nav__link">
+        Camera Settings
+      </a>
+    </li>
+  
 
-
-
-  <li class="md-nav__item">
-    <a href="../../operation/frozenblock/index.html" class="md-nav__link">
-      Frozen Block
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/tethering/index.html" class="md-nav__link">
+        Tethering (optional)
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/combi-u/index.html" class="md-nav__link">
+        CoMBI-U (Universal)
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/combi-c/index.html" class="md-nav__link">
+        CoMBI-C (Cryostat)
+      </a>
+    </li>
+  
 
-
-
-  <li class="md-nav__item">
-    <a href="../../operation/paraffinblock/index.html" class="md-nav__link">
-      Paraffin Block
-    </a>
-  </li>
-
-        
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/combi-s/index.html" class="md-nav__link">
+        CoMBI-S (Sliding, motorized)
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/combi-s-m/index.html" class="md-nav__link">
+        CoMBI-S (Sliding, manual)
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/combi-r/index.html" class="md-nav__link">
+        CoMBI-R (Rotary, manual)
+      </a>
+    </li>
+  
 
-
-
-  <li class="md-nav__item">
-    <a href="../../operation/camerasettings/index.html" class="md-nav__link">
-      Camera Settings
-    </a>
-  </li>
-
-        
+            
           
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../operation/tethering/index.html" class="md-nav__link">
-      Tethering (optional)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../operation/combi-u/index.html" class="md-nav__link">
-      CoMBI-U (Universal)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../operation/combi-c/index.html" class="md-nav__link">
-      CoMBI-C (Cryostat)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../operation/combi-s/index.html" class="md-nav__link">
-      CoMBI-S (Sliding, motorized)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../operation/combi-s-m/index.html" class="md-nav__link">
-      CoMBI-S (Sliding, manual)
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../operation/combi-r/index.html" class="md-nav__link">
-      CoMBI-R (Rotary, manual)
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
-
-
 
   
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
     
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" data-md-state="indeterminate" type="checkbox" id="nav-4" checked>
-    
-    <label class="md-nav__link" for="nav-4">
-      Image Processing
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Image Processing" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        <span class="md-nav__icon md-icon"></span>
-        Image Processing
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../introduction/index.html" class="md-nav__link">
-      Overview/画像処理の概要
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../rawjpeg/index.html" class="md-nav__link">
-      RAW to JPEG conversion/RAW現像
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../scale/index.html" class="md-nav__link">
-      Resize/画像の縮小
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../registration/index.html" class="md-nav__link">
-      Image Registration/ズレ補正
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="index.html" class="md-nav__link">
-      3D Reconstruction, 3D slicer
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../icy/index.html" class="md-nav__link">
-      3D Reconstruction, Icy
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../horos/index.html" class="md-nav__link">
-      3D Reconstruction, Horos/OsiriX
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../correlation/index.html" class="md-nav__link">
-      Correlation of 2D and 3D images/3D像に切片位置を示す
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../EDF/index.html" class="md-nav__link">
-      Extended Depth of Field/深度合成
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../ilastik/index.html" class="md-nav__link">
-      Segmentation by ilastik/セグメンテーション
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
       
       
       
-
-
-
-  <li class="md-nav__item">
-    <a href="../../gallery/gallery/index.html" class="md-nav__link">
-      Gallery/作品集
-    </a>
-  </li>
-
-    
       
+        <label class="md-nav__link" for="__nav_4">
+          Image Processing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-      
+      <nav class="md-nav" aria-label="Image Processing" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Image Processing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/index.html" class="md-nav__link">
+        Overview/画像処理の概要
+      </a>
+    </li>
+  
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rawjpeg/index.html" class="md-nav__link">
+        RAW to JPEG conversion/RAW現像
+      </a>
+    </li>
+  
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scale/index.html" class="md-nav__link">
+        Resize/画像の縮小
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item">
-    <a href="../../publication/publication/index.html" class="md-nav__link">
-      Publications/論文
-    </a>
-  </li>
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../registration/index.html" class="md-nav__link">
+        Image Registration/ズレ補正
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        3D Reconstruction, 3D slicer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../icy/index.html" class="md-nav__link">
+        3D Reconstruction, Icy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../horos/index.html" class="md-nav__link">
+        3D Reconstruction, Horos/OsiriX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../correlation/index.html" class="md-nav__link">
+        Correlation of 2D and 3D images/3D像に切片位置を示す
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EDF/index.html" class="md-nav__link">
+        Extended Depth of Field/深度合成
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ilastik/index.html" class="md-nav__link">
+        Segmentation by ilastik/セグメンテーション
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
-
-
 
   
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/gallery/index.html" class="md-nav__link">
+        Gallery/作品集
+      </a>
+    </li>
+  
+
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publication/publication/index.html" class="md-nav__link">
+        Publications/論文
+      </a>
+    </li>
+  
+
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" data-md-state="indeterminate" type="checkbox" id="nav-7" checked>
+      
+      
+      
+
+  
+  
+  
     
-    <label class="md-nav__link" for="nav-7">
-      Electronics
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Electronics" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
-        <span class="md-nav__icon md-icon"></span>
-        Electronics
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Electronics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Electronics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Electronics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../electronics/ATmega328P/index.html" class="md-nav__link">
+        ATmega328P standalone/単体利用
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../electronics/terminal/index.html" class="md-nav__link">
+        Crimped terminal/圧着端子
+      </a>
+    </li>
+  
+
+            
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../electronics/vender/index.html" class="md-nav__link">
+        Venders/パーツの入手先
+      </a>
+    </li>
+  
 
-
-
-  <li class="md-nav__item">
-    <a href="../../electronics/ATmega328P/index.html" class="md-nav__link">
-      ATmega328P standalone/単体利用
-    </a>
-  </li>
-
-        
+            
           
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../electronics/terminal/index.html" class="md-nav__link">
-      Crimped terminal/圧着端子
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../electronics/vender/index.html" class="md-nav__link">
-      Venders/パーツの入手先
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
   </ul>
@@ -678,11 +738,13 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -692,7 +754,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#3d-slicer" class="md-nav__link">
@@ -946,29 +1008,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#3dslicersegmentation" class="md-nav__link">
+    3Dslicerだけで手作業でSegmentationする手順
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_18" class="md-nav__link">
-    とりあえずはじめてみる
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
-    工夫しながらやってみる
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
     体積の数値を読む
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
-    ヒント
+  <a href="#_19" class="md-nav__link">
+    工夫やヒント
   </a>
   
 </li>
@@ -991,12 +1046,12 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                
-                <h1 id="3d-slicer-win-mac-linux">3D slicer （Win, Mac, Linux）</h1>
+
+<h1 id="3d-slicer-win-mac-linux">3D slicer （Win, Mac, Linux）</h1>
 <p>(This page is still in Japanease only.)</p>
 <h2 id="3d-slicer">3D slicerでやること</h2>
 <ol>
@@ -1300,67 +1355,95 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <li>外付けディスクを保存先に指定する場合、ファイル右横のマーク<code>...</code>から指定すること。下の横長ボタン<code>Change directory for selected files</code>では、外付けディスクを指定できない。</li>
 </ul>
 <h3 id="_17">セグメンテーション</h3>
-<p>3D slicerではマニュアルでセグメンテーションしています。抽出したい対象物によっては、iLastikでSegmentationして、二値化やグレースケール連続画像を得ることもあります。こちらのページ<a href="../ilastik/index.html">「Segmentation by iLastik」</a>に記しました。また、Photoshopの「色域指定」で二値化連続画像をつくる方法もあります。Horosのページの中の<a href="../horos/index.html#3">「色域指定」</a>に記しました。これらの場合、二値化やグレースケール連続画像を3D slicerに読み込み、<code>Volume Rendering</code>を使います。<code>Segmentation</code>, <code>Threshold</code>も組み合わせることもあります。</p>
-<h4 id="_18">とりあえずはじめてみる</h4>
 <ul>
-<li><code>Paint</code>と<code>Fill between slices</code>だけを使った手作業の手順を示します。Paint以外にも他にも領域限局やシグナル強度の範囲指定など、さまざまなモードが備わっていますが、CoMBIのフルカラー画像なら、基本の<code>Paint</code>と<code>Draw</code>が役立つでしょう。</li>
-<li>推奨の作業環境は、タッチペンです。私はMacBookPro15 2018, MacBookPro16 2021にiPad Pro 2018 A12X（SideCar）をつなげ、Apple Penで描いています。Windowsノートなら元々タッチパネルの場合があって便利そうです。WindowsマシンにiPadをつなげるアプリもいくつかあるようですが、私は試していません。</li>
-<li>Segmentaionのデータは、mrbファイルなら一括して保存されます。Segmentaionデータだけの独立ファイルとして保存することも選べます。その場合、別のmrbに移入させられます。Segmentation作業は必要最低限のデータセットで軽快に行い、本番用の重いデータセット（RGB, grayscale, ilastik, WT-Hetero-Knockoutなど）に移入させるといった使い方ができます。</li>
-</ul>
+<li>3Dslicerだけで手作業でSegmentationする手順を下に示します。使用するツールは、<code>Paint</code>と<code>Fill between slices</code>と<code>Smooth</code>だけにしてシンプルです。他に領域限局やシグナル強度の範囲指定など、さまざまなツールが備わっていますが、CoMBIのフルカラー画像なら、基本の<code>Paint</code>と<code>Draw</code>が役立つでしょう</li>
+<li>抽出したい対象物によっては、3D slicerだけでは不便な場合もあるでしょう。iLastikは、機械学習でSegmentationして、二値化やグレースケール連続画像をつくってくれます。こちらのページ<a href="../ilastik/index.html">「Segmentation by iLastik」</a>に記しました。また、Photoshopは、「色域指定」で二値化連続画像をつくれます。こちら<a href="../horos/index.html#3">Horosのページの中の「色域指定」</a>に記しました。iLastikやPhotoshopでつくった二値化やグレースケール連続画像は、3D slicerで<code>Volume Rendering</code>したり、<code>Segmentation</code>, <code>Threshold</code>を施したりします。</li>
+<li>推奨の作業環境は、タッチペンです。私はMacBookPro15 2018またはMacBookPro16 2021にiPad Pro 2018 A12X（SideCar）をつなげ、Apple Penで描いています。SideCarでの接続は、無線より有線のほうが安定します。Windowsノートなら元々タッチパネルになっている商品があって便利そうです。WindowsマシンにiPadをつなげるアプリもいくつかあるようですが、私は試していません</li>
+<li>Segmentaionのデータは、mrbファイルなら一括して保存されます。Segmentaionデータだけの独立ファイルとして保存することも選べます。その場合、別のmrbに移入させられます。Segmentation作業は必要最低限のデータセットで軽快に行い、本番用の重いデータセット（RGB, grayscale, ilastik, WT-Hetero-Knockoutなど）に移入させるといった使い方ができます</li>
+<li>
+<p>本手順書は、はじめトリハツをつかった例で執筆しました。のちに<code>Fill between slices</code>と<code>Smooth</code>のところを追記し、マウスE12中腸が登場します。ややこしいですが基本的に下図のトリハツ大血管をセグメンテーションする手順です</p>
 <p><img alt="segmetation" src="../img/3dslicer_seg.png" /></p>
-<p><em>このようなのをつくっていく手順です</em></p>
+<p><em>このようなのをつくっていく手順です。これはトリハツ。手順書の途中にマウスE12中腸も登場します</em></p>
+</li>
+</ul>
+<h4 id="3dslicersegmentation">3Dslicerだけで手作業でSegmentationする手順</h4>
 <ol>
-<li>モジュール<code>Segmentation</code>の場合、Active segmentation: より、Create new segmentation。モジュール<code>Segment editor</code>の場合、Segmentation: より、Create new segmentation。ここで作るSegmentationは、フォルダのようなもの。フォルダの中に複数のSegment（例、動脈と静脈）が収まる。二つのモジュール<code>Segmentation</code>と<code>Segment editor</code>はほぼ一体のモジュールで、それらの間を行き来するには、ボタン<code>Segmentation...</code>やボタン<code>Edit selected</code>である。迷子にならないように。</li>
-<li>ボタン<code>Add segment</code>で、新規セグメント<code>Segment_1</code>をつくる。名前は自由に変えられる。このときは大動脈を塗ることにしたので、名称を「Artery」とした。表示色を変えるには、四角い色表示をクリックする。</li>
-<li><code>Paint</code>で、大動脈を塗りつぶした。<ul>
-<li>全画像で塗る必要はなく、5枚に1枚とか、10枚に1枚の画像で塗る。等間隔がおすすめ、修正しやすいため。とびとびでよいし、がたついても良く、のちに補完（Fill between slices)と平滑化（Smooth）で仕上げる。</li>
-<li><code>Show 3D</code>ボタンを押しておくと、青画面（3D view）にリアルタイムで表示されていく。さらに、モジュール<code>Volume Rendering</code>で、VR像も表示させると、セグメントと同時に確認できる。しかし、動作が重いため、塗りつぶし作業中はShow 3D OFF, Volume rendering OFFとしておき、ときどき確認のために表示させている。</li>
-<li><code>Draw</code>は、描いた線の内側をすべて塗りつぶすモード。使い方は、<code>Draw</code>+ <code>Return, Enter</code>。Drawで線を描いたあとにリターンキーをおすと、その内部が塗りつぶされる。Drawのときは、円形でも、弧でもよい（PowerPointやIllustratorの、線と塗りつぶしの関係と同様）。今回の例題、輪状に塗りたいときは<code>Draw</code>は不向きだったので、<code>Paint</code>を使った。</li>
+<li>モジュール<code>Segmentation</code>の場合、Active segmentation: より、Create new segmentation。モジュール<code>Segment editor</code>の場合、Segmentation: より、Create new segmentation。ここで作るSegmentationは、フォルダのようなもの。フォルダの中に複数のSegment（例、動脈と静脈）が収まる。二つのモジュール<code>Segmentation</code>と<code>Segment editor</code>はほぼ一体のモジュールで、それらの間を行き来するには、ボタン<code>Segmentation...</code>やボタン<code>Edit selected</code>である。迷子にならないように</li>
+<li>ボタン<code>Add segment</code>で、新規セグメント<code>Segment_1</code>をつくる。名前は自由に変えられる。このときは大動脈を塗ることにしたので、名称を「Artery」とした。表示色を変えるには、四角い色表示をクリックする</li>
+<li><code>Paint</code>で、大動脈を塗りつぶした<ul>
+<li>全画像で塗る必要はなく、5枚に1枚とか、10枚に1枚の画像で塗る。等間隔がおすすめ、修正しやすいため。とびとびでよいし、がたついても良く、のちに補完（Fill between slices)と平滑化（Smooth）で仕上げる</li>
+<li><code>Show 3D</code>ボタンを押しておくと、青画面（3D view）にリアルタイムで表示されていく。さらに、モジュール<code>Volume Rendering</code>で、VR像も表示させると、セグメントと同時に確認できる。しかし、動作が重いため、塗りつぶし作業中はShow 3D OFF, Volume rendering OFFとしておき、ときどき確認のために表示させている</li>
+<li>今回の例題である大血管は輪状だったので、<code>Draw</code>ではなく、<code>Paint</code>を使った。<code>Draw</code>は、描いた線の内側をすべて塗りつぶすモード。使い方は、<code>Draw</code>+ <code>Return, Enter</code>。Drawで線を描いたあとにリターンキーをおすと、その内部が塗りつぶされる。描くのは、円形でも、弧でもよい（PowerPointやIllustratorの、線と塗りつぶしの関係と同様）。</li>
 </ul>
 </li>
-<li><code>Erase</code>で塗りすぎたところは修正する</li>
-<li><code>Fill between slices</code>で補完（モジュール<code>Segment Editor</code>）<ol>
+<li><code>Erase</code>で塗りすぎたところを削除して、修正する</li>
+<li>
+<p><code>Fill between slices</code>で補完（モジュール<code>Segment Editor</code>）
+    <img alt="Fill between slices" src="../img/fillbetweenslice1.png" /></p>
+<p><em>Process of <code>Fill between slices</code>. Reference serial images are 5x5x10 µm/voxel, 1220x875 pixels, 820 images of mouse mid gut on E12 (Not chick heart). <code>Draw</code> in the RED plane for whole mid gut every 5 images, and in the YELLOW plane for in a loop every 10 images.</em></p>
+<ol>
 <li><code>Initialize</code> すこし待つ</li>
 <li><code>Show 3D</code> ONで青画面に表示させる。スライドバーで描いたセグメントと補完したセグメントの透明度を調整し見やすくする</li>
-<li>がたつきがひどければ、<code>Paint</code>と<code>Erase</code>で修正する。<code>Auto update</code>にチェックをいれて おくと、修正中に、<code>Fill between slices</code>の像に反映されていく。</li>
-<li><code>Apply</code>で完了。もとには戻せないので、全体を塗れたと思ってから行う。（多少の修正は、<code>Erase</code>を使ったりして、あとでもできる）</li>
-<li>Apply後に修正が必要なら、<code>Erase</code>などで修正する。変な突起ができたり、近接構造が融合したりして、修正したことがある。</li>
+<li>がたつきがひどければ、<code>Paint</code>と<code>Erase</code>で修正する。<code>Auto update</code>にチェックをいれて おくと、修正中に、<code>Fill between slices</code>の像に反映されていく</li>
+<li><code>Apply</code>で完了。ボタン<code>Undo</code>で元に戻せる。全体を塗れたと思ってから行う。多少の修正は、<code>Erase</code>を使ったりして、あとでもできる。多少のガタツキは次の<code>Smooth</code>で直せる</li>
+<li>Apply後に修正が必要なら、<code>Erase</code>などで修正する。変な突起ができたり、近接構造が融合したりして、修正したことがある</li>
 </ol>
 </li>
-<li>ボタン<code>Add segment</code>で、<code>Segment_2</code>もつくる。「Vein」と名称をつけて、<code>Paint</code>で肺動脈を塗った。同様にFill between slicesも行った。</li>
-<li><code>Smooth</code>で滑らかにする（モジュール<code>Segment Editor</code>）<ul>
-<li>いくつかのモードがある。Medianは、選択中のセグメントだけを処理し、処理時間が長い。Joint smoothingは、表示中の複数のSegmentを処理し、処理時間が短い。</li>
-<li>Medianの設定では、長さを入力するが、となりに pixelsが表示される。1x1x1だと変化なし、3x3x1だとトゲくらいならなくなる。7x7x7, 11x11x7などで滑らかになるが処理時間が長くなる。</li>
-<li>Joint smoothingの設定では、数値を入力する。0.4-0.5で、medianの11x11x7 pixelよりも強めの平滑化。処理時間は短い。</li>
-<li><code>Apply</code>で完了。</li>
-<li>効果が弱ければ、数値を増やしてもう一度行う。</li>
-<li>修正が必要なら、<code>Erase</code>などを使用する。</li>
-</ul>
+<li>
+<p>ボタン<code>Add segment</code>で、<code>Segment_2</code>もつくる。「Vein」と名称をつけて、<code>Paint</code>で肺動脈を塗った。同様にFill between slicesも行った</p>
 </li>
-<li>Volume Renderingとセグメントを重ねて表示し確認できる。モジュール<code>Volume rendering</code>、マーク<code>Eye</code>で、青画面への表示をON。動作が鈍くなるのでOFFにして作業に戻る。</li>
+<li>
+<p><code>Smooth</code>で滑らかにする（モジュール<code>Segment Editor</code>）</p>
+<p><img alt="Smooth comparison" src="../img/smooth.png" /></p>
+<p><em>Comparison of smoothing methods and settings. Note that voxel size were set as 5x5x10 mm/voxel at volume module, instead of original 5x5x10 µm/voxel (millimeter instead of micrometer), for stabilize PC performance. Processing were done using MacBookPro16 M1 max. Time in yellow indicate duration of prosseccing after clicking <code>Apply</code>.</em></p>
+<ol>
+<li>Smoothing Method: <code>Joint smoothing</code>を好んで使用している。（Joint smoothingは、表示中の複数のSegmentを処理し、処理時間が短い。MedianやGaussianは、選択中のセグメントだけを処理し、処理時間が長い。MedianやGaussianの設定では、長さを入力する。Medianでは、pixelsが表示される。1x1x1だと変化なし、3x3x1だとトゲくらいならなくなる。7x7x7, 11x11x7などでようやくJoint smoothing_0.5相当になるが、処理時間が非常に長くなる）</li>
+<li><code>Joint smoothing</code>の設定では、数値を入力する。まずはデフォルトの0.5を試す</li>
+<li><code>Apply</code>で完了</li>
+<li>満足できなければ、ボタン<code>Undo</code>と、設定値の変更（0.3-1.0）、<code>Apply</code>を繰り返す</li>
+<li>細かい修正が必要なら、<code>Erase</code>などを使用する。近接構造が融合してしまい、Eraseで修正した例を下に示す</li>
+</ol>
+<p><img alt="Erase" src="../img/erase.png" /></p>
+<p><em>Unwanted connection was erased in the RED plane using <code>Erase</code> tool, and visualized in 3D View. 赤画面において、不必要につながった場所をEraseで消した</em></p>
+</li>
+<li>
+<p>Volume Renderingとセグメントを重ねて表示し確認できる。モジュール<code>Volume rendering</code>、マーク<code>Eye</code>で、青画面への表示をON。動作が鈍くなるのでOFFにして作業に戻る</p>
+</li>
 <li>アイコン<code>Camera</code>（Capture Screenshot）で、静止画に描き出せる</li>
-<li>Saveのとき、一括ファイルか、Segmentationのみの個別ファイルかを選べる。別のプロジェクトへ移入させたいときは個別ファイルにする。</li>
+<li>Saveのとき、一括ファイルか、Segmentationのみの個別ファイルかを選べる。別のプロジェクトへ移入させたいときは個別ファイルにする</li>
 </ol>
-<h4 id="_19">工夫しながらやってみる</h4>
+<h4 id="_18">体積の数値を読む</h4>
 <ul>
-<li>まず一度、セグメンテーションをおおざっぱにやってみて、使うツールや完成形の見通しをたてて、次に本番のセグメンテーションをやっています。</li>
-<li>色と形がはっきりしていれば、<code>Level tracing</code>を使います。マウスポインターがある色と類似の色を島状に選択してくれます。<code>mouse over</code>+<code>Left click</code>。CoMBIの画像ではあまり出番がありません。</li>
-<li>色が淡く、境界がぼんやりしている場合は、<code>Paint</code>, <code>Draw</code>, <code>Erase</code>を使います。</li>
-<li>塗る画像は等間隔（2, 5, 10枚ごと）のほうが、のちの修正がラク。画像めくりはキーボードの矢印キー。</li>
-<li>小腸は、グニャグニャと曲がって、複数のループがある。案1：個々のループで別のセグメントにして後で融合する。案2：はじめから単一セグメントでやりたい場合、同じ画像上で、複数ループを塗ること。ダメなのは「こっちのループはこの画像で塗って、あっちのループはあっちの画像で塗る」ことで、補完がぐちゃぐちゃになる。</li>
-<li>1面（赤画面）だけよりは、2面（緑か、黄）で塗ると仕上がりが良い。あいまいな境界を判定しやすい。3面でもよいが時間がかかる。</li>
-<li>1面（赤画面）目で塗るとき、境界があいまいで自信が無ければ、小さめに塗っておく。2面（緑か、黄）目で、境界がハッキリ見える場合が多いので、そのときに自信を持って塗る。</li>
-<li><code>Fill between slice</code>ではガタツキが残る。仕上げとして、<code>Smoothing</code>を使う。いろいろモード（median, gausianなど）があって、いまいち違いは分かりませんが、<code>Joint smoothing</code>を使っています。つくったSegmentすべてにSmooth処理をします。複数あれば、複数のSegmentに。一見、重そうですがこれが一番動作が軽いです。設定値はデフォルトの0.5をまずためしてください。</li>
+<li>モジュール<code>segmentation</code>&gt;<code>Quantification</code>&gt;<code>Segment statistics</code>（このモジュールをクリックすると、ウィンドウデザインが変わって、数値一覧がでる。CSVにでも書き出せば、Excelなどで使える。練習中）</li>
 </ul>
-<h4 id="_20">体積の数値を読む</h4>
-<ul>
-<li>モジュール<code>segmentation</code>&gt;<code>Quantification</code>&gt;<code>Segment statistics</code>（練習中）</li>
-</ul>
-<h4 id="_21">ヒント</h4>
+<h4 id="_19">工夫やヒント</h4>
 <ul>
 <li>
+<p>最初はうまく行かないもの</p>
+<p>まず一度、セグメンテーションをおおざっぱにやってみて、使うツール、塗る間隔、完成形の見通しをたてます。２回目以降が、本番のセグメンテーションです。</p>
+</li>
+<li>
+<p>ツールを選ぶ</p>
+<p>色と形がはっきりしていれば、<code>Level tracing</code>が使えます。マウスポインターがある色と類似の色を島状に選択してくれます。<code>mouse over</code>+<code>Left click</code>。CT画像にはいいかもしれませんが、CoMBIの画像ではあまり出番はないかもしれません。もっとも、対象物によります。色が淡く、境界がぼんやりしている場合は、<code>Paint</code>, <code>Draw</code>, <code>Erase</code>を使います。</p>
+</li>
+<li>
+<p>塗る画像は等間隔</p>
+<p>画像めくりはキーボードの矢印キー。等間隔のほうが、のちの修正がラク。例えば、2, 5, 10枚ごとにしています。</p>
+</li>
+<li>
+<p>複雑な形状</p>
+<p>中腸は、グニャグニャと曲がって、複数のループがある。案1：個々のループで別のセグメントにして後で融合する。案2：はじめから単一セグメントでやりたい場合、同じ画像上で、複数ループを塗ること。ダメなのは「こっちのループはこの画像で塗って、あっちのループはあっちの画像で塗る」ことで、その場合、補完が破綻する（下図）</p>
+<p><img alt="Fill between slices" src="../img/fillbetweenslice2.png" /></p>
+<p><em>Four parts of mid gut are shown. [Upper panel] <code>Draw</code> every 5 images for all 4 gut and preview <code>Fill between slices</code>.  [Lower panel] When <code>Draw</code> additional region only in the left-most gut (stars), <code>Fill between slices</code> was broken.</em></p>
+</li>
+<li>
+<p>作業の所要時間とセグメントの綺麗さのバランス</p>
+<p>「1面（赤画面）目では、対象物全体を等間隔できっちりDrawし、２面目は補助的にDrawする」<br>
+1面（赤画面）だけよりは、2面（緑か、黄）で塗った場合のほうが、セグメントの仕上がりが良い。しかし、多くの面で塗ると、時間がかかる。境界があいまいでも、別の面でははっきり見える場合が多いので、多面塗りはよい。境界があいまいで自信がないとき、１面目では、控えめ・小さめに塗り、別の面で自信を持って塗れるとよい</p>
+</li>
+<li>
 <p>作業が重い</p>
-<p>Segmentationの数が10個〜20個と多いとき、動作が鈍くなっていきます。また、参照する3D datasetは、カラーJPEGで500x500x500枚程度が限度のようでした（MacBookPro15-2018, i9, 4GB-HBM2, 32GB)。もっとも、パソコンのスペックにもよるとは思います。高画質シリーズ（1000x1000x1000）を参考にしながら、縮小/減数シリーズ（500x500x500）でセグメンテーションするのがいいかもしれません。
+<p>Segmentationの数が10個〜20個と多くなると、パソコンの動作が鈍くなっていきます。また、参照する3D datasetは、カラーJPEGで500x500x500枚程度が限度のようでした（MacBookPro15-2018, i9, 4GB-HBM2, 32GB)。もっとも、パソコンのスペックにもよるとは思います。縮小/減数シリーズ（500x500x500）を3Dslicerに読み込んでセグメンテーションし、高画質シリーズ（1000x1000x1000）はセグメンテーション用の3D slicerには読み込まず、通常の画像閲覧で参考にするのがいいかもしれません。<br>
 2022年1月、MacBookPro16（2021, M1 max, 64GB unified memory）を導入しました。1000x1000x1000枚のカラーJPEGでも普通に動かせています！</p>
 </li>
 <li>
@@ -1369,73 +1452,64 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 </li>
 <li>
 <p>キーボードの矢印キーが効かない</p>
-<p>いちどズームイン・ズームアウトすると、効くようになることがあります。そのうちに効くようになることもあります。</p>
+<p>いちどズームイン・ズームアウトすると、効くようになることがあります。そのうちに効くようになることもあります</p>
 </li>
 <li>
 <p>DrawやPaintが効かない</p>
-<p><code>Draw</code>で描いたあと<code>Retrun</code>を押しても反応しないときや、Paintが無反応になるときがあります。いちどズームイン・ズームアウトする。もしくは、ツールを矢印<code>None</code>に一旦切り替えてから、改めて<code>Draw</code>を選ぶと、効くようになることがあります。</p>
+<p><code>Draw</code>で描いたあと<code>Retrun</code>を押しても反応しないときや、Paintが無反応になるときがあります。いちどズームイン・ズームアウトする。もしくは、ツールを矢印<code>None</code>に一旦切り替えてから、改めて<code>Draw</code>を選ぶと、効くようになることがあります</p>
 </li>
 <li>
 <p>iPad, Side car, Apple penで表示位置が飛ぶ</p>
-<p>ズームイン・ズームアウト（ピンチイン・ピンチアウト）して、元の見たい位置に戻します。入力デバイスが多く（Apple Pen、マウス、トラックパッド、キーボード）どこかに触れてしまうとずれる時がありました。</p>
+<p>ズームイン・ズームアウト（ピンチイン・ピンチアウト）して、元の見たい位置に戻します。入力デバイスが多く（Apple Pen、マウス、トラックパッド、キーボード）どこかに触れてしまうとずれる時がありました</p>
 </li>
 <li>
 <p>青画面に断面像を表示できない</p>
-<p>眼のマーク<code>Eye mark</code>でON,OFFしてもなにも起こらなかったり、真っ黒な画像が表示されたりすることがありました。いったん、モジュール<code>Data</code>で、連続画像を捨てて、改めて連続画像を読み込みます。<code>Data Load</code>または、<code>Drag &amp; Drop</code>。この症状が見られたのは、Volume renderingとSegmentationと断面を同時に表示をさせようとしたときでした。かなり重い作業です。</p>
+<p>眼のマーク<code>Eye mark</code>でON,OFFしてもなにも起こらなかったり、真っ黒な画像が表示されたりすることがありました。いったん、モジュール<code>Data</code>で、連続画像を捨てて、改めて連続画像を読み込みます。<code>Data Load</code>または、<code>Drag &amp; Drop</code>。この症状が見られたのは、Volume renderingとSegmentationと断面を同時に表示をさせようとしたときでした。かなり重い作業です</p>
 </li>
 <li>
 <p>単位設定を忘れてた！　</p>
-<p>単位をµmに変えるのを忘れ、mmのままでSegmentation作業を進めてから気づいたことがありました。そんなとき、あとでモジュール<code>Transform</code>で修正できます。例として、60x60x80mmではなく、60x60x40µmにしたいとき、行列表示に、0.06, 0.06, 0.08と斜めに入力します。
+<p>単位をµmに変えるのを忘れ、mmのままでSegmentation作業を進めてから気づいたことがありました。そんなとき、あとでモジュール<code>Transform</code>で修正できます。例として、60x60x80mmではなく、60x60x40µmにしたいとき、行列表示に、0.06, 0.06, 0.08と斜めに入力します<br>
 ただし、µmにすると、動作が鈍くなる気がします。mm表示のままで、5µmなら5mmと入力してしまった方が、動作が軽快になる、と思います。</p>
 </li>
 </ul>
-                
-              
-              
-                
-
 
               
             </article>
           </div>
         </div>
+        
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            © 2021 Tajika Y, CC BY-NC
-          </div>
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-      </div>
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2021 Tajika Y, CC BY-NC
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.092fa1f6.min.js"}</script>
     
-      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
-      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
-      
-      <script>
-        app = initialize({
-          base: "../..",
-          features: ['navigation.expand'],
-          search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    
+      <script src="../../assets/javascripts/bundle.5a9542cf.min.js"></script>
       
     
   </body>
