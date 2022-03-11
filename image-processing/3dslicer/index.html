@@ -1408,7 +1408,7 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <li>ボタン<code>Add segment</code>で、新規セグメント<code>Segment_1</code>をつくる。名前は自由に変えられる。このときは大動脈を塗ることにしたので、名称を「Artery」とした。表示色を変えるには、四角い色表示をクリックする</li>
 <li><code>Paint</code>で、大動脈を塗りつぶした<ul>
 <li>全画像で塗る必要はなく、5枚に1枚とか、10枚に1枚の画像で塗る。等間隔がおすすめ、修正しやすいため。とびとびでよいし、がたついても良く、のちに補完（Fill between slices)と平滑化（Smooth）で仕上げる</li>
-<li><code>Show 3D</code>ボタンを押しておくと、青画面（3D view）にリアルタイムで表示されていく。さらに、モジュール<code>Volume Rendering</code>で、VR像も表示させると、セグメントと同時に確認できる。しかし、動作が重いため、塗りつぶし作業中はShow 3D OFF, Volume rendering OFFとしておき、ときどき確認のために表示させている</li>
+<li><code>Show 3D</code>ボタンを押しておくと、青画面（3D view）にリアルタイムで表示されていく。さらに、モジュール<code>Volume Rendering</code>で、VR像も表示させると、セグメントと同時に確認できる。しかしながら、動作がかなり鈍くなるので、塗りつぶし作業中はShow 3D OFF、Volume renderingもOFFとしておき、ときどき確認するときだけ表示ONにしている</li>
 <li>今回の例題である大血管は輪状だったので、<code>Draw</code>ではなく、<code>Paint</code>を使った。<code>Draw</code>は、描いた線の内側をすべて塗りつぶすモード。使い方は、<code>Draw</code>+ <code>Return, Enter</code>。Drawで線を描いたあとにリターンキーをおすと、その内部が塗りつぶされる。描くのは、円形でも、弧でもよい（PowerPointやIllustratorの、線と塗りつぶしの関係と同様）。</li>
 </ul>
 </li>
@@ -1479,8 +1479,128 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 </li>
 <li>
 <p>作業が重い</p>
-<p>Segmentationの数が10個〜20個と多くなると、パソコンの動作が鈍くなっていきます。また、参照する3D datasetは、カラーJPEGで500x500x500枚程度が限度のようでした（MacBookPro15-2018, i9, 4GB-HBM2, 32GB)。もっとも、パソコンのスペックにもよるとは思います。縮小/減数シリーズ（500x500x500）を3Dslicerに読み込んでセグメンテーションし、高画質シリーズ（1000x1000x1000）はセグメンテーション用の3D slicerには読み込まず、通常の画像閲覧で参考にするのがいいかもしれません。<br>
-2022年1月、MacBookPro16（2021, M1 max, 64GB unified memory）を導入しました。1000x1000x1000枚のカラーJPEGでも普通に動かせています！</p>
+<p>参照する連続画像（モジュール<code>Segmentation</code>では<code>Master Volume</code>と表記）の大きさと枚数が、動作に影響します。カラーJPEGで500x500x500枚程度が限度のようでした（Table.1）。もっとも、パソコンのスペックにもよるとは思います。Segmentation作業用の3D slicerファイルは、縮小/減数シリーズ（500 x 500 x 500）をつかって、もし高画質シリーズ（1000 x 1000 x 1000）に重ねる必要があれば、あとでセグメンテーションファイルだけを移入するのがいいと思います。<br></p>
+<p>連続画像の枚数を減らすと軽くなりますが、セグメントは荒くなります。Fill between sliceの結果が悪くなるためです。XY:Z＝1:1, 1:2, 1:4くらいが限度でしょう。1:10 (例、5µm x 5µm x 50µm, 1000 x 1000 x 200枚)ではくっきりとした階段ができてしまい、さっぱりダメでした（Table.2）。そうかといって、高画質の1:2 (5µm x 5µm x 10µm, 1000 x 1000 x 1000枚)にすると重くなるし、もどかしいところです。<br></p>
+<p>Segmentationの数が10個〜20個と多くなると、パソコンの動作が鈍くなっていきます。<br></p>
+<p>Segmentationの大きさが大きくなると、動作が鈍くなります。例えば、マウス胚で眼球一つのセグメントと、胚子全体のセグメントを比較すると、眼球は余裕でした（Table.2,3）。<br></p>
+<p>2018-2021年は、MacBookPro15（2018, i9, 4GB-HBM2, 32GB）、2022年からは、MacBookPro16（2021, M1 max, 64GB unified memory）を使っています。マシンが良くなっても、Segmentが大きくなったり、個数が増えれば、動作が重くなります。500 x 500 x 500枚あたりが安心です。M1 maxは、1000 x 1000 x 1000枚でも扱えそうな感じでしたが、順調なのは最初だけで、大きなSegmentになっていくと、かなり鈍くなり実用的ではありませんでした（Table.3）。<br></p>
+<p>Table 1: Datasets for testing segmentation performance. Whole embryo of mouse on E12 were used.</p>
+<table>
+<thead>
+<tr>
+<th>Datasets&nbsp;</th>
+<th>1220 x 875 pixels,<br>820 images</th>
+<th>1220 x 875 pixels,<br>164 images</th>
+<th>610 x 438 pixels,<br>164 images</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>RGB, 8bit</td>
+<td>RGB, 8bit</td>
+<td>RGB, 8bit</td>
+</tr>
+<tr>
+<td>Folder<br>original JPEG images</td>
+<td>64 MB</td>
+<td>14 MB</td>
+<td>9 MB</td>
+</tr>
+<tr>
+<td>3D slicer format<br>.mrb</td>
+<td>685 MB</td>
+<td>137 MB</td>
+<td>43 MB</td>
+</tr>
+<tr>
+<td>Size<br>as TIFF</td>
+<td>3.3 GB</td>
+<td>0.66 GB</td>
+<td>0.165 GB</td>
+</tr>
+<tr>
+<td>XYZ size</td>
+<td>5 x 5 x 10 µm</td>
+<td>5 x 5 x 50 µm</td>
+<td>5 x 5 x 50 µm</td>
+</tr>
+</tbody>
+</table>
+<p>Table 2: Segmentation of small object; an eye ball.</p>
+<table>
+<thead>
+<tr>
+<th>Process&nbsp;</th>
+<th>1220 x 875 pixels,<br>820 images</th>
+<th>1220 x 875 pixels,<br>164 images</th>
+<th>610 x 438 pixels,<br>164 images</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draw<br>Show 3D ON</td>
+<td>A slight delay <br>after <code>Enter</code></td>
+<td>No delay</td>
+<td>No delay</td>
+</tr>
+<tr>
+<td>Fill between slices<br>initialize</td>
+<td>No delay</td>
+<td>No delay</td>
+<td>No delay</td>
+</tr>
+<tr>
+<td>Fill between slices<br>quality</td>
+<td>Good, <br>filled smoothly</td>
+<td>Bad, <br>filled like steps.</td>
+<td>Bad, <br>filled like steps.</td>
+</tr>
+</tbody>
+</table>
+<p>Table 3: Segmentation of large object; whole body of mouse E12.</p>
+<table>
+<thead>
+<tr>
+<th>Process&nbsp;</th>
+<th>1220 x 875 pixels,<br>820 images</th>
+<th>1220 x 875 pixels,<br>164 images</th>
+<th>610 x 438 pixels,<br>164 images</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draw<br>Show 3D ON</td>
+<td>(not tested)</td>
+<td>10 to 20 sec delay<br>after <code>Enter</code></td>
+<td>5 to 10 sec delay<br>after <code>Enter</code></td>
+</tr>
+<tr>
+<td>Fill between slices<br>Initialize</td>
+<td>(not tested)</td>
+<td>1 min 25 sec delay, <br>after <code>Enter</code></td>
+<td>18 sec delay, <br>after <code>Enter</code></td>
+</tr>
+<tr>
+<td>Fill between slices<br>Show 3D</td>
+<td>(not tested)</td>
+<td>immediately</td>
+<td>immediately</td>
+</tr>
+<tr>
+<td>Fill between slices<br>Apply</td>
+<td>(not tested)</td>
+<td>10 sec delay<br>after <code>Enter</code></td>
+<td>2 sec delay<br>after <code>Enter</code></td>
+</tr>
+<tr>
+<td>Smooth<br>Joint smoothing</td>
+<td>(not tested)</td>
+<td>55 sec delay<br>after <code>Enter</code></td>
+<td>16 sec delay<br>after <code>Enter</code></td>
+</tr>
+</tbody>
+</table>
 </li>
 <li>
 <p>Segmentationの結果が粗い</p>
@@ -1496,7 +1616,7 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 </li>
 <li>
 <p>iPad, Side car, Apple penで表示位置が飛ぶ</p>
-<p>ズームイン・ズームアウト（ピンチイン・ピンチアウト）して、元の見たい位置に戻します。入力デバイスが多く（Apple Pen、マウス、トラックパッド、キーボード）どこかに触れてしまうとずれる時がありました</p>
+<p>ズームイン・ズームアウト（ピンチイン・ピンチアウト）して、元の見たい位置に戻します。入力デバイスが多く（Apple Pen、マウス、トラックパッド、キーボード）どこかに触れてしまうとずれる時がありました。また、スライスめくりのバーをApplePenで操作すると位置飛びが起こりますが、マウスで操作すると飛ばないようです。</p>
 </li>
 <li>
 <p>青画面に断面像を表示できない</p>

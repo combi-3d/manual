@@ -923,6 +923,7 @@
 <h2 id="_3">縮小の手順</h2>
 <p>Photoshop 2通り、ImageJ 1通りの、計3通り記します。どれかで行います。WindowsOSの拡張機能や、macOSのAutomator.appを利用した方法もありますが、圧縮率や補完法の選択ができないようで、検証をすすめていません。</p>
 <h3 id="photoshop-action-batch">Photoshop, Action, Batch処理</h3>
+<p>Photoshopの準備として、縮小時のアルゴリズムを固定しておくと安心です。<code>Preference</code>&gt;<code>General</code>&gt;<code>Image Interporation</code>&gt;<code>Bicubic sharper(best for reduction)</code>にしておけます。また、ホーム画面を開かないようにしたほうが<code>Action</code>の操作で都合が良いです。<code>Preference</code>&gt;<code>General</code>&gt; Uncheck <code>Auto show the Home Screen</code>。チェックを外しておきます。デフォルトではホームページが開くようになっており、Actionに<code>Close window</code>を記録すると、Actionを含めたすべてのウィンドウが表示されなくなってしまい、不便です。ActionのBatchにおいて、MacBookPro-2021 M1 maxは、MacBookPro-2018 i9よりも、処理が倍ほど遅いです。CPU usageをながめると、どうやらマルチタスクにならないようです。対策は分からず、PhotoshopのGPU処理をON/OFFしても変わりませんでした。</p>
 <ol>
 <li>スケール画像で、ピクセルサイズを計算する。Refering to the scale image taken beforehand, caliculate the pixel size of the original blockface image in micrometer/pixel. </li>
 <li>縮小させる計画をたて、1のピクセルサイズを参考に縮小後の画像サイズを計算しておく。ピクセルサイズが、きりの良い数字になるように縮小している（のちの3Dイメージングに便利）。最小は一片500pixel程度になるように計画する（のちのズレ補正では、軽い画像シリーズから試す）。のちのズレ補正に Cariculate the reduced image size to make 5, 10, 20, or 40 µm/pixel image series.</li>
