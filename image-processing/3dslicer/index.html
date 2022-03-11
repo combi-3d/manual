@@ -1190,10 +1190,12 @@ https://www.slicer.org/wiki/Main_Page</p>
 <hr />
 <h2 id="combijpeg">CoMBI、JPEG 編</h2>
 <h3 id="_7">単位設定</h3>
-<p>CoMBIなら、μm表示をえらびたいが、動作が重くなるかもしれないので、µmをmmのままで使うのがよい。単位を真面目に10µmなどにすると、アプリが落ちることがあった。画像は10µm/pixelだったとしても、10mm/pixelと入力する。デフォルトは1mmで、どうやらその付近なら安定していそう。パソコン環境やスペックが影響するかもしれない。XYZの比だけは正しくしておき、計測値が必要な場合は、あとで計算してから利用する。一応、したに手順は記しておきます。
+<p>CoMBIなら、μm表示をえらびたい。
 1. メニューバー<code>Menu bar</code>より、<code>Edit</code>&gt; <code>Application Settings</code>&gt; <code>Units</code>&gt; <code>Show advanced options</code>にチェックを入れる。
 1. ▽<code>Length</code> において、<code>Preset</code>&gt; <code>Select a preset</code>より、<code>Micrometer</code>を選ぶ。<code>OK</code>
-1. 3D slicerを再起動させると、変更が反映される。メニューバー<code>Menu bar</code>&gt; <code>Slicer 4.11</code>&gt; <code>Quit Slicer</code></p>
+1. 3D slicerを再起動させると、変更が反映される。メニューバー<code>Menu bar</code>&gt; <code>Slicer 4.11</code>&gt; <code>Quit Slicer</code>
+1. もし、再起動させたらmmにもどってしまう場合は、「起動＞Unit選択、OK＞連続画像読み込み＞モジュールVolumeで入力」の順でやってみる。</p>
+<p>（2018-2021年メモ：動作が重くなるかもしれないので、µmをmmのままで使うのがよい。単位を真面目に10µmなどにすると、アプリが落ちることがあった。画像は10µm/pixelだったとしても、10mm/pixelと入力する。デフォルトは1mmで、どうやらその付近なら安定していそう。パソコン環境やスペックが影響するかもしれない。XYZの比だけは正しくしておき、計測値が必要な場合は、あとで計算してから利用する。）（2022.3.11 メモ：動作に変化はなかった。mm, µm, 比率をあわせた桁違い、いろいろな入力値を試して、セグメンテーションを実際に行った。MBP16。たんにスペックの問題だったか。かわりに、再起動でµmからmmに戻ってしまう症状を見た。）</p>
 <h3 id="jpeg">連続JPEG画像の準備</h3>
 <p>CoMBIではJPEG形式で連続画像をつくる。3D slicerは、各種画像形式に対応しており、JPEGも直接扱える。ちなみに、PNG形式はダメなようだ。loadはできるが、Volume Renderingにかさねることができない。平面表示ではめくれているけれど、Volume Rendering上の表示は、一枚だけで不変。透明効果は反映されず、白になる。</p>
 <h3 id="_8">ファイル名一括変換、必要に応じて、縮小作業の前に</h3>
@@ -1624,8 +1626,7 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 </li>
 <li>
 <p>単位設定を忘れてた！　</p>
-<p>単位をµmに変えるのを忘れ、mmのままでSegmentation作業を進めてから気づいたことがありました。そんなとき、あとでモジュール<code>Transform</code>で修正できます。例として、60x60x80mmではなく、60x60x40µmにしたいとき、行列表示に、0.06, 0.06, 0.08と斜めに入力します<br>
-ただし、µmにすると、動作が鈍くなる気がします。mm表示のままで、5µmなら5mmと入力してしまった方が、動作が軽快になる、と思います。</p>
+<p>単位をµmに変えるのを忘れ、mmのままでSegmentation作業を進めてから気づいたことがありました。そんなとき、あとでモジュール<code>Transform</code>で修正できます。例として、60x60x80mmではなく、60x60x40µmにしたいとき、行列表示に、0.06, 0.06, 0.08と斜めに入力します。</p>
 </li>
 </ul>
 <h3 id="3d">3Dプリンタ</h3>
