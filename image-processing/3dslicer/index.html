@@ -1475,6 +1475,10 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <p><em>Four parts of mid gut are shown. [Upper panel] <code>Draw</code> every 5 images for all 4 gut and preview <code>Fill between slices</code>.  [Lower panel] When <code>Draw</code> additional region only in the left-most gut (stars), <code>Fill between slices</code> was broken.</em></p>
 </li>
 <li>
+<p>セグメントの中にセグメントを作りたい</p>
+<p>「モジュール<code>Segmentaion</code>と、モジュール<code>Edit segmentaion</code>」は、「フォルダとファイル（パソコンの基本操作）」、「グループとオブジェクト（illustrator）」と捉えることができます。例えば、心臓全体のセグメント１つと、各心室のセグメントを４つ作りたいときがあるとします。心臓全体のセグメントは、モジュール<code>Segmentation</code>で、Active segmentation: <code>Create new...</code> をつくって、その中に心臓全体セグメントを<code>Add</code>して、<code>Edit selected</code>(モジュール<code>Edit segment</code>)します。各心室用には、モジュール<code>Segmentation</code>で、Active segmentation: <code>Create new...</code>で、また別のSegmentationをつくり、その中に、４つ心室用Segmentを<code>Add</code>し、編集します。</p>
+</li>
+<li>
 <p>作業の所要時間とセグメントの綺麗さのバランス</p>
 <p>「1面（赤画面）目では、対象物全体を等間隔できっちりDrawし、２面目は補助的にDrawする」<br>
 1面（赤画面）だけよりは、2面（緑か、黄）で塗った場合のほうが、セグメントの仕上がりが良い。しかし、多くの面で塗ると、時間がかかる。境界があいまいでも、別の面でははっきり見える場合が多いので、多面塗りはよい。境界があいまいで自信がないとき、１面目では、控えめ・小さめに塗り、別の面で自信を持って塗れるとよい</p>
