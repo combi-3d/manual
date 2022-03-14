@@ -810,9 +810,9 @@
 <li>Adobe Photoshop, Action and Batch. </li>
 <li>ImageJ/FIJI, Macro</li>
 </ul>
-<p>Photoshopのアクション・自動処理・バッチでは、複雑な操作も記録できます。ImageJ/FIJIでもMacroを使ってできますが、記録できることがPhotoshopよりも少ない感じです。もしかしたら、熟達者ならPhotoshop相当に複雑に記録できるのかもしれませんが、よくわかりませんでした。</p>
+<p>Photoshopのアクション・自動処理・バッチでは、複雑な操作も記録できます。ImageJ/FIJIでもMacroを使ってできますが、記録できることがPhotoshopよりも少ない感じです。もしかしたら、熟達者ならPhotoshop相当に複雑に記録できるのかもしれませんが、よくわかりませんでした。MacのM1 maxは、Photoshop(v23.2.1 M1ネイティブ、macOS12.2.1、MBP16-2021、2022-3-14メモ）のバッチでマルチスレッドに対応していません。処理が何倍も遅くなるので、現状では、M1シリーズでは、FIJIをおすすめします。</p>
 <h2 id="_2">縮小の計画</h2>
-<p>たいてい元画像のピクセルサイズは、割り切れない数字になります。縮小の目的は、ズレ補正用の軽い連続画像をつくること、および、3D用のグレースケール画像も作ることです。ついでにピクセルサイズをキリの良い数値にして整理整頓、作業しやすくしています。</p>
+<p>縮小の目的は、ズレ補正用の軽い連続画像をつくること、および、3D用のグレースケール画像も作ることです。ついでにピクセルサイズをキリの良い数値にして整理整頓、作業しやすくしています。</p>
 <p>一例、「Nikon D810でおおよそ1倍、フルサイズ撮影した。スケールを確認すると4.88µm/pixelだった」</p>
 <table>
 <thead>
@@ -856,12 +856,12 @@
 </tr>
 </tbody>
 </table>
-<p>この例では、4通りの縮小連続画像をつくることになります。ズレ補正で扱える1000x1000以下の軽いシリーズができるまで、縮小します。実際は、RAW-JPEG変換時などで、ブロック周囲が入る程度にクロップするので、これらより小さな画像を扱右ことが多く、縮小は2通り、3通りで済みます。</p>
-<p>それぞれの縮小連続画像で、カラーもグレースケールも作っておけば、もうそれ以外の縮小作業はありません。</p>
+<p>この例では、4通りの縮小連続画像をつくることになります。ズレ補正で扱える1000x1000以下の軽いシリーズができるまで、縮小します。実際は、縮小の前にクロップすることが多いので、これらより小さな画像を扱っています。例のように縮小が4通りにもなることは稀で、通常は2通りか3通りです。クロップでは、標本ブロックの外周が残るようにします。</p>
+<p>それぞれの縮小連続画像で、カラーもグレースケールも作ることが多いです。利用目的としては、カラーシリーズは、MPRや、Segmentationに使い、グレースケールは、主にVolume Renderingに使います。グレースケールは軽いのが理由で、重い作業（ImageStabilizerやSegmentation）に使うこともあります。</p>
 <h2 id="_3">縮小の手順</h2>
 <p>Photoshop 2通り、ImageJ 1通りの、計3通り記します。どれかで行います。WindowsOSの拡張機能や、macOSのAutomator.appを利用した方法もありますが、圧縮率や補完法の選択ができないようで、検証をすすめていません。</p>
 <h3 id="photoshop-action-batch">Photoshop, Action, Batch処理</h3>
-<p>Photoshopの準備として、縮小時のアルゴリズムを固定しておくと安心です。<code>Preference</code>&gt;<code>General</code>&gt;<code>Image Interporation</code>&gt;<code>Bicubic sharper(best for reduction)</code>にしておけます。また、ホーム画面を開かないようにしたほうが<code>Action</code>の操作で都合が良いです。<code>Preference</code>&gt;<code>General</code>&gt; Uncheck <code>Auto show the Home Screen</code>。チェックを外しておきます。デフォルトではホームページが開くようになっており、Actionに<code>Close window</code>を記録すると、Actionを含めたすべてのウィンドウが表示されなくなってしまい、不便です。ActionのBatchにおいて、MacBookPro-2021 M1 maxは、MacBookPro-2018 i9よりも、処理が倍ほど遅いです。CPU usageをながめると、どうやらマルチタスクにならないようです。対策は分からず、PhotoshopのGPU処理をON/OFFしても変わりませんでした。</p>
+<p>Photoshopの準備として、縮小時のアルゴリズムを固定しておくと安心です。<code>Preference</code>&gt;<code>General</code>&gt;<code>Image Interporation</code>&gt;<code>Bicubic sharper(best for reduction)</code>にしておけます（反映されない？かもしれないので、実行前に要確認）。また、ホーム画面を開かないようにしたほうが<code>Action</code>の操作で都合が良いです。<code>Preference</code>&gt;<code>General</code>&gt; Uncheck <code>Auto show the Home Screen</code>。チェックを外しておきます。デフォルトではホームページが開くようになっており、Actionに<code>Close window</code>を記録すると、Actionを含めたすべてのウィンドウが表示されなくなってしまい、不便です。ActionのBatchにおいて、MacBookPro-2021 M1 maxは、MacBookPro-2018 i9よりも、処理が倍ほど遅いです。CPU usageをながめると、どうやらマルチタスクにならないようです。対策は分からず、PhotoshopのGPU処理をON/OFFしても変わりませんでした。</p>
 <ol>
 <li>スケール画像で、ピクセルサイズを計算する。Refering to the scale image taken beforehand, caliculate the pixel size of the original blockface image in micrometer/pixel. </li>
 <li>縮小させる計画をたて、1のピクセルサイズを参考に縮小後の画像サイズを計算しておく。ピクセルサイズが、きりの良い数字になるように縮小している（のちの3Dイメージングに便利）。最小は一片500pixel程度になるように計画する（のちのズレ補正では、軽い画像シリーズから試す）。のちのズレ補正に Cariculate the reduced image size to make 5, 10, 20, or 40 µm/pixel image series.</li>
@@ -897,13 +897,13 @@
 <p>保存先までアクションに入れておくと、特定のフォルダに縮小後ファイルが保存されます。もし、別の実験で同一処理をかけたいときは、別の保存先に変更したいところです。そんなときは、作ったアクションの中の、保存先を指定した一行を削除し、新しい保存先を追記録します。改訂したアクションからDropletをあらためて作ります。</p>
 <hr />
 <h3 id="imagejfiji">ImageJ/FIJI</h3>
-<p>使用するのは、<code>Plugins</code>&gt; <code>Macros</code>と、<code>Process</code>&gt;<code>Batch</code>です。それぞれは、操作の記録と、連続画像への処理です。</p>
+<p>FIJI/ImageJは、まえもって基本設定しておきます。大まかな手順として、操作の記録（<code>Plugins</code>&gt; <code>Macros</code>）と、連続画像の処理（<code>Process</code>&gt;<code>Batch</code>）があります。</p>
 <ol>
+<li>（準備、済んでいれば改めては不要です）ImageJ/FIJIが利用するメモリ量を決める。搭載メモリの75%が推奨最大値。<code>Edit</code>&gt; <code>Options</code>&gt; <code>Memory &amp; Threads...</code>&gt; <code>Maximum Memory</code>。MBで入力、余裕を持って75%より少なめで使っている。64GBなら42GB（42000 MB）など。入力後、いちどImageJ/FIJIを再起動する</li>
+<li>（準備、済んでいれば改めては不要です）JPEGの圧縮率を決めておく。<code>Edit</code>&gt; <code>Options</code>&gt; <code>Input/Output...</code>&gt; <code>JPEG quality (0-100)</code>。<code>100</code>をおすすめします。CoMBIの連続画像の場合、データ量はTIFF比較（フォルダの容量）で95で6%へ、100で12%へと減少し、画質は遜色ないかなといった程度です。デフォルトの<code>85</code>では、データ量が2.5%へとかなり減少しますが、画質はかなり低下します</li>
 <li>（準備）スケール画像を参照して、ピクセルサイズ（µm/pixel）を計算する。</li>
 <li>（準備）縮小させる計画をたて、先のピクセルサイズを参考に縮小後のピクセル数（画像サイズ）を計算しておく。ピクセルサイズが、きりの良い数字になるように縮小している。例えば、5, 10, 20, or 40 µm/pixelの画像シリーズ。管理上便利だかです。最も縮小するシリーズは、一辺が500pixel程度になるようにしたい。のちのズレ補正をスムースに実行できるように。いくつものシリーズを作るときは、各シリーズ個別にマクロを記録するのがいいようです。</li>
 <li>（準備）処理後の保存先フォルダを新規につくっておく。</li>
-<li>（準備、済んでいれば改めては不要です）ImageJ/FIJIが利用するメモリ量を決める。搭載メモリの75%が推奨最大値。<code>Edit</code>&gt; <code>Options</code>&gt; <code>Memory &amp; Threads...</code>&gt; <code>Maximum Memory</code>。MBで入力、余裕を持って75%より少なめで使っている。64GBなら42GB（42000 MB）など。入力後、いちどImageJ/FIJIを再起動する</li>
-<li>（準備、済んでいれば改めては不要です）JPEGの圧縮率を決めておく。<code>Edit</code>&gt; <code>Options</code>&gt; <code>Input/Output...</code>&gt; <code>JPEG quality (0-100)</code>。<code>100</code>をおすすめします。CoMBIの連続画像の場合、データ量はTIFF比較（フォルダの容量）で95で6%へ、100で12%へと減少し、画質は遜色ないかなといった程度です。デフォルトの<code>85</code>では、データ量が2.5%へとかなり減少しますが、画質はかなり低下します</li>
 <li>一枚だけ画像を開く</li>
 <li>Macroの記録開始。<code>Plugins</code>&gt; <code>Macros</code>&gt; <code>Record</code> ウィンドウ「Recorder」（デフォルトでMacro.ijm.ijmとなっている。名称を変更してもよい。）</li>
 <li>縮小する<code>Image</code>&gt; <code>Adjust</code>&gt; <code>Size</code>. 上記で計算しておいたピクセル数（画像サイズ）を入力する。Aspect retioを保つにチェックしてあれば、一辺の入力で済む。Interpolationモードは、<code>None</code>を推奨する（<code>Bicubic</code>でも悪くないが、<code>None</code>のほうがTIFFに近く、シャープに仕上がる）。チェックボタン<code>Average when reduction</code>には、チェックを入れておく。<img alt="segmetation" src="../img/ImageJ_resample.png" /></li>
