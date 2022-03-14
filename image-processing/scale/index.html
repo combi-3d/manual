@@ -930,16 +930,13 @@
 makeRectangle(181, 96, 278, 278);
 run(&quot;Crop&quot;);
 </code></pre>
+<p>上記の例では、「縮小＋切り抜き」でブロック周囲をぴったり含む画像にしましたが、もしRAW-JPEG変換時にすでに切り抜いている場合は、ImageJマクロでの「切り抜き（makeRectangleやCrop）」は不要です。その場合、下記のようなシンプルなマクロになります。これなら、Batchに手入力してもよさそうです。</p>
+<pre><code>run(&quot;Size...&quot;, &quot;width=600 height=450 constrain average interpolation=None&quot;);
+</code></pre>
 <h4 id="_5">ヒント</h4>
 <ul>
 <li>Macro記録では、ファイルの「開く」、「閉じる」、「保存」は、不要です。一括処理を実行するときに保存先を指定できます。Photoshopとは異なるところです。</li>
 <li>ImageJ Macroでは、別名保存を細かく設定できませんでした。作りたい画像シリーズが何個もある場合、（たとえば、5 µm/pixel series, 10 µm/pixel series, color series, grayscale series）、別々のマクロを組んだほうがいいようです。Photoshopの場合、別名保存もふくめ、複雑な作業を全部記録してくれます。</li>
-<li>上記の例では、「縮小＋切り抜き」でブロック周囲をぴったり含む画像にしましたが、もしRAW-JPEG変換時にすでに切り抜いている場合は、ImageJマクロでの「切り抜き（makeRectangleやCrop）」は不要です。その場合、下記のようなシンプルなマクロになります。これなら、Batchに手入力してもよさそうです。</li>
-</ul>
-<pre><code>run(&quot;Size...&quot;, &quot;width=600 height=450 constrain average interpolation=None&quot;);
-
-</code></pre>
-<ul>
 <li>メモリに展開できる画像データの量については、別のページ、「コンピュータと画像ファイル」へ</li>
 <li>画像を縮小してJPEGを使っていると、ぼやけが許容できないくらいになるかもしれません。データ量の節約のためにJPEGを使いますが、縮小画像になれば、TIFFにして画質が良いままで扱うのもおすすめです。TIFF連続画像が読み込める3D再構築アプリは、3D slicerです。Icyはmulti-TIFF。HorosはTIFFを読み込めません。</li>
 <li>参考書：ImageJではじめる生物画像解析（学研メディカル秀潤社、2016）</li>
