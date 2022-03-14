@@ -897,6 +897,7 @@
 <p>保存先までアクションに入れておくと、特定のフォルダに縮小後ファイルが保存されます。もし、別の実験で同一処理をかけたいときは、別の保存先に変更したいところです。そんなときは、作ったアクションの中の、保存先を指定した一行を削除し、新しい保存先を追記録します。改訂したアクションからDropletをあらためて作ります。</p>
 <hr />
 <h3 id="imagejfiji">ImageJ/FIJI</h3>
+<p>使用するのは、<code>Plugins</code>&gt; <code>Macros</code>と、<code>Process</code>&gt;<code>Batch</code>です。それぞれは、操作の記録と、連続画像への処理です。</p>
 <ol>
 <li>（準備）スケール画像を参照して、ピクセルサイズ（µm/pixel）を計算する。</li>
 <li>（準備）縮小させる計画をたて、先のピクセルサイズを参考に縮小後のピクセル数（画像サイズ）を計算しておく。ピクセルサイズが、きりの良い数字になるように縮小している。例えば、5, 10, 20, or 40 µm/pixelの画像シリーズ。管理上便利だかです。最も縮小するシリーズは、一辺が500pixel程度になるようにしたい。のちのズレ補正をスムースに実行できるように。いくつものシリーズを作るときは、各シリーズ個別にマクロを記録するのがいいようです。</li>
@@ -905,7 +906,7 @@
 <li>（準備、済んでいれば改めては不要です）JPEGの圧縮率を決めておく。<code>Edit</code>&gt; <code>Options</code>&gt; <code>Input/Output...</code>&gt; <code>JPEG quality (0-100)</code>。<code>100</code>をおすすめします。CoMBIの連続画像の場合、データ量はTIFF比較（フォルダの容量）で95で6%へ、100で12%へと減少し、画質は遜色ないかなといった程度です。デフォルトの<code>85</code>では、データ量が2.5%へとかなり減少しますが、画質はかなり低下します</li>
 <li>一枚だけ画像を開く</li>
 <li>Macroの記録開始。<code>Plugins</code>&gt; <code>Macros</code>&gt; <code>Record</code> ウィンドウ「Recorder」（デフォルトでMacro.ijm.ijmとなっている。名称を変更してもよい。）</li>
-<li>縮小する<code>Image</code>&gt; <code>Adjust</code>&gt; <code>Size</code>. 上記で計算しておいたピクセル数（画像サイズ）を入力する。Aspect retioを保つにチェックしてあれば、一辺の入力で済む。Interpolationモードは、<code>None</code>または<code>Bicubic</code>を推奨する（Noneのほうがややシャープにしあがるかも）。チェックボタン<code>Average when reduction</code>には、チェックを入れておく。<img alt="segmetation" src="../img/ImageJ_resample.png" /></li>
+<li>縮小する<code>Image</code>&gt; <code>Adjust</code>&gt; <code>Size</code>. 上記で計算しておいたピクセル数（画像サイズ）を入力する。Aspect retioを保つにチェックしてあれば、一辺の入力で済む。Interpolationモードは、<code>None</code>を推奨する（<code>Bicubic</code>でも悪くないが、<code>None</code>のほうがTIFFに近く、シャープに仕上がる）。チェックボタン<code>Average when reduction</code>には、チェックを入れておく。<img alt="segmetation" src="../img/ImageJ_resample.png" /></li>
 <li>切り抜く（ブロック周囲がちょうど含まれる画像にしたい。すでに切り抜いてある場合は不要です。）<ol>
 <li>メニューバーの左端、四角いアイコンを使って、切り抜きたい領域を選択します。</li>
 <li>切り抜きます。<code>Image</code>&gt; <code>Crop</code></li>
@@ -933,7 +934,12 @@ run(&quot;Crop&quot;);
 <ul>
 <li>Macro記録では、ファイルの「開く」、「閉じる」、「保存」は、不要です。一括処理を実行するときに保存先を指定できます。Photoshopとは異なるところです。</li>
 <li>ImageJ Macroでは、別名保存を細かく設定できませんでした。作りたい画像シリーズが何個もある場合、（たとえば、5 µm/pixel series, 10 µm/pixel series, color series, grayscale series）、別々のマクロを組んだほうがいいようです。Photoshopの場合、別名保存もふくめ、複雑な作業を全部記録してくれます。</li>
-<li>上記の例では、「縮小＋切り抜き」でブロック周囲をぴったり含む画像にしましたが、もしRAW-JPEG変換時にすでに切り抜いている場合は、ImageJマクロでの「切り抜き（makeRectangleやCrop）」は不要です。</li>
+<li>上記の例では、「縮小＋切り抜き」でブロック周囲をぴったり含む画像にしましたが、もしRAW-JPEG変換時にすでに切り抜いている場合は、ImageJマクロでの「切り抜き（makeRectangleやCrop）」は不要です。その場合、下記のようなシンプルなマクロになります。これなら、Batchに手入力してもよさそうです。</li>
+</ul>
+<pre><code>run(&quot;Size...&quot;, &quot;width=600 height=450 constrain average interpolation=None&quot;);
+
+</code></pre>
+<ul>
 <li>メモリに展開できる画像データの量については、別のページ、「コンピュータと画像ファイル」へ</li>
 <li>画像を縮小してJPEGを使っていると、ぼやけが許容できないくらいになるかもしれません。データ量の節約のためにJPEGを使いますが、縮小画像になれば、TIFFにして画質が良いままで扱うのもおすすめです。TIFF連続画像が読み込める3D再構築アプリは、3D slicerです。Icyはmulti-TIFF。HorosはTIFFを読み込めません。</li>
 <li>参考書：ImageJではじめる生物画像解析（学研メディカル秀潤社、2016）</li>
