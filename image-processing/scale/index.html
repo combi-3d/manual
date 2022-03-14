@@ -18,7 +18,7 @@
     
     
       
-        <title>Resize/画像の縮小 - Manual of CoMBI</title>
+        <title>Resizing and reducing/画像の縮小と軽量化 - Manual of CoMBI</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#resize" class="md-skip">
+        <a href="#resizing-and-reducing" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Resize/画像の縮小
+              Resizing and reducing/画像の縮小と軽量化
             
           </span>
         </div>
@@ -709,27 +709,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    縮小の手順
+  <a href="#_photoshop-action-batch" class="md-nav__link">
+    縮小_Photoshop, Action, Batch処理
   </a>
   
-    <nav class="md-nav" aria-label="縮小の手順">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_photoshop-droplet" class="md-nav__link">
+    縮小_Photoshop, Droplet機能
+  </a>
+  
+    <nav class="md-nav" aria-label="縮小_Photoshop, Droplet機能">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#photoshop-action-batch" class="md-nav__link">
-    Photoshop, Action, Batch処理
+  <a href="#_3" class="md-nav__link">
+    ヒント
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#photoshop-droplet" class="md-nav__link">
-    Photoshop, Droplet機能
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_imagejfiji" class="md-nav__link">
+    縮小_ImageJ/FIJI
   </a>
   
-    <nav class="md-nav" aria-label="Photoshop, Droplet機能">
+    <nav class="md-nav" aria-label="縮小_ImageJ/FIJI">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ijm" class="md-nav__link">
+    マクロファイル（拡張子ijm）の例
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
@@ -742,50 +761,45 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#imagejfiji" class="md-nav__link">
-    ImageJ/FIJI
+      
+        <li class="md-nav__item">
+  <a href="#_" class="md-nav__link">
+    軽量化_枚数を減らして、連続画像を軽くする
   </a>
-  
-    <nav class="md-nav" aria-label="ImageJ/FIJI">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ijm" class="md-nav__link">
-    マクロファイル（拡張子ijm）の例
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    ヒント
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     連続画像のファイル名一括変換
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    枚数を減らして、連続画像を軽くする
+    <nav class="md-nav" aria-label="連続画像のファイル名一括変換">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-os" class="md-nav__link">
+    Windows OSで一括変換
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac-os" class="md-nav__link">
+    Mac OSで一括変換
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adobe-bridge" class="md-nav__link">
+    Adobe Bridge（有料アプリ）で一括変換
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -802,7 +816,7 @@
               
                 
                 
-                <h1 id="resize">Resize/画像の縮小</h1>
+                <h1 id="resizing-and-reducing">Resizing and reducing/画像の縮小と軽量化</h1>
 <p>(This page is still in Japanease only.)</p>
 <h2 id="_1">アプリケーション</h2>
 <p>下記のどれか使います。</p>
@@ -858,9 +872,8 @@
 </table>
 <p>この例では、4通りの縮小連続画像をつくることになります。ズレ補正で扱える1000x1000以下の軽いシリーズができるまで、縮小します。実際は、縮小の前にクロップすることが多いので、これらより小さな画像を扱っています。例のように縮小が4通りにもなることは稀で、通常は2通りか3通りです。クロップでは、標本ブロックの外周が残るようにします。</p>
 <p>それぞれの縮小連続画像で、カラーもグレースケールも作ることが多いです。利用目的としては、カラーシリーズは、MPRや、Segmentationに使い、グレースケールは、主にVolume Renderingに使います。グレースケールは軽いのが理由で、重い作業（ImageStabilizerやSegmentation）に使うこともあります。</p>
-<h2 id="_3">縮小の手順</h2>
 <p>Photoshop 2通り、ImageJ 1通りの、計3通り記します。どれかで行います。WindowsOSの拡張機能や、macOSのAutomator.appを利用した方法もありますが、圧縮率や補完法の選択ができないようで、検証をすすめていません。</p>
-<h3 id="photoshop-action-batch">Photoshop, Action, Batch処理</h3>
+<h2 id="_photoshop-action-batch">縮小_Photoshop, Action, Batch処理</h2>
 <p>Photoshopの準備として、縮小時のアルゴリズムを固定しておくと安心です。<code>Preference</code>&gt;<code>General</code>&gt;<code>Image Interporation</code>&gt;<code>Bicubic sharper(best for reduction)</code>にしておけます（反映されない？かもしれないので、実行前に要確認）。また、ホーム画面を開かないようにしたほうが<code>Action</code>の操作で都合が良いです。<code>Preference</code>&gt;<code>General</code>&gt; Uncheck <code>Auto show the Home Screen</code>。チェックを外しておきます。デフォルトではホームページが開くようになっており、Actionに<code>Close window</code>を記録すると、Actionを含めたすべてのウィンドウが表示されなくなってしまい、不便です。ActionのBatchにおいて、MacBookPro-2021 M1 maxは、MacBookPro-2018 i9よりも、処理が倍ほど遅いです。CPU usageをながめると、どうやらマルチタスクにならないようです。対策は分からず、PhotoshopのGPU処理をON/OFFしても変わりませんでした。</p>
 <ol>
 <li>スケール画像で、ピクセルサイズを計算する。Refering to the scale image taken beforehand, caliculate the pixel size of the original blockface image in micrometer/pixel. </li>
@@ -882,7 +895,7 @@
 </li>
 </ol>
 <hr />
-<h3 id="photoshop-droplet">Photoshop, Droplet機能</h3>
+<h2 id="_photoshop-droplet">縮小_Photoshop, Droplet機能</h2>
 <p>Batchとは別に、Dropletというやり方もあります。記録したアクションをドロップレットファイルとして保存して、画像のサムネイルにドラッグします。結果は同じです。Dropletは、単にアクションを保存しておく目的でも使えます。別の実験で同一処理をかけたいときや、別の人のコンピュータで同一処理をしたいときに利用できるでしょう。</p>
 <ol>
 <li>（上記のアクションを記録するところまでは同じ）</li>
@@ -893,10 +906,10 @@
 <li>拡張子<code>.app</code>のdropletファイルが指定した場所にできる</li>
 <li>処理したい連続画像が入ったフォルダを、ドラッグして、ドロップレットファイルに重ねる（アイコンに重ねる）</li>
 </ol>
-<h4 id="_4">ヒント</h4>
+<h3 id="_3">ヒント</h3>
 <p>保存先までアクションに入れておくと、特定のフォルダに縮小後ファイルが保存されます。もし、別の実験で同一処理をかけたいときは、別の保存先に変更したいところです。そんなときは、作ったアクションの中の、保存先を指定した一行を削除し、新しい保存先を追記録します。改訂したアクションからDropletをあらためて作ります。</p>
 <hr />
-<h3 id="imagejfiji">ImageJ/FIJI</h3>
+<h2 id="_imagejfiji">縮小_ImageJ/FIJI</h2>
 <p>FIJI/ImageJは、まえもって基本設定しておきます。大まかな手順として、操作の記録（<code>Plugins</code>&gt; <code>Macros</code>）と、連続画像の処理（<code>Process</code>&gt;<code>Batch</code>）があります。</p>
 <ol>
 <li>（準備、済んでいれば改めては不要です）ImageJ/FIJIが利用するメモリ量を決める。搭載メモリの75%が推奨最大値。<code>Edit</code>&gt; <code>Options</code>&gt; <code>Memory &amp; Threads...</code>&gt; <code>Maximum Memory</code>。MBで入力、余裕を持って75%より少なめで使っている。64GBなら42GB（42000 MB）など。入力後、いちどImageJ/FIJIを再起動する</li>
@@ -924,7 +937,7 @@
 <li><code>Open</code>　保存しておいたマクロファイル（.ijm）を指定し、読み込む</li>
 <li><code>Process</code>ボタン</li>
 </ol>
-<h4 id="ijm">マクロファイル（拡張子ijm）の例</h4>
+<h3 id="ijm">マクロファイル（拡張子ijm）の例</h3>
 <p><code>画像サイズを600x450</code>にして、指定の座標で<code>Crop 切り抜き</code>すると、下記のようなマクロファイル（.ijm）ができます。マクロファイルには<code>開く</code>や、<code>閉じる</code>、<code>保存</code>は記録不要で、それらは実行時に指定します。ここで例示したサイズ縮小や切り抜き以外にも、Grayscale変換なども記録して、CoMBI連続画像を処理できます。</p>
 <pre><code>run(&quot;Size...&quot;, &quot;width=600 height=450 constrain average interpolation=None&quot;);
 makeRectangle(181, 96, 278, 278);
@@ -933,7 +946,7 @@ run(&quot;Crop&quot;);
 <p>上記の例では、「縮小＋切り抜き」でブロック周囲をぴったり含む画像にしましたが、もしRAW-JPEG変換時にすでに切り抜いている場合は、ImageJマクロでの「切り抜き（makeRectangleやCrop）」は不要です。その場合、下記のようなシンプルなマクロになります。これなら、Batchに手入力してもよさそうです。</p>
 <pre><code>run(&quot;Size...&quot;, &quot;width=600 height=450 constrain average interpolation=None&quot;);
 </code></pre>
-<h4 id="_5">ヒント</h4>
+<h3 id="_4">ヒント</h3>
 <ul>
 <li>Macro記録では、ファイルの「開く」、「閉じる」、「保存」は、不要です。一括処理を実行するときに保存先を指定できます。Photoshopとは異なるところです。</li>
 <li>ImageJ Macroでは、別名保存を細かく設定できませんでした。作りたい画像シリーズが何個もある場合、（たとえば、5 µm/pixel series, 10 µm/pixel series, color series, grayscale series）、別々のマクロを組んだほうがいいようです。Photoshopの場合、別名保存もふくめ、複雑な作業を全部記録してくれます。</li>
@@ -942,11 +955,41 @@ run(&quot;Crop&quot;);
 <li>参考書：ImageJではじめる生物画像解析（学研メディカル秀潤社、2016）</li>
 </ul>
 <hr />
-<h2 id="_6">連続画像のファイル名一括変換</h2>
-<p>CoMBIの撮影が通常に成功した場合は、必要ありません。ファイル名が9999から0001に戻ったとか、特別な事情があるときに、ファイル名を一括で変換します。</p>
-<p>Photoshopでは、フォルダ内にあれば一括して処理してくれますので、縮小が終わった後に、ファイル名の一括変換を行います。</p>
-<p>ImageJのImage Stabilizerでは、頭に連番が必要です。</p>
-<p>3D slicerでは、完全な連番が必要です。連番のうしろに残しておいた元ファイル名が飛び飛びの場合、連続画像とは認識されません。完全な連番にしたとき、元データとの照合（実験の再現性）ができるように、メモを残してください。Horosの場合、頭に連番さえあれば、連続画像として認識してくれます。</p>
+<h2 id="_">軽量化_枚数を減らして、連続画像を軽くする</h2>
+<p>連続画像を1つ飛びにすれば、容量が半分になる。薄く切りすぎて、枚数が増えすぎたとき。解析にはそんなに枚数はいらないとき。3D解析で軽くしたいとき。
+MacではFinder、WindowsではExploreで操作します。</p>
+<ul>
+<li>
+<p>Macの場合：</p>
+<ol>
+<li>連続画像を複製する。フォルダ上で右クリック、<code>Duplicate</code></li>
+<li>複製したフォルダを<code>Finder</code>で表示し、タテに細長く表示する。<code>Show items as icons</code>, Sort by <code>name</code>。ファイル名で並べ替えをする。</li>
+<li>2列になるように、Finderの表示幅を調整する。</li>
+<li>マウス・トラックパッドをつかって、片方の列のファイルだけ選択する。</li>
+<li>右クリックで、<code>New Folder with Selection</code>、フォルダに名前をつけて管理する。（または、選択ファイルを削除して、残りを使用するのでもかまいません）
+同様に、3列になるように表示して、1列だけを選択すれば2つ飛ばしのシリーズ（枚数3分の1）を作れます。</li>
+</ol>
+</li>
+<li>
+<p>Windowsの場合：</p>
+<ol>
+<li>連続画像を複製する。フォルダ上で右クリック、<code>Copy</code> &amp; <code>Paste</code>。</li>
+<li>複製したフォルダを開いて、アイコン表示にする（大、中、小アイコン、どれでも）</li>
+<li>ウィンドウの幅を狭くして、2列で表示する。</li>
+<li>片方の列のファイルだけ選択する。</li>
+<li>選択したファイルを削除。（複製フォルダ内であること。元の連続画像とは別であること）</li>
+<li>残ったほうを1つ飛ばしの連続画像として使用できます。</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h2 id="_5">連続画像のファイル名一括変換</h2>
+<p>CoMBIの撮影が通常に成功した場合は、必要ありません。ファイル名が9999から0001に戻ったとか、特別な事情があるときに、ファイル名を一括で連番へと変換します。連番の必要性はアプリによって異なります。画像処理過程のどこかで連番が必要でしょうから、どこかで施します。変換後に、元データの元名称がなくなってしまう場合、元データとの照合（実験の再現性）ができるように、メモを残してください。</p>
+<ul>
+<li>Photoshopによる連続画像処理では、フォルダ内にあれば一括して処理してくれますので、連番は必要ありません。</li>
+<li>ImageJのImage Stabilizerでは、頭に連番が必要です。</li>
+<li>3D slicerでは、完全な連番が必要です。連番のうしろに残しておいた元ファイル名が飛び飛びの場合、連続画像とは認識されません。完全な連番にしたとき、元データとの照合（実験の再現性）ができるように、メモを残してください。Horosの場合、頭に連番さえあれば、連続画像として認識してくれます。</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -988,38 +1031,22 @@ run(&quot;Crop&quot;);
 </tr>
 </tbody>
 </table>
-<ul>
-<li>Windows OSで一括変換：<code>Explore</code>で<code>複数選択</code>、<code>名称変更</code>すると、「入力文字(1).jpg」と、カッコつき連番数字になる。元のファイル名は残らないので注意。</li>
-<li>Mac OSで一括変換：<code>Finder</code>で、複数選択<code>Select multiple files</code>、右クリック（副メニュー）<code>Right click, sub-menu</code>より、ファイル名を変更 <code>Rename</code>。完全変更や連番追記など、ある程度カスタマイズできる。プルダウンメニューの<code>Format</code>, 次のプルダウン、<code>Name and Counter</code>を使う。</li>
-<li>便利に一括変換：Adobe Bridge（有料アプリ）なら細かく設定ができる。</li>
-</ul>
-<h2 id="_7">枚数を減らして、連続画像を軽くする</h2>
-<p>連続画像を1つ飛びにすれば、容量が半分になる。薄く切りすぎて、枚数が増えすぎたとき。解析にはそんなに枚数はいらないとき。3D解析で軽くしたいとき。
-MacではFinder、WindowsではExploreで操作します。</p>
-<ul>
-<li>
-<p>Macの場合：</p>
+<h3 id="windows-os">Windows OSで一括変換</h3>
 <ol>
-<li>連続画像を複製する。フォルダ上で右クリック、<code>Duplicate</code></li>
-<li>複製したフォルダを<code>Finder</code>で表示し、タテに細長く表示する。<code>Show items as icons</code>, Sort by <code>name</code>。ファイル名で並べ替えをする。</li>
-<li>2列になるように、Finderの表示幅を調整する。</li>
-<li>マウス・トラックパッドをつかって、片方の列のファイルだけ選択する。</li>
-<li>右クリックで、<code>New Folder with Selection</code>、フォルダに名前をつけて管理する。（または、選択ファイルを削除して、残りを使用するのでもかまいません）
-同様に、3列になるように表示して、1列だけを選択すれば2つ飛ばしのシリーズ（枚数3分の1）を作れます。</li>
+<li><code>Explore</code>で<code>複数選択</code></li>
+<li><code>名称変更</code>すると、「入力文字(1).jpg」と、カッコつき連番数字になる。元のファイル名は残らないので注意。</li>
 </ol>
-</li>
-<li>
-<p>Windowsの場合：</p>
+<h3 id="mac-os">Mac OSで一括変換</h3>
 <ol>
-<li>連続画像を複製する。フォルダ上で右クリック、<code>Copy</code> &amp; <code>Paste</code>。</li>
-<li>複製したフォルダを開いて、アイコン表示にする（大、中、小アイコン、どれでも）</li>
-<li>ウィンドウの幅を狭くして、2列で表示する。</li>
-<li>片方の列のファイルだけ選択する。</li>
-<li>選択したファイルを削除。（複製フォルダ内であること。元の連続画像とは別であること）</li>
-<li>残ったほうを1つ飛ばしの連続画像として使用できます。</li>
+<li><code>Finder</code>で、複数選択</li>
+<li>右クリック（副メニュー）<code>Right click, sub-menu</code>より、ファイル名を変更 <code>Rename</code>。完全変更や連番追記など、ある程度カスタマイズできる。プルダウンメニューの<code>Format</code>, 次のプルダウン、<code>Name and Counter</code>を使う。</li>
 </ol>
-</li>
-</ul>
+<h3 id="adobe-bridge">Adobe Bridge（有料アプリ）で一括変換</h3>
+<ol>
+<li>Bridge内で、変換したいファイルをすべて選んぶ</li>
+<li><code>Tool</code>, <code>Batch Rename</code></li>
+<li>かなり、細かく設定ができる。</li>
+</ol>
                 
               
               
