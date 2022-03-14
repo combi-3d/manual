@@ -902,7 +902,7 @@
 <li>（準備）スケール画像を参照して、ピクセルサイズ（µm/pixel）を計算する。</li>
 <li>（準備）縮小させる計画をたて、先のピクセルサイズを参考に縮小後のピクセル数（画像サイズ）を計算しておく。ピクセルサイズが、きりの良い数字になるように縮小している。例えば、5, 10, 20, or 40 µm/pixelの画像シリーズ。管理上便利だかです。最も縮小するシリーズは、一辺が500pixel程度になるようにしたい。のちのズレ補正をスムースに実行できるように。いくつものシリーズを作るときは、各シリーズ個別にマクロを記録するのがいいようです。</li>
 <li>（準備）処理後の保存先フォルダを新規につくっておく。</li>
-<li>（準備、済んでいれば改めては不要です）ImageJ/FIJIが利用するメモリ量を決める。搭載メモリの75%が推奨最大値。<code>Edit</code>&gt; <code>Options</code>&gt; <code>Memory &amp; Threads...</code>&gt; <code>Maximum Memory</code>。MBで入力、余裕を持って75%より少なめで使っている。64GBなら42GB（42000 MB）など。ImageJ/FIJIを再起動する。</li>
+<li>（準備、済んでいれば改めては不要です）ImageJ/FIJIが利用するメモリ量を決める。搭載メモリの75%が推奨最大値。<code>Edit</code>&gt; <code>Options</code>&gt; <code>Memory &amp; Threads...</code>&gt; <code>Maximum Memory</code>。MBで入力、余裕を持って75%より少なめで使っている。64GBなら42GB（42000 MB）など。入力後、いちどImageJ/FIJIを再起動する</li>
 <li>（準備、済んでいれば改めては不要です）JPEGの圧縮率を決めておく。<code>Edit</code>&gt; <code>Options</code>&gt; <code>Input/Output...</code>&gt; <code>JPEG quality (0-100)</code>。<code>100</code>をおすすめします。CoMBIの連続画像の場合、データ量はTIFF比較（フォルダの容量）で95で6%へ、100で12%へと減少し、画質は遜色ないかなといった程度です。デフォルトの<code>85</code>では、データ量が2.5%へとかなり減少しますが、画質はかなり低下します</li>
 <li>一枚だけ画像を開く</li>
 <li>Macroの記録開始。<code>Plugins</code>&gt; <code>Macros</code>&gt; <code>Record</code> ウィンドウ「Recorder」（デフォルトでMacro.ijm.ijmとなっている。名称を変更してもよい。）</li>

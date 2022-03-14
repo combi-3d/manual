@@ -812,7 +812,7 @@
 数あるRegistrationツールの中から、Image Stabilizerをえらびました。移動させた距離（ピクセル）をLogファイルとして記録シてくれるのがポイントです。万が一、ズレ補正に失敗する箇所があっても、Logファイルの数値を修正することで、ズレ補正を成功に導けます。さらに、Logファイルの数値を倍加することで、大きな画像にもズレ補正をかけられます。</p>
 <h2 id="_1">手順</h2>
 <ol>
-<li>（準備、済んでいれば改めては不要です）ImageJ/FIJIが利用するメモリ量を決める。搭載メモリの75%が推奨最大値。<code>Edit</code>&gt; <code>Options</code>&gt; <code>Memory &amp; Threads...</code>&gt; <code>Maximum Memory</code>。MBで入力、余裕を持って75%より少なめで使っている。64GBなら42GB（42000 MB）など。ImageJ/FIJIを再起動する。</li>
+<li>（準備、済んでいれば改めては不要です）ImageJ/FIJIが利用するメモリ量を決める。搭載メモリの75%が推奨最大値。<code>Edit</code>&gt; <code>Options</code>&gt; <code>Memory &amp; Threads...</code>&gt; <code>Maximum Memory</code>。MBで入力、余裕を持って75%より少なめで使っている。64GBなら42GB（42000 MB）など。入力後、いちどImageJ/FIJIを再起動する</li>
 <li>（準備、済んでいれば改めては不要です）JPEGの圧縮率を決めておく。<code>Edit</code>&gt; <code>Options</code>&gt; <code>Input/Output...</code>&gt; <code>JPEG quality (0-100)</code>。<code>100</code>をおすすめします。CoMBIの連続画像の場合、データ量はTIFF比較（フォルダの容量）で95で6%へ、100で12%へと減少し、画質は遜色ないかなといった程度です。デフォルトの<code>85</code>では、データ量が2.5%へとかなり減少しますが、画質はかなり低下します</li>
 <li>連続画像をひらく　フォルダごとImageJのバーにドラッグアンドドロップ。搭載メモリと相談ですが、おおかた1000x1000x10000枚の画像が限度です。メモリに展開してください。かつてはVirtual Stackでもできましたが、ImageJのバージョンアップ後、逐次保存ができなくなりました。</li>
 <li><code>Plug-ins</code>, <code>Image Stabilizer</code>　このとき一番前の画像を開いておけば、前から順にに補正をかけます。一番後ろの画像を開いておけば、後ろから補正します。Logファイルを生成するに必ずチェックをいれます。もし、メモリが潤沢なら、結果を別ファイルで表示するにチェックしたほうがよく、補正の成否確認に便利です。</li>
