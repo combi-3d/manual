@@ -1493,13 +1493,14 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <p>連続画像の枚数を減らすと軽くなりますが、セグメントは荒くなります。Fill between sliceの結果が悪くなるためです。XY:Z＝1:1, 1:2, 1:4くらいが限度でしょう。1:10 (例、5µm x 5µm x 50µm, 1000 x 1000 x 200枚)ではくっきりとした階段ができてしまい、さっぱりダメでした（Table.2）。そうかといって、高画質の1:2 (5µm x 5µm x 10µm, 1000 x 1000 x 1000枚)にすると重くなるし、もどかしいところです。<br></p>
 <p>Segmentationの数が10個〜20個と多くなると、パソコンの動作が鈍くなっていきます。<br></p>
 <p>Segmentationの大きさが大きくなると、動作が鈍くなります。例えば、マウス胚で眼球一つのセグメントと、胚子全体のセグメントを比較すると、眼球は余裕なのに、胚全体はフリーズしそうになりました（Table.2,3）。<br></p>
-<p>2018-2021年は、MacBookPro15（2018, i9, 4GB-HBM2, 32GB）、2022年からは、MacBookPro16（2021, M1 max, 64GB unified memory）を使っています。マシンが良くなっても、Segmentが大きくなったり、個数が増えれば、動作が重くなります。500 x 500 x 500枚あたりが安心です。M1 maxは、1000 x 1000 x 1000枚でも扱えそうでしたが、順調なのは最初だけで、大きなSegmentになっていくと、かなり鈍くなり実用的ではありませんでした（Table.3）。<br></p>
+<p>2018-2021年は、MacBookPro15（2018, i9, 4GB-HBM2, 32GB）、2022年からは、MacBookPro16（2021, M1 max, 64GB unified memory）を使っています。マシンが良くなっても、Segmentが大きくなったり、Segmentの個数が増えれば、動作が重くなります。500 x 500 x 1000枚（0.8 GB）なら、安定して作業できました。M1 maxは、1000 x 1000 x 1000枚（3.3 GB）でも扱えそうでしたが、順調なのは最初だけで、大きなSegmentになっていくと、かなり鈍くなり実用的ではありませんでした（Table.3）。<br></p>
 <p>Table 1: Datasets for testing segmentation performance. Specimen: whole embryo of mouse on E12, computer: MacBookPro16 M1 max. </p>
 <table>
 <thead>
 <tr>
 <th>Datasets&nbsp;</th>
 <th>1220 x 875 pixels,<br>820 images</th>
+<th>610 x 438 pixels,<br>820 images</th>
 <th>1220 x 875 pixels,<br>164 images</th>
 <th>610 x 438 pixels,<br>164 images</th>
 </tr>
@@ -1510,28 +1511,33 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <td>RGB, 8bit</td>
 <td>RGB, 8bit</td>
 <td>RGB, 8bit</td>
+<td>RGB, 8bit</td>
 </tr>
 <tr>
 <td>Folder<br>original JPEG images</td>
 <td>64 MB</td>
+<td>43 MB</td>
 <td>14 MB</td>
 <td>9 MB</td>
 </tr>
 <tr>
 <td>3D slicer format<br>.mrb</td>
 <td>685 MB</td>
+<td>303 MB</td>
 <td>137 MB</td>
 <td>43 MB</td>
 </tr>
 <tr>
 <td>Size<br>as TIFF</td>
 <td>3.3 GB</td>
+<td>0.84 GB</td>
 <td>0.66 GB</td>
 <td>0.165 GB</td>
 </tr>
 <tr>
 <td>XYZ size</td>
 <td>5 x 5 x 10 µm</td>
+<td>10 x 10 x 10 µm</td>
 <td>5 x 5 x 50 µm</td>
 <td>5 x 5 x 50 µm</td>
 </tr>
@@ -1543,6 +1549,7 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <tr>
 <th>Process&nbsp;</th>
 <th>1220 x 875 pixels,<br>820 images</th>
+<th>610 x 438 pixels,<br>820 images</th>
 <th>1220 x 875 pixels,<br>164 images</th>
 <th>610 x 438 pixels,<br>164 images</th>
 </tr>
@@ -1553,15 +1560,18 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <td>A slight delay <br>after <code>Enter</code></td>
 <td>No delay</td>
 <td>No delay</td>
+<td>No delay</td>
 </tr>
 <tr>
 <td>Fill between slices<br>initialize</td>
 <td>No delay</td>
 <td>No delay</td>
 <td>No delay</td>
+<td>No delay</td>
 </tr>
 <tr>
 <td>Fill between slices<br>quality</td>
+<td>Good, <br>filled smoothly</td>
 <td>Good, <br>filled smoothly</td>
 <td>Bad, <br>filled like steps.</td>
 <td>Bad, <br>filled like steps.</td>
@@ -1574,6 +1584,7 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <tr>
 <th>Process&nbsp;</th>
 <th>1220 x 875 pixels,<br>820 images</th>
+<th>610 x 438 pixels,<br>820 images</th>
 <th>1220 x 875 pixels,<br>164 images</th>
 <th>610 x 438 pixels,<br>164 images</th>
 </tr>
@@ -1582,11 +1593,13 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <tr>
 <td>Draw<br>Show 3D ON</td>
 <td>(not tested)</td>
+<td>(not tested)</td>
 <td>10 to 20 sec delay<br>after <code>Enter</code></td>
 <td>5 to 10 sec delay<br>after <code>Enter</code></td>
 </tr>
 <tr>
 <td>Fill between slices<br>Initialize</td>
+<td>(not tested)</td>
 <td>(not tested)</td>
 <td>1 min 25 sec delay, <br>after <code>Enter</code></td>
 <td>18 sec delay, <br>after <code>Enter</code></td>
@@ -1594,17 +1607,20 @@ Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画フ
 <tr>
 <td>Fill between slices<br>Show 3D</td>
 <td>(not tested)</td>
+<td>(not tested)</td>
 <td>immediately</td>
 <td>immediately</td>
 </tr>
 <tr>
 <td>Fill between slices<br>Apply</td>
 <td>(not tested)</td>
+<td>(not tested)</td>
 <td>10 sec delay<br>after <code>Enter</code></td>
 <td>2 sec delay<br>after <code>Enter</code></td>
 </tr>
 <tr>
 <td>Smooth<br>Joint smoothing</td>
+<td>(not tested)</td>
 <td>(not tested)</td>
 <td>55 sec delay<br>after <code>Enter</code></td>
 <td>16 sec delay<br>after <code>Enter</code></td>
