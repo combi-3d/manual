@@ -898,8 +898,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#videompeg-setting-up-ffmpeg" class="md-nav__link">
-    Video(mpeg 書き出し)には、 事前設定 Setting up ffmpeg が必要
+  <a href="#ffmpeg" class="md-nav__link">
+    事前準備、動画書き出しに必要なffmpeg
   </a>
   
 </li>
@@ -920,7 +920,7 @@
         
           <li class="md-nav__item">
   <a href="#_15" class="md-nav__link">
-    動作が重いとき
+    ヒント
   </a>
   
 </li>
@@ -1247,30 +1247,17 @@ https://www.slicer.org/wiki/Main_Page</p>
 <h3 id="_14">動画（簡易、おすすめ）</h3>
 <p>macOS付属Screen Shot（Applications&gt; Utilities&gt; ScreenShot.app）で動画と静止画を保存できる。Windows10付属Game Bar（Windows button+G, Setting&gt; Game Bar&gt; ON）で録画、Windows付属Snipping Toolで静止画面を保存できる。メリットは、あらゆる動きが録画できることです。デメリットは、マウスやトラックパッドで3Dイメージを動すので、少々ぎこちなさが残ることです。単純な横回転なら、青画面のメニュー（押しピンマーク）にあり、スムースな動きを表現できます。上記のSceneViewを利用したり、あとで動画アプリ（iMovie, Adobe Premiereなど）で編集することも考えれば、けっこう自由に動画をつくれます。実際、素材として、動画や静止画を様々なパターン；色違いのVolume Rendering、断面表示のON/OFF、SegmentationのON/OFFなどで作っておき、あとでそれらを組み合わせ、動画制作しています。</p>
 <h3 id="2016">動画（公式 2016年〜）</h3>
-<p>2段階になっていて、ステップ1:モジュール <code>sequences</code>で操作の様子を記録し、ステップ2:モジュール<code>Utilities</code>&gt; <code>Screen Capture</code>で、記録したsequenceを呼び出して、動画ファイルに書き出す。事前設定が必要。</p>
-<h4 id="videompeg-setting-up-ffmpeg">Video(mpeg 書き出し)には、 事前設定 Setting up ffmpeg が必要</h4>
-<ul>
-<li>
-<p>未設定の場合、下記の手順を進めていくとステップ2で、▽<code>Advance</code>のところに<code>赤字のエラー</code>がでて、その横に<code>Help...リンク</code>ができる。クリックすると、<code>3D Slicerのサイト</code>に行く。</p>
-</li>
-<li>
-<p>記載に従い、Macならアプリ<code>Terminal</code>を使って、</p>
+<p>自由な動きを動画にする場合、2段階になっている。ステップ1:モジュール <code>sequences</code>で操作の様子を記録し、ステップ2:モジュール<code>Utilities</code>&gt; <code>Screen Capture</code>で、記録したsequenceを呼び出して、動画ファイルに書き出す。
+単純な回転だけの動画なら、ステップ2の<code>3D rotation</code>だけで動画を作れ、ステップ1は不要。</p>
+<h4 id="ffmpeg">事前準備、動画書き出しに必要なffmpeg</h4>
+<p>ffmpegは、フレーム画像（連続 PNG）から動画に変換する追加機能。3D slicerアプリは、動画作成時、いったんPNG連続画像を生成してから、動画へと変換しているようだ。ffmpegをインストールしないで動画書き出しをやろうとすると、下記の手順ステップ2、▽<code>Advance</code>で赤字エラー<code>Set Valid ffmpeg executable path!</code>が現れる。その横にリンク<code>Help...</code>ができる。かつては、それをクリックすると3D Slicerサイトの解説ページにいけたが、2022.3 v4.11 ではリンクが微妙に切れている。こちらの<a href=https://slicer.readthedocs.io/en/latest/user_guide/modules/screencapture.html#setting-up-ffmpeg>新しい解説ページ</a>に従ってインストールする。ここにはMacの手順を転記する。セットアップには時間がかかる。Xcodeアップデート30分、homebrew30分、ffmpeg15分、計75分（自宅wifi夜）、大学LANでも合計16分間かかった。</p>
 <ol>
-<li><code>Homebrew</code>をインストール</li>
-<li>Homebrewのとき、<code>Xcode</code>インストールまたはアップデートも要求される。</li>
-<li>
-<p><code>ffmpeg</code>インストールを行う</p>
-<p>セットアップには時間がかかった、Xcodeアップデート30分、homebrew30分、ffmpeg15分、計75分（自宅wifi夜）、大学LANでも合計16分間かかった。</p>
-</li>
+<li>アプリ<code>Terminal</code>を起動</li>
+<li><code>Homebrew</code>をインストールする。こちらのサイト（<a href=https://brew.sh/>https://brew.sh/</a>）に記載のコマンドを<code>Terminal</code>に打つ。すでにHomebrewを入れていればこの作業は必要ない</li>
+<li>Homebrewをインストールするとき、<code>Xcode</code>インストールまたはアップデートも要求されたときは、従う。</li>
+<li><code>ffmpeg</code>をインストールする　<code>brew install ffmpeg</code> を<code>Terminal</code>に打つ</li>
+<li>3D slicerのモジュール<code>Screen Capture</code>に戻って、<code>ffmpeg executable</code>の欄に、ffmpegのアドレス <code>/usr/local/bin/ffmpeg</code> を入力する。</li>
 </ol>
-</li>
-<li>
-<p><code>ffmpeg executable</code>の欄に、ffmpegのアドレスを入力する。<code>/usr/local/bin/ffmpeg</code></p>
-<blockquote>
-<p>ffmpegは、フレーム画像（連続 PNG）から動画に変換する機能。連続PNGをつくる段階には、ffmpegは関わらない。3D slicerの動画作成の挙動をみていると、いったんPNGの連続画像にしてから、動画変換をしている様子。</p>
-</blockquote>
-</li>
-</ul>
 <h4 id="1">ステップ 1</h4>
 <p>操作している様子を記録できる。画面、Red, green, yellow, camera（3Dの画面）のどれかを指定できる。</p>
 <ul>
@@ -1279,7 +1266,7 @@ https://www.slicer.org/wiki/Main_Page</p>
 <li>▽ <code>Synchronized nodes</code> （こんかいは、3種類のウィンドウを記録する。1.赤で画像をめくる、2.黄で画像をめくる、3.青3D viewでVolume Rendering像を動かす」を記録する）</li>
 <li><code>緑の+ボタン</code>で <code>sequence</code>をつくる。（こんかいは、3回押して、上記3種のウィンドウを指定する）</li>
 <li><code>Proxy node</code>を設定、各<code>sequence</code>に、赤画面<code>Red</code>, 黄画面<code>Yellow</code>, 青画面<code>Camera</code>を設定。（プルダウンには Camera が複数あって、記録されるCameraと記録されないCameraがある、らしい。順に選んで試してみる）</li>
-<li>▽ <code>Browsing</code> <code>赤マルボタン</code>で記録開始する。停止も<code>赤マルボタン</code>。動かしている時間だけ記録される。静止している時間は記録されない、らしい。（記録中の様子 「1. 赤で画像をめくる、2.黄で画像をめくる、3.3D viewでVolume Rendering像を動かす」）</li>
+<li>▽ <code>Browsing</code> <code>赤マルボタン</code>で記録開始する。停止も<code>赤マルボタン</code>。動かしている時間だけ記録される。静止している時間は記録されない、らしい。（「1. 赤で画像をめくる、2.黄で画像をめくる、3.3D viewでVolume Rendering像を動かす」）</li>
 <li>▽ <code>Browsing</code> <code>緑三角ボタン</code>で再生、停止。</li>
 </ul>
 <h4 id="2_1">ステップ２</h4>
@@ -1291,24 +1278,26 @@ https://www.slicer.org/wiki/Main_Page</p>
 <code>Master View:</code><br>
 <code>View 1</code>が青画面3D viewのこと。もし青を複数表示させていれば、 View1, 2, 3.. となる。<br>
 <code>Animation mode:</code><br>
-<code>3D totation</code>は、単純な回転動画。<code>sequence</code>は、自作した <code>sequence</code>を呼び出して、動画にする。（今回は demo を動画にする）</p>
+<code>3D rotation</code>は、単純な回転動画。<code>sequence</code>は、自作した <code>sequence</code>を呼び出して、動画にする。（今回は、ステップ1でつくったSequenceを動画にする）</p>
 </li>
 <li>
 <p>▽ <code>output</code><br>
 <code>Output type:</code><br>
-<code>Image series</code>は、PNG連続画像として書き出す (動画にするのは追加機能ffmpegが必要)<br>
-<code>Video</code>は、mpeg4を書き出す<br>
+<code>Image series</code>は、PNG連続画像を書き出す<br>
+<code>Video</code>は、PNG連続画像からmpeg4を作って、動画を書き出す<br>
 <code>Number of images</code>, <code>Video length</code>, <code>Video framerate</code>を設定する。<br>
 保存場所<code>Output directory</code>、ファイル名<code>Output file name</code>を設定する。<br>
 <code>Captureボタン</code>で、書き出し開始。下の小窓に<code>Done</code>と表示されるまで待つ。 <br>
-Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画ファイルを開く<br></p>
+Capture隣の<code>緑の右矢印ボタン</code>は、書き出した動画ファイルへのショートカット<br></p>
 </li>
 </ul>
-<h4 id="_15">動作が重いとき</h4>
+<h4 id="_15">ヒント</h4>
 <ul>
-<li>一般のビデオは、30frame/secondである。このデモでは4秒分、120枚のPNGを書き出した。もし、10秒動画300枚とすると、だいぶ時間がかかる。</li>
-<li>もし、青ウィンドウ、3D View を大きく表示していると、時間がかかる。</li>
+<li>一般のビデオは、30frame/secondである。このデモでは4秒分、120枚のPNGを書き出した。もし、10秒動画300枚とすると、だいぶ時間がかかる。PNG生成ではGPUとシングルコア、連続PNGからの動画変換でマルチコアが働く</li>
+<li>もし、キャプチャしたい（動画にしたい）ウィンドウを大きく表示していると、時間がかかる。</li>
 <li>連続PNGやビデオ変換かかる時間は、パソコンのスペックによるし、待てる時間はひとそれぞれなので、なんどかやってみる。</li>
+<li>Volume Renderingも、Segmentsも両方表示していると重くなる。</li>
+<li>シンプル回転動画の場合、動画開始位置をSceenViewを記録・登録しておく。万が一、スタート位置をずらしてしまっても、戻ってこれる。いろんな表示条件（VRのON/OFF, SegmentのON/OFFなど）で多くの動画を書き出したいときに安心。</li>
 </ul>
 <h3 id="_16">保存</h3>
 <p>2通りある。画像データや作業内容を、まとめてひとつのファイルとして保存する方法と、個別にする方法がある</p>
