@@ -880,9 +880,12 @@
 <li>縮小させる計画をたて、1のピクセルサイズを参考に縮小後の画像サイズを計算しておく。ピクセルサイズが、きりの良い数字になるように縮小している（のちの3Dイメージングに便利）。最小は一片500pixel程度になるように計画する（のちのズレ補正では、軽い画像シリーズから試す）。のちのズレ補正に Cariculate the reduced image size to make 5, 10, 20, or 40 µm/pixel image series.</li>
 <li>新規フォルダを必要数作成する。縮小した画像シリーズを保存するため。</li>
 <li>
-<p><code>Action</code>に記録する。作業ウィンドウが出ていなければ、<code>Window</code>&gt;<code>action</code>で表示させる。新規アクションを<code>白い紙のマーク</code>で新規アクションを作成する。名称はデフォルトでも変更しても、あとで利用するときに分かれば良い。記録が始まっていれば、<code>赤い丸</code>が表示されている。記録できるのは、画像縮小1、別名保存、グレースケール、別名保存、もとに戻す、画像縮小2、、、閉じるなど、さまざま。記録を停止するときは、<code>四角ボタン</code>。</p>
+<p><code>Action</code>に記録する。作業ウィンドウが出ていなければ、<code>Window</code>&gt;<code>action</code>で表示させる。新規アクションを<code>白い紙のマーク</code>で新規アクションを作成する。名称はデフォルトでも変更しても、あとで利用するときに分かれば良い。記録が始まっていれば、<code>赤い丸</code>が表示されている。記録できるのは、画像縮小1種目、別名保存、グレースケール、別名保存、もとに戻す、画像縮小2種目、閉じるなど、さまざま。記録を停止するときは、<code>四角ボタン</code>。</p>
 <ol>
-<li>画像縮小1 <code>Image</code>&gt;<code>Image Size...</code> Resamplingモードは、<code>Preserve Details 2.0</code>または<code>Bicubic Sharper (reduction)</code>を選ぶ。<img alt="segmetation" src="../img/resample_menu_600.png" /></li>
+<li>画像縮小1 <code>Image</code>&gt;<code>Image Size...</code> Resamplingモードは、<code>Preserve Details 2.0</code>または<code>Bicubic Sharper (reduction)</code>を選ぶ。</li>
+</ol>
+<p><img alt="segmetation" src="../img/resample_menu_600.png" /></p>
+<ol>
 <li>別名保存（カラー画像、JPEGなら圧縮率<code>10</code>。TIFFでもよいがデータ量が多いのでディスクに十分な空きを。）</li>
 <li>グレースケールへ変換。<code>Image</code>&gt;<code>Mode</code>&gt;<code>Grayscale</code></li>
 <li>別名保存（グレースケール画像）</li>

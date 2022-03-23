@@ -883,43 +883,43 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    動画（簡易、おすすめ）
+  <a href="#os" class="md-nav__link">
+    動画書き出し（OSの機能、簡易）
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2016" class="md-nav__link">
-    動画（公式 2016年〜）
+  <a href="#3d-slicer2016" class="md-nav__link">
+    動画書き出し（3D slicerの機能、2016年より）
   </a>
   
-    <nav class="md-nav" aria-label="動画（公式 2016年〜）">
+    <nav class="md-nav" aria-label="動画書き出し（3D slicerの機能、2016年より）">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#ffmpeg" class="md-nav__link">
-    事前準備、動画書き出しに必要なffmpeg
+    事前準備、ffmpegのインストール
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
-    ステップ 1
+    ステップ1　操作を記録
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#2_1" class="md-nav__link">
-    ステップ２
+    ステップ２　動画を書き出す
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     ヒント
   </a>
   
@@ -931,7 +931,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#_15" class="md-nav__link">
     保存
   </a>
   
@@ -939,14 +939,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
+  <a href="#_16" class="md-nav__link">
     画像データも作業内容もひとつのファイルに保存する（公式サイトでは推奨）
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     作業内容を個別に保存する（なにかとメリットはある）
   </a>
   
@@ -958,7 +958,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     セグメンテーション
   </a>
   
@@ -973,14 +973,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
+  <a href="#_19" class="md-nav__link">
     体積の数値を読む
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_21" class="md-nav__link">
+  <a href="#_20" class="md-nav__link">
     工夫やヒント
   </a>
   
@@ -1132,8 +1132,8 @@ https://www.slicer.org/wiki/Main_Page</p>
 1. メニューバー<code>Menu bar</code>より、<code>Edit</code>&gt; <code>Application Settings</code>&gt; <code>Units</code>&gt; <code>Show advanced options</code>にチェックを入れる。
 1. ▽<code>Length</code> において、<code>Preset</code>&gt; <code>Select a preset</code>より、<code>Micrometer</code>を選ぶ。<code>OK</code>
 1. 3D slicerを再起動させると、変更が反映される。メニューバー<code>Menu bar</code>&gt; <code>Slicer 4.11</code>&gt; <code>Quit Slicer</code>
-1. もし、再起動させたらmmにもどってしまう場合は、「起動＞Unit選択、OK＞連続画像読み込み＞モジュールVolumeで入力」の順でやってみる。</p>
-<p>（2018-2021年メモ：動作が重くなるかもしれないので、µmをmmのままで使うのがよい。単位を真面目に10µmなどにすると、アプリが落ちることがあった。画像は10µm/pixelだったとしても、10mm/pixelと入力する。デフォルトは1mmで、どうやらその付近なら安定していそう。パソコン環境やスペックが影響するかもしれない。XYZの比だけは正しくしておき、計測値が必要な場合は、あとで計算してから利用する。）（2022.3.11 メモ：動作に変化はなかった。mm, µm, 比率をあわせた桁違い、いろいろな入力値を試して、セグメンテーションを実際に行った。MBP16。たんにスペックの問題だったか。かわりに、再起動でµmからmmに戻ってしまう症状を見た。）</p>
+1. もし、再起動させたらmmにもどってしまう場合は、「アプリを起動 &gt; Unitを選択、OK &gt; 連続画像読み込み &gt; モジュールVolumeで入力 &gt; Save」の順でやってみる。</p>
+<p>（2018-2021年メモ：動作が重くなるかもしれないので、µmをmmのままで使うのがよい。単位を真面目に10µmなどにすると、アプリが落ちることがあった。画像は10µm/pixelだったとしても、10mm/pixelと入力する。デフォルトは1mmで、どうやらその付近なら安定していそう。パソコン環境やスペックが影響するかもしれない。XYZの比だけは正しくしておき、計測値が必要な場合は、あとで計算してから利用する。）（2022.3.11 メモ：動作に変化はなかった。mm, µm, 比率をあわせた桁違い、いろいろな入力値を試して、セグメンテーションを実際に行った。MBP16。たんにスペックの問題だったか。かわりに、再起動でµmからmmに戻ってしまう症状をみつけた。）</p>
 <h3 id="jpeg">連続JPEG画像の準備</h3>
 <p>CoMBIではJPEG形式で連続画像をつくる。3D slicerは、各種画像形式に対応しており、JPEGも直接扱える。ちなみに、PNG形式はダメなようだ。loadはできるが、Volume Renderingにかさねることができない。平面表示ではめくれているけれど、Volume Rendering上の表示は、一枚だけで不変。透明効果は反映されず、白になる。</p>
 <h3 id="_8">ファイル名一括変換、必要に応じて、縮小作業の前に</h3>
@@ -1214,7 +1214,7 @@ https://www.slicer.org/wiki/Main_Page</p>
 <li>▽<code>Display</code>、<code>Rendering</code>プルダウンより、dGPUがあれば、GPUを選んだ方が動作が安定する</li>
 </ul>
 <h4 id="_11">色付け</h4>
-<p><img alt="segmetation" src="../img/3dslicer_color.png" /></p>
+<p>![Volume_Rendering_Coloring]](img/3dslicer_color.png)</p>
 <p><em>このようなのをつくっていく手順です</em></p>
 <p>▽<code>Advanced...</code>において</p>
 <ul>
@@ -1237,71 +1237,117 @@ https://www.slicer.org/wiki/Main_Page</p>
 <h4 id="_13">なんだか重い</h4>
 <p>表示画質をさげてみます。モジュール<code>Volume Rendering</code>&gt; <code>Advanced</code>&gt; <code>Techniques</code>&gt; <code>Quality:</code>で、描出の質を3種から選べます。もっとも動作が軽快な<code>Normal</code>を選んでみる。デフォルトは<code>Adaptive</code>。<code>Maximum</code>はかなり重いようでほぼ固まります。3種どれでも画質はほとんで変わらず、Normalで十分きれいに描出するようです。</p>
 <h3 id="sceneview">表示位置を保存する　モジュール<code>SceneView</code></h3>
-<p>3D ビューワや2D ビューワでの表示位置を保存しておくと、いつでも戻ってこられる。ただし、色付けの調整などは保存されていない。</p>
-<ul>
+<p>3D ビューワや2D ビューワでの表示位置を保存しておくと、いつでも戻ってこられる。ただし、色付けの調整などは保存されていない。Restoreしようとすると、アプリが落ちるときがある（2022.3, v4.11, macOS12.3, iMac2017）</p>
+<ol>
 <li>モジュール<code>Scene Veiws</code> または、<code>カメラマークの右隣のマーク</code> </li>
-<li>新しいウィンドウ<code>3D Slicer SceneView</code>がでる。保存したい画面（R, G, Y, B）を指定できる。</li>
-<li><code>OK</code>。</li>
-<li>保存したSceneを読み込むときは、<code>カメラマークのふたつとなり</code></li>
+<li>新しいウィンドウ<code>3D Slicer SceneView</code>がでる。保存したい画面（R, G, Y, B）を指定できる</li>
+<li><code>OK</code></li>
+<li>保存したSceneを読み込むときは、モジュール<code>Scene Veiws</code> または、<code>カメラマークのふたつとなり</code>で、Restore</li>
+</ol>
+<h3 id="os">動画書き出し（OSの機能、簡易）</h3>
+<p>macOS付属Screen Shot（Applications&gt; Utilities&gt; ScreenShot.app）で動画と静止画を保存できる。Windows10付属Game Bar（Windows button+G, Setting&gt; Game Bar&gt; ON）で録画、Windows付属Snipping Toolで静止画面を保存できる。メリットは、あらゆる動きが録画できることです。デメリットは、マウスやトラックパッドで3Dイメージを動すので、少々ぎこちなさが残ることです。また、コマ落ちする場合があります。</p>
+<p>動画や静止画を様々なパターン（色違いのVolume Rendering、断面表示のON/OFF、SegmentationのON/OFFなど）で作っておき、それらを素材として動画編集アプリ（iMovie, Adobe Premiereなど）で編集します。単純な横回転動画なら、青画面のメニュー（押しピンマーク）内に、回転ボタンがあり、これを利用するとスムースな動きになります。上記のモジュール<code>SceneView</code>をうまく活用すると、素材同士をつなぎ合わせる際に、位置合わせができます。</p>
+<h3 id="3d-slicer2016">動画書き出し（3D slicerの機能、2016年より）</h3>
+<ul>
+<li>動画書き出しを機能させるには、事前にffmpegのインストールが必要</li>
+<li>複雑な動きを動画にする場合、作業は二段階あり、ステップ1で操作を記録し（モジュール <code>sequences</code>）、ステップ2で記録したsequenceを呼び出し、動画ファイルに書き出す（モジュール<code>Screen Capture</code>）</li>
+<li>単純な回転だけの動画なら、ステップ2（モジュール<code>Screen Capture</code>）だけでよく、ステップ1は不要</li>
+<li>この手順書では、「Red 水平面をBlueに表示してめくる、Greenの縦断面をBlueに表示してめくる、VRをBlueに表示し回転」というシナリオで操作を記録し、動画に書き出す。3D slicerでは、操作の記録を<code>Sequence</code>、動画書き出しを<code>Screen Capture</code>と呼び、本手順書ではそれぞれを「ステップ1 操作を記録」、「ステップ2 動画を描き出す」として記す</li>
+<li>
+<p>動画は、複数のパターンで書き出して、あとで動画編集アプリで編集することが多い。動画のデザインが、より自由になる。</p>
+<p><img alt="Movie plan" src="../img/movie_plan.png" /></p>
+</li>
 </ul>
-<h3 id="_14">動画（簡易、おすすめ）</h3>
-<p>macOS付属Screen Shot（Applications&gt; Utilities&gt; ScreenShot.app）で動画と静止画を保存できる。Windows10付属Game Bar（Windows button+G, Setting&gt; Game Bar&gt; ON）で録画、Windows付属Snipping Toolで静止画面を保存できる。メリットは、あらゆる動きが録画できることです。デメリットは、マウスやトラックパッドで3Dイメージを動すので、少々ぎこちなさが残ることです。単純な横回転なら、青画面のメニュー（押しピンマーク）にあり、スムースな動きを表現できます。上記のSceneViewを利用したり、あとで動画アプリ（iMovie, Adobe Premiereなど）で編集することも考えれば、けっこう自由に動画をつくれます。実際、素材として、動画や静止画を様々なパターン；色違いのVolume Rendering、断面表示のON/OFF、SegmentationのON/OFFなどで作っておき、あとでそれらを組み合わせ、動画制作しています。</p>
-<h3 id="2016">動画（公式 2016年〜）</h3>
-<p>自由な動きを動画にする場合、2段階になっている。ステップ1:モジュール <code>sequences</code>で操作の様子を記録し、ステップ2:モジュール<code>Utilities</code>&gt; <code>Screen Capture</code>で、記録したsequenceを呼び出して、動画ファイルに書き出す。
-単純な回転だけの動画なら、ステップ2の<code>3D rotation</code>だけで動画を作れ、ステップ1は不要。</p>
-<h4 id="ffmpeg">事前準備、動画書き出しに必要なffmpeg</h4>
-<p>ffmpegは、フレーム画像（連続 PNG）から動画に変換する追加機能。3D slicerアプリは、動画作成時、いったんPNG連続画像を生成してから、動画へと変換しているようだ。ffmpegをインストールしないで動画書き出しをやろうとすると、下記の手順ステップ2、▽<code>Advance</code>で赤字エラー<code>Set Valid ffmpeg executable path!</code>が現れる。その横にリンク<code>Help...</code>ができる。かつては、それをクリックすると3D Slicerサイトの解説ページにいけたが、2022.3 v4.11 ではリンクが微妙に切れている。こちらの<a href=https://slicer.readthedocs.io/en/latest/user_guide/modules/screencapture.html#setting-up-ffmpeg>新しい解説ページ</a>に従ってインストールする。ここにはMacの手順を転記する。セットアップには時間がかかる。Xcodeアップデート30分、homebrew30分、ffmpeg15分、計75分（自宅wifi夜）、大学LANでも合計16分間かかった。</p>
+<h4 id="ffmpeg">事前準備、ffmpegのインストール</h4>
+<p>ffmpegは、フレーム画像（連続 PNG）から動画に変換する追加機能。3D slicerアプリは、いったんPNG連続画像を生成してから、動画へと変換する。ffmpegをインストールしないで動画書き出しをやろうとすると、下記の手順ステップ2、▽<code>Advance</code>で赤字エラー<code>Set Valid ffmpeg executable path!</code>が現れる。その横にリンク<code>Help...</code>ができる。かつては、それをクリックすると3D Slicerサイトの解説ページにいけたが、2022.3 v4.11 ではリンクが微妙に切れている。こちらの<a href=https://slicer.readthedocs.io/en/latest/user_guide/modules/screencapture.html#setting-up-ffmpeg>新しい解説ページ</a>に従ってインストールする。ここではMacの手順を転記する。インストールには時間がかかる。Xcodeアップデート30分、homebrew30分、ffmpeg15分、計75分（自宅wifi夜）、大学LANでも合計16分間かかった。</p>
 <ol>
 <li>アプリ<code>Terminal</code>を起動</li>
-<li><code>Homebrew</code>をインストールする。こちらのサイト（<a href=https://brew.sh/>https://brew.sh/</a>）に記載のコマンドを<code>Terminal</code>に打つ。すでにHomebrewを入れていればこの作業は必要ない</li>
-<li>Homebrewをインストールするとき、<code>Xcode</code>インストールまたはアップデートも要求されたときは、従う。</li>
+<li><code>Homebrew</code>をインストールする。こちらのサイト（<a href=https://brew.sh/>https://brew.sh/</a>）に記載のコマンドを<code>Terminal</code>に打つ。（すでにHomebrewをインストールしていれば不要）</li>
+<li>Homebrewをインストールするとき、<code>Xcode</code>インストールまたはアップデートも要求された場合はそれに従う。（既にアップデートしてあれば不要）</li>
 <li><code>ffmpeg</code>をインストールする　<code>brew install ffmpeg</code> を<code>Terminal</code>に打つ</li>
-<li>3D slicerのモジュール<code>Screen Capture</code>に戻って、<code>ffmpeg executable</code>の欄に、ffmpegのアドレス <code>/usr/local/bin/ffmpeg</code> を入力する。</li>
+<li>3D slicerのモジュール<code>Screen Capture</code>に戻って、<code>ffmpeg executable</code>の欄に、ffmpegのアドレス <code>/usr/local/bin/ffmpeg</code> を入力する。以上。</li>
 </ol>
-<h4 id="1">ステップ 1</h4>
-<p>操作している様子を記録できる。画面、Red, green, yellow, camera（3Dの画面）のどれかを指定できる。</p>
-<ul>
-<li>モジュール<code>Sequences</code></li>
-<li>タブ<code>Browse</code>, プルダウン<code>Sequence browser</code>より、<code>Create new sequence browser as...</code>, 新しいウィンドウ<code>Rename sequence</code>で、名前を決めて入力する</li>
-<li>▽ <code>Synchronized nodes</code> （こんかいは、3種類のウィンドウを記録する。1.赤で画像をめくる、2.黄で画像をめくる、3.青3D viewでVolume Rendering像を動かす」を記録する）</li>
-<li><code>緑の+ボタン</code>で <code>sequence</code>をつくる。（こんかいは、3回押して、上記3種のウィンドウを指定する）</li>
-<li><code>Proxy node</code>を設定、各<code>sequence</code>に、赤画面<code>Red</code>, 黄画面<code>Yellow</code>, 青画面<code>Camera</code>を設定。（プルダウンには Camera が複数あって、記録されるCameraと記録されないCameraがある、らしい。順に選んで試してみる）</li>
-<li>▽ <code>Browsing</code> <code>赤マルボタン</code>で記録開始する。停止も<code>赤マルボタン</code>。動かしている時間だけ記録される。静止している時間は記録されない、らしい。（「1. 赤で画像をめくる、2.黄で画像をめくる、3.3D viewでVolume Rendering像を動かす」）</li>
-<li>▽ <code>Browsing</code> <code>緑三角ボタン</code>で再生、停止。</li>
-</ul>
-<h4 id="2_1">ステップ２</h4>
-<p>記録したものから、動画ファイルをつくる。</p>
-<ul>
-<li>モジュール<code>Utilities</code>, <code>Screen Capture</code></li>
+<h4 id="1">ステップ1　操作を記録</h4>
+<p>操作している様子を記録できる。画面（Red, green, yellow, blue）を指定できる。ここでは「Red 水平面をBlueに表示してめくる、Greenの縦断面をBlueに表示してめくる、VRをBlueに表示し回転」というシナリオ（<code>Sequence browser</code>）を例として、操作を記録する</p>
+<ol>
 <li>
-<p>▽ Input<br>
-<code>Master View:</code><br>
-<code>View 1</code>が青画面3D viewのこと。もし青を複数表示させていれば、 View1, 2, 3.. となる。<br>
-<code>Animation mode:</code><br>
-<code>3D rotation</code>は、単純な回転動画。<code>sequence</code>は、自作した <code>sequence</code>を呼び出して、動画にする。（今回は、ステップ1でつくったSequenceを動画にする）</p>
+<p>表示スタイルを選ぶ</p>
+<ul>
+<li>本例では、赤画面、緑画面、青画面を使いたいので、4画面表示（Conventional, Conventional widescreen, Four Upなど）を選ぶ。ここで選ぶのは操作記録用の表示スタイルで、目的の操作がしやすければ何でも良い</li>
+<li>のちのステップ2、動画を書き出す際は、動画書き出しに適した表示スタイルに変更する（3D onlyなど）。</li>
+</ul>
+<p><img alt="Window styles" src="../img/window_style.png" /></p>
 </li>
 <li>
-<p>▽ <code>output</code><br>
-<code>Output type:</code><br>
-<code>Image series</code>は、PNG連続画像を書き出す<br>
-<code>Video</code>は、PNG連続画像からmpeg4を作って、動画を書き出す<br>
-<code>Number of images</code>, <code>Video length</code>, <code>Video framerate</code>を設定する。<br>
-保存場所<code>Output directory</code>、ファイル名<code>Output file name</code>を設定する。<br>
-<code>Captureボタン</code>で、書き出し開始。下の小窓に<code>Done</code>と表示されるまで待つ。 <br>
-Capture隣の<code>緑の右矢印ボタン</code>は、書き出した動画ファイルへのショートカット<br></p>
+<p>モジュール<code>Sequences</code></p>
 </li>
-</ul>
-<h4 id="_15">ヒント</h4>
+<li>タブ<code>Browse</code>, プルダウン<code>Sequence browser</code>より、<code>Create new sequence browser as...</code>, 新しいウィンドウ<code>Rename sequence</code>で、名前を決めて入力する（本例では、「2-planes-rotate」と名付けた）</li>
+<li>▽ <code>Synchronized nodes</code> （本例では、3種類のウィンドウ「赤画面で画像をめくる」「緑画面で画像をめくる」「青画面3D viewでVolume Rendering像を回転」を記録する）</li>
+<li>ボタン<code>Green PLUS</code>で <code>sequence</code>をつくる。（こんかいは、3回押して、上記3種のウィンドウを指定する）</li>
+<li><code>Proxy node</code>を設定、各<code>sequence</code>に、赤画面<code>Red</code>, 黄画面<code>Yellow</code>, 青画面<code>Camera</code>を設定。（プルダウンには Camera が複数あって、記録されるCameraと記録されないCameraがある、らしい。いちどやってみて、ダメなら順に選んで試す）</li>
+<li>▽ <code>Browsing</code>, ボタン<code>Red CIRCLE</code>で記録開始する。停止も<code>Red CIRCLE</code>。動かしている時間だけ記録される。静止している時間は記録されない、らしい。（「1. 赤で画像をめくる、2.黄で画像をめくる、3.3D viewでVolume Rendering像を動かす」）</li>
+<li>
+<p>▽ <code>Browsing</code>, ボタン<code>Green TRIANGLE</code>で再生し、記録した操作を確認する。停止もボタン<code>Green TRIANGLE</code></p>
+<p><img alt="Brows and Sybchronized nodes" src="../img/sequences.png" /></p>
+</li>
+</ol>
+<h4 id="2_1">ステップ２　動画を書き出す</h4>
+<p>記録した操作（ステップ1で作った<code>Sequence browser</code>）から、動画ファイル（mpeg4）を書き出す。ひとつの操作記録から、多様な動画を描き出せる。例えば、表示VRを切り替え、表示断面像の切り替え、VRや断面像の表示／非表示などを動画書き出し時に選べる。動画の画面の大きさと形は、表示させているウィンドウの大きさと形が反映される。</p>
+<ol>
+<li>モジュール<code>Utilities</code> &gt; <code>Screen Capture</code></li>
+<li>
+<p>▽ Inputの設定</p>
 <ul>
-<li>一般のビデオは、30frame/secondである。このデモでは4秒分、120枚のPNGを書き出した。もし、10秒動画300枚とすると、だいぶ時間がかかる。PNG生成ではGPUとシングルコア、連続PNGからの動画変換でマルチコアが働く</li>
-<li>もし、キャプチャしたい（動画にしたい）ウィンドウを大きく表示していると、時間がかかる。</li>
-<li>連続PNGやビデオ変換かかる時間は、パソコンのスペックによるし、待てる時間はひとそれぞれなので、なんどかやってみる。</li>
-<li>Volume Renderingも、Segmentsも両方表示していると重くなる。</li>
-<li>シンプル回転動画の場合、動画開始位置をSceenViewを記録・登録しておく。万が一、スタート位置をずらしてしまっても、戻ってこれる。いろんな表示条件（VRのON/OFF, SegmentのON/OFFなど）で多くの動画を書き出したいときに安心。</li>
+<li><code>Master View:</code> 本例では、青画面3D viewを記録したいので<code>View 1</code>を選ぶ。もし複数の青画面を表示させているなら、View1, 2, 3...から適切な青画面を選ぶ</li>
+<li><code>Animation mode:</code> ステップ1で記録した <code>sequence</code>を呼び出して動画にする場合は、<code>sequence</code>を選ぶ（本例ではこちら）。<code>3D rotation</code>の場合、単純な回転動画が生成され、記録した<code>sequence</code>を必要としない。</li>
+<li><code>Sequence:</code> ステップ1で記録した <code>sequence</code> を指定する。本例では「2-planes-rotate」を指定した。</li>
+<li><code>Start index:</code>, <code>Stop index:</code> 記録したsequenceのどこを利用するか指定できる。本例では最初の19フレームを不採用にして、Startは20からとした。Stopは変更せず、1170のまま、最後まで採用した。 </li>
 </ul>
-<h3 id="_16">保存</h3>
+</li>
+<li>
+<p>▽ Outputの設定</p>
+<ul>
+<li><code>Output type:</code>　動画書き出しの場合<code>Video</code>を選択する。PNG連続画像を生成した後、動画mpeg4に変換してくれる。<code>Image series</code>の場合、PNG連続画像を生成する</li>
+<li><code>Number of images</code>, <code>Video length</code>, <code>Video frame rate</code>を設定する。本例では300flames, 10sec, 30flames/secとした。（設定に関するヒントは下記参照）</li>
+<li><code>Output directory :</code>, <code>Output file name :</code> 保存場所とファイル名を設定する</li>
+<li>ボタン<code>Capture</code>で、書き出しを開始する。下の小窓にステータスが表示され、完了すると<code>Done</code>と表示される。時間がかかる</li>
+<li>（ボタン<code>ARROW</code>（Capture隣）は、書き出した動画ファイルへのショートカット）</li>
+</ul>
+<p><img alt="Screen Capture" src="../img/screen_capture.png" /></p>
+</li>
+<li>
+<p>表示スタイルを選ぶ</p>
+<ul>
+<li>書き出される動画の大きさと形状は、表示されている状態を反映する。本例では青画面だけを書き出したいので、表示スタイルは、「3D only」にして、大きさと縦横比を好みに合わせる。このときの表示状態をScene Viewに保存しておくと便利だが、Restore時にアプリが落ちることがある</li>
+</ul>
+</li>
+<li>
+<p>表示させたいものを選ぶ</p>
+<ul>
+<li>赤画面、緑画面などで表示させる連続画像（カラー、グレーなど）を選べる。各画面の<code>押しピンマーク</code>、<code>眼マークの隣のプルダウン</code>、<code>眼マーク</code>で設定する</li>
+<li>Volume Renderingを選んだり、表示／非表示を選べる。モジュール<code>Volume Rendering</code>にて、<code>Volume:</code>, 眼マークで設定する。選び終えたら、モジュール<code>Screen Capture</code>に戻る</li>
+<li>セグメンテーションがあれば、モジュール<code>Segmentations</code>にて、各セグメントの表示／非表示を選べる。選び終えたら、モジュール<code>Screen Capture</code>に戻る</li>
+</ul>
+</li>
+<li>
+<p>書き出し</p>
+<ul>
+<li>（モジュール<code>Screen Capture</code>に戻って）</li>
+<li>▽ Outputの、ボタン<code>Capture</code>で、書き出しを開始する。下の小窓にステータスが表示され、完了すると<code>Done</code>と表示される。時間がかかる</li>
+<li>（ボタン<code>ARROW</code>（Capture隣）は、書き出した動画ファイルへのショートカット）</li>
+</ul>
+</li>
+</ol>
+<h4 id="_14">ヒント</h4>
+<ul>
+<li>一般のビデオは、30 frame/secondである。5秒動画ならPNG150枚や、10秒動画ならPNG300枚が生成され、動画に変換される。300枚ともなると、だいぶ時間がかかる。PNG生成ではGPUとシングルコアが働き、連続PNGからの動画変換でマルチコアが働く。かかる時間は、パソコンのスペックによるし、待てる時間はひとそれぞれ。まずは100枚以下で様子を見てから、設定を調整し、何度かためしてみる</li>
+<li>キャプチャしたい（動画にしたい）ウィンドウを大きく表示していると、時間がかかる</li>
+<li>Volume Renderingも、Segmentsも両方表示していると、時間が掛かる</li>
+<li>動画開始位置をSceenViewを記録・登録しておくと安心。いろんな表示条件（VRのON/OFF, SegmentのON/OFFなど）で多様な動画を書き出したいとき、万が一、スタート位置をずらしてしまっても、戻って来られる</li>
+</ul>
+<h3 id="_15">保存</h3>
 <p>2通りある。画像データや作業内容を、まとめてひとつのファイルとして保存する方法と、個別にする方法がある</p>
-<h4 id="_17">画像データも作業内容もひとつのファイルに保存する（公式サイトでは推奨）</h4>
+<h4 id="_16">画像データも作業内容もひとつのファイルに保存する（公式サイトでは推奨）</h4>
 <p>拡張子はmdb。画像、着色、シーンなどの設定を一括して保存できる</p>
 <ol>
 <li>アイコン<code>SAVE</code> ウィンドウの左上。新しいウィンドウ<code>Save Scene and Unsaved Data</code>がでてくる。</li>
@@ -1309,7 +1355,7 @@ Capture隣の<code>緑の右矢印ボタン</code>は、書き出した動画フ
 <li>保存先を指定する。外付けディスクを指定する場合だけ注意：ファイル右横のマーク<code>...</code>から指定すること。下のボタン<code>Change directory for selected files</code>では指定できない。</li>
 <li>開くときは、mrbファイルを3D slicer のウィンドウへ、ドラッグ&amp;ドロップする。保存したときの作業状態が再現される。</li>
 </ol>
-<h4 id="_18">作業内容を個別に保存する（なにかとメリットはある）</h4>
+<h4 id="_17">作業内容を個別に保存する（なにかとメリットはある）</h4>
 <p>生成されるファイルのうち、.mrml（シーン設定）、.png（シーン、アイコンの代わり）、.nrrd（連続画像）は、必須のファイル。もし、作業していれば、.seg.nrrd（セグメントをまとめたファイル）や、.h5（Transformのファイル）など追加で生成される。シーンとは、作業していたウィンドウの状況.mrmlと、見た目.pngのことである。見た目のpngのおかげで、次に開くときに作業内容を思い出しやすい。個別ファイルが使いやすい場面として、複数サンプルに同一処理、たとえば、Volume Renderingで、複数サンプルに同じ着色をしたいときや、セグメンテーションは軽い連続画像でやっておいて、できあがったらセグメンテーションだけを重い連続画像と合わせたいときが考えられる。また、上書き保存が速いというメリットもある。</p>
 <ol>
 <li>アイコン<code>SAVE</code> ウィンドウの左上。新しいウィンドウ<code>Save Scene and Unsaved Data</code>がでてくる。</li>
@@ -1319,7 +1365,7 @@ Capture隣の<code>緑の右矢印ボタン</code>は、書き出した動画フ
 <li>上書き保存では、ボタン<code>SAVE</code>をおすと、別ウィンドウがでて、左のボタン<code>Select Scene &amp; Modidied Data Only</code>にチェックが入っている。これで、.mrml（シーン設定）、.png（シーン、アイコンの代わり）と、更新したファイルのみが保存される。となりの<code>Modidied Data Only</code>にすると、シーンが更新されない。</li>
 <li>ヒント：Segmentのファイル名は、[Active segmentation].seg.nrrdになっている。モジュールSegmentationsでCreate New Segmentationsでつくった名称＝複数のセグメントをまとめているところの名称。</li>
 </ol>
-<h3 id="_19">セグメンテーション</h3>
+<h3 id="_18">セグメンテーション</h3>
 <ul>
 <li>3Dslicerだけで手作業でSegmentationする手順を下に示します。使用するツールは、<code>Paint</code>と<code>Fill between slices</code>と<code>Smooth</code>だけにしてシンプルです。他に領域限局やシグナル強度の範囲指定など、さまざまなツールが備わっていますが、CoMBIのフルカラー画像なら、基本の<code>Paint</code>と<code>Draw</code>が役立つでしょう</li>
 <li>抽出したい対象物によっては、3D slicerだけでは不便な場合もあるでしょう。iLastikは、機械学習でSegmentationして、二値化やグレースケール連続画像をつくってくれます。こちらのページ<a href="../ilastik/index.html">「Segmentation by iLastik」</a>に記しました。また、Photoshopは、「色域指定」で二値化連続画像をつくれます。こちら<a href="../horos/index.html#3">Horosのページの中の「色域指定」</a>に記しました。iLastikやPhotoshopでつくった二値化やグレースケール連続画像は、3D slicerで<code>Volume Rendering</code>したり、<code>Segmentation</code>, <code>Threshold</code>を施したりします。</li>
@@ -1377,11 +1423,11 @@ Capture隣の<code>緑の右矢印ボタン</code>は、書き出した動画フ
 <li>アイコン<code>Camera</code>（Capture Screenshot）で、静止画に描き出せる</li>
 <li>Saveのとき、一括ファイルか、Segmentationのみの個別ファイルかを選べる。別のプロジェクトへ移入させたいときは個別ファイルにする</li>
 </ol>
-<h4 id="_20">体積の数値を読む</h4>
+<h4 id="_19">体積の数値を読む</h4>
 <ul>
 <li>モジュール<code>segmentation</code>&gt;<code>Quantification</code>&gt;<code>Segment statistics</code>（このモジュールをクリックすると、ウィンドウデザインが変わって、数値一覧がでる。CSVにでも書き出せば、Excelなどで使える。練習中）</li>
 </ul>
-<h4 id="_21">工夫やヒント</h4>
+<h4 id="_20">工夫やヒント</h4>
 <ul>
 <li>
 <p>最初はうまく行かないもの</p>
@@ -1595,7 +1641,7 @@ Capture隣の<code>緑の右矢印ボタン</code>は、書き出した動画フ
 <li>Visble segments only; このみでチェック。</li>
 <li>Reference vol: わからないがデフォルト、連続画像セットの名称が記されている。</li>
 <li>File format: STL</li>
-<li>Scale size: CoMBIのデータなら、実際のスケールµmと、入力した数値mmを考慮して。</li>
+<li>Scale size: （CoMBIのデータなら、µmが多いけど...まだ試していない）</li>
 <li>ボタン<code>Export</code></li>
 </ol>
 </li>
