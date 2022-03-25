@@ -829,6 +829,26 @@
     軽量化_枚数を減らす
   </a>
   
+    <nav class="md-nav" aria-label="軽量化_枚数を減らす">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mac" class="md-nav__link">
+    Macの場合：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windowsの場合：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1023,9 +1043,7 @@ run(&quot;Crop&quot;);
 <h2 id="_">軽量化_枚数を減らす</h2>
 <p>連続画像を1つ飛びにすれば、容量が半分になる。薄く切りすぎて、枚数が増えすぎたとき。解析にはそんなに枚数はいらないとき。3D解析で軽くしたいとき。
 MacではFinder、WindowsではExploreで操作します。</p>
-<ul>
-<li>
-<p>Macの場合：</p>
+<h3 id="mac">Macの場合：</h3>
 <ol>
 <li>連続画像を複製する。フォルダ上で右クリック、<code>Duplicate</code></li>
 <li>複製したフォルダを<code>Finder</code>で表示し、タテに細長く表示する。<code>Show items as icons</code>, Sort by <code>name</code>。ファイル名で並べ替えをする。</li>
@@ -1034,9 +1052,7 @@ MacではFinder、WindowsではExploreで操作します。</p>
 <li>右クリックで、<code>New Folder with Selection</code>、フォルダに名前をつけて管理する。（または、選択ファイルを削除して、残りを使用するのでもかまいません）
 同様に、3列になるように表示して、1列だけを選択すれば2つ飛ばしのシリーズ（枚数3分の1）を作れます。</li>
 </ol>
-</li>
-<li>
-<p>Windowsの場合：</p>
+<h3 id="windows">Windowsの場合：</h3>
 <ol>
 <li>連続画像を複製する。フォルダ上で右クリック、<code>Copy</code> &amp; <code>Paste</code>。</li>
 <li>複製したフォルダを開いて、アイコン表示にする（大、中、小アイコン、どれでも）</li>
@@ -1045,8 +1061,6 @@ MacではFinder、WindowsではExploreで操作します。</p>
 <li>選択したファイルを削除。（複製フォルダ内であること。元の連続画像とは別であること）</li>
 <li>残ったほうを1つ飛ばしの連続画像として使用できます。</li>
 </ol>
-</li>
-</ul>
 <hr />
 <h2 id="_5">連続画像のファイル名一括変換</h2>
 <p>CoMBIの撮影が通常に成功した場合は、必要ありません。ファイル名が9999から0001に戻ったとか、特別な事情があるときに、ファイル名を一括で連番へと変換します。連番の必要性はアプリによって異なりますが、全過程のどこかで連番が必要でしょうから、どこかで施します。変換後に、元データの元名称がなくなってしまう場合、元データとの照合（実験の再現性）ができるように、メモを残してください。</p>
