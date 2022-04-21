@@ -765,26 +765,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#processing-serial-images" class="md-nav__link">
-    Processing serial images/連続画像を処理する
+  <a href="#1-processing-serial-images" class="md-nav__link">
+    1. Processing serial images/連続画像を処理するアプリ
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3d-reconstruction3d" class="md-nav__link">
-    3D reconstruction/3D再構築
+  <a href="#2-3d-reconstruction3d" class="md-nav__link">
+    2. 3D reconstruction/3D再構築するアプリ
   </a>
   
-    <nav class="md-nav" aria-label="3D reconstruction/3D再構築">
+    <nav class="md-nav" aria-label="2. 3D reconstruction/3D再構築するアプリ">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#comparison-of-some-applications" class="md-nav__link">
-    Comparison of some applications/主なアプリの比較
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#3d-slicer-win-mac-linux" class="md-nav__link">
@@ -884,6 +877,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-movie-edit-optional" class="md-nav__link">
+    3. Movie edit (optional)/動画編集（必要に応じて）
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Movie edit (optional)/動画編集（必要に応じて）">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#adobe-premiere" class="md-nav__link">
     Adobe Premiere
@@ -900,13 +906,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3d" class="md-nav__link">
-    私が3D用アプリでやっていること
-  </a>
   
 </li>
       
@@ -994,16 +993,17 @@
 <p><span style="color:#444C99;">
 すべてのプロセスは、無料のアプリで行えます。まずは無料アプリでやってみるのがいいでしょう。有料アプリは、利便性や安定性の面でよい場合があります。画像処理の安定性は、アプリだけでなく、もちろんPCのスペックも影響します。上記の3D再構築の5項目は、順にPCの能力を必要とします。</span></p>
 <hr />
-<h2 id="processing-serial-images">Processing serial images/連続画像を処理する</h2>
+<h2 id="1-processing-serial-images">1. Processing serial images/連続画像を処理するアプリ</h2>
 <p>Processing serial images in batches. ImageJ (free) can do this, but Adobe CC (paid) is more convenient. Adobe CC for educational use costs 32340 yen/year (as of 2021). Some universities may have a contract with AdobeCC. The conditions of use are that up to two computers can be used at the same time, and that installation on more than 2 computers is possible, but only 2 computers can be used at the same time.</p>
 <ul>
 <li>
-<p>RAW-JPEG conversion (using one of the following)</p>
+<p>RAW-JPEG conversion (use one of the following)</p>
 <ol>
 <li>Adobe bridge or Adobe lightroom (Paid, Eng/Jpn, Detailed adjustments)</li>
 <li>Sony Imaging Edge (Free, Eng/Jpn, Adjustment is not as detailed as Adobe.)</li>
 <li>Nikon NX studio (Free, Eng/Jpn, Before 2021.3, it was called Capture NX-D)</li>
 <li>Canon Digital Photo Professional (Free, Eng/Jpn)</li>
+<li>Fujifilm RAW file converter ex 3.0 powered by SILKYPIX (free)</li>
 <li>Darktable (Free, Eng)</li>
 </ol>
 </li>
@@ -1026,14 +1026,14 @@
 <p><span style="color:#444C99;">
 連続画像を一括処理します。ImageJ（無料）でもできますが、Adobe CC（有料）があると便利です。便利さを感じる場面は、連続画像の自動処理と、3Dイメージング・セグメンテーションの色域選択です。AdobeCC教育機関向けは、32340円/年（2021年現在）です。大学が契約している場合もあると思います。利用条件は、「２台まで同時使用できること、台数を超えたインストールもできるが同時使用は2台までであること」です。</span></p>
 <hr />
-<h2 id="3d-reconstruction3d">3D reconstruction/3D再構築</h2>
+<h2 id="2-3d-reconstruction3d">2. 3D reconstruction/3D再構築するアプリ</h2>
 <p>Currently 2021, My recommentadion is 3D slicer (Win, Mac, Linux). I'm practicing Icy (Mac, Win, Linux) since 2021. I have been using OsiriX/Horos (Mac only) since 2009 for both education and research, however, OsiriX is currently commercial-ware and Horos is not stable during segmentation process. </p>
 <p>There are many applications for 3D imaging. However, some of them are dedicated to DICOM format for medical use, some of them are expensive, and some of them are not friendly to researchers with little experience. I selected applications based on the following points: 1. free, 2. JPEG images are supported, and 3. continuously updated. You may find free demo versions. These has some limitations on the number of serial images, and 3D reconstruction function. As this is a service for evaluation, it is natural that it cannot be used in a fully functional manner. </p>
 <p><span style="color:#444C99;">
 2021年、Macなら3D slicer、Horos、WindowsやLinuxなら3D sclicerがおすすめです。どれも無料で使えます。Icyもよさそうです（最近2021年に気づいて練習中。Mac, Win, Linuxに対応）。私は複数のアプリを使っていますが、CoMBIはどれかひとつでできます。私が使っているのは、OsiriX（Mac, 2009年、無料の頃から教育用に使っていたため）+ Horos（Mac, サブマシンに、教育用に）+ 3D slicer（Mac, セグメンテーション用）です。使い始めたきっかけは、医学部における画像解剖学の教育業務だったという背景があります。最近、2021年以降は、研究用には3D slicerを使うことが多くなってきました。OsiriXはかつて無料で、現在は有料になりましたが、CT用有料アプリとしては安いほうです。</span></p>
 <p><span style="color:#444C99;">
 3D imagingのアプリは数多くあります。しかし、医療用のDICOM形式専用だとか、高価だったり、端くれ研究者にはやさしくありません。アプリの選定では、1.無料であること、2.JPEG画像が扱えること、3.改良が続いていること、を基準としました。本来は有料だけどデモ版は無料というアプリがたくさんあります。たいてい、扱える連続画像枚数に上限がある、3D再構築はできない、といった制限があります。評価するためのサービスですので、本格的には使えなくて当然でしょう。</span></p>
-<h3 id="comparison-of-some-applications">Comparison of some applications/主なアプリの比較</h3>
+<p><em>Comparison of some applications/主なアプリの比較</em></p>
 <table>
 <thead>
 <tr>
@@ -1085,74 +1085,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="3d-slicer-win-mac-linux">3D slicer (Win, Mac, Linux)</h3>
-<p>When you see it for the first time, it looks hard to use, but you will adapt soon. The application is very stable. It was stable even on a basic Windows laptop (Core i5, 8GB RAM, Iris). I use it for segmentation with my favorite working environment; 3D slicer on MacBookPro + iPadPro(sidecar) + ApplePen. 3D slicer has been developed by Brigham and Women's Hospital and the MIT Artificial Intelligence Laboratory.</p>
-<p><span style="color:#444C99;">
-初めて見たときにとっつきにくい印象ですが、すぐ慣れます。動作は安定しています。ごく一般的なWinノートパソコン（Core i5, RAM 8GB, Iris）でも安定していました。私は、セグメンテーションで利用しています。お気に入り作業環境は、3D slicer + MacBookPro + iPadPro(sidecar) + ApplePenです。開発しているのは、米国Brigham and Women's Hospital and the MIT Artificial Intelligence Laboratoryです。</span></p>
-<p><a href=https://www.slicer.org>https://www.slicer.org</a></p>
-<h3 id="icy-win-mac-linux">Icy (Win, Mac, Linux)</h3>
-<p>Icy is free and open source, started in 2011 with the BioImage Analysis Lab at Institut Pasteur and licensed under GPLv3. Supported file format is multiTIFF. JPEG series should be converted to multiTIFF using ImageJ to opne them in Icy.</p>
-<p><span style="color:#444C99;">
-バイオイメージングのために開発されました。良さそうなので練習中です。対応する画像形式は、multiTIFFなので、CoMBIの連続画像は、前もってImageJでmultiTIFFに保存してから、Icyで利用します。</p>
-<p><a href=http://icy.bioimageanalysis.org>http://icy.bioimageanalysis.org</a></p>
-<h3 id="emma-ios">eMma (iOS)</h3>
-<p>Free DICOM viewer for iPad, download from App Store. eMma can display DICOM, grayscale images, serial images, and reconstruct orthogonal planes. For viewing CoMBI data, JPEG serial images should be converted to DICOM using <code>3D slicer</code>. (Not OsiriX/Horos). In the 3D slicer, <code>import JPEG</code>(drag and drop), Modue <code>Volume</code> input XYZ size, and <code>Data</code>&gt; <code>Right click</code>&gt; <code>Export DICOM</code>. To transfer data to eMma, computer is required.</p>
-<p><span style="color:#444C99;">
-iPadで、DICOMの閲覧と平面再構築ができます。無料。だれでもDICOM画像を閲覧できるようにとのコンセプト。東京大学脳外科、Kompas社。DICOM形式のみ対応する。研究データ（JPEGやTIFF）の場合、3D slicerでDICOM形式に書き出してから利用します。グレースケールのみ対応します。データをeMmaに移すには、パソコンが必要です。医療機器由来のDICOMには、たまに設定ファイルが紛れていて、読み込み時にエラーがでます。連続DICOM画像が収まるフォルダ内から設定ファイルを削除すると読み込めます。</span></p>
-<h3 id="horos-mac">Horos (Mac)</h3>
-<p>Horos is easy to start using. Basic operations such as data listing, brightness and contrast adjustment (window level and window width in DICOM) are easy. However, for research use such as quantification and segmentation, it becomes unstable. Horos is based on OsiriX version 3.5 when it was open source, so it looks almost identical to OsiriX.</p>
-<p><span style="color:#444C99;">
-使い始めは簡単です。データ一覧、明るさコントラスト調整（DICOMでいう、ウィンドウレベル、ウィンドウ幅）といった基本操作が簡単です。研究向けのデータ、数値やセグメンテーションなどのために、いじり進めると不安定さを感じます。また、Mac版しかないので、利用者が限定されます。Horosは、オープンソースだった頃のOsiriX version 3.5をもとに作られているため、見た目はOsiriXとほぼ同じです。</span></p>
-<p><a href=https://horosproject.org>https://horosproject.org</a></p>
-<hr />
-<h3 id="osirix-mac">OsiriX (Mac)</h3>
-<p>When it was initially developed at UCLA in 2004, it was an open source project and free. Later it became a paid app, but it is still one of the cheaper apps for medical use. There are few bugs like those found in Horos, probably due to the change to a paid version.</p>
-<p><span style="color:#444C99;">
-2004年UCLAでの開発当初では、オープンソースプロジェクトで無料でした。その後、有料になりました。医療向けをうたったアプリとしては格安です。有料のおかげか、Horosでみられるようなバグはほとんどありません。</span></p>
-<h3 id="zen-lite-win">Zen lite (Win)</h3>
-<p>Windows version only. This application is included with Zeiss confocal microscopes, so it may be suitable for researchers who are familiar with the microscope. To install it on your own PC, you need to apply to Zeiss to download. Other CoMBI users kindly told me about this application. I installed it but haven't touched yet. </p>
-<p><span style="color:#444C99;">
-Window版のみ。ツァイツのコンフォーカル顕微鏡に付属するアプリなので、使い慣れた研究者にはいいでしょう。各自のPCにインストールするためには、Zeissに申請し、ダウンロード・インストールします。私自身は、インストールをして、その後いじっていませんが、他のCoMBIユーザが利用されています。</span></p>
-<h3 id="paraview-win-mac-linux">Paraview (Win, Mac, Linux)</h3>
-<p>It is often used in engineering and is free. However, I have one concern: it often crashes on a basic Windows laptop (Core i5, 8GB RAM, Iris. This has too low capacity for 3D imaging...). The ParaView project started in 2000 by Kitware Inc. and Los Alamos National Laboratory.</p>
-<p><span style="color:#444C99;">
-工学系でよく利用されていて、無料です。しかし、一点だけ気がかりがあって、ごく一般的なWinノートパソコン（Core i5, RAM 8GB, Iris）では、落ちることがしばしばです。ただし、3D用としてはかなり低スペックなPCで、無茶な検証であること申し添えておきます。2000年からLos Alamos National Laboratoryが開発しています。</span></p>
-<p><a href=https://www.paraview.org>https://www.paraview.org</a></p>
-<h3 id="imagejfiji-win-mac-linux">ImageJ/FIJI (Win, Mac, Linux)</h3>
-<p>It can be used for orthogonal planes reconstruction and volume rendering. <code>Plug-ins</code>&gt; <code>Volume Viewer</code>. The difficulty is that the CLUT is handwritten. I have not learned enough about how to save and reproduce. Segmentation is not possible in this plug-in, instead, use another plug-in (<code>Plug-ins</code>&gt; <code>Segmentation</code>&gt;).</p>
-<p><span style="color:#444C99;">
-MPRとVolume Renderingができます。<code>Plug-ins</code>&gt; <code>Volume Viewer</code>です。使いにくいところは、CLUTが手書きなのところです。それをどうやって保存するか（再現性の確保）について、勉強不足です。このプラグイン内ではSegmentationはできないので、別のプラグイン（<code>Plug-ins</code>&gt; <code>Segmentation</code>&gt; に多種）を使うようです。</span></p>
-<h3 id="ilastik-win-mac-linux">ilastik (Win, Mac, Linux)</h3>
-<p>An app that uses machine learning for segmentation; it seems to be able to handle 3D datasets, but doesn't have a built-in 3D Viewer (Nature Methods, 2019). </p>
-<p><span style="color:#444C99;">
-セグメンテーションを機械学習で行うアプリ（Nature Methods, 2019）。3Dデータセットを扱えるようだ。「built-in 3D Viewerはない」との情報をどこかで読んだ。たぶん、Volume Renderingのことだろう。3Dデータを読み込んで、直交面再構築なら表示できる。ただいま練習中。セグメンテーションがかなりうまくいきそう。CPUのコア数が必要、4コア8スレッドでは処理待ちが長い。</span></p>
-<p><a href=https://www.ilastik.org>https://www.ilastik.org/</a></p>
-<h3 id="mib-win-mac-linux">MIB (Win, Mac, Linux)</h3>
-<p>An application that can handle 3D data sets and performs segmentation（PLoS Biology, 2016）.</p>
-<p><span style="color:#444C99;">
-3Dデータセットを扱えて、セグメンテーションを行うアプリ</span></p>
-<p><a href=http://mib.helsinki.fi>http://mib.helsinki.fi/</a></p>
-<hr />
-<h3 id="amira">Amira</h3>
-<p>This is a paid app that has been used often in research papers. I don't have it myself, but only looked at other CoMBI users using it.</p>
-<p><span style="color:#444C99;">
-以前から論文でよく使われている有料アプリです。私自身は持っていません。見物したことがある程度です。</span></p>
-<h3 id="dragonfly">Dragonfly</h3>
-<p>A paid app for bio-imagign. <span style="color:#444C99;">有料アプリ、バイオイメージング</span></p>
-<h3 id="imaris">Imaris</h3>
-<p>A paid app for bio-imagign. <span style="color:#444C99;">有料アプリ、バイオイメージング</span></p>
-<h3 id="ctvoxios-android-win-burker">CTvox（iOS, Android, Win, Burker）</h3>
-<p>CTvox can open files in a dedicated VXM format, which is generated by CTvox for Windows. I haven't tried, because official download site for CTvox for Windows are unknown, and I'm a Mac user.</p>
-<p><span style="color:#444C99;">
-CTvoxで開けるファイルは、専用のVXM形式のファイルです。VXMはCTvox for Windowsで生成しますが、このアプリの公式ダウンロード先が不明で、私はMacユーザなので、試せていません。</span></p>
-<hr />
-<h3 id="adobe-premiere">Adobe Premiere</h3>
-<p>A paid app for movie editing. <span style="color:#444C99;">有料アプリ、動画編集</span></p>
-<h3 id="davinci-resolve">Davinci Resolve</h3>
-<p>A freeware for movie editing. <span style="color:#444C99;">無料アプリ、動画編集</span></p>
-<p><a href=https://www.blackmagicdesign.com>https://www.blackmagicdesign.com</a></p>
-<hr />
-<h2 id="3d">私が3D用アプリでやっていること</h2>
+<p><em>私が3D用アプリでやっていること</em></p>
 <p>All topics are <strong>possible</strong> with any app. This is a subjective summary of perceived convenience and stability. There are workarounds for instability, and are described in the tips section of usage page.</p>
 <p><span style="color:#444C99;">
 すべての項目は、どのアプリでも<strong>可能</strong>ではあります。感じた利便性、安定性を主観的にまとめたものです。不安定でも回避策があります。不安定さに関しては、それぞれの使い方ページのTipsに記載しています。</span></p>
@@ -1239,6 +1172,74 @@ CTvoxで開けるファイルは、専用のVXM形式のファイルです。VXM
 </tr>
 </tbody>
 </table>
+<hr />
+<h3 id="3d-slicer-win-mac-linux">3D slicer (Win, Mac, Linux)</h3>
+<p>When you see it for the first time, it looks hard to use, but you will adapt soon. The application is very stable. It was stable even on a basic Windows laptop (Core i5, 8GB RAM, Iris). I use it for segmentation with my favorite working environment; 3D slicer on MacBookPro + iPadPro(sidecar) + ApplePen. 3D slicer has been developed by Brigham and Women's Hospital and the MIT Artificial Intelligence Laboratory.</p>
+<p><span style="color:#444C99;">
+初めて見たときにとっつきにくい印象ですが、すぐ慣れます。動作は安定しています。ごく一般的なWinノートパソコン（Core i5, RAM 8GB, Iris）でも安定していました。私は、セグメンテーションで利用しています。お気に入り作業環境は、3D slicer + MacBookPro + iPadPro(sidecar) + ApplePenです。開発しているのは、米国Brigham and Women's Hospital and the MIT Artificial Intelligence Laboratoryです。</span></p>
+<p><a href=https://www.slicer.org>https://www.slicer.org</a></p>
+<h3 id="icy-win-mac-linux">Icy (Win, Mac, Linux)</h3>
+<p>Icy is free and open source, started in 2011 with the BioImage Analysis Lab at Institut Pasteur and licensed under GPLv3. Supported file format is multiTIFF. JPEG series should be converted to multiTIFF using ImageJ to opne them in Icy.</p>
+<p><span style="color:#444C99;">
+バイオイメージングのために開発されました。良さそうなので練習中です。対応する画像形式は、multiTIFFなので、CoMBIの連続画像は、前もってImageJでmultiTIFFに保存してから、Icyで利用します。</p>
+<p><a href=http://icy.bioimageanalysis.org>http://icy.bioimageanalysis.org</a></p>
+<h3 id="emma-ios">eMma (iOS)</h3>
+<p>Free DICOM viewer for iPad, download from App Store. eMma can display DICOM, grayscale images, serial images, and reconstruct orthogonal planes. For viewing CoMBI data, JPEG serial images should be converted to DICOM using <code>3D slicer</code>. (Not OsiriX/Horos). In the 3D slicer, <code>import JPEG</code>(drag and drop), Modue <code>Volume</code> input XYZ size, and <code>Data</code>&gt; <code>Right click</code>&gt; <code>Export DICOM</code>. To transfer data to eMma, computer is required.</p>
+<p><span style="color:#444C99;">
+iPadで、DICOMの閲覧と平面再構築ができます。無料。だれでもDICOM画像を閲覧できるようにとのコンセプト。東京大学脳外科、Kompas社。DICOM形式のみ対応する。研究データ（JPEGやTIFF）の場合、3D slicerでDICOM形式に書き出してから利用します。グレースケールのみ対応します。データをeMmaに移すには、パソコンが必要です。医療機器由来のDICOMには、たまに設定ファイルが紛れていて、読み込み時にエラーがでます。連続DICOM画像が収まるフォルダ内から設定ファイルを削除すると読み込めます。</span></p>
+<h3 id="horos-mac">Horos (Mac)</h3>
+<p>Horos is easy to start using. Basic operations such as data listing, brightness and contrast adjustment (window level and window width in DICOM) are easy. However, for research use such as quantification and segmentation, it becomes unstable. Horos is based on OsiriX version 3.5 when it was open source, so it looks almost identical to OsiriX.</p>
+<p><span style="color:#444C99;">
+使い始めは簡単です。データ一覧、明るさコントラスト調整（DICOMでいう、ウィンドウレベル、ウィンドウ幅）といった基本操作が簡単です。研究向けのデータ、数値やセグメンテーションなどのために、いじり進めると不安定さを感じます。また、Mac版しかないので、利用者が限定されます。Horosは、オープンソースだった頃のOsiriX version 3.5をもとに作られているため、見た目はOsiriXとほぼ同じです。</span></p>
+<p><a href=https://horosproject.org>https://horosproject.org</a></p>
+<hr />
+<h3 id="osirix-mac">OsiriX (Mac)</h3>
+<p>When it was initially developed at UCLA in 2004, it was an open source project and free. Later it became a paid app, but it is still one of the cheaper apps for medical use. There are few bugs like those found in Horos, probably due to the change to a paid version.</p>
+<p><span style="color:#444C99;">
+2004年UCLAでの開発当初では、オープンソースプロジェクトで無料でした。その後、有料になりました。医療向けをうたったアプリとしては格安です。有料のおかげか、Horosでみられるようなバグはほとんどありません。</span></p>
+<h3 id="zen-lite-win">Zen lite (Win)</h3>
+<p>Windows version only. This application is included with Zeiss confocal microscopes, so it may be suitable for researchers who are familiar with the microscope. To install it on your own PC, you need to apply to Zeiss to download. Other CoMBI users kindly told me about this application. I installed it but haven't touched yet. </p>
+<p><span style="color:#444C99;">
+Window版のみ。ツァイツのコンフォーカル顕微鏡に付属するアプリなので、使い慣れた研究者にはいいでしょう。各自のPCにインストールするためには、Zeissに申請し、ダウンロード・インストールします。私自身は、インストールをして、その後いじっていませんが、他のCoMBIユーザが利用されています。</span></p>
+<h3 id="paraview-win-mac-linux">Paraview (Win, Mac, Linux)</h3>
+<p>It is often used in engineering and is free. However, I have one concern: it often crashes on a basic Windows laptop (Core i5, 8GB RAM, Iris. This has too low capacity for 3D imaging...). The ParaView project started in 2000 by Kitware Inc. and Los Alamos National Laboratory.</p>
+<p><span style="color:#444C99;">
+工学系でよく利用されていて、無料です。しかし、一点だけ気がかりがあって、ごく一般的なWinノートパソコン（Core i5, RAM 8GB, Iris）では、落ちることがしばしばです。ただし、3D用としてはかなり低スペックなPCで、無茶な検証であること申し添えておきます。2000年からLos Alamos National Laboratoryが開発しています。</span></p>
+<p><a href=https://www.paraview.org>https://www.paraview.org</a></p>
+<h3 id="imagejfiji-win-mac-linux">ImageJ/FIJI (Win, Mac, Linux)</h3>
+<p>It can be used for orthogonal planes reconstruction and volume rendering. <code>Plug-ins</code>&gt; <code>Volume Viewer</code>. The difficulty is that the CLUT is handwritten. I have not learned enough about how to save and reproduce. Segmentation is not possible in this plug-in, instead, use another plug-in (<code>Plug-ins</code>&gt; <code>Segmentation</code>&gt;).</p>
+<p><span style="color:#444C99;">
+MPRとVolume Renderingができます。<code>Plug-ins</code>&gt; <code>Volume Viewer</code>です。使いにくいところは、CLUTが手書きなのところです。それをどうやって保存するか（再現性の確保）について、勉強不足です。このプラグイン内ではSegmentationはできないので、別のプラグイン（<code>Plug-ins</code>&gt; <code>Segmentation</code>&gt; に多種）を使うようです。</span></p>
+<h3 id="ilastik-win-mac-linux">ilastik (Win, Mac, Linux)</h3>
+<p>An app that uses machine learning for segmentation; it seems to be able to handle 3D datasets, but doesn't have a built-in 3D Viewer (Nature Methods, 2019). </p>
+<p><span style="color:#444C99;">
+セグメンテーションを機械学習で行うアプリ（Nature Methods, 2019）。3Dデータセットを扱えるようだ。「built-in 3D Viewerはない」との情報をどこかで読んだ。たぶん、Volume Renderingのことだろう。3Dデータを読み込んで、直交面再構築なら表示できる。ただいま練習中。セグメンテーションがかなりうまくいきそう。CPUのコア数が必要、4コア8スレッドでは処理待ちが長い。</span></p>
+<p><a href=https://www.ilastik.org>https://www.ilastik.org/</a></p>
+<h3 id="mib-win-mac-linux">MIB (Win, Mac, Linux)</h3>
+<p>An application that can handle 3D data sets and performs segmentation（PLoS Biology, 2016）.</p>
+<p><span style="color:#444C99;">
+3Dデータセットを扱えて、セグメンテーションを行うアプリ</span></p>
+<p><a href=http://mib.helsinki.fi>http://mib.helsinki.fi/</a></p>
+<hr />
+<h3 id="amira">Amira</h3>
+<p>This is a paid app that has been used often in research papers. I don't have it myself, but only looked at other CoMBI users using it.</p>
+<p><span style="color:#444C99;">
+以前から論文でよく使われている有料アプリです。私自身は持っていません。見物したことがある程度です。</span></p>
+<h3 id="dragonfly">Dragonfly</h3>
+<p>A paid app for bio-imagign. <span style="color:#444C99;">有料アプリ、バイオイメージング</span></p>
+<h3 id="imaris">Imaris</h3>
+<p>A paid app for bio-imagign. <span style="color:#444C99;">有料アプリ、バイオイメージング</span></p>
+<h3 id="ctvoxios-android-win-burker">CTvox（iOS, Android, Win, Burker）</h3>
+<p>CTvox can open files in a dedicated VXM format, which is generated by CTvox for Windows. I haven't tried, because official download site for CTvox for Windows are unknown, and I'm a Mac user.</p>
+<p><span style="color:#444C99;">
+CTvoxで開けるファイルは、専用のVXM形式のファイルです。VXMはCTvox for Windowsで生成しますが、このアプリの公式ダウンロード先が不明で、私はMacユーザなので、試せていません。</span></p>
+<hr />
+<h2 id="3-movie-edit-optional">3. Movie edit (optional)/動画編集（必要に応じて）</h2>
+<h3 id="adobe-premiere">Adobe Premiere</h3>
+<p>A paid app for movie editing. <span style="color:#444C99;">有料アプリ、動画編集</span></p>
+<h3 id="davinci-resolve">Davinci Resolve</h3>
+<p>A freeware for movie editing. <span style="color:#444C99;">無料アプリ、動画編集</span></p>
+<p><a href=https://www.blackmagicdesign.com>https://www.blackmagicdesign.com</a></p>
 <hr />
 <h2 id="glossary">Glossary/用語解説</h2>
 <h3 id="multiple-planer-reconstruction-mpr">Multiple Planer Reconstruction, MPR, 多平面再構築</h3>
