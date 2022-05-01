@@ -794,6 +794,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#napari-win-mac-linux" class="md-nav__link">
+    Napari (Win, Mac, Linux)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#emma-ios" class="md-nav__link">
     eMma (iOS)
   </a>
@@ -803,13 +810,6 @@
           <li class="md-nav__item">
   <a href="#horos-mac" class="md-nav__link">
     Horos (Mac)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#osirix-mac" class="md-nav__link">
-    OsiriX (Mac)
   </a>
   
 </li>
@@ -845,6 +845,13 @@
           <li class="md-nav__item">
   <a href="#mib-win-mac-linux" class="md-nav__link">
     MIB (Win, Mac, Linux)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osirix-mac" class="md-nav__link">
+    OsiriX (Mac)
   </a>
   
 </li>
@@ -1030,7 +1037,7 @@
 <p>Currently 2021, My recommentadion is 3D slicer (Win, Mac, Linux). I'm practicing Icy (Mac, Win, Linux) since 2021. I have been using OsiriX/Horos (Mac only) since 2009 for both education and research, however, OsiriX is currently commercial-ware and Horos is not stable during segmentation process. </p>
 <p>There are many applications for 3D imaging. However, some of them are dedicated to DICOM format for medical use, some of them are expensive, and some of them are not friendly to researchers with little experience. I selected applications based on the following points: 1. free, 2. JPEG images are supported, and 3. continuously updated. You may find free demo versions. These has some limitations on the number of serial images, and 3D reconstruction function. As this is a service for evaluation, it is natural that it cannot be used in a fully functional manner. </p>
 <p><span style="color:#444C99;">
-2021年、Macなら3D slicer、Horos、WindowsやLinuxなら3D sclicerがおすすめです。どれも無料で使えます。Icyもよさそうです（最近2021年に気づいて練習中。Mac, Win, Linuxに対応）。私は複数のアプリを使っていますが、CoMBIはどれかひとつでできます。私が使っているのは、OsiriX（Mac, 2009年、無料の頃から教育用に使っていたため）+ Horos（Mac, サブマシンに、教育用に）+ 3D slicer（Mac, セグメンテーション用）です。使い始めたきっかけは、医学部における画像解剖学の教育業務だったという背景があります。最近、2021年以降は、研究用には3D slicerを使うことが多くなってきました。OsiriXはかつて無料で、現在は有料になりましたが、CT用有料アプリとしては安いほうです。</span></p>
+2021年、Macなら3D slicer、Horos、WindowsやLinuxなら3D sclicerがおすすめです。どれも無料で使えます。Icyもよさそうです（最近2021年に気づいて練習中。Mac, Win, Linuxに対応）。私は複数のアプリを使っていますが、CoMBIはどれかひとつでできます。私は、最近（2021年以降）は、研究用には3D slicerを使うことが多いです。私が使っていたのは、OsiriX（Mac, 2009年、無料の頃から教育用に使っていたため）+ Horos（Mac, サブマシンに、教育用に）+ 3D slicer（Mac, セグメンテーション用）です。OsiriXのような医療用DICOM Viewer使っていたのは、医学部における教育業務「画像解剖学」のためというのが理由です。OsiriXはかつて無料で、現在は有料になりました。医療用CTアプリとしては安いほうですが（2022年、18万円、買取など）、有料となるとCoMBI用には導入しにくくなっています。</span></p>
 <p><span style="color:#444C99;">
 3D imagingのアプリは数多くあります。しかし、医療用のDICOM形式専用だとか、高価だったり、端くれ研究者にはやさしくありません。アプリの選定では、1.無料であること、2.JPEG画像が扱えること、3.改良が続いていること、を基準としました。本来は有料だけどデモ版は無料というアプリがたくさんあります。たいてい、扱える連続画像枚数に上限がある、3D再構築はできない、といった制限があります。評価するためのサービスですので、本格的には使えなくて当然でしょう。</span></p>
 <p><em>Comparison of some applications/主なアプリの比較</em></p>
@@ -1061,7 +1068,7 @@
 <td>Free</td>
 <td>Free</td>
 <td>Free</td>
-<td>¥82667 etc</td>
+<td>¥180,000 etc</td>
 <td>Free</td>
 <td>Free</td>
 </tr>
@@ -1183,6 +1190,9 @@
 <p><span style="color:#444C99;">
 バイオイメージングのために開発されました。良さそうなので練習中です。対応する画像形式は、multiTIFFなので、CoMBIの連続画像は、前もってImageJでmultiTIFFに保存してから、Icyで利用します。</p>
 <p><a href=http://icy.bioimageanalysis.org>http://icy.bioimageanalysis.org</a></p>
+<h3 id="napari-win-mac-linux">Napari (Win, Mac, Linux)</h3>
+<p>Multi-dimensional image viewer for python. I installed it but do not use yet.</p>
+<p><a href=https://napari.org>https://napari.org</a></p>
 <h3 id="emma-ios">eMma (iOS)</h3>
 <p>Free DICOM viewer for iPad, download from App Store. eMma can display DICOM, grayscale images, serial images, and reconstruct orthogonal planes. For viewing CoMBI data, JPEG serial images should be converted to DICOM using <code>3D slicer</code>. (Not OsiriX/Horos). In the 3D slicer, <code>import JPEG</code>(drag and drop), Modue <code>Volume</code> input XYZ size, and <code>Data</code>&gt; <code>Right click</code>&gt; <code>Export DICOM</code>. To transfer data to eMma, computer is required.</p>
 <p><span style="color:#444C99;">
@@ -1193,10 +1203,6 @@ iPadで、DICOMの閲覧と平面再構築ができます。無料。だれで�
 使い始めは簡単です。データ一覧、明るさコントラスト調整（DICOMでいう、ウィンドウレベル、ウィンドウ幅）といった基本操作が簡単です。研究向けのデータ、数値やセグメンテーションなどのために、いじり進めると不安定さを感じます。また、Mac版しかないので、利用者が限定されます。Horosは、オープンソースだった頃のOsiriX version 3.5をもとに作られているため、見た目はOsiriXとほぼ同じです。</span></p>
 <p><a href=https://horosproject.org>https://horosproject.org</a></p>
 <hr />
-<h3 id="osirix-mac">OsiriX (Mac)</h3>
-<p>When it was initially developed at UCLA in 2004, it was an open source project and free. Later it became a paid app, but it is still one of the cheaper apps for medical use. There are few bugs like those found in Horos, probably due to the change to a paid version.</p>
-<p><span style="color:#444C99;">
-2004年UCLAでの開発当初では、オープンソースプロジェクトで無料でした。その後、有料になりました。医療向けをうたったアプリとしては格安です。有料のおかげか、Horosでみられるようなバグはほとんどありません。</span></p>
 <h3 id="zen-lite-win">Zen lite (Win)</h3>
 <p>Windows version only. This application is included with Zeiss confocal microscopes, so it may be suitable for researchers who are familiar with the microscope. To install it on your own PC, you need to apply to Zeiss to download. Other CoMBI users kindly told me about this application. I installed it but haven't touched yet. </p>
 <p><span style="color:#444C99;">
@@ -1221,6 +1227,10 @@ MPRとVolume Renderingができます。<code>Plug-ins</code>&gt; <code>Volume V
 3Dデータセットを扱えて、セグメンテーションを行うアプリ</span></p>
 <p><a href=http://mib.helsinki.fi>http://mib.helsinki.fi/</a></p>
 <hr />
+<h3 id="osirix-mac">OsiriX (Mac)</h3>
+<p>When it was initially developed at UCLA in 2004, it was an open source project and free. Later it became a paid app, but it is still one of the cheaper apps for medical use. There are few bugs like those found in Horos, probably due to the change to a paid version.</p>
+<p><span style="color:#444C99;">
+2004年UCLAでの開発当初では、オープンソースプロジェクトで無料でした。その後、有料になりました。医療向けをうたったアプリとしては格安です。有料のおかげか、Horosでみられるようなバグはほとんどありません。2022年から18万円（買取＋2年間のアップデート権）になった、以前の8.3万円から値上がりした。</span></p>
 <h3 id="amira">Amira</h3>
 <p>This is a paid app that has been used often in research papers. I don't have it myself, but only looked at other CoMBI users using it.</p>
 <p><span style="color:#444C99;">
