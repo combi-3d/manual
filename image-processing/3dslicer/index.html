@@ -1167,31 +1167,40 @@ CoMBI開発当初の2014年、JPEG連続画像が扱える3Dビューワを検�
 メッセージ Select a readerでは、パソコン内に患者一覧データベースを作る場合<code>Load directly into DICOM database</code>を選んで<code>OK</code>。とりあえずデータを見たい場合は、<code>Any Data</code>。患者一覧データベースを作った場合：Module<code>DICOM</code>に切り替わって、患者一覧になる。患者名をダブルクリックすると、DICOMデータを表示する画面へすすむ</li>
 </ul>
 <h3 id="brgy">画面表示　B、R、G、Y　青、赤、緑、黄</h3>
+<p>デフォルトでは、4面表示（Four-up）である。赤、緑、黄の画面には、直交面MPR（Multiple Planer Reconstruction）を表示させ、青画面「3D View」には、Volume Rendering などを表示させられる（後述 Volume Rendering）</p>
 <ul>
-<li>デフォルトでは、4面表示（Four-up）である</li>
-<li>赤、緑、黄には、直交面MPR（Multiple Planer Reconstruction）が表示される</li>
-<li>青には、Volume Rendering などを表示させられる（後述 Volume Rendering）。青画面のことを「3D View」とよぶ</li>
-<li>画面表示は変更でき、4画面から1画面などから選べる。上に並ぶ"アイコン"をつかうか、Menu bar&gt; <code>View</code>&gt;<code>Layout</code>&gt;<code>Four-up</code>から選ぶ</li>
+<li>
+<p>画面表示を変更するには、上部に並ぶアイコン<code>Layout</code>から選ぶ。または、Menu bar&gt; <code>View</code>&gt;<code>Layout</code>から選ぶ。4画面や1画面など多様なレイアウトから選べる。</p>
+<p><img alt="Layout button" src="../img/3dslicer_layout.jpg" title="Layout" /> </p>
+</li>
 </ul>
 <h3 id="_2">スライス閲覧</h3>
-<p>連続画像をパラパラとめくって観ることです。各画面の上端にある<code>scroll bar</code>や、<code>scroll wheel of your mouse</code>でめくれます。CTなどのDICOM画像の場合、一枚の画像をスライスと呼ぶことから、閲覧する行為にも、スライスという用語がでてきます。</p>
+<p>連続画像をパラパラとめくって観ることです。CTなどのDICOM画像の場合、一枚の画像をスライスと呼ぶことから、閲覧する行為にも、スライスという用語がでてきます。</p>
+<ul>
+<li>方法1、マウス：赤、緑、黄、各画面で、<code>scroll wheel of your mouse</code>でめくる</li>
+<li>方法2：赤、緑、黄、各画面の上端にある<code>scroll bar</code>でめくる</li>
+</ul>
 <h3 id="_3">拡大/縮小</h3>
 <ul>
-<li>方法1、直感的：赤、緑、黄画面の場合、<code>right bottun of your mouse</code>で、上下ドラッグする</li>
+<li>方法1、マウス：赤、緑、黄画面の場合、<code>right bottun of your mouse</code>で、上下ドラッグする</li>
 <li>方法2、数値入力：押しピン様のマーク<code>Pin-like mark</code>と その下の拡張マーク<code>Extension mark</code>に <code>Field of View</code>があり、数値入力できる。通常は使わないが、動画準備のときに使えそう。</li>
 <li>
-<p>元に戻すときは、各画面のY、R、Gの横に、中央配置ボタン<code>Centering button</code>というのがあります。迷子になったときにこれを押すと便利です</p>
+<p>元に戻すときは、各画面のY、R、Gの横に、中央配置ボタン<code>Centering button</code>というのがある。迷子になったときにこれを押すと便利</p>
 <p><img alt="Adjust button" src="../img/3dslicer_scalling.jpg" title="adjust" /></p>
 <p><em>Pin-like mark, Extension mark, Centering button, Field of View</em></p>
 </li>
 </ul>
 <h3 id="_4">移動</h3>
-<p>赤、緑、黄画面では、Windowsマウスの場合、<code>Pushing center wheel + drag</code>する。MacのMagicMouseの場合、<code>Shift+left button + drag</code>する。</p>
+<p>赤、緑、黄画面に表示されている画像を上下左右に移動させたいとき</p>
+<ul>
+<li>Windowsマウスの場合：<code>Pushing center wheel</code>+<code>Drag</code></li>
+<li>MacのMagicMouseの場合：<code>Shift</code>+<code>Left button</code>+<code>Drag</code></li>
+</ul>
 <h3 id="ct">CT値の調節</h3>
 <p>明るさとコントラストの調整を行う。CT画像の場合、明るさを明るく/暗くすることを、Window level（L）を上げる/下げると表現する。コントラストを上げる/下げることをWindow width（W）を小さく/大きくすると、表現する。</p>
 <ul>
 <li>
-<p>方法1、直感的：アイコン<code>Adjust</code>で、画像上でドラッグする。上下ドラッグと左右ドラッグで、明るさとコントラストを変える</p>
+<p>方法1、マウス：アイコン<code>Adjust</code>で、画像上でドラッグする。上下ドラッグと左右ドラッグで、明るさとコントラストを変える</p>
 <p><img alt="Adjust button" src="../img/3dslicer_adjust_button_mark.jpg" title="adjust" /></p>
 </li>
 <li>
