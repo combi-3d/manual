@@ -1211,27 +1211,34 @@ CoMBI開発当初の2014年、JPEG連続画像が扱える3Dビューワを検�
 <h3 id="3d-view3">青画面（3D View）、3つの機能</h3>
 <ol>
 <li>
-<p>Volume Rendringの画像を表示</p>
-<ul>
-<li>モジュール<code>Volume Rendering</code>を選ぶ</li>
-<li>眼の印<code>Eye mark</code>（Volumeの左側）をON/OFFすると、青画面でのVolume Rendering像を表示/非表示</li>
-<li>青画面左上のボタン<code>Centering</code>で、中央に表示させる。迷子になったときに便利です</li>
-<li>ドラッグして、向きを変えられる。このとき、アイコン矢印のマーク<code>Select tool</code>にしておく </li>
-<li><code>scroll of your mouse</code>上下で拡大縮小</li>
-<li>▽<code>Display</code>, <code>Preset</code>で着色をえらぶ</li>
-<li>▽<code>Advanced</code>, <code>Volume Properties</code>で、 着色を調節できる。点を下げると透明感が出る</li>
-<li>▽<code>Display</code>,<code>Rendering</code> dGPUがあるパソコンならGPUを選ぶと動作がよくなる)</li>
-<li>▽<code>Display</code>, <code>Display ROI</code>, Volume Renderingする範囲を限定できる（見たい領域だけにする、作業が軽くなる）。画像中の点<code>dots in the image</code>を動かす、または、▽<code>Advanced</code>, <code>ROI</code>の<code>Scroll bar</code>を動かす</li>
-</ul>
-</li>
-<li>
 <p>スライスを青画面に表示（画像一枚を青画面に表示）</p>
 <ul>
 <li>赤画面の左上、押しピンマーク<code>Pin like mark</code>からでたメニューのうち、眼の印<code>Eye mark</code>で表示のON/OFF。緑、黄でも同様に。   </li>
 </ul>
+<p><img alt="Show slice" src="../img/3dslicer_show_slice.jpg" title="Show slice" /> </p>
 </li>
 <li>
-<p>セグメンテーションの結果を表示</p>
+<p>Volume Rendringの画像を表示（詳しくは<a href="/image-processing/3dslicer/index.html#volume-rendering">後述「Volume Rendering」</a>）</p>
+<ul>
+<li>モジュール<code>Volume Rendering</code>を選ぶ</li>
+<li>眼の印<code>Eye mark</code>（<code>Volume</code>の左側）のON/OFFで、青画面でのVolume Rendering像を表示/非表示</li>
+<li><code>Shift</code>をスライドさせ、明暗を調節する。デフォルトはグレースケール。<code>Preset</code>にカラフルな表示設定がある</li>
+</ul>
+<p><img alt="Show VR" src="../img/3dslicer_show_VR.jpg" title="Show VR" /> </p>
+<ul>
+<li>青画面左上のボタン<code>Centering</code>で、中央に表示させる。迷子になったときに便利です</li>
+<li>ドラッグして、向きを変えられる。このとき、アイコン矢印のマーク<code>Select tool</code>にしておく</li>
+</ul>
+<p><img alt="VR basic" src="../img/3dslicer_blue_basic.jpg" title="VR basic" /> </p>
+<ul>
+<li>マウス<code>Scroll</code>を青画面上で上下させると、拡大縮小</li>
+<li>Advanced<code>Volume Properties</code>で、 着色を調節したり、点を下げて透明度を調節したりする</li>
+<li>Display<code>Rendering</code> で、dGPUがあるパソコンなら、<code>GPU</code>を選ぶと動作が軽快になる</li>
+<li>Display<code>Display ROI</code>で、Volume Renderingする範囲を限定すると、動作が軽快になる。画像中の点<code>Dots in the image</code>を動かす、または、Advanced<code>ROI</code>の<code>Scroll bar</code>を動かす</li>
+</ul>
+</li>
+<li>
+<p>セグメンテーションの結果を表示（詳しくは<a href="/image-processing/3dslicer/index.html#_17">後述「Segmentation」</a>）</p>
 <ul>
 <li>モジュール<code>Segmentation Editor</code>を選ぶ。ボタン<code>Show 3D</code>で表示/非表示を切り替えます。</li>
 </ul>
@@ -1239,8 +1246,13 @@ CoMBI開発当初の2014年、JPEG連続画像が扱える3Dビューワを検�
 </ol>
 <h3 id="_5">スクリーンショット</h3>
 <ol>
-<li>アイコン、カメラマーク<code>Camera mark</code>を押すと、設定ウィンドウがでる。</li>
-<li>画面を選ぶ</li>
+<li>
+<p>アイコン、カメラマーク<code>Camera mark</code>を押すと、設定ウィンドウがでる。</p>
+<p><img alt="Screen shot" src="../img/3dslicer_camera.jpg" title="Screen shot" /> </p>
+</li>
+<li>
+<p>画面を選ぶ</p>
+</li>
 <li><code>Save as...</code>　ファイル名と場所を指定する。形式はPNGのみ。</li>
 <li><code>OK</code></li>
 </ol>
