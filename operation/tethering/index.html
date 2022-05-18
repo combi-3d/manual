@@ -13,7 +13,7 @@
       
       
       <link rel="icon" href="../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
     
     
       
@@ -21,10 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.120efc48.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
         
       
     
@@ -792,6 +792,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#bug-in-sony-imagigng-edge" class="md-nav__link">
+    Bug in Sony Imagigng Edge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#darktable" class="md-nav__link">
     Darktable
   </a>
@@ -920,6 +927,71 @@
 <p><em>Table: Duration to transfer a RAW image to PC. Full-size RAW are 43MB（Sony a7RIII) and 42.9MB (Nikon D810). APS-C RAW is 19MB (Sony a7RIII)</em></p>
 <p><span style="color:#444C99;">USBケーブルは、USB3（5-40Gb/sec）以上をおすすめします。Nikon D810（2014-2017）の場合、USB3なら、約2秒で画像転送ができます。USB2（0.48Gb/sec）では5秒程度かかります。Sony a7RIII（2017-2022）の場合、0.6秒（TB4, USB3)、1秒（USB2）です。転送時間は、連続撮影の律速になります。とくに手回しハンドルで軽快に撮影したい場合は、USB3以上の速さが必須です。転送速度は、カメラ本体のUSB規格（たいてい5Gb/secまで、2021。まれに10Gb/sec, 2022）にも依存しますので、5-10Gb/secのUSBケーブルで十分です。長めの2mなら、1200円〜1600円です。</span></p>
 <p><span style="color:#444C99;">最近のThunderbolt4ケーブルは、価格が6000円〜7000円（2m）と高めです。カメラからの転送速度はUSB3と同じです。カメラ側の端子が律速になっています。高価なTB4のメリットとしては、他の目的に利用できたり、しなやかで扱いやすいということが挙げられます。予算に余裕があればTB4をおすすめします。</span></p>
+<h2 id="bug-in-sony-imagigng-edge">Bug in Sony Imagigng Edge</h2>
+<p>(2022.5.18)</p>
+<p>A bug exists when using <code>Imaging Edge</code>, the Sony's official app for tethering, with <code>M1 mac, macOS Monterey</code>. macOS Monterey provides the customizable pointer color. You can change it at <code>System Preferences</code> &gt; <code>Accessibility</code>&gt; <code>Display</code>&gt; <code>Pointer outline color, Pointer fill color</code>. However, when using the <code>Imaging Edge</code> with the pointer color changed, the camera is temporarily recognized, but the connection is immediately disconnected. To avoid this bug, please use "Imaging Edge" with the pointer in its default colors (<code>Reset</code> button available). Changes in pointer size do not affect camera connection. There is no such bug on Intel mac.</p>
+<p><span style="color:#444C99;">Sonyのカメラを接続する公式アプリ「Imaging Edge」を「M1 mac, macOS Monterey」で使用すると、カメラの接続が切れるバグがあります。macOS Montereyになって、ポインターの色をカスタマイズできるようになりました。<code>System Preferences</code> &gt; <code>Accessibility</code>&gt; <code>Display</code>&gt; <code>Pointer outline color, Pointer fill color</code>で変更できます。しかしながら、ポインター色を変更した状態で、「Imaging Edge」を利用すると、カメラは一時的に認識されるものの、すぐに接続が解除されてしまいます。バグを回避するため、ポインターはデフォルトの配色（<code>Reset</code>ボタンあり）のままで「Imaging Edge」を使ってください。ポインタの大きさ変更は、カメラ接続に影響しません。Intel Macでは問題ありません。</span></p>
+<p>Table: Connection between Sony a7RIII_2017 and Apple's computers via Sony Imaging Edge v1.0.00.05240. I checked camera connection during following processes after data deletion and macOS re-install; Imaging Edge install, Other 30 apps install using installer, Apps via Homebrew, then custamize pointer. Finally, I confirmed the cause/condition of the bug.</p>
+<table>
+<thead>
+<tr>
+<th>Computer</th>
+<th>OS</th>
+<th>Pointer Color</th>
+<th>Camera<br>Connection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MBP16_2021_M1 max</td>
+<td>macOS 12.4</td>
+<td>default</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>MBP16_2021_M1 max</td>
+<td>macOS 12.4</td>
+<td>changed</td>
+<td>disconnected</td>
+</tr>
+<tr>
+<td>MBA13_2020_M1</td>
+<td>macOS 12.3</td>
+<td>default</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>MBA13_2020_M1</td>
+<td>macOS 12.3</td>
+<td>changed</td>
+<td>disconnected</td>
+</tr>
+<tr>
+<td>MBP15_2018_Intel</td>
+<td>macOS 12.4</td>
+<td>default</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>MBP15_2018_Intel</td>
+<td>macOS 12.4</td>
+<td>changed</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>MBP15_2018_Intel</td>
+<td>macOS 12.3</td>
+<td>default</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>MBP15_2018_Intel</td>
+<td>macOS 12.3</td>
+<td>changed</td>
+<td>OK</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="darktable">Darktable</h2>
 <p><a href=https://www.darktable.org>https://www.darktable.org</a></p>
@@ -989,7 +1061,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
       
     
   </body>
