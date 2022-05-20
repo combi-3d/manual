@@ -779,22 +779,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hp" class="md-nav__link">
-    HPを書く
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    インストーラ使用
+    準備、インストーラ使用
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    ターミナル作業
+    準備、ターミナル作業
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hp" class="md-nav__link">
+    HPを書く
   </a>
   
 </li>
@@ -818,24 +818,17 @@
 <p>MBP16_2021_M1max_macOS 12.4 montereyで、OSのクリーンインストールしたのをきっかけに、GitHubでHPをつくるためのセットアップをおさらいした。</p>
 <h2 id="github">GitHub</h2>
 <ol>
-<li>アカウントをつくる、GitHub Pagesを使っている。二段階認証の設定をした。
+<li>アカウントをつくる、GitHub Pagesを使っている。二段階認証の設定をした。<br>
 （くわしくはわすれたので省略）</li>
 </ol>
-<h2 id="hp">HPを書く</h2>
-<ol>
-<li>Markdown形式で。</li>
-<li>ローカルにで整理整頓。</li>
-<li>Dropboxに作っておけば、あちこちのパソコンで更新作業できる。
-（くわしくはわすれたので省略。たぶんGitHub Pagesの公式ページや、ググった情報で。）</li>
-</ol>
-<h2 id="_1">インストーラ使用</h2>
+<h2 id="_1">準備、インストーラ使用</h2>
 <ol>
 <li>VS code（mdファイルを編集しやすい。GitHubへのdeployもできる）
     古いインストーラなら、あとでアップデートも確認する。GitHubへのdeployは、最新版で行うため。</li>
 <li>Xcode（どこだったか、必要です、といわれるから）
     アップデート。<code>About this Mac</code> &gt; <code>Software update</code></li>
 </ol>
-<h2 id="_2">ターミナル作業</h2>
+<h2 id="_2">準備、ターミナル作業</h2>
 <ol>
 <li>
 <p>Homebrewインストール（pyenvのインストール準備）
@@ -892,6 +885,13 @@
 <p>GitHubへのdeploy
     VS codeでmdファイルを編集し、はじめて、<code>mkdocs gh-deploy</code>をうったとき、ブラウザでログインするように誘導される。ユーザ名とパスワードと、二段階認証コードでログインする。ログイン作業は、２回目以降は不要。</p>
 </li>
+</ol>
+<h2 id="hp">HPを書く</h2>
+<ol>
+<li>VS codeで、Markdown形式で。</li>
+<li>ファイルは、ローカルに整理整頓。</li>
+<li>Dropboxに作っておけば、あちこちのパソコンで更新作業できる。<br>
+（くわしくはわすれたので省略。たぶんMkDocs、Materials, GitHub Pagesの公式ページや、ググった情報で。）</li>
 </ol>
 <hr />
 <ul>
