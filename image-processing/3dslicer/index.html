@@ -1417,15 +1417,13 @@ CoMBI開発当初の2014年、JPEG連続画像が扱える3Dビューワを検�
 <li><code>ffmpeg</code>をインストールする　<code>brew install ffmpeg</code> を<code>Terminal</code>に打つ（6分かかった。2022.5）</li>
 <li>
 <p>3D slicerのモジュール<code>Screen Capture</code>に戻って、<code>ffmpeg executable</code>の欄に、ffmpegのアドレス <code>/usr/local/bin/ffmpeg</code> を入力する（intel mac)。以上。</p>
-</li>
-<li>
-<p>M1 macの場合（インストール先やバージョンが違うらしい　2022.5.26)</p>
-<ol>
+<ul>
+<li>M1 macの場合（インストール先やバージョンが違うらしい　2022.5.26)</li>
 <li>Terminal.appで、<code>brew info ffmpeg</code>をうって、ffmpegへのパスを探すと、<code>/opt/homebrew/Cellar/ffmpeg/5.0.1</code>と表示される</li>
 <li>3D slicer.appで、<code>ffmpeg executable</code>の欄に上記の表示されたアドレスをコピペ</li>
 <li><code>...</code>マークを押して別ウィンドウ。実行ファイルを探すと<code>/opt/homebrew/Cellar/ffmpeg/5.0.1/bin/ffmpeg</code>にあった！<code>Open</code>ボタンをおして指定する</li>
 <li>これで動画書き出しができるようになります。</li>
-</ol>
+</ul>
 </li>
 </ol>
 <h4 id="1_1">ステップ1　操作を記録</h4>
