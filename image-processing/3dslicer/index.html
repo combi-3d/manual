@@ -1401,7 +1401,7 @@ CoMBI開発当初の2014年、JPEG連続画像が扱える3Dビューワを検�
 <ul>
 <li>動画書き出しを機能させるには、事前にffmpegのインストールが必要</li>
 <li>複雑な動きを動画にする場合、作業は二段階あり、ステップ1で操作を記録し（モジュール <code>sequences</code>）、ステップ2で記録したsequenceを呼び出し、動画ファイルに書き出す（モジュール<code>Screen Capture</code>）</li>
-<li>単純な回転だけの動画なら、ステップ2（モジュール<code>Screen Capture</code>）だけでよく、ステップ1は不要</li>
+<li>単純な回転だけの動画や、単純なパラパラ動画なら、ステップ2（モジュール<code>Screen Capture</code>）だけでできる。ステップ1は不要</li>
 <li>この手順書では、「Red 水平面をBlueに表示してめくる、Greenの縦断面をBlueに表示してめくる、VRをBlueに表示し回転」というシナリオで操作を記録し、動画に書き出す。3D slicerでは、操作の記録を<code>Sequence</code>、動画書き出しを<code>Screen Capture</code>と呼び、本手順書ではそれぞれを「ステップ1 操作を記録」、「ステップ2 動画を描き出す」として記す</li>
 <li>
 <p>動画は、複数のパターンで書き出して、あとで動画編集アプリで編集することが多い。動画のデザインが、より自由になる。</p>
@@ -1414,8 +1414,19 @@ CoMBI開発当初の2014年、JPEG連続画像が扱える3Dビューワを検�
 <li>アプリ<code>Terminal</code>を起動</li>
 <li><code>Homebrew</code>をインストールする。こちらのサイト（<a href=https://brew.sh/>https://brew.sh/</a>）に記載のコマンドを<code>Terminal</code>に打つ。（すでにHomebrewをインストールしていれば不要）</li>
 <li>Homebrewをインストールするとき、<code>Xcode</code>インストールまたはアップデートも要求された場合はそれに従う。（既にアップデートしてあれば不要）</li>
-<li><code>ffmpeg</code>をインストールする　<code>brew install ffmpeg</code> を<code>Terminal</code>に打つ</li>
-<li>3D slicerのモジュール<code>Screen Capture</code>に戻って、<code>ffmpeg executable</code>の欄に、ffmpegのアドレス <code>/usr/local/bin/ffmpeg</code> を入力する。以上。</li>
+<li><code>ffmpeg</code>をインストールする　<code>brew install ffmpeg</code> を<code>Terminal</code>に打つ（6分かかった。2022.5）</li>
+<li>
+<p>3D slicerのモジュール<code>Screen Capture</code>に戻って、<code>ffmpeg executable</code>の欄に、ffmpegのアドレス <code>/usr/local/bin/ffmpeg</code> を入力する（intel mac)。以上。</p>
+</li>
+<li>
+<p>M1 macの場合（2022.5.26)</p>
+<ol>
+<li>Terminal.appで、<code>brew info ffmpeg</code>をうって、ffmpegへのパスを探すと、<code>/opt/homebrew/Cellar/ffmpeg/5.0.1</code>と表示される</li>
+<li>3D slicer.appで、<code>ffmpeg executable</code>の欄に上記の表示されたアドレスをコピペ</li>
+<li><code>...</code>マークを押して別ウィンドウ。実行ファイルを探すと<code>/opt/homebrew/Cellar/ffmpeg/5.0.1/bin/ffmpeg</code>にあった！<code>Open</code>ボタンをおして指定する</li>
+<li>これで動画書き出しができるようになります。</li>
+</ol>
+</li>
 </ol>
 <h4 id="1_1">ステップ1　操作を記録</h4>
 <p>操作している様子を記録できる。画面（Red, green, yellow, blue）を指定できる。ここでは「Red 水平面をBlueに表示してめくる、Greenの縦断面をBlueに表示してめくる、VRをBlueに表示し回転」というシナリオ（<code>Sequence browser</code>）を例として、操作を記録する</p>
