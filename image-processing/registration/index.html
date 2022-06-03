@@ -850,6 +850,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#3imagej-1" class="md-nav__link">
+    対策3、ImageJ 1系を使う
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -910,7 +917,7 @@
 <li>ヨコの補正距離、</li>
 <li>タテの補正距離</li>
 </ol>
-<p>これらが収録されています。ズレ補正に失敗があっても、あきらめません。Logファイルをエクセルなどで修正します。補正失敗には2通りあり、失敗箇所のメモでは区別して記載します。</p>
+<p>これらが収録されています。ズレ補正に失敗があっても、あきらめません。Logファイルをエクセルなどで修正します。補正失敗には2通りあり、失敗箇所のメモでは区別して記載します。</p>
 <ol>
 <li>一枚だけが飛び出ている</li>
 <li>1箇所ずれるとそれ以降がごっそり移動しっぱなし</li>
@@ -1044,7 +1051,18 @@ Logファイルを修正する戦略は、「前から.logの正しいところ�
 <ul>
 <li>FIJI 20200721-1931 Logファイルは正常に開く。これより前の古いバージョンを使ってください。</li>
 <li>FIJI 20200802-0255 Logファイルは直接使えない。もし、これより新しいバージョンを使わなければ行けない場合は、上記の対策1を行ってください。</li>
+<li>FIJI 20220414-1745 fiji-macosx.zipやっぱりダメ。（2022.6.3検証)</li>
 </ul>
+<h4 id="3imagej-1">対策3、ImageJ 1系を使う</h4>
+<p>FIJI/ImageJ<strong>2</strong>ではなく、ImageJ<strong>1</strong>を使う。2022.6現在のバージョン1.53kでは、Image Stabilizer Log Applierに上記のような問題は起こりません。テスト環境は、2022.6.3「ImageJ 1.53k Java 1.8.0_172, macOS12.4, iMac27_2017」、「ImageJ 1.53k bundled with Zulu OpenJDK 13.0.6, macOS12.4, MacBookPro16_2021_M1_max」です。下記のリンク先から、それぞれの環境に合わせて、ダウンロードします。MacOS(Intel), MacOS(ARM), Linux, Windows
+<a href="https://imagej.nih.gov/ij/download.html">https://imagej.nih.gov/ij/download.html</a></p>
+<p>ただし、MacOS（Intel mac、M1 mac）の場合、セキュリティの関係で素直には起動しません。
+1. Downloadすると, <code>Download</code>フォルダに入る。<code>Application</code>フォルダに移動。
+1. <code>Application</code>フォルダ内のアイコンを直接ダブルクリックしても、起動できない。“ImageJ.app” cannot be opened because the developer cannot be verified. macOS cannot verify that this app is free from malware. というメッセージが出て、<code>Cancel</code>を押すしかない。そこで、、、
+1. ImageJをDockにいれる。<code>Application</code>フォルダ内のアイコンをドラッグして、Dockにドロップする。
+1. Dock内のImageJアイコン上で、<code>right click</code> &gt; <code>Open</code>
+1. 先とは異なるメッセージ macOS cannot verify the developer of “ImageJ.app”. Are you sure you want to open it? が出て、今度は<code>Open</code>ボタンがあります。
+1. <code>Open</code>ボタンで一度起動させると、以降はメッセージなく、起動させられます。</p>
 <hr />
 
               
