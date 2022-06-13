@@ -13,7 +13,7 @@
       
       
       <link rel="icon" href="../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
     
     
       
@@ -21,10 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.120efc48.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
         
       
     
@@ -897,7 +897,7 @@
 数あるRegistrationツールの中から、Image Stabilizerをえらびました。移動させた距離（ピクセル）をLogファイルとして記録シてくれるのがポイントです。万が一、ズレ補正に失敗する箇所があっても、Logファイルの数値を修正することで、ズレ補正を成功に導けます。さらに、Logファイルの数値を倍加することで、大きな画像にもズレ補正をかけられます。</p>
 <h2 id="_1">手順</h2>
 <ol>
-<li>（準備、済んでいれば改めては不要です）ImageJ/FIJIが利用するメモリ量を決める。搭載メモリの75%が推奨最大値。<code>Edit</code>&gt; <code>Options</code>&gt; <code>Memory &amp; Threads...</code>&gt; <code>Maximum Memory</code>。MBで入力、余裕を持って75%より少なめで使っている。64GBなら42GB（42000 MB）など。入力後、いちどImageJ/FIJIを再起動する</li>
+<li>（準備、済んでいれば改めては不要です）ImageJ/FIJIが利用するメモリ量を決める。搭載メモリの75%が推奨最大値。<code>Edit</code>&gt; <code>Options</code>&gt; <code>Memory &amp; Threads...</code>&gt; <code>Maximum Memory</code>。MBで入力、余裕を持って全メモリ量の75%を超えないように設定している。例えば、64GBなら42GB（42000 MB）など。入力後、いちどImageJ/FIJIを再起動する</li>
 <li>（準備、済んでいれば改めては不要です）JPEGの圧縮率を決めておく。<code>Edit</code>&gt; <code>Options</code>&gt; <code>Input/Output...</code>&gt; <code>JPEG quality (0-100)</code>。<code>100</code>をおすすめします。CoMBIの連続画像の場合、データ量はTIFF比較（フォルダの容量）で95で6%へ、100で12%へと減少し、画質は遜色ないかなといった程度です。デフォルトの<code>85</code>では、データ量が2.5%へとかなり減少しますが、画質はかなり低下します</li>
 <li>連続画像をひらく　フォルダごとImageJのバーにドラッグアンドドロップ。搭載メモリと相談ですが、おおかた1000x1000x10000枚の画像が限度です。メモリに展開してください。かつてはVirtual Stackでもできましたが、ImageJのバージョンアップ後、逐次保存ができなくなりました。</li>
 <li><code>Plug-ins</code>, <code>Image Stabilizer</code>　このとき一番前の画像を開いておけば、前から順にに補正をかけます。一番後ろの画像を開いておけば、後ろから補正します。Logファイルを生成するに必ずチェックをいれます。もし、メモリが潤沢なら、結果を別ファイルで表示するにチェックしたほうがよく、補正の成否確認に便利です。</li>
@@ -909,6 +909,7 @@
 </li>
 <li>補正に失敗した場合、失敗箇所（前から何枚目か）のメモをとります。このメモと、logファイルさえ保存しておけば、失敗連続画像を保存する必要はありません。</li>
 </ol>
+<p>ImageJ macroで、手順3-8を自動ですすめられるようにしました。<a href="https://github.com/combi-3d/ImageJ">GitHub CoMBI_ImageJ</a>（2022.6）</p>
 <h2 id="log">Logファイルを修正する</h2>
 <p>Logファイルには、4列の数値があって、</p>
 <ol>
@@ -1003,6 +1004,7 @@ Logファイルを修正する戦略は、「前から.logの正しいところ�
 </li>
 <li>ImageJ/FIJI, <code>Plug-ins</code>, <code>Image Stabilizer Log Applier</code>にかけます。連続画像と、修正したlogファイルを開いておいてから、Applierを実行します。（注、最新のImageJ/FIJIには、logファイルを開くときにバグがあります。対策は下記）</li>
 </ol>
+<p>Logファイルの修正手順１−６を自動で行うエクセルVBAをつくりました。ImageJ macroで、手順3-8を自動ですすめられるようにしました。<a href="http;//github.io/CoMBI_artisan">GitHub CoMBI_artisan</a>をご参照ください。（2022.6）</p>
 <h2 id="log_1">Logファイルを倍加する</h2>
 <p>例えば、「500x500 pixels, 40 µm/pixel」の連続画像で、Image Stabilizer（ズレ補正）に成功すれば、Logファイルの数値ぜんぶを2倍にして、「1000x1000 pixels, 20 µm/pixel」の連続画像に、Image Stabilizer Log Applierをかけることができます。Log Applierはパソコンへの負荷が低いので、重い連続画像でズレ補正する際に、重宝しています。</p>
 <p>では、4倍にして、「2000x2000 pixels, 10µm/pixel」の連続画像にかける？これは、データ量が多くなるので、ちょっと工夫が必要になるかもしれません。<strong>高精細さはそのままに、観たいところだけクロップ</strong>した連続画像「例、1000x1000, 10µm/pixel」を用意すれば、Applierにかけられ、高精細観察ができます。</p>
@@ -1058,7 +1060,7 @@ Logファイルを修正する戦略は、「前から.logの正しいところ�
 <a href="https://imagej.nih.gov/ij/download.html">https://imagej.nih.gov/ij/download.html</a></p>
 <p>ただし、MacOS（Intel mac、M1 mac）の場合、セキュリティの関係で素直には起動しません。</p>
 <ol>
-<li>Downloadすると, <code>Download</code>フォルダに入る。<code>Application</code>フォルダに移動。</li>
+<li>Downloadすると, <code>Download</code>フォルダに入る。<code>Application</code>フォルダに移動（ここまで通常の作業）。</li>
 <li><code>Application</code>フォルダ内のアイコンを直接ダブルクリックしても、起動できない。“ImageJ.app” cannot be opened because the developer cannot be verified. macOS cannot verify that this app is free from malware. というメッセージが出て、<code>Cancel</code>を押すしかない。そこで、、、</li>
 <li>ImageJをDockにいれる。<code>Application</code>フォルダ内のアイコンをドラッグして、Dockにドロップする。</li>
 <li>Dock内のImageJアイコン上で、<code>right click</code> &gt; <code>Open</code></li>
@@ -1103,7 +1105,7 @@ Logファイルを修正する戦略は、「前から.logの正しいところ�
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
       
     
   </body>
