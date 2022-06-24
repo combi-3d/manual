@@ -900,6 +900,26 @@
     IS_Log_Validator.xlsm
   </a>
   
+    <nav class="md-nav" aria-label="IS_Log_Validator.xlsm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparation_1" class="md-nav__link">
+    Preparation:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excel" class="md-nav__link">
+    Excel:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -911,7 +931,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#preparation_1" class="md-nav__link">
+  <a href="#preparation_2" class="md-nav__link">
     Preparation:
   </a>
   
@@ -938,7 +958,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#preparation_2" class="md-nav__link">
+  <a href="#preparation_3" class="md-nav__link">
     Preparation:
   </a>
   
@@ -992,7 +1012,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#preparation_3" class="md-nav__link">
+  <a href="#preparation_4" class="md-nav__link">
     Preparation:
   </a>
   
@@ -1019,7 +1039,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#preparation_4" class="md-nav__link">
+  <a href="#preparation_5" class="md-nav__link">
     Preparation:
   </a>
   
@@ -1195,17 +1215,23 @@
 </ol>
 <h3 id="is_log_validatorxlsm">IS_Log_Validator.xlsm</h3>
 <p>Automate middle part of <a href="../registration/">Image Registration</a> process; Correct log file.
-When open this file by Excel app, the app will ask "Activate macro", may ask "permit foler access".</p>
+When open this file by Excel app, the app will ask "Activate macro", may ask "permission of foler access".</p>
+<h4 id="preparation_1">Preparation:</h4>
+<ul>
+<li>Log file Forward</li>
+<li>Log file Backward</li>
+</ul>
+<h4 id="excel">Excel:</h4>
 <ol>
 <li>Sheet1: Import Log_Forward</li>
 <li>Sheet2: Import Log_Backward</li>
-<li>Sheet3: (Just take a look values.)</li>
+<li>Sheet3: (Just take a look values in validation.)</li>
 <li>Sheet4: Create validated Log files.</li>
 <li>Sheet5: (Macro uses here during creation of log files.)</li>
 </ol>
 <h3 id="combi_crop1_isaplier_crop2_copylogijm">CoMBI_Crop1_ISAplier_Crop2_CopyLog.ijm</h3>
 <p>Automate last part of <a href="../registration/">Image Registration</a> process; Apply corrected log file, and Crop also.</p>
-<h4 id="preparation_1">Preparation:</h4>
+<h4 id="preparation_2">Preparation:</h4>
 <ul>
 <li>Log file</li>
 <li>serial images</li>
@@ -1228,7 +1254,7 @@ When open this file by Excel app, the app will ask "Activate macro", may ask "pe
 </ol>
 <h3 id="combi_crop1_isaplier_crop2_selectlogijm">CoMBI_Crop1_ISAplier_Crop2_SelectLog.ijm</h3>
 <p>Automate last part of <a href="../registration/">Image Registration</a> process; Apply corrected log file, and Crop also.</p>
-<h4 id="preparation_2">Preparation:</h4>
+<h4 id="preparation_3">Preparation:</h4>
 <ul>
 <li>Log file</li>
 <li>serial images</li>
@@ -1266,7 +1292,7 @@ Select all (Command+a), Copy (Command+c) to keep value system clipboard.</li>
 </ol>
 <h3 id="combi_is_applier_selectlogijm">CoMBI_IS_Applier_SelectLog.ijm</h3>
 <p>Automate last part of <a href="../registration/">Image Registration</a> process; Only apply corrected log file.</p>
-<h4 id="preparation_3">Preparation:</h4>
+<h4 id="preparation_4">Preparation:</h4>
 <ul>
 <li>Log file</li>
 <li>Serial images</li>
@@ -1282,7 +1308,7 @@ Select all (Command+a), Copy (Command+c) to keep value system clipboard.</li>
 </ol>
 <h3 id="combi_crop_invertijm">CoMBI_Crop_Invert.ijm</h3>
 <p>Automate croping serial images, and/or converting to 8-bit inverted series. 8-bit inverted images will be used for volume rendering. </p>
-<h4 id="preparation_4">Preparation:</h4>
+<h4 id="preparation_5">Preparation:</h4>
 <ul>
 <li>Serial images</li>
 </ul>
