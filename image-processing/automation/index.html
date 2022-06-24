@@ -1010,6 +1010,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#combi_crop_invertijm" class="md-nav__link">
+    CoMBI_Crop_Invert.ijm
+  </a>
+  
+    <nav class="md-nav" aria-label="CoMBI_Crop_Invert.ijm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preparation_4" class="md-nav__link">
+    Preparation:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macro-runs_6" class="md-nav__link">
+    Macro runs:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1035,7 +1062,8 @@
 <p>Since 2022.6, serial images can be processed automatically by use of ImageJ macro and Excel VBA. Automatic process includes steps below: 
 1. Resize, ImageJ /縮小
 1. Image registration, ImageJ and Excel VBA /ズレ補正、補正値の修正
-1. Crop, ImageJ /切り抜き</p>
+1. Crop, ImageJ /切り抜き
+All macro save "work log" containing image information, path, values used, data of processing. This will contribute to improve reproductibity of image processing.</p>
 <h2 id="imagej-macro-excel-vba">ImageJ macro, Excel VBA</h2>
 <p>Codes are available at <a href="https://github.com/combi-3d/ImageJ">GitHub CoMBI_ImageJ</a>（2022.6).</p>
 <table>
@@ -1247,6 +1275,19 @@ Select all (Command+a), Copy (Command+c) to keep value system clipboard.</li>
 <li>Run plugin: Image_Stabilizer_Log_Applier</li>
 <li>Save as Image Sequence in new folder with _IS_Validated</li>
 <li>Close images and log.</li>
+</ol>
+<h3 id="combi_crop_invertijm">CoMBI_Crop_Invert.ijm</h3>
+<p>Automate croping serial images, and/or converting to 8-bit inverted series. 8-bit inverted images will be used for volume rendering. </p>
+<h4 id="preparation_4">Preparation:</h4>
+<ul>
+<li>Serial images</li>
+</ul>
+<h4 id="macro-runs_6">Macro runs:</h4>
+<ol>
+<li>Select a folder containing serial image</li>
+<li>Open sequence images as virtual stack</li>
+<li>Crop by a drawn rectangle.</li>
+<li>Save as Image Sequence in new folder, and work log.</li>
 </ol>
 
               
