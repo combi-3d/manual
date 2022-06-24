@@ -13,7 +13,7 @@
       
       
       <link rel="icon" href="../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
     
     
       
@@ -21,10 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.120efc48.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
         
       
     
@@ -541,6 +541,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../automation/index.html" class="md-nav__link">
+        Automation/自動処理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../3dslicer/index.html" class="md-nav__link">
         3D Reconstruction, 3D slicer
       </a>
@@ -788,23 +802,23 @@
 </li>
 <li>
 <p>RAW-JPEG conversion/変換</p>
-<p>Serial images in JPEG, 8 bit color, less than 1 GB but still heavy for processing.</p>
-<p><span style="color:#444C99;">JPEG形式の連続画像、8bit カラー、1GB程度に収まるけれど、処理するにはまだまだ重い。</span></p>
+<p>Serial images in JPEG, 8 bit color, less than 1 GB but still heavy for processing. The conversion app can process serial images identically and sequentially.</p>
+<p><span style="color:#444C99;">JPEG形式の連続画像、8bit カラー、保存容量は1GB程度に収まる。しかし処理する際は、非圧縮相当の容量として扱われるので、まだまだ重くて扱いづらい。RAW現像アプリで、連続画像の同一調整、一括変換が可能です。</span></p>
 </li>
 <li>
 <p>Resize/縮小</p>
 <p>Resized serial images in JPEG, 8 bit color or grayscale. Make pixel size 5, 10, 20, 40 etc µm/pixel, images size between 500x500 to 1000x1000. Lighten the data size for image registration (next step). Automatic execution is possible by ImageJ macro.</p>
-<p><span style="color:#444C99;">縮小したJPEG連続画像、カラーでもグレーでも、ズレ補正のために、軽くする、ついでにキリの良いピクセルサイズで扱いやすい。たとえば5, 10, 20, 40 µm/pixelの連続画像をつくっておく。小さいほうの連続画像が500x500~1000x1000 pixelsになるまで、縮小する。ImageJ macroで自動処理が可能です。</span></p>
+<p><span style="color:#444C99;">縮小したJPEG連続画像、カラーでもグレーでも、ズレ補正のために、軽くする、ついでにキリの良いピクセルサイズで扱いやすい。たとえば5, 10, 20, 40 µm/pixelの連続画像をつくっておく。小さいほうの連続画像が500x500 ~ 1000x1000 pixelsになるまで、縮小する。自動処理が可能でImageJ macroを使います。</span></p>
 </li>
 <li>
 <p>Image registration/ズレ補正</p>
 <p>This step creates registrated serial images in JPEG, and a Log file recording distance value used for registration. In CoMBI-C, R (cryostat, or rotating type), a moving block is imaged, so there may be vertical misalignment between images. For CoMBI-S (sliding type), this step is not required. The block circumference is used as the reference for registration. Registration is done using a light image series (roughly 500x500 to 1000x1000). The amount of data that can be handled depends on the installed memory size. In my experience, registration is often done using serial images with a pixel size of 40 µm/pixel or 20 µm/pixel. When applying registration to a high-resolution image, first registrate a small serial image, and then apply the registration to the a large (high-resolution) serial image using a Log file. Semi-automatic excecution is possible by ImageJ macro and Excel VBA.</p>
-<p><span style="color:#444C99;">ズレ補正されたJPEG連続画像、Logファイル（ズレ補正での移動距離の記録）が生成されます。CoMBI-C, R (クリオスタットなど回転式）では、動いているブロックを撮影するので、画像間で上下にズレていることがあり、これを補正します。CoMBI-S (滑走式)では、このステップは不要です。補正の基準として、ブロック外周を利用します。軽い画像シリーズ（おおよそ500x500〜1000x1000）で行う。扱えるデータ量は、搭載メモリに依存する。経験上、ピクセルサイズを40 µm/pixelや20 µm/pixelにした連続画像で行うことが多い。高精細画像に補正をかけるときは、いったん軽い画像でズレ補正し、Logファイルを利用して高精細画像に補正を適用できる。半自動処理が可能で、ImageJ macroとExcel VBAを使います。</span></p>
+<p><span style="color:#444C99;">ズレ補正されたJPEG連続画像、Logファイル（ズレ補正での移動距離の記録）が生成されます。CoMBI_クリオスタットなど回転式ミクロトームでは、動いているブロックを撮影するので、画像間で上下にズレていることがあり、これを補正します。CoMBI_滑走式ミクロトームでは、このステップは不要です。補正の基準として、ブロック外周を利用します。軽い画像シリーズ（おおよそ500x500〜1000x1000、最大枚数はおおよそ2000枚まで）で行う。扱えるデータ量は、搭載メモリに依存する。経験上、ピクセルサイズを40 µm/pixelや20 µm/pixelにした連続画像で行うことが多い。高精細画像に補正をかけるときは、いったん軽い画像でズレ補正し、その補正時の移動値（Logファイル）を利用して高精細画像に補正を適用できる。自動処理が可能で、ImageJ macroとExcel VBAを使います。</span></p>
 </li>
 <li>
 <p>Crop/切り抜き</p>
 <p>Croped serial images in JPEG. color and grayscale. The above registration process required the block periphery, but it can/should be removed to lighten the data for the 3D reconstruction.</p>
-<p><span style="color:#444C99;">必要なところ（試料）だけを切り抜いた連続画像（カラー、グレースケール、ピクセルサイズ各種）。上記のズレ補正ではブロック外周が必要でしたが、ズレ補正に成功すれば、次の3Dイメージングのために、外周の領域は除去して、データを軽くします。</span></p>
+<p><span style="color:#444C99;">必要なところ（試料）だけを切り抜いた連続画像（カラー、グレースケール、ピクセルサイズ各種）。上記のズレ補正ではブロック外周が必要でしたが、ズレ補正に成功すれば、次の3Dイメージングのために、外周の領域は除去して、データを軽くします。自動処理が可能で、ImageJ macroを使います。</span></p>
 </li>
 <li>
 <p>3D reconstruction/3D再構築</p>
@@ -853,7 +867,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
       
     
   </body>
