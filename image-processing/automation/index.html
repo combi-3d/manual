@@ -1123,25 +1123,25 @@
 <td></td>
 </tr>
 <tr>
-<td>Crop, IS_applier</td>
+<td>Crop, IS_Applier</td>
 <td>CoMBI_Crop1_ISAplier_Crop2_CopyLog.ijm</td>
 <td>Essential</td>
 <td>Intel Mac_FIJI</td>
 </tr>
 <tr>
-<td>Crop, IS_applier</td>
+<td>Crop, IS_Applier</td>
 <td>CoMBI_Crop1_ISAplier_Crop2_SelectLog.ijm</td>
 <td>Essential</td>
 <td>ARM Mac, ImageJ, FIJI</td>
 </tr>
 <tr>
-<td>IS_applier</td>
+<td>IS_Applier</td>
 <td>CoMBI_IS_Applier_CopyLog.ijm</td>
 <td></td>
 <td>Intel Mac, FIJI</td>
 </tr>
 <tr>
-<td>IS_applier</td>
+<td>IS_Applier</td>
 <td>CoMBI_IS_Applier_SelectLog.ijm</td>
 <td></td>
 <td>ARM Mac, ImageJ, FIJI</td>
@@ -1149,7 +1149,7 @@
 <tr>
 <td>Crop, Invert</td>
 <td>CoMBI_Crop_Invert.ijm</td>
-<td>Essential</td>
+<td></td>
 <td></td>
 </tr>
 </tbody>
@@ -1232,48 +1232,75 @@ When open this file by Excel, the app will ask "Enable macros", and may ask "Per
 <li>Sheet5: (Macro uses here during creation of log files.)</li>
 </ol>
 <h3 id="combi_crop1_isaplier_crop2_copylogijm">CoMBI_Crop1_ISAplier_Crop2_CopyLog.ijm</h3>
-<p>Automate last part of <a href="../registration/">Image Registration</a> process; Apply corrected log file, and Crop also.</p>
+<p>For FIJI on intel mac. Automate last part of <a href="../registration/">Image Registration</a> process. The macro run crop, Image Stabilizer by corrected log file, crop again, and create grayscale series. All steps are selectable.</p>
 <h4 id="preparation_2">Preparation:</h4>
 <ul>
-<li>Log file</li>
 <li>serial images</li>
+<li>Log file</li>
 <li>Copy log file values using TextEdit.app (Mac) etc.</li>
 </ul>
 <h4 id="macro-runs_2">Macro runs:</h4>
 <ol>
-<li>Import log values on the clipboard.</li>
 <li>Select serial images and open.</li>
-<li>Crop by a rectangle drawn manually.</li>
-<li>Save crop values (x, y, Height, Width) in a work log, to reuse later for processing larger image series.</li>
+<li>Import log values on the clipboard.</li>
+<li>Crop by a rectangle. </li>
 <li>Image Stabilizer Log Applier</li>
 <li>Crop again</li>
-<li>Images to be saved: [default]<ol>
-<li>_Crop1          [false]</li>
-<li>_Crop1_IS       [false]</li>
-<li>_Crop1_IS_Crop2 [true]</li>
+<li>Create grayscale series</li>
+<li>Save work log</li>
 </ol>
-</li>
+<p>Created series are saved in folders with "original name + additional charactors below" as required.</p>
+<ol>
+<li>_Crop1</li>
+<li>_IS</li>
+<li>_Crop1_IS</li>
+<li>_Crop2</li>
+<li>_IS_Crop2</li>
+<li>_Crop1_Crop2</li>
+<li>_Crop1_IS_Crop2</li>
+<li>_Gray</li>
+<li>_Crop2_Gray</li>
+<li>_IS_Gray</li>
+<li>_Crop1_Gray</li>
+<li>_IS_Crop2_Gray</li>
+<li>_Crop1_IS_Gray</li>
+<li>_Crop1_Crop2_Gray  </li>
+<li>_Crop1_IS_Crop2_Gray</li>
 </ol>
 <h3 id="combi_crop1_isaplier_crop2_selectlogijm">CoMBI_Crop1_ISAplier_Crop2_SelectLog.ijm</h3>
-<p>Automate last part of <a href="../registration/">Image Registration</a> process; Apply corrected log file, and Crop also.</p>
+<p>For ImageJv1.* and FIJI on ARM mac. Automate last part of <a href="../registration/">Image Registration</a> process. The macro run crop, Image Stabilizer by corrected log file, crop again, and create grayscale series. All steps are selectable.</p>
 <h4 id="preparation_3">Preparation:</h4>
 <ul>
-<li>Log file</li>
 <li>serial images</li>
+<li>Log file</li>
 </ul>
 <h4 id="macro-runs_3">Macro runs:</h4>
 <ol>
-<li>Select log file and serial images, and open.</li>
-<li>Crop by a rectangle drawn manually.</li>
-<li>Save crop values (x, y, Height, Width) in a work log, to reuse later for processing larger image series.</li>
+<li>Select serial images and open.</li>
+<li>Select corrected log file and open.</li>
+<li>Crop by a rectangle. </li>
 <li>Image Stabilizer Log Applier</li>
 <li>Crop again</li>
-<li>Images to be saved: [default]<ol>
-<li>_Crop1          [false]</li>
-<li>_Crop1_IS       [false]</li>
-<li>_Crop1_IS_Crop2 [true]</li>
+<li>Create grayscale series</li>
+<li>Save work log</li>
 </ol>
-</li>
+<p>Created series are saved in folders with "original name + additional charactors below" as required.</p>
+<ol>
+<li>_Crop1</li>
+<li>_IS</li>
+<li>_Crop1_IS</li>
+<li>_Crop2</li>
+<li>_IS_Crop2</li>
+<li>_Crop1_Crop2</li>
+<li>_Crop1_IS_Crop2</li>
+<li>_Gray</li>
+<li>_Crop2_Gray</li>
+<li>_IS_Gray</li>
+<li>_Crop1_Gray</li>
+<li>_IS_Crop2_Gray</li>
+<li>_Crop1_IS_Gray</li>
+<li>_Crop1_Crop2_Gray  </li>
+<li>_Crop1_IS_Crop2_Gray</li>
 </ol>
 <h3 id="combi_is_applier_copylogijm">CoMBI_IS_Applier_CopyLog.ijm</h3>
 <p>Automate last part of <a href="../registration/">Image Registration</a> process; Only apply corrected log file.</p>
