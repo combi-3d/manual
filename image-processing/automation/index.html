@@ -1080,14 +1080,14 @@
 <p>(2022.6.24 only description, no image)</p>
 <h2 id="introduction">Introduction</h2>
 <p>Since 2022.6, serial images can be processed automatically by ImageJ macro and Excel VBA. Automatic process includes following steps:</p>
-<ul>
+<ol>
 <li>Resize, ImageJ /縮小</li>
 <li>Image registration, ImageJ and Excel VBA /ズレ補正、補正値の修正</li>
-<li>Crop, ImageJ /切り抜き</li>
-</ul>
+<li>Crop, Grayscale, ImageJ /切り抜き、グレースケール</li>
+</ol>
 <p>All macro save not only serial images but also "a work log" containing image information, path, values used processing, date and time of processing. This will contribute to improve the reproductibity of image processing.</p>
 <h2 id="list-of-imagej-macro-and-excel-vba">List of ImageJ macro and Excel VBA</h2>
-<p>Codes are available at <a href="https://github.com/combi-3d/ImageJ">GitHub CoMBI_ImageJ</a>（2022.6).</p>
+<p>Codes are available at <a href="https://github.com/combi-3d/ImageJ">GitHub CoMBI_ImageJ</a>（2022.6). There are 9 files. You can process using 4 essential files in one computer. For mac user, files to be used are different depending on CPU type; Intel or Apple silicon.</p>
 <table>
 <thead>
 <tr>
@@ -1099,55 +1099,55 @@
 </thead>
 <tbody>
 <tr>
-<td>Resize</td>
+<td>1. Resize</td>
 <td>CoMBI_Resize.ijm</td>
-<td>Essential</td>
+<td>1. Essential</td>
 <td></td>
 </tr>
 <tr>
-<td>Image Stabilizer</td>
+<td>2. Image Stabilizer</td>
 <td>CoMBI_ImageStabilizer_2x.ijm</td>
-<td>Essential</td>
+<td>2. Essential</td>
 <td></td>
 </tr>
 <tr>
-<td>Image Stabilizer</td>
+<td>2. Image Stabilizer</td>
 <td>CoMBI_ImageStabilizer_1x1.ijm</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>Image Stabilizer</td>
+<td>2. Image Stabilizer</td>
 <td>IS_Log_Validator.xlsm</td>
-<td>Essential</td>
+<td>2. Essential</td>
 <td></td>
 </tr>
 <tr>
-<td>Crop, IS_Applier</td>
-<td>CoMBI_Crop1_ISAplier_Crop2_CopyLog.ijm</td>
-<td>Essential</td>
+<td>3. Crop, IS_Applier</td>
+<td>CoMBI_Crop1_ISApplier_Crop2_CopyLog.ijm</td>
+<td>3. Essential</td>
 <td>Intel Mac_FIJI</td>
 </tr>
 <tr>
-<td>Crop, IS_Applier</td>
-<td>CoMBI_Crop1_ISAplier_Crop2_SelectLog.ijm</td>
-<td>Essential</td>
+<td>3. Crop, IS_Applier</td>
+<td>CoMBI_Crop1_ISApplier_Crop2_SelectLog.ijm</td>
+<td>3. Essential</td>
 <td>ARM Mac, ImageJ, FIJI</td>
 </tr>
 <tr>
-<td>IS_Applier</td>
+<td>3. IS_Applier</td>
 <td>CoMBI_IS_Applier_CopyLog.ijm</td>
 <td></td>
 <td>Intel Mac, FIJI</td>
 </tr>
 <tr>
-<td>IS_Applier</td>
+<td>3. IS_Applier</td>
 <td>CoMBI_IS_Applier_SelectLog.ijm</td>
 <td></td>
 <td>ARM Mac, ImageJ, FIJI</td>
 </tr>
 <tr>
-<td>Crop, Invert</td>
+<td>3. Crop, Invert</td>
 <td>CoMBI_Crop_Invert.ijm</td>
 <td></td>
 <td></td>
@@ -1171,8 +1171,8 @@
 <p>Automate <a href="../scale/">Resizing and reducing</a> process.</p>
 <h4 id="data">Data:</h4>
 <ul>
-<li>*"a folder containing serial image" </li>
-<li>"a scale image (reference image)", then run the macro.</li>
+<li>a folder containing serial image</li>
+<li>a scale image (reference image)</li>
 </ul>
 <h4 id="macro-runs">Macro runs:</h4>
 <ol>
