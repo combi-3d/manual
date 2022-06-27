@@ -1079,15 +1079,16 @@
 <h1 id="automation">Automation</h1>
 <p>(2022.6.24 only description, no image)</p>
 <h2 id="introduction">Introduction</h2>
-<p>Since 2022.6, serial images can be processed automatically by ImageJ macro and Excel VBA. Automatic process includes following steps:</p>
+<p>In 2022.Jul, I made ImageJ macros and Excel VBA to process serial images obtained by CoMBI automatically. According to ImageJ Release Note, many bugs were fixed in "Image Sequence" from version 1.53d (2020.Aug) to 1.53p (2022.Mar). Many thanks to developers! Automatic process includes following steps:</p>
 <ol>
 <li>Resize, ImageJ /縮小</li>
 <li>Image registration, ImageJ and Excel VBA /ズレ補正、補正値の修正</li>
 <li>Crop, Grayscale, ImageJ /切り抜き、グレースケール</li>
 </ol>
-<p>All macro save not only serial images but also "a work log" containing image information, path, values used processing, date and time of processing. This will contribute to improve the reproductibity of image processing.</p>
+<p>All macro save not only serial images but also "a work log" containing image information, path, values used for processing, date and time of processing. I hope the work log contributes to improve the reproductibity of experiments.</p>
+<p><span style="color:#444C99;">2022年5月、連続画像の処理を自動化しようと思い立ち、2022年6月末、ImageJ macroとExcel VBAのファイルを完成させました。ImageJによる自動化が可能になったのは、2020年8月 v1.53d 〜2022年3月 v1.53pに行われたImageJアップデートのおかげのようです。アップデートを経て、ImageJ macroが連続画像を扱えるようになりました。開発者の方々に感謝いたします。自動化できた処理は、画像の縮小、ズレ補正、補正値の修正、切り抜き、グレースケール変換です。加えて、作業記録を保存できます。作業記録には、使用したデータ情報や、切り抜き位置などの処理情報が含まれます。実験の再現性向上にお役に立てていただければ幸いです。</span></p>
 <h2 id="list-of-imagej-macro-and-excel-vba">List of ImageJ macro and Excel VBA</h2>
-<p>Codes are available at <a href="https://github.com/combi-3d/ImageJ">GitHub CoMBI_ImageJ</a>（2022.6). There are 9 files. You can process using 4 essential files in one computer. For mac user, files to be used are different depending on CPU type; Intel or Apple silicon.</p>
+<p>ImageJ macros and Excel VBA are available at <a href="https://github.com/combi-3d/ImageJ">GitHub CoMBI_ImageJ</a>（Since 2022.6). There are 9 files but you can process using only 4 essential files. </p>
 <table>
 <thead>
 <tr>
@@ -1154,18 +1155,30 @@
 </tr>
 </tbody>
 </table>
-<p>ImageJ macro files (.ijm) are NOT veified on Win or Linux. Difference of "CopyLog" and "SelectLog" is style for importing csv file. Try "SelectLog" at first. It is more convenient than "CopyLog". </p>
-<p>Excel macro (.xlsm) was created by Excel VBA on Mac and verified in Win10. Excel VBA Commands of Mac is fewer than that of Win. Thus, I hope the file work both on Mac and Win.  </p>
+<p>I developed these files using Intel Mac and Apple Silicon Mac. Use files following description below;</p>
+<ul>
+<li>Apple silicon mac: use ImageJ for ARM(1.53s, 2022.6), ImageJ macros with "SelectLog", and Excel VBA.</li>
+<li>Intel mac: use FIJI for mac (2.3.0/1.53q, 2022.6), ImageJ macros with "CopyLog", and Excel VBA.</li>
+<li>Windows: ImageJ-macros are not verified. Try "SelectLog" at first. If it works, you are lucky since SelectLog is more convenient than "CopyLog", else then, try "CopyLog". Excel VBA was verified on Windows10 via Intel-mac's bootcamp. Commands of VBA for mac is much fewer than that for windows, thus, I hope VBA can work in Windows. </li>
+<li>Linux: ImageJ-macros are not verified. Try "SelectLog" at first. Excel VBA was not verified on Linux, since I do not have a linux system. Try LibreOffice to run Excel VBA, please. </li>
+</ul>
+<p><span style="color:#444C99;">GitHubサイトには、多くのファイルがありますが、必須の4種で処理は完了します。他は単機能のマクロファイルです。パソコンシステムによって使用するファイルが異なります。上記を参考に、環境に合わせたファイルを選択してください。</span></p>
 <h2 id="setting-up-imagej">Setting up ImageJ</h2>
 <ul>
-<li>Use ImageJ 1.53p or newer, due to the compatibility of a command for processing serial images. </li>
-<li>For Apple silicon mac, use latest ImageJ_ARM (1.53s) or latest FIJI/mac (2.3.0/1.53q)(2022.6).</li>
-<li>For Intel mac, use only latest FIJI/mac (2.3.0/1.53q). Do not use ImageJ/Intel mac, bacause it is still 1.53k(2022.6).</li>
+<li>Download sites for ImageJ and FIJI.<ul>
+<li><a href="https://imagej.nih.gov/ij/download.html">ImageJ Download</a></li>
+<li><a href="https://imagej.net/software/fiji/downloads">FIJI Download</a></li>
+</ul>
+</li>
+<li>Use ImageJ 1.53p (2022.3) or newer, which is compatible with a command for processing serial images. </li>
+<li>For Apple silicon mac, use latest ImageJ_ARM (1.53s) or latest FIJI (2.3.0/1.53q)(2022.6).</li>
+<li>For Intel mac, use only latest FIJI (2.3.0/1.53q). Do not use ImageJ for Intel mac, bacause it is still 1.53k(2022.6).</li>
 <li>Place these ijm files in ImageJ/"plugins" folder (Not "macros" folder), and a shortcut will be found in Menubar&gt;plugins. </li>
 <li>Plugins "Image Stabilizer" and "Image Stabilizer Log Applier" are needed. Download from <a href="https://imagej.net/plugins/image-stabilizer">https://imagej.net/plugins/image-stabilizer</a>. For Mac, open "Finder". Find <code>/Application/Fiji.app</code>. Over the icon, <code>Right click</code>, <code>Show packege contents</code>. Go to <code>/plugins</code> put downloaded .class files. Restart ImageJ/FIJI.</li>
 <li>Set memory for imagej, max 75% of total memory. <code>Edit</code>&gt; <code>Options</code>&gt; <code>Memory &amp; Threads...</code>&gt; <code>Maximum Memory</code></li>
 <li>Set JPEG compression rate. The value <code>100</code> is recommended. <code>Edit</code>&gt; <code>Options</code>&gt; <code>Input/Output...</code>&gt; <code>JPEG quality (0-100)</code> I prefer to use JPEG to save disc space, and JPEG is acceptable by 3D slicer, Horos. The value <code>100</code> reduces data size into about 12%, seems to keep enough quality as morphological data by CoMBI. </li>
 </ul>
+<p><span style="color:#444C99;">ImageJは、2022年3月以降の新しいバージョンを使ってください。1.53pより新しい版に対応します。macroファイルをプラグインフォルダに入れると、メニューバーから選べるようになります。ImageJで使用するメモリ量、JPEG圧縮率（低圧縮）の設定を行ってください。</span></p>
 <h2 id="description-of-each-macro-files">Description of each macro files</h2>
 <h3 id="combi_resizeijm">CoMBI_resize.ijm</h3>
 <p>Automate <a href="../scale/">Resizing and reducing</a> process.</p>
