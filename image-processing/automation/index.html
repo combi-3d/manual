@@ -1169,7 +1169,7 @@
 <li>Windows: ImageJ-macros are not verified. Try "SelectLog" at first. If it works, you are lucky since SelectLog is more convenient than "CopyLog", else then, try "CopyLog". Excel VBA was verified on Windows10 via Intel-mac's bootcamp. Commands of VBA for mac is much fewer than that for windows, thus, I hope VBA can work in Windows. </li>
 <li>Linux: ImageJ-macros are not verified. Try "SelectLog" at first. Excel VBA was not verified on Linux, since I do not have a linux system. Try LibreOffice to run Excel VBA, please. </li>
 </ul>
-<p><span style="color:#444C99;">GitHubサイトには、多くのファイルがありますが、必須の4種で処理は完了します。他は単機能のマクロファイルです。パソコン環境によって使用するファイルが異なります。上記を参考に、すべてのファイルをダウンロードした後、各自のパソコン環境に合わせたファイルを選択して利用してください。</span></p>
+<p><span style="color:#444C99;">GitHubサイトには、多くのファイルがありますが、必須の4種で処理は完了します。他は単機能のマクロファイルです。パソコン環境によって使用するファイルが異なります。上記を参考に、すべてのファイルをダウンロードした後、各自のパソコン環境に合わせたファイルを選択して利用してください。Excel VBAを実行する際にパス（ファイル名やフォルダ名）に日本語が入っていると、エラーがでます。OSによって異なるかも知れませんが、すくなくともmacOSではパスに日本語が入らないようにします。検証したいログファイルは、アルファベットのファイル名がついていること、ExcelVBAファイルによる検証時には、ログファイルをユーザ名直下のドキュメントやデスクトップなどに置くことで、パス内の日本語を回避してください。</span></p>
 <h2 id="setting-up-imagej">Setting up ImageJ</h2>
 <ul>
 <li>Download sites for ImageJ and FIJI.<ul>
@@ -1244,6 +1244,7 @@
 <h3 id="is_log_validatorxlsm-essential">IS_Log_Validator.xlsm (Essential)</h3>
 <p>Automate middle part of <a href="../registration/">Image Registration</a> process; Correct log file.
 When open this file by Excel, the app will ask "Enable macros", and may ask "Permission of foler access". There is 5 sheets in the xlsm file. Follow instruction in the sheet from sheet1 to 4. In each sheet, a initialize button is available. The button can clear all value of the sheet and initialize all functions. You can use the initialize button in case you accidentally modify the xlsm file.</p>
+<p><span style="color:#444C99;">このExcel VBAを実行する際に、ログファイルのパス（ファイル名やフォルダ名）に日本語が入っていると、エラーがでます。OSによって異なるかも知れませんが、すくなくともmacOSではパスに日本語が入らないようにします。検証したいログファイルはアルファベットのファイル名がついていること、および、ExcelVBAファイルによる検証時にはログファイルをユーザ名直下のドキュメントやデスクトップなどに置くことで、パス内の日本語を回避してください。</span></p>
 <h4 id="preparation_1">Preparation:</h4>
 <ul>
 <li>Log file Forward</li>
