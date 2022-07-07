@@ -786,6 +786,40 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#mininal-requiered-set-of-applications" class="md-nav__link">
+    Mininal requiered set of applications
+  </a>
+  
+    <nav class="md-nav" aria-label="Mininal requiered set of applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raw-jpeg-conversion" class="md-nav__link">
+    RAW-JPEG conversion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resising-etc" class="md-nav__link">
+    Resising etc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-reconstruction" class="md-nav__link">
+    3D reconstruction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#things-to-do" class="md-nav__link">
     Things to do/やること
   </a>
@@ -793,8 +827,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-processing-serial-images" class="md-nav__link">
-    1. Processing serial images/連続画像を処理するアプリ
+  <a href="#1-applications-for-processing-serial-images" class="md-nav__link">
+    1. Applications for processing serial images/連続画像を処理するアプリ
   </a>
   
 </li>
@@ -1007,6 +1041,23 @@
 
 
 <h1 id="applications">Applications/アプリケーション</h1>
+<h2 id="mininal-requiered-set-of-applications">Mininal requiered set of applications</h2>
+<p>To start CoMBI with minimal set of applications, install 3 free apps below. Details will be described following chapters. </p>
+<p><span style="color:#444C99;">最小構成でCoMBIをはじめる場合、以下の３つの無料アプリをインストールしてください。それぞれの画像処理や別のアプリの説明はつづく下の章に書きました。</span></p>
+<h3 id="raw-jpeg-conversion">RAW-JPEG conversion</h3>
+<ul>
+<li>For win, mac, linux; Darktable <a href="https://www.darktable.org">https://www.darktable.org</a></li>
+</ul>
+<h3 id="resising-etc">Resising etc</h3>
+<ul>
+<li>For M1 mac; ImageJ v1.** <a href="https://imagej.nih.gov/ij/download.html">https://imagej.nih.gov</a></li>
+<li>For Intel mac; FIJI/ImageJ <a href="https://imagej.net/software/fiji/downloads">https://imagej.net</a></li>
+<li>For windows, linux; Use ImageJ/FIJI 1.53p or later. (I do not have windows/linux machine.)</li>
+</ul>
+<h3 id="3d-reconstruction">3D reconstruction</h3>
+<ul>
+<li>For win, mac, linux; 3D sclier <a href="https://www.slicer.org">https://www.slicer.org</a></li>
+</ul>
 <h2 id="things-to-do">Things to do/やること</h2>
 <p>All the processes can be carried out with free apps. Try the free app for starters. Paid apps may be better in terms of convenience and stability. The stability of image processing is affected not only by the application, but of course by the specs of your PC. The five processes for 3D reconstruction require more PC power in their order.</p>
 <ol>
@@ -1035,7 +1086,7 @@
 <p><span style="color:#444C99;">
 すべてのプロセスは、無料のアプリで行えます。まずは無料アプリでやってみるのがいいでしょう。有料アプリは、利便性や安定性の面でよい場合があります。画像処理の安定性は、アプリだけでなく、もちろんPCのスペックも影響します。上記の3D再構築の5項目は、順にPCの能力を必要とします。</span></p>
 <hr />
-<h2 id="1-processing-serial-images">1. Processing serial images/連続画像を処理するアプリ</h2>
+<h2 id="1-applications-for-processing-serial-images">1. Applications for processing serial images/連続画像を処理するアプリ</h2>
 <p>Processing serial images in batches. ImageJ (free) can do this, but Adobe CC (paid) is more convenient. Adobe CC for educational use costs 32340 yen/year (as of 2021). Some universities may have a contract with AdobeCC. The conditions of use are that up to two computers can be used at the same time, and that installation on more than 2 computers is possible, but only 2 computers can be used at the same time.</p>
 <ul>
 <li>
@@ -1052,8 +1103,8 @@
 <li>
 <p>Resize, crop, and convert to grayscale (use one of the following)</p>
 <ol>
+<li>ImageJ/FIJI, macro (Free, English, my recommendation) </li>
 <li>Adobe Photoshop (Paid, Eng/Jpn) </li>
-<li>ImageJ/FIJI, macro (Free, English)</li>
 <li>GIMP, plug-in BIMP (Free, Eng/Jpn, I do not use routinely.)</li>
 </ol>
 </li>
@@ -1066,7 +1117,8 @@
 </li>
 </ul>
 <p><span style="color:#444C99;">
-連続画像を一括処理します。ImageJ（無料）でもできますが、Adobe CC（有料）があると便利です。便利さを感じる場面は、連続画像の自動処理と、3Dイメージング・セグメンテーションの色域選択です。AdobeCC教育機関向けは、32340円/年（2021年現在）です。大学が契約している場合もあると思います。利用条件は、「２台まで同時使用できること、台数を超えたインストールもできるが同時使用は2台までであること」です。</span></p>
+連続画像を一括処理します。ImageJ（無料）でできます。縮小 resize やズレ補正 registration をマクロをつかって自動処理できます。
+Adobe CC（有料）でも、あれば便利です、日本語ですし。便利さを感じる場面は、連続画像の自動処理と、3Dイメージング・セグメンテーションの色域選択です。AdobeCC教育機関向けは、32340円/年（2021年現在）です。大学が契約している場合もあると思います。利用条件は、「２台まで同時使用できること、台数を超えたインストールもできるが同時使用は2台までであること」です。</span></p>
 <hr />
 <h2 id="2-3d-reconstruction3d">2. 3D reconstruction/3D再構築するアプリ</h2>
 <p>Currently 2021, My recommentadion is 3D slicer (Win, Mac, Linux). I'm practicing Icy (Mac, Win, Linux) since 2021. I have been using OsiriX/Horos (Mac only) since 2009 for both education and research, however, OsiriX is currently commercial-ware and Horos is not stable during segmentation process. </p>
