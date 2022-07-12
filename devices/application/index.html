@@ -801,8 +801,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#imagejfiji-for-resising-etc" class="md-nav__link">
-    ImageJ/FIJI for Resising etc
+  <a href="#imagejfiji-for-resizing-etc" class="md-nav__link">
+    ImageJ/FIJI for Resizing etc
   </a>
   
 </li>
@@ -810,6 +810,13 @@
           <li class="md-nav__item">
   <a href="#3d-slicer-for-3d-reconstruction" class="md-nav__link">
     3D slicer for 3D reconstruction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ms-excel-for-image-registration" class="md-nav__link">
+    MS Excel for image registration
   </a>
   
 </li>
@@ -1043,24 +1050,29 @@
 <h1 id="applications">Applications/アプリケーション</h1>
 <h2 id="minimum-set-of-applications-required">Minimum set of applications required</h2>
 <p>To start CoMBI with minimum set of applications, install 3 free apps below. Details will be described following paragraphs. </p>
-<p><span style="color:#444C99;">最小構成でCoMBIをはじめる場合、以下の３つの無料アプリをインストールしてください。それぞれの画像処理や別のアプリの説明はつづく下の章に書きました。</span></p>
+<p><span style="color:#444C99;">最小構成でCoMBIをはじめる場合、以下の３つの無料アプリをインストールしてください。Excelはすでにあるものと期待しています。それぞれの画像処理や別のアプリの説明はつづく下の章に書きました。</span></p>
 <h3 id="darktable-for-raw-jpeg-conversion">Darktable for RAW-JPEG conversion</h3>
 <ul>
 <li>win, mac, linux; <a href="https://www.darktable.org">https://www.darktable.org</a></li>
 </ul>
-<h3 id="imagejfiji-for-resising-etc">ImageJ/FIJI for Resising etc</h3>
+<h3 id="imagejfiji-for-resizing-etc">ImageJ/FIJI for Resizing etc</h3>
 <ul>
-<li>M1 mac; ImageJ v1.** <a href="https://imagej.nih.gov/ij/download.html">https://imagej.nih.gov</a></li>
-<li>Intel mac; FIJI/ImageJ <a href="https://imagej.net/software/fiji/downloads">https://imagej.net</a></li>
-<li>windows, linux; Use ImageJ/FIJI 1.53p or later. Try FIJI (above link) at first. (I do not have windows/linux machine.)</li>
+<li>M1 mac; ImageJ v1.** <a href="https://imagej.nih.gov/ij/download.html">https://imagej.nih.gov</a> Download and install into Application folder. Make an icon on the dock and right click (double finger click by trackpad) to open for the first time.</li>
+<li>Intel mac; FIJI/ImageJ <a href="https://imagej.net/software/fiji/downloads">https://imagej.net</a>Download and install into Application folder. Make an icon on the dock and right click (double finger click by trackpad) to open for the first time.</li>
+<li>Windows, linux; Use ImageJ/FIJI 1.53p or later. Try FIJI (above link) at first. (I do not have windows/linux machine.) Download and NOT install into "Program Files" folder, instead install into directories within "Users". Please, follow instruction on the official site.</li>
 </ul>
+<p>After installation of ImageJ/FIJI, initial setup of memory use and JPEG compression are recommended. For setting up memory, go <code>Edit</code>&gt; <code>Options</code>&gt; <code>Memory &amp; Threads...</code>&gt; <code>Maximum Memory</code>, and input size as 70-75% of total RAM. Restart ImageJ. For setting up JEPG compression, go <code>Edit</code>&gt; <code>Options</code>&gt; <code>Input/Output...</code>&gt; <code>JPEG quality (0-100)</code>. Input <code>100</code>, as recommendation.</p>
 <h3 id="3d-slicer-for-3d-reconstruction">3D slicer for 3D reconstruction</h3>
 <ul>
 <li>win, mac, linux; <a href="https://www.slicer.org">https://www.slicer.org</a></li>
 </ul>
+<h3 id="ms-excel-for-image-registration">MS Excel for image registration</h3>
+<ul>
+<li>win, mac </li>
+</ul>
 <hr />
 <h2 id="things-to-do">Things to do/やること</h2>
-<p>All the processes can be carried out with free apps. Try the free app for starters. Paid apps may be better in terms of convenience and stability. The stability of image processing is affected not only by the application, but of course by the specs of your PC. The five processes for 3D reconstruction require more PC power in their order.</p>
+<p>All the processes can be carried out with free apps. Try the free app for starters. Paid apps may be better in terms of convenience and stability. The stability of image processing is affected not only by the application, but of course by the specs of your PC. For 3D reconstruction, there are five processes (below), and these require more PC power in their order.</p>
 <ol>
 <li>
 <p>Processing serial images/連続画像を処理する</p>
@@ -1093,27 +1105,29 @@
 <li>
 <p>RAW-JPEG conversion (use one of the following)</p>
 <ol>
-<li>Adobe bridge or Adobe lightroom (Paid, Eng/Jpn, Detailed adjustments)</li>
-<li>Sony Imaging Edge (Free, Eng/Jpn, Adjustment is not as detailed as Adobe.)</li>
-<li>Nikon NX studio (Free, Eng/Jpn, Before 2021.3, it was called Capture NX-D)</li>
-<li>Canon Digital Photo Professional (Free, Eng/Jpn)</li>
-<li>Fujifilm RAW file converter ex 3.0 powered by SILKYPIX (free)</li>
-<li>Darktable (Free, Eng)</li>
+<li>Adobe Bridge or Adobe lightroom (Paid, Eng/Jpn, Detailed adjustments)</li>
+<li>Sony Imaging Edge Desktop (Free, Eng/Jpn, Adjustment is not as detailed as Adobe.) <a href="https://imagingedge.sony.net/">https://imagingedge.sony.net/</a></li>
+<li>Nikon NX studio (Free, Eng/Jpn, Before 2021.3, it was called Capture NX-D) <a href="https://downloadcenter.nikonimglib.com/">https://downloadcenter.nikonimglib.com/</a></li>
+<li>Canon Digital Photo Professional (Free, Eng/Jpn) <a href="https://cweb.canon.jp/eos/software/dpp4.html">https://cweb.canon.jp/</a></li>
+<li>Fujifilm RAW file converter ex 3.0 powered by SILKYPIX (free) <a href="https://fujifilm-x.com/ja-jp/support/download/software/raw-file-converter-ex-powered-by-silkypix/">https://fujifilm-x.com/</a></li>
+<li>Darktable (Free, Eng) <a href="https://www.darktable.org">https://www.darktable.org</a></li>
 </ol>
 </li>
 <li>
 <p>Resize, crop, and convert to grayscale (use one of the following)</p>
 <ol>
-<li>ImageJ/FIJI, macro (Free, English, my recommendation) </li>
+<li>ImageJ, macro (Free, English, my recommendation) <a href="https://imagej.nih.gov/ij/download.html">https://imagej.nih.gov</a></li>
+<li>ImageJ/FIJI, macro (Free, English, my recommendation) <a href="https://imagej.net/software/fiji/downloads">https://imagej.net</a></li>
 <li>Adobe Photoshop (Paid, Eng/Jpn) </li>
-<li>GIMP, plug-in BIMP (Free, Eng/Jpn, I do not use routinely.)</li>
+<li>GIMP, plug-in BIMP (Free, Eng/Jpn, I do not use routinely.)<a href="https://www.gimp.org">https://www.gimp.org</a></li>
 </ol>
 </li>
 <li>
 <p>Image Registration</p>
 <ol>
-<li>ImageJ/FIJI, Plug-in Image Stabilizer (Free, English, my recommendation)</li>
-<li>Amira (Paid, I have not used, only I heard it works well.)</li>
+<li>ImageJ, macro (Free, English, my recommendation) <a href="https://imagej.nih.gov/ij/download.html">https://imagej.nih.gov</a></li>
+<li>ImageJ/FIJI, macro (Free, English, my recommendation) <a href="https://imagej.net/software/fiji/downloads">https://imagej.net</a></li>
+<li>Amira (Paid, ThermoFisher, I have not used, only I heard it works well.)</li>
 </ol>
 </li>
 </ul>

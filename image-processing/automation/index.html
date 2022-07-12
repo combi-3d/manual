@@ -1167,9 +1167,10 @@
 <li>Apple silicon mac: use ImageJ for ARM(1.53s) or FIJI (2.3.0/1.53q)(2022.6), ImageJ macros with "SelectLog", and Excel VBA.</li>
 <li>Intel mac: use FIJI for mac (2.3.0/1.53q, 2022.6), ImageJ macros with "CopyLog", and Excel VBA.</li>
 <li>Windows: ImageJ-macros are not verified. Try "SelectLog" at first. If it works, you are lucky since SelectLog is more convenient than "CopyLog", else then, try "CopyLog". Excel VBA was verified on Windows10 via Intel-mac's bootcamp. Commands of VBA for mac is much fewer than that for windows, thus, I hope VBA can work in Windows. </li>
-<li>Linux: ImageJ-macros are not verified. Try "SelectLog" at first. Excel VBA was not verified on Linux, since I do not have a linux system. Try LibreOffice to run Excel VBA, please. </li>
+<li>Linux: ImageJ-macros are not verified. Try "SelectLog" at first. Excel VBA was not verified on Linux, since I do not have a linux system. LibreOffice accepts Excel VBA, but the Excel file for CoMBI still have some bugs, due to uncompatibility of some commands.</li>
+<li>Excel VBA can not accept path with local languages, for example Japanease Hiragana or Kanji. Make sure that path of log files are written only with alphabet, numbers, and other acceptable characters.</li>
 </ul>
-<p><span style="color:#444C99;">GitHubサイトには、多くのファイルがありますが、必須の4種で処理は完了します。他は単機能のマクロファイルです。パソコン環境によって使用するファイルが異なります。上記を参考に、すべてのファイルをダウンロードした後、各自のパソコン環境に合わせたファイルを選択して利用してください。Excel VBAを実行する際にパス（ファイル名やフォルダ名）に日本語が入っていると、エラーがでます。OSによって異なるかも知れませんが、すくなくともmacOSではパスに日本語が入らないようにします。検証したいログファイルは、アルファベットのファイル名がついていること、ExcelVBAファイルによる検証時には、ログファイルをユーザ名直下のドキュメントやデスクトップなどに置くことで、パス内の日本語を回避してください。</span></p>
+<p><span style="color:#444C99;">GitHubサイトには、多くのファイルがありますが、必須の4種で処理は完了します。他は単機能のマクロファイルです。パソコン環境によって使用するファイルが異なります。上記を参考に、すべてのファイルをダウンロードした後、各自のパソコン環境に合わせたファイルを選択して利用してください。Excel VBAを実行する際にパス（ファイル名やフォルダ名）に日本語が入っていると、エラーがでます。OSによって異なるかも知れませんが、すくなくともmacOSではパスに日本語が入らないようにします。パス内の日本語を回避する方法は、「検証したいログファイルは、アルファベットのファイル名をつける」および「ExcelVBAで検証したいログファイルは、ユーザ名直下のドキュメントまたはデスクトップに置く」ことです。。</span></p>
 <h2 id="setting-up-imagej">Setting up ImageJ</h2>
 <ul>
 <li>Download sites for ImageJ and FIJI.<ul>
