@@ -1164,11 +1164,21 @@
 <p><img alt="GitHub" src="../img/GitHub_Download_button.png" title="GitHub" /></p>
 <p>I developed these files using Intel Mac and Apple Silicon Mac. Use files following description below;</p>
 <ul>
-<li>Apple silicon mac: use ImageJ for ARM(1.53s) or FIJI (2.3.0/1.53q)(2022.6), ImageJ macros with "SelectLog", and Excel VBA.</li>
-<li>Intel mac: use FIJI for mac (2.3.0/1.53q, 2022.6), ImageJ macros with "CopyLog", and Excel VBA.</li>
-<li>Windows: Use ImageJ 1.**, latest version. Among ImageJ-macros aboave, use "SelectLog" for Image Stabilizer log applier. Excel VBA was verified on Windows11 (MS Surface, 2022.7) and Windows10 via Intel-mac's bootcamp (2022.6). Commands of VBA for mac is much fewer than that for windows, thus, I hope VBA can work in Windows. </li>
-<li>Linux: ImageJ-macros are not verified. Try "SelectLog" at first. Excel VBA was not verified on Linux, since I do not have a linux system. LibreOffice accepts Excel VBA, but the Excel file for CoMBI still have some bugs, due to uncompatibility of some commands.</li>
-<li>Excel VBA can not accept path with local languages, for example Japanease Hiragana or Kanji. Make sure that path of log files are written only with alphabet, numbers, and other acceptable characters.</li>
+<li>
+<p>Apple silicon mac: use ImageJ for ARM(1.53s) or FIJI (2.3.0/1.53q)(2022.6), ImageJ macros with "SelectLog", and Excel VBA.</p>
+</li>
+<li>
+<p>Intel mac: use FIJI for mac (2.3.0/1.53q, 2022.6), ImageJ macros with "CopyLog", and Excel VBA.</p>
+</li>
+<li>
+<p>Windows: Use ImageJ 1.**, latest version. Download and NOT install into "Program Files" folder, instead install into directories within "Users". Please, follow instruction on the official site. Just after download, the app may not the latest, thus go to <code>Help</code>&gt;<code>Update ImageJ...</code> to make the app latest (1.53s, 2022.7). Currently, FIJI can not run macro for CoMBI, because FIJI/ImageJ 1.53q can not open log files for Image stabilizer. Even if you run update of FIJI, it remains v1.53q (unchanged, 2022.7). Among ImageJ-macros aboave, use "SelectLog" for Image Stabilizer log applier. Excel VBA was verified on Windows11 (MS Surface, 2022.7) and Windows10 via Intel-mac's bootcamp (2022.6). Commands of VBA for mac is much fewer than that for windows, thus, I hope VBA can work in Windows.(Thank you, HS!)</p>
+</li>
+<li>
+<p>Linux: (Sorry, I do not have linux machine.) ImageJ-macros are not verified. Try "SelectLog" at first. Excel VBA was not verified on Linux, since I do not have a linux system. LibreOffice accepts Excel VBA, but the Excel file for CoMBI still have some bugs, due to uncompatibility of some commands.</p>
+</li>
+<li>
+<p>Excel VBA can not accept path with local languages, for example Japanease Hiragana or Kanji. Make sure that path of log files are written only with alphabet, numbers, and other acceptable characters.</p>
+</li>
 </ul>
 <p><span style="color:#444C99;">GitHubサイトには、多くのファイルがありますが、必須の4種で処理は完了します。他は単機能のマクロファイルです。パソコン環境によって使用するファイルが異なります。上記を参考に、すべてのファイルをダウンロードした後、各自のパソコン環境に合わせたファイルを選択して利用してください。Excel VBAを実行する際にパス（ファイル名やフォルダ名）に日本語が入っていると、エラーがでます。OSによって異なるかも知れませんが、すくなくともmacOSではパスに日本語が入らないようにします。パス内の日本語を回避する方法は、「検証したいログファイルは、アルファベットのファイル名をつける」および「ExcelVBAで検証したいログファイルは、ユーザ名直下のドキュメントまたはデスクトップに置く」ことです。。</span></p>
 <h2 id="setting-up-imagej">Setting up ImageJ</h2>
