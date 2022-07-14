@@ -801,8 +801,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#imagejfiji-for-resizing-etc" class="md-nav__link">
-    ImageJ/FIJI for Resizing etc
+  <a href="#imagej-for-resizing-and-stabilizing" class="md-nav__link">
+    ImageJ for resizing and stabilizing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fijiimagej-is-not-recommended-20227" class="md-nav__link">
+    FIJI/ImageJ is NOT recommended (2022.7)
   </a>
   
 </li>
@@ -1050,26 +1057,30 @@
 <h1 id="applications">Applications/アプリケーション</h1>
 <h2 id="minimum-set-of-applications-required">Minimum set of applications required</h2>
 <p>To start CoMBI with minimum set of applications, install 3 free apps below. Details will be described following paragraphs. </p>
-<p><span style="color:#444C99;">最小構成でCoMBIをはじめる場合、以下の３つの無料アプリをインストールしてください。Excelはすでにあるものと期待しています。それぞれの画像処理や別のアプリの説明はつづく下の章に書きました。</span></p>
+<p><span style="color:#444C99;">最小構成でCoMBIをはじめる場合、下記の無料アプリ３つ（Darktable, ImageJ, 3D slicer）をインストールしてください。Excelはすでにあるものと期待しています。2022年7月現在、Win, Mac共に、ImageJは、最新の1.53sを使ってください。FIJI/ImageJはテキストファイルの扱いにバグがあるのか、CoMBI用Macroが働かない場合があります。それぞれの画像処理や別のアプリの説明はつづく下の章に書きました。</span></p>
 <h3 id="darktable-for-raw-jpeg-conversion">Darktable for RAW-JPEG conversion</h3>
 <ul>
 <li>win, mac, linux; <a href="https://www.darktable.org">https://www.darktable.org</a></li>
 </ul>
-<h3 id="imagejfiji-for-resizing-etc">ImageJ/FIJI for Resizing etc</h3>
+<h3 id="imagej-for-resizing-and-stabilizing">ImageJ for resizing and stabilizing</h3>
 <ul>
-<li>M1 mac; ImageJ v1.** <a href="https://imagej.nih.gov/ij/download.html">https://imagej.nih.gov</a>. Download and install into Application folder. Make an icon on the dock and right click (double finger click by trackpad) to open for the first time.</li>
-<li>Intel mac; FIJI/ImageJ <a href="https://imagej.net/software/fiji/downloads">https://imagej.net</a>. Download and install into Application folder. Make an icon on the dock and right click (double finger click by trackpad) to open for the first time.</li>
-<li>Windows; Use the latest ImageJ 1.** (above link). Download and NOT install into "Program Files" folder, instead install into directories within "Users". Please, follow instruction on the official site. Just after download, the app may not the latest, thus go to <code>Help</code>&gt;<code>Update ImageJ...</code> to make the app latest (1.53s, 2022.7). Currently, FIJI can not run macro for CoMBI. Current FIJI/ImageJ 1.53q can not open log files for Image stabilizer. Even if you run update of FIJI, it remains v1.53q (unchanged, 2022.7). (Thank you, HS!)</li>
-<li>Linux; (Sorry, I do not have linux machine.)</li>
+<li>Mac Apple Silicon; ImageJ v1.** <a href="https://imagej.nih.gov/ij/download.html">https://imagej.nih.gov</a>. Download Mac with ARM version and install into Application folder. Make an icon on the dock and right click (double finger click by trackpad) to open for the first time. Update to latest version after download/installation (1.53s, 2022.7).</li>
+<li>Mac intel; ImageJ v1.** <a href="https://imagej.nih.gov/ij/download.html">https://imagej.nih.gov</a>. Download Mac with Intel version and install into Application folder. Make an icon on the dock and right click (double finger click by trackpad) to open for the first time. Update to latest version after download/installation (1.53s, 2022.7).</li>
+<li>Windows; ImageJ v1.** <a href="https://imagej.nih.gov/ij/download.html">https://imagej.nih.gov</a>. Download and NOT install into "Program Files" folder, instead install it into directories within "Users". Please, follow instruction on the official site. Just after download, the app may not the latest, thus go to <code>Help</code>&gt;<code>Update ImageJ...</code> to make the app latest (1.53s, 2022.7). </li>
+<li>Linux; (Sorry, I do not have linux system.)</li>
 </ul>
 <p>After installation of ImageJ/FIJI, initial setup of memory use and JPEG compression are recommended. For setting up memory, go <code>Edit</code>&gt; <code>Options</code>&gt; <code>Memory &amp; Threads...</code>&gt; <code>Maximum Memory</code>, and input size as 70-75% of total RAM. For setting up JEPG compression, go <code>Edit</code>&gt; <code>Options</code>&gt; <code>Input/Output...</code>&gt; <code>JPEG quality (0-100)</code>. Input <code>100</code>. Then, restart ImageJ.</p>
+<h3 id="fijiimagej-is-not-recommended-20227">FIJI/ImageJ is NOT recommended (2022.7)</h3>
+<ul>
+<li>Many of researcher may use FIJI/ImageJ <a href="https://imagej.net/software/fiji/downloads">https://imagej.net</a>. However FIJI version cannot run macros for CoMBI fully. When opening the Image_Stabilizer_Log files, FIJI for mac cannot open the log files directly, but it can open through copy/paste into system clipboard. FIJI for windows cannot open the log files directly, nor cannot copy/paste to clipboard (Thank you, HS! 2022.7).</li>
+</ul>
 <h3 id="3d-slicer-for-3d-reconstruction">3D slicer for 3D reconstruction</h3>
 <ul>
-<li>win, mac, linux; <a href="https://www.slicer.org">https://www.slicer.org</a></li>
+<li>Win, Mac, linux; <a href="https://www.slicer.org">https://www.slicer.org</a></li>
 </ul>
 <h3 id="ms-excel-for-image-registration">MS Excel for image registration</h3>
 <ul>
-<li>win, mac </li>
+<li>Win, Mac </li>
 </ul>
 <hr />
 <h2 id="things-to-do">Things to do/やること</h2>
