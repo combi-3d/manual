@@ -800,8 +800,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#imagej-app-and-macro-files-to-be-used" class="md-nav__link">
-    ImageJ app and macro files to be used
+  <a href="#imagej-app-to-be-used" class="md-nav__link">
+    ImageJ app to be used
   </a>
   
 </li>
@@ -1107,6 +1107,9 @@
 </ul>
 <p><span style="color:#444C99;">2022年5月、連続画像の処理を自動化しようと思い立ち、2022年6月末、ImageJ macroとExcel VBAのファイルを完成させました。ImageJによる自動化が可能になったのは、2020年8月 v1.53d 〜2022年3月 v1.53pに行われたImageJアップデートのおかげのようです。アップデートを経て、ImageJ macroが連続画像を扱えるようになりました。開発者の方々に感謝いたします。自動化できた処理は、画像の縮小、ズレ補正、補正値の修正、切り抜き、グレースケール変換です。加えて、作業記録を保存できます。作業記録には、使用したデータ情報や、切り抜き位置などの処理情報が含まれます。実験の再現性向上にお役に立てていただければ幸いです。</span></p>
 <h2 id="download-imagej-macro-and-excel-vba">Download ImageJ macro and Excel VBA</h2>
+<hr />
+<p><a href="https://github.com/combi-3d/ImageJ">ImageJ macro and Excel macro for CoMBI, download from GitHub</a></p>
+<hr />
 <p>ImageJ macros and Excel VBA are available at <a href="https://github.com/combi-3d/ImageJ">GitHub CoMBI_ImageJ</a>（Since 2022.6). There are 9 files but you can process using only 4 essential files. I developed these files using Intel Mac and Apple Silicon Mac, and validated using on Windows11 (MS Surface, 2022.7 Thank you, HS!) and Windows10 via Intel-mac's bootcamp (2022.6). </p>
 <table>
 <thead>
@@ -1177,12 +1180,14 @@
 <p>For download, find "Code" button and click "Download ZIP". All files are contained in a single folder and downloaded.</p>
 <p><img alt="GitHub" src="../img/GitHub_Download_button.png" title="GitHub" /></p>
 <p><span style="color:#444C99;">ImageJマクロと、Excelマクロをダウンロードしてください。こちらから&gt;&gt;&gt; <a href="https://github.com/combi-3d/ImageJ">GitHub CoMBI_ImageJ</a>　9つのファイルがありますが、最低限必須の4つで画像処理できます。他は単機能のマクロファイルです。</span></p>
-<h2 id="imagej-app-and-macro-files-to-be-used">ImageJ app and macro files to be used</h2>
+<h2 id="imagej-app-to-be-used">ImageJ app to be used</h2>
+<hr />
+<ul>
+<li><a href="https://imagej.nih.gov/ij/download.html">ImageJ, download site (Recommendation)</a></li>
+<li><a href="https://imagej.net/software/fiji/downloads">FIJI, download site</a></li>
+</ul>
+<hr />
 <p>ImageJ 1.53s (2022.7) or newer is recommended. Since there is a difference between ImageJ 1 and FIJI/ImageJ, when opening text files. ImageJ 1 can open text file directly, while FIJI/ImageJ cannot. </p>
-<hr />
-<p><a href="https://imagej.nih.gov/ij/download.html">ImageJ Download</a><br>
-<a href="https://imagej.net/software/fiji/downloads">FIJI Download</a></p>
-<hr />
 <ul>
 <li>
 <p>Apple silicon mac: use ImageJ for ARM(1.53s, 2022.6), and ImageJ macros with "SelectLog", and Excel VBA. After installation of ImageJ, go to <code>Help</code>&gt;<code>Update ImageJ...</code> to make the app latest (1.53s, 2022.7). FIJI (2.3.0/1.53q) is not recommended since it needs macro with "CopyLog", which is unconvenient rather than SelectLog (2022.6).</p>
@@ -1200,24 +1205,25 @@
 <p>Excel VBA can not accept path written in local languages, for example Japanease Hiragana or Kanji. Make sure that path of serial images and log files are written only with alphabet, numbers, and other acceptable characters.</p>
 </li>
 </ul>
-<p><span style="color:#444C99;">パソコン環境によって使用するファイルが異なります。上記を参考に、すべてのファイルをダウンロードした後、各自のパソコン環境に合わせたファイルを選択して利用してください。Excel VBAを実行する際にパス（ファイル名やフォルダ名）に日本語が入っていると、エラーがでます。OSによって異なるかも知れませんが、すくなくともmacOSではパスに日本語が入らないようにします。パス内の日本語を回避する方法は、「検証したいログファイルは、アルファベットのファイル名をつける」および「ExcelVBAで検証したいログファイルは、ユーザ名直下のドキュメントまたはデスクトップに置く」ことです。。</span></p>
+<p><span style="color:#444C99;">WindowsでもMacでも、ImageJ本家の利用をお勧めします。FIJI版ではテキストファイルを扱えない場合があるためです（2022.7)。ImageJマクロは、いったんすべてのファイルをGitHubからダウンロードした後、各自のパソコン環境に合わせたファイルを選択して利用してください。</span><br>
+<span style="color:#444C99;">GitHubからは、Excel VBAもいっしょにダウンロードされます。Excel VBAは、実行する際にパス（ファイル名やフォルダ名）に日本語が入っていると、エラーがでます。OSによって異なるかも知れませんが、すくなくともmacOSではパスに日本語が入らないようにします。パス内の日本語を回避する方法は、「検証したいログファイルは、アルファベットのファイル名をつける」および「ExcelVBAで検証したいログファイルは、ユーザ名直下のドキュメントまたはデスクトップに置く」ことです。</span></p>
 <h2 id="setting-up-imagej">Setting up ImageJ</h2>
 <ul>
-<li>
-<p>Download ImageJ (Recommendation) or FIJI.</p>
-<ul>
-<li><a href="https://imagej.nih.gov/ij/download.html">ImageJ Download</a></li>
-<li><a href="https://imagej.net/software/fiji/downloads">FIJI Download</a></li>
+<li>Plugins "Image Stabilizer" and "Image Stabilizer Log Applier" are needed. Download .class files from <a href="https://imagej.net/plugins/image-stabilizer">ImageJ, Image Stabilizer</a>. On mac, a folder "plugins" is unvisible but you can find it by; Open "Finder", find <code>/Application/ImageJ.app</code>, <code>Right click</code> over the icon, and select <code>Show packege contents</code>. Then, go to <code>/plugins</code>, and add downloaded class files. Restart ImageJ before use. The shortcuts of macros for Image Stabilizer will appear in <code>Menubar</code> &gt; <code>plugins</code>. </li>
 </ul>
+<hr />
+<p><a href="https://imagej.net/plugins/image-stabilizer">ImageJ macro for Image Stabilizer at https://imagej.net/plugins/image-stabilizer</a></p>
+<hr />
+<ul>
+<li>
+<p>Download ImageJ macro for CoMBI (above), and add these ijm files in ImageJ/"plugins" folder (Not "macros" folder). On mac, a folder "plugins" is unvisible but you can find it by; Open "Finder", find <code>/Application/ImageJ.app</code>, <code>Right click</code> over the icon, and select <code>Show packege contents</code>. Then, go to <code>/plugins</code>, and add downloaded and selected ijm files. Restart ImageJ before use. The shortcuts of macros for CoMBI will appear in <code>Menubar</code> &gt; <code>plugins</code>. </p>
 </li>
 <li>
-<p>Download ImageJ macro for CoMBI. <a href="https://github.com/combi-3d/ImageJ">GitHub CoMBI_ImageJ</a>. Place these ijm files in ImageJ/"plugins" folder (Not "macros" folder). A folder "plugins" may be unvisible. For Mac, open "Finder". Find <code>/Application/ImageJ.app</code>. Over the icon, <code>Right click</code>, <code>Show packege contents</code>. Go to <code>/plugins</code>, and put downloaded and selected ijm files. Restart ImageJ. After that, shortcuts for these macros will be found in <code>Menubar</code> &gt; <code>plugins</code>. </p>
+<p>Set memory for imagej, max 75% of total memory. <code>Edit</code>&gt; <code>Options</code>&gt; <code>Memory &amp; Threads...</code>&gt; <code>Maximum Memory</code></p>
 </li>
 <li>
-<p>Plugins "Image Stabilizer" and "Image Stabilizer Log Applier" are needed. Download from <a href="https://imagej.net/plugins/image-stabilizer">https://imagej.net/plugins/image-stabilizer</a>. For Mac, open "Finder". Find <code>/Application/ImageJ.app</code>. Over the icon, <code>Right click</code>, <code>Show packege contents</code>. Go to <code>/plugins</code> put downloaded .class files. Restart ImageJ.</p>
+<p>Set JPEG compression rate. The value <code>100</code> is recommended. <code>Edit</code>&gt; <code>Options</code>&gt; <code>Input/Output...</code>&gt; <code>JPEG quality (0-100)</code> I prefer to use JPEG to save disc space, and JPEG is acceptable by 3D slicer, Horos. The value <code>100</code> reduces data size into about 12%, seems to keep enough quality as morphological data by CoMBI. </p>
 </li>
-<li>Set memory for imagej, max 75% of total memory. <code>Edit</code>&gt; <code>Options</code>&gt; <code>Memory &amp; Threads...</code>&gt; <code>Maximum Memory</code></li>
-<li>Set JPEG compression rate. The value <code>100</code> is recommended. <code>Edit</code>&gt; <code>Options</code>&gt; <code>Input/Output...</code>&gt; <code>JPEG quality (0-100)</code> I prefer to use JPEG to save disc space, and JPEG is acceptable by 3D slicer, Horos. The value <code>100</code> reduces data size into about 12%, seems to keep enough quality as morphological data by CoMBI. </li>
 </ul>
 <p><span style="color:#444C99;">ImageJは、2022年3月以降の新しいバージョンを使ってください。1.53pより新しい版に対応します。macroファイルをプラグインフォルダに入れると、メニューバーから選べるようになります。ImageJで使用するメモリ量、JPEG圧縮率（低圧縮）の設定を行ってください。</span></p>
 <h2 id="procedure">Procedure</h2>
