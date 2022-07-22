@@ -917,7 +917,7 @@
 </ul>
 <h3 id="1-input-data">1. Input Data</h3>
 <ul>
-<li>学習させるための画像を開く。<code>Drag and Drop</code> または、プルダウンメニュー<code>Add New</code>&gt; <code>Add separate image(s)</code></li>
+<li>学習させるための画像を開く。<code>Drag and Drop</code> または、プルダウンメニュー<code>Add New</code>&gt; <code>Add separate image(s)</code>。Windowsの場合、パスに日本語が入っていると、エラーになる場合があります。</li>
 <li>CoMBIの連続画像（500-1000枚が典型的）のうち、標本全体や実験群全体を代表するような数枚を選ぶ。2〜4枚がおすすめ。（マシンパワーによる、iMac27-2017-4coreでは500x500x5枚まで。MBP16-2021-M1maxなら、1000x1000x10枚まで。)</li>
 <li>枚数は、多すぎると処理が遅くなり、少なすぎると正確性が劣る。</li>
 <li>どの画像が良いか、最初は分からない。一度やってみて、結果に満足しなければ、もう一度やっている。2回目でたいてい成功する。</li>
@@ -1100,6 +1100,10 @@
 <ul>
 <li>快適に学習できる枚数。iMac2017-i7-4core: 500x500 pixels x　5枚。MacBookPro16-2021-M1mac-10core: 1000x1000 pixels x 10枚。</li>
 <li>手順案、1000枚の連続画像があるとき：学習5〜10枚、Exportテスト100枚、Export本番1000枚。段階的にやって、Segmentationの失敗箇所を確認・修正する。時間の節約になる。急がば回れ。</li>
+</ul>
+<p>2022-7-22</p>
+<ul>
+<li>Windowsの場合、画像のパスに日本語が入っていると、画像を読み込む細にエラーになる。（Thank you, S!）</li>
 </ul>
 
               
