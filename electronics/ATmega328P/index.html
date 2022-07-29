@@ -13,7 +13,7 @@
       
       
       <link rel="icon" href="../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
     
     
       
@@ -21,10 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.120efc48.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
         
       
     
@@ -938,7 +938,9 @@
 <li><code>Tools</code> &gt; <code>Port</code>: /dev/cu.usbserial-....</li>
 <li><code>Tools</code> &gt; <code>Programmer</code>: AVRISPmkII</li>
 </ul>
-<p>You will find <code>Done Uploading</code></p>
+</li>
+<li>
+<p>Press <code>Upload</code> button, then you will find <code>Done Uploading</code>.</p>
 </li>
 </ol>
 <h3 id="2-burn-bootloader-on-atmega328p-using-arduino-isp">2. Burn bootloader on ATmega328P using Arduino ISP</h3>
@@ -952,8 +954,11 @@
 </ul>
 </li>
 <li>
-<p><code>Tools</code> &gt; <code>Burn bootloader</code>.
-    You will find <code>...may take minutes...</code> then <code>Done Burning bootloader</code></p>
+<p><code>Tools</code> &gt; <code>Burn bootloader</code>.</p>
+<p>You will find <code>...may take minutes...</code> then <code>Done burning bootloader</code></p>
+</li>
+<li>
+<p>Messages may appear as "***failed; avrdude: WARNING...efuse...0xfd...", but it seems NO problem. Successfull burning can be confirmed by twinkling LED "L" on Arduino Uno board just after the burning, or "D13" on the sketch writer in the next step.</p>
 </li>
 <li>
 <p>Remove ATmega328P from the bootloader writer.</p>
@@ -974,7 +979,8 @@
 </ul>
 </li>
 <li>
-<p>Push <code>Upload</code> button, then will see <code>Done Uploading</code>.</p>
+<p>Push <code>Upload</code> button, then you will see <code>Done Uploading</code>.</p>
+<p>Messaage may appear as "Warning: Board...328BB" in orange, "Sketck uses...", and "Global variables..." in white. These seem to be NO problem.</p>
 </li>
 </ol>
 <hr />
@@ -1009,7 +1015,8 @@
 <p><span style="color:#444C99;">Unoでうまくいった。Leonardoはダメだった。</span></p>
 </li>
 <li><span style="color:#444C99;">公式サイトには、Arduino Duemilanove or Nano w/ ATmega328の記載もあるが、うまくいかなかった。うまくいくのは、ATmega328 on a breadboard (8 MHz internal clock)で、これは、「水晶発振子を使わない場合」とあり、よくわからないが、これでいいや。前もって、board情報をダウンロードし、ArduinoフォルダにHardwareフォルダをつくって格納しておくやつ。</span></li>
-<li><span style="color:#444C99;">Bootloaderがうまく行けば、次のスケッチライターに載せたとき、D13のLEDが点滅する。そういう仕様らしい。</span></li>
+<li><span style="color:#444C99;">Bootloaderがうまく行けば、次のスケッチライターに載せたとき、D13のLEDが点滅する。そういう仕様らしい。ブートローダー＋Arduinoのときでも、Aruduino上のLED「L」が点滅する。</span></li>
+<li><span style="color:#444C99;">エラーが出たけど、Done burning bootloaderとでる。D13が点滅するから、うまくいってそう。エラーは、***Failed...use 0xfd...3行。(2022.7.29 MBP16, v1.8.19)</span></li>
 </ul>
 <h3 id="sketch-writer">Sketch writer</h3>
 <ul>
@@ -1058,7 +1065,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
       
     
   </body>
