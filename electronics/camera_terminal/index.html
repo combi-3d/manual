@@ -800,8 +800,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#charactor" class="md-nav__link">
-    Charactor / 端子の性質
+  <a href="#character-of-terminal" class="md-nav__link">
+    Character of terminal/ 端子の性質
   </a>
   
 </li>
@@ -838,7 +838,7 @@
 <p>(2022.8.17)</p>
 <p>The terminals for shutter control are basically the same among companies, and can be controlled by two optocouplers. However, there are some differences in electrical characteristics, and care must be taken when creating circuits and codes. (Thank you M! for cooperation in this varidation.)</p>
 <p><span style="color:#444C99;">4社のカメラ端子の性質を検証しました。</span></p>
-<h2 id="charactor">Charactor / 端子の性質</h2>
+<h2 id="character-of-terminal">Character of terminal/ 端子の性質</h2>
 <table>
 <thead>
 <tr>
@@ -911,7 +911,7 @@ for(int j=0;j&lt;contactTime;j++){
 }
 </code></pre>
 <p><span style="color:#444C99;">
-Arduinoの場合、delay(150)にした。十分な接触時間として、Fujiの45msecを適当に3倍、150 msecとした。ただし、attachInterrrupt()のなかでは、delay関数が働きません。かわりに、delaymicroseconds()を使います。delaymicrosecondの設定最大値は約1600 microsecondsらしいので、1000に設定し、forを使って繰り返します。</span></p>
+Arduinoの場合、delay(150)にした。十分な接触時間として、Fujiの45msecを適当に3倍、150 msecとした。開発中は20〜200msec、主に200msecを使ってきたので、長過ぎることはない。ただし、attachInterrrupt()のなかでは、delay関数が働きません。かわりに、delaymicroseconds()を使います。delaymicrosecondの設定最大値は約1600 microsecondsらしいので、1000に設定し、forを使って繰り返します。</span></p>
 
               
             </article>
