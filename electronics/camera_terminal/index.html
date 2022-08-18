@@ -900,7 +900,7 @@
 <br><br></li>
 <li><span style="color:#444C99;">フォトカプラ（Optocoupler, Toshiba TLP785, R220ohm, 5Vシグナル）を使うか、両方向対応のフォトリレー（Solid state relay, Toshiba TLP222A, R510ohm, 5Vシグナル）を使う。</span></li>
 <li><span style="color:#444C99;">フォトカプラ等は、使用前にロットチェックすること。６種のロットをチェックしたところ、１種で出力端子があやしく、Nikon D810が接続の方向（極性）を選ぶようになってしまった。抵抗が高い?のかもしれない。数年前に買い置きしていたものだったので、もしかしたら劣化かもしれない。</span></li>
-<li><span style="color:#444C99;">フォトカプラ（Optocoupler, Toshiba TLP785）の耐電圧は、Pin4 collector to Pin3 emitterの方向では80V、Pin3 collector to Pin4 emitterの方向では7Vである。カメラ端子には、カメラ本体から1.8V（Olympus）から3.3V（Canon）の電圧がかけられているため、どちらの方向に接続しても安全に作動するはずである。しかしながら、接続の方向は、Pin3 emitter = GND, Pin4 collector = Release (またはFocus Hold)がよさそうである。カメラの仕様違いや、フォトカプラのロット差の影響で、上記の方向でしか働かなくなる場合があるため。（現状のCoMBI-Univ基板は逆方向を使用しているので、次回の基板発注で変更しようかな）</span></li>
+<li><span style="color:#444C99;">フォトカプラ（Optocoupler, Toshiba TLP785）の耐電圧は、Pin4 collector to Pin3 emitterの方向では80V、Pin3 collector to Pin4 emitterの方向では7Vである。カメラ端子には、カメラ本体から1.8V（Olympus）から3.3V（Canon）の電圧がかかっているらしいため、どちらの方向に接続しても安全に作動するはずである。しかしながら、接続の方向は、Pin3 emitter = GND, Pin4 collector = Release (またはFocus Hold)がよさそうである。カメラの仕様違いや、フォトカプラのロット差の影響で、上記の方向でしか働かなくなる場合があるため。（現状のCoMBI-Univ基板は逆方向を使用しているので、次回の基板発注で変更しようかな）</span></li>
 <li><span style="color:#444C99;">フォトリレー（TLP222A）を使えば、方向を気にすることなく制作できる。カプラとリレーの違いは、反応の速さにあり、カプラは数µsec、リレーは数msecで回路を接続（スイッチング）する。値としては大きな差だが、実際のCoMBI撮影には影響がないと考えている。</span></li>
 </ul>
 <h2 id="code">Code</h2>
