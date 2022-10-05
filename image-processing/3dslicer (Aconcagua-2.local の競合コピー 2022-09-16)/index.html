@@ -1,0 +1,1515 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Manual of CoMBI">
+      
+      
+        <meta name="author" content="Tajika Y.">
+      
+      
+      <link rel="icon" href="../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+    
+    
+      
+        <title>3D slicer （Win, Mac, Linux） - Manual of CoMBI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.120efc48.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3d-slicer-win-mac-linux" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Manual of CoMBI" class="md-header__button md-logo" aria-label="Manual of CoMBI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manual of CoMBI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3D slicer （Win, Mac, Linux）
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Manual of CoMBI" class="md-nav__button md-logo" aria-label="Manual of CoMBI" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Manual of CoMBI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        Top page
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Installation/導入
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation/導入" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installation/導入
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devices/system/index.html" class="md-nav__link">
+        System Overview/概要
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devices/camera/index.html" class="md-nav__link">
+        Imaging devices/カメラなど
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devices/selfmade/index.html" class="md-nav__link">
+        Self-made devices/自作装置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devices/computer/index.html" class="md-nav__link">
+        Computer and storage/コンピュータとストレージ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devices/application/index.html" class="md-nav__link">
+        Applications/アプリケーション
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Instruction/操作
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Instruction/操作" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Instruction/操作
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/frozenblock/index.html" class="md-nav__link">
+        Frozen Block
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/paraffinblock/index.html" class="md-nav__link">
+        Paraffin Block
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/camerasettings/index.html" class="md-nav__link">
+        Camera Settings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/tethering/index.html" class="md-nav__link">
+        Tethering (optional)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/combi-u/index.html" class="md-nav__link">
+        CoMBI-U (Universal)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/combi-c/index.html" class="md-nav__link">
+        CoMBI-C (Cryostat)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/combi-s/index.html" class="md-nav__link">
+        CoMBI-S (Sliding, motorized)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/combi-s-m/index.html" class="md-nav__link">
+        CoMBI-S (Sliding, manual)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../operation/combi-r/index.html" class="md-nav__link">
+        CoMBI-R (Rotary, manual)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Image Processing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Image Processing" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Image Processing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/index.html" class="md-nav__link">
+        Overview/画像処理の概要
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rawjpeg/index.html" class="md-nav__link">
+        RAW to JPEG conversion/RAW現像
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scale/index.html" class="md-nav__link">
+        Resizing and Reducing/画像の縮小
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../registration/index.html" class="md-nav__link">
+        Image Registration/ズレ補正
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automation/index.html" class="md-nav__link">
+        Automation/自動処理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3dslicer/index.html" class="md-nav__link">
+        3D Reconstruction, 3D slicer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../icy/index.html" class="md-nav__link">
+        3D Reconstruction, Icy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../horos/index.html" class="md-nav__link">
+        3D Reconstruction, Horos/OsiriX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../correlation/index.html" class="md-nav__link">
+        Correlation of 2D and 3D images/3D像に切片位置を示す
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EDF/index.html" class="md-nav__link">
+        Extended Depth of Field/深度合成
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ilastik/index.html" class="md-nav__link">
+        Segmentation by ilastik/セグメンテーション
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gallery/gallery/index.html" class="md-nav__link">
+        Gallery/作品集
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publication/publication/index.html" class="md-nav__link">
+        Publications/論文
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Electronics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Electronics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Electronics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../electronics/ATmega328P/index.html" class="md-nav__link">
+        ATmega328P standalone/単体利用
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../electronics/terminal/index.html" class="md-nav__link">
+        Crimped terminal/圧着端子
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../electronics/vender/index.html" class="md-nav__link">
+        Venders/パーツの入手先
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../electronics/mkdocs/index.html" class="md-nav__link">
+        Mkdocs-material/HPづくり
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../electronics/camera_terminal/index.html" class="md-nav__link">
+        Camera terminal/カメラ端子
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#3d-slicer" class="md-nav__link">
+    3D slicerでやること
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    インストール
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dicom" class="md-nav__link">
+    DICOM編
+  </a>
+  
+    <nav class="md-nav" aria-label="DICOM編">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    起動、モジュール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicom_1" class="md-nav__link">
+    DICOMデータ読込
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brgy" class="md-nav__link">
+    画面表示　B、R、G、Y　青、赤、緑、黄
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    スライス閲覧
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    拡大縮小
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    移動
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ct" class="md-nav__link">
+    CT値の調節
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-view" class="md-nav__link">
+    青画面（3D View）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    スクリーンショット
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    閉じ方
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combijpeg" class="md-nav__link">
+    CoMBI、JPEG 編
+  </a>
+  
+    <nav class="md-nav" aria-label="CoMBI、JPEG 編">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    単位設定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jpeg" class="md-nav__link">
+    連続JPEG画像の準備
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    ファイル名一括変換、必要に応じて、縮小作業の前に
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load" class="md-nav__link">
+    連続画像の読み込み（Loadとよぶ）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    連続画像の設定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-rendering" class="md-nav__link">
+    Volume Rendering
+  </a>
+  
+    <nav class="md-nav" aria-label="Volume Rendering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    準備
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    色付け
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    固まったとき
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    なんだか重い
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sceneview" class="md-nav__link">
+    表示位置を保存する　モジュールSceneView
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    動画（簡易、おすすめ）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2016" class="md-nav__link">
+    動画（公式 2016年〜）
+  </a>
+  
+    <nav class="md-nav" aria-label="動画（公式 2016年〜）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#videompeg-setting-up-ffmpeg" class="md-nav__link">
+    Video(mpeg 書き出し)には、 事前設定 Setting up ffmpeg が必要
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    ステップ 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    ステップ２
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    動作が重いとき
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    保存
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    セグメンテーション
+  </a>
+  
+    <nav class="md-nav" aria-label="セグメンテーション">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    とりあえずはじめてみる
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    工夫しながらやってみる
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    体積の数値を読む
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    ヒント
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="3d-slicer-win-mac-linux">3D slicer （Win, Mac, Linux）</h1>
+<p>(This page is still in Japanease only.)</p>
+<h2 id="3d-slicer">3D slicerでやること</h2>
+<ol>
+<li>インストール</li>
+<li>DICOM編、アプリの操作に慣れる<ol>
+<li>DICOMデータ読込</li>
+<li>画面表示　B、R、G、Y　青、赤、緑、黄</li>
+<li>スライス閲覧</li>
+<li>拡大縮小</li>
+<li>移動</li>
+<li>CT値の調節</li>
+<li>青画面（3D View）</li>
+<li>スクリーンショット</li>
+</ol>
+</li>
+<li>CoMBI, JPEG編、本番です。<ol>
+<li>単位設定</li>
+<li>連続JPEG画像の準備</li>
+<li>ファイル名一括変換、必要に応じて</li>
+<li>連続画像の読み込み（Loadとよぶ）</li>
+<li>連続画像の設定</li>
+<li>Volume Rendering</li>
+<li>動画</li>
+<li>保存</li>
+<li>セグメンテーション、体積</li>
+</ol>
+</li>
+</ol>
+<p>3D slicer は、無料のオープンソースソフトウェアです。、米国ブリガム・アンド・ウィメンズ病院（ハーバード大学関連病院）が 2002年から開発しています。対応OSは、Windows、Mac、Linuxと幅広く、現在もアップデートや機能拡張（Extensions = plug-ins）が続けられています。<br>
+CoMBI 開発当初の2014年頃、JPEG連続画像が扱える3Dビューワを検討し、多機能で動作が軽い OsiriX を選択しました。しかし、OsiriX がのちに有料化したり、オープンソース版Horosは動画書き出しにちょっとバグあったり、OsiriX/HorosにはMac版しかなかったり、CoMBI普及の観点からはベストな状況ではありませんでした。かつては、OsiriXと3D slicerとの間に機能的な違いがありましたが、現在はどちらもできることは同じです。（かつては、動画描きだしが簡単にできるOrisiX、できない3D slicerでしたが、2016年の3D slicer v4.6以降は、動画書き出し機能が実装されています。）<br>
+3D slicer はノートパソコンでも安定して動作するのを確認しています(2018年製,i5-8250U 1.6-1.8GHz, RAM8GB、および、i5-7300U 2.6-2.7GHz, RAM8GB, 共に統合グラフィクス、Windows10)。アプリ本体の容量は、Horos 150MBに対して、3D slicerは1.2GBとなっていますので、ディスク残量だけは気になる状況があるかもしれません。<br>
+本書での3D slicer利用環境は、3D slicer v4.11 (2020.9.30), macOS 10.15.7 iMac 2017 (4.2GHz Quad-Core Intel Core i7, ,64GB 2400 MHz DDR4, Radeon Pro 580 8 GB). MacBookPro2018 (2.9GHz 6-Core Intel Core i9, 32 GB 2400 MHz DDR4, Radeon Pro Vega20 4GB) です。3D slicer 公式の推奨環境は、「メモリ最低4GB 推奨8GB〜、単体GPU推奨、データ量より大きいVRAM、CPUマルチスレッド推奨」となっています。
+公式Documentが3D slicerのホームページにあります。また解説動画もネットで多数見つかります。筆者は 3D slicer の練習中で、とくに「動画」「セグメンテーション」はあいまいさ、不完全さがのこります。くわしくはぜひ公式サイトへ<br>
+https://www.slicer.org/wiki/Main_Page</p>
+<hr />
+<h2 id="_1">インストール</h2>
+<p><a href=https://www.slicer.org/>https://www.slicer.org/</a></p>
+<p>ホームページから<code>Download Slicer</code>へ Win, Mac, Linux対応</p>
+<p>Macの場合、「開発元が確認できません」というメッセージがでます。macOSで対処することです。<code>System Preferences</code>&gt; <code>Security &amp; Privacy</code>&gt; <code>General</code>&gt; <code>Allow apps downloaded from:</code>で、インストールの許可してください。</p>
+<hr />
+<h2 id="dicom">DICOM編</h2>
+<p>アプリの基本操作に慣れる。サンプルDICOMデータで練習できる。</p>
+<h3 id="_2">起動、モジュール</h3>
+<p>初期は、<code>Module</code> <code>Welcome to Slicer</code>が表示される。<strong>モジュール</strong>とは、各種機能のこと。あとにつづく説明で頻繁に出てくる用語。
+<img alt="3D slicer open" src="../img/slicer01.png" title="open" />
+<em>起動とサンプルデータ</em></p>
+<h3 id="dicom_1">DICOMデータ読込</h3>
+<p>とりあえず、練習をはじめるなら、公式のサンプルDICOMデータを入手できる。<code>Download Sample Data</code>ボタン。<br>
+手持ちの DICOM データがある場合、Finder（Mac）から、フォルダごと、ドラッグ&amp;ドロップ （ウィンドウ内のどこでもよい）。<br>
+メッセージ Select a reader, とりあえず、<code>Load directly into DICOM database</code>で、<code>OK</code>。DICOMの場合で、パソコン内に患者一覧データベースを作る場合です。<br>
+<code>Module</code> <code>DICOM</code>に切り替わって、患者一覧になる。<br>
+患者名をダブルクリックすると、画像表示へ進める。</p>
+<h3 id="brgy">画面表示　B、R、G、Y　青、赤、緑、黄</h3>
+<p>デフォルトでは、4面表示（Four-up）である。<br>
+赤、緑、黄には、直交面MPR（Multiple Planer Reconstruction）が表示される<br>
+青には、Volume Rendering などを表示させられる（後述 Volume Rendering）。青画面のことを3D Viewとよぶ。<br>
+画面表示は変更でき、4画面から1画面などから選べる。上に並ぶ"アイコン"をつかうか、<code>Menu bar</code>の、<code>View</code>&gt;<code>Layout</code>&gt;<code>Four-up</code>から選ぶ。</p>
+<h3 id="_3">スライス閲覧</h3>
+<p>連続画像をパラパラとめくって観ることです。各画面の上端にある<code>scroll bar</code>や、<code>scroll wheel of your mouse</code>でめくれます。CTなどのDICOM画像の場合、一枚の画像をスライスと呼ぶことから、閲覧する行為にも、スライスという用語がでてきます。</p>
+<h3 id="_4">拡大縮小</h3>
+<p>赤、緑、黄画面の場合 <code>right bottun of your mouse</code>で、上下ドラッグする。または、各画面にある押しピン様のマーク<code>Pin-like mark</code>と その下の拡張マーク<code>Extension mark</code>に <code>Field of View</code>がある。元に戻すときは、各画面のY、R、Gの横に、中央配置ボタン<code>Centering button</code>というのがあります。迷子になったときに押すと便利です。</p>
+<h3 id="_5">移動</h3>
+<p>赤、緑、黄画面では、Windowsマウスの場合、<code>Pushing center wheel + drag</code>する。MacのMagicMouseの場合、<code>Shift+left button + drag</code>する。</p>
+<h3 id="ct">CT値の調節</h3>
+<p>明るさとコントラストの調整を行う。CT画像の場合、明るさを明るく/暗くすることを、Window level（L）を上げる/下げると表現する。コントラストを上げる/下げることをWindow width（W）を小さく/大きくすると、表現する。</p>
+<ul>
+<li>方法 1 アイコン<code>Adjust</code>で、画像上ドラッグ、上下左右で明るさとコントラストが変わる。<br></li>
+<li>方法 2 <code>Module</code> <code>Volumes</code>　なかほどのプルダウンメニューで、<code>Auto W/L</code>, <code>Manual W/L</code>, <code>Manual Min/Max</code>を選ぶ。その下に、<code>スクロールバー</code>。</li>
+</ul>
+<h3 id="3d-view">青画面（3D View）</h3>
+<p>青画面（3D View）は、3つの機能がある。</p>
+<ol>
+<li>
+<p>Volume Rendringの画像を表示</p>
+<ul>
+<li>モジュール<code>Volume Rendering</code>を選ぶ</li>
+<li>眼の印<code>Eye mark</code>（Volumeの左側）をON/OFFすると、青画面でのVolume Rendering像を表示/非表示</li>
+<li>青画面左上のボタン<code>Centering</code>で、中央に表示させる。迷子になったときに便利です</li>
+<li>ドラッグして、向きを変えられる。このとき、アイコン矢印のマーク<code>Select tool</code>にしておく </li>
+<li><code>scroll of your mouse</code>上下で拡大縮小</li>
+<li>▽<code>Display</code>, <code>Preset</code>で着色をえらぶ</li>
+<li>▽<code>Advanced</code>, <code>Volume Properties</code>で、 着色を調節できる。点を下げると透明感が出る</li>
+<li>▽<code>Display</code>,<code>Rendering</code> dGPUがあるパソコンならGPUを選ぶと動作がよくなる)</li>
+<li>▽<code>Display</code>, <code>Display ROI</code>, Volume Renderingする範囲を限定できる（見たい領域だけにする、作業が軽くなる）。画像中の点<code>dots in the image</code>を動かす、または、▽<code>Advanced</code>, <code>ROI</code>の<code>Scroll bar</code>を動かす</li>
+</ul>
+</li>
+<li>
+<p>スライスを青画面に表示（画像一枚を青画面に表示）</p>
+<ul>
+<li>赤画面の左上、押しピンマーク<code>Pin like mark</code>からでたメニューのうち、眼の印<code>Eye mark</code>で表示のON/OFF。緑、黄でも同様に。   </li>
+</ul>
+</li>
+<li>
+<p>セグメンテーションの結果を表示</p>
+<ul>
+<li>モジュール<code>Segmentation Editor</code>を選ぶ。ボタン<code>Show 3D</code>で表示/非表示を切り替えます。</li>
+</ul>
+</li>
+</ol>
+<h3 id="_6">スクリーンショット</h3>
+<ol>
+<li>アイコン、カメラマーク<code>Camera mark</code>を押すと、設定ウィンドウがでる。</li>
+<li>画面を選ぶ</li>
+<li><code>Save as...</code>　ファイル名と場所を指定する。形式はPNGのみ。</li>
+<li><code>OK</code></li>
+</ol>
+<h3 id="_7">閉じ方</h3>
+<ol>
+<li>アプリを閉じる場合、 <code>Slicer4.11</code>&gt; <code>Quit slicer</code>。またはショートカット、<code>command + Q</code>(Mac)</li>
+<li>データだけを閉じる場合、<code>File</code>&gt; <code>Close scene</code></li>
+</ol>
+<hr />
+<h2 id="combijpeg">CoMBI、JPEG 編</h2>
+<h3 id="_8">単位設定</h3>
+<p>CoMBIなら、μm表示をえらびたい。デフォルトはmm。<br>
+メニューバー<code>Menu bar</code>より、<code>Edit</code>&gt; <code>Application Settings</code>&gt; <code>Units</code>&gt; <code>Show advanced options</code>にチェックを入れる。▽<code>Length</code> において、<code>Preset</code>&gt; <code>Select a preset</code>より、<code>Micrometer</code>を選ぶ。<code>OK</code><br>
+一度、3D slicerを再起動させると、変更が反映される。メニューバー<code>Menu bar</code>&gt; <code>Slicer 4.11</code>&gt; <code>Quit Slicer</code></p>
+<h3 id="jpeg">連続JPEG画像の準備</h3>
+<p>CoMBIではJPEG形式で連続画像をつくる。3D slicerは、各種画像形式に対応しており、JPEGも直接扱える。ちなみに、PNG形式はダメなようだ。loadはできるが、Volume Renderingにかさねることができない。平面表示ではめくれているけれど、Volume Rendering上の表示は、一枚だけで不変。透明効果は反映されず、白になる。</p>
+<h3 id="_9">ファイル名一括変換、必要に応じて、縮小作業の前に</h3>
+<p>CoMBIの撮影が通常に成功した場合は、必要ありません。ファイル名が9999から0001に戻ったとか、特別な事情があるときに、ファイル名を一括で変換します。</p>
+<p>3D slicerの場合、完全な連番が必要です。連番のうしろに残しておいた元ファイル名が飛び飛びの場合、連続画像とは認識されません。完全な連番にしたとき、元データとの照合（実験の再現性確保）ができるように、メモを残してください。</p>
+<p>Horosの場合、頭に連番さえあればよい。</p>
+<table>
+<thead>
+<tr>
+<th>変換前</th>
+<th>よい例　</th>
+<th>3Dslicerではダメな例<br>ただしHorosではよい</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DSC_9997.jpg</td>
+<td>0001.jpg</td>
+<td>0001_DSC_9997.jpg</td>
+</tr>
+<tr>
+<td>DSC_9998.jpg</td>
+<td>0002.jpg</td>
+<td>0002_DSC_9998.jpg</td>
+</tr>
+<tr>
+<td>DSC_9999.jpg</td>
+<td>0003.jpg</td>
+<td>0003_DSC_9999.jpg</td>
+</tr>
+<tr>
+<td>DSC_0001.jpg</td>
+<td>0004.jpg</td>
+<td>0004_DSC_0001.jpg</td>
+</tr>
+<tr>
+<td>DSC_0002.jpg</td>
+<td>0005.jpg</td>
+<td>0005_DSC_0002.jpg</td>
+</tr>
+<tr>
+<td>DSC_0003.jpg</td>
+<td>0006.jpg</td>
+<td>0006_DSC_0003.jpg</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Windows OSで一括変換：<code>Explore</code>で、複数選択<code>Select multiple files</code>、名称変更<code>Rename</code>すると、「入力文字(1).jpg」と、カッコつき連番数字になる。元のファイル名は残らないので注意。</li>
+<li>Mac OSで一括変換：<code>Finder</code>で、複数選択<code>Select multiple files</code>、右クリック（副メニュー）<code>Right click, sub-menu</code>より、ファイル名を変更 <code>Rename</code>。完全変更や連番追記など、ある程度カスタマイズできる。プルダウンメニューの<code>Format</code>, 次のプルダウン、<code>Name and Counter</code>を使う。</li>
+<li>便利に一括変換：Adobe Bridge（有料アプリ）なら細かく設定ができる。</li>
+</ul>
+<h3 id="load">連続画像の読み込み（Loadとよぶ）</h3>
+<ul>
+<li>連続JPEG画像の読み込みには、フォルダごとドラッグする。または、最初の1枚をドラッグする。新しいウィンドウ<code>Select a reader</code>が出る。プルダウンメニューより、<code>Any data</code>を選び、<code>OK</code>。</li>
+<li>新しいウィンドウ<code>Add data into the scene</code>がでる。自動で連続画像を認識するはずだが、念の為、<code>Show options</code>にチェックをいれてオプション表示させ、<code>Single file</code>に<strong>チェックがないこと</strong>を確認する。</li>
+<li>連続画像の呼び名をきめられる。ウィンドウ<code>Add data into the scene</code>において、呼び名を入力する。もしくは、のちに<code>Module</code>, <code>Volumes</code>, <code>Active volume</code>のプルダウンメニュー、<code>Rename current volume</code>でも変更できる<blockquote>
+<p>3D slicerは、連続画像セットを、複数セット同時に扱える。医療画像における、PET-MRIの重ね合わせ（fusion）のような使い方である。CoMBIであれば、グレースケール連続画像から Volume Renderingを構築し、カラーの断面像 (MPR)を 3面重ねて表示させるといった使い方ができる。3D slicer内での呼び名を決めておき、区別したほうが作業しやすい。デフォルトは、先頭の画像ファイル名になる。これを自由な名称、例えば、Gray for 3Dや Color series などに変更する。<br></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="_10">連続画像の設定</h3>
+<ul>
+<li>ボクセルサイズ、XYZを手入力する。モジュール<code>Volumes</code>, ▽<code>Volume information</code>で、<code>Image Spacing</code>に、入力する。XYは画像のピクセルサイズ、Zは切削厚。</li>
+<li>階調数を指定する。モジュール<code>Volumes、Threshold</code>で、JPEGなら、0-255。Autoにすると、0-255になる。デフォルトはCT値っぽい、±1000になってしまう。ここで設定した階調数は、<code>Module</code> <code>Volume Rendering</code>に連動していて、そのときの色付け作業が容易になる。</li>
+</ul>
+<h3 id="volume-rendering">Volume Rendering</h3>
+<h4 id="_11">準備</h4>
+<p><img alt="segmetation" src="../img/3dslicer_VR.png" /></p>
+<p><em>眼のマークと中央寄せマークです</em></p>
+<ul>
+<li>モジュール<code>Volume Rendering</code></li>
+<li>眼のマーク<code>Eye mark</code>で表示をON/OFFする</li>
+<li>青画面左上、中央寄せマーク<code>Centering</code></li>
+<li>マウススクロール<code>Scroll your mouse</code>で拡大縮小</li>
+<li>マウス左ドラッグ<code>left drag</code>でつかんで回す</li>
+<li>複数の連続画像セットを読み込んでいる場合、<code>Volume</code>のプルダウンより、表示させたい連続画像セットを選択する。</li>
+<li>▽<code>Display</code>、<code>Rendering</code>プルダウンより、dGPUがあれば、GPUを選んだ方が動作が安定する</li>
+</ul>
+<h4 id="_12">色付け</h4>
+<p><img alt="segmetation" src="../img/3dslicer_color.png" /></p>
+<p><em>このようなのをつくっていく手順です</em></p>
+<p>▽<code>Advanced...</code>において</p>
+<ul>
+<li>
+<p>色の指定　<code>Scalar Color Mapping</code>。点をダブルクリック、または点をクリックして選択しておいて、<code>Point</code>の隣のボタンで、<code>色</code>を指定する。Point選択や色指定は、右上のプルダウンメニューからもできる。
+（今回は3色指定した。血管の明るいシグナルは赤、心筋を黄色、脂肪の暗いシグナルを青に。）</p>
+</li>
+<li>
+<p>次に透明度（各領域）を決める　<code>Scalar Opacity Mapping</code> 点をつかんで移動する。または、点をクリックして、<code>O</code>に数値入力。点は追加できる。ライン上でクリック。点を削除するときは、キーボードのdelete。</p>
+</li>
+<li>
+<p>最後に、全体的な透明度　<code>Gradient Opacity</code>、両端の2点は、クリックして、数値入力。ライン上をクリックすると、点を追加できる。 追加した点は、つかんで調節するか、数値を入力するか、どちらでもよい。</p>
+</li>
+<li>
+<p>面をVolume rendering像にかさねて表示することもできる。各画面の押しピンマーク<code>Pin like mark</code>から眼のマーク<code>Eye mark</code>で表示ON/OFF。</p>
+</li>
+</ul>
+<h4 id="_13">固まったとき</h4>
+<p>どきどき青画面3D viewだけ、固まることがある。カーソルでは3Dイメージをぐりぐりできなくなる。ビューワのメニュー（押しピンマーク<code>Pin like mark</code>）から、<code>Auto rotation, 自動回転ボタン</code>を選んで、動かしてみると、カーソルが復帰する場合がある。それでもだめなら、しばらく待つと直っている。</p>
+<h4 id="_14">なんだか重い</h4>
+<p>表示画質をさげてみます。モジュール<code>Volume Rendering</code>&gt; <code>Advanced</code>&gt; <code>Techniques</code>&gt; <code>Quality:</code>で、描出の質を3種から選べます。もっとも動作が軽快な<code>Normal</code>を選んでみる。デフォルトは<code>Adaptive</code>。<code>Maximum</code>はかなり重いようでほぼ固まります。3種どれでも画質はほとんで変わらず、Normalで十分きれいに描出するようです。</p>
+<h3 id="sceneview">表示位置を保存する　モジュール<code>SceneView</code></h3>
+<p>3D ビューワや2D ビューワでの表示位置を保存しておくと、いつでも戻ってこられる。ただし、色付けの調整などは保存されていない。</p>
+<ul>
+<li>モジュール<code>Scene Veiws</code> または、<code>カメラマークの右隣のマーク</code> </li>
+<li>新しいウィンドウ<code>3D Slicer SceneView</code>がでる。保存したい画面（R, G, Y, B）を指定できる。</li>
+<li><code>OK</code>。</li>
+<li>保存したSceneを読み込むときは、<code>カメラマークのふたつとなり</code></li>
+</ul>
+<h3 id="_15">動画（簡易、おすすめ）</h3>
+<p>macOS付属Screen Shot（Applications&gt; Utilities&gt; ScreenShot.app）で動画と静止画を保存できる。Windows10付属Game Bar（Windows button+G, Setting&gt; Game Bar&gt; ON）で録画、Windows付属Snipping Toolで静止画面を保存できる。メリットは、あらゆる動きが録画できることです。デメリットは、マウスやトラックパッドで3Dイメージを動すので、少々ぎこちなさが残ることです。単純な横回転なら、青画面のメニュー（押しピンマーク）にあり、スムースな動きを表現できます。上記のSceneViewを利用したり、あとで動画アプリ（iMovie, Adobe Premiereなど）で編集することも考えれば、けっこう自由に動画をつくれます。実際、素材として、動画や静止画を様々なパターン；色違いのVolume Rendering、断面表示のON/OFF、SegmentationのON/OFFなどで作っておき、あとでそれらを組み合わせ、動画制作しています。</p>
+<h3 id="2016">動画（公式 2016年〜）</h3>
+<p>2段階になっていて、ステップ1:モジュール <code>sequences</code>で操作の様子を記録し、ステップ2:モジュール<code>Utilities</code>&gt; <code>Screen Capture</code>で、記録したsequenceを呼び出して、動画ファイルに書き出す。事前設定が必要。</p>
+<h4 id="videompeg-setting-up-ffmpeg">Video(mpeg 書き出し)には、 事前設定 Setting up ffmpeg が必要</h4>
+<ul>
+<li>
+<p>未設定の場合、下記の手順を進めていくとステップ2で、▽<code>Advance</code>のところに<code>赤字のエラー</code>がでて、その横に<code>Help...リンク</code>ができる。クリックすると、<code>3D Slicerのサイト</code>に行く。</p>
+</li>
+<li>
+<p>記載に従い、Macならアプリ<code>Terminal</code>を使って、</p>
+<ol>
+<li><code>Homebrew</code>をインストール</li>
+<li>Homebrewのとき、<code>Xcode</code>インストールまたはアップデートも要求される。</li>
+<li>
+<p><code>ffmpeg</code>インストールを行う</p>
+<p>セットアップには時間がかかった、Xcodeアップデート30分、homebrew30分、ffmpeg15分、計75分（自宅wifi夜）、大学LANでも合計16分間かかった。</p>
+</li>
+</ol>
+</li>
+<li>
+<p><code>ffmpeg executable</code>の欄に、ffmpegのアドレスを入力する。<code>/usr/local/bin/ffmpeg</code></p>
+<blockquote>
+<p>ffmpegは、フレーム画像（連続 PNG）から動画に変換する機能。連続PNGをつくる段階には、ffmpegは関わらない。3D slicerの動画作成の挙動をみていると、いったんPNGの連続画像にしてから、動画変換をしている様子。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="1">ステップ 1</h4>
+<p>操作している様子を記録できる。画面、Red, green, yellow, camera（3Dの画面）のどれかを指定できる。</p>
+<ul>
+<li>モジュール<code>sequences</code></li>
+<li>▽<code>Browsing</code>, <code>Sequence browser</code>のプルダウンより、<code>Create new sequence browser as...</code>, 新しいウィンドウ<code>Rename sequence</code>で、名前を決めて入力。図ではdemoとした。</li>
+<li>▽ <code>Synchronized nodes</code> （こんかいは、3種類のウィンドウを記録する。1.赤で画像をめくる、2.黄で画像をめくる、3.青3D viewでVolume Rendering像を動かす」を記録する）</li>
+<li><code>緑の+ボタン</code>で <code>sequence</code>をつくる。（こんかいは、3回押して、3種のウィンドウを指定する）</li>
+<li><code>Proxy node</code>を設定、各<code>sequence</code>に、赤画面<code>Red</code>, 黄画面<code>Yellow</code>, 青画面<code>Camera</code>を設定。（プルダウンには Camera が複数あって、記録されるCameraと記録されないCameraがある、らしい。順に選んで試してみる）</li>
+<li>▽ <code>Browsing</code> <code>赤マルボタン</code>で記録開始する。停止も<code>赤マルボタン</code>。動かしている時間だけ記録される。静止している時間は記録されない、らしい。（記録中の様子 「1. 赤で画像をめくる、2.黄で画像をめくる、3.3D viewでVolume Rendering像を動かす」）</li>
+<li>▽ <code>Browsing</code> <code>緑三角ボタン</code>で再生、停止。</li>
+</ul>
+<h4 id="2">ステップ２</h4>
+<p>記録したものから、動画ファイルをつくる。</p>
+<ul>
+<li>モジュール<code>Utilities</code>, <code>Screen Capture</code></li>
+<li>
+<p>▽ Input<br>
+<code>Master View:</code><br>
+<code>View 1</code>が青画面3D viewのこと。もし青を複数表示させていれば、 View1, 2, 3.. となる。<br>
+<code>Animation mode:</code><br>
+<code>3D totation</code>は、単純な回転動画。<code>sequence</code>は、自作した <code>sequence</code>を呼び出して、動画にする。（今回は demo を動画にする）</p>
+</li>
+<li>
+<p>▽ <code>output</code><br>
+<code>Output type:</code><br>
+<code>Image series</code>は、PNG連続画像として書き出す (動画にするのは追加機能ffmpegが必要)<br>
+<code>Video</code>は、mpeg4を書き出す<br>
+<code>Number of images</code>, <code>Video length</code>, <code>Video framerate</code>を設定する。<br>
+保存場所<code>Output directory</code>、ファイル名<code>Output file name</code>を設定する。<br>
+<code>Captureボタン</code>で、書き出し開始。下の小窓に<code>Done</code>と表示されるまで待つ。 <br>
+Capture隣の<code>緑の右矢印ボタン</code>で、書き出した動画ファイルを開く<br></p>
+</li>
+</ul>
+<h4 id="_16">動作が重いとき</h4>
+<ul>
+<li>一般のビデオは、30frame/secondである。このデモでは4秒分、120枚のPNGを書き出した。もし、10秒動画300枚とすると、だいぶ時間がかかる。</li>
+<li>もし、青ウィンドウ、3D View を大きく表示していると、時間がかかる。</li>
+<li>連続PNGやビデオ変換かかる時間は、パソコンのスペックによるし、待てる時間はひとそれぞれなので、なんどかやってみる。</li>
+</ul>
+<h3 id="_17">保存</h3>
+<p>画像データも作業内容もひとつのファイルとして保存できる</p>
+<ul>
+<li>アイコン<code>SAVE</code> 全体ウィンドウの左上。新しいウィンドウ<code>Save Scene and Unsaved Data</code>がでてくる。</li>
+<li>ファイル形式は、mrb形式を推奨している。画像、着色、シーンなどの設定を一括して保存できる。プレゼント箱みたいなアイコン<code>Present box-like</code>で、mrbの指定をON/OFF。もし、mrbをOFFにした場合、画像や設定データを選択的に保存することになる。</li>
+<li>mrbファイルを開くときは、3D slicer のウィンドウへ、ドラッグする。保存したときの作業状態が再現される。</li>
+<li>外付けディスクを保存先に指定する場合、ファイル右横のマーク<code>...</code>から指定すること。下の横長ボタン<code>Change directory for selected files</code>では、外付けディスクを指定できない。</li>
+</ul>
+<h3 id="_18">セグメンテーション</h3>
+<p>（まえもってiLastikで二値化連続画像をつくる方法もあります、iLastikのページに書きました。<a href="../ilastik/index.html">こちらの「Segmentation by iLastik」です</a>。この場合、3D slicerに読み込み、<code>Segmentation</code>, <code>Threshold</code>を使います。また、Photoshopなどで二値化連続画像をつくる方法もあります、Horosのページに書きました。<a href="../horos/index.html#3">こちらの「色域指定」です</a>）</p>
+<h4 id="_19">とりあえずはじめてみる</h4>
+<p><code>Paint</code>と<code>Fill between slices</code>だけを使った手作業の手順を示す。セグメンテーションの情報は、mrbファイルに一括して保存される。他にも領域限局やシグナル強度の範囲指定など、さまざまなモードが備わっている（練習中）。くわしくは、公式ホームページのDocumentや動画解説へおねがいします。公式以外にもネットでいろいろ見つかります。
+作業には、タッチペンがあるとよい。私はMacBookProにiPad（SideCar）をつなげ、Apple Penで描いています。Windowsノートなら元々タッチパネルの場合もあるでしょう。WindowsマシンにiPadをつなげるアプリもあるようです。</p>
+<p><img alt="segmetation" src="../img/3dslicer_seg.png" /></p>
+<p><em>このようなのをつくっていく手順です</em></p>
+<ul>
+<li>モジュール<code>segmentation</code>, <code>segment editor</code></li>
+<li>ボタン<code>Add</code>で、新規セグメント<code>Segment_1</code>をつくる。名前は自由に。このときは大動脈を塗ることにした。</li>
+<li><code>Paint</code>で、大動脈を塗りつぶした。全画像で塗る必要はなく、10枚に1枚の画像で塗るとか、とびとびでよい。<code>Show 3D</code>ボタンを押しておくと、青画面（3D view）にリアルタイムで表示されていく。青画面には、Volume Renderingとセグメントと同時に表示できるが、動作が鈍くなる。塗りつぶし作業中はVolume renderingを表示しないでおき、ときどき確認のために表示させると良いでしょう。</li>
+<li><code>Draw</code>は、描いた線の内側をすべて塗りつぶすモードです。今回の輪状に塗りたいときは不向きです。使い方は、<code>Draw</code>+ <code>Return, Enter</code>です。Drawで線を描いたあとにリターンキーをおすと、その内部が塗りつぶされます。Drawのときは、円形でもいいですし、弧でもかまいません。PawerPointやIllustratorの、線と塗りつぶしの関係です。</li>
+<li><code>Erase</code>で塗りすぎたところは修正</li>
+<li><code>Fill between slices</code>で補完する</li>
+<li><code>Show 3D</code>で様子を見る。がたついていたら、<code>Paint</code>で修正をつづける。<code>Auto update</code>にチェックをいれて おくと、<code>Paint</code>の修正中に、<code>Fill between slices</code>の像に反映されていく。</li>
+<li><code>Apply</code>で完了</li>
+<li><code>Add</code>ボタンで、<code>Segment_2</code>もつくる。<code>Paint</code>で肺動脈もつくった。</li>
+<li><code>Segmentation</code>ボタンで、詳細設定、色や、透明度を変えられる。 (大動脈を赤、肺動脈を青に変えた)</li>
+<li><code>Edit selected</code>ボタンで、元にの塗るモードに戻る</li>
+<li>Volume Renderingとセグメントをかさねてみる。モジュール<code>Volume rendering</code>青画面へ表示ON。動作が鈍くなるので注意。</li>
+<li>モジュール<code>Segment Editor</code>にもどって、<code>Show 3D</code>でセグメントを青画面に表示または非表示する。</li>
+<li>アイコン<code>Camera-like mark</code>（Capture Screenshot）で、静止画に描き出した例</li>
+</ul>
+<h4 id="_20">工夫しながらやってみる</h4>
+<ul>
+<li>対象物によって、ツールを選びます。まず一度、セグメンテーションをおおざっぱにやってみて、使うツールや完成形の見通しをたてて、次に本番のセグメンテーションをやることが多いです。</li>
+<li>色や形がはっきりしていそうなら、<code>Level tracing</code>を使います。マウスポインターがある色と類似の色を島状に選択してくれます。<code>mouse over</code>+<code>Left click</code>。</li>
+<li>色が淡く、境界がぼんやりしている場合は、<code>Paint</code>, <code>Draw</code>, <code>Erase</code>を使います。</li>
+<li>塗る画像は等間隔（2, 5, 10枚ごと）のほうが、のちの修正がラク。画像めくりはキーボードの矢印キー。</li>
+<li>1面（赤画面）だけよりは、2面（緑か、黄）で塗ると仕上がりが良い。あいまいな境界を判定しやすい。3面でもよいが時間がかかる。</li>
+<li><code>Fill between slice</code>ではガタツキが残る。仕上げとして、<code>Smoothing</code>を使う。いろいろモード（median, gausianなど）があって、いまいち違いは分かりませんが、<code>Joint smoothing</code>を使っています。つくったSegmentすべてにSmooth処理をします。複数あれば、複数のSegmentに。一見、重そうですがこれが一番動作が軽いです。設定値はデフォルトの0.5をまずためしてください。</li>
+</ul>
+<h4 id="_21">体積の数値を読む</h4>
+<ul>
+<li>モジュール<code>segmentation</code>&gt;<code>Quantification</code>&gt;<code>Segment statistics</code>（練習中）</li>
+</ul>
+<h4 id="_22">ヒント</h4>
+<ul>
+<li>
+<p>作業が重い</p>
+<p>もし、Segmentationの数が10個〜20個と多いとき、動作が鈍くなっていきます。3D datasetは、カラーJPEGで500x500x500枚程度が限度のようでした（MacBookPro15, i9, 4GB-HBM2, 32GB)。もっとも、パソコンのスペックにもよるとは思います。高画質シリーズ（1000x1000x1000）を参考にしながら、縮小/減数シリーズ（500x500x500）でセグメンテーションするのがいいかもしれません。</p>
+</li>
+<li>
+<p>Segmentationの結果が粗い</p>
+<p>最初は、とびとびに塗っていき、まずは結果を見てみます。<code>Fill between slices</code>の結果に満足できなければ、塗る枚数を増やします。サンプルや塗りたい領域によってどのくらい丁寧に塗れば良いかはことなります。あとで<code>Smoothing</code>を使うとかなりなめらかになります。</p>
+</li>
+<li>
+<p>キーボードの矢印キーが効かない</p>
+<p>いちどズームイン・ズームアウトすると、効くようになることがあります。そのうちに効くようになることもあります。</p>
+</li>
+<li>
+<p>Drawが効かない</p>
+<p><code>Draw</code>で描いたあと<code>Retrun</code>を押しても反応しないときがあります。いちどズームイン・ズームアウトする。もしくは、ツールを矢印<code>None</code>に一旦切り替えてから、改めて<code>Draw</code>を選ぶと、効くようになることがあります。</p>
+</li>
+<li>
+<p>iPad, Side car, Apple penで表示位置が飛ぶ</p>
+<p>ズームイン・ズームアウト（ピンチイン・ピンチアウト）して、元の見たい位置に戻します。入力デバイスが多く（Apple Pen、マウス、トラックパッド、キーボード）どこかに触れてしまうとずれる時がありました。</p>
+</li>
+<li>
+<p>青画面に断面像を表示できない</p>
+<p>眼のマーク<code>Eye mark</code>でON,OFFしてもなにも起こらなかったり、真っ黒な画像が表示されたりすることがありました。いったん、モジュール<code>Data</code>で、連続画像を捨てて、改めて連続画像を読み込みます。<code>Data Load</code>または、<code>Drag &amp; Drop</code>。この症状が見られたのは、Volume renderingとSegmentationと断面を同時に表示をさせようとしたときでした。かなり重い作業です。</p>
+</li>
+<li>
+<p>単位設定を忘れてた！　</p>
+<p>単位をµmに変えるのを忘れ、mmのままでSegmentation作業を進めてから気づいたことがありました。そんなとき、あとでモジュール<code>Transform</code>で修正できます。例として、60x60x80mmではなく、60x60x40µmにしたいとき、行列表示に、0.06, 0.06, 0.08と斜めに入力します。</p>
+</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2021 Tajika Y, CC BY-NC
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      
+    
+  </body>
+</html>
