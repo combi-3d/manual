@@ -1037,8 +1037,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    ヒント
+  <a href="#tips_1" class="md-nav__link">
+    Tips/ヒント
   </a>
   
 </li>
@@ -1049,22 +1049,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    保存
+  <a href="#save-data" class="md-nav__link">
+    Save data/保存
   </a>
   
-    <nav class="md-nav" aria-label="保存">
+    <nav class="md-nav" aria-label="Save data/保存">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#save-everything-as-a-single-file" class="md-nav__link">
+    Save everything as a single file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-each-processed-data-into-individual-files" class="md-nav__link">
+    Save each processed data into individual files.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
     画像データも作業内容もひとつのファイルに保存する（公式サイトでは推奨）
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     作業内容を個別に保存する（なにかとメリットはある）
   </a>
   
@@ -1076,30 +1090,30 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    セグメンテーション
+  <a href="#segmentaion" class="md-nav__link">
+    Segmentaion/セグメンテーション
   </a>
   
-    <nav class="md-nav" aria-label="セグメンテーション">
+    <nav class="md-nav" aria-label="Segmentaion/セグメンテーション">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#3dslicersegmentation" class="md-nav__link">
-    3Dslicerだけで手作業でSegmentationする手順
+  <a href="#procedure-of-manual-segmentation-by-3dslicersegmentation" class="md-nav__link">
+    Procedure of manual segmentation by 3Dslicer/手作業でSegmentationする手順
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    体積の数値を読む
+  <a href="#obtaining-volume-values-of-segments" class="md-nav__link">
+    Obtaining volume values of segments/セグメントの体積を数値として取得する
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    工夫やヒント
+  <a href="#tips_2" class="md-nav__link">
+    Tips/工夫やヒント
   </a>
   
 </li>
@@ -1110,8 +1124,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3d" class="md-nav__link">
-    3Dプリンタ
+  <a href="#3d-printer3d-in-practicing" class="md-nav__link">
+    3D printer/3Dプリンタ (in practicing)
   </a>
   
 </li>
@@ -1472,7 +1486,10 @@ Windows OSやmacOSの組み込み機能で変換できる。Windowsの場合、
 <p><span style="color:#444C99;">
 <br>
 3D slicerで連続画像を開くことをLoadと呼ぶ。3D slicerは、複数の連続画像セット同時に扱える。医療画像における、PET-MRIの重ね合わせ（fusion）のような扱い方である。CoMBIの場合、グレースケール連続画像から Volume Renderingを構築し、カラーの断面像 (MPR)を 3面重ねて表示させるといった使い方ができる。3D slicer内での各セットの呼び名を決めておき、区別したほうが作業しやすい。デフォルトは、先頭の画像ファイル名になる。私は、Gray for 3Dや Color series などと呼び名を付けている。<br>
-連続JPEG画像の読み込みには、フォルダごとドラッグする。または、最初の1枚をドラッグする。新しいウィンドウ<code>Select a reader</code>が出る。プルダウンメニューより、<code>Any data</code>を選び、<code>OK</code>。新しいウィンドウ<code>Add data into the scene</code>がでる。ここで、自動で連続画像を認識するはずだが、念の為、<code>Show options</code>にチェックをいれてオプション表示させ、<code>Single file</code>に<strong>チェックがないこと</strong>を確認する。同じウィンドウで、連続画像の呼び名を付けられる。ウィンドウ<code>Add data into the scene</code>において、呼び名を入力する。名付けはあとで変更でき、<code>Module</code>, <code>Volumes</code>, <code>Active volume</code>のプルダウンメニュー、<code>Rename current volume</code>で変更する。
+1. 連続JPEG画像の読み込みには、フォルダごとドラッグする。または、最初の1枚をドラッグする。<br>
+2. 新しいウィンドウ<code>Select a reader</code>が出る。プルダウンメニューより、<code>Any data</code>を選び、<code>OK</code>。<br>
+3. 新しいウィンドウ<code>Add data into the scene</code>がでる。ここで、自動で連続画像を認識するはずだが、念の為、<code>Show options</code>にチェックをいれてオプション表示させ、<code>Single file</code>に<strong>チェックがないこと</strong>を確認する。<br>
+4. 同じウィンドウで、連続画像の呼び名を付けられる。ウィンドウ<code>Add data into the scene</code>において、呼び名を入力する。名付けはあとで変更でき、<code>Module</code>, <code>Volumes</code>, <code>Active volume</code>のプルダウンメニュー、<code>Rename current volume</code>で変更する。<br>
 </span></p>
 </li>
 </ol>
@@ -1483,7 +1500,9 @@ Windows OSやmacOSの組み込み機能で変換できる。Windowsの場合、
 <p>Gradation: Module &gt; <code>Volumes、Threshold</code>. Input 0-255 for JPEG or Auto. (Dafault is ±1000 which should be suitable for CT iamge.) Settings here are used in Module &gt; <code>Volume Rendering</code> automatically, and coloring process is optimized.</p>
 <p><span style="color:#444C99;">
 <br>
-設定するのは２種類で、ボクセルサイズと階調数。ボクセルサイズは、モジュール<code>Volumes</code>, ▽<code>Volume information</code>で、<code>Image Spacing</code>に、入力する。XYは画像のピクセルサイズ、Zは切削厚。階調数は、モジュール<code>Volumes、Threshold</code>で、JPEGなら、0-255。Autoにすると、0-255になる。デフォルトはCT値っぽい、±1000になってしまう。ここで設定した階調数は、<code>Module</code> <code>Volume Rendering</code>に連動していて、そのときの色付け作業が容易になる。
+設定するのは２種類で、ボクセルサイズと階調数。<br>
+1. ボクセルサイズは、モジュール<code>Volumes</code>, ▽<code>Volume information</code>で、<code>Image Spacing</code>に、入力する。XYは画像のピクセルサイズ、Zは切削厚。<br>
+2. 階調数は、モジュール<code>Volumes、Threshold</code>で、JPEGなら、0-255。Autoにすると、0-255になる。デフォルトはCT値っぽい、±1000になってしまう。ここで設定した階調数は、<code>Module</code> <code>Volume Rendering</code>に連動していて、そのときの色付け作業が容易になる。<br>
 </span></p>
 </li>
 </ol>
@@ -1543,7 +1562,10 @@ Windows OSやmacOSの組み込み機能で変換できる。Windowsの場合、
 <p><span style="color:#444C99;">
 <br>
 モジュール<code>SceneView</code>で表示位置を保存できる。3D viewやRGY windowでの表示位置を保存しておくと、いつでも戻ってこられる。ただし、戻ろうとRestoreすると、アプリが落ちる（2022.3, v4.11, macOS12.3, iMac2017）。また、色付けの調整などは保存されない。<br>
-モジュール<code>Scene Veiws</code> または、<code>カメラマークの右隣のマーク</code>より、新しいウィンドウ<code>3D Slicer SceneView</code>がでて、保存したい画面（R, G, Y, B）を指定できる。保存したSceneを読み込むときは、モジュール<code>Scene Veiws</code> または、<code>カメラマークのふたつとなり</code>で、Restore
+1. モジュール<code>Scene Veiws</code> または、<code>カメラマークの右隣のマーク</code>より。<br>
+2. 新しいウィンドウ<code>3D Slicer SceneView</code>がでる。<br>
+3. 保存したい画面（R, G, Y, B）を指定できる。<br>
+4. 保存したSceneを読み込むときは、モジュール<code>Scene Veiws</code> または、<code>カメラマークのふたつとなり</code>で、Restore<br>
 </span></p>
 </li>
 </ol>
@@ -1554,7 +1576,10 @@ Windows OSやmacOSの組み込み機能で変換できる。Windowsの場合、
 <li>
 <p>Windows10: Game Bar（Windows button+G, Setting&gt; Game Bar&gt; ON) for movie, Snipping Tool for still images. </p>
 <p><span style="color:#444C99;">
-<br>macOS付属Screen Shot（Applications&gt; Utilities&gt; ScreenShot.app）で動画と静止画を保存できる。Windows10付属Game Bar（Windows button+G, Setting&gt; Game Bar&gt; ON）で録画、Windows付属Snipping Toolで静止画面を保存できる。メリットは、あらゆる動きが録画できることです。デメリットは、マウスやトラックパッドで3Dイメージを動すので、少々ぎこちなさが残ること。また、コマ落ちする場合がある。
+<br>
+OS付属の機能を使用するメリットは、あらゆる動きが録画できること。デメリットは、マウスやトラックパッドで3Dイメージを動すので、少々ぎこちなさが残ること。また、コマ落ちする場合がある。<br>
+* macOS付属Screen Shot（Applications&gt; Utilities&gt; ScreenShot.app）で動画と静止画を保存できる。<br>
+* Windows10付属Game Bar（Windows button+G, Setting&gt; Game Bar&gt; ON）で録画、Windows付属Snipping Toolで静止画面を保存できる。<br>
 </span></p>
 </li>
 </ul>
@@ -1570,10 +1595,12 @@ Windows OSやmacOSの組み込み機能で変換できる。Windowsの場合、
 <p><img alt="Movie plan" src="../img/movie_plan.png" /></p>
 <p><span style="color:#444C99;">
 <br>
-動画書き出しを機能させるには、事前にffmpegのインストールが必要。 <br>
-単純な回転だけの動画や、単純なパラパラ動画なら、モジュール<code>Screen Capture</code>だけでできる。 複雑な動きを動画にする場合、作業は二段階あり、ステップ1で操作を記録し（モジュール <code>sequences</code>）、ステップ2で記録したsequenceを呼び出し、動画ファイルに書き出す（モジュール<code>Screen Capture</code>） <br>
-動画や静止画を様々なパターン（色違いのVolume Rendering、断面表示のON/OFF、SegmentationのON/OFFなど）で作っておき、それらを素材として動画編集アプリ（iMovie, Adobe Premiereなど）で編集することが多い。
-この手順書では、「Red 水平面をBlueに表示してめくる、Greenの縦断面をBlueに表示してめくる、VRをBlueに表示し回転」というシナリオで操作を記録し、動画に書き出す。3D slicerでは、操作の記録を<code>Sequence</code>、動画書き出しを<code>Screen Capture</code>と呼び、本手順書ではそれぞれを「ステップ1 操作を記録」、「ステップ2 動画を描き出す」として記す
+* 動画書き出しを機能させるには、事前にffmpegのインストールが必要。 <br>
+* 単純な回転だけの動画や、単純なパラパラ動画なら、モジュール<code>Screen Capture</code>だけでできる。 <br>
+* 複雑な動きを動画にする場合、作業は二段階あり、ステップ1で操作を記録し（モジュール <code>sequences</code>）、ステップ2で記録したsequenceを呼び出し、動画ファイルに書き出す（モジュール<code>Screen Capture</code>） <br>
+* 動画や静止画を様々なパターン（色違いのVolume Rendering、断面表示のON/OFF、SegmentationのON/OFFなど）で作っておき、それらを素材として動画編集アプリ（iMovie, Adobe Premiereなど）で編集することが多い。<br>
+* この手順書では、「Red 水平面をBlueに表示してめくる、Greenの縦断面をBlueに表示してめくる、VRをBlueに表示し回転」というシナリオで操作を記録し、動画に書き出す。<br>
+* 3D slicerでは、操作の記録を<code>Sequence</code>、動画書き出しを<code>Screen Capture</code>と呼び、本手順書ではそれぞれを「ステップ1 操作を記録」、「ステップ2 動画を描き出す」として記す<br>
 </span></p>
 </li>
 </ul>
@@ -1589,13 +1616,13 @@ Windows OSやmacOSの組み込み機能で変換できる。Windowsの場合、
 <li>In the 3D slicer, Module &gt; <code>Screen Capture</code> &gt; <code>ffmpeg executable</code>. Input path to ffmpeg as <code>/usr/local/bin/ffmpeg</code>.</li>
 </ol>
 </li>
-<li>
-<p>Apple silicon mac: </p>
-<ol>
+<li>Apple silicon mac: <ol>
 <li>In the Terminal.app, execute <code>brew info ffmpeg</code> to look for path to ffmpeg. In my case, <code>/opt/homebrew/Cellar/ffmpeg/5.0.1</code> was shown.</li>
 <li>In the 3D slicer.app, Module &gt; <code>Screen Capture</code> &gt; <code>ffmpeg executable</code>. Copy and paste the shown path. </li>
 <li>Click a mark <code>...</code>, to look for executable file...<code>/opt/homebrew/Cellar/ffmpeg/5.0.1/bin/ffmpeg</code>...Here is ! </li>
 <li>Click <code>Open</code> button to finish setting ffmpeg in the 3D slicer.</li>
+</ol>
+</li>
 </ol>
 <p><span style="color:#444C99;">
 <br>ffmpegは、フレーム画像（連続 PNG）から動画に変換する追加機能。3D slicerアプリは、いったんPNG連続画像を生成してから、動画へと変換する。ffmpegをインストールしないで動画書き出しをやろうとすると、下記の手順ステップ2、▽<code>Advance</code>で赤字エラー<code>Set Valid ffmpeg executable path!</code>が現れる。その横にリンク<code>Help...</code>ができる。かつては、それをクリックすると3D Slicerサイトの解説ページにいけたが、2022.3 v4.11 ではリンクが微妙に切れている。こちらの<a href=https://slicer.readthedocs.io/en/latest/user_guide/modules/screencapture.html#setting-up-ffmpeg>新しい解説ページ</a>に従ってインストールする。ここではMacの手順を転記する。Intel MacとM1 macでは、ffmpegへのパスが異なるので注意。インストールには時間がかかる。Xcodeアップデート30分、homebrew30分、ffmpeg15分、計75分（自宅wifi夜）、大学LANでも合計16分間かかった。
@@ -1614,8 +1641,6 @@ Windows OSやmacOSの組み込み機能で変換できる。Windowsの場合、
 <li><span style="color:#444C99;">3D slicer.appで、<code>ffmpeg executable</code>の欄に上記の表示されたアドレスをコピペ</span></li>
 <li><span style="color:#444C99;"><code>...</code>マークを押して別ウィンドウ。実行ファイルを探すと<code>/opt/homebrew/Cellar/ffmpeg/5.0.1/bin/ffmpeg</code>にあった！<code>Open</code>ボタンをおして指定する</span></li>
 <li><span style="color:#444C99;">これで動画書き出しができるようになります。</span></li>
-</ol>
-</li>
 </ol>
 </li>
 </ol>
@@ -1638,204 +1663,359 @@ Windows OSやmacOSの組み込み機能で変換できる。Windowsの場合、
 <li>
 <p>Tab <code>Browsing</code>. Replay sequence to check. Press button <code>Triangle in green</code> to replay, press again <code>Triangle in green</code> to stop.</p>
 <p><img alt="Brows and Sybchronized nodes" src="../img/sequences.png" /></p>
+</li>
+</ol>
 <p><span style="color:#444C99;">
 <br>操作している様子を記録できる。画面（Red, green, yellow, blue）を指定できる。ここでは「Red 水平面をBlueに表示してめくる、Greenの縦断面をBlueに表示してめくる、VRをBlueに表示し回転」というシナリオ（<code>Sequence browser</code>）を例として、操作を記録する</span></p>
 <ol>
 <li>
-<p>表示スタイルを選ぶ</p>
+<p><span style="color:#444C99;">表示スタイルを選ぶ</span></p>
 <ul>
-<li>本例では、赤画面、緑画面、青画面を使いたいので、4画面表示（Conventional, Conventional widescreen, Four Upなど）を選ぶ。ここで選ぶのは操作記録用の表示スタイルで、目的の操作がしやすければ何でも良い</li>
-<li>のちのステップ2、動画を書き出す際は、動画書き出しに適した表示スタイルに変更する（3D onlyなど）。</li>
+<li><span style="color:#444C99;">本例では、赤画面、緑画面、青画面を使いたいので、4画面表示（Conventional, Conventional widescreen, Four Upなど）を選ぶ。ここで選ぶのは操作記録用の表示スタイルで、目的の操作がしやすければ何でも良い</span></li>
+<li><span style="color:#444C99;">のちのステップ2、動画を書き出す際は、動画書き出しに適した表示スタイルに変更する（3D onlyなど）。</span></li>
 </ul>
 </li>
 <li>
-<p>モジュール<code>Sequences</code></p>
+<p><span style="color:#444C99;">モジュール<code>Sequences</code></span></p>
 </li>
-<li>タブ<code>Browse</code>, プルダウン<code>Sequence browser</code>より、<code>Create new sequence browser as...</code>, 新しいウィンドウ<code>Rename sequence</code>で、名前を決めて入力する（本例では、「2-planes-rotate」と名付けた）</li>
-<li>▽ <code>Synchronized nodes</code> （本例では、3種類のウィンドウ「赤画面で画像をめくる」「緑画面で画像をめくる」「青画面3D viewでVolume Rendering像を回転」を記録する）</li>
-<li>ボタン<code>Green PLUS</code>で <code>sequence</code>をつくる。（こんかいは、3回押して、上記3種のウィンドウを指定する）</li>
-<li><code>Proxy node</code>を設定、各<code>sequence</code>に、赤画面<code>Red</code>, 黄画面<code>Green</code>, 青画面<code>Camera</code>を設定。（プルダウンには Camera が複数あって、記録されるCameraと記録されないCameraがある、らしい。いちどやってみて、ダメなら順に選んで試す）</li>
-<li>▽ <code>Browsing</code>, ボタン<code>Red CIRCLE</code>で記録開始する。停止も<code>Red CIRCLE</code>。動かしている時間だけ記録される。静止している時間は記録されない、らしい。（「1. 赤で画像をめくる、2.黄で画像をめくる、3.3D viewでVolume Rendering像を動かす」）</li>
-<li>▽ <code>Browsing</code>, ボタン<code>Green TRIANGLE</code>で再生し、記録した操作を確認する。停止もボタン<code>Green TRIANGLE</code></span></li>
-</ol>
-</li>
+<li><span style="color:#444C99;">タブ<code>Browse</code>, プルダウン<code>Sequence browser</code>より、<code>Create new sequence browser as...</code>, 新しいウィンドウ<code>Rename sequence</code>で、名前を決めて入力する（本例では、「2-planes-rotate」と名付けた）</span></li>
+<li><span style="color:#444C99;">▽ <code>Synchronized nodes</code> （本例では、3種類のウィンドウ「赤画面で画像をめくる」「緑画面で画像をめくる」「青画面3D viewでVolume Rendering像を回転」を記録する）</span></li>
+<li><span style="color:#444C99;">ボタン<code>Green PLUS</code>で <code>sequence</code>をつくる。（こんかいは、3回押して、上記3種のウィンドウを指定する）</span></li>
+<li><span style="color:#444C99;"><code>Proxy node</code>を設定、各<code>sequence</code>に、赤画面<code>Red</code>, 黄画面<code>Green</code>, 青画面<code>Camera</code>を設定。（プルダウンには Camera が複数あって、記録されるCameraと記録されないCameraがある、らしい。いちどやってみて、ダメなら順に選んで試す）</span></li>
+<li><span style="color:#444C99;">▽ <code>Browsing</code>, ボタン<code>Red CIRCLE</code>で記録開始する。停止も<code>Red CIRCLE</code>。動かしている時間だけ記録される。静止している時間は記録されない、らしい。（「1. 赤で画像をめくる、2.黄で画像をめくる、3.3D viewでVolume Rendering像を動かす」）</span></li>
+<li><span style="color:#444C99;">▽ <code>Browsing</code>, ボタン<code>Green TRIANGLE</code>で再生し、記録した操作を確認する。停止もボタン<code>Green TRIANGLE</code></span></li>
 </ol>
 <h4 id="step-2-movie-export">Step 2: Movie export/動画を書き出す</h4>
-<p>記録した操作（ステップ1で作った<code>Sequence browser</code>）から、動画ファイル（mpeg4）を書き出す。ひとつの操作記録から、多様な動画を描き出せる。例えば、表示VRを切り替えたり、表示断面像の切り替えたり、それらの表示／非表示を選んだりできる。生成される動画の大きさと形は、表示させているウィンドウの大きさと形を反映したものになる。</p>
+<p>The operation recorded in <code>Sequence browser</code> in Step1 can be exported into movie file (mpeg4). Basing on one recorded operation, some kinds of movies can be generated by choosing display VR ON or OFF, and display planes ON or OFF. Movies to be generated have the same pixel size and shape as same as blue window displayed.</p>
 <ol>
-<li>モジュール<code>Utilities</code> &gt; <code>Screen Capture</code></li>
+<li>Module: <code>Utilities</code> &gt; <code>Screen Capture</code></li>
 <li>
-<p>▽ Inputの設定</p>
+<p>Setting up ▽ Input</p>
 <ul>
-<li><code>Master View:</code> 本例では、青画面3D viewを記録したいので<code>View 1</code>を選ぶ。もし複数の青画面を表示させているなら、View1, 2, 3...から適切な青画面を選ぶ</li>
-<li><code>Animation mode:</code> ステップ1で記録した <code>sequence</code>を呼び出して動画にする場合は、<code>sequence</code>を選ぶ（本例ではこちら）。<code>3D rotation</code>の場合、単純な回転動画が生成され、記録した<code>sequence</code>を必要としない。</li>
-<li><code>Sequence:</code> ステップ1で記録した <code>sequence</code> を指定する。本例では「2-planes-rotate」を指定した。</li>
-<li><code>Start index:</code>, <code>Stop index:</code> 記録したsequenceのどこを利用するか指定できる。本例では最初の19フレームを不採用にして、Startは20からとした。Stopは変更せず、1170のまま、最後まで採用した。 </li>
+<li><code>Master View:</code> In this example, select <code>View 1</code> for exporting blue window. If you display multiple blue windows, select adequete View from View1, 2, 3...</li>
+<li><code>Animation mode:</code> Select <code>sequence</code> (for this example), to create a movie from a sequence recorded in step 1.  If you select <code>3D rotation</code>, a simple roteting movie will be created without using the recorded <code>sequence</code>.</li>
+<li><code>Sequence:</code> Specify the <code>sequence</code> recorded in step 1. In this example, "2-planes-rotate" is specified.</li>
+<li><code>Start index:</code>, <code>Stop index:</code> It is possible to specify where in the recorded sequence to be used. In this example, the first 19 frames are not used and Start is set to 20. Stop was not changed and remained at 1170, which was adopted until the end of the sequence. </li>
 </ul>
 </li>
 <li>
-<p>▽ Outputの設定</p>
+<p>Settin up ▽ Output</p>
 <ul>
-<li><code>Output type:</code>　動画書き出しの場合<code>Video</code>を選択する。PNG連続画像を生成した後、動画mpeg4に変換してくれる。<code>Image series</code>の場合、PNG連続画像を生成する</li>
-<li><code>Number of images</code>, <code>Video length</code>, <code>Video frame rate</code>を設定する。本例では300flames, 10sec, 30flames/secとした。（設定に関するヒントは下記参照）</li>
-<li><code>Output directory :</code>, <code>Output file name :</code> 保存場所とファイル名を設定する</li>
-<li>ボタン<code>Capture</code>で、書き出しを開始する。下の小窓にステータスが表示され、完了すると<code>Done</code>と表示される。時間がかかる</li>
-<li>（ボタン<code>ARROW</code>（Capture隣）は、書き出した動画ファイルへのショートカット）</li>
+<li><code>Output type:</code>　Select <code>Video</code> for creating movie file. Once PNG files are created, converted into mpeg4 automatically, and original PNGs are discarded. In case of <code>Image series</code>, serial PNGs are created and saved.</li>
+<li><code>Number of images</code>, <code>Video length</code>, <code>Video frame rate</code>: In this example, set as 300 flames, 10 sec, 30 flames/sec.</li>
+<li><code>Output directory</code> and <code>Output file name</code> : Set up directory and file name to be saved.</li>
 </ul>
 <p><img alt="Screen Capture" src="../img/screen_capture.png" /></p>
 </li>
 <li>
-<p>表示スタイルを選ぶ</p>
+<p>Change display mode desirable for movie export</p>
 <ul>
-<li>書き出される動画の大きさと形状は、表示されている状態を反映する。本例では青画面だけを書き出したいので、表示スタイルは、「3D only」にして、大きさと縦横比を好みに合わせる。このときの表示状態をScene Viewに保存しておくと便利だが、Restore時にアプリが落ちることがある</li>
+<li>The size and shape of the exported video will reflect the state of the displayed blue window. In this example, I want to export only the blue window, so I set the display mode to "3D only" and adjust the size and aspect ratio as desired. It should be convenient to save the display state at this time in Scene View, but the application may crash when Restore is performed.</li>
 </ul>
 </li>
 <li>
-<p>表示させたいものを選ぶ</p>
+<p>Select items to be deisplayed and exported.</p>
 <ul>
-<li>赤画面、緑画面などで表示させる連続画像（カラー、グレーなど）を選べる。2021: 各画面の<code>押しピンマーク</code>、<code>眼マークの隣のプルダウン</code>、<code>眼マーク</code>で設定する（これは効かない!）。2022.8: ステップ1の、モジュール<code>Sequence</code>、<code>Proxy node</code>でRedやYellowを設定したところ、右側の再生チェックを外す。</li>
-<li>Volume Renderingを選んだり、表示／非表示を選べる。モジュール<code>Volume Rendering</code>にて、<code>Volume:</code>, <code>眼マーク</code>で設定する。選び終えたら、モジュール<code>Screen Capture</code>に戻る</li>
-<li>セグメンテーションがあれば、モジュール<code>Segmentations</code>にて、各セグメントの表示／非表示を選べる。選び終えたら、モジュール<code>Screen Capture</code>に戻る</li>
+<li>In the Red and Green windows, select a set of serial images (color or grayscale). </li>
+<li>Go to Module <code>Sequence</code> &gt; <code>Proxy node</code>. Check or uncheck <code>Play</code> for display ON or OFF (2022.8 v5.0). Note that <code>Pin-mark</code>, <code>Pull-down next to eye-mark</code>, and <code>Eye-mark</code> do not work for the purpose of exporting movie (2021 v4.11).</li>
+<li>Go to Module <code>Volume Rendering</code> &gt; <code>Volume:</code> &gt; <code>Eye-mark</code>. Select volume rendered image and ON or OFF display.</li>
+<li>(If you display segments, go to Module <code>Segmentations</code> and select ON/OFF.)</li>
+<li>Go back to Module <code>Screen Capture</code>.</li>
 </ul>
 </li>
 <li>
-<p>書き出し</p>
+<p>Export</p>
 <ul>
-<li>（モジュール<code>Screen Capture</code>に戻って）</li>
-<li>▽ Outputの、ボタン<code>Capture</code>で、書き出しを開始する。下の小窓にステータスが表示され、完了すると<code>Done</code>と表示される。時間がかかる</li>
-<li>（ボタン<code>ARROW</code>（Capture隣）は、書き出した動画ファイルへのショートカット）</li>
+<li>Module <code>Screen Capture</code>.</li>
+<li>Button <code>Capture</code>: Start creating movie. Status is indicated in the small window, and shows <code>Done</code> when finisied. It may take a long time, depending on PC specs.</li>
+<li>(Button <code>ARROW</code> (next to Capture)  is a shortcut to movie fifle created.)</li>
 </ul>
 </li>
 </ol>
-<h4 id="_1">ヒント</h4>
-<ul>
-<li>一般のビデオは、30 frame/secondである。5秒動画ならPNG150枚や、10秒動画ならPNG300枚が生成され、動画に変換される。300枚ともなると、だいぶ時間がかかる。PNG生成ではGPUとシングルコアが働き、連続PNGからの動画変換でマルチコアが働く。かかる時間は、パソコンのスペックによるし、待てる時間はひとそれぞれ。まずは100枚以下で様子を見てから、設定を調整し、何度かためしてみる</li>
-<li>キャプチャしたい（動画にしたい）ウィンドウを大きく表示していると、時間がかかる</li>
-<li>Volume Renderingも、Segmentsも両方表示していると、時間が掛かる</li>
-<li>動画開始位置をSceenViewを記録・登録しておくと安心。いろんな表示条件（VRのON/OFF, SegmentのON/OFFなど）で多様な動画を書き出したいとき、万が一、スタート位置をずらしてしまっても、戻って来られる</li>
-</ul>
-<h3 id="_2">保存</h3>
-<p>2通りある。画像データや作業内容を、まとめてひとつのファイルとして保存する方法と、個別にする方法がある</p>
-<h4 id="_3">画像データも作業内容もひとつのファイルに保存する（公式サイトでは推奨）</h4>
-<p>拡張子はmdb。画像、着色、シーンなどの設定を一括して保存できる</p>
+<p><span style="color:#444C99;">
+<br>
+記録した操作（ステップ1で作った<code>Sequence browser</code>）から、動画ファイル（mpeg4）を書き出す。ひとつの操作記録から、多様な動画を描き出せる。例えば、表示VRを切り替えたり、表示断面像の切り替えたり、それらの表示／非表示を選んだりできる。生成される動画の大きさと形は、表示させているウィンドウの大きさと形を反映したものになる。</span></p>
 <ol>
-<li>アイコン<code>SAVE</code> ウィンドウの左上。新しいウィンドウ<code>Save Scene and Unsaved Data</code>がでてくる。</li>
-<li>プレゼント箱みたいなアイコン<code>Present box-like</code>をONにして、mrbを指定</li>
-<li>保存先を指定する。外付けディスクを指定する場合だけ注意：ファイル右横のマーク<code>...</code>から指定すること。下のボタン<code>Change directory for selected files</code>では指定できない。</li>
-<li>開くときは、mrbファイルを3D slicer のウィンドウへ、ドラッグ&amp;ドロップする。保存したときの作業状態が再現される。</li>
-</ol>
-<h4 id="_4">作業内容を個別に保存する（なにかとメリットはある）</h4>
-<p>生成されるファイルのうち、.mrml（シーン設定）、.png（シーン、アイコンの代わり）、.nrrd（連続画像）は、必須のファイル。もし、作業していれば、.seg.nrrd（セグメントをまとめたファイル）や、.h5（Transformのファイル）など追加で生成される。シーンとは、作業していたウィンドウの状況.mrmlと、見た目.pngのことである。見た目のpngのおかげで、次に開くときに作業内容を思い出しやすい。個別ファイルが使いやすい場面として、複数サンプルに同一処理、たとえば、Volume Renderingで、複数サンプルに同じ着色をしたいときや、セグメンテーションは軽い連続画像でやっておいて、できあがったらセグメンテーションだけを重い連続画像と合わせたいときが考えられる。また、上書き保存が速いというメリットもある。</p>
-<ol>
-<li>アイコン<code>SAVE</code> ウィンドウの左上。新しいウィンドウ<code>Save Scene and Unsaved Data</code>がでてくる。</li>
-<li>mrbをOFF。<code>プレゼント箱ボタン</code></li>
-<li>保存先はデフォルトなら、.mrml, .png, /Data。連続画像と作業ファイルは「Data」フォルダに保存される。変更してもよいが、階層構造をのちのち保つこと。変更する場合は、マーク<code>...</code>で個別に、下のボタン<code>Change directory for selected files</code>で一括して行う</li>
-<li>開くときは、.mrmlファイルのみを3D slicerのウィンドウにドラッグドロップする。ほかはリンクされていて、自動で一括して開かれる。ただし、保存時の階層構造を保っておく必要がある。</li>
-<li>上書き保存では、ボタン<code>SAVE</code>をおすと、別ウィンドウがでて、左のボタン<code>Select Scene &amp; Modidied Data Only</code>にチェックが入っている。これで、.mrml（シーン設定）、.png（シーン、アイコンの代わり）と、更新したファイルのみが保存される。となりの<code>Modidied Data Only</code>にすると、シーンが更新されない。</li>
-<li>ヒント：Segmentのファイル名は、[Active segmentation].seg.nrrdになっている。モジュールSegmentationsでCreate New Segmentationsでつくった名称＝複数のセグメントをまとめているところの名称。</li>
-</ol>
-<h3 id="_5">セグメンテーション</h3>
-<ul>
-<li>3Dslicerだけで手作業でSegmentationする手順を下に示します。使用するツールは、<code>Paint</code>と<code>Fill between slices</code>と<code>Smooth</code>だけにしてシンプルです。他に領域限局やシグナル強度の範囲指定など、さまざまなツールが備わっていますが、CoMBIのフルカラー画像なら、基本の<code>Paint</code>と<code>Draw</code>が役立つでしょう</li>
-<li>抽出したい対象物によっては、3D slicerだけでは不便な場合もあるでしょう。iLastikは、機械学習でSegmentationして、二値化やグレースケール連続画像をつくってくれます。こちらのページ<a href="../ilastik/index.html">「Segmentation by iLastik」</a>に記しました。また、Photoshopは、「色域指定」で二値化連続画像をつくれます。こちら<a href="../horos/index.html#3">Horosのページの中の「色域指定」</a>に記しました。iLastikやPhotoshopでつくった二値化やグレースケール連続画像は、3D slicerで<code>Volume Rendering</code>したり、<code>Segmentation</code>, <code>Threshold</code>を施したりします。</li>
-<li>推奨の作業環境は、タッチペンです。私はMacBookPro15 2018またはMacBookPro16 2021にiPad Pro 2018 A12X（SideCar）をつなげ、Apple Penで描いています。SideCarでの接続は、無線より有線のほうが安定します。Windowsノートなら元々タッチパネルになっている商品があって便利そうです。WindowsマシンにiPadをつなげるアプリもいくつかあるようですが、私は試していません</li>
-<li>Segmentaionのデータは、mrbファイルなら一括して保存されます。Segmentaionデータだけの独立ファイルとして保存することも選べます。その場合、別のmrbに移入させられます。Segmentation作業は必要最低限のデータセットで軽快に行い、本番用の重いデータセット（RGB, grayscale, ilastik, WT-Hetero-Knockoutなど）に移入させるといった使い方ができます</li>
+<li><span style="color:#444C99;">モジュール<code>Utilities</code> &gt; <code>Screen Capture</code></span></li>
 <li>
-<p>本手順書は、はじめトリハツをつかった例で執筆しました。のちに<code>Fill between slices</code>と<code>Smooth</code>のところを追記し、マウスE12中腸が登場します。ややこしいですが基本的に下図のトリハツ大血管をセグメンテーションする手順です</p>
+<p><span style="color:#444C99;">▽ Inputの設定</span></p>
+<ul>
+<li><span style="color:#444C99;"><code>Master View:</code> 本例では、青画面3D viewを記録したいので<code>View 1</code>を選ぶ。もし複数の青画面を表示させているなら、View1, 2, 3...から適切な青画面を選ぶ</span></li>
+<li><span style="color:#444C99;"><code>Animation mode:</code> ステップ1で記録した <code>sequence</code>を呼び出して動画にする場合は、<code>sequence</code>を選ぶ（本例ではこちら）。<code>3D rotation</code>の場合、単純な回転動画が生成され、記録した<code>sequence</code>を必要としない。</span></li>
+<li><span style="color:#444C99;"><code>Sequence:</code> ステップ1で記録した <code>sequence</code> を指定する。本例では「2-planes-rotate」を指定した。</span></li>
+<li><span style="color:#444C99;"><code>Start index:</code>, <code>Stop index:</code> 記録したsequenceのどこを利用するか指定できる。本例では最初の19フレームを不採用にして、Startは20からとした。Stopは変更せず、1170のまま、最後まで採用した。 </span></li>
+</ul>
+</li>
+<li>
+<p><span style="color:#444C99;">▽ Outputの設定</span></p>
+<ul>
+<li><span style="color:#444C99;"><code>Output type:</code>　動画書き出しの場合<code>Video</code>を選択する。PNG連続画像を生成した後、動画mpeg4に変換してくれる。<code>Image series</code>の場合、PNG連続画像を生成する</span></li>
+<li><span style="color:#444C99;"><code>Number of images</code>, <code>Video length</code>, <code>Video frame rate</code>を設定する。本例では300flames, 10sec, 30flames/secとした。（設定に関するヒントは下記参照）</span></li>
+<li><span style="color:#444C99;"><code>Output directory :</code>, <code>Output file name :</code> 保存場所とファイル名を設定する</span></li>
+</ul>
+</li>
+<li>
+<p><span style="color:#444C99;">表示スタイルを選ぶ</span></p>
+<ul>
+<li><span style="color:#444C99;">書き出される動画の大きさと形状は、表示されている状態を反映する。本例では青画面だけを書き出したいので、表示スタイルは、「3D only」にして、大きさと縦横比を好みに合わせる。このときの表示状態をScene Viewに保存しておくと便利だが、Restore時にアプリが落ちることがある</span></li>
+</ul>
+</li>
+<li>
+<p><span style="color:#444C99;">表示させたいものを選ぶ</span></p>
+<ul>
+<li><span style="color:#444C99;">赤画面、緑画面などで表示させる連続画像（カラー、グレーなど）を選べる。2021: 各画面の<code>押しピンマーク</code>、<code>眼マークの隣のプルダウン</code>、<code>眼マーク</code>で設定する（これは効かない!）。2022.8: ステップ1の、モジュール<code>Sequence</code>、<code>Proxy node</code>でRedやYellowを設定したところ、右側の再生チェックを外す。</span></li>
+<li><span style="color:#444C99;">Volume Renderingを選んだり、表示／非表示を選べる。モジュール<code>Volume Rendering</code>にて、<code>Volume:</code>, <code>眼マーク</code>で設定する。選び終えたら、モジュール<code>Screen Capture</code>に戻る</span></li>
+<li><span style="color:#444C99;">セグメンテーションがあれば、モジュール<code>Segmentations</code>にて、各セグメントの表示／非表示を選べる。選び終えたら、モジュール<code>Screen Capture</code>に戻る</span></li>
+</ul>
+</li>
+<li>
+<p><span style="color:#444C99;">書き出し</span></p>
+<ul>
+<li><span style="color:#444C99;">（モジュール<code>Screen Capture</code>に戻って）</span></li>
+<li><span style="color:#444C99;">▽ Outputの、ボタン<code>Capture</code>で、書き出しを開始する。下の小窓にステータスが表示され、完了すると<code>Done</code>と表示される。時間がかかる</span></li>
+<li><span style="color:#444C99;">（ボタン<code>ARROW</code>（Capture隣）は、書き出した動画ファイルへのショートカット）</span></li>
+</ul>
+</li>
+</ol>
+<h4 id="tips_1">Tips/ヒント</h4>
+<ul>
+<li>
+<p>Generally, video has 30 frames/second. 150 PNGs are generated for a 5-second video, or 300 PNGs for a 10-second video, and converted to video. 300 PNGs takes a long time. GPU and single-core work for PNG generation, multi-core for video conversion from serial PNGs. The time required depends on the specs of your computer, and the time you can wait varies from person to person. First, try less than 100 images, then adjust the settings and try again and again.</p>
+<p><span style="color:#444C99;">一般のビデオは、30 frame/secondである。5秒動画ならPNG150枚や、10秒動画ならPNG300枚が生成され、動画に変換される。300枚ともなると、だいぶ時間がかかる。PNG生成ではGPUとシングルコアが働き、連続PNGからの動画変換でマルチコアが働く。かかる時間は、パソコンのスペックによるし、待てる時間はひとそれぞれ。まずは100枚以下で様子を見てから、設定を調整し、何度かためしてみる</span></p>
+</li>
+<li>
+<p>It takes time if the window you want to capture (make into a movie) is displayed in a large size.</p>
+<p><span style="color:#444C99;">キャプチャしたい（動画にしたい）ウィンドウを大きく表示していると、時間がかかる</span></p>
+</li>
+<li>
+<p>It takes time when both Volume Rendering and Segments are displayed.</p>
+<p><span style="color:#444C99;">Volume Renderingも、Segmentsも両方表示していると、時間が掛かる</span></p>
+</li>
+<li>
+<p>It should be useful to record positions in the SceenView. However, Restore is unstable.</p>
+<p><span style="color:#444C99;">位置をScreenViewに保存しておくと便利なはずだけど、Restoreするとアプリがクラッシュする。まだ不安定なようで残念（2022）。</span></p>
+</li>
+</ul>
+<h3 id="save-data">Save data/保存</h3>
+<p>There are 2 ways to save. One can save images and processed data into a single file, and anothor saves as multiple files. </p>
+<h4 id="save-everything-as-a-single-file">Save everything as a single file</h4>
+<p>A single file with extention .mdb contains serial images, segmentation, scene, etc. This file format is recommended in the official site.</p>
+<ol>
+<li>Icon <code>SAVE</code>: New window <code>Save Scene and Unsaved Data</code> appears.</li>
+<li>Press icon <code>Present box-like</code> to be active to select mrb file format.</li>
+<li>Select directory. Note: External disc can be selected from a mark <code>...</code> (right of the file). The button <code>Change directory for selected files</code> doesn't work (Maybe a bug, v4.11).</li>
+<li>To opne mrb file, drag and drop the mrb file into 3D slicer window. The working status at the time of saving is restored.</li>
+</ol>
+<h4 id="save-each-processed-data-into-individual-files">Save each processed data into individual files.</h4>
+<p>There are some advantages, and I would personally recommend this format, though it requires some practice. Among the files generated, .mrml (scene settings), .png (scene, icon substitute), and .nrrd (serial image) are essential. If the image is being processed, additional files will be generated, such as .seg.nrrd (a file of segments) and .h5 (Transform data). The "scene" is the status of the window you were working on (.mrml) and the appearance (.png). The appearance png image helps to remember what I was doing last time. The situations where individual files are useful is as follows; when you want to apply the same processing to multiple datasets, for example, when you want to apply the same coloring to multiple samples in volume rendering, or when you want to do the segmentation in a rough serial images and migrate the segments into the fine serial images. Another advantage is that overwrite saving is faster.</p>
+<ol>
+<li>Icon <code>SAVE</code>: New window <code>Save Scene and Unsaved Data</code> appears.</li>
+<li>Press icon <code>Present box-like</code> to be inactive.</li>
+<li>Select directory. Files with .mrml, .png are saved in /Data. Serial images and processing data is saved in a folder "Data". When you change directory from default, keep directory structure. A mark <code>...</code> can change directories for each files. A button <code>Change directory for selected files</code> can change directory for all files at once.</li>
+<li>To open all files, drag and drop only a .mrml file into 3D slicer window. Other processing data are automatically linked and open at the same time. Note that keep directory structure needs to be maintained.</li>
+<li>To save modified data only, use button <code>SAVE</code>. In the appeared window, check left button <code>Select Scene &amp; Modidied Data Only</code>. Then, .mrml(Scene settings), .png (Scene), and modified files are saved. Adjacent <code>Modidied Data Only</code> can save only modified data but not mrml.</li>
+<li>Tip: File name of segments are [Active segmentation].seg.nrrd. Active segmentation was made at Module: <code>Segmentations</code> &gt; <code>Create New Segmentations</code> to group multiple segments.</li>
+</ol>
+<p><span style="color:#444C99;">
+<br>
+2通りある。画像データや作業内容を、まとめてひとつのファイルとして保存する方法と、個別にする方法がある</span></p>
+<h4 id="_1">画像データも作業内容もひとつのファイルに保存する（公式サイトでは推奨）</h4>
+<p><span style="color:#444C99;">拡張子はmdb。画像、着色、シーンなどの設定を一括して保存できる</p>
+<ol>
+<li><span style="color:#444C99;">アイコン<code>SAVE</code> ウィンドウの左上。新しいウィンドウ<code>Save Scene and Unsaved Data</code>がでてくる。</span></li>
+<li><span style="color:#444C99;">プレゼント箱みたいなアイコン<code>Present box-like</code>をONにして、mrbを指定</span></li>
+<li><span style="color:#444C99;">保存先を指定する。外付けディスクを指定する場合だけ注意：ファイル右横のマーク<code>...</code>から指定すること。下のボタン<code>Change directory for selected files</code>では指定できない。</span></li>
+<li><span style="color:#444C99;">開くときは、mrbファイルを3D slicer のウィンドウへ、ドラッグ&amp;ドロップする。保存したときの作業状態が再現される。</span></li>
+</ol>
+<h4 id="_2">作業内容を個別に保存する（なにかとメリットはある）</h4>
+<p><span style="color:#444C99;">生成されるファイルのうち、.mrml（シーン設定）、.png（シーン、アイコンの代わり）、.nrrd（連続画像）は、必須のファイル。もし、作業していれば、.seg.nrrd（セグメントをまとめたファイル）や、.h5（Transformのファイル）など追加で生成される。シーンとは、作業していたウィンドウの状況.mrmlと、見た目.pngのことである。見た目のpngのおかげで、次に開くときに作業内容を思い出しやすい。個別ファイルが使いやすい場面として、複数サンプルに同一処理、たとえば、Volume Renderingで、複数サンプルに同じ着色をしたいときや、セグメンテーションは軽い連続画像でやっておいて、できあがったらセグメンテーションだけを重い連続画像と合わせたいときが考えられる。また、上書き保存が速いというメリットもある。</span></p>
+<ol>
+<li><span style="color:#444C99;">アイコン<code>SAVE</code> ウィンドウの左上。新しいウィンドウ<code>Save Scene and Unsaved Data</code>がでてくる。</span></li>
+<li><span style="color:#444C99;">mrbをOFF。<code>プレゼント箱ボタン</code></span></li>
+<li><span style="color:#444C99;">保存先はデフォルトなら、.mrml, .png, /Data。連続画像と作業ファイルは「Data」フォルダに保存される。変更してもよいが、階層構造をのちのち保つこと。変更する場合は、マーク<code>...</code>で個別に、下のボタン<code>Change directory for selected files</code>で一括して行う</span></li>
+<li><span style="color:#444C99;">開くときは、.mrmlファイルのみを3D slicerのウィンドウにドラッグドロップする。ほかはリンクされていて、自動で一括して開かれる。ただし、保存時の階層構造を保っておく必要がある。</span></li>
+<li><span style="color:#444C99;">上書き保存では、ボタン<code>SAVE</code>をおすと、別ウィンドウがでて、左のボタン<code>Select Scene &amp; Modidied Data Only</code>にチェックが入っている。これで、.mrml（シーン設定）、.png（シーン、アイコンの代わり）と、更新したファイルのみが保存される。となりの<code>Modidied Data Only</code>にすると、シーンが更新されない。</span></li>
+<li><span style="color:#444C99;">ヒント：Segmentのファイル名は、[Active segmentation].seg.nrrdになっている。モジュールSegmentationsでCreate New Segmentationsでつくった名称＝複数のセグメントをまとめているところの名称。</span></li>
+</ol>
+<h3 id="segmentaion">Segmentaion/セグメンテーション</h3>
+<ul>
+<li>Here I show a simple example to perform segmentation manually in 3Dslicer using minimal tools. Tools used here are only <code>Paint</code>, <code>Fill between slices</code> and <code>Smooth</code>. 3D slicer is equipted many usefull functions for segmentation, such as select specific brightness, restrict working area, and so on. For dealing with CoMBI data, a full-color image series, <code>Paint</code> and <code>Draw</code> are usefull at first.</li>
+<li>Automatic or semi-automatic segmentation are possible by using iLastik, which conducts segmentation by machine learning, and produce binary or grayscale image series. See other page <a href="../ilastik/index.html">"Segmentation by iLastik"</a>. Photoshop also helps segmentation by color specification, and produse binary image series. See the section in other page; <a href="../horos/index.html#3">Horos, section "color specification"</a>. The binary or grayscale image series are loaded into 3D slicer and used for segmentation and volume rendering.</li>
+<li>Pen tablets are highly recommended. Else, iPad + Apple pencil + Sidecar is also useful. My favorite is use of a pen tablet (Wacom Intuos Pro). Pen tablet has hovering function, while iPad+Apple pencil do not. Hovering allow to follow the tip of the pen all the time. iPad+ApplePencil is recommended to use via USB cable for its stability. Some Windows laptop have touch panel and seems to be usefull but I do not have one.</li>
+<li>Segmentaion data are stored in mrb file or saved as separated file. The separated files can be imported into other mrb. Since the segmentation is heavy duty, I often perform it using the rough and light dataset, then import segments into the fine and heavy dataset.</li>
+<li>
+<p>I wrote this manual using data of chick heart at first. Later, I added <code>Fill between slices</code> and <code>Smooth</code>, using mouse E12 midgud. Sorry, these may confuse you, but this manual basically describes how to segment vessels in chick heart as shown below.</p>
 <p><img alt="segmetation" src="../img/3dslicer_seg.png" /></p>
-<p><em>このようなのをつくっていく手順です。これはトリハツ。手順書の途中にマウスE12中腸も登場します</em></p>
+<p><em>Segmentation of vessels of chick heart.</em></p>
+<ul>
+<li><span style="color:#444C99;">3Dslicerだけで手作業でSegmentationする手順を下に示します。使用するツールは、<code>Paint</code>と<code>Fill between slices</code>と<code>Smooth</code>だけにしてシンプルです。他に領域限局やシグナル強度の範囲指定など、さまざまなツールが備わっていますが、CoMBIのフルカラー画像なら、基本の<code>Paint</code>と<code>Draw</code>が役立つでしょう</span></li>
+<li><span style="color:#444C99;">抽出したい対象物によっては、3D slicerだけでは不便な場合もあるでしょう。iLastikは、機械学習でSegmentationして、二値化やグレースケール連続画像をつくってくれます。こちらのページ<a href="../ilastik/index.html">「Segmentation by iLastik」</a>に記しました。また、Photoshopは、「色域指定」で二値化連続画像をつくれます。こちら<a href="../horos/index.html#3">Horosのページの中の「色域指定」</a>に記しました。iLastikやPhotoshopでつくった二値化やグレースケール連続画像は、3D slicerで<code>Volume Rendering</code>したり、<code>Segmentation</code>, <code>Threshold</code>を施したりします。</span></li>
+<li><span style="color:#444C99;">推奨の作業環境は、タッチペンです。私はMacBookPro15 2018またはMacBookPro16 2021にiPad Pro 2018 A12X（SideCar）をつなげ、Apple Penで描いています。SideCarでの接続は、無線より有線のほうが安定します。Windowsノートなら元々タッチパネルになっている商品があって便利そうです。WindowsマシンにiPadをつなげるアプリもいくつかあるようですが、私は試していません</span></li>
+<li><span style="color:#444C99;">Segmentaionのデータは、mrbファイルなら一括して保存されます。Segmentaionデータだけの独立ファイルとして保存することも選べます。その場合、別のmrbに移入させられます。Segmentation作業は必要最低限のデータセットで軽快に行い、本番用の重いデータセット（RGB, grayscale, ilastik, WT-Hetero-Knockoutなど）に移入させるといった使い方ができます</span></li>
+<li><span style="color:#444C99;">本手順書は、はじめトリハツをつかった例で執筆しました。のちに<code>Fill between slices</code>と<code>Smooth</code>のところを追記し、マウスE12中腸が登場します。ややこしいですが基本的に上図のトリハツ大血管をセグメンテーションする手順です</span></li>
+</ul>
 </li>
 </ul>
-<h4 id="3dslicersegmentation">3Dslicerだけで手作業でSegmentationする手順</h4>
+<h4 id="procedure-of-manual-segmentation-by-3dslicersegmentation">Procedure of manual segmentation by 3Dslicer/手作業でSegmentationする手順</h4>
 <ol>
-<li>モジュール<code>Segmentation</code>の場合、Active segmentation: より、Create new segmentation。モジュール<code>Segment editor</code>の場合、Segmentation: より、Create new segmentation。ここで作るSegmentationは、フォルダのようなもの。フォルダの中に複数のSegment（例、動脈と静脈）が収まる。二つのモジュール<code>Segmentation</code>と<code>Segment editor</code>はほぼ一体のモジュールで、それらの間を行き来するには、ボタン<code>Segmentation...</code>やボタン<code>Edit selected</code>である。迷子にならないように</li>
-<li>ボタン<code>Add segment</code>で、新規セグメント<code>Segment_1</code>をつくる。名前は自由に変えられる。このときは大動脈を塗ることにしたので、名称を「Artery」とした。表示色を変えるには、四角い色表示をクリックする</li>
-<li><code>Paint</code>で、大動脈を塗りつぶした<ul>
-<li>全画像で塗る必要はなく、5枚に1枚とか、10枚に1枚の画像で塗る。等間隔がおすすめ、修正しやすいため。とびとびでよいし、がたついても良く、のちに補完（Fill between slices)と平滑化（Smooth）で仕上げる</li>
-<li><code>Show 3D</code>ボタンを押しておくと、青画面（3D view）にリアルタイムで表示されていく。さらに、モジュール<code>Volume Rendering</code>で、VR像も表示させると、セグメントと同時に確認できる。しかしながら、動作がかなり鈍くなるので、塗りつぶし作業中はShow 3D OFF、Volume renderingもOFFとしておき、ときどき確認するときだけ表示ONにしている</li>
-<li>今回の例題である大血管は輪状だったので、<code>Draw</code>ではなく、<code>Paint</code>を使った。<code>Draw</code>は、描いた線の内側をすべて塗りつぶすモード。使い方は、<code>Draw</code>+ <code>Return, Enter</code>。Drawで線を描いたあとにリターンキーをおすと、その内部が塗りつぶされる。描くのは、円形でも、弧でもよい（PowerPointやIllustratorの、線と塗りつぶしの関係と同様）。</li>
+<li>Module <code>Segmentation</code> &gt; <code>Active segmentation:</code> &gt; <code>Create new segmentation</code>, or Module <code>Segment editor</code> &gt;<code>Segmentation:</code> &gt;<code>Create new segmentation</code>. The "segmentation" created here is like a folder, where multiple segments (ex. artey and vein) are stored. These 2 modules, <code>Segmentation</code> and <code>Segment editor</code> are highly relational modules. To move between the modules, use buttons <code>Segmentation...</code> and <code>Edit selected</code>. Please do not get lost.</li>
+<li>Button <code>Add segment</code> creates new segment <code>Segment_1</code>. Name of segment can be changed as you like. In this example, I named as "Artery". Click <code>squere color button</code> to open color pallete and change the color of segment.</li>
+<li><code>Paint</code> the artery.<ul>
+<li>No need to paint all the images, but every 5 or 10 images. Even intervals are recommended, as they are easy to modify. Roughness is acceptable. Later, <code>Fill between slices</code> and <code>smooth</code> will be used.</li>
+<li><code>Show 3D</code> display segments in the blue window (3D view) in real-time. In addition, if volume rendered image is displayed by Module <code>Volume Rendering</code>, you can confirm creating segments and 3D image at the same time. However, such display style is heavy duty. I usually create segments with nothing displayed in the blue window, and occasionally I check the segments and VR images in the blue window.</li>
+<li>I used <code>Paint</code> instead of <code>Draw</code> because the large blood vessels in this example were ring-shaped. <code>Draw</code> is a mode that fills inside the drawn line. After drawing a line, pressing the Return key fills the inside of the line. You can draw either closed or open shapes (similar to the relationship between line and fill in PowerPoint and Illustrator).</li>
 </ul>
 </li>
-<li><code>Erase</code>で塗りすぎたところを削除して、修正する</li>
+<li><code>Erase</code> corrects the overpainted area.</li>
 <li>
-<p><code>Fill between slices</code>で補完（モジュール<code>Segment Editor</code>）</p>
+<p><code>Fill between slices</code> (Module <code>Segment Editor</code>)</p>
 <p><img alt="Fill between slices" src="../img/fillbetweenslice1.png" /></p>
 <p><em>Process of <code>Fill between slices</code>. Reference serial images are 5x5x10 µm/voxel, 1220x875 pixels, 820 images of mouse mid gut on E12 (Not chick heart). <code>Draw</code> in the RED plane for whole mid gut every 5 images, and in the YELLOW plane for in a loop every 10 images.</em></p>
 <ol>
-<li><code>Initialize</code> すこし待つ</li>
-<li><code>Show 3D</code> ONで青画面に表示させる。スライドバーで描いたセグメントと補完したセグメントの透明度を調整し見やすくする</li>
-<li>がたつきがひどければ、<code>Paint</code>と<code>Erase</code>で修正する。<code>Auto update</code>にチェックをいれて おくと、修正中に、<code>Fill between slices</code>の像に反映されていく</li>
-<li><code>Apply</code>で完了。ボタン<code>Undo</code>で元に戻せる。全体を塗れたと思ってから行う。多少の修正は、<code>Erase</code>を使ったりして、あとでもできる。多少のガタツキは次の<code>Smooth</code>で直せる</li>
-<li>Apply後に修正が必要なら、<code>Erase</code>などで修正する。変な突起ができたり、近接構造が融合したりして、修正したことがある</li>
+<li><code>Initialize</code>, wait for a while.</li>
+<li><code>Show 3D</code> shows segmets in blue window. For checking quality of filling area, adjust opacity of painted segments and filling segments by sliding bar.</li>
+<li>Correct painted segments using <code>Paint</code> and <code>Erase</code>. <code>Auto update</code> shows result of <code>Fill between slices</code> during correction process.</li>
+<li><code>Apply</code> to finish. <code>Undo</code> can restore. Apply should be used after painting whole area of interest. After <code>Apply</code>, it is also possible to use <code>Erase</code> to correct in some extent. I have corrected odd protrusions and fusion of proximity structures. <code>Smooth</code> in the later step will correct roughness.</li>
 </ol>
 </li>
 <li>
-<p>ボタン<code>Add segment</code>で、<code>Segment_2</code>もつくる。「Vein」と名称をつけて、<code>Paint</code>で肺動脈を塗った。同様にFill between slicesも行った</p>
+<p><code>Add segment</code> creates another <code>Segment_2</code>. In this example, I named it as "Vein", and <code>Paint</code> pulmonary artery and <code>Fill between slices</code>.</p>
 </li>
 <li>
-<p><code>Smooth</code>で滑らかにする（モジュール<code>Segment Editor</code>）</p>
+<p><code>Smooth</code> corrects roughness. (Module <code>Segment Editor</code>)</p>
 <p><img alt="Smooth comparison" src="../img/smooth.png" /></p>
 <p><em>Comparison of smoothing methods and settings. Note that voxel size were set as 5x5x10 mm/voxel at volume module, instead of original 5x5x10 µm/voxel (millimeter instead of micrometer), for stabilize PC performance. Processing were done using MacBookPro16 M1 max. Time in yellow indicate duration of prosseccing after clicking <code>Apply</code>.</em></p>
 <ol>
-<li>Smoothing Method: <code>Joint smoothing</code>を好んで使用している。（Joint smoothingは、表示中の複数のSegmentを処理し、処理時間が短い。MedianやGaussianは、選択中のセグメントだけを処理し、処理時間が長い。MedianやGaussianの設定では、長さを入力する。Medianでは、pixelsが表示される。1x1x1だと変化なし、3x3x1だとトゲくらいならなくなる。7x7x7, 11x11x7などでようやくJoint smoothing_0.5相当になるが、処理時間が非常に長くなる）</li>
-<li><code>Joint smoothing</code>の設定では、数値を入力する。まずはデフォルトの0.5を試す</li>
-<li><code>Apply</code>で完了</li>
-<li>満足できなければ、ボタン<code>Undo</code>と、設定値の変更（0.3-1.0）、<code>Apply</code>を繰り返す</li>
-<li>細かい修正が必要なら、<code>Erase</code>などを使用する。近接構造が融合してしまい、Eraseで修正した例を下に示す</li>
+<li>I prefer Smoothing Method: <code>Joint smoothing</code>. Joint smoothing processes multiple segments in the display and takes less time. Median and Gaussian process only the selected segment and take longer. Values 1x1x1 shows no change, 3x3x1 erase only spikes. 7x7x7, 11x11x7, etc. are equivalent to Joint smoothing_0.5, but the processing time is very long.</li>
+<li>Setting up <code>Joint smoothing</code>. Try default value 0.5 at first.</li>
+<li><code>Apply</code></li>
+<li>If you don't satidfy the result, <code>Undo</code>. Try again using values between 0.3-1.0.</li>
+<li>If fine corrections are needed, use <code>Erase</code>, etc. together. The figure below shows an example of using <code>Erase</code> after <code>Smooth</code> to correct an undesired fusion between neighboring structures.</li>
 </ol>
 <p><img alt="Erase" src="../img/erase.png" /></p>
 <p><em>Unwanted connection was erased in the RED plane using <code>Erase</code> tool, and visualized in 3D View. 赤画面において、不必要につながった場所をEraseで消した</em></p>
 </li>
 <li>
-<p>Volume Renderingとセグメントを重ねて表示し確認できる。モジュール<code>Volume rendering</code>、マーク<code>Eye</code>で、青画面への表示をON。動作が鈍くなるのでOFFにして作業に戻る</p>
+<p>For checking the segments, Volume Rendering and segments can be overlaid in the blue window. Module <code>Volume rendering</code> &gt; <code>Eye mark</code> turns ON/OFF of showing VR image. Module <code>Segment Editor</code> &gt; <code>Show 3D</code> display segments in the blue. Showing both VR and segments is heavy duty.</p>
 </li>
-<li>アイコン<code>Camera</code>（Capture Screenshot）で、静止画に描き出せる</li>
-<li>Saveのとき、一括ファイルか、Segmentationのみの個別ファイルかを選べる。別のプロジェクトへ移入させたいときは個別ファイルにする</li>
+<li><code>Camera</code> (Capture Screenshot) can save steal image.</li>
+<li>When <code>Save</code> the data, select file format. Save segment in .mdb, or save segments as individual files. If you need to migrate segments into other datasets, save segments as individual files.</li>
 </ol>
-<h4 id="_6">体積の数値を読む</h4>
-<ul>
-<li>モジュール<code>segmentation</code>&gt;<code>Quantification</code>&gt;<code>Segment statistics</code>（このモジュールをクリックすると、ウィンドウデザインが変わって、数値一覧がでる。CSVにでも書き出せば、Excelなどで使える。練習中）</li>
+<hr />
+<ol>
+<li><span style="color:#444C99;">モジュール<code>Segmentation</code>の場合、Active segmentation: より、Create new segmentation。モジュール<code>Segment editor</code>の場合、Segmentation: より、Create new segmentation。ここで作るSegmentationは、フォルダのようなもの。フォルダの中に複数のSegment（例、動脈と静脈）が収まる。二つのモジュール<code>Segmentation</code>と<code>Segment editor</code>はほぼ一体のモジュールで、それらの間を行き来するには、ボタン<code>Segmentation...</code>やボタン<code>Edit selected</code>である。迷子にならないように</span></li>
+<li><span style="color:#444C99;">ボタン<code>Add segment</code>で、新規セグメント<code>Segment_1</code>をつくる。名前は自由に変えられる。このときは大動脈を塗ることにしたので、名称を「Artery」とした。表示色を変えるには、四角い色表示をクリックする</span></li>
+<li><span style="color:#444C99;"><code>Paint</code>で、大動脈を塗りつぶした</span><ul>
+<li><span style="color:#444C99;">全画像で塗る必要はなく、5枚に1枚とか、10枚に1枚の画像で塗る。等間隔がおすすめ、修正しやすいため。とびとびでよいし、がたついても良く、のちに補完（Fill between slices)と平滑化（Smooth）で仕上げる</span></li>
+<li><span style="color:#444C99;"><code>Show 3D</code>ボタンを押しておくと、青画面（3D view）にリアルタイムで表示されていく。さらに、モジュール<code>Volume Rendering</code>で、VR像も表示させると、セグメントと同時に確認できる。しかしながら、動作がかなり鈍くなるので、塗りつぶし作業中はShow 3D OFF、Volume renderingもOFFとしておき、ときどき確認するときだけ表示ONにしている</span></li>
+<li><span style="color:#444C99;">今回の例題である大血管は輪状だったので、<code>Draw</code>ではなく、<code>Paint</code>を使った。<code>Draw</code>は、描いた線の内側をすべて塗りつぶすモード。使い方は、<code>Draw</code>+ <code>Return, Enter</code>。Drawで線を描いたあとにリターンキーをおすと、その内部が塗りつぶされる。描くのは、円形でも、弧でもよい（PowerPointやIllustratorの、線と塗りつぶしの関係と同様）。</span></li>
 </ul>
-<h4 id="_7">工夫やヒント</h4>
+</li>
+<li><span style="color:#444C99;"><code>Erase</code>で塗りすぎたところを削除して、修正する</span></li>
+<li>
+<p><span style="color:#444C99;"><code>Fill between slices</code>で補完（モジュール<code>Segment Editor</code>）</span></p>
+<p><img alt="Fill between slices" src="../img/fillbetweenslice1.png" /></p>
+<p><em>Process of <code>Fill between slices</code>. Reference serial images are 5x5x10 µm/voxel, 1220x875 pixels, 820 images of mouse mid gut on E12 (Not chick heart). <code>Draw</code> in the RED plane for whole mid gut every 5 images, and in the YELLOW plane for in a loop every 10 images.</em></p>
+<ol>
+<li><span style="color:#444C99;"><code>Initialize</code> すこし待つ</span></li>
+<li><span style="color:#444C99;"><code>Show 3D</code> ONで青画面に表示させる。スライドバーで描いたセグメントと補完したセグメントの透明度を調整し見やすくする</span></li>
+<li><span style="color:#444C99;">がたつきがひどければ、<code>Paint</code>と<code>Erase</code>で修正する。<code>Auto update</code>にチェックをいれて おくと、修正中に、<code>Fill between slices</code>の像に反映されていく</span></li>
+<li><span style="color:#444C99;"><code>Apply</code>で完了。ボタン<code>Undo</code>で元に戻せる。全体を塗れたと思ってから行う。多少の修正は、<code>Erase</code>を使ったりして、あとでもできる。多少のガタツキは次の<code>Smooth</code>で直せる</span></li>
+<li><span style="color:#444C99;">Apply後に修正が必要なら、<code>Erase</code>などで修正する。変な突起ができたり、近接構造が融合したりして、修正したことがある</span></li>
+</ol>
+</li>
+<li>
+<p><span style="color:#444C99;">ボタン<code>Add segment</code>で、<code>Segment_2</code>もつくる。「Vein」と名称をつけて、<code>Paint</code>で肺動脈を塗った。同様にFill between slicesも行った</span></p>
+</li>
+<li>
+<p><span style="color:#444C99;"><code>Smooth</code>で滑らかにする（モジュール<code>Segment Editor</code>）</span></p>
+<p><img alt="Smooth comparison" src="../img/smooth.png" /></p>
+<p><em><span style="color:#444C99;">スムージングの方法と設定の比較。なお、ボクセルサイズは本来の5x5x10μm/voxelではなく、ボリュームモジュールで5x5x10mm/voxel（マイクロメートルではなくミリメートル）に設定されている。MacBookPro16 M1 maxを使用。黄色の時間は、<code>Apply</code>をクリックした後の処理にかかった時間を示す。</span></em></p>
+<ol>
+<li><span style="color:#444C99;">Smoothing Method: <code>Joint smoothing</code>を好んで使用している。（Joint smoothingは、表示中の複数のSegmentを処理し、処理時間が短い。MedianやGaussianは、選択中のセグメントだけを処理し、処理時間が長い。MedianやGaussianの設定では、長さを入力する。Medianでは、pixelsが表示される。1x1x1だと変化なし、3x3x1だとトゲくらいならなくなる。7x7x7, 11x11x7などでようやくJoint smoothing_0.5相当になるが、処理時間が非常に長くなる）</span></li>
+<li><span style="color:#444C99;"><code>Joint smoothing</code>の設定では、数値を入力する。まずはデフォルトの0.5を試す</span></li>
+<li><span style="color:#444C99;"><code>Apply</code>で完了</span></li>
+<li><span style="color:#444C99;">満足できなければ、ボタン<code>Undo</code>と、設定値の変更（0.3-1.0）、<code>Apply</code>を繰り返す</span></li>
+<li><span style="color:#444C99;">細かい修正が必要なら、<code>Erase</code>などを使用する。近接構造が融合してしまい、Eraseで修正した例を下に示す</span></li>
+</ol>
+<p><img alt="Erase" src="../img/erase.png" /></p>
+<p><em><span style="color:#444C99;">赤画面において、不必要につながった場所をEraseで消した</span></em></p>
+</li>
+<li>
+<p><span style="color:#444C99;">Volume Renderingとセグメントを重ねて表示し確認できる。モジュール<code>Volume rendering</code>、マーク<code>Eye</code>で、青画面への表示をON。動作が鈍くなるのでOFFにして作業に戻る</span></p>
+</li>
+<li><span style="color:#444C99;">アイコン<code>Camera</code>（Capture Screenshot）で、静止画に描き出せる</span></li>
+<li><span style="color:#444C99;">Saveのとき、一括ファイルか、Segmentationのみの個別ファイルかを選べる。別のプロジェクトへ移入させたいときは個別ファイルにする</span></li>
+</ol>
+<hr />
+<h4 id="obtaining-volume-values-of-segments">Obtaining volume values of segments/セグメントの体積を数値として取得する</h4>
 <ul>
 <li>
-<p>最初はうまく行かないもの</p>
-<p>まず一度、セグメンテーションをおおざっぱにやってみて、使うツール、塗る間隔、完成形の見通しをたてます。2回目以降を本番としています。</p>
+<p>Module <code>segmentation</code> &gt; <code>Quantification</code> &gt; <code>Segment statistics</code>. After choosing this module, the display mode will be changed automatically to show "Table". Values can be saved as CSV file, which can be exported into Excel.</p>
 </li>
 <li>
-<p>ツールを選ぶ</p>
-<p>色と形がはっきりしていれば、<code>Level tracing</code>が使えます。マウスポインターがある色と類似の色を島状に選択してくれます。<code>mouse over</code>+<code>Left click</code>。CT画像にはいいかもしれませんが、CoMBIの画像ではあまり出番はないかもしれません。もっとも、対象物によります。色が淡く、境界がぼんやりしている場合は、<code>Paint</code>, <code>Draw</code>, <code>Erase</code>を使います。</p>
+<p>モジュール<code>segmentation</code>&gt;<code>Quantification</code>&gt;<code>Segment statistics</code>。このモジュールをクリックすると、ウィンドウデザインが変わって、数値一覧がでる。CSVにでも書き出せば、Excelなどで使える。</p>
+</li>
+</ul>
+<hr />
+<h4 id="tips_2">Tips/工夫やヒント</h4>
+<ul>
+<li>
+<p><strong>First attempt is not always the best:</strong> I perform a rough segmentation once to get an idea of the tools to use, the spacing of the paints, and imagine the finished segment. Then, I try again and again.
+    <span style="color:#444C99;"><br>
+    <strong>最初はうまく行かないもの：</strong>まず一度、セグメンテーションをおおざっぱにやってみて、使うツール、塗る間隔、完成形の見通しをたてます。2回目以降を本番としています。
+    </span></p>
 </li>
 <li>
-<p>塗る画像は等間隔</p>
-<p>画像めくりはキーボードの矢印キー。等間隔のほうが、のちの修正がラク。例えば、2, 5, 10枚ごとにしています。</p>
+<p><strong>Choose the tool appropriately:</strong> If the color and shape are clear, you can use <code>Level tracing</code>, which selects a color similar to the color where the mouse pointer is located. <code>mouse over</code>+<code>Left click</code>. However, while it may be good for CT images, it may not work well for CoMBI images. If the colors are faint and the borders are unclear, use <code>Paint</code>, <code>Draw</code>, or <code>Erase</code>. Else use iLastik.
+    <span style="color:#444C99;"><br>
+    <strong>適切にツールを選ぶ：</strong>色と形がはっきりしていれば、<code>Level tracing</code>が使えます。マウスポインターがある色と類似の色を島状に選択してくれます。<code>mouse over</code>+<code>Left click</code>。CT画像にはいいかもしれませんが、CoMBIの画像ではあまり出番はないかもしれません。もっとも、対象物によります。色が淡く、境界がぼんやりしている場合は、<code>Paint</code>, <code>Draw</code>, <code>Erase</code>を使います。
+    </span></p>
 </li>
 <li>
-<p>MPR（多平面再構築）で角度をつけると、Segmentationできない</p>
-<p>多平面（赤画面、黄画面、緑画面）において、角度をつけてからSegmentationしたら、とびとびになって、まともなSegment, Fill between, Smoothになりません。「サンプルちょっと斜めで包埋されていたから、角度を調節して、きっちりと横断面、矢状断面にしたい」ということがあるかもしれませんが、Segmentation作業を先にして、角度調整はあとまわしにしてください。</p>
+<p><strong>Evenly spaced images to be painted:</strong> Use the arrow keys on the keyboard to flip the image. Equally spaced images are easier to correct later. For example, every 2, 5, or 10 images.
+    <span style="color:#444C99;"><br>
+    <strong>塗る画像は等間隔：</strong>画像めくりはキーボードの矢印キー。等間隔のほうが、のちの修正がラク。例えば、2, 5, 10枚ごとにしています。
+    </span></p>
 </li>
 <li>
-<p>複雑な形状</p>
-<p>中腸は、グニャグニャと曲がって、複数のループがある。案1：個々のループで別のセグメントにして後で融合する。案2：はじめから単一セグメントでやりたい場合、同じ画像上で、複数ループを塗ること。ダメなのは「こっちのループはこの画像で塗って、あっちのループはあっちの画像で塗る」ことで、その場合、補完が破綻する（下図）</p>
+<p><strong>Segmentation fails when angled in MPR (Multiplanar Reconstruction): </strong>
+In the reconstructed planes (red, yellow, and green screens), when I angled and then segmented, the segmentation was broken up and I could not get a proper Segment, Fill between, or Smooth. You may have a situation where you want to adjust the angle of a sample to make it a transverse or sagittal section because it was embedded at an angle, but you should do the segmentation first and leave the angle adjustment for later.
+    <span style="color:#444C99;"><br>
+    <strong>MPR（多平面再構築）で角度をつけると、Segmentationできない：</strong>多平面（赤画面、黄画面、緑画面）において、角度をつけてからSegmentationしたら、とびとびになって、まともなSegment, Fill between, Smoothになりません。「サンプルちょっと斜めで包埋されていたから、角度を調節して、きっちりと横断面、矢状断面にしたい」ということがあるかもしれませんが、Segmentation作業を先にして、角度調整はあとまわしにしてください。
+    </span></p>
+</li>
+<li>
+<p><strong>Complex shape:</strong> The midgut is squishy, curved, and has multiple loops. Option 1: Make separate segments for each loop and fuse them together later. Option 2: If you want to do a single segment from the beginning, paint multiple loops on the same image. A bad approach is to "paint one loop in this image and another loop in another image," in which case the filling will break down.
+    <span style="color:#444C99;"><br>
+    <strong>複雑な形状：</strong>中腸は、グニャグニャと曲がって、複数のループがある。案1：個々のループで別のセグメントにして後で融合する。案2：はじめから単一セグメントでやりたい場合、同じ画像上で、複数ループを塗ること。ダメなのは「こっちのループはこの画像で塗って、あっちのループはあっちの画像で塗る」ことで、その場合、補完が破綻する（下図）</span></p>
 <p><img alt="Fill between slices" src="../img/fillbetweenslice2.png" /></p>
 <p><em>Four parts of mid gut are shown. [Upper panel] <code>Draw</code> every 5 images for all 4 gut and preview <code>Fill between slices</code>.  [Lower panel] When <code>Draw</code> additional region only in the left-most gut (stars), <code>Fill between slices</code> was broken.</em></p>
 </li>
 <li>
-<p>セグメントの中にセグメントを作りたい</p>
-<p>「モジュール<code>Segmentaion</code>と、モジュール<code>Edit segmentaion</code>」は、「フォルダとファイル（パソコンの基本操作）」、「グループとオブジェクト（illustrator）」と捉えることができます。例えば、心臓全体のセグメント１つと、各心室のセグメントを４つ作りたいときがあるとします。心臓全体のセグメントは、モジュール<code>Segmentation</code>で、Active segmentation: <code>Create new...</code> をつくって、その中に心臓全体セグメントを<code>Add</code>して、<code>Edit selected</code>(モジュール<code>Edit segment</code>)します。各心室用には、モジュール<code>Segmentation</code>で、Active segmentation: <code>Create new...</code>で、また別のSegmentationをつくり、その中に、４つ心室用Segmentを<code>Add</code>し、編集します。</p>
+<p><strong>Create a segment within a segment:</strong> The modules <code>Segmentaion</code> and <code>Edit segmentaion</code> can be seen as <code>Folders</code> and <code>Files</code> (basic computer operations) and <code>Groups</code> and <code>Objects</code> (Illustrator). For example, you want to create one segment for the whole heart and four segments for each chambers. For the whole heart segment, Module <code>Segmentation</code> &gt; <code>Active segmentation: Create new...</code> &gt; <code>Add</code>(whole heart), and <code>Edit selected</code>. For four chambers, Module <code>Segmentation</code> &gt; <code>Active segmentation: Create new...</code>, &gt; <code>Add</code> four segments, and edit them. 
+    <span style="color:#444C99;"><br>
+    <strong>セグメントの中にセグメントを作りたい：</strong>「モジュール<code>Segmentaion</code>と、モジュール<code>Edit segmentaion</code>」は、「フォルダとファイル（パソコンの基本操作）」、「グループとオブジェクト（illustrator）」と捉えることができます。例えば、心臓全体のセグメント１つと、各心室のセグメントを４つ作りたいときがあるとします。心臓全体のセグメントは、モジュール<code>Segmentation</code>で、Active segmentation: <code>Create new...</code> をつくって、その中に心臓全体セグメントを<code>Add</code>して、<code>Edit selected</code>(モジュール<code>Edit segment</code>)します。各心室用には、モジュール<code>Segmentation</code>で、Active segmentation: <code>Create new...</code>で、また別のSegmentationをつくり、その中に、４つ心室用Segmentを<code>Add</code>し、編集します。
+    </span></p>
 </li>
 <li>
-<p>作業の所要時間とセグメントの綺麗さのバランス</p>
-<p>「1面（赤画面）目では、対象物全体を等間隔できっちりDrawし、2面目は補助的にDrawする」<br>
-1面（赤画面）だけよりは、2面（緑か、黄）で塗った場合のほうが、セグメントの仕上がりが良い。しかし、多くの面で塗ると、時間がかかる。境界があいまいでも、別の面でははっきり見える場合が多いので、多面塗りには価値がある。境界があいまいで自信がないとき、1面目では、控えめ・小さめに塗り、別の面で自信を持って塗るとよい</p>
+<p><strong>Balance between the time required for segmentation and the quality of the segments:</strong> Drawing in multiple planes requires a lot of time but is worth of effort since it improves the quality of segments. Some object shows its border clearly in one plane but not clear in other plane. I often draw in one plane (red screen) exactly, and draw in the another plane as a supplementary.
+    <span style="color:#444C99;"><br>
+    <strong>作業の所要時間とセグメントの綺麗さのバランス：</strong>1面（赤画面）目では、対象物全体を等間隔できっちりDrawし、2面目は補助的にDrawする。1面（赤画面）だけよりは、2面（緑か、黄）できっちり塗ったほうが、セグメントの仕上がりが良いが、時間がかかる。境界があいまいでも、別の面でははっきり見える場合が多いので、多面塗りには価値がある。境界があいまいで自信がないとき、1面目では、控えめ・小さめに塗り、別の面で自信を持って塗るとよい
+    </span></p>
 </li>
 <li>
-<p>作業が重い</p>
-<p>参照する連続画像（モジュール<code>Segmentation</code>では<code>Master Volume</code>と表記）の大きさと枚数が、動作に影響します。カラーJPEGで500x500x500枚程度が限度のようでした（Table.1）。もっとも、パソコンのスペックにもよるとは思います。Segmentation作業用の3D slicerファイルは、縮小/減数シリーズ（500 x 500 x 500）をつかって、もし高画質シリーズ（1000 x 1000 x 1000）に重ねる必要があれば、あとでセグメンテーションファイルだけを移入するのがいいと思います。<br></p>
-<p>連続画像の枚数を減らすと軽くなりますが、セグメントは荒くなります。Fill between sliceの結果が悪くなるためです。XY:Z＝1:1, 1:2, 1:4くらいが限度でしょう。1:10 (例、5µm x 5µm x 50µm, 1000 x 1000 x 200枚)ではくっきりとした階段ができてしまい、さっぱりダメでした（Table.2）。そうかといって、高画質の1:2 (5µm x 5µm x 10µm, 1000 x 1000 x 1000枚)にすると重くなるし、もどかしいところです。<br></p>
-<p>Segmentationの数が10個〜20個と多くなると、パソコンの動作が鈍くなっていきます。<br></p>
-<p>Segmentationの大きさが大きくなると、動作が鈍くなります。例えば、マウス胚で眼球一つのセグメントと、胚子全体のセグメントを比較すると、眼球は余裕なのに、胚全体はフリーズしそうになりました（Table.2,3）。<br></p>
-<p>2018-2021年は、MacBookPro15（2018, i9, 4GB-HBM2, 32GB）、2022年からは、MacBookPro16（2021, M1 max, 64GB unified memory）を使っています。マシンが良くなっても、Segmentが大きくなったり、Segmentの個数が増えれば、動作が重くなります。500 x 500 x 1000枚（0.8 GB）なら、安定して作業できました。M1 maxは、1000 x 1000 x 1000枚（3.3 GB）でも扱えそうでしたが、順調なのは最初だけで、大きなSegmentになっていくと、かなり鈍くなり実用的ではありませんでした（Table.3）。<br></p>
+<p><strong>Heavy task:</strong> The size and number of reference serial images (called as "Master Volume" in the module <code>Segmentation</code>) affect the working efficiency. The maximum size for color JPEGs seemed to be about 500x500x500 (Table 1), though, of course, this depends on the specifications of the computer. I often use the reduced series (500 x 500 x 500) for segmentation work and later transfer only the segmentation files to the high quality series (1000 x 1000 x 1000 for VR).<br>
+Reducing the number of consecutive images will make the operation faster, but the segments will be rougher, since the result of <code>Fill between slice</code> will be worse. XY:Z = 1:1, 1:2, or 1:4 is probably the best, while 1:10 (e.g., 5µm x 5µm x 50µm, 1000 x 1000 x 200 sheets) produces a clear staircase and is completely useless (Table 2).Otherwise, the high quality 1:2 (5µm x 5µm x 10µm, 1000 x 1000 x 1000) images would be too heavy. Choosing the appropriate data size is always difficult.<br>
+As the number of Segmentations increases over 10 to 20, the computer performs slower.<br>
+As the size of Segmentation increases, the computer performs slower. For example, when I compared the segment of a single eyeball with that of a whole body in a dataset of mouse embryo, PC can draw eyeball easily, but it almost froze when drawing whole body (Table 2,3).<br>
+I am using MacBookPro15 (2018-2021, i9, 4GB-HBM2, 32GB) and from 2022, MacBookPro16 (2021, M1 max, 64GB unified memory). Even with a better machine, larger segments or more segments make operation slower. Both can process 500 x 500 x 1000 images（0.8 GB) stably. M1 max seems to process 1000 x 1000 x 1000 images (3.3 GB), exept for larger segments (Table 3).
+    <span style="color:#444C99;"><br>
+    <strong>作業が重い：</strong>参照する連続画像（モジュール<code>Segmentation</code>では<code>Master Volume</code>と表記）の大きさと枚数が、動作に影響します。カラーJPEGで500x500x500枚程度が限度のようでした（Table.1）。もっとも、パソコンのスペックにもよるとは思います。Segmentation作業用の3D slicerファイルは、縮小/減数シリーズ（500 x 500 x 500）をつかって、もし高画質シリーズ（1000 x 1000 x 1000）に重ねる必要があれば、あとでセグメンテーションファイルだけを移入するのがいいと思います。<br>
+    連続画像の枚数を減らすと軽くなりますが、セグメントは荒くなります。<code>Fill between slice</code>の結果が悪くなるためです。XY:Z＝1:1, 1:2, 1:4くらいが限度でしょう。1:10 (例、5µm x 5µm x 50µm, 1000 x 1000 x 200枚)ではくっきりとした階段ができてしまい、さっぱりダメでした（Table.2）。そうかといって、高画質の1:2 (5µm x 5µm x 10µm, 1000 x 1000 x 1000枚)にすると重くなるし、もどかしいところです。<br>
+    Segmentationの数が10個〜20個と多くなると、パソコンの動作が鈍くなっていきます。<br>
+    Segmentationの大きさが大きくなると、動作が鈍くなります。例えば、マウス胚で眼球一つのセグメントと、胚子全体のセグメントを比較すると、眼球は余裕なのに、胚全体はフリーズしそうになりました（Table.2,3）。<br>
+    2018-2021年は、MacBookPro15（2018, i9, 4GB-HBM2, 32GB）、2022年からは、MacBookPro16（2021, M1 max, 64GB unified    memory）を使っています。マシンが良くなっても、Segmentが大きくなったり、Segmentの個数が増えれば、動作が重くなります。500 x 500 x 1000枚（0.8 GB）なら、安定して作業できました。M1 maxは、1000 x 1000 x 1000枚（3.3 GB）でも扱えそうでしたが、順調なのは最初だけで、大きなSegmentになっていくと、かなり鈍くなり実用的ではありませんでした（Table.3）。<br></p>
 <p>Table 1: Datasets for testing segmentation performance. Specimen: whole embryo of mouse on E12, computer: MacBookPro16 M1 max. </p>
 <table>
 <thead>
@@ -1971,58 +2151,101 @@ Windows OSやmacOSの組み込み機能で変換できる。Windowsの場合、
 </table>
 </li>
 <li>
-<p>Segmentationの結果が粗い</p>
+<p><strong>Correct Segmentation:</strong></p>
 <ol>
-<li>最初は、とびとびに塗っていき、</li>
-<li>まずは<code>Fill between slices</code> &gt; <code>Initalize</code>の結果を見ます。軽微な不連続がみつかったら、すでに塗った場所を丁寧に修正します（<code>Paint</code>, <code>Draw</code>, <code>Erase</code>など）。塗りの修正でも治らない場合は、塗る枚数を増やします。連続性的にFillされたら、<code>Fill between slices</code> &gt; <code>Apply</code>します。</li>
-<li>次に、<code>Smoothing</code>をつかってみます。<code>Joint Smoothing</code>, <code>0.5</code>を試します。修正したい窪みや突起があれば、丁寧に修正します（<code>Paint</code>, <code>Draw</code>, <code>Erase</code>など）。</li>
-<li>繰り返し、<code>Smoothing</code>と修正をします。満足できるまで</li>
+<li>At first, draw in the images with widely intervals.</li>
+<li>Try <code>Fill between slices</code> &gt; <code>Initalize</code>. If minor discontinuities are found, carefully correct the painted areas, using <code>Paint</code>, <code>Draw</code>, or <code>Erase</code>. </li>
+<li>If it does not be corrected, increase the images to be painted, till <code>Fill between slices</code> &gt; <code>Apply</code> shows continuos segment.</li>
+<li>Try <code>Smoothing</code> &gt; <code>Joint Smoothing</code> &gt; <code>0.5</code>. If there still are some roughness, correct again using  <code>Paint</code>, <code>Draw</code>, or <code>Erase</code>.</li>
+<li>Repeat <code>Smoothing</code> and correction till you satisfy.</li>
+</ol>
+<p><strong><span style="color:#444C99;">Segmentationの結果が粗い：</span></strong>
+<br></p>
+<ol>
+<li><span style="color:#444C99;">最初は、とびとびに塗っていき、</span></li>
+<li><span style="color:#444C99;">まずは<code>Fill between slices</code> &gt; <code>Initalize</code>の結果を見ます。軽微な不連続がみつかったら、すでに塗った場所を丁寧に修正します（<code>Paint</code>, <code>Draw</code>, <code>Erase</code>など）。塗りの修正でも治らない場合は、塗る枚数を増やします。連続性的にFillされたら、<code>Fill between slices</code> &gt; <code>Apply</code>します。</span></li>
+<li><span style="color:#444C99;">次に、<code>Smoothing</code>をつかってみます。<code>Joint Smoothing</code>, <code>0.5</code>を試します。修正したい窪みや突起があれば、丁寧に修正します（<code>Paint</code>, <code>Draw</code>, <code>Erase</code>など）。</span></li>
+<li><span style="color:#444C99;">繰り返し、<code>Smoothing</code>と修正をします。満足できるまで</span></li>
 </ol>
 </li>
 <li>
-<p>キーボードの矢印キーが効かない</p>
-<p>いちどズームイン・ズームアウトすると、効くようになることがあります。そのうちに効くようになることもあります</p>
+<p><strong>Freeze keyboard arrows:</strong> Once zoom in and out, it may work. Sometimes it will work after a while.
+    <span style="color:#444C99;"><br>
+    <strong>キーボードの矢印キーが効かない：</strong>いちどズームイン・ズームアウトすると、効くようになることがあります。そのうちに効くようになることもあります</span></p>
 </li>
 <li>
-<p>DrawやPaintが効かない</p>
-<p><code>Draw</code>で描いたあと<code>Retrun</code>を押しても反応しないときや、Paintが無反応になるときがあります。いちどズームイン・ズームアウトする。もしくは、ツールを矢印<code>None</code>に一旦切り替えてから、改めて<code>Draw</code>を選ぶと、効くようになることがあります。どうしても効かないときは、アプリを再起動します</p>
+<p><strong>Freeze Draw and Paint:</strong> Sometimes after drawing with <code>Draw</code>, pressing <code>Retrun</code> does not respond or <code>Paint</code> becomes unresponsive. Zoom in and out once, or switch the tool to the <code>None</code> arrow and then select <code>Draw</code> again.  If it still doesn't work, restart the application.
+    <span style="color:#444C99;"><br>
+    <strong>DrawやPaintが効かない：</strong><code>Draw</code>で描いたあと<code>Retrun</code>を押しても反応しないときや、Paintが無反応になるときがあります。いちどズームイン・ズームアウトする。もしくは、ツールを矢印<code>None</code>に一旦切り替えてから、改めて<code>Draw</code>を選ぶと、効くようになることがあります。どうしても効かないときは、アプリを再起動します</span></p>
 </li>
 <li>
-<p>iPad, Side car, Apple penで表示位置が飛ぶ</p>
-<p>ズームイン・ズームアウト（ピンチイン・ピンチアウト）して、元の見たい位置に戻します。入力デバイスが多く（Apple Pen、マウス、トラックパッド、キーボード）どこかに触れてしまうとずれる時がありました。また、スライスめくりのバーをApplePenで操作すると位置飛びが起こりますが、マウスで操作すると飛ばないようです。</p>
+<p><strong>Display position shifts with iPad, Side car, Apple pen:</strong> Zoom in and out (pinch in and pinch out) to get back to the original position you want. If there are many input devices (Apple Pen, mouse, trackpad, keyboard), and you touch any of them, display positoin may shift. ApplePencil is not good for browsing. It jumps slices (images).
+    <span style="color:#444C99;"><br>
+    <strong>iPad, Side car, Apple penで表示位置が飛ぶ：</strong>ズームイン・ズームアウト（ピンチイン・ピンチアウト）して、元の見たい位置に戻します。入力デバイスが多く（Apple Pen、マウス、トラックパッド、キーボード）どこかに触れてしまうとずれる時がありました。また、スライスめくりのバーをApplePenで操作すると位置飛びが起こりますが、マウスで操作すると飛ばないようです。</span></p>
 </li>
 <li>
-<p>青画面に断面像を表示できない</p>
-<p>眼のマーク<code>Eye mark</code>でON,OFFしてもなにも起こらなかったり、真っ黒な画像が表示されたりすることがありました。いったん、モジュール<code>Data</code>で、連続画像を捨てて、改めて連続画像を読み込みます。<code>Data Load</code>または、<code>Drag &amp; Drop</code>。この症状が見られたのは、Volume renderingとSegmentationと断面を同時に表示をさせようとしたときでした。かなり重い作業です</p>
+<p><strong>Can't display planes:</strong> Nothing happens when I turn on or off the <code>Eye mark</code>, or a black image is displayed. Once, in the module <code>Data</code>, discard the serial images and reload the serial images again. Use <code>Data Load</code> or <code>Drag &amp; Drop</code>. The first time I saw this symptom was when I tried to display volume rendering, segmentation and cross section at the same time. Quite heavy duty!
+    <span style="color:#444C99;"><br>
+    <strong>青画面に断面像を表示できない：</strong>眼のマーク<code>Eye mark</code>でON,OFFしてもなにも起こらなかったり、真っ黒な画像が表示されたりすることがありました。いったん、モジュール<code>Data</code>で、連続画像を捨てて、改めて連続画像を読み込みます。<code>Data Load</code>または、<code>Drag &amp; Drop</code>。この症状が見られたのは、Volume renderingとSegmentationと断面を同時に表示をさせようとしたときでした。かなり重い作業です</span></p>
 </li>
 <li>
-<p>単位設定を忘れてた！　</p>
-<p>単位をµmに変えるのを忘れ、mmのままでSegmentation作業を進めてから気づいたことがありました。そんなとき、あとでモジュール<code>Transform</code>で修正できます。例として、60x60x80mmではなく、60x60x40µmにしたいとき、行列表示に、0.06, 0.06, 0.08と斜めに入力します。</p>
+<p><strong>Forget to set up units！</strong> I forgot to change the units to µm and realized after working on segmentation that I had left it in mm. In such a case, you can correct it later with the module <code>Transform</code>. For example, if you want 60x60x40µm instead of 60x60x80mm, enter 0.06, 0.06, 0.08 diagonally in the matrix display.
+    <span style="color:#444C99;"><br>
+    <strong>単位設定を忘れてた！：</strong>単位をµmに変えるのを忘れ、mmのままでSegmentation作業を進めてから気づいたことがありました。そんなとき、あとでモジュール<code>Transform</code>で修正できます。例として、60x60x80mmではなく、60x60x40µmにしたいとき、行列表示に、0.06, 0.06, 0.08と斜めに入力します。</span></p>
 </li>
 </ul>
-<h3 id="3d">3Dプリンタ</h3>
-<p>モジュール<code>Segmentations</code>から、3Dプリンタ用なら、STLなど外部へのExportを行う。モジュール<code>Segmentations</code>には、別のExportもあって、3D slicer内のモジュール<code>Model</code>へのExportである。ややこしい。</p>
+<hr />
+<h3 id="3d-printer3d-in-practicing">3D printer/3Dプリンタ (in practicing)</h3>
+<p>The module <code>Segmentations</code> has 2 export function. One can export STL file for 3D printing. Another can export segments to the module <code>Model</code> within the 3D slicer app. Hum...it is complicated.</p>
 <ul>
 <li>
-<p>3Dプリンタ用のデータを出力する。<code>Export to files</code> ファイルとして、外部にExportされる。きっと3Dプリンタ用。</p>
+<p><code>Export to files</code>, maybe for 3D printer</p>
 <ol>
-<li>Destination folderをきめる。保存先。</li>
-<li>Visble segments only; このみでチェック。</li>
-<li>Reference vol: わからないがデフォルト、連続画像セットの名称が記されている。</li>
-<li>File format: STL</li>
-<li>Scale size: （CoMBIのデータなら、µmが多いけど...まだ試していない）</li>
-<li>ボタン<code>Export</code></li>
+<li>Set <code>Destination folder</code></li>
+<li><code>Visble segments only;</code>, or as you like.</li>
+<li><code>Reference vol:</code> I don't know, try default. </li>
+<li><code>File format:</code> STL</li>
+<li><code>Scale size:</code> (I don't know which unit is better for CoMBI dataset. Real size(µm) or printer size (mm))</li>
+<li><code>Export</code></li>
 </ol>
 </li>
 <li>
-<p>3D slicer内のモジュール<code>Model</code>へ出力する。<code>Export/Import models and labelmaps</code></p>
+<p><code>Export/Import models and labelmaps</code> into Module <code>Model</code> within 3D slicer app.</p>
 <ol>
 <li>Operation: <code>Export</code>, </li>
 <li>Output type: Models, Output node: </li>
-<li>Export models to new folder (デフォルト、赤い矢印ボタンでデフォルトに戻る)</li>
-<li>Advancedはいじらないで。</li>
-<li>ボタン<code>Export</code></li>
-<li>モジュール<code>Model</code>にSegmentがうつった。モジュール<code>Data</code>にデータが増えたことを確認できる。3D slicer内でのExport。きっと、いろんないろつけ。Segmentの表面をレインボーカラーなどカラフルにしたり、各スライスでの色を違えたりできる。</li>
+<li>Export models to new folder (default, red arrow for restore to default)</li>
+<li>Advanced (default)</li>
+<li>Button <code>Export</code></li>
+<li>Go to Module <code>Model</code>, and check segments exported. Go to Module <code>Data</code>, confirm additional data created.</li>
+<li>In the Module <code>Model</code>, Coloring (rainbow color!) of segment and slice maybe possible. Is this polygon?, much lighter than original segments.</li>
+</ol>
+</li>
+</ul>
+<p><span style="color:#444C99;"><br>
+モジュール<code>Segmentations</code>から、3Dプリンタ用に、SegmentをSTLへExportする。モジュール<code>Segmentations</code>には、別のExportもあって、3D slicer内のモジュール<code>Model</code>へ、SegmentをExportする。外部と内部、ややこしい。</span></p>
+<ul>
+<li>
+<p><span style="color:#444C99;">3Dプリンタ用のデータを出力する。<code>Export to files</code> ファイルとして、外部にExportされる。きっと3Dプリンタ用。</span></p>
+<ol>
+<li><span style="color:#444C99;">Destination folderをきめる。保存先。</span></li>
+<li><span style="color:#444C99;">Visble segments only; このみでチェック。</span></li>
+<li><span style="color:#444C99;">Reference vol: わからないがデフォルト、連続画像セットの名称が記されている。</span></li>
+<li><span style="color:#444C99;">File format: STL</span></li>
+<li><span style="color:#444C99;">Scale size: （CoMBIのデータなら、µmが多いけど...まだ試していない）</span></li>
+<li><span style="color:#444C99;">ボタン<code>Export</code></span></li>
+</ol>
+</li>
+<li>
+<p>3D slicer内のモジュール<code>Model</code>へ出力する。<code>Export/Import models and labelmaps</code></span></p>
+<ol>
+<li><span style="color:#444C99;">Operation: <code>Export</code>, </span></li>
+<li><span style="color:#444C99;">Output type: Models, Output node: </span></li>
+<li><span style="color:#444C99;">Export models to new folder (デフォルト、赤い矢印ボタンでデフォルトに戻る)</span></li>
+<li><span style="color:#444C99;">Advancedはいじらないで。</span></li>
+<li><span style="color:#444C99;">ボタン<code>Export</code></span></li>
+<li><span style="color:#444C99;">モジュール<code>Model</code>にSegmentがうつった。</span></li>
+<li><span style="color:#444C99;">モジュール<code>Data</code>にデータが増えたことを確認できる。3D slicer内でのExport。きっと、いろんないろつけ。Segmentの表面をレインボーカラーなどカラフルにしたり、各スライスでの色を違えたりできる。ポリゴンか？軽いのか。</span></li>
 </ol>
 </li>
 </ul>
