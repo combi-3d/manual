@@ -468,14 +468,14 @@
       
       
         <label class="md-nav__link" for="__nav_4">
-          Image Processing
+          Image Processing/画像処理
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Image Processing" data-md-level="1">
+      <nav class="md-nav" aria-label="Image Processing/画像処理" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Image Processing
+          Image Processing/画像処理
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -486,7 +486,7 @@
   
     <li class="md-nav__item">
       <a href="../../image-processing/introduction/index.html" class="md-nav__link">
-        Overview/画像処理の概要
+        Overview/概要
       </a>
     </li>
   
@@ -800,86 +800,135 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview/概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    概要
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-setup" class="md-nav__link">
+    Initial setup/初期設定
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    初期設定
+    
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#frozen-block" class="md-nav__link">
-    凍結ブロック/Frozen block
+  <a href="#make-frozen-block" class="md-nav__link">
+    Make Frozen block/凍結ブロック
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-frozen-block" class="md-nav__link">
+    Set frozen block/凍結ブロックを設置する
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    凍結ブロックを設置する
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#place-the-camera" class="md-nav__link">
+    Place the camera/カメラを設置する
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setial-blockface-imaging" class="md-nav__link">
+    Setial blockface imaging/ブロック面の連続撮影
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    カメラを設置する　カメラとブロックの角度
+    
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    ブロック面の連続撮影
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camera-settings" class="md-nav__link">
+    Camera settings/カメラの設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collecting-sections" class="md-nav__link">
+    Collecting sections/切片採取
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
-    カメラの設定
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cleanup-after-use" class="md-nav__link">
+    Cleanup after use/後片付け
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
-    切片採取
+    
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    後片付け
+  <a href="#tips" class="md-nav__link">
+    Tips/ヒント
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    ヒント
-  </a>
-  
-    <nav class="md-nav" aria-label="ヒント">
+    <nav class="md-nav" aria-label="Tips/ヒント">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    カメラと連続撮影
+  <a href="#camera-and-imaing" class="md-nav__link">
+    Camera and imaing/カメラと連続撮影
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    その他
+  <a href="#others" class="md-nav__link">
+    Others/その他
   </a>
   
 </li>
@@ -904,73 +953,165 @@
 
 
 <h1 id="combi-c-cryostat2017-2020">CoMBI-C (Cryostat/クリオスタット型、2017-2020)</h1>
-<p>(This page is still in Japanease only.)</p>
-<h2 id="_1">概要</h2>
+<h2 id="overview">Overview/概要</h2>
 <ul>
-<li>初期設定として、ハンドルに黒シール添付、センサー位置決定、カメラのCoMBI用設定</li>
-<li>凍結ブロックを準備する</li>
-<li>凍結ブロックを設置し、軽く面出しする。</li>
-<li>カメラとセンサー等を設置し、カメラの角度とブロックの角度をあわせる。面出しを少しずつ進めて、カメラやブロックの角度と位置を合わせていく。</li>
-<li>試料が露出しそうなところで、カメラの露出設定、ブロック面の連続撮影を開始する。</li>
-<li>切片は、必要な場合に、必要な分だけ、採取する。</li>
+<li>Initial setup includes attaching black sheet (low-reflection sheet) on the handle, determining sensor positions, and setting up the camera for CoMBI.</li>
+<li>Prepare the specimen block.</li>
+<li>Set up the camera and sensor, etc., and align the anglea of the camera and block. Slice the block little by little, and align the angle and position of the camera and block, carefully.</li>
+<li>When the specimen is about to be exposed, set the exposure of the camera and start serial blockface imaging.</li>
+<li>Collect sections as required.</li>
 </ul>
-<h2 id="_2">初期設定</h2>
-<p>導入時だけの作業です。</p>
+<h2 id="_1"></h2>
+<ul>
+<li><span style="color:#444C99;">初期設定として、ハンドルに黒シール添付、センサー位置決定、カメラのCoMBI用設定</span></li>
+<li><span style="color:#444C99;">ブロックを準備する</span></li>
+<li><span style="color:#444C99;">カメラとセンサー等を設置し、カメラの角度とブロックの角度をあわせる。面出しを少しずつ進めて、カメラやブロックの角度と位置を合わせていく。</span></li>
+<li><span style="color:#444C99;">試料が露出しそうなところで、カメラの露出設定、ブロック面の連続撮影を開始する。</span></li>
+<li><span style="color:#444C99;">切片は、必要な場合に、必要な分だけ、採取する。</span></li>
+</ul>
+<h2 id="initial-setup">Initial setup/初期設定</h2>
 <ol>
-<li>CoMBI用のコントローラとセンサーをつける。磁石で設置するので、取り外しも簡単です。<ul>
-<li>コンセントの位置を確認します。コントローラ（12V）、パソコン（オプション）、カメラ（ACアダプタの場合）に供給できる環境を整えます。</li>
+<li>Attach the controller and sensor. They are easy to remove as they are attached using magnets.<ul>
+<li>Check the location of the power supply and cable length for the controller (12V), PC (optional), and camera (in case of AC adapter).</li>
 </ul>
 </li>
-<li>ハンドルに黒シールを貼り、センサーの位置を調整する。<ul>
-<li>1cm角の黒シールです。共通機器の場合、貼りっぱなしできるように交渉・告知をお願いします。クリオスタット作業の邪魔にはならないので大丈夫だと思っています。</li>
-<li>手動ハンドルの場合、ブロックが最も上にきたところ。単振動なので、上端で撮影したほうが、ズレが少ない。（当方のCM3050では、ロックレバーがロック位置から1-2センチ過ぎたところでした。ですので、ロック機能もつかえます。）</li>
-<li>電動ハンドルの場合、センサーが検知する位置は、ブロックがすこし下ったところ。自動運転時のウィンドウ内に収まること。</li>
-<li>電源をいれて、<code>Sensor ON</code>。ハンドルを回すと、LEDが黒シールの位置、すなわち、シャッターのタイミングを知らせてくれます。</li>
-<li>黒シールの位置調整（導入時のみ）や、センサーの高さ調整（導入時のみ）、センサーの位置調整（実験ごと、磁石なのでずらせる）を行う。</li>
+<li>Attach a piece of black sheet (low-reflection sheet) on the handle, and adjust the position of the sensor.<ul>
+<li>1 cm square black sticker. If the microtome is one of common facilities, please negotiate and announce that the black sticker remains attached.</li>
+<li>For manual handles, the block is imaged at the top position, where the block almost stoping. In case of CM3050, the imaging position is 1-2 cm past the lock position. So you can use the lock function as well.</li>
+<li>For motorized hanldes, the sensor detects the position where the block is a little lower. The position must be within the sectioning window of the automatic operation (CM3050).</li>
+<li>The power is turned on, the sensor is ON, and rotate the handle. An LED indicates the position of the black sticker, i.e., the timing of the shutter release.</li>
+<li>Adjust the position of the black seal, the height of the sensor, and the position of the sensor.</li>
 </ul>
 </li>
-<li>カメラをCoMBI用に設定する<ul>
-<li>時刻合わせ（本体メニュー）</li>
-<li>画像形式はRAW（推奨）（本体メニュー）</li>
-<li>レリーズ撮影の許可（パソコン側？）</li>
-<li>レンズなしレリーズを、許可（本体メニュー）</li>
-<li>露出モードは、Manual。（本体ボタン）</li>
-<li>フォーカスモードも、Manual。（本体かレンズにスライドスイッチ）</li>
-<li>露出設定は、実験ごとに行います。大まかには、シャッター速度1/500-1/125、ISO100-800, 絞りは開放から1つ絞ったところを使います。</li>
+<li>Set the camera for CoMBI.<ul>
+<li>Set the time (main menu)</li>
+<li>Set the image format to RAW (recommended) (main menu)</li>
+<li>Allow release shooting (PC app?)</li>
+<li>Allow release without lens (main menu)</li>
+<li>Exposure mode is set to Manual (main unit button).</li>
+<li>Focus mode is also manual (slide switch on the camera body or lens).</li>
+<li>Exposure settings are made for each experiment. Typically, shutter speed 1/500-1/125, ISO 100-800, aperture one stop down from full-open.</li>
 </ul>
 </li>
-<li>カメラとCoMBIコントローラをつなげてみます。<ul>
-<li><code>Sensor ON</code>、<code>Focus Hold</code>で、ハンドルを回し、センサーが黒シールを感知したときに、シャッターがきれるか確認します。</li>
+<li>Connect the camera to the CoMBI controller.<ul>
+<li>Connect the camera to the CoMBI controller. Turn <code>Sensor</code> and <code>Hold</code> ON, and operate the handle. Check if the shutter is released when the sensor detect the black sticker.</li>
+<li>Two LED illuminate diagonally. High (12V) or Low (9V).</li>
+<li>Brushes keep the block clean. Highly recommend to use the anti-roll plate, which is effectively clean the block, more than brushes.</li>
 </ul>
 </li>
-<li>その他のCoMBI部品も付けてみて、動作確認します。<ul>
-<li>LED 斜めから2灯。12Vなら強、9Vなら弱</li>
-<li>ブラシ、ブロックをキレイに保つ。ブラシよりも、クリオスタット付属のアンチロールプレートのほうが効果的に削りカスを除けます。</li>
-</ul>
-</li>
-<li>カメラとパソコンをつなげてみます（オプション）。Sony Imaging Edgeなどのテザリングアプリ。<ul>
-<li>設置場所を確保、ケーブルがとどくか。</li>
-<li>ファイル転送の設定（アプリ）で、PC保存とできればSDカードにも保存をします。</li>
-<li>ハンドルを回して、動作確認します。</li>
-<li>もし、MacのImage Captureなら、自動転送はできません。転送は手動でできます。かわりにカメラ本体内のファイルリストを見られます。</li>
+<li>(optional) Connect the camera to your computer. See <a href="../tethering/">"Tethering"</a>. <ul>
+<li>File transfer settings (app): save the file to the PC and, also to the SD card, if possible. </li>
 </ul>
 </li>
 </ol>
-<h2 id="frozen-block">凍結ブロック/Frozen block</h2>
+<h2 id="_2"></h2>
+<ol>
+<li><span style="color:#444C99;">CoMBI用のコントローラとセンサーをつける。磁石で設置するので、取り外しも簡単です。</span><ul>
+<li><span style="color:#444C99;">コンセントの位置を確認します。コントローラ（12V）、パソコン（オプション）、カメラ（ACアダプタの場合）に供給できる環境を整えます。</span></li>
+</ul>
+</li>
+<li><span style="color:#444C99;">ハンドルに黒シールを貼り、センサーの位置を調整する。</span><ul>
+<li><span style="color:#444C99;">1cm角の黒シールです。共通機器の場合、貼りっぱなしできるように交渉・告知をお願いします。クリオスタット作業の邪魔にはならないので大丈夫だと思っています。</span></li>
+<li><span style="color:#444C99;">手動ハンドルの場合、ブロックが最も上にきたところ。単振動なので、上端で撮影したほうが、ズレが少ない。（当方のCM3050では、ロックレバーがロック位置から1-2センチ過ぎたところでした。ですので、ロック機能もつかえます。）</span></li>
+<li><span style="color:#444C99;">電動ハンドルの場合、センサーが検知する位置は、ブロックがすこし下ったところ。自動運転時のウィンドウ内に収まること。</span></li>
+<li><span style="color:#444C99;">電源をいれて、<code>Sensor ON</code>。ハンドルを回すと、LEDが黒シールの位置、すなわち、シャッターのタイミングを知らせてくれます。</span></li>
+<li><span style="color:#444C99;">黒シールの位置調整（導入時のみ）や、センサーの高さ調整（導入時のみ）、センサーの位置調整（実験ごと、磁石なのでずらせる）を行う。</span></li>
+</ul>
+</li>
+<li><span style="color:#444C99;">カメラをCoMBI用に設定する</span><ul>
+<li><span style="color:#444C99;">時刻合わせ（本体メニュー）</span></li>
+<li><span style="color:#444C99;">画像形式はRAW（推奨）（本体メニュー）</span></li>
+<li><span style="color:#444C99;">レリーズ撮影の許可（パソコン側？）</span></li>
+<li><span style="color:#444C99;">レンズなしレリーズを、許可（本体メニュー）</span></li>
+<li><span style="color:#444C99;">露出モードは、Manual。（本体ボタン）</span></li>
+<li><span style="color:#444C99;">フォーカスモードも、Manual。（本体かレンズにスライドスイッチ）</span></li>
+<li><span style="color:#444C99;">露出設定は、実験ごとに行います。大まかには、シャッター速度1/500-1/125、ISO100-800, 絞りは開放から1つ絞ったところを使います。</span></li>
+</ul>
+</li>
+<li><span style="color:#444C99;">カメラとCoMBIコントローラをつなげてみます。</span><ul>
+<li><span style="color:#444C99;"><code>Sensor ON</code>、<code>Focus Hold</code>で、ハンドルを回し、センサーが黒シールを感知したときに、シャッターがきれるか確認します。</span></li>
+</ul>
+</li>
+<li><span style="color:#444C99;">その他のCoMBI部品も付けてみて、動作確認します。</span><ul>
+<li><span style="color:#444C99;">LED 斜めから2灯。12Vなら強、9Vなら弱</span></li>
+<li><span style="color:#444C99;">ブラシ、ブロックをキレイに保つ。ブラシよりも、クリオスタット付属のアンチロールプレートのほうが効果的に削りカスを除けます。</span></li>
+</ul>
+</li>
+<li><span style="color:#444C99;">カメラとパソコンをつなげてみます（オプション）。くわしくは、 <a href="../tethering/">"Tethering"</a>。</span><ul>
+<li><span style="color:#444C99;">ファイル転送の設定（アプリ）で、PC保存とできればSDカードにも保存をします。</span></li>
+</ul>
+</li>
+</ol>
+<h2 id="make-frozen-block">Make Frozen block/凍結ブロック</h2>
 <p>See <a href="../frozenblock/">"Frozen specimen"</a></p>
-<h2 id="_3">凍結ブロックを設置する</h2>
+<h2 id="set-frozen-block">Set frozen block/凍結ブロックを設置する</h2>
 <ol>
-<li>窒素などで凍結させた後、クリオスタット庫内に約10分放置し、温度を安定させる</li>
+<li>After freezing with nitrogen, etc., leave in the cryostat chamber for about 10 minutes to stabilize the temperature.</li>
+<li>When adhering a frozen block to a chuck, a white block would be adhered with a black OCT. Conversely, a black block is bonded with a white OCT (figure below). The blockface clearly shows the contour of the block. The contour of the block is useful for successful registration.</li>
 <li>
-<p>凍結ブロックをチャックに接着するとき、白ブロックは、黒OCTで接着する。反対に、黒ブロックなら、白OCTで接着します。下図の左（ブロック面像で、ブロック周囲の形状が、はっきりします。明瞭かつ同一形状のブロック周囲像は、のちのズレ補正を成功させるために有効です。）</p>
+<p><strong>Slicing (1) a little bit</strong> to eliminate the unevenness of the top surface of the block.</p>
 <p><img alt="OCT" src="../img/blackOCT1.png" title="Black OCT" />    <img alt="OCT" src="../img/blackOCT4.png" title="Black OCT" /></p>
-</li>
-<li>
-<p><strong>面出し1回目</strong>は、かるく行う。ブロック上面の凹凸が無くなる程度でよい。</p>
+<h2 id="_3"></h2>
+<ol>
+<li><span style="color:#444C99;">窒素などで凍結させた後、クリオスタット庫内に約10分放置し、温度を安定させる</span></li>
+<li><span style="color:#444C99;">凍結ブロックをチャックに接着するとき、白ブロックは、黒OCTで接着する。反対に、黒ブロックなら、白OCTで接着します。下図の左（ブロック面像で、ブロック周囲の形状が、はっきりします。明瞭かつ同一形状のブロック周囲像は、のちのズレ補正を成功させるために有効です。）</span></li>
+<li><span style="color:#444C99;"><strong>面出し1回目</strong>は、かるく行う。ブロック上面の凹凸が無くなる程度でよい。</span></li>
+</ol>
 </li>
 </ol>
-<h2 id="_4">カメラを設置する　カメラとブロックの角度</h2>
-<p>カメラレンズの長軸はブロック面に垂直であること、さらに、カメラレンズの長軸とブロックの長軸が水平になるように調整します。まいど、丁寧に行います。慣れてきても、ときどき1時間くらいかけています。</p>
+<h2 id="place-the-camera">Place the camera/カメラを設置する</h2>
+<p>The long axis of the camera lens should be perpendicular to the cutting face and horizontal to the axis of block. I place the camera carefully. Even though I experienced many time, sometimes it takes me about an hour.</p>
+<p><span style="color:#444C99;">カメラレンズの長軸はブロック面に垂直であること、さらに、カメラレンズの長軸とブロックの長軸が水平になるように調整します。まいど、丁寧に行います。すぐに設置できることが多いですが、まれに1時間くらいかけて慎重に設置します。</span></p>
+<ol>
+<li>Place the camera (A block is not needed yet. If there is a block, put it at the bottom position).<ul>
+<li>A controller and sensor are also installed, and the camera is connected to the controller. (The LEDs are not needed yet. LEDs will be installed just before imaging.)</li>
+</ul>
+</li>
+<li>
+<p>Adjust the vertical angle of the camera</p>
+<ul>
+<li>The block and LEDs are still not needed.  </li>
+<li>The block surface and the camera's sensor should be parallel; in the case of the CM3050, the long axis of the camera and lens is at a 35° lowering angle. If the head has an angle scale, it can be easily aligned. If the head does not have an angle scale, use the camera guide and the plate (colored in yellow in the figure). The plate is parallel to the block surface, so place a guide perpendicular to this surface and align the long axis of the lens with the guide.</li>
+</ul>
+<p><img alt="Camera position" src="../img/cam_position.png" title="Camera position" /></p>
+</li>
+<li>
+<p>Adjust camera left/right angle (block not yet required)</p>
+<ul>
+<li>First, visually check. The block and LEDs are still not needed. </li>
+<li>Next, refer to knife. Check if focusing can be done in both right/left side of the image.</li>
+</ul>
+</li>
+<li>Move the block to the imaging position and adjust the camera position strictly using the blockface <ul>
+<li>From now, adjust with the blockface.</li>
+<li>Adjusting the camera position. You can move the camera position parallel with tripod, use the elevator on the tripod, or use the slider. The block comes to the center of the imaging area. (Final adjustments are made after the block is adjusted.)</li>
+</ul>
+</li>
+<li>Angle of the block. Adjust so that the long axis of the block and the long axis of the lens are aligned.<ul>
+<li>Since the alignment is corrected with the wall around the block, the block should be made as rectangular or straight cylinders.</li>
+<li>Repeat the focusing to the top surface of the block, and to the bottom of the block. Once the axes are aligned, the four sides of the <strong>bottom</strong> will be visible.
+<img alt="Angle" src="../img/block_angle.png" title="Angle" /></li>
+</ul>
+</li>
+<li><strong>Slicing (2)</strong> till the blockface is revealed thourouly.</li>
+<li>Final check of camera position<ul>
+<li>When the block is in the imaging position, make sure that the block is in the center of the view and that all four sides of the blocksface are in focus.</li>
+</ul>
+</li>
+<li>
+<p>Paint colored OCT on the sides of the block.</p>
+<ul>
+<li>If the block is white, apply black OCT (left in the figure below). If the block is black, apply white OCT to the sides (right in the figure below).</li>
+<li>Painting on the top side is essential. Top side tend to be covered with debris without painting. Sometimes I paint on the top and another side just to be safe, and sometimes I paint on all four sides. This painting is done to ensure the success of later image registration.</li>
+</ul>
+<p><img alt="OCT" src="../img/blackOCT2.png" title="Black OCT" /><img alt="OCT" src="../img/blackOCT3.png" title="Black OCT" /></p>
+</li>
+<li>
+<p>After painting, wait for more than 5 min till the temperature stable.</p>
+</li>
+<li><strong>Slicing (3)</strong> till you see through the specimen (not expose the specimen).</li>
+</ol>
+<hr />
 <ol>
 <li>カメラを置いてみる（ブロックは不要、ブロックがあれば下端にいてもらうのでよい。）<ul>
 <li>コントローラとセンサーも設置して、カメラをコントローラに接続する。（LEDはまだ要らない。各種調整で邪魔なので、撮影直前に設置します）</li>
@@ -1018,168 +1159,224 @@
 </li>
 <li><strong>面出し、3回目</strong>。こんどは、試料が見え始める寸前まで。</li>
 </ol>
-<h2 id="_5">ブロック面の連続撮影</h2>
+<h2 id="setial-blockface-imaging">Setial blockface imaging/ブロック面の連続撮影</h2>
 <ol>
-<li>LED照明を設置し、ON。</li>
-<li>フォーカスを再確認する。4辺でフォーカスが合うこと。</li>
-<li>カメラの露出設定。<ul>
-<li>See <a href="../camerasettings/">"Camera settings"</a></li>
+<li>Place LED and turn ON.</li>
+<li>Check focus again. All four side is in fucus.</li>
+<li>Camera settings. See <a href="../camerasettings/">"Camera settings"</a></li>
+<li>Capture a scale. Use levers <code>Focus Hold</code> and <code>Release</code>.</li>
+<li>Check if the SD card have enough space.</li>
+<li>Adjust the position of anti-roll plate at a little further than blade. Sections slip between the plate and blade.<ul>
+<li>The anti-roll plate can keep the blockface clean.</li>
 </ul>
 </li>
-<li>スケールを撮影する。手動。Focus Hold、Release レバーを使う。</li>
-<li>SDカードに十分な容量があるか、前の実験の画像がたまっていないか、確認する。</li>
-<li>アンチロールプレートの位置調整。刃よりちょっと飛び出たところ。切片がプレートと刃の隙間にはいること。<ul>
-<li>これによって、切りくずがブロック面にかぶらないようになる。効果絶大。</li>
-</ul>
-</li>
-<li>いよいよ、連続撮影。Focus Hold ON、Sensor ON、(Brush ON)。</li>
-<li>
-<p>切削開始</p>
-<p><strong>手動ハンドル設定</strong>（試料が上端に来たときに撮影する設定）　せっせと回します。CoMBI-C(2017-2020)の場合、2-3秒/枚で撮影出来ます。撮影後に誤作動を防止するため、撮影後にセンサーは2秒間休むようになっています。よって、2秒以内では撮影出来ません。CoMBI-U(2021)の場合、制限はなく、速く撮影出来ます。ただし1秒/枚より速くなると、ズレがでるようになります。手動のデメリットは、労力ですが、それを超えるメリットがあります。連続撮影が早い（600枚で、約25分）、行きすぎたら逆回転で戻って撮影しなおせる、切削や一時停止の操作が簡単、切片取得時だけ切削厚をかえるなどの設定操作が簡単、です。さらに、丁寧な作業（600枚、45分）で失敗なく撮影すると、のちのズレ補正が不要になるときもあります。</p>
-<p><strong>電動ハンドル設定</strong>（動いている途中で撮影する設定）　切削ウィンドウの設定が必要です。切削ウィンドウは、通常切削時にゆっくり試料を動かす機能ですが、CoMBIでは、撮影位置でゆっくり動かします。通常利用の場合、ウィンドウ開始点＞切削＞ウィンドウ終了点、となりますが、CoMBIの場合、ウィンドウ開始点&gt;撮影ポイント＞ウィンドウ終了点＞切削、という順になります。つまり、ウィンドウが刃より上方になります。ウィンドウ内でのスピードは<code>25%</code>にセットします。最速6秒/枚で撮影出来ますが、余りシビアにウィンドウをセットすると、行き過ぎたりしますので、6-10秒/枚で撮影します。オートメーションは作業者にとって労力が減るというメリットがありますが、総撮影時間が長くなるデメリットがあります。600枚で1時間〜1時間40分。また、動いている標本を撮影するので、のちのズレ補正が必須となります。</p>
-<p><strong>USBで転送</strong>しながら撮影する場合（Sony a7RIII + Imaging Edge)、USB3による転送は2秒/枚です。はやり、最速2-3秒に1枚が安全なところです。なお、ケーブルはUSB3（5Gb/sec）以上の転送速度規格のものを使ってください。(40Gb/secとかまでは必要ではありません。)</p>
-</li>
+<li>Focus Hold ON、Sensor ON、(Brush ON)。</li>
+<li>Let's start imaging.</li>
 </ol>
-<h2 id="_6">カメラの設定</h2>
+<h2 id="_4"></h2>
+<ol>
+<li><span style="color:#444C99;">LED照明を設置し、ON。</span></li>
+<li><span style="color:#444C99;">フォーカスを再確認する。4辺でフォーカスが合うこと。</span></li>
+<li><span style="color:#444C99;">カメラの露出設定。See <a href="../camerasettings/">"Camera settings"</a></span></li>
+<li><span style="color:#444C99;">スケールを撮影する。手動。Focus Hold、Release レバーを使う。</span></li>
+<li><span style="color:#444C99;">SDカードに十分な容量があるか、前の実験の画像がたまっていないか、確認する。</span></li>
+<li><span style="color:#444C99;">アンチロールプレートの位置調整。刃よりちょっと飛び出たところ。切片がプレートと刃の隙間にはいること。</span><ul>
+<li><span style="color:#444C99;">これによって、切りくずがブロック面にかぶらないようになる。効果絶大。</span></li>
+</ul>
+</li>
+<li><span style="color:#444C99;">いよいよ、連続撮影。Focus Hold ON、Sensor ON、(Brush ON)。</span></li>
+<li><span style="color:#444C99;">切削開始</span></li>
+</ol>
+<h2 id="_5"></h2>
+<ul>
+<li>
+<p><strong>Manual handle operation</strong> Image the blockface when the block is at the top. In the CoMBI-C (2018-2020), the sensor rests for 2 seconds after taking a picture to prevent malfunction. CoMBI-U(2021-current) has no limitation and can take pictures faster than 1 second/picture. The disadvantage of manual operation is the labor, but there are some advantages that exceed this disadvantage; Serial imaging is fast (about 25 minutes for 600 images), if you passed away from the imaging position without imaging, you can go back and image in reverse rotation. Slicing and pausing are easy, and settings can be changed during operations such as changing the cutting thickness only when acquiring sections. In addition, if you perform serial imaging very carefully, you may not need to register later.</p>
+<p><span style="color:#444C99;"><strong>手動ハンドル設定</strong>（試料が上端に来たときに撮影する設定）　せっせと回します。CoMBI-C(2017-2020)の場合、2-3秒/枚で撮影出来ます。撮影後に誤作動を防止するため、撮影後にセンサーは2秒間休むようになっています。よって、2秒以内では撮影出来ません。CoMBI-U(2021)の場合、制限はなく、速く撮影出来ます。ただし1秒/枚より速くなると、ズレがでるようになります。手動のデメリットは、労力ですが、それを超えるメリットがあります。連続撮影が早い（600枚で、約25分）、行きすぎたら逆回転で戻って撮影しなおせる、切削や一時停止の操作が簡単、切片取得時だけ切削厚をかえるなどの設定変更もできる、です。さらに、丁寧な作業で失敗なく連続撮影すると、のちのズレ補正が不要になるときもあります。</span></p>
+</li>
+<li>
+<p><strong>Motorized handle operation</strong> Image the blockface when the block is moving in the sectioning window. Sectioning window is generally set for section slowly, while CoMBI utilize sectioning window for imaging slowly moving block.For CoMBI, start and end of the window are set above the blade. Speed in the sectioning window is set at 25%. Interval of serial imaging is 6 sec/image at fastest, 6-10 sec/image in most cases. Motorization reduce labor, but imaging duration become longer. In addition, since the block is moving when it is imaged, image registration is always required.</p>
+<p><span style="color:#444C99;"><strong>電動ハンドル設定</strong>（動いている途中で撮影する設定）　切削ウィンドウの設定が必要です。切削ウィンドウは、通常切削時にゆっくり試料を動かす機能ですが、CoMBIでは、撮影位置でゆっくり動かします。通常利用の場合、ウィンドウ開始点＞切削＞ウィンドウ終了点、となりますが、CoMBIの場合、ウィンドウ開始点&gt;撮影ポイント＞ウィンドウ終了点＞切削、という順になります。つまり、ウィンドウが刃より上方になります。ウィンドウ内でのスピードは<code>25%</code>にセットします。最速6秒/枚で撮影出来ますが、余りシビアにウィンドウをセットすると、行き過ぎたりしますので、6-10秒/枚で撮影します。オートメーションは作業者にとって労力が減るというメリットがありますが、総撮影時間が長くなるデメリットがあります。600枚で1時間〜1時間40分。また、動いている標本を撮影するので、のちのズレ補正が必須となります。</span></p>
+</li>
+<li>
+<p><strong>Transfer images via USB</strong> Transfer one image takes about 2 sec via USB3 (Sony a7RIII + Imaging Edge). Use USB3 cable with the transfer speed faster than 5Gb/sec. Cables with transfer speed of 40Gb/sec is available, but no need to use for CoMBI-C (2018-2020).</p>
+<p><span style="color:#444C99;"><strong>USBで転送</strong>しながら撮影する場合（Sony a7RIII + Imaging Edge)、USB3による転送は2秒/枚です。はやり、最速2-3秒に1枚が安全なところです。なお、ケーブルはUSB3（5Gb/sec）以上の転送速度規格のものを使ってください。(40Gb/secとかまでは必要ではありません。)</span></p>
+</li>
+</ul>
+<h2 id="camera-settings">Camera settings/カメラの設定</h2>
 <p>See <a href="../camerasettings/">"Camera settings"</a> for detailed information about exposure time, iris, and others.</p>
 <p><span style="color:#444C99;">露出や絞りなど、カメラの設定については、Camera Settingsをご覧ください。</span></p>
-<h2 id="_7">切片採取</h2>
-<p>連続撮影を一時停止し、その間に切片を採取できます。Leica CM3050電動モデルを使っている場合は、ボタン「1回切りモード」を選んで、一枚だけ採取します。もしくは手動で切削して切片を採取します。</p>
+<hr />
+<h2 id="collecting-sections">Collecting sections/切片採取</h2>
+<p>Sections can be collected while serial imaging is paused. Manual operation makes it easy to pause and collect sections. For motorized operation by Leica CM3050, select a mode "slice one time" when collecting sections.
+<span style="color:#444C99;"><br>連続撮影を一時停止し、その間に切片を採取できます。Leica CM3050電動モデルを使っている場合は、ボタン「1回切りモード」を選んで、一枚だけ採取します。もしくは手動で切削して切片を採取します。</span></p>
 <ol>
-<li>掃除のために、連続撮影を停止。アンチロールプレートをキレイにする</li>
-<li>アンチロールプレートを冷やすと、切片はまっすぐのまま入り込みやすい。液体窒素をプラスティックカップに入れて、ガラスの上にかざす。<strong>注意</strong>：金属カップで圧着するとガラスが割れます!プラスティックなら大丈夫です</li>
-<li>ブロック面を撮影、一回。電動でもよいけれど、手動のほうが切片が安定する。</li>
-<li>切削、一回。試料ブロックが下へいったところで停止。</li>
-<li>
-<p>切片採取。ガラススライドへ。</p>
-<ul>
-<li>少々の歪みがあっても、3Dデータと相関させることで、切片解析のときに「歪んでます！」と断言できるのが、CoMBIの良いところです。アーティファクトの歪みと、実験条件による形態変化を区別できます。</li>
-<li>刃こぼれしやすい標本だと、連続撮影している間に、刃が痛んで切片を採りづらくなります。なんとか切片を採りたいときは、切片にしたい領域が先に現れるように包埋したり、硬い組織（幼虫の大顎）があとで現れるように包埋したりしました。</li>
-<li>一般的な厚さ8-10µmと温度-20度であれば、普段通り切片を採れます。高精細3Dを目指している場合、切削厚が薄くなり、切片採取は難しくなります。私の凍結切片における最薄記録は4µm、-23度で、かなり難しかったです。大型の標本の場合、20µmや40µmも使ったことがあります。-15度くらいが良いところです。</li>
+<li>Pause serial imaging and clean anti-roll plate, knife folder, and block.</li>
+<li>Chill anti-roll plate with liquid nitrogen. When the anti-roll plate is cooled, the sections remain straight and slide in. Put liquid nitrogen in a plastic cup and hold it over the glass plate. <strong>Caution</strong>: Pressing with a metal cup will cause the glass to break! Use plastic cup!</li>
+<li>Image the blockface once. </li>
+<li>Slice once. Manual sectioning is more stable than motorized. Pause when the block goes down.</li>
+<li>Collect section on the slide glass.<ul>
+<li>Even if there is a small amount of distortion, correlating it with the 3D data allows us to assert during section analysis, "It's distorted!" This is the advantage of CoMBI. You can distinguish between artifact distortion and morphological changes caused by experiment setting.</li>
+<li>Hard specimens hurt the blade during serial imaging, making it difficult to collect sections.I embedded specimen so that the area I wanted to section (larval head) would appear first, and so that the hard tissue (larval mandible) would appear later.</li>
+<li>Sections can be taken as usual with a typical thickness of 8-10µm and temperature of -20°C. Imaging blockface can be conducted with various slicing thickness, however, for collecting seccion, thickness of sections is restricted. My thinnest record in frozen sections was 4µm at -23°C, which was quite difficult. I have also used 20µm and 40µm for large specimens at -15 °C. </li>
 </ul>
 </li>
-<li>
-<p>ブロック面像のファイル名を、スライドガラスと実験ノートに記録する。</p>
-<ul>
-<li>カメラ単独使用の場合：時刻を秒単位まで記録する。のちにブロック面像ファイルの生成時刻と照合する。カメラ内の時計と手元の時計あわせを済ませておくこと。</li>
-<li>カメラをPCでつなげている場合：Sony Imaging Edgeなら、画像の転送先フォルダ内で、ファイル名を確認できる。Nikon &amp; Mac &amp; 意地でも無料の場合、Mac付属のImageCaptureでカメラ内のファイル名を確認できる。</li>
+<li>Record the file name of the blockface image on the glass slide and also in the experimental notebook.<ul>
+<li>If your camera is connected to a PC: Sony Imaging Edge allows you to see the file names in the folder to which the images will be transferred. ImageCapture (Mac), can check the file names in the camera. </li>
+<li>If the camera is used alone: The time is recorded in seconds. The time is later matched with the time when the blockface iamge file was generated. The time in the camera must be adjusted before experiment.</li>
 </ul>
 </li>
-<li>ブロック面撮影を再開する</li>
-<li>切片を取りたいときは、一時停止する</li>
+<li>Restart blockface imaging.</li>
 </ol>
-<h2 id="_8">後片付け</h2>
+<h2 id="_6"></h2>
 <ol>
-<li>LEDランプとブラシのモータは、湿気を嫌います。<ul>
-<li>クリオスタット庫外に出すときは、さっとビニール袋に入れます。結露を防止しながら、室温に戻します。</li>
-<li>LEDを点灯しておけば、温度が上がりやすいですが、くれぐれも消し忘れにはご注意ください。</li>
-<li>もしくは、クリオスタット扉ガラスは暖かいので、その上にしばらく置いておくのでもいいでしょう。</li>
+<li><span style="color:#444C99;">掃除のために、連続撮影を停止。アンチロールプレートをキレイにする</span></li>
+<li><span style="color:#444C99;">アンチロールプレートを冷やすと、切片はまっすぐのまま入り込みやすい。液体窒素をプラスティックカップに入れて、ガラスの上にかざす。<strong>注意</strong>：金属カップで圧着するとガラスが割れます!プラスティックなら大丈夫です</span></li>
+<li><span style="color:#444C99;">ブロック面を撮影、一回。電動でもよいけれど、手動のほうが切片が安定する。</span></li>
+<li><span style="color:#444C99;">切削、一回。試料ブロックが下へいったところで停止。</span></li>
+<li>
+<p><span style="color:#444C99;">切片採取。ガラススライドへ。</span></p>
+<ul>
+<li><span style="color:#444C99;">少々の歪みがあっても、3Dデータと相関させることで、切片解析のときに「歪んでます！」と断言できるのが、CoMBIの良いところです。アーティファクトの歪みと、実験条件による形態変化を区別できます。</span></li>
+<li><span style="color:#444C99;">刃こぼれしやすい標本だと、連続撮影している間に、刃が痛んで切片を採りづらくなります。なんとか切片を採りたいときは、切片にしたい領域が先に現れるように包埋したり、硬い組織（幼虫の大顎）があとで現れるように包埋したりしました。</span></li>
+<li><span style="color:#444C99;">一般的な厚さ8-10µmと温度-20度であれば、普段通り切片を採れます。高精細3Dを目指している場合、切削厚が薄くなり、切片採取は難しくなります。私の凍結切片における最薄記録は4µm、-23度で、かなり難しかったです。大型の標本の場合、20µmや40µmも使ったことがあります。-15度くらいが良いところです。</span></li>
 </ul>
 </li>
-<li>削りカスは、できるだけ拾い集めて、試料の扱いルールや機関の廃棄ルールに従って、適切に処理します。</li>
-<li>クリオスタット庫内は、70%EtOHをティッシュにつけて、拭き掃除できます。<ul>
-<li>CoMBIでは多くの削りカスがでますが、みごとにきれいに元通りになります。</li>
-<li>約束ごととして、安全第一で、かならず刃をはずすこと。</li>
-<li>機器保全のため、EtOHは噴霧ではなく、清拭で使用します。</li>
-<li>共通機器の場合は汚れに気を遣いますが、上記でキレイになります。</li>
+<li>
+<p><span style="color:#444C99;">ブロック面像のファイル名を、スライドガラスと実験ノートに記録する。</span></p>
+<ul>
+<li><span style="color:#444C99;">カメラ単独使用の場合：時刻を秒単位まで記録する。のちにブロック面像ファイルの生成時刻と照合する。カメラ内の時計と手元の時計あわせを済ませておくこと。</span></li>
+<li><span style="color:#444C99;">カメラをPCでつなげている場合：Sony Imaging Edgeなら、画像の転送先フォルダ内で、ファイル名を確認できる。Nikon &amp; Mac &amp; 意地でも無料の場合、Mac付属のImageCaptureでカメラ内のファイル名を確認できる。</span></li>
 </ul>
 </li>
-<li>データは、カメラ本体のSDカードと、転送先のPCにある状態です（推奨）。<ul>
-<li>SDカードのデータは、RAW-JPEG変換が正常に終了するまで、保っておきます。転送データはごくまれにファイルが破損しています。RAW-JPEG変換がおわったら、SDカードのデータを削除します。次の実験のために、空き容量を確保します。</li>
-</ul>
-</li>
-<li>コンセントを抜いて、CoMBI装置を片付けます。（このとき、必然的にLEDランプはOFFになるでしょう。）</li>
+<li><span style="color:#444C99;">ブロック面撮影を再開する</span></li>
 </ol>
 <hr />
-<h2 id="_9">ヒント</h2>
-<h3 id="_10">カメラと連続撮影</h3>
+<h2 id="cleanup-after-use">Cleanup after use/後片付け</h2>
+<ol>
+<li>LED lamps and brush motors do not like moisture.<ul>
+<li>When these are moved out of the cryostat chamber, they are quickly packed in a plastic bag. Let them warm up to room temperature while preventing condensation.</li>
+<li>If you keep the LEDs on, it is easy to raise the temperature, but please be careful not to forget to turn them off.</li>
+<li>Or, since the cryostat door glass is warm, you can leave them on it for a while.</li>
+</ul>
+</li>
+<li>Debris should be picked up as much as possible and properly disposed in accordance with the sample handling rules and the institution's disposal rules.</li>
+<li>The inside of the cryostat chamber can be cleaned with a tissue with 70% EtOH.<ul>
+<li>CoMBI produces a lot of debris, but the chamber is beautifully restored to its original state.</li>
+<li>Safety comes first, and the blade must always be removed during cleaning.</li>
+<li>For cryostat maintenance, EtOH is used by wiping, not spraying.</li>
+<li>For common equipment, we are careful about cleanliness, but wiping with ethanol will clean it up.</li>
+</ul>
+</li>
+<li>The data is recommanded to be saved both in the SD card and in the PC just after imaging. <ul>
+<li>Keep the data on the SD card until the RAW-JPEG conversion is successfully completed. Transferred data is very rarely file corrupted. After the RAW-JPEG conversion is finished, delete the data on the SD card to free disk space for the next experiment.</li>
+</ul>
+</li>
+<li>Unplug and put away the CoMBI devices. (The LED lamps will inevitably be turned off at this time.)</li>
+</ol>
+<h2 id="_7"></h2>
+<ol>
+<li><span style="color:#444C99;">LEDランプとブラシのモータは、湿気を嫌います。</span><ul>
+<li><span style="color:#444C99;">クリオスタット庫外に出すときは、さっとビニール袋に入れます。結露を防止しながら、室温に戻します。</span></li>
+<li><span style="color:#444C99;">LEDを点灯しておけば、温度が上がりやすいですが、くれぐれも消し忘れにはご注意ください。</span></li>
+<li><span style="color:#444C99;">もしくは、クリオスタット扉ガラスは暖かいので、その上にしばらく置いておくのでもいいでしょう。</span></li>
+</ul>
+</li>
+<li><span style="color:#444C99;">削りカスは、できるだけ拾い集めて、試料の扱いルールや機関の廃棄ルールに従って、適切に処理します。</span></li>
+<li><span style="color:#444C99;">クリオスタット庫内は、70%EtOHをティッシュにつけて、拭き掃除できます。</span><ul>
+<li><span style="color:#444C99;">CoMBIでは多くの削りカスがでますが、みごとにきれいに元通りになります。</span></li>
+<li><span style="color:#444C99;">約束ごととして、安全第一で、かならず刃をはずすこと。</span></li>
+<li><span style="color:#444C99;">機器保全のため、EtOHは噴霧ではなく、清拭で使用します。</span></li>
+<li><span style="color:#444C99;">共通機器の場合は汚れに気を遣いますが、上記でキレイになります。</span></li>
+</ul>
+</li>
+<li><span style="color:#444C99;">データは、カメラ本体のSDカードと、転送先のPCにある状態です（推奨）。</span><ul>
+<li><span style="color:#444C99;">SDカードのデータは、RAW-JPEG変換が正常に終了するまで、保っておきます。転送データはごくまれにファイルが破損しています。RAW-JPEG変換がおわったら、SDカードのデータを削除します。次の実験のために、空き容量を確保します。</span></li>
+</ul>
+</li>
+<li><span style="color:#444C99;">コンセントを抜いて、CoMBI装置を片付けます。（このとき、必然的にLEDランプはOFFになるでしょう。）</span></li>
+</ol>
+<hr />
+<h2 id="tips">Tips/ヒント</h2>
+<h3 id="camera-and-imaing">Camera and imaing/カメラと連続撮影</h3>
 <ul>
 <li>
-<p>パソコンをカメラにつなげると便利です（必須ではない）</p>
-<p>画像を大きなモニタで表示できて、フォーカスの確認、画像の確認をしやすい。</p>
-<p>ソニーやニコンの一部機種では、撮影中にUSB給電できる。バッテリ残量の心配がなくなる、給電用別売りアクセサリが不要になる。</p>
+<p><strong>Connecting a computer to the camera is useful (but not required)</strong> Images can be displayed on a large monitor, making it easy to check focus and review images. Some Sony and Nikon models can be USB powered while shooting. No need to worry about remaining battery power, and no need for a separate accessory for power supply.
+    <span style="color:#444C99;"><br><strong>パソコンをカメラにつなげると便利です（必須ではない）</strong> 画像を大きなモニタで表示できて、フォーカスの確認、画像の確認をしやすい。ソニーやニコンの一部機種では、撮影中にUSB給電できる。バッテリ残量の心配がなくなる、給電用別売りアクセサリが不要になる。</span></p>
 </li>
 <li>
-<p>センサーがおかしい？やたらとシャッターを切る</p>
-<p>ハンドルを掃除する。中性洗剤で汚れを落とす。よく使用していると手垢で汚れていきます。禁忌：アルコール液は使わない。クリオスタットの塗装がハゲます。</p>
-<p>センサーとハンドル面の距離が適切でないかもしれません。近すぎ？　連絡ください。調整用スペーサを送ります。その他、センサー値チェッカー（自作）も送れます。コロナ前には、出張修理をしていましたが、いまはオンライン相談とスペーサ、チェッカーを送ることで簡単に修正できます。センサーの説明書では6 mmが最も鋭敏とありますが、実際は幅広く作動し、CoMBIは、10 mm位で運転しています。</p>
+<p><strong>Sensor is wrong? Shutter release in error (CoMBI-C 2018-2020, only for the infrared reflective sensor)</strong> Clean the handle. Clean with a neutral detergent. If used often, it will get dirty with hand dirt. Do not use: alcohol solution. The paint on the cryostat will be removed. Distance between sensor and handle surface may not be adequate. Is it too close?　Please contact us. We will send you a spacer for adjustment. In addition, I can send you a sensor value checker (self-made). Before Corona, I used to do on-site repair, but now I can correct the issues by online consultation and sending spacers and checkers. The sensor documentation says that 6 mm is the most sensitive, but in fact it works over a wide range, and CoMBI is running at about 10 mm.
+    <span style="color:#444C99;"><br><strong>センサーがおかしい？やたらとシャッターを切る（CoMBI-C 2018-2020、赤外線反射センサー)</strong> ハンドルを掃除する。中性洗剤で汚れを落とす。よく使用していると手垢で汚れていきます。禁忌：アルコール液は使わない。クリオスタットの塗装がハゲます。センサーとハンドル面の距離が適切でないかもしれません。近すぎ？　連絡ください。調整用スペーサを送ります。その他、センサー値チェッカー（自作）も送れます。コロナ前には、出張修理をしていましたが、いまはオンライン相談とスペーサ、チェッカーを送ることで簡単に修正できます。センサーの説明書では6 mmが最も鋭敏とありますが、実際は幅広く作動し、CoMBIは、10 mm位で運転しています。</span></p>
 </li>
 <li>
-<p>あれ？シャッター切ってない。さっきまで順調だったのに。</p>
-<p>SDカードがいっぱいになっていませんか？前の実験の画像がたまっていたりして。データ管理はどうか丁寧に、自戒を込めて。</p>
-<p>もしかして、電子接点付きマウントコンバータを使っていますか？電子接点付きでは、まれに、シャッターが切れません。例えば、Sonyカメラ＋Commliteアダプタ＋SigmaのNikonFレンズ、で経験しました。シンプルなアダプタ（ReyqualやKenko）を使ってください。問題なく安定稼働します。</p>
+<p><strong>Hey? The shutter isn't released. It was working fine just before.</strong> Is the SD card full? Images from previous experiments may be left. Are you using a mount converter with electronic contacts? In rare cases, the shutter will not release with electronic contacts. For example, I experienced this with a Sony camera + Commlite adapter + Sigma NikonF lenses. Use a simple manual adapter (Reyqual or Kenko), which should work fine and stable.
+    <span style="color:#444C99;"><br><strong>あれ？シャッター切ってない。さっきまで順調だったのに。</strong> SDカードがいっぱいになっていませんか？前の実験の画像がたまっていたりして。データ管理はどうか丁寧に、自戒を込めて。もしかして、電子接点付きマウントコンバータを使っていますか？電子接点付きでは、まれに、シャッターが切れません。例えば、Sonyカメラ＋Commliteアダプタ＋SigmaのNikonFレンズ、で経験しました。シンプルなアダプタ（ReyqualやKenko）を使ってください。問題なく安定稼働します。</span></p>
 </li>
 <li>
-<p>CoMBIコントローラが動かない？</p>
-<p>経験したことがあるのは、リリースケーブルの断線（新しくした）、レバースイッチ内の断線（これにはビックリした）。</p>
+<p><strong>CoMBI controller doesn't work?</strong> I have experienced: break in the release cable (replaced with a new one), break in the lever switch (It was surprising!).
+    <span style="color:#444C99;"><br><strong>CoMBIコントローラが動かない？</strong>  経験したことがあるのは、リリースケーブルの断線（新しくした）、レバースイッチ内の断線（これにはビックリした）。</span></p>
 </li>
 <li>
-<p>カメラが操作不能？</p>
-<p>Focus Holdが入ったままかもしれません。Focus Hold中は、カメラ本体の各種ボタンやMenuがいじれない仕様です。これは、改訂しようと考え中です（2021年）。改訂はできませんでした（2022年）。Nikon, Canon, Sonyで確認したところ、Canon機はFocus Holdを持続させておく仕様でないと、不安定になったため。</p>
+<p><strong>Can't operate the camera?</strong> Focus Hold may be on, as the various buttons and menus on the camera body cannot be manipulated while Focus Hold is on. This is something I am thinking of revising (2021). This could not be revised (2022) because I checked with Nikon, Canon, and Sony and found that Canon cameras are unstable unless Focus Hold is kept ON.
+    <span style="color:#444C99;"><br><strong>カメラが操作不能？</strong> Focus Holdが入ったままかもしれません。Focus Hold中は、カメラ本体の各種ボタンやMenuがいじれない仕様です。これは、改訂しようと考え中です（2021年）。改訂はできませんでした（2022年）。Nikon, Canon, Sonyで確認したところ、Canon機はFocus Holdを持続させておく仕様でないと、不安定になったため。</span></p>
 </li>
 <li>
-<p>画像転送ミス</p>
-<p>まれに画像転送ミスが起こります。Nikonの場合、SDカードに残っているのがデフォルトの設定です。Sonyの場合、かつ、Sony Imaging Edgeを使用している場合、できれば、PC転送の設定を、SDカードにも残す、にしてください。</p>
+<p><strong>Image Transfer Error</strong> Rarely an image transfer error will occur; for Nikon, the default setting is to leave the images on the SD card; for Sony, Sony Imaging Edge can manage the PC transfer setting to leave the images on the SD card.
+    <span style="color:#444C99;"><br><strong>画像転送ミス</strong> まれに画像転送ミスが起こります。Nikonの場合、SDカードに残っているのがデフォルトの設定です。Sonyの場合、かつ、Sony Imaging Edgeを使用している場合、できれば、PC転送の設定を、SDカードにも残す、にしてください。</span></p>
 </li>
 <li>
-<p>写真がボケている</p>
-<p>様々な要因があります。カメラの設置があまかった。最初から調整ミス。途中レンズにぶつかった、途中クリオスタットに寄りかかった、手をついた。実験室の床が不安定。三脚が丈夫ではなく不安定なのを使ってしまっている。</p>
+<p><strong>Images are blurred</strong> There are many causes. The camera was not set up properly. The camera was misadjusted from the beginning. Something hit the lens during the process. Operator leaned on the cryostat during the process, or put their hand on the cryostat. The floor of the laboratory is unstable. The tripod was not sturdy and unstable.
+    <span style="color:#444C99;"><br><strong>写真がボケている</strong> 様々な要因があります。カメラの設置があまかった。最初から調整ミス。途中レンズにぶつかった、途中クリオスタットに寄りかかった、手をついた。実験室の床が不安定。三脚が丈夫ではなく不安定なのを使ってしまっている。</span></p>
 </li>
 <li>
-<p>カメラが日時を記憶しなくなった。</p>
-<p>電源をOFFにすると、日付がリセットされてしまうという症状で、カメラ内の蓄電池が寿命です。そのままでも撮影はできます。実験のタイミングを考慮して、修理にだすのでいいでしょう。</p>
+<p><strong> Camera no longer remembers the date and time.</strong> The date is reset when the power is turned off, which is a symptom that the internal battery in the camera has reached the end of life. You can still take pictures without internal battery. Consider to send the camera for repair.
+    <span style="color:#444C99;"><br><strong>カメラが日時を記憶しなくなった。</strong>  電源をOFFにすると、日付がリセットされてしまうという症状で、カメラ内の蓄電池が寿命です。そのままでも撮影はできます。実験のタイミングを考慮して、修理にだすのでいいでしょう。</span></p>
 </li>
 <li>
-<p>シャッターの耐用回数</p>
-<p>Nikon D810は、20万回がカタログ値です。2014年から使用して、4年間で30万回を超えました。シャッターに明確な不具合が出ていたわけではありませんが、上記の内蔵電池の修理の時に、交換してもらいました。修理料金は、内蔵電池交換とシャッター交換をあわせて、2万円台でした。
-Sony a7RIIIの耐用回数は、50万回です。2017年からCoMBIにつかっていて、快調です。</p>
+<p><strong>Life of shutter</strong> The Nikon D810 has a shutter life of 200,000 times according to a catalog. I have been using D810 since 2014 and have shooted more than 300,000 times in four years. The shutter has not had any obvious issues, but I had replaced it when the internal battery was repaired as described above. The repair cost was 20,000 yen including both the internal battery and shutter replacement. The Sony a7RIII has a shutter life of 500,000 times.
+    <span style="color:#444C99;"><br><strong>シャッターの耐用回数</strong> Nikon D810は、20万回がカタログ値です。2014年から使用して、4年間で30万回を超えました。シャッターに明確な不具合が出ていたわけではありませんが、上記の内蔵電池の修理の時に、交換してもらいました。修理料金は、内蔵電池交換とシャッター交換をあわせて、2万円台でした。Sony a7RIIIの耐用回数は、50万回です。2017年からCoMBIにつかっていて、快調です。</span></p>
 </li>
 </ul>
-<h3 id="_11">その他</h3>
+<h3 id="others">Others/その他</h3>
 <ul>
 <li>
-<p>LED照明は、斜めから二灯にしている
-    正面一投と比較すると、斜めのほうがブロック面像において、陰影ができやすく、構造物を認識しやすくなる。</p>
+<p><strong>LED lighting is diagonal and from two direction</strong> Compared to a single frontal lighting, more shade and more contrast can be seen in the blockface. 
+    <span style="color:#444C99;"><br><strong>LED照明は、斜めから二灯にしている</strong> 正面一投と比較すると、斜めのほうがブロック面像において、陰影ができやすく、構造物を認識しやすくなる。</span></p>
 </li>
 <li>
-<p>照明が暗い？</p>
-<p>LEDもへたります。なんとなく暗くなってきたなと、ヒトの目でも感じるようになったら、交換です。連絡をいただくか、秋月電子で買えます。短命なときで1年くらいです。</p>
-<p>使用後は、湿気を吸わないように、ONのままクリオスタット庫外へ出し、十分暖まってから、OFFにします。</p>
+<p><strong>Lighting is dim?</strong> LEDs also get old. If you feel that the LEDs are getting dim, even with the human eye, it is time to replace them. Please contact us or you can buy them at Akizuki Denshi. The shortest life span was about one year. To avoid moisture, place them in a plastic bag or keep turning ON till it warmed up sufficiently.
+    <span style="color:#444C99;"><br><strong>照明が暗い？</strong> LEDもへたります。なんとなく暗くなってきたなと、ヒトの目でも感じるようになったら、交換です。連絡をいただくか、秋月電子で買えます。短命なときで1年くらいです。使用後は、湿気を吸わないように、ONのままクリオスタット庫外へ出し、十分暖まってから、OFFにします。</span></p>
 </li>
 <li>
-<p>ブラシでブロック面をきれいに保つ</p>
-<p>切りくずが、ブロック面をおおってしまうことがあるが、ブラシで低減できる。</p>
+<p><strong>Brushes keep blockface clean</strong> Debris may cover blockface, but can be reduced with brushes.
+    <span style="color:#444C99;"><br><strong>ブラシでブロック面をきれいに保つ</strong> 切りくずが、ブロック面をおおってしまうことがあるが、ブラシで低減できる。</span></p>
 </li>
 <li>
-<p>アンチロールプレートのほうが切りくず除去の効果は高い。</p>
-<p>アンチロールプレートと共にブラシも使い、ブロック面撮影を成功させる。</p>
+<p><strong>Anti-roll plate is more effective in removing debris.</strong> Use both a brush and the anti-roll plate to successfully imaging.
+    <span style="color:#444C99;"><br><strong>アンチロールプレートのほうが切りくず除去の効果は高い。</strong> アンチロールプレートと共にブラシも使い、ブロック面撮影を成功させる。</span></p>
 </li>
 <li>
-<p>ブラシがうごかない？</p>
-<p>サーボモータは、もっともよく壊れるところです。でも心配ありません。ブラシは動かなくても効果的です。キュッキュと動かしたのは、半分ウケねらいでして、すみません。2022年の新しいCoMBI-Uタイプでは、ブラシは固定型になりました。</p>
+<p><strong>The brush doesn't move?</strong> Servo motors are the most breakable part. But don't worry, the brush is effective even if they don't move. The new 2022 CoMBI-U type has fixed brushes.
+    <span style="color:#444C99;"><br><strong>ブラシがうごかない？</strong> サーボモータは、もっともよく壊れるところです。でも心配ありません。ブラシは動かなくても効果的です。キュッキュと動かしたのは、半分ウケねらいでして、すみません。2022年の新しいCoMBI-Uタイプでは、ブラシは固定型になりました。</span></p>
 </li>
 <li>
-<p>切りくずがよくブロック面にかぶる</p>
-<p>アンチロールプレートが効果絶大です。</p>
+<p><strong>Debris often cover the blockface</strong> Use anti-roll plate. Eliminate the roughness of the block side. 
+    <span style="color:#444C99;"><br><strong>切りくずがよくブロック面にかぶる</strong> アンチロールプレートが効果絶大です。または、ブロック側面の凸凹をなくします。</span></p>
 </li>
 <li>
-<p>切りくずがブロック周辺につきやすい</p>
-<p>ブロックの温度が高いのかも知れません。温度を下げます。温度を幅5度以内で調整します。</p>
-<p>もしくはLED照明を暗くします。通常は12Vで点灯させていますが、9Vで暗めになります。9Vにするには、2020年版CoMBIコントローラを使用するか、電源（スイッチングACアダプタ、9V、1A程度、700円）を別に用意するかします。</p>
-<p>黒OCTを使っている場合、照明のせいで温度が上がりやすいようです。</p>
+<p><strong>Debris tend to stick around the block</strong> Block temperature may be too high. Lower the temperature. Adjust temperature within a range of 5 degrees. Or dim the LED lights. Usually the lights are powered by 12V, but they will dim by 9V. To get 9V, use a 2020 CoMBI controller or get a additional power supply (switching AC adapter, 9V 1A, about 700 JPY). If you are using black OCT, the temperature seems to rise easily due to the lighting.
+    <span style="color:#444C99;"><br><strong>切りくずがブロック周辺につきやすい</strong> ブロックの温度が高いのかも知れません。温度を下げます。温度を幅5度以内で調整します。もしくはLED照明を暗くします。通常は12Vで点灯させていますが、9Vで暗めになります。9Vにするには、2020年版CoMBIコントローラを使用するか、電源（スイッチングACアダプタ、9V、1A程度、700円）を別に用意するかします。黒OCTを使っている場合、照明のせいで温度が上がりやすいようです。</span></p>
 </li>
 <li>
-<p>試料周囲に糸状のゴミが出やすい</p>
-<p>試料周囲とは、ブロック周囲ではなく、試料とOCTの境界部のことです。この場合、温度をさげます。幅5度以内で調整。</p>
+<p><strong>Filamentous debris tends to appear around the tissue (not block)</strong> Filamentous debris in the boundary between the tissue and the OCT, not around the block. In this case, lower the temperature within 5 degrees.
+    <span style="color:#444C99;"><br><strong>試料周囲に糸状のゴミが出やすい</strong> 試料周囲とは、ブロック周囲ではなく、試料とOCTの境界部のことです。この場合、温度をさげます。幅5度以内で調整。</span></p>
 </li>
 <li>
-<p>温度はどれがいいか</p>
-<p>基本的にいつもつかっている厚さと温度で撮影できます。厚めなら温度をあげ、薄めなら温度を下げます。具体的には、標準の8-10 µm切片なら-20度。厚め20-40 µmなら-15度。薄め5 µmなら、-22度。試料によっても異なります。Leicaクリオスタットの説明書や、書籍（細胞・組織染色の達人、羊土社）を参考に。</p>
+<p><strong>Which temperature is recommended?</strong> Basically, you can use the thickness and temperature that you always use. Increase the temperature for thicker sections and decrease the temperature for thinner sections; standard 8-10 µm sections at -20°C, thicker 20-40 µm sections at -15°C, thinner 5 µm sections at -22°C. The temperature varies depending on the tissue type; refer to the Leica cryostat manual or the textbook "Mastering Cell and Tissue Staining," published by Yodosha, Inc.
+    <span style="color:#444C99;"><br><strong>温度はどれがいいか</strong> 基本的にいつもつかっている厚さと温度で撮影できます。厚めなら温度をあげ、薄めなら温度を下げます。具体的には、標準の8-10 µm切片なら-20度。厚め20-40 µmなら-15度。薄め5 µmなら、-22度。試料によっても異なります。Leicaクリオスタットの説明書や、書籍（細胞・組織染色の達人、羊土社）を参考に。</span></p>
 </li>
 <li>
-<p>クリオスタット庫内をよごしてしまう、、、</p>
-<p>クリオスタットの使用後、70%EtOHをティッシュにつけて、拭き掃除できます。みごとにきれいに元通りになります。約束ごととして、安全第一で、かならず刃をはずすこと。機器保全のため、EtOHは噴霧ではなく、清拭で使用します。</p>
-<p>CoMBIでは多くの削りカスがでます。クリオスタットの汚れが気になります。とくに共通機器の場合はなおさら気がかりですが、上記でキレイになります。</p>
+<p><strong>Cryostat chamber gets dirty...</strong> In the case of common equipment, we are more concerned about this. But don't worry. After using the cryostat, you can clean the chamber with a tissue with 70% EtOH. It will be restored to its former state. Safety first! Remove the blade while cleaning. For cryostat maintenance, EtOH should be used for wiping, NOT spraying.
+    <span style="color:#444C99;"><br><strong>クリオスタット庫内をよごしてしまう、、、</strong> クリオスタットの使用後、70%EtOHをティッシュにつけて、拭き掃除できます。みごとにきれいに元通りになります。約束ごととして、安全第一で、かならず刃をはずすこと。機器保全のため、EtOHは噴霧ではなく、清拭で使用します。CoMBIでは多くの削りカスがでます。クリオスタットの汚れが気になります。とくに共通機器の場合はなおさら気がかりですが、上記でキレイになります。</span></p>
 </li>
 </ul>
 

@@ -468,14 +468,14 @@
       
       
         <label class="md-nav__link" for="__nav_4">
-          Image Processing
+          Image Processing/画像処理
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Image Processing" data-md-level="1">
+      <nav class="md-nav" aria-label="Image Processing/画像処理" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Image Processing
+          Image Processing/画像処理
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -486,7 +486,7 @@
   
     <li class="md-nav__item">
       <a href="../introduction/index.html" class="md-nav__link">
-        Overview/画像処理の概要
+        Overview/概要
       </a>
     </li>
   
@@ -808,8 +808,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-new-project" class="md-nav__link">
-    Create New Project
+  <a href="#0-create-new-project" class="md-nav__link">
+    0. Create New Project
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
   </a>
   
 </li>
@@ -822,8 +829,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#2-feature-selection" class="md-nav__link">
     2. Feature selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    
   </a>
   
 </li>
@@ -836,8 +857,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#4-prediction-export" class="md-nav__link">
     4. Prediction Export
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    
   </a>
   
 </li>
@@ -849,36 +884,64 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    ファイル・フォルダを整理する
+  <a href="#organize-files-and-folders" class="md-nav__link">
+    Organize files and folders/ファイル・フォルダを整理する
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#imagejfijiphotoshop010255" class="md-nav__link">
-    ImageJ/FIJIまたはPhotoshopで、二値化画像を0,1から0,255にする
+  <a href="#_7" class="md-nav__link">
+    
   </a>
   
-    <nav class="md-nav" aria-label="ImageJ/FIJIまたはPhotoshopで、二値化画像を0,1から0,255にする">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convert-binary-image-01-to-0255010255" class="md-nav__link">
+    Convert binary image 0,1 to 0,255/二値化画像を0,1から0,255へ変換
+  </a>
+  
+    <nav class="md-nav" aria-label="Convert binary image 0,1 to 0,255/二値化画像を0,1から0,255へ変換">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#imagejfiji" class="md-nav__link">
-    ImageJ/FIJIの場合
+    ImageJ/FIJI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#photoshop" class="md-nav__link">
-    Photoshopの場合
+    Photoshop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    
   </a>
   
 </li>
@@ -889,16 +952,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3d-slicer" class="md-nav__link">
-    3D slicerで再構築
+  <a href="#import-into-3d-slicer-for-segmantation" class="md-nav__link">
+    Import into 3D slicer for segmantation
+  </a>
+  
+    <nav class="md-nav" aria-label="Import into 3D slicer for segmantation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
-    Tips
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -917,54 +986,96 @@
 
 
 <h1 id="segmentation-by-ilastik">Segmentation by ilastik</h1>
-<p>ilastik is an application for segmentation by machine learning (Nature Methods, 2019). It is designed so that biologists can operate without any knowledge of machine learning. iLastik seems to be suitable for processing full-color blockface images obtained by CoMBI. For installation, visit developer's site <a href="https://www.ilastik.org/">https://www.ilastik.org</a>. Here is a simple procedure written in Japanese, to do "Choosing regenerated area and damaged area in a certain organ". There is a detailed documentation in English in the official site (<a href="https://www.ilastik.org/documentation/index.html">Documentation</a>).</p>
+<p>ilastik is an application for segmentation by machine learning (Nature Methods, 2019). It is designed so that biologists can operate without any knowledge of machine learning. iLastik seems to be suitable for processing full-color blockface images obtained by CoMBI. For installation, visit developer's site <a href="https://www.ilastik.org/">https://www.ilastik.org</a>. Here is a simple procedure to do "Choosing regenerated area and damaged area in a certain organ". There is a detailed documentation in English in the official site (<a href="https://www.ilastik.org/documentation/index.html">Documentation</a>).</p>
 <p><span style="color:#444C99;">ilastikは、セグメンテーションを機械学習で行うアプリです（Nature Methods, 2019）。機械学習の知識がなくても、操作できるようにデザインされています。<a href="https://www.ilastik.org/">https://www.ilastik.org</a>からダウンロードしてインストールします。CoMBIで撮影したフルカラーのブロック面画像で特定の構造物（関心領域）をSegmentationするのに良さそうです。「とある臓器に正常部位と傷害部位がある。正常部位だけSegmentationしたい」、これをお題に、手順を記します。日本語の簡単な手順書です。本家のサイトには詳しい英語説明ページ（<a href="https://www.ilastik.org/documentation/index.html">Documentation</a>）があります。</span></p>
 <hr />
 <h2 id="procedure">Procedure</h2>
-<p>This is a simple procedure written in Japanese, to do "Selecting only regenerated area, excluding damaged area in a certain organ". My computer environment is macOS11 or 12, ilastik v1.4.0b15 or 21, and Core i7, i9 or M1 max. According to official site, this versions of OS and app are not fully work yet. I found some commands which do not work. For example, in the Export Settings for Simple Segmentation, Label/Channel may not be specified, and conversion from 0,1 to 0,255  (renormalize) may not work.</p>
+<p>This is a simple procedure to do "Selecting only regenerated area, excluding damaged area in a certain organ". My computer environment is macOS11 or 12, ilastik v1.4.0b15 or 21, and Core i7, i9 or M1 max. According to official site, this versions of OS and app are not fully work yet. I found some commands which do not work. For example, in the Export Settings for Simple Segmentation, Label/Channel may not be specified, and conversion from 0,1 to 0,255  (renormalize) may not work.</p>
 <p><span style="color:#444C99;">例題として「とある臓器に再生部位と傷害残存部位がある。再生部位だけSegmentationしたい」、これの手順を簡潔に記します。作業環境は、macOS11 or 12, iLastik v1.4.0bで、公式にはフルサポートしていないバージョンの組み合わせです。Export設定において、Label/Channelの指定ができない場合があったり、0,1&gt;0,255変換ができない場合があるようです。</span></p>
-<h3 id="create-new-project">Create New Project</h3>
+<h3 id="0-create-new-project">0. Create New Project</h3>
 <ul>
-<li>今回は、<code>Pixel Classification</code></li>
-<li>プロジェクトファイル、拡張子ilpとして保存する。</li>
-<li>この後は、右のカラムの1番から5番に従って進める。</li>
+<li>In this example, select <code>Pixel Classification</code></li>
+<li>Processes is saved as "iLastik project file (.ilp)"</li>
+<li>Later, follow steps 1 to 5 on the left colomn.</li>
+</ul>
+<h3 id="_1"></h3>
+<ul>
+<li><span style="color:#444C99;">今回は、<code>Pixel Classification</code></span></li>
+<li><span style="color:#444C99;">プロジェクトファイル、拡張子ilpとして保存する。</span></li>
+<li><span style="color:#444C99;">この後は、右のカラムの1番から5番に従って進める。</span></li>
 </ul>
 <h3 id="1-input-data">1. Input Data</h3>
 <ul>
-<li>学習させるための画像を開く。<code>Drag and Drop</code> または、プルダウンメニュー<code>Add New</code>&gt; <code>Add separate image(s)</code>。Windowsの場合、パスに日本語が入っていると、エラーになる場合があります。</li>
-<li>CoMBIの連続画像（500-1000枚が典型的）のうち、標本全体や実験群全体を代表するような数枚を選ぶ。2〜4枚がおすすめ。（マシンパワーによる、iMac27-2017-4coreでは500x500x5枚まで。MBP16-2021-M1maxなら、1000x1000x10枚まで。)</li>
-<li>枚数は、多すぎると処理が遅くなり、少なすぎると正確性が劣る。</li>
-<li>どの画像が良いか、最初は分からない。一度やってみて、結果に満足しなければ、もう一度やっている。2回目でたいてい成功する。</li>
+<li>Open some images for machine learning. <code>Drag and Drop</code> or <code>Add New</code>&gt; <code>Add separate image(s)</code>. In Windows OS, path should contain only English, no local language such as Japanease.</li>
+<li>CoMBI produces typcally 500-1000 serial images. Select representative images that shows the entire specimen and experimental group. 2 to 4 images are recommended. iMac (2017, 4 core CPU) can learn from 500x500 pixels, 5 images. MacBookPro (2021, M1 max) can learn from 1000x1000 pixels, 10 images.</li>
+<li>Too much number of images slower the processing. Less images gives inacurate segments. </li>
+<li>At first, no one knows which image is the best for lerning. Try once. In most cases, I successed at second or third trial.</li>
+</ul>
+<h3 id="_2"></h3>
+<ul>
+<li><span style="color:#444C99;">学習させるための画像を開く。<code>Drag and Drop</code> または、プルダウンメニュー<code>Add New</code>&gt; <code>Add separate image(s)</code>。Windowsの場合、パスに日本語が入っていると、エラーになる場合があります。</span></li>
+<li><span style="color:#444C99;">CoMBIの連続画像（500-1000枚が典型的）のうち、標本全体や実験群全体を代表するような数枚を選ぶ。2〜4枚がおすすめ。（マシンパワーによる、iMac27-2017-4coreでは500x500x5枚まで。MBP16-2021-M1maxなら、1000x1000x10枚まで。)</span></li>
+<li><span style="color:#444C99;">枚数は、多すぎると処理が遅くなり、少なすぎると正確性が劣る。</span></li>
+<li><span style="color:#444C99;">どの画像が良いか、最初は分からない。一度やってみて、結果に満足しなければ、もう一度やっている。2回目でたいてい成功する。</span></li>
 </ul>
 <h3 id="2-feature-selection">2. Feature selection</h3>
 <ul>
-<li>全部にチェックするので良いが、マシンパワー（おもにCPU）による。色と明るさ、輪郭線、テクスチャ（模様、行列）を計算してくれるらしい。</li>
-<li>「Core i9, HBM2-2GB, メモリ32GB」や「M1 max」では全部にチェックした。「Core i5, 内蔵グラフィクス、メモリ8GB」では、チェック項目を減らした。σとびとびで半分にチェック。シグマは、認識させたい構造物が小さいか大きいかを決める設定値。</li>
-<li>（左カラム下方に、各種フィルタがかかった画像リストがでてくる。クリックすると画像を確認できる。）</li>
-<li>（これも、最初はどうすればいいのかさっぱり分からない作業である。とりあえず、とびとびで半数にチェックすれば軽快に作業できる。結果をみて、チェックを増やすか、もしくは、次の項目「3. Training」の中に、推奨チェックを探してくれるオプションがあるので、それを利用してみるか、検討する。）</li>
+<li>iLastik seems to recognize color, brightness, edges and textures (patterns and matrices).</li>
+<li>Check all items, if your PC's CPU is good enough. "Core i9, HBM2-2GB, RAM32GB" and "M1 max" can check all. "Core i5, internal graphics, RAM8GB" can check a half of sigma. Sigma is a value that determines whether the structure to be recognized is small or large.</li>
+<li>(In the left colomn, the list of images filtered. Click them to display larger.）</li>
+<li>This is also a step that we have no idea how to do at first. At first, you can work lightly by checking half of items. After reviewing the results, consider whether to increase the number of checks, or whether to use the option in the next section "3. Training".</li>
+</ul>
+<h3 id="_3"></h3>
+<ul>
+<li><span style="color:#444C99;">全部にチェックするので良いが、マシンパワー（おもにCPU）による。色と明るさ、輪郭線、テクスチャ（模様、行列）を計算してくれるらしい。</span></li>
+<li><span style="color:#444C99;">「Core i9, HBM2-2GB, メモリ32GB」や「M1 max」では全部にチェックした。「Core i5, 内蔵グラフィクス、メモリ8GB」では、チェック項目を減らした。σとびとびで半分にチェック。シグマは、認識させたい構造物が小さいか大きいかを決める設定値。</span></li>
+<li><span style="color:#444C99;">（左カラム下方に、各種フィルタがかかった画像リストがでてくる。クリックすると画像を確認できる。）</span></li>
+<li><span style="color:#444C99;">（これも、最初はどうすればいいのかさっぱり分からない作業である。とりあえず、とびとびで半数にチェックすれば軽快に作業できる。結果をみて、チェックを増やすか、もしくは、次の項目「3. Training」の中に、推奨チェックを探してくれるオプションがあるので、それを利用してみるか、検討する。）</span></li>
 </ul>
 <h3 id="3-training">3. Training</h3>
 <ul>
-<li>Label1, Label2の二種類に塗り分ける。（メモ：デフォルトは2種類。追加して多種類できるがマシンパワーが必要。Label1などの名称は、長押しで変更できる。）</li>
-<li>選び出したい領域を、Label1の黄色いペンで印をいれる。（例：再生部位。ペンの太さは、1〜7くらいが動作が軽い。太くなると計算時間が長くなる。）</li>
-<li>それ以外の領域をLabel2青いペンで印を入れる。（例：傷害部位と周辺OCTの両方）</li>
-<li>完全に塗りつぶす必要はない。公式動画参照。丁寧に印を入れれば入れるほど、結果が良くなる。とくに境界線で丁寧に。</li>
-<li>ボタン<code>Live Update</code>をONにすると、Segmentationの結果を見ながら、作業できる。ただし、Live Update ONのままでは、動作が鈍くなりがちです。</li>
-<li>オプション：ボタン<code>Suggest Features</code>は必須ではない。前項「2. Feature Selection」を3通り評価し、自身のチェックがよかったかどうか、判断できる。<ul>
-<li>いったん、Live OFFにして、ボタン<code>Suggest Features</code>で別ウィンドウが開く。 </li>
-<li><code>Filter Method (recommended)</code>, Number of Feartures <code>0</code> (=auto), <code>Run Feature Selection</code>。Number of Featuresを変更することもできる。0=自動チェック以外に、数値1〜10のどれかを入力する。例えば、3を入力するとsize 3通りなどを試してくれる。Set Size Penaltyは、まだ検証しておらず、デフォルトの0.1を利用している。セグメンテーションの正確さと計算時間との兼ね合い、落としどころを見つける。このオブションはやらなくても進められる。</li>
-<li>しばらく待つ、けっこう待つ。</li>
-<li>プルダウンから、「自身で選んだチェック、自動チェック、全チェック」の3通りを比較/選択できる。もし、2. Feature selectionにおいて自身でチェックしたパターンから、変更しほうが良さそうであれば、下段のボタン<code>Select Feature Set</code>を押して変更を決定する。変更する必要がなければ、Cancelでよい。</li>
-<li>（チェックが増えると、Segmentationの正確性が向上するが、処理に時間が掛かる。折り合いを付ける。）</li>
+<li>Paint in two types, Label1 and Label2. (Note: The default is two types. You can change the name of Label1, etc. by long-pressing on it.)</li>
+<li>Mark the area to be selected with the yellow pen on Label1. (e.g., the area to be regenerated. Pen size from 1 to 7 is the best for lightweight operation. The thicker the pen, the longer the calculation time.)</li>
+<li>Mark all other areas with Label2 blue pen. (e.g., both the injury site and the surrounding OCT)</li>
+<li>It is not necessary to fill it completely. See the official video. The more carefully you mark, especially at the borders, the better the result.</li>
+<li>When you turn the button <code>Live Update</code> ON, you can work with the results of Segmentation. However, the operation tends to be slow.</li>
+<li>Optional: The button <code>Suggest Features</code> is not required. You can evaluate the previous section "2. Feature Selection" in three ways and decide if your check was good or not.<ul>
+<li>"Live OFF", then <code>Suggest Features</code> </li>
+<li><code>Filter Method (recommended)</code>, Number of Feartures <code>0</code> (=auto), <code>Run Feature Selection</code>. If you change <code>Number of Features</code>, use 0=auto or 1〜10. For example, <code>3</code> will try 3 types of size. I have not tested <code>Set Size Penalty</code> yet, and use dafault <code>0.1</code>. Find the right balance between segmentation accuracy and computation time. Suggest Features is optional.</li>
+<li>Wait for a while, for a long time.</li>
+<li>From the pull-down menu, you can compare/select one of three options: self-selected check, automatic check, or all checks. If you think it is better to change the check pattern, press the button <code>Select Feature Set</code> at the bottom. If you don't need to change, just click `Cancel'.</li>
+<li>Find the right balance between segmentation accuracy and computation time. </li>
 </ul>
 </li>
-<li>（メモ：Label1, Lable2などは、事項「4. Prediction Export」では、Channel1, Channel2などと呼ばれ、表記は「c」となる。複数のChannelをTIFFやHDFにすると、ImageJ/FIJIで開いたとき、Channel1, 2...となる、場合がある。）</li>
+<li>(Note: Label1, Lable2, etc. are called Channel1, Channel2, etc. in the next "4. Prediction Export" and the notation is "c". If multiple channels are converted to TIFF or HDF and opened in ImageJ/FIJI, they may appear as Channel1, 2...)</li>
+</ul>
+<h3 id="_4"></h3>
+<ul>
+<li><span style="color:#444C99;">Label1, Label2の二種類に塗り分ける。（メモ：デフォルトは2種類。追加して多種類できるがマシンパワーが必要。Label1などの名称は、長押しで変更できる。）</span></li>
+<li><span style="color:#444C99;">選び出したい領域を、Label1の黄色いペンで印をいれる。（例：再生部位。ペンの太さは、1〜7くらいが動作が軽い。太くなると計算時間が長くなる。）</span></li>
+<li><span style="color:#444C99;">それ以外の領域をLabel2青いペンで印を入れる。（例：傷害部位と周辺OCTの両方）</span></li>
+<li><span style="color:#444C99;">完全に塗りつぶす必要はない。公式動画参照。丁寧に印を入れれば入れるほど、結果が良くなる。とくに境界線で丁寧に。</span></li>
+<li><span style="color:#444C99;">ボタン<code>Live Update</code>をONにすると、Segmentationの結果を見ながら、作業できる。ただし、Live Update ONのままでは、動作が鈍くなりがちです。</span></li>
+<li><span style="color:#444C99;">オプション：ボタン<code>Suggest Features</code>は必須ではない。前項「2. Feature Selection」を3通り評価し、自身のチェックがよかったかどうか、判断できる。</span><ul>
+<li><span style="color:#444C99;">いったん、Live OFFにして、ボタン<code>Suggest Features</code>で別ウィンドウが開く。 </span></li>
+<li><span style="color:#444C99;"><code>Filter Method (recommended)</code>, Number of Feartures <code>0</code> (=auto), <code>Run Feature Selection</code>。Number of Featuresを変更することもできる。0=自動チェック以外に、数値1〜10のどれかを入力する。例えば、3を入力するとsize 3通りなどを試してくれる。Set Size Penaltyは、まだ検証しておらず、デフォルトの0.1を利用している。セグメンテーションの正確さと計算時間との兼ね合い、落としどころを見つける。このオブションはやらなくても進められる。</span></li>
+<li><span style="color:#444C99;">しばらく待つ、けっこう待つ。</span></li>
+<li><span style="color:#444C99;">プルダウンから、「自身で選んだチェック、自動チェック、全チェック」の3通りを比較/選択できる。もし、2. Feature selectionにおいて自身でチェックしたパターンから、変更したほうが良さそうであれば、下段のボタン<code>Select Feature Set</code>を押して変更を決定する。変更する必要がなければ、Cancelでよい。</span></li>
+<li><span style="color:#444C99;">（チェックが増えると、Segmentationの正確性が向上するが、処理に時間が掛かる。折り合いを付ける。）</span></li>
+</ul>
+</li>
+<li><span style="color:#444C99;">（メモ：Label1, Lable2などは、次の項「4. Prediction Export」では、Channel1, Channel2などと呼ばれ、表記は「c」となる。複数のChannelをTIFFやHDFにすると、ImageJ/FIJIで開いたとき、Channel1, 2...となる、場合がある。）</span></li>
 </ul>
 <h3 id="4-prediction-export">4. Prediction Export</h3>
 <ul>
-<li>Source: デフォルトは<code>Probability</code>で、グレースケール画像になる。<code>Simple Segmentation</code>は、白黒ハッキリした画像（二値化、2階調、1 bitの画像）になる。</li>
+<li><code>Source:</code>. <code>Probability</code> (dafault) produces grayscale images. <code>Simple Segmentation</code> produces binary images.</li>
+<li>Press button <code>Choose Export Image Settings</code>...</li>
+</ul>
+<h3 id="_5"></h3>
+<ul>
+<li><span style="color:#444C99;">Source: デフォルトは<code>Probability</code>で、グレースケール画像になる。<code>Simple Segmentation</code>は、白黒ハッキリした画像（二値化、2階調、1 bitの画像）になる。</span></li>
 <li>
-<p>ボタン<code>Choose Export Image Settings</code>より、</p>
+<p><span style="color:#444C99;">ボタン<code>Choose Export Image Settings</code>より、</span></p>
 <table>
 <thead>
 <tr>
@@ -1013,6 +1124,7 @@
 </ul>
 <p><br></p>
 <blockquote>
+<p><strong>Verification Notes for myself</strong></p>
 <p>yxc: Label1だけ指定してExportするには、「c」のチェックを外して、start 0, stop 1にする。Label2指定なら、1,2とする。（ただし、このLabel指定はProbabilityでのみ有効。Simple Segmentatinでは効かない。OSとappのバージョンのせいかもしれない。「c」のチェックをONにすると、出力結果が不安定だった。3-labelsで検証したとき、ProbabilityではRGBになり、Simple Segmentationでは0,1,2になった。別の日には、Channelに入ったこともあった。Channelになると、PhotoshopではLayerになったり、開けなかったりする。）</p>
 <p>Transformation, Convert to Data Type: <code>unsigned 8-bit</code>。TIFFで普通の階調数。16bitなどへ増やせるけど、Segmentationデータなので必要ないと思う。</p>
 <p>Transformation, Renormalize...: Probabilityでは、チェックONが必須（OFFにすると二値化されてしまう）。Simple Segmentationでは、チェックOFFが必須（ONにすると真っ白になったり、ただ効かなかったりする。あとでPhotoshopかImageJ/FIJIで変換する）</p>
@@ -1021,56 +1133,108 @@
 </blockquote>
 <p><br></p>
 <ul>
-<li>CoMBIの大量の連続画像に同一のセグメンテーション処理を施す場合は、ここの<code>Export</code>は使用しない。次の項目「5. Batch Processing」へ進む。</li>
-<li>Trainingに使用した数枚の画像だけで、セグメンテーション画像が欲しい場合：　上カラムの<code>Export</code>ボタンまたは左の<code>Export All</code>ボタンを押すと、セグメンテーション画像を保存できる。</li>
-<li><code>Export Image Settings</code>で設定した条件はプロジェクトファイル（.ilp）には保存されないことがある。もし、次項「5. Batch Processing」を、別の日、別のパソコンで実行する場合は、設定を確認すること（macOS 11, ilastik 1.4.0b, 正式対応していないバージョンのせいか？）。</li>
+<li>
+<p>If you want to apply the same segmentation process to a large number of consecutive images in CoMBI, do not use <code>Export</code> here. Go to the next　step "5. Batch Processing".
+    <span style="color:#444C99;"><br>CoMBIの大量の連続画像に同一のセグメンテーション処理を施す場合は、ここの<code>Export</code>は使用しない。次の項目「5. Batch Processing」へ進む。</span></p>
+</li>
+<li>
+<p>If you want to create a segmentation image from only a few images used for Training, you can save the segmentation image using the <code>Export</code> button in the upper column or the <code>Export All</code> button on the left.
+    <span style="color:#444C99;"><br>Trainingに使用した数枚の画像だけで、セグメンテーション画像が欲しい場合：　上カラムの<code>Export</code>ボタンまたは左の<code>Export All</code>ボタンを押すと、セグメンテーション画像を保存できる。</span></p>
+</li>
+<li>
+<p>The settings made in <code>Export Image Settings</code> may not be saved in the project file (.ilp). If you want to run the next step <code>5. Batch Processing</code> on a different day, or on a different computer, check the settings again. (This may due to macOS 11, ilastik 1.4.0b, a version not officially supported???) 
+    <span style="color:#444C99;"><br><code>Export Image Settings</code>で設定した条件はプロジェクトファイル（.ilp）には保存されないことがある。もし、次項「5. Batch Processing」を、別の日、別のパソコンで実行する場合は、設定を確認すること（macOS 11, ilastik 1.4.0b, 正式対応していないバージョンのせいか？）。</span></p>
+</li>
 </ul>
 <h3 id="5-batch-processing">5. Batch Processing</h3>
 <ul>
-<li><code>Select RAW Data Files</code>より、連続画像を選ぶ。Shiftを押しながら、複数画像を選択する。または、ドラッグ＆ドロップ。</li>
-<li>左カラムのボタン、<code>Process all files</code>。しばらく待つ。結構時間が掛かる。数百枚を一気に行うと、途中でフリーズしたり、抜け落ちたりした。少しずつやっている。経験上、100枚ずつなら失敗なし。200, 250, 280枚でも大丈夫だった。300枚から抜け落ちが出始める。</li>
-<li>Simple Segmentationの場合、出力されたtifファイルは、一見真っ黒である。一般の画像8bitでは、ピクセルは輝度0-255を持つ。Simple Segmentationでは、二値化され、画像は、0と1になっている。8bitで表記すると、00000000と00000001になっている。それぞれ、Training時のデフォルトLabelsのうち、Label1-黄色と、Label2-青色である。ImageJ/FIJIで開いて、カーソル位置の値をみると、Value1とValue2だけで構成された画像であることが確認できる。Finderで表示されるアイコンは真っ黒画像になるのでビックリするが、アイコンはそれでよい。のちに0,1を0,255に変換できる（下記）。直接Renormalize 0, 255するメニューはあるが、SimpleSegmentationでは効かなかった（上記 4.Prediction Export）。</li>
+<li><code>Select RAW Data Files</code>. Select multiple serial images by Shift+Click or Drag&amp;drop.</li>
+<li>In the left colomn, <code>Process all files</code>. Wait for a while. It takes for long time. When processing several hundred images at once, iLastik froze or dropped some images out. I do this process it little by little. In my experience, 100 images at a time never failed; 200, 250, 280 images were also fine; from 300 images, the dropouts appear.</li>
+<li>Just after simple Segmentation, the output tif file is seems completely black. In Simple Segmentation, the image is binarized into 0s and 1s, which in 8bit are 00000000 and 0000000001. Each are Label1 - yellow and Label2 - blue. Opening the image in ImageJ/FIJI and looking at the value of the cursor position, you can confirm that the image consists of only Value1 and Value2. You may be surprised to see the icon displayed in the Finder as a black image, but that is fine for icons. Later, 0,1 can be converted to 0,255 (see below). There is a menu to Renormalize 0, 255 directly, but it did not work with SimpleSegmentation (see 4. Prediction Export above).</li>
+</ul>
+<h3 id="_6"></h3>
+<ul>
+<li><span style="color:#444C99;"><code>Select RAW Data Files</code>より、連続画像を選ぶ。Shiftを押しながら、複数画像を選択する。または、ドラッグ＆ドロップ。</span></li>
+<li><span style="color:#444C99;">左カラムのボタン、<code>Process all files</code>。しばらく待つ。結構時間が掛かる。数百枚を一気に行うと、途中でフリーズしたり、抜け落ちたりした。少しずつやっている。経験上、100枚ずつなら失敗なし。200, 250, 280枚でも大丈夫だった。300枚から抜け落ちが出始める。</span></li>
+<li><span style="color:#444C99;">Simple Segmentationの場合、出力されたtifファイルは、一見真っ黒である。一般の画像8bitでは、ピクセルは輝度0-255を持つ。Simple Segmentationでは、二値化され、画像は、0と1になっている。8bitで表記すると、00000000と00000001になっている。それぞれ、Training時のデフォルトLabelsのうち、Label1-黄色と、Label2-青色である。ImageJ/FIJIで開いて、カーソル位置の値をみると、Value1とValue2だけで構成された画像であることが確認できる。Finderで表示されるアイコンは真っ黒画像になるのでビックリするが、アイコンはそれでよい。のちに0,1を0,255に変換できる（下記）。直接Renormalize 0, 255するメニューはあるが、SimpleSegmentationでは効かなかった（上記 4.Prediction Export）。</span></li>
 </ul>
 <hr />
-<h2 id="_1">ファイル・フォルダを整理する</h2>
+<h2 id="organize-files-and-folders">Organize files and folders/<span style="color:#444C99;">ファイル・フォルダを整理する</span></h2>
 <ul>
-<li>（別フォルダにExportしたなら、この作業は必要ない）</li>
-<li>MacならFinderで、リスト表示<code>as List</code></li>
-<li>ファイルの種類<code>Kind</code>で並べ替えると、元画像（例 .jpeｇ）と、二値化した画像（例 ..._Simple Segmentation.tif）が分かれて並ぶ。</li>
-<li>二値化画像（.tif）だけ選んで、新しいフォルダに収める。</li>
+<li>(If you exported images to a different folder, you don't need to do this.)</li>
+<li>For macOS, select mode as <code>as List</code> in the Finder.</li>
+<li>Sort by <code>Kind</code> to separate original JPEG images and binarized TIFF images.、</li>
+<li>Select binary images (.tif) then save in new foldet.</li>
 </ul>
-<h2 id="imagejfijiphotoshop010255">ImageJ/FIJIまたはPhotoshopで、二値化画像を0,1から0,255にする</h2>
-<p>0,255にしておくと、3D slicerで、3D再構築しやすいため。</p>
-<h3 id="imagejfiji">ImageJ/FIJIの場合</h3>
+<h2 id="_7"></h2>
 <ul>
-<li><code>Image</code>&gt; <code>Adjust</code>&gt; <code>Threshold...</code>　（この作業は安定しない、数値入力ではじかれたり。下記のどれかうまくいくやつを探してください）<ul>
-<li><code>Dark Background</code>にチェックして、数値は<code>2, 255</code>。選択部位が白、背景が黒</li>
-<li>（チェックなしで、数値を、<code>0, 1</code>とすると、選択部位が黒、背景白になり、反転した画像になる）</li>
-<li>（チェックなしで、<code>1, 1</code>なら、選択部位が白、背景が黒）</li>
-<li>（<code>Set</code>を押して数値を入力し、確定させたらうまくいったことがある。）</li>
-<li>（スライダーを動かしてから、数値入力したら、うまくいったことがある。）</li>
+<li><span style="color:#444C99;">（別フォルダにExportしたなら、この作業は必要ない）</span></li>
+<li><span style="color:#444C99;">MacならFinderで、リスト表示<code>as List</code></span></li>
+<li><span style="color:#444C99;">ファイルの種類<code>Kind</code>で並べ替えると、元画像（例 .jpeｇ）と、二値化した画像（例 ..._Simple Segmentation.tif）が分かれて並ぶ。</span></li>
+<li><span style="color:#444C99;">二値化画像（.tif）だけ選んで、新しいフォルダに収める。</span></li>
+</ul>
+<h2 id="convert-binary-image-01-to-0255010255">Convert binary image 0,1 to 0,255/<span style="color:#444C99;">二値化画像を0,1から0,255へ変換</span></h2>
+<p>Convert binary images (0, 1) into (0, 255). This is a preparation before import into 3D slicer. Images (0, 255) can be easily used for segmentation. Use ImageJ or Photoshop.
+<span style="color:#444C99;"><br>二値化画像0,1を、0,255に変換しておくと、3D slicerでsegmentationしやすい。ImageJまたはPhotoshopを使います。</span></p>
+<h3 id="imagejfiji">ImageJ/FIJI</h3>
+<ul>
+<li><code>Image</code>&gt; <code>Adjust</code>&gt; <code>Threshold...</code>　This process is unstable. Try below setting till you success.<ul>
+<li>Check <code>Dark Background</code>, and input values <code>2, 255</code>. Selected area in white, background in black.</li>
+<li>（Uncheck and values <code>0, 1</code>. Selection in black, background in white.）</li>
+<li>（Uncheck and values <code>1, 1</code>. Selection in white, background in black.）</li>
+<li>（Press <code>Set</code> then input value.）</li>
+<li>（Move slider a little, then input value.）</li>
 </ul>
 </li>
-<li><code>Apply</code>をおして、適用する。Method:Default, Background: Dark, Check on Calculate th..., Uncheck others.</li>
-<li>一枚だけ変換したい場合は、ここで<code>Save as</code>（うまくいけば、まっ黒にしか見えなかった画像・アイコンが、白黒画像・白黒アイコンになる）</li>
-<li>連続画像を変換したい場合は、<code>Threshold</code>から<code>Apply</code>までを、Macroに記録し、Batch処理する）</li>
+<li>Press <code>Apply</code>. Method:Default, Background: Dark, Check on Calculate th..., Uncheck others.</li>
+<li>For converting one image, press <code>Save as</code> (If success, icon will changed from all black to black/white.</li>
+<li>For converting serial images, make macro from <code>Threshold</code> to <code>Apply</code>, and batch process.</li>
 </ul>
-<h3 id="photoshop">Photoshopの場合</h3>
+<h3 id="_8"></h3>
+<ul>
+<li><span style="color:#444C99;"><code>Image</code>&gt; <code>Adjust</code>&gt; <code>Threshold...</code>　（この作業は安定しない、数値入力ではじかれたり。下記のどれかうまくいくやつを探してください）</span><ul>
+<li><span style="color:#444C99;"><code>Dark Background</code>にチェックして、数値は<code>2, 255</code>。選択部位が白、背景が黒</span></li>
+<li><span style="color:#444C99;">（チェックなしで、数値を、<code>0, 1</code>とすると、選択部位が黒、背景白になり、反転した画像になる）</span></li>
+<li><span style="color:#444C99;">（チェックなしで、<code>1, 1</code>なら、選択部位が白、背景が黒）</span></li>
+<li><span style="color:#444C99;">（<code>Set</code>を押して数値を入力し、確定させたらうまくいったことがある。）</span></li>
+<li><span style="color:#444C99;">（スライダーを動かしてから、数値入力したら、うまくいったことがある。）</span></li>
+</ul>
+</li>
+<li><span style="color:#444C99;"><code>Apply</code>をおして、適用する。Method:Default, Background: Dark, Check on Calculate th..., Uncheck others.</span></li>
+<li><span style="color:#444C99;">一枚だけ変換したい場合は、ここで<code>Save as</code>（うまくいけば、まっ黒にしか見えなかった画像・アイコンが、白黒画像・白黒アイコンになる）</span></li>
+<li><span style="color:#444C99;">連続画像を変換したい場合は、<code>Threshold</code>から<code>Apply</code>までを、Macroに記録し、Batch処理する）</span></li>
+</ul>
+<h3 id="photoshop">Photoshop</h3>
 <ul>
 <li><code>Image</code>&gt; <code>Adjustments</code>&gt; <code>Threshold</code></li>
-<li>指定する数値は、<code>2</code></li>
-<li><code>Image</code>&gt; <code>Adjustments</code>&gt; <code>Invert</code>（黒バックになる。3D再構築用に）</li>
-<li>（ActionとBatchを使って連続画像を処理する。）</li>
+<li>Input value <code>2</code></li>
+<li><code>Image</code>&gt; <code>Adjustments</code>&gt; <code>Invert</code>, background in black.</li>
+<li>Use action ant batch for converting serial images.</li>
 </ul>
-<h2 id="3d-slicer">3D slicerで再構築</h2>
+<h3 id="_9"></h3>
+<ul>
+<li><span style="color:#444C99;"><code>Image</code>&gt; <code>Adjustments</code>&gt; <code>Threshold</code></span></li>
+<li><span style="color:#444C99;">指定する数値は、<code>2</code></span></li>
+<li><span style="color:#444C99;"><code>Image</code>&gt; <code>Adjustments</code>&gt; <code>Invert</code>（黒バックになる。3D再構築用に）</span></li>
+<li><span style="color:#444C99;">（ActionとBatchを使って連続画像を処理する。）</span></li>
+</ul>
+<h2 id="import-into-3d-slicer-for-segmantation">Import into 3D slicer for segmantation</h2>
 <ul>
 <li><code>Load</code>, <code>Any data</code></li>
-<li>オプション: <code>Segmentation</code>（Threshold）してもよい。数値化などの目的があれば。</li>
-<li><code>Volume Rendering</code>で、3D画像を再構築する。</li>
-<li>（Simple Segmentationを0,1のまま3D slicerにいれてみたけど、Volume renderingでは色の調節ができなかった。0-255への変換するのがよい。）</li>
+<li>(Optional): <code>Segmentation</code> (Threshold) mey be done, if you need to analyze values.</li>
+<li><code>Volume Rendering</code> for 3D reconstruction.</li>
+<li>(I have tested binary images (0,1) in 3D slicer, but <code>Volume rendering</code> cannot assign colors. Convesion into 0, 255 is needed.)</li>
+</ul>
+<h3 id="_10"></h3>
+<ul>
+<li><span style="color:#444C99;"><code>Load</code>, <code>Any data</code></span></li>
+<li><span style="color:#444C99;">オプション: <code>Segmentation</code>（Threshold）してもよい。数値化などの目的があれば。</span></li>
+<li><span style="color:#444C99;"><code>Volume Rendering</code>で、3D画像を再構築する。</span></li>
+<li><span style="color:#444C99;">（Simple Segmentationを0,1のまま3D slicerにいれてみたけど、Volume renderingでは色の調節ができなかった。0-255への変換するのがよい。）</span></li>
 </ul>
 <hr />
-<h2 id="tips">Tips</h2>
+<blockquote>
+<p><strong>Verification Notes for myself</strong></p>
 <p>2021-8-26</p>
 <ul>
 <li>Live Updateの動作が重い、500x700（20um/pix)を3-4枚。350x350に切り抜いて、Featureを3.5と5だけにしたらやっと動いた。おそらく、認識させたい構造が複雑になる（パターンが複雑、似ているけど異なる構造があるなど）。また、マークする筆を太くすると、動作が鈍くなる。単純なマシンパワー不足だけではなく、画像とSegmentation対象の性質にもよると思う。</li>
@@ -1090,18 +1254,19 @@
 <li>Convertでは、sign-8bit (0-255), sign-16bit (0-65535), unsign-16bit (-32768 - +32768), floating-32bitいろいろある。</li>
 <li>Photoshop用のtifなら、floating-32bitを選ぶ。もしくは、チェックしない（デフォルトでfloating32bitになる）。Photoshopで開くと、レイヤーとしてProbabilityの像が表示される。ふつうの画像にする場合は、Layer&gt;Flatten。（floating-32bit以外を選ぶと、空っぽの画像ファイルになり、Photoshopでは、なんにもなしのレイヤーができるだけ。）</li>
 <li>FIJI用のHDF5なら、チェックなし（デフォルトのfloating-32bit）。</li>
-<li>FIJIでHDF5を開く前に、iLastik提供のプラグインが必要。
-    Help&gt; ImageJ Updater
-    Manage update sites、iLastikを選ぶ
-    ImageJ Updaterウィンドウで、ボタンAdvanced Modeを押す。
-        プルダウン、View uninstalled files onlyを選ぶと、plugins/ilastik4ij.jarがみえる。
-        または、Searchでilastik。
-    ボタンinstall, ボタンApply Change
-    FIJIを再起動</li>
-<li>FIJIでplug-in&gt; ilastik&gt; Import HDF5　より、画像を選んで開く。
-    反転画像もあって、2枚として開いている。
-    普通の画像に変換するには、まず、8bitに変換、TIFFででも保存。
-    ただし、Save as TIFFからは、最初の一枚しか保存できない。白バックにグレーのProbabilityのみ。表示を変えていてもだめ。それで良ければ良い。もし、白バックも黒バック（反転像）も直接保存したい場合は、Save as Image Sequenceから、TIFFへ。末尾に01, 02がついて、2枚の画像が書き出される。</li>
+<li>FIJIでHDF5を開く前に、iLastik提供のプラグインが必要。<br>
+    Help&gt; ImageJ Updater<br>
+    Manage update sites、iLastikを選ぶ<br>
+    ImageJ Updaterウィンドウで、ボタンAdvanced Modeを押す。<br>
+        プルダウン、View uninstalled files onlyを選ぶと、plugins/ilastik4ij.jarがみえる。<br>
+        または、Searchでilastik。<br>
+    ボタンinstall, ボタンApply Change<br>
+    FIJIを再起動<br></li>
+<li>FIJIでplug-in&gt; ilastik&gt; Import HDF5　より、画像を選んで開く。<br>
+    反転画像もあって、2枚として開いている。<br>
+    普通の画像に変換するには、まず、8bitに変換、TIFFででも保存。<br>
+    ただし、Save as TIFFからは、最初の一枚しか保存できない。白バックにグレーのProbabilityのみ。表示を変えていてもだめ。それで良ければ良い。もし、白バックも黒バック（反転像）も直接保存したい場合は、Save as <br>
+    Image Sequenceから、TIFFへ。末尾に01, 02がついて、2枚の画像が書き出される。<br></li>
 </ul>
 <p>2022-2-28　上記の症状は再現できないが、TIFFでできることが分かった</p>
 <ul>
@@ -1119,6 +1284,7 @@
 <ul>
 <li>Windowsの場合、画像のパスに日本語が入っていると、画像を読み込む細にエラーになる。（Thank you, S!）</li>
 </ul>
+</blockquote>
 
               
             </article>
