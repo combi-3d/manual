@@ -1075,7 +1075,7 @@
 <ul>
 <li><span style="color:#444C99;">Source: デフォルトは<code>Probability</code>で、グレースケール画像になる。<code>Simple Segmentation</code>は、白黒ハッキリした画像（二値化、2階調、1 bitの画像）になる。</span></li>
 <li>
-<p><span style="color:#444C99;">ボタン<code>Choose Export Image Settings</code>より、</span></p>
+<p><span style="color:#444C99;">ボタン<code>Choose Export Image Settings</code>より、下図の設定ウィンドウへ。Probalibiltyのcに関して：Label1 (yellow, Background)、Label2 (Blue, segment)として、Label2を書き出したい場合、cの数値は1,2と入力する（デフォルトは0,2）</span></p>
 <table>
 <thead>
 <tr>
@@ -1092,7 +1092,7 @@
 </tr>
 <tr>
 <td>"c" in yxc</td>
-<td><b>OFF</b> to select label <br> (ON unstable)</td>
+<td><b>OFF</b> <br>input "1,2" to select label2(blue)<br> (ON unstable)</td>
 <td><b>ON</b>  <br> (OFF doesn't work)</td>
 </tr>
 <tr>
@@ -1102,7 +1102,7 @@
 </tr>
 <tr>
 <td>Renormalize</td>
-<td><b>ON</b>   <br> (OFF creates binary images)</td>
+<td><b>ON</b>   <br>input "from 0,1 to 0,255"<br>(OFF creates binary images)</td>
 <td><b> OFF</b>  <br> (ON unstable)</td>
 </tr>
 <tr>
