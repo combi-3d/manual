@@ -818,6 +818,33 @@
     Wordcloud
   </a>
   
+    <nav class="md-nav" aria-label="Wordcloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rstudio_1" class="md-nav__link">
+    RStudioの準備（初回だけ）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    アンケート結果の準備
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rstudio_2" class="md-nav__link">
+    RStudio
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -836,8 +863,21 @@
 
 <h1 id="rstudio">RStudio練習中</h1>
 <h2 id="wordcloud">Wordcloud</h2>
-<pre><code>#アンケート結果のエクセルから、使いたい語句をテキストファイルへコピペして保存。
-#保存先のパスを確認
+<h3 id="rstudio_1">RStudioの準備（初回だけ）</h3>
+<p>TerminalでRとRStudioをインストール、日本語ワードマイニングのパッケージをインストール、辞書も。</p>
+<pre><code>brew install r
+brew install --cask r
+brew install mecab
+brew install mecab-ipadic
+</code></pre>
+<h3 id="_1">アンケート結果の準備</h3>
+<p>アンケート結果のエクセルから、使いたい語句をテキストファイルへコピペして保存。
+保存先のパスを確認</p>
+<h3 id="rstudio_2">RStudio</h3>
+<pre><code>#Rstudio、ライブラリをインストール（初回だけ、時間が掛かる）
+install.package(&quot;wordcloud2&quot;)
+install.packages(&quot;RMeCab&quot;, repos = &quot;http://rmecab.jp/R&quot;)
+
 #Rstudio、ライブラリをアクティブにする
 library(wordcloud2)
 library(RMeCab)
