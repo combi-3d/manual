@@ -17,7 +17,7 @@
     
     
       
-        <title>RStudio練習中 - Manual of CoMBI</title>
+        <title>RStudioでWordCloud - Manual of CoMBI</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rstudio" class="md-skip">
+        <a href="#rstudiowordcloud" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              RStudio練習中
+              RStudioでWordCloud
             
           </span>
         </div>
@@ -814,36 +814,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wordcloud" class="md-nav__link">
-    Wordcloud
-  </a>
-  
-    <nav class="md-nav" aria-label="Wordcloud">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#homebrew" class="md-nav__link">
     Homebrewで準備（初回だけ）
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     アンケート結果の準備
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#rstudio_1" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#rstudio" class="md-nav__link">
     RStudio
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    メモ
+  </a>
   
 </li>
       
@@ -861,19 +855,23 @@
                 
 
 
-<h1 id="rstudio">RStudio練習中</h1>
-<h2 id="wordcloud">Wordcloud</h2>
-<h3 id="homebrew">Homebrewで準備（初回だけ）</h3>
-<p>TerminalでRとRStudioをインストール、日本語ワードマイニングのパッケージをインストール、辞書も。</p>
-<pre><code>brew install r
-brew install --cask r
-brew install mecab
-brew install mecab-ipadic
+<h1 id="rstudiowordcloud">RStudioでWordCloud</h1>
+<p>授業アンケートからワードクラウドを描く手順をメモしました。授業は学生にどんな印象を残したかを知りたい、それを学生と共有したいと思ったため。</p>
+<h2 id="homebrew">Homebrewで準備（初回だけ）</h2>
+<p><code>Terminal</code>でRとRStudioをインストール、日本語ワードマイニングのパッケージをインストール、日本語辞書も</p>
+<pre><code>$ brew install r
+$ brew install --cask r
+$ brew install mecab
+$ brew install mecab-ipadic
 </code></pre>
-<h3 id="_1">アンケート結果の準備</h3>
-<p>アンケート結果のエクセルから、使いたい語句をテキストファイルへコピペして保存。
-保存先のパスを確認</p>
-<h3 id="rstudio_1">RStudio</h3>
+<h2 id="_1">アンケート結果の準備</h2>
+<ul>
+<li>アンケート結果の<code>Excel</code>ファイルから、使いたい語句を<code>TextEdit</code>へ<code>Copy</code> &amp; <code>Paste</code></li>
+<li><code>Format</code>&gt;<code>Make Plain Text</code></li>
+<li>保存</li>
+<li><code>Finder</code>で保存先のパスを確認する。<code>Command + i</code>で情報をみる。パスの情報にマウスオーバー、<code>Right-click</code>、<code>Copy as Pathname</code></li>
+</ul>
+<h2 id="rstudio">RStudio</h2>
 <pre><code>#Rstudio、ライブラリをインストール（初回だけ、時間が掛かる）
 install.package(&quot;wordcloud2&quot;)
 install.packages(&quot;RMeCab&quot;, repos = &quot;http://rmecab.jp/R&quot;)
@@ -883,7 +881,7 @@ library(wordcloud2)
 library(RMeCab)
 
 #テキストファイルを読み込み、と同時に頻度を調べて「MCB」に格納
-#パスに日本語があっても通った
+#パスをペースト。パスに日本語があっても通った
 MCB &lt;-RMeCabFreq(&quot;/Users/(username)/Documents/Rstudio/words/biology5th_utf8.txt&quot;)
 
 #並べ替えして「WC」に格納し、ワードクラウドを描く
@@ -891,6 +889,12 @@ MCB &lt;-RMeCabFreq(&quot;/Users/(username)/Documents/Rstudio/words/biology5th_u
 WC &lt;- MCB[order(MCB$Freq, decreasing=T),]
 wordcloud2(WC[,c(&quot;Term&quot;,&quot;Freq&quot;)], minRotation = -pi/12, maxRotation = -pi/12)
 </code></pre>
+<h2 id="_2">メモ</h2>
+<ul>
+<li>「知的好奇心」は、知的と好奇心に分かれて集計される。困るほどではないけれど、用語が分解されやすい。性能が良い証拠？辞書のせい？</li>
+<li></li>
+</ul>
+<hr />
 <p>(2023.5.18 iMac2017_Corei7, MBP2021_M1max)</p>
 
               
