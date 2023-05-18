@@ -883,6 +883,7 @@ library(wordcloud2)
 library(RMeCab)
 
 #テキストファイルを読み込み、と同時に頻度を調べて「MCB」に格納
+#パスに日本語があっても通った
 MCB &lt;-RMeCabFreq(&quot;/Users/(username)/Documents/Rstudio/words/biology5th_utf8.txt&quot;)
 
 #並べ替えして「WC」に格納し、ワードクラウドを描く
