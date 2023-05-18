@@ -822,8 +822,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rstudio_1" class="md-nav__link">
-    RStudioの準備（初回だけ）
+  <a href="#homebrew" class="md-nav__link">
+    Homebrewで準備（初回だけ）
   </a>
   
 </li>
@@ -836,7 +836,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#rstudio_2" class="md-nav__link">
+  <a href="#rstudio_1" class="md-nav__link">
     RStudio
   </a>
   
@@ -863,7 +863,7 @@
 
 <h1 id="rstudio">RStudio練習中</h1>
 <h2 id="wordcloud">Wordcloud</h2>
-<h3 id="rstudio_1">RStudioの準備（初回だけ）</h3>
+<h3 id="homebrew">Homebrewで準備（初回だけ）</h3>
 <p>TerminalでRとRStudioをインストール、日本語ワードマイニングのパッケージをインストール、辞書も。</p>
 <pre><code>brew install r
 brew install --cask r
@@ -873,7 +873,7 @@ brew install mecab-ipadic
 <h3 id="_1">アンケート結果の準備</h3>
 <p>アンケート結果のエクセルから、使いたい語句をテキストファイルへコピペして保存。
 保存先のパスを確認</p>
-<h3 id="rstudio_2">RStudio</h3>
+<h3 id="rstudio_1">RStudio</h3>
 <pre><code>#Rstudio、ライブラリをインストール（初回だけ、時間が掛かる）
 install.package(&quot;wordcloud2&quot;)
 install.packages(&quot;RMeCab&quot;, repos = &quot;http://rmecab.jp/R&quot;)
@@ -885,11 +885,12 @@ library(RMeCab)
 #テキストファイルを読み込み、と同時に頻度を調べて「MCB」に格納
 MCB &lt;-RMeCabFreq(&quot;/Users/(username)/Documents/Rstudio/words/biology5th_utf8.txt&quot;)
 
-#並べ替えして「WC」に格納、ワードクラウドを描く　回転控えめ
-WC &lt;- MCB[order(resultMcb$Freq, decreasing=T),]
+#並べ替えして「WC」に格納し、ワードクラウドを描く
+#回転は控えめの設定、Viewerは十分大きく表示しておくこと
+WC &lt;- MCB[order(MCB$Freq, decreasing=T),]
 wordcloud2(WC[,c(&quot;Term&quot;,&quot;Freq&quot;)], minRotation = -pi/12, maxRotation = -pi/12)
 </code></pre>
-<p>(2023.5.18)</p>
+<p>(2023.5.18 iMac2017_Corei7, MBP2021_M1max)</p>
 
               
             </article>
