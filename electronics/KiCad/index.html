@@ -17,7 +17,7 @@
     
     
       
-        <title>Data size on M1/M2 mac - Manual of CoMBI</title>
+        <title>KiCad - Manual of CoMBI</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-size-on-m1m2-mac" class="md-skip">
+        <a href="#kicad" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data size on M1/M2 mac
+              KiCad
             
           </span>
         </div>
@@ -801,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../macgpu/index.html" class="md-nav__link">
         3Ddata on Mac
       </a>
     </li>
@@ -835,28 +835,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#3d-slicer-forum-2023427" class="md-nav__link">
-    3D slicer forum 2023.4.27
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apple-metal-feature-set-tables-pdf-2023912" class="md-nav__link">
-    Apple, Metal feature set tables (PDF) 2023.9.12
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -869,15 +847,16 @@
                 
 
 
-<h1 id="data-size-on-m1m2-mac">Data size on M1/M2 mac</h1>
-<p>2048 pixels, 2048 slicesを上限にしてあるらしい。2048x2048x2048のカラー画像セットは約25.8GB、グレースケールなら約8.6GB。3D slicerの推奨データ最大量はVRAMの半値である。VRAM約52GBまたは17GB（！）で扱える量ということになる。上限があるとはいえ、扱えるデータ量は十分多いと思う。</p>
-<h2 id="3d-slicer-forum-2023427">3D slicer forum 2023.4.27</h2>
-<p>https://discourse.slicer.org/t/gpu-and-cpu-rendering-on-macbookpro-m2-promax/29152</p>
-<p>"a max size of 2048 in all dimensions"</p>
-<h2 id="apple-metal-feature-set-tables-pdf-2023912">Apple, Metal feature set tables (PDF) 2023.9.12</h2>
-<p>https://developer.apple.com/metal/Metal-Feature-Set-Tables.pdf</p>
-<p>M1 series: "Apple7, 3D, 2048px"
-M2 series: "Apple8, 3D, 2048px"</p>
+<h1 id="kicad">KiCad</h1>
+<p>KiCad is a donation-ware to design circuit and PCB. 
+<span style="color:#444C99;">KiCadで回路やプリント基板をデザインしています。アプリは寄付または無料で利用できます、Win Mac Limnux対応。</span></p>
+<p>Install and prepare library
+1. Official site. <a href="https://www.kicad.org">https://www.kicad.org</a>
+1. "DOWNLOAD" tab to get an installer. Install KiCad7(2023).
+1. (Parts library is included in ver.6 or newer.) 
+1. Additional library
+    <a href="https://github.com/Digi-Key/digikey-kicad-library">DigiKey</a> JST's connectors
+1. New Project or New Project from Template (Arduino micro etc.)</p>
 
               
             </article>
