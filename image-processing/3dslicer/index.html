@@ -12,8 +12,11 @@
         <meta name="author" content="Tajika Y.">
       
       
+      
+      
+      
       <link rel="icon" href="../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
     
     
       
@@ -21,13 +24,14 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.c382b1dc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
-        
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
-        
       
+
+
     
+    
+      
     
     
       
@@ -39,23 +43,18 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
+    
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    <body dir="ltr">
   
-    
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -75,7 +74,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Manual of CoMBI" class="md-header__button md-logo" aria-label="Manual of CoMBI" data-md-component="logo">
       
@@ -83,6 +84,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
+      
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
@@ -103,8 +105,12 @@
     </div>
     
     
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
     
       <label class="md-header__button md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
@@ -113,12 +119,15 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -130,7 +139,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -160,6 +169,7 @@
                     
 
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Manual of CoMBI" class="md-nav__button md-logo" aria-label="Manual of CoMBI" data-md-component="logo">
@@ -174,14 +184,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../index.html" class="md-nav__link">
-        Top page
+        
+  
+  <span class="md-ellipsis">
+    Top page
+  </span>
+  
+
       </a>
     </li>
   
@@ -189,466 +204,682 @@
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2">
-          Installation/導入
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Installation/導入" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Installation/導入
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
           
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation/導入
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation/導入
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../devices/system/index.html" class="md-nav__link">
-        System Overview/概要
+        
+  
+  <span class="md-ellipsis">
+    System Overview/概要
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../devices/camera/index.html" class="md-nav__link">
-        Imaging devices/カメラなど
+        
+  
+  <span class="md-ellipsis">
+    Imaging devices/カメラなど
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../devices/selfmade/index.html" class="md-nav__link">
-        Self-made devices/自作装置
+        
+  
+  <span class="md-ellipsis">
+    Self-made devices/自作装置
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../devices/computer/index.html" class="md-nav__link">
-        Computer and storage/コンピュータとストレージ
+        
+  
+  <span class="md-ellipsis">
+    Computer and storage/コンピュータとストレージ
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../devices/application/index.html" class="md-nav__link">
-        Applications/アプリケーション
+        
+  
+  <span class="md-ellipsis">
+    Applications/アプリケーション
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3">
-          Instruction/操作
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Instruction/操作" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Instruction/操作
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
           
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Instruction/操作
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Instruction/操作
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../operation/frozenblock/index.html" class="md-nav__link">
-        Frozen Block
+        
+  
+  <span class="md-ellipsis">
+    Frozen Block
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../operation/paraffinblock/index.html" class="md-nav__link">
-        Paraffin Block
+        
+  
+  <span class="md-ellipsis">
+    Paraffin Block
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../operation/camerasettings/index.html" class="md-nav__link">
-        Camera Settings
+        
+  
+  <span class="md-ellipsis">
+    Camera Settings
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../operation/tethering/index.html" class="md-nav__link">
-        Tethering (optional)
+        
+  
+  <span class="md-ellipsis">
+    Tethering (optional)
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../operation/combi-u/index.html" class="md-nav__link">
-        CoMBI-U (Universal)
+        
+  
+  <span class="md-ellipsis">
+    CoMBI-U (Universal)
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../operation/combi-c/index.html" class="md-nav__link">
-        CoMBI-C (Cryostat)
+        
+  
+  <span class="md-ellipsis">
+    CoMBI-C (Cryostat)
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../operation/combi-s/index.html" class="md-nav__link">
-        CoMBI-S (Sliding, motorized)
+        
+  
+  <span class="md-ellipsis">
+    CoMBI-S (Sliding, motorized)
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../operation/combi-s-m/index.html" class="md-nav__link">
-        CoMBI-S (Sliding, manual)
+        
+  
+  <span class="md-ellipsis">
+    CoMBI-S (Sliding, manual)
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../operation/combi-r/index.html" class="md-nav__link">
-        CoMBI-R (Rotary, manual)
+        
+  
+  <span class="md-ellipsis">
+    CoMBI-R (Rotary, manual)
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4">
-          Image Processing/画像処理
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Image Processing/画像処理" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Image Processing/画像処理
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
           
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Image Processing/画像処理
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Image Processing/画像処理
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../introduction/index.html" class="md-nav__link">
-        Overview/概要
+        
+  
+  <span class="md-ellipsis">
+    Overview/概要
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../rawjpeg/index.html" class="md-nav__link">
-        RAW to JPEG conversion/RAW現像
+        
+  
+  <span class="md-ellipsis">
+    RAW to JPEG conversion/RAW現像
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../scale/index.html" class="md-nav__link">
-        Resizing and Reducing/画像の縮小
+        
+  
+  <span class="md-ellipsis">
+    Resizing and Reducing/画像の縮小
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../registration/index.html" class="md-nav__link">
-        Image Registration/ズレ補正
+        
+  
+  <span class="md-ellipsis">
+    Image Registration/ズレ補正
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../automation/index.html" class="md-nav__link">
-        Automation/自動処理
+        
+  
+  <span class="md-ellipsis">
+    Automation/自動処理
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="index.html" class="md-nav__link">
-        3D Reconstruction, 3D slicer
+        
+  
+  <span class="md-ellipsis">
+    3D Reconstruction, 3D slicer
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../icy/index.html" class="md-nav__link">
-        3D Reconstruction, Icy
+        
+  
+  <span class="md-ellipsis">
+    3D Reconstruction, Icy
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../horos/index.html" class="md-nav__link">
-        3D Reconstruction, Horos/OsiriX
+        
+  
+  <span class="md-ellipsis">
+    3D Reconstruction, Horos/OsiriX
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../correlation/index.html" class="md-nav__link">
-        Correlation of 2D and 3D images/3D像に切片位置を示す
+        
+  
+  <span class="md-ellipsis">
+    Correlation of 2D and 3D images/3D像に切片位置を示す
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../EDF/index.html" class="md-nav__link">
-        Extended Depth of Field/深度合成
+        
+  
+  <span class="md-ellipsis">
+    Extended Depth of Field/深度合成
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../ilastik/index.html" class="md-nav__link">
-        Segmentation by ilastik/セグメンテーション
+        
+  
+  <span class="md-ellipsis">
+    Segmentation by ilastik/セグメンテーション
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../gallery/gallery/index.html" class="md-nav__link">
-        Gallery/作品集
+        
+  
+  <span class="md-ellipsis">
+    Gallery/作品集
+  </span>
+  
+
       </a>
     </li>
   
@@ -656,14 +887,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../publication/publication/index.html" class="md-nav__link">
-        Publications/論文
+        
+  
+  <span class="md-ellipsis">
+    Publications/論文
+  </span>
+  
+
       </a>
     </li>
   
@@ -671,146 +907,214 @@
     
       
       
-      
-
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" data-md-state="indeterminate" type="checkbox" id="__nav_7" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_7">
-          Electronics
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Electronics" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          Electronics
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        
           
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Electronics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Electronics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../electronics/ATmega328P/index.html" class="md-nav__link">
-        ATmega328P standalone/単体利用
+        
+  
+  <span class="md-ellipsis">
+    ATmega328P standalone/単体利用
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../electronics/terminal/index.html" class="md-nav__link">
-        Crimped terminal/圧着端子
+        
+  
+  <span class="md-ellipsis">
+    Crimped terminal/圧着端子
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../electronics/vender/index.html" class="md-nav__link">
-        Venders/パーツの入手先
+        
+  
+  <span class="md-ellipsis">
+    Venders/パーツの入手先
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../electronics/mkdocs/index.html" class="md-nav__link">
-        Mkdocs-material/HPづくり
+        
+  
+  <span class="md-ellipsis">
+    Mkdocs-material/HPづくり
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../electronics/camera_terminal/index.html" class="md-nav__link">
-        Camera terminal/カメラ端子
+        
+  
+  <span class="md-ellipsis">
+    Camera terminal/カメラ端子
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../electronics/Rstudio/index.html" class="md-nav__link">
-        Rstudio/練習中
+        
+  
+  <span class="md-ellipsis">
+    Rstudio/練習中
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../electronics/ArduinoSerial/index.html" class="md-nav__link">
-        Arduino Serial Plotter
+        
+  
+  <span class="md-ellipsis">
+    Arduino Serial Plotter
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../electronics/macgpu/index.html" class="md-nav__link">
-        3Ddata on Mac
+        
+  
+  <span class="md-ellipsis">
+    3Ddata on Mac
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -843,14 +1147,18 @@
       
         <li class="md-nav__item">
   <a href="#things-to-do" class="md-nav__link">
-    Things to do/できること
+    <span class="md-ellipsis">
+      Things to do/できること
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#1-installation" class="md-nav__link">
-    1. Installation/インストール
+    <span class="md-ellipsis">
+      1. Installation/インストール
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="1. Installation/インストール">
@@ -858,14 +1166,18 @@
         
           <li class="md-nav__item">
   <a href="#windows" class="md-nav__link">
-    Windows
+    <span class="md-ellipsis">
+      Windows
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#macos" class="md-nav__link">
-    MacOS
+    <span class="md-ellipsis">
+      MacOS
+    </span>
   </a>
   
 </li>
@@ -877,7 +1189,9 @@
       
         <li class="md-nav__item">
   <a href="#2-basic-operation" class="md-nav__link">
-    2. Basic operation/基本操作
+    <span class="md-ellipsis">
+      2. Basic operation/基本操作
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="2. Basic operation/基本操作">
@@ -885,70 +1199,90 @@
         
           <li class="md-nav__item">
   <a href="#module" class="md-nav__link">
-    Module/モジュール
+    <span class="md-ellipsis">
+      Module/モジュール
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#load-dicom-data" class="md-nav__link">
-    Load DICOM data/データ読込
+    <span class="md-ellipsis">
+      Load DICOM data/データ読込
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#view-windows" class="md-nav__link">
-    View windows/画面表示
+    <span class="md-ellipsis">
+      View windows/画面表示
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#browse-slices" class="md-nav__link">
-    Browse slices/スライス閲覧
+    <span class="md-ellipsis">
+      Browse slices/スライス閲覧
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#zoom-in-and-out" class="md-nav__link">
-    Zoom in and out/拡大と縮小
+    <span class="md-ellipsis">
+      Zoom in and out/拡大と縮小
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#move" class="md-nav__link">
-    Move/移動
+    <span class="md-ellipsis">
+      Move/移動
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#brightness-and-contrastct" class="md-nav__link">
-    Brightness and contrast/CT値の調節
+    <span class="md-ellipsis">
+      Brightness and contrast/CT値の調節
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#blue-window-3d-view" class="md-nav__link">
-    Blue window; 3D view/青画面
+    <span class="md-ellipsis">
+      Blue window; 3D view/青画面
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#screenshot" class="md-nav__link">
-    Screenshot/スクリーンショット
+    <span class="md-ellipsis">
+      Screenshot/スクリーンショット
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#close" class="md-nav__link">
-    Close／閉じる
+    <span class="md-ellipsis">
+      Close／閉じる
+    </span>
   </a>
   
 </li>
@@ -960,7 +1294,9 @@
       
         <li class="md-nav__item">
   <a href="#3-advanced-operationcombi" class="md-nav__link">
-    3. Advanced operation/CoMBIの連続画像
+    <span class="md-ellipsis">
+      3. Advanced operation/CoMBIの連続画像
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="3. Advanced operation/CoMBIの連続画像">
@@ -968,42 +1304,54 @@
         
           <li class="md-nav__item">
   <a href="#unit" class="md-nav__link">
-    Unit/単位
+    <span class="md-ellipsis">
+      Unit/単位
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#image-file-formatjpeg" class="md-nav__link">
-    Image file format/連続画像はJPEG
+    <span class="md-ellipsis">
+      Image file format/連続画像はJPEG
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#file-name-batch-conversion" class="md-nav__link">
-    File name Batch conversion/ファイル名一括変換
+    <span class="md-ellipsis">
+      File name Batch conversion/ファイル名一括変換
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#load-serial-images" class="md-nav__link">
-    Load serial images/連続画像の読み込み
+    <span class="md-ellipsis">
+      Load serial images/連続画像の読み込み
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#setting-up-serial-images" class="md-nav__link">
-    Setting up serial images/連続画像の設定
+    <span class="md-ellipsis">
+      Setting up serial images/連続画像の設定
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#volume-rendering" class="md-nav__link">
-    Volume Rendering
+    <span class="md-ellipsis">
+      Volume Rendering
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Volume Rendering">
@@ -1011,21 +1359,27 @@
         
           <li class="md-nav__item">
   <a href="#essentials" class="md-nav__link">
-    Essentials/準備とツール
+    <span class="md-ellipsis">
+      Essentials/準備とツール
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#coloring" class="md-nav__link">
-    Coloring/色付け
+    <span class="md-ellipsis">
+      Coloring/色付け
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#tips" class="md-nav__link">
-    Tips
+    <span class="md-ellipsis">
+      Tips
+    </span>
   </a>
   
 </li>
@@ -1037,21 +1391,27 @@
         
           <li class="md-nav__item">
   <a href="#keep-scenes" class="md-nav__link">
-    Keep scenes/表示位置を記録
+    <span class="md-ellipsis">
+      Keep scenes/表示位置を記録
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#movie-creation-by-os" class="md-nav__link">
-    Movie creation by OS/簡易的な動画制作
+    <span class="md-ellipsis">
+      Movie creation by OS/簡易的な動画制作
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#movie-creation-by-3d-slicer2016" class="md-nav__link">
-    Movie creation by 3D slicer/アプリ機能(2016年実装)で動画制作
+    <span class="md-ellipsis">
+      Movie creation by 3D slicer/アプリ機能(2016年実装)で動画制作
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Movie creation by 3D slicer/アプリ機能(2016年実装)で動画制作">
@@ -1059,28 +1419,36 @@
         
           <li class="md-nav__item">
   <a href="#install-ffmpegffmpeg" class="md-nav__link">
-    Install ffmpeg/事前準備、ffmpegのインストール
+    <span class="md-ellipsis">
+      Install ffmpeg/事前準備、ffmpegのインストール
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#step-1-recording-operations" class="md-nav__link">
-    Step 1: Recording operations/操作を記録
+    <span class="md-ellipsis">
+      Step 1: Recording operations/操作を記録
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#step-2-movie-export" class="md-nav__link">
-    Step 2: Movie export/動画を書き出す
+    <span class="md-ellipsis">
+      Step 2: Movie export/動画を書き出す
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#tips_1" class="md-nav__link">
-    Tips/ヒント
+    <span class="md-ellipsis">
+      Tips/ヒント
+    </span>
   </a>
   
 </li>
@@ -1092,7 +1460,9 @@
         
           <li class="md-nav__item">
   <a href="#save-data" class="md-nav__link">
-    Save data/保存
+    <span class="md-ellipsis">
+      Save data/保存
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Save data/保存">
@@ -1100,28 +1470,36 @@
         
           <li class="md-nav__item">
   <a href="#save-everything-as-a-single-file" class="md-nav__link">
-    Save everything as a single file
+    <span class="md-ellipsis">
+      Save everything as a single file
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#save-each-processed-data-into-individual-files" class="md-nav__link">
-    Save each processed data into individual files.
+    <span class="md-ellipsis">
+      Save each processed data into individual files.
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    画像データも作業内容もひとつのファイルに保存する（公式サイトでは推奨）
+    <span class="md-ellipsis">
+      画像データも作業内容もひとつのファイルに保存する（公式サイトでは推奨）
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    作業内容を個別に保存する（なにかとメリットはある）
+    <span class="md-ellipsis">
+      作業内容を個別に保存する（なにかとメリットはある）
+    </span>
   </a>
   
 </li>
@@ -1133,7 +1511,9 @@
         
           <li class="md-nav__item">
   <a href="#segmentaion" class="md-nav__link">
-    Segmentaion/セグメンテーション
+    <span class="md-ellipsis">
+      Segmentaion/セグメンテーション
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Segmentaion/セグメンテーション">
@@ -1141,21 +1521,27 @@
         
           <li class="md-nav__item">
   <a href="#procedure-of-manual-segmentation-by-3dslicersegmentation" class="md-nav__link">
-    Procedure of manual segmentation by 3Dslicer/手作業でSegmentationする手順
+    <span class="md-ellipsis">
+      Procedure of manual segmentation by 3Dslicer/手作業でSegmentationする手順
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#obtaining-volume-values-of-segments" class="md-nav__link">
-    Obtaining volume values of segments/セグメントの体積を数値として取得する
+    <span class="md-ellipsis">
+      Obtaining volume values of segments/セグメントの体積を数値として取得する
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#tips_2" class="md-nav__link">
-    Tips/工夫やヒント
+    <span class="md-ellipsis">
+      Tips/工夫やヒント
+    </span>
   </a>
   
 </li>
@@ -1167,7 +1553,9 @@
         
           <li class="md-nav__item">
   <a href="#3d-printer3d-in-practicing" class="md-nav__link">
-    3D printer/3Dプリンタ (in practicing)
+    <span class="md-ellipsis">
+      3D printer/3Dプリンタ (in practicing)
+    </span>
   </a>
   
 </li>
@@ -1185,10 +1573,11 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
 
 
 <h1 id="3d-slicer-win-mac-linux">3D slicer （Win, Mac, Linux）</h1>
@@ -2021,10 +2410,10 @@ OS付属の機能を使用するメリットは、あらゆる動きが録画で
     </span></p>
 </li>
 <li>
-<p><strong>Segmentation fails when angled in MPR (Multiplanar Reconstruction): </strong>
+<p><strong>Segmentation fails when angled in MPR (Multiplanar Reconstruction): **
 In the reconstructed planes (red, yellow, and green screens), when I angled and then segmented, the segmentation was broken up and I could not get a proper Segment, Fill between, or Smooth. You may have a situation where you want to adjust the angle of a sample to make it a transverse or sagittal section because it was embedded at an angle, but you should do the segmentation first and leave the angle adjustment for later.
     <span style="color:#444C99;"><br>
-    <strong>MPR（多平面再構築）で角度をつけると、Segmentationできない：</strong>多平面（赤画面、黄画面、緑画面）において、角度をつけてからSegmentationしたら、とびとびになって、まともなSegment, Fill between, Smoothになりません。「サンプルちょっと斜めで包埋されていたから、角度を調節して、きっちりと横断面、矢状断面にしたい」ということがあるかもしれませんが、Segmentation作業を先にして、角度調整はあとまわしにしてください。
+    </strong>MPR（多平面再構築）で角度をつけると、Segmentationできない：**多平面（赤画面、黄画面、緑画面）において、角度をつけてからSegmentationしたら、とびとびになって、まともなSegment, Fill between, Smoothになりません。「サンプルちょっと斜めで包埋されていたから、角度を調節して、きっちりと横断面、矢状断面にしたい」ということがあるかもしれませんが、Segmentation作業を先にして、角度調整はあとまわしにしてください。
     </span></p>
 </li>
 <li>
@@ -2292,9 +2681,23 @@ I am using MacBookPro15 (2018-2021, i9, 4GB-HBM2, 32GB) and from 2022, MacBookPr
 </li>
 </ul>
 
-              
-            </article>
-          </div>
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
@@ -2325,10 +2728,12 @@ I am using MacBookPro15 (2018-2021, i9, 4GB-HBM2, 32GB) and from 2022, MacBookPr
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.a6c66575.min.js"></script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
       
     
   </body>
