@@ -1241,25 +1241,33 @@
 <p>USB typeA-typeC変換アダプタの相性が悪かった。および、ブートローダが調子悪かった</p>
 <h3 id="symptoms-in-detail">Symptoms in detail/症状詳細</h3>
 <p>以下、どれもmicroを認識しない</p>
-<p>OS and App
-* Arduino IDE v2.3、v1.8
-* macOS 14 (Sonoma MBP16 M1max), 12 (Monterey MBP13 intel)</p>
-<p>ケーブル3種、アダプタ3種
-* USB microB-A cable 1.8 m (Anker 2024) + USB typeA-C adaptor (Anker 2024)
-* USB microB-A cable 15 cm (Anker 2017) + USB typeA-C adaptor (Anker 2024)
-* USB microB-A cable 1 m (No brand ???? worked fine in 2023.10) + USB typeA-C adaptor (Anker 2024)</p>
-<p>ネット情報各種
-* restart OS, app
-* re-install FTDI serial driver
-* delete needless network settings (bluetooth etc.)</p>
+<p>OS and App</p>
+<ul>
+<li>Arduino IDE v2.3、v1.8</li>
+<li>macOS 14 (Sonoma MBP16 M1max), 12 (Monterey MBP13 intel)</li>
+</ul>
+<p>ケーブル3種、アダプタ3種</p>
+<ul>
+<li>USB microB-A cable 1.8 m (Anker 2024) + USB typeA-C adaptor (Anker 2024)</li>
+<li>USB microB-A cable 15 cm (Anker 2017) + USB typeA-C adaptor (Anker 2024)</li>
+<li>USB microB-A cable 1 m (No brand ???? worked fine in 2023.10) + USB typeA-C adaptor (Anker 2024)</li>
+</ul>
+<p>ネット情報各種</p>
+<ul>
+<li>restart OS, app</li>
+<li>re-install FTDI serial driver</li>
+<li>delete needless network settings (bluetooth etc.)</li>
+</ul>
 <h3 id="examinations">Examinations/試したこと</h3>
 <p>Burn bootloader ブートローダを書き直した</p>
-<p>Test combinations of adaptor and cable　いろいろ試してアダプタの相性がわかった
-* ANKER USB-A-C adaptor 2022 + cable 1.8 m: OK
-* ANKER USB-A-C adaptor 2022 + cable 15 cm: OK
-* ANKER USB-A-C adaptor 2024 + cable 1.8 m + Arduino micro: NOT work
-* ANKER USB-A-C adaptor 2024 + cable 15 cm, OK, but previously NOT work
-* ANKER USB HUB + cable 1.8 m OK</p>
+<p>Test combinations of adaptor and cable　いろいろ試してアダプタの相性がわかった</p>
+<ul>
+<li>ANKER USB-A-C adaptor 2022 + cable 1.8 m: OK</li>
+<li>ANKER USB-A-C adaptor 2022 + cable 15 cm: OK</li>
+<li>ANKER USB-A-C adaptor 2024 + cable 1.8 m + Arduino micro: NOT work</li>
+<li>ANKER USB-A-C adaptor 2024 + cable 15 cm, OK, but previously NOT work</li>
+<li>ANKER USB HUB + cable 1.8 m OK</li>
+</ul>
 <p>Arduino UNO, ANKER USB-A-C adaptor 2024 + Official yellow cabel, OK　UNOは大丈夫</p>
 <p>A long cable with new adaptor might not be recognized. In addition, bootloader may be crushed.</p>
 <p>まとめると、ケーブルが長く、新しいアダプタ（2024）がダメ。僅かな電力不足か？今回は、ブートローダーとアダプタの両方が原因だったと思う。</p>
