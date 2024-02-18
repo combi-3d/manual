@@ -1215,6 +1215,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1237,7 +1246,9 @@
 
 <h1 id="arduino-micro-tips">Arduino micro tips</h1>
 <h2 id="change-bootloader">Change bootloader</h2>
-<p>Arduino microの公式デフォルトブートローダでは、リセットに８秒かかる。SparkFun社Pro micro用ブートローダに変えると、瞬時にリセットが完了する。Arduino micro、SparkFun Pro microは互換性があるので書き換えられる。</p>
+<p>Arduino microの公式デフォルトブートローダでは、リセットに８秒かかる。BootloaderとUserCodeの両方を読み直すため。
+Spatkfun社から、改良版のBootloaderが配布されている。リセットボタンを押す（シングルクリックする）と、UserCodeだけ読み直し、0.75secで再起動できる。ダブルクリックでbootloaderから読み直す。
+Arduino micro、SparkFun Pro microは互換性があるので書き換えられる。</p>
 <h3 id="_1">準備</h3>
 <p>マイコンATmega32U4には2種類存在する。Arduino microは5V,16Mhzである
 Arduino IDEにSparkFun製品のライブラリをインストールする
@@ -1246,39 +1257,68 @@ Arduino IDEにSparkFun製品のライブラリをインストールする
 ジャンパーケーブル　オスーメス　6本</p>
 <h3 id="_2">作業</h3>
 <ol>
-<li>Sparkfunのファイルをインストールする</li>
-</ol>
+<li>
+<p>Sparkfunのファイルをインストールする</p>
 <p>Arduino IDE &gt; Settings</p>
 <p>https://raw.githubusercontent.com/sparkfun/Arduino_Boards/master/IDE_Board_Manager/package_sparkfun_index.json</p>
 <p>Tools &gt;Boards &gt;nBoards Manager…</p>
-<p>SparkFun AVR Baordsをinstall
-1.1.13 (2023)</p>
+<p>SparkFun AVR Baordsをinstall 1.1.13 (2023)</p>
 <p>Tools &gt; Boardsに、Sparkfun AVR Boardsが表示される</p>
-<ol>
-<li>UNOを書き込み装置に仕立てる　Arduino as ISPの準備</li>
-</ol>
+</li>
+<li>
+<p>UNOを書き込み装置に仕立てる　Arduino as ISPの準備</p>
 <p>Arduino UNOをUSBでPCに接続する
 File &gt; Examples &gt; 11. ArduinoISP &gt; ArduinoISP
 書き込む</p>
-<ol>
-<li>配線する</li>
-</ol>
+</li>
+<li>
+<p>配線する</p>
 <p>Arduino UNO 5V, GND, 10,11,12,13
 Arduino micro ICSPに。</p>
-<ol>
-<li>設定する</li>
-</ol>
+</li>
+<li>
+<p>設定する</p>
 <p>Tools &gt; Board: “SparkFun pro micro”　（ボード）
 Tools &gt; Port: “/dev/cu.usb…”　（ポート）
 Tools &gt; Processor: “ATmega32U4 (5V, 16MHz)　（プロセッサー）
 Tools &gt; Programer: “Arduino as ISP” （書き込み装置）</p>
-<p>Arduino microのATmega32U4は、5V 16MHzである</p>
-<ol>
-<li>ブートローダを書き込む</li>
-</ol>
+<p>注意：Arduino microのATmega32U4は、5V 16MHzである</p>
+</li>
+<li>
+<p>ブートローダを書き込む</p>
 <p>Tools &gt; Burn bootloader（ブートローダを書き込む）
 RESETが一瞬で完了する。8秒かからなくなった。ダブルクリックで8秒。
 RX・TXのLEDが常時点灯するようになる</p>
+</li>
+</ol>
+<hr />
+<h3 id="_3">参考</h3>
+<ul>
+<li>
+<p>Sparkfunの情報★
+https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide#troubleshooting-and-faq</p>
+</li>
+<li>
+<p>Sparkfun ブートローダの書き込みチュートリアル★
+https://learn.sparkfun.com/tutorials/installing-an-arduino-bootloader</p>
+</li>
+<li>
+<p>Pro microに書き込む例、配線の仕方
+https://tomosoft.jp/design/?p=12039</p>
+</li>
+<li>
+<p>ブートローダの違い
+https://zenn.dev/koron/articles/9fee38469a8acc</p>
+</li>
+<li>
+<p>書き換えること
+https://ehbtj.com/electronics/arduino-leonardo-speed-up-boot-time/</p>
+</li>
+<li>
+<p>書き換え方、配線、別にArduino UNO（ArduinoISPを書き込んでプログラマに仕立てたもの）が必要。
+https://physical-computing-lab.net/arduino/learn_arduino_bootloader_install.html</p>
+</li>
+</ul>
 
 
 
