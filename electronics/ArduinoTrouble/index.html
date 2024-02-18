@@ -20,7 +20,7 @@
     
     
       
-        <title>Camera terminal カメラシャッター制御の3端子 - Manual of CoMBI</title>
+        <title>Arduino troubles - Manual of CoMBI</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#camera-terminal-3" class="md-skip">
+        <a href="#arduino-troubles" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Camera terminal カメラシャッター制御の3端子
+              Arduino troubles
             
           </span>
         </div>
@@ -972,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ArduinoTrouble/index.html" class="md-nav__link">
+      <a href="index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1056,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../camera_terminal/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1167,29 +1167,53 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#character-of-terminals" class="md-nav__link">
+  <a href="#unstable-recognition" class="md-nav__link">
     <span class="md-ellipsis">
-      Character of terminals/ 端子の性質
+      Unstable recognition/認識されない
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unstable recognition/認識されない">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trouble" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trouble/問題
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#optocoupler-solid-state-relay" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#cause" class="md-nav__link">
     <span class="md-ellipsis">
-      Optocoupler, Solid state relay / フォトカプラ、フォトリレー
+      Cause/原因
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#symptoms-in-detail" class="md-nav__link">
     <span class="md-ellipsis">
-      Code
+      Symptoms in detail/症状詳細
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examinations/試したこと
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1208,84 +1232,37 @@
                   
 
 
-<h1 id="camera-terminal-3">Camera terminal カメラシャッター制御の3端子</h1>
-<p>(2022.8.18 Thank you M! for cooperation in this varidation.)</p>
-<p>The terminals for shutter control are basically the same among companies, and can be controlled by two optocouplers. However, there are some differences in electrical characteristics, and care must be taken when creating circuits and codes.</p>
-<p><span style="color:#444C99;">4社のカメラ端子の性質を検証しました。</span></p>
-<h2 id="character-of-terminals">Character of terminals/ 端子の性質</h2>
-<table>
-<thead>
-<tr>
-<th>Model</th>
-<th>Year of launch</th>
-<th>Required terminals for release</th>
-<th>Polarity of GND and Release</th>
-<th>Min. contact time required for release</th>
-<th>Min. resistant values to inhibit release (right polarity, inverted polarity)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Fuji X-T30II</td>
-<td>2021</td>
-<td>GND+Release</td>
-<td>Yes</td>
-<td>45 msec</td>
-<td>0.5kΩ, — （ごく小さな電圧で端子を制御しているらしい、電圧計測はしていない）</td>
-</tr>
-<tr>
-<td>Sony a7RIII</td>
-<td>2017</td>
-<td>GND+Hold+Release</td>
-<td>No</td>
-<td>1 msec</td>
-<td>12kΩ, 11kΩ</td>
-</tr>
-<tr>
-<td>Nikon D810</td>
-<td>2014</td>
-<td>GND+Hold+Release</td>
-<td>No</td>
-<td>2 msec</td>
-<td>4.5kΩ, 4kΩ</td>
-</tr>
-<tr>
-<td>Canon 60D</td>
-<td>2010</td>
-<td>GND+Release</td>
-<td>No</td>
-<td>3 msec</td>
-<td>30kΩ, 30kΩ(電圧高め)</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Focus Hold端子の必要性は、機種で異なる。CoMBIでは３端子を接続させる仕様で、各社に対応する。</li>
-<li>極性というよりは、接続の方向というべきか。フォトカプラのエミッタとコレクタを、カメラシャッター端子のGNDとRelease（またはFocus Hold）のどちらの接続するかということ。フォトカプラはどちらの方向でも働きはするが、耐電圧が異なる。その影響か、方向（極性）を選ぶ機種と選ばない機種があるようだ。CoMBI基板は方向を気にせずデザインし、フォトカプラTLP785を使っている。フォトリレーTLP222Aに交換すれば方向を選ぶ機種にも対応する。</li>
-<li>リリースするために必要な、端子接続時間は、機種により異なる。CoMBIでは、開発世代によって20〜200　msecを使用してきた。最新版CoMBIでは、150 msecとして各社に対応する。</li>
-<li>カメラが端子を制御するための電圧は、機種により異なる。その影響か、フォトカプラと接続する方向（極性）を選ぶ機種と選ばない機種があるようだ。CoMBI基板は方向を気にせずデザインし、フォトカプラTLP785を使っている。フォトリレーTLP222Aに交換すれば方向を選ぶ機種にも対応する。</li>
-</ul>
-<h2 id="optocoupler-solid-state-relay">Optocoupler, Solid state relay / フォトカプラ、フォトリレー</h2>
-<ul>
-<li>Use optocoupler (Toshiba TLP785) with R220ohm and 5V signal, or photorelay (Solid state relay, Toshiba TLP222A) with R510ohm and 5V signal.</li>
-<li>Check the lot of optocoupler before use. 6 different lots were checked, and one might have an issue on the output (emitter and collector), which caused the Nikon D810 to select the direction of connection (polarity). The output may have the higher resistance. Optocouplers were bought some years ago, thus there remains possibility of deterioration.</li>
-<li>Optocoupler has the withstand voltages; Pin 4 collector to 3 emitter 80V, and Pin 3 emitter to 4 collector 7V. Voltage between GND and Release seems to be from 1.8V (Olympus) to 3.2V (Canon). Thus, either direction may work, but connections of Pin3 emitter with GND, and Pin4 collector with Release (or Focus hold), may be preferred.</li>
-<li>Solid state relay (TLP222A) can accept both direction of camera terminal. The difference between a coupler and a relay is in the speed of response: a coupler connects a circuit (switches) in a few µsec and a relay in a few msec. Although this is a large difference in value, we believe it has no effect on the CoMBI imaging.
-<br><br></li>
-<li><span style="color:#444C99;">フォトカプラ（Optocoupler, Toshiba TLP785, R220ohm, 5Vシグナル）を使うか、両方向対応のフォトリレー（Solid state relay, Toshiba TLP222A, R510ohm, 5Vシグナル）を使う。</span></li>
-<li><span style="color:#444C99;">フォトカプラ等は、使用前にロットチェックすること。６種のロットをチェックしたところ、１種で出力端子があやしく、Nikon D810が接続の方向（極性）を選ぶようになってしまった。抵抗が高い?のかもしれない。数年前に買い置きしていたものだったので、もしかしたら劣化かもしれない。</span></li>
-<li><span style="color:#444C99;">フォトカプラ（Optocoupler, Toshiba TLP785）の耐電圧は、Pin4 collector to Pin3 emitterの方向では80V、Pin3 collector to Pin4 emitterの方向では7Vである。カメラ端子には、カメラ本体から1.8V（Olympus）から3.3V（Canon）の電圧がかかっているらしいため、どちらの方向に接続しても安全に作動するはずである。しかしながら、接続の方向は、Pin3 emitter = GND, Pin4 collector = Release (またはFocus Hold)がよさそうである。カメラの仕様違いや、フォトカプラのロット差の影響で、上記の方向でしか働かなくなる場合があるため。（現状のCoMBI-Univ基板は逆方向を使用しているので、次回の基板発注で変更しようかな）</span></li>
-<li><span style="color:#444C99;">フォトリレー（TLP222A）を使えば、方向を気にすることなく制作できる。カプラとリレーの違いは、反応の速さにあり、カプラは数µsec、リレーは数msecで回路を接続（スイッチング）する。値としては大きな差だが、実際のCoMBI撮影には影響がないと考えている。</span></li>
-</ul>
-<h2 id="code">Code</h2>
-<p>For Arduino, delay(150) is used. As a sufficient contact time, Fuji's 45 msec was appropriately multiplied by 3, and I desided to use 150 msec. However, the delay function does not work if you use it in attachInterrupt(). Instead, use delayMicroseconds() as below.</p>
-<pre><code>int contactTime = 150;
-for(int j=0;j&lt;contactTime;j++){
-    delayMicroseconds(1000);
-}
-</code></pre>
-<p><span style="color:#444C99;">
-Arduinoの場合、delay(150)にした。十分な接触時間として、Fujiの45msecを適当に3倍、150 msecとした。開発中は20〜200msec、主に200msecを使ってきたので、長過ぎることはない。ただし、attachInterrrupt()のなかでは、delay関数が働きません。かわりに、delaymicroseconds()を使います。delaymicrosecondの設定最大値は約1600 microsecondsらしいので、1000に設定し、forを使って繰り返します。</span></p>
+<h1 id="arduino-troubles">Arduino troubles</h1>
+<p>2024.2.18</p>
+<h2 id="unstable-recognition">Unstable recognition/認識されない</h2>
+<h3 id="trouble">Trouble/問題</h3>
+<p>Arduino microがUSBポートで認識されない。一瞬認識されるがすぐ切れる。一方、UNOは認識される。これでは開発できないし、そもそも動作させれない</p>
+<h3 id="cause">Cause/原因</h3>
+<p>USB typeA-typeC変換アダプタの相性が悪かった。および、ブートローダが調子悪かった</p>
+<h3 id="symptoms-in-detail">Symptoms in detail/症状詳細</h3>
+<p>以下、どれもmicroを認識しない</p>
+<p>OS and App
+* Arduino IDE v2.3、v1.8
+* macOS 14 (Sonoma MBP16 M1max), 12 (Monterey MBP13 intel)</p>
+<p>ケーブル3種、アダプタ3種
+* USB microB-A cable 1.8 m (Anker 2024) + USB typeA-C adaptor (Anker 2024)
+* USB microB-A cable 15 cm (Anker 2017) + USB typeA-C adaptor (Anker 2024)
+* USB microB-A cable 1 m (No brand ???? worked fine in 2023.10) + USB typeA-C adaptor (Anker 2024)</p>
+<p>ネット情報各種
+* restart OS, app
+* re-install FTDI serial driver
+* delete needless network settings (bluetooth etc.)</p>
+<h3 id="examinations">Examinations/試したこと</h3>
+<p>Burn bootloader ブートローダを書き直した</p>
+<p>Test combinations of adaptor and cable　いろいろ試してアダプタの相性がわかった
+* ANKER USB-A-C adaptor 2022 + cable 1.8 m: OK
+* ANKER USB-A-C adaptor 2022 + cable 15 cm: OK
+* ANKER USB-A-C adaptor 2024 + cable 1.8 m + Arduino micro: NOT work
+* ANKER USB-A-C adaptor 2024 + cable 15 cm, OK, but previously NOT work
+* ANKER USB HUB + cable 1.8 m OK</p>
+<p>Arduino UNO, ANKER USB-A-C adaptor 2024 + Official yellow cabel, OK　UNOは大丈夫</p>
+<p>A long cable with new adaptor might not be recognized. In addition, bootloader may be crushed.</p>
+<p>まとめると、ケーブルが長く、新しいアダプタ（2024）がダメ。僅かな電力不足か？今回は、ブートローダーとアダプタの両方が原因だったと思う。</p>
 
 
 
