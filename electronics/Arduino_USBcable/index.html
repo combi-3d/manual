@@ -20,7 +20,7 @@
     
     
       
-        <title>シリアルプロッターの表示数をかえる - Manual of CoMBI</title>
+        <title>Arduino troubles - Manual of CoMBI</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#arduino-troubles" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              シリアルプロッターの表示数をかえる
+              Arduino troubles
             
           </span>
         </div>
@@ -964,11 +964,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Arduino_micro/index.html" class="md-nav__link">
+      <a href="../Arduino_serialplot/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Arduino micro
+    Arduino Serial Plotter
   </span>
   
 
@@ -985,11 +985,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../ArduinoTrouble/index.html" class="md-nav__link">
+      <a href="../Arduino_micro/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Arduino troubles/Arduinoのトラブル
+    Arduino micro bootloader/書き換え
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arduino USB cable/ケーブル相性
   </span>
   
 
@@ -1111,27 +1132,6 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Arduino Serial Plotter
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../macgpu/index.html" class="md-nav__link">
         
   
@@ -1173,6 +1173,65 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unstable-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unstable recognition/認識されない
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unstable recognition/認識されない">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trouble" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trouble/問題
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cause" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cause/原因
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symptoms-in-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symptoms in detail/症状詳細
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examinations/試したこと
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1186,10 +1245,45 @@
                   
 
 
-<h1 id="_1">シリアルプロッターの表示数をかえる</h1>
-<p>/Applications/Arduino IDE.app/Contents/Resources/app/node_modules/arduino-serial-plotter-webapp/build/static/js/main.35ae02cb.chunk.js</p>
-<p>U=Object(o.useState)(500)</p>
-<p>このファイルの数字を書き換える。デフォルトは50。</p>
+<h1 id="arduino-troubles">Arduino troubles</h1>
+<p>2024.2.18</p>
+<h2 id="unstable-recognition">Unstable recognition/認識されない</h2>
+<h3 id="trouble">Trouble/問題</h3>
+<p>Arduino microがUSBポートで認識されない。一瞬認識されるがすぐ切れる。一方、UNOは認識される。これでは開発できないし、そもそも動作させられない</p>
+<h3 id="cause">Cause/原因</h3>
+<p>USB typeA-typeC変換アダプタの相性が悪かった。および、ブートローダが調子悪かった</p>
+<h3 id="symptoms-in-detail">Symptoms in detail/症状詳細</h3>
+<p>以下、どれもmicroを認識しない</p>
+<p>OS and App</p>
+<ul>
+<li>Arduino IDE v2.3、v1.8</li>
+<li>macOS 14 (Sonoma MBP16 M1max), 12 (Monterey MBP13 intel)</li>
+</ul>
+<p>ケーブル3種、アダプタ3種</p>
+<ul>
+<li>USB microB-A cable 1.8 m (Anker 2024) + USB typeA-C adaptor (Anker 2024)</li>
+<li>USB microB-A cable 15 cm (Anker 2017) + USB typeA-C adaptor (Anker 2024)</li>
+<li>USB microB-A cable 1 m (No brand ???? worked fine in 2023.10) + USB typeA-C adaptor (Anker 2024)</li>
+</ul>
+<p>ネット情報各種</p>
+<ul>
+<li>restart OS, app</li>
+<li>re-install FTDI serial driver</li>
+<li>delete needless network settings (bluetooth etc.)</li>
+</ul>
+<h3 id="examinations">Examinations/試したこと</h3>
+<p>Burn bootloader ブートローダを書き直した</p>
+<p>Test combinations of adaptor and cable　いろいろ試してアダプタの相性がわかった</p>
+<ul>
+<li>ANKER USB-A-C adaptor 2022 + cable 1.8 m: OK</li>
+<li>ANKER USB-A-C adaptor 2022 + cable 15 cm: OK</li>
+<li>ANKER USB-A-C adaptor 2024 + cable 1.8 m + Arduino micro: NOT work</li>
+<li>ANKER USB-A-C adaptor 2024 + cable 15 cm, OK, but previously NOT work</li>
+<li>ANKER USB HUB + cable 1.8 m OK</li>
+</ul>
+<p>Arduino UNO, ANKER USB-A-C adaptor 2024 + Official yellow cabel, OK　UNOは大丈夫</p>
+<p>A long cable with new adaptor might not be recognized. In addition, bootloader may be crushed.</p>
+<p>まとめると、ケーブルが長く、新しいアダプタ（2024）がダメ。僅かな電力不足か？今回は、ブートローダーとアダプタの両方が原因だったと思う。</p>
 
 
 
