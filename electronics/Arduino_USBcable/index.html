@@ -20,7 +20,7 @@
     
     
       
-        <title>Arduino troubles - Manual of CoMBI</title>
+        <title>Arduino micro is not recognized due to USB cable compatibility - Manual of CoMBI</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#arduino-troubles" class="md-skip">
+        <a href="#arduino-micro-is-not-recognized-due-to-usb-cable-compatibility" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Arduino troubles
+              Arduino micro is not recognized due to USB cable compatibility
             
           </span>
         </div>
@@ -1180,16 +1180,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#unstable-recognition" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unstable recognition/認識されない
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Unstable recognition/認識されない">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#trouble" class="md-nav__link">
     <span class="md-ellipsis">
       Trouble/問題
@@ -1197,8 +1187,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#cause" class="md-nav__link">
     <span class="md-ellipsis">
       Cause/原因
@@ -1206,8 +1196,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#symptoms-in-detail" class="md-nav__link">
     <span class="md-ellipsis">
       Symptoms in detail/症状詳細
@@ -1215,18 +1205,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#examinations" class="md-nav__link">
     <span class="md-ellipsis">
       Examinations/試したこと
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1245,14 +1230,13 @@
                   
 
 
-<h1 id="arduino-troubles">Arduino troubles</h1>
+<h1 id="arduino-micro-is-not-recognized-due-to-usb-cable-compatibility">Arduino micro is not recognized due to USB cable compatibility</h1>
 <p>2024.2.18</p>
-<h2 id="unstable-recognition">Unstable recognition/認識されない</h2>
-<h3 id="trouble">Trouble/問題</h3>
+<h2 id="trouble">Trouble/問題</h2>
 <p>Arduino microがUSBポートで認識されない。一瞬認識されるがすぐ切れる。一方、UNOは認識される。これでは開発できないし、そもそも動作させられない</p>
-<h3 id="cause">Cause/原因</h3>
+<h2 id="cause">Cause/原因</h2>
 <p>USB typeA-typeC変換アダプタの相性が悪かった。および、ブートローダが調子悪かった</p>
-<h3 id="symptoms-in-detail">Symptoms in detail/症状詳細</h3>
+<h2 id="symptoms-in-detail">Symptoms in detail/症状詳細</h2>
 <p>以下、どれもmicroを認識しない</p>
 <p>OS and App</p>
 <ul>
@@ -1271,7 +1255,7 @@
 <li>re-install FTDI serial driver</li>
 <li>delete needless network settings (bluetooth etc.)</li>
 </ul>
-<h3 id="examinations">Examinations/試したこと</h3>
+<h2 id="examinations">Examinations/試したこと</h2>
 <p>Burn bootloader ブートローダを書き直した</p>
 <p>Test combinations of adaptor and cable　いろいろ試してアダプタの相性がわかった</p>
 <ul>
