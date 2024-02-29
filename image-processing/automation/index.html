@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
       
 
@@ -212,8 +212,10 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
+        
         
         
           
@@ -361,8 +363,10 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
+        
         
         
           
@@ -594,8 +598,10 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
+        
         
         
           
@@ -909,8 +915,10 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
+        
         
         
           
@@ -1594,7 +1602,7 @@
 <hr />
 <p>Download site: <a href="https://github.com/combi-3d/ImageJ">ImageJ macro and Excel macro for CoMBI, GitHub</a></p>
 <hr />
-<p>ImageJ macros and Excel VBA are available at <a href="https://github.com/combi-3d/ImageJ">GitHub</a>（Since 2022.6). There are 9 files but you can process using only 4 essential files. I developed these files using Intel Mac and Apple Silicon Mac, and validated using on Windows11 (MS Surface, 2022.7 Thank you, HS!) and Windows10 via Intel-mac's bootcamp (2022.6). </p>
+<p>ImageJ macros and Excel VBA are available at <a href="https://github.com/combi-3d/ImageJ">GitHub</a>（Since 2022.6）. There are 9 files but you can process using only 4 essential files. I developed these files using Intel Mac and Apple Silicon Mac, and validated using on Windows11 (MS Surface, 2022.7 Thank you, HS!) and Windows10 via Intel-mac's bootcamp (2022.6). FIJI on Winows11 can't run CoMBI macros; neither CoMBI_Crop1_ISApplier_Crop2_CopyLog.ijm or CoMBI_Crop1_ISApplier_Crop2_SelectLog.ijm. Original ImageJ is recommanded for windows11 users (Thank you, Dr.M 2024.2).</p>
 <table>
 <thead>
 <tr>
@@ -1689,7 +1697,7 @@
 <p>Excel VBA can not accept path written in local languages, for example Japanease Hiragana or Kanji. Make sure that path of serial images and log files are written only with alphabet, numbers, and other acceptable characters.</p>
 </li>
 </ul>
-<p><span style="color:#444C99;">WindowsでもMacでも、ImageJ本家の利用をお勧めします。FIJI版ではテキストファイルを扱えない場合があるためです（2022.7)。ImageJマクロは、いったんすべてのファイルをGitHubからダウンロードした後、各自のパソコン環境に合わせたファイルを選択して利用してください。</span><br>
+<p><span style="color:#444C99;">WindowsでもMacでも、ImageJ本家の利用をお勧めします。FIJI版ではテキストファイルを扱えない場合があるためです（2022.7）。ImageJマクロは、いったんすべてのファイルをGitHubからダウンロードした後、各自のパソコン環境に合わせたファイルを選択して利用してください。</span><br>
 <span style="color:#444C99;">GitHubからは、Excel VBAもいっしょにダウンロードされます。Excel VBAは、実行する際にパス（ファイル名やフォルダ名）に日本語が入っていると、エラーがでます。OSによって異なるかも知れませんが、すくなくともmacOSではパスに日本語が入らないようにします。パス内の日本語を回避する方法は、「検証したいログファイルは、アルファベットのファイル名をつける」および「ExcelVBAで検証したいログファイルは、ユーザ名直下のドキュメントまたはデスクトップに置く」ことです。</span></p>
 <h2 id="setting-up-imagej">Setting up ImageJ</h2>
 <ul>
@@ -1776,7 +1784,7 @@
 <h3 id="is_log_validatorxlsm-essential">IS_Log_Validator.xlsm (Essential)</h3>
 <p>Automate middle part of <a href="../registration/">Image Registration</a> process; Correct log file.
 When open this file by Excel, the app will ask "Enable macros", and may ask "Permission of foler access". There is 5 sheets in the xlsm file. Follow instruction in the sheet from sheet1 to 4. In each sheet, a initialize button is available. The button can clear all value of the sheet and initialize all functions. You can use the initialize button in case you accidentally modify the xlsm file.</p>
-<p><span style="color:#444C99;">このExcel VBAを実行する際に、ログファイルのパス（ファイル名やフォルダ名）に日本語が入っていると、エラーがでます。OSによって異なるかも知れませんが、すくなくともmacOSではパスに日本語が入らないようにします。検証したいログファイルはアルファベットのファイル名がついていること、および、ExcelVBAファイルによる検証時にはログファイルをユーザ名直下のドキュメントやデスクトップなどに置くことで、パス内の日本語を回避してください。</span></p>
+<p><span style="color:#444C99;">エクセルを開くとき、マクロを有効にします。macOSではでてきたメッセージで「マクロを有効にする」ボタンをおすだけです。Windowsの場合、「ファイル＞オプション＞セキュリティーセンター＞セキュリティーセンターの設定＞すべてのマクロを有効にする」<br>このExcel VBAを実行する際に、ログファイルのパス（ファイル名やフォルダ名）に日本語が入っていると、エラーがでます。最後のステップで修正ログを保存するとき。OSによって異なるかも知れませんが、すくなくともmacOSではパスに日本語が入らないようにします。検証したいログファイルはアルファベットのファイル名がついていること、および、ExcelVBAファイルによる検証時にはログファイルをユーザ名直下の「ドキュメント」や「デスクトップ」などに置くことで、パス内の日本語を回避してください。<br>エクセルファイルには５つのタブがあります。順に操作していきます。</span></p>
 <h4 id="preparation_1">Preparation:</h4>
 <ul>
 <li>Log file Forward</li>
@@ -1960,7 +1968,7 @@ Select all (Command+a), Copy (Command+c) to keep value system clipboard.</li>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
       
     
   </body>
