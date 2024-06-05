@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.20">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
       
 
@@ -1194,6 +1194,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ollamaをインストール
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web UIをインストール
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-ui_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web UIを使う
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1209,12 +1244,31 @@
 
 <h1 id="local-lmm">Local LMM</h1>
 <p>(2024.5)</p>
+<p>Macは統合メモリなので、VRAMを利用するLLMを動かしやすいらしい。たっぷりのVRAMを搭載したdGPUは高いけど、MacならApple Siliconでよい。Mac Studio M2 Ultra Unified memory 128GB</p>
+<h2 id="ollama">Ollamaをインストール</h2>
 <ol>
 <li>install ollama</li>
-<li>terminal</li>
-<li>Web UI</li>
+<li>terminalで操作する</li>
 </ol>
-<p>Macは統合メモリなので、VRAMを利用するLLMを動かしやすいらしい。たっぷりのVRAMを搭載したdGPUは高いけど、MacならApple Siliconでよい。</p>
+<h2 id="web-ui">Web UIをインストール</h2>
+<ol>
+<li>Docker Desktopをインストール</li>
+<li>Docker Desktopを起動する</li>
+<li>terminalで以下のコマンドを打つ
+<code>docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main</code></li>
+<li>http://localhost:3000
+ローカルでアクセス</li>
+<li>アカウントを作る、フリをする</li>
+<li>ログインする、フリをする</li>
+</ol>
+<h2 id="web-ui_1">Web UIを使う</h2>
+<ol>
+<li>Docker Desktopを起動</li>
+<li>Containersより、Open-WebUIを選び、Portsで 3000:8080をクリック</li>
+<li>Safariが立ち上がって、http://localhost:3000にアクセスする形で、WebUIが起動する。</li>
+<li>Select a model（llama3:70B, command-r-plus 104Bを、ollamaでインストールしておいた）</li>
+<li>会話する</li>
+</ol>
 
 
 
@@ -1268,7 +1322,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dd8806f2.min.js"></script>
+      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
       
     
   </body>
