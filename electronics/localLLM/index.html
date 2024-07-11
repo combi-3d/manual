@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.20">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
       
 
@@ -1290,17 +1290,29 @@
 <h2 id="ollama">Ollamaをインストール</h2>
 <ol>
 <li>install ollama</li>
-<li>terminalで操作する</li>
+<li>terminalで操作する<ol>
+<li>ollama run llama3 など、HPを参考に使いたいモデルをインストールする、数GBをダウンロードするのに時間がかかる</li>
+<li>そのままterminalで使うこともできる。終わるときはcontrol+d (mac)</li>
+<li>再びterminalで使うときは、ollama run llama3　こんどはすぐに起動する。終わるときはcontrol+d (mac)</li>
+<li>下記WebUIを使うと、Terminalでは使わなくなる</li>
+</ol>
+</li>
 </ol>
 <h2 id="web-ui">Web UIをインストール</h2>
 <ol>
 <li>Docker Desktopをインストール</li>
-<li>Docker Desktopを起動する</li>
-<li>terminalで以下のコマンドを打つ
+<li>Docker Desktopを起動する　初回はメッセージがでて、以下のように進めた<ol>
+<li>recommand settings</li>
+<li>continue without signing in</li>
+<li>skip survey</li>
+</ol>
+</li>
+<li>Terminalで以下のコマンドを打つ。ダウンロード等に時間がかかる
 <code>docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main</code></li>
+<li>Docker Desktopにいくと、コンテナ：Open-webuiができている</li>
 <li>http://localhost:3000
 ローカルでアクセス</li>
-<li>アカウントを作る、フリをする</li>
+<li>アカウントを作る、フリをする　名前とメールとパスワード</li>
 <li>ログインする、フリをする</li>
 <li>2度目のログインでは、アカウント名やパスワードは問われず。</li>
 </ol>
@@ -1365,7 +1377,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dd8806f2.min.js"></script>
+      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
       
     
   </body>
