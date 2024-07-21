@@ -1325,9 +1325,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#design-by-illustrator-etc" class="md-nav__link">
+  <a href="#design-a-combi-logo-by-illustrator-etc" class="md-nav__link">
     <span class="md-ellipsis">
-      Design by Illustrator etc
+      Design a CoMBI logo by Illustrator etc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-a-qr-code-linking-manual-of-combi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design a QR code linking "Manual of CoMBI"
     </span>
   </a>
   
@@ -1336,7 +1345,7 @@
           <li class="md-nav__item">
   <a href="#8-bit-binary-imagej" class="md-nav__link">
     <span class="md-ellipsis">
-      8-bit binary, ImageJ
+      8-bit binary, ImageJの場合
     </span>
   </a>
   
@@ -1345,7 +1354,7 @@
           <li class="md-nav__item">
   <a href="#8-nit-binary-photoshop" class="md-nav__link">
     <span class="md-ellipsis">
-      8-nit binary, Photoshop
+      8-nit binary, Photoshopの場合
     </span>
   </a>
   
@@ -1376,6 +1385,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="KiCad PCBエディタ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      通常の操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更する操作、ファイル名が異なる場合）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      変更する操作、ファイル名が異なる場合）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1399,18 +1441,55 @@
 
 
 <h1 id="kicad">KiCad</h1>
-<p>KiCad is a donation-ware to design circuit and PCB. KiCad was created in 1992 by Jean-Pierre Charras in France. In 2013 the CERN started contributing to improve KiCad. KiCad is compatible with Win, Mac and Linux.</p>
-<p>(2023 KiCAD7 install, 2024.2.23-25 KiCAD7.0.8)</p>
+<p>KiCad is a donation-ware to design circuit and PCB. KiCad was released in 1992 by a researcher; Jean-Pierre Charras in France. In 2013 the CERN started contributing to improve KiCad. KiCad is compatible with Win, Mac and Linux.</p>
+<p>(2023 KiCAD7 install, 2024.2.23-25 KiCAD7.0.8, 2024.7 8.0.4)</p>
 <p><span style="color:#444C99;">2021年からKiCadでCoMBIの回路やプリント基板をデザインしています。それ以前はCADLUS（Winのみ）を使っていましたが、私がWindows環境から離れつつあったため、KiCadへ移行しました。KiCadは1992年にフランスの研究者によってリリースされ、改良が続けられています。2013年からは欧州原子核研究機構が開発に参加するようになり、改良がより進むようになりました。KiCadは寄付または無料で利用できます。Win Mac Linuxに対応。2021年v6から日本語に対応。</span></p>
 <h2 id="install-and-prepare-library">Install and prepare library/インストール</h2>
-<p>(2023 KiCad7)</p>
+<p>(2023 KiCad v7, 2024 v8)</p>
 <ol>
 <li>Official site. <a href="https://www.kicad.org">https://www.kicad.org</a></li>
 <li>"DOWNLOAD" tab to get an installer. Install KiCad7(2023).</li>
 <li>(Parts library is included in ver.6 or newer.) </li>
-<li>Additional library
-    <a href="https://github.com/Digi-Key/digikey-kicad-library">DigiKey</a> JST's connectors</li>
-<li>New Project or New Project from Template (Arduino micro etc.)</li>
+<li>Additional libraries: 
+    <a href="https://github.com/Digi-Key/digikey-kicad-library">DigiKey</a> JST's connectors
+    <a href="https://github.com/g200kg/kicad-lib-arduino">Arduino micro</a>
+    ここからダウンロードしたものをDocument（書類）に置く。
+どこでもよいが、パスに日本語がない場所が無難。以前にダウンロードしていたものでもよい。
+    /Users/(User)/Document/KiCad/</li>
+<li>
+<p>KiCADを開いたときのウィンドウ（プロジェクトが並んでいるウィンドウ）にて</p>
+<ol>
+<li>設定＞パスを設定</li>
+<li>環境変数、名前を追加「LOCALREPO」</li>
+<li>
+<p>/Users/(user)/Documents/KiCad/ を入力</p>
+</li>
+<li>
+<p>設定＞シンボルライブラリを管理</p>
+</li>
+<li>グローバルライブラリに追加する「＋」</li>
+<li>ニックネーム：「Arduino」</li>
+<li>ライブラリのパス：/Users/yuki/Documents/KiCad/kicad-lib-arduino-main/Arduino.lib</li>
+<li>
+<p>ライブラリ形式：Legacy（忘れても自動でLegacyになる）</p>
+</li>
+<li>
+<p>設定＞フットプリントライブラリを管理</p>
+</li>
+<li>グローバルライブラリに追加する「＋」</li>
+<li>ニックネーム：「Arduino」</li>
+<li>ライブラリのパス：/Users/yuki/Documents/KiCad/kicad-lib-arduino-main/Arduino.pretty</li>
+<li>
+<p>ライブラリ形式：KiCad</p>
+</li>
+<li>
+<p>KiCadアプリをアップデートすると、追加したライブラリへのリンクが切れる。上記の設定３種を改めて行うこと。</p>
+</li>
+</ol>
+</li>
+<li>
+<p>New Project or New Project from Template (Arduino micro etc.)</p>
+</li>
 </ol>
 <p><span style="color:#444C99;">部品のシンボルとフットプリントを探してダウンロード、KiCADサイトからでも。今回はArduinoを追加した。Digikeyもいれたけど使わず。JSTのコネクタは元々入っていた v7</span></p>
 <p><span style="color:#444C99;">回路図エディタで、設定（メニューバーの右から２つめ）＞　シンボルラブラリを管理　＞　フォルダマークから、Openできるフォルダやファイルならいくつでもやっておく</span></p>
@@ -1460,15 +1539,18 @@
 <li>表示 &gt; 3D viewer</li>
 </ol>
 <h2 id="logo-as-a-silkscreen">Logo as a silkscreen/ロゴを基板に印刷する</h2>
-<h3 id="design-by-illustrator-etc">Design by Illustrator etc</h3>
+<h3 id="design-a-combi-logo-by-illustrator-etc">Design a CoMBI logo by Illustrator etc</h3>
 <ol>
-<li>デザインする　大きさはのちのKiCADイメージコンバーターで決める</li>
+<li>ロゴをデザインする　大きさはのちのKiCADイメージコンバーターで決める</li>
 <li>Export as…</li>
 <li>PNG、300 dpi、今回はPNG, Artboardごと JPG, BMPでもよいらしい</li>
-<li>今回は高さ10mm。文字の線幅がちいさいかも。Photoshopで選択して、丸くsmooth, 1 pix拡張 expand</li>
-<li>文字を大きくしてデザインし直した。</li>
-<li>QRコードを生成する</li>
-<li>Adobe Express（オンライン、登録なし・無料で使える範囲）、InDesign, Illustrator</li>
+<li>今回は高さ12mm。文字の線幅がちいさいかも。Photoshopで拡張できる（選択して、丸くsmooth, 1 pix拡張 expand）が、今回は、文字を大きくしてデザインし直した。</li>
+<li>余計な領域が含まれていてもシルクにならない色であれば無視されるが、この段階でクロップされているほうが良い</li>
+</ol>
+<h3 id="design-a-qr-code-linking-manual-of-combi">Design a QR code linking "Manual of CoMBI"</h3>
+<ol>
+<li>QRコードを生成する。Adobe Express（オンライン、登録なし・無料で使える範囲）、InDesign, Illustrator</li>
+<li>PNGで保存</li>
 </ol>
 <p>P板.comの規格</p>
 <ul>
@@ -1476,7 +1558,7 @@
 <li>最小基準 線幅 0.127mm、高さ 1.0mm。それ以下はカスレやにじみなどで判読不可能となる可能性あり</li>
 <li>印刷位置ずれ±0.25mm は許容差</li>
 </ul>
-<h3 id="8-bit-binary-imagej">8-bit binary, ImageJ</h3>
+<h3 id="8-bit-binary-imagej">8-bit binary, ImageJの場合</h3>
 <p>8-bit、二値化した画像がよい。KiCADイメージコンバータでの失敗がすくないらしい。</p>
 <ol>
 <li>Image &gt; Type &gt; 8 bit</li>
@@ -1487,36 +1569,61 @@
 <li>Apply、0と255で構成されていることを確認する（反転flipは必要ない）</li>
 </ul>
 </li>
-<li>File &gt; Save as…</li>
+<li>File &gt; Save as… （今回はPNG）</li>
 </ol>
-<h3 id="8-nit-binary-photoshop">8-nit binary, Photoshop</h3>
+<h3 id="8-nit-binary-photoshop">8-nit binary, Photoshopの場合</h3>
 <ol>
 <li>Image &gt; Mode &gt; 8-bit</li>
 <li>Image &gt; Adjustments &gt; Threshold</li>
 </ol>
 <h3 id="kicad_1">KiCad イメージコンバーター</h3>
 <ol>
-<li>デザインした画像を読み込む</li>
-<li>表面シルクスクリーンにチェック</li>
-<li>フットプリント（KiCad.modファイル）にチェック</li>
-<li>negaをチェックしたら、白い領域（255）がシルクになる</li>
-<li>チェックしないと、黒い領域（0）がシルクになる（今回はこれ）</li>
-<li>余計な領域が含まれていてもシルクにならない色であれば無視されるが、前もってクロップしたほうが良く、</li>
-<li>ここでサイズを決めるため。今回は高さ12 mm。のちのPCBではサイズ変えられない。</li>
-<li>ファイルを保存</li>
+<li>元画像をロード：デザインしたPNG画像を読み込む</li>
+<li>出力サイズ：今回は高さ12 mm。比率は固定。のちのPCBエディタではサイズを変えられないので、ここでサイズを決める。</li>
+<li>オプション：閾値50デフォルト。negaをチェックしたら、白い領域（255）がシルクになる。negaにチェックしないと、黒い領域（0）がシルクになる（今回はこれ）</li>
+<li>図形用のPCBレイヤー：表面シルクスクリーン</li>
+<li>出力フォーマット：フットプリント（.kicad_modファイル）にチェック</li>
+<li>ファイルにエクスポート</li>
+<li>*.kicad_moodファイルが保存された</li>
 </ol>
 <h3 id="findermac">Finderでファイル操作（macの場合）</h3>
 <ol>
-<li>/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Symbol.pretty/</li>
-<li>ここにつくったファイルを保存する、Finderでファイル操作</li>
+<li>つくった*.kicad_moodファイルを下記のアドレスに置く
+<code>/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints/Symbol.pretty/</code></li>
+<li>アクセスするには、KiCad.appの上で、右クリック、「パッケージの内容を標示する」</li>
 </ol>
 <h3 id="kicad-pcb">KiCad PCBエディタ</h3>
+<h4 id="_1">通常の操作</h4>
 <ol>
 <li>ボタン「フットプリントを追加」、フットプリントを選択。ファイル名を検索すると見つけやすい</li>
 <li>フットプリントのプロパティ（ダブルクリック）で、<ul>
 <li>位置 &gt; 面 &gt; 裏面</li>
 <li>レイヤー &gt; B.Silkscreen</li>
 </ul>
+</li>
+</ol>
+<h4 id="_2">変更する操作、ファイル名が異なる場合）</h4>
+<ol>
+<li>変更したいフットプリント（ロゴやQRコード）をダブルクリック</li>
+<li>ウィンドウ「フットプリントのプロパティ」</li>
+<li>「フットプリントを変更」</li>
+<li>「新しいフットプリント　ライブラリID」で、symbol中の自作したファイル（今回は"QR"）を選ぶ</li>
+<li>「変更」「閉じる」</li>
+<li>シルク面に、Reference 名称（今回は G**だった）が被るように新設される、それは削除する</li>
+<li>DRCを走らせると、エラーは出ない、はず</li>
+</ol>
+<h4 id="_3">変更する操作、ファイル名が異なる場合）</h4>
+<ol>
+<li>変更したいフットプリント（ロゴやQRコード）をダブルクリック</li>
+<li>ウィンドウ「フットプリントのプロパティ」</li>
+<li>「指定のライブラリIDのフットプッリントを更新」</li>
+<li>「新しいフットプリント　ライブラリID」で、symbol中の自作したファイル（今回は"CoMBI2_binarry"）を選ぶ</li>
+<li>「OK」</li>
+<li>
+<p>DRCを走らせると、エラーは出ない、はず</p>
+</li>
+<li>
+<p>KiCadアプリをアップデートすると、ロゴなどの自作フットプリントがなくなり、エラーがでるようになる。KiCad.appのなかに自作フットプリントファイルを置くため、上書きアップデートでそれら自作ファイルがなくなるらしい。</p>
 </li>
 </ol>
 
