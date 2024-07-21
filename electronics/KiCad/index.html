@@ -1249,6 +1249,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Install and prepare library/インストール">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional libraries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1450,47 +1465,45 @@
 <li>Official site. <a href="https://www.kicad.org">https://www.kicad.org</a></li>
 <li>"DOWNLOAD" tab to get an installer. Install KiCad7(2023).</li>
 <li>(Parts library is included in ver.6 or newer.) </li>
-<li>Additional libraries: 
-    <a href="https://github.com/Digi-Key/digikey-kicad-library">DigiKey</a> JST's connectors
-    <a href="https://github.com/g200kg/kicad-lib-arduino">Arduino micro</a>
-    ここからダウンロードしたものをDocument（書類）に置く。
-どこでもよいが、パスに日本語がない場所が無難。以前にダウンロードしていたものでもよい。
-    /Users/(User)/Document/KiCad/</li>
+<li>New Project or New Project from Template (Arduino micro etc.)</li>
+</ol>
+<h3 id="additional-libraries">Additional libraries</h3>
+<ol>
+<li>
+<p><a href="https://github.com/Digi-Key/digikey-kicad-library">DigiKey</a> JST's connectors, <a href="https://github.com/g200kg/kicad-lib-arduino">Arduino micro</a> これらからダウンロードしたものをDocument（書類、/Users/(User)/Document/KiCad/）に置く。どこでもよいが、パスに日本語がない場所が無難。以前にダウンロードしていたものでもよい。</p>
+</li>
 <li>
 <p>KiCADを開いたときのウィンドウ（プロジェクトが並んでいるウィンドウ）にて</p>
 <ol>
+<li>パスを設定<ol>
 <li>設定＞パスを設定</li>
 <li>環境変数、名前を追加「LOCALREPO」</li>
-<li>
-<p>/Users/(user)/Documents/KiCad/ を入力</p>
+<li>/Users/(user)/Documents/KiCad/ を入力</li>
+</ol>
 </li>
-<li>
-<p>設定＞シンボルライブラリを管理</p>
-</li>
+<li>シンボルライブラリを追加<ol>
+<li>設定＞シンボルライブラリを管理</li>
 <li>グローバルライブラリに追加する「＋」</li>
 <li>ニックネーム：「Arduino」</li>
 <li>ライブラリのパス：/Users/yuki/Documents/KiCad/kicad-lib-arduino-main/Arduino.lib</li>
-<li>
-<p>ライブラリ形式：Legacy（忘れても自動でLegacyになる）</p>
+<li>ライブラリ形式：Legacy（忘れても自動でLegacyになる）</li>
+</ol>
 </li>
-<li>
-<p>設定＞フットプリントライブラリを管理</p>
-</li>
+<li>フットプリントライブラリを追加<ol>
+<li>設定＞フットプリントライブラリを管理</li>
 <li>グローバルライブラリに追加する「＋」</li>
 <li>ニックネーム：「Arduino」</li>
 <li>ライブラリのパス：/Users/yuki/Documents/KiCad/kicad-lib-arduino-main/Arduino.pretty</li>
-<li>
-<p>ライブラリ形式：KiCad</p>
-</li>
-<li>
-<p>KiCadアプリをアップデートすると、追加したライブラリへのリンクが切れる。上記の設定３種を改めて行うこと。</p>
+<li>ライブラリ形式：KiCad</li>
+</ol>
 </li>
 </ol>
 </li>
-<li>
-<p>New Project or New Project from Template (Arduino micro etc.)</p>
-</li>
 </ol>
+<blockquote>
+<p>[!NOTE]
+KiCadアプリをアップデートすると、追加したライブラリへのリンクが切れる。上記の設定３種を改めて行うこと。</p>
+</blockquote>
 <p><span style="color:#444C99;">部品のシンボルとフットプリントを探してダウンロード、KiCADサイトからでも。今回はArduinoを追加した。Digikeyもいれたけど使わず。JSTのコネクタは元々入っていた v7</span></p>
 <p><span style="color:#444C99;">回路図エディタで、設定（メニューバーの右から２つめ）＞　シンボルラブラリを管理　＞　フォルダマークから、Openできるフォルダやファイルならいくつでもやっておく</span></p>
 <p><span style="color:#444C99;">PCBエディタで、設定（メニューバーの右から２つめ）＞　フットプリントラブラリを管理　で同様に</span></p>
