@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.20">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
       
 
@@ -1243,26 +1243,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-and-prepare-library" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Install and prepare library/インストール
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Install and prepare library/インストール">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#additional-libraries" class="md-nav__link">
-    <span class="md-ellipsis">
-      Additional libraries
+      Installation/インストール
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-additional-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare additional libraries/必要に応じてライブラリを追加
+    </span>
+  </a>
   
 </li>
       
@@ -1291,9 +1285,10 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="PCB, parts and circuit/基板をデザインする">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#outline" class="md-nav__link">
     <span class="md-ellipsis">
       Outline/基板外形
@@ -1301,8 +1296,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#mount-holepcb" class="md-nav__link">
     <span class="md-ellipsis">
       Mount hole/PCBにネジ穴
@@ -1310,13 +1305,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#check" class="md-nav__link">
     <span class="md-ellipsis">
       Check/点検
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1459,18 +1459,19 @@
 <p>KiCad is a donation-ware to design circuit and PCB. KiCad was released in 1992 by a researcher; Jean-Pierre Charras in France. In 2013 the CERN started contributing to improve KiCad. KiCad is compatible with Win, Mac and Linux.</p>
 <p>(2023 KiCAD7 install, 2024.2.23-25 KiCAD7.0.8, 2024.7 8.0.4)</p>
 <p><span style="color:#444C99;">2021年からKiCadでCoMBIの回路やプリント基板をデザインしています。それ以前はCADLUS（Winのみ）を使っていましたが、私がWindows環境から離れつつあったため、KiCadへ移行しました。KiCadは1992年にフランスの研究者によってリリースされ、改良が続けられています。2013年からは欧州原子核研究機構が開発に参加するようになり、改良がより進むようになりました。KiCadは寄付または無料で利用できます。Win Mac Linuxに対応。2021年v6から日本語に対応。</span></p>
-<h2 id="install-and-prepare-library">Install and prepare library/インストール</h2>
+<h2 id="installation">Installation/インストール</h2>
 <p>(2023 KiCad v7, 2024 v8)</p>
 <ol>
 <li>Official site. <a href="https://www.kicad.org">https://www.kicad.org</a></li>
 <li>"DOWNLOAD" tab to get an installer. Install KiCad7(2023).</li>
-<li>(Parts library is included in ver.6 or newer.) </li>
-<li>New Project or New Project from Template (Arduino micro etc.)</li>
+<li>(Most of parts libraries are already included in KiCad ver.6 or newer.) </li>
+<li>KiCad is often updated, with a major update every year. Links to additional libraies and self-made symbols are needed to be managed upon update.  </li>
 </ol>
-<h3 id="additional-libraries">Additional libraries</h3>
+<h2 id="prepare-additional-libraries">Prepare additional libraries/必要に応じてライブラリを追加</h2>
 <ol>
+<li>部品のシンボル・フットプリント・3D形状をインターネットで探してダウンロードする。KiCADサイトにもある。KiCad v6以降は、部品情報がすでに入っているが、足りない場合がある。<a href="https://github.com/Digi-Key/digikey-kicad-library">DigiKey</a> JST's connectors（以前は追加が必要だったが、v6以降はKiCadに元々はいっている）<a href="https://github.com/g200kg/kicad-lib-arduino">Arduino micro</a> （今回はこれだけ追加した）。</li>
 <li>
-<p><a href="https://github.com/Digi-Key/digikey-kicad-library">DigiKey</a> JST's connectors, <a href="https://github.com/g200kg/kicad-lib-arduino">Arduino micro</a> これらからダウンロードしたものをDocument（書類、/Users/(User)/Document/KiCad/）に置く。どこでもよいが、パスに日本語がない場所が無難。以前にダウンロードしていたものでもよい。</p>
+<p>ダウンロードしたものをDocument（書類、/Users/(User)/Document/KiCad/）に置く。どこでもよいが、パスに日本語がない場所が無難。ダウンロードしたファイルは、書類フォルダだけでなく、別（実験のフォルダなど）にも保存しておく</p>
 </li>
 <li>
 <p>KiCADを開いたときのウィンドウ（プロジェクトが並んでいるウィンドウ）にて</p>
@@ -1485,7 +1486,7 @@
 <li>設定＞シンボルライブラリを管理</li>
 <li>グローバルライブラリに追加する「＋」</li>
 <li>ニックネーム：「Arduino」</li>
-<li>ライブラリのパス：/Users/yuki/Documents/KiCad/kicad-lib-arduino-main/Arduino.lib</li>
+<li>ライブラリのパス：/Users/(user)/Documents/KiCad/kicad-lib-arduino-main/Arduino.lib</li>
 <li>ライブラリ形式：Legacy（忘れても自動でLegacyになる）</li>
 </ol>
 </li>
@@ -1493,8 +1494,8 @@
 <li>設定＞フットプリントライブラリを管理</li>
 <li>グローバルライブラリに追加する「＋」</li>
 <li>ニックネーム：「Arduino」</li>
-<li>ライブラリのパス：/Users/yuki/Documents/KiCad/kicad-lib-arduino-main/Arduino.pretty</li>
-<li>ライブラリ形式：KiCad</li>
+<li>ライブラリのパス：/Users/(user)/Documents/KiCad/kicad-lib-arduino-main/Arduino.pretty</li>
+<li>ライブラリ形式：KiCad（デフォルトのまま）</li>
 </ol>
 </li>
 </ol>
@@ -1502,18 +1503,20 @@
 </ol>
 <blockquote>
 <p>[!NOTE]
-KiCadアプリをアップデートすると、追加したライブラリへのリンクが切れる。上記の設定３種を改めて行うこと。</p>
+KiCadアプリをアップデートすると、追加したライブラリへのリンクが切れる。上記の設定３種を改めて行うこと。書類 /Document/KiCad/ にいれたライブラリファイルは残っているはず。パソコンを変えない限り。</p>
+<p>[!NOTE]
+回路図エディタにも、「設定（メニューバーの右から２つめ）＞　シンボルラブラリを管理　＞　フォルダマーク」がある。Openできるフォルダやファイルならいくつでもやっておく。PCBエディタにも、「設定（メニューバーの右から２つめ）＞　フットプリントラブラリを管理」がある。同様に設定できる。KiCadのはじめのウィンドウの「設定」のほうが3種ともあるので便利。</p>
 </blockquote>
-<p><span style="color:#444C99;">部品のシンボルとフットプリントを探してダウンロード、KiCADサイトからでも。今回はArduinoを追加した。Digikeyもいれたけど使わず。JSTのコネクタは元々入っていた v7</span></p>
-<p><span style="color:#444C99;">回路図エディタで、設定（メニューバーの右から２つめ）＞　シンボルラブラリを管理　＞　フォルダマークから、Openできるフォルダやファイルならいくつでもやっておく</span></p>
-<p><span style="color:#444C99;">PCBエディタで、設定（メニューバーの右から２つめ）＞　フットプリントラブラリを管理　で同様に</span></p>
+<p><span style="color:#444C99;"></span></p>
 <h2 id="new-project">New project/プロジェクトを新規作成</h2>
 <ol>
-<li>Two files will be appeared within a project; .kicad_pcb and .kicad_sch</li>
+<li>New Project or New Project from Template (Arduino micro etc.)</li>
+<li>Two files will be appeared within a project; <em>.kicad_pcb and </em>.kicad_sch</li>
 </ol>
-<p><span style="color:#444C99;">プロジェクト内にファイルが２つ、回路図と基板</span></p>
+<p><span style="color:#444C99;">プロジェクト内にファイルが２つ、回路図とプリント基板</span></p>
 <h2 id="curcuit">Curcuit/回路図をつくる</h2>
 <ol>
+<li>ファイル *.kicad_schをダブルクリックして、回路図エディタを起動する</li>
 <li>回路図上の部品記号は「シンボル」、PCB上で部品の形状は「フットプリント」と呼ぶ。</li>
 <li>フットプリントエディタ：ボタン「フットプリントを作成、削除、編集」より。個々の部品のフットプリントを一つづつ設定する</li>
 <li>ボタン「フットプリント割り当てツール」では、部品一覧が出てくる。こちらのほうが便利。</li>
@@ -1521,7 +1524,7 @@ KiCadアプリをアップデートすると、追加したライブラリへの
 </ol>
 <h2 id="pcb-parts-and-circuit">PCB, parts and circuit/基板をデザインする</h2>
 <ol>
-<li>PCBエディタを起動</li>
+<li>ファイル *.kicad_pcbをダブルクリックして、PCBエディタを起動する</li>
 <li>ボタン「回路図で行われた更新で基板を更新」</li>
 <li>すべての部品が現れる</li>
 <li>配置する</li>
@@ -1529,22 +1532,23 @@ KiCadアプリをアップデートすると、追加したライブラリへの
 <li>シルク 表はF.SiikScreen、裏はB.SilkScreen</li>
 <li>ベタ（まだやったことない）</li>
 </ol>
-<h2 id="outline">Outline/基板外形</h2>
+<h3 id="outline">Outline/基板外形</h3>
 <ol>
 <li>線を引く、レイヤーはEdge.cut</li>
 <li>線や孤を組み合わせて複雑な形状をつくれる。端点をきっちり位置合わせする</li>
 <li>外形から配線までの距離は最低0.3mm（P板）。それ以下でも製造は可能。</li>
 </ol>
-<h2 id="mount-holepcb">Mount hole/PCBにネジ穴</h2>
+<h3 id="mount-holepcb">Mount hole/PCBにネジ穴</h3>
 <ol>
 <li>ボタン「モジュールの追加」</li>
 <li>MountingHole_3.2mm_M3</li>
 <li>OK</li>
 </ol>
-<h2 id="check">Check/点検</h2>
+<h3 id="check">Check/点検</h3>
 <ol>
 <li>PCBで配線したら、ボタン「デザインルールチェッカー」（DRC）</li>
 <li>近すぎる配線、未接続の端子、外形の線が微妙にくっついていない</li>
+<li>KiCadをアップデートした場合、ライブラリがなくなったり、自作シンボル（シルクにしたCoMBIロゴ）がなくなる。上記のライブラリ追加手順や、下記のロゴをシルクをやり直す</li>
 <li>エラーが無くなるまで繰り返す</li>
 </ol>
 <h2 id="3d">3D</h2>
@@ -1692,7 +1696,7 @@ KiCadアプリをアップデートすると、追加したライブラリへの
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dd8806f2.min.js"></script>
+      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
       
     
   </body>
