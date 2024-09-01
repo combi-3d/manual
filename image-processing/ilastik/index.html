@@ -1474,6 +1474,7 @@
 
 
 <h1 id="segmentation-by-ilastik">Segmentation by ilastik</h1>
+<p>(2023.2, 2024.9 1.4.1b15-arm)</p>
 <p>ilastik is an application for segmentation by machine learning (Nature Methods, 2019). It is designed so that biologists can operate without any knowledge of machine learning. iLastik seems to be suitable for processing full-color blockface images obtained by CoMBI. For installation, visit developer's site <a href="https://www.ilastik.org/">https://www.ilastik.org</a>. Here is a simple procedure to do "Choosing regenerated area and damaged area in a certain organ". There is a detailed documentation in English in the official site (<a href="https://www.ilastik.org/documentation/index.html">Documentation</a>).</p>
 <p><span style="color:#444C99;">ilastikは、セグメンテーションを機械学習で行うアプリです（Nature Methods, 2019）。機械学習の知識がなくても、操作できるようにデザインされています。<a href="https://www.ilastik.org/">https://www.ilastik.org</a>からダウンロードしてインストールします。CoMBIで撮影したフルカラーのブロック面画像で特定の構造物（関心領域）をSegmentationするのに良さそうです。「とある臓器に正常部位と傷害部位がある。正常部位だけSegmentationしたい」、これをお題に、手順を記します。日本語の簡単な手順書です。本家のサイトには詳しい英語説明ページ（<a href="https://www.ilastik.org/documentation/index.html">Documentation</a>）があります。</span></p>
 <hr />
@@ -1502,7 +1503,7 @@
 <h3 id="_2"></h3>
 <ul>
 <li><span style="color:#444C99;">学習させるための画像を開く。<code>Drag and Drop</code> または、プルダウンメニュー<code>Add New</code>&gt; <code>Add separate image(s)</code>。Windowsの場合、パスに日本語が入っていると、エラーになる場合があります。</span></li>
-<li><span style="color:#444C99;">CoMBIの連続画像（500-1000枚が典型的）のうち、標本全体や実験群全体を代表するような数枚を選ぶ。2〜4枚がおすすめ。（マシンパワーによる、iMac27-2017-4coreでは500x500x5枚まで。MBP16-2021-M1maxなら、1000x1000x10枚まで。)</span></li>
+<li><span style="color:#444C99;">CoMBIの連続画像（500-1000枚が典型的）のうち、標本全体や実験群全体を代表するような数枚を選ぶ。2〜4枚がおすすめ。（マシンパワーによる、iMac27-2017-4coreでは500x500x5枚まで。MBP16-2021-M1maxなら、1000x1000x10枚まで）</span></li>
 <li><span style="color:#444C99;">枚数は、多すぎると処理が遅くなり、少なすぎると正確性が劣る。</span></li>
 <li><span style="color:#444C99;">どの画像が良いか、最初は分からない。一度やってみて、結果に満足しなければ、もう一度やっている。2回目でたいてい成功する。</span></li>
 </ul>
@@ -1510,7 +1511,7 @@
 <ul>
 <li>iLastik seems to recognize color, brightness, edges and textures (patterns and matrices).</li>
 <li>Check all items, if your PC's CPU is good enough. "Core i9, HBM2-2GB, RAM32GB" and "M1 max" can check all. "Core i5, internal graphics, RAM8GB" can check a half of sigma. Sigma is a value that determines whether the structure to be recognized is small or large.</li>
-<li>(In the left colomn, the list of images filtered. Click them to display larger.）</li>
+<li>(In the left colomn, the list of images filtered. Click them to display larger.)</li>
 <li>This is also a step that we have no idea how to do at first. At first, you can work lightly by checking half of items. After reviewing the results, consider whether to increase the number of checks, or whether to use the option in the next section "3. Training".</li>
 </ul>
 <h3 id="_3"></h3>
@@ -1563,7 +1564,7 @@
 <ul>
 <li><span style="color:#444C99;">Source: デフォルトは<code>Probability</code>で、グレースケール画像になる。<code>Simple Segmentation</code>は、白黒ハッキリした画像（二値化、2階調、1 bitの画像）になる。</span></li>
 <li>
-<p><span style="color:#444C99;">ボタン<code>Choose Export Image Settings</code>より、下図の設定ウィンドウへ。Probalibiltyのcに関して：Label1 (yellow, Background)、Label2 (Blue, segment)として、Label2を書き出したい場合、cの数値は1,2と入力する（デフォルトは0,2）</span></p>
+<p><span style="color:#444C99;">ボタン<code>Choose Export Image Settings</code>より、下図の設定ウィンドウへ。Probalibiltyのcの数値：デフォルトは「0,2」Label1=yellow=segmentを白く書き出し、Label2=blue=backgroundを黒くする。「1,2」と入力すると、Label1=yellow=background、Label2=Blue=segmentにしたとき、Label2を白く書き出す。</span></p>
 <table>
 <thead>
 <tr>
@@ -1580,7 +1581,7 @@
 </tr>
 <tr>
 <td>"c" in yxc</td>
-<td><b>OFF</b> <br>input "1,2" to select label2(blue)<br> (ON unstable)</td>
+<td><b>OFF</b> <br>input "0,2" to select label1(yellow), "1,2" to select label2(blue)<br> (ON unstable)</td>
 <td><b>ON</b>  <br> (OFF doesn't work)</td>
 </tr>
 <tr>
@@ -1643,7 +1644,7 @@
 <h3 id="_6"></h3>
 <ul>
 <li><span style="color:#444C99;"><code>Select RAW Data Files</code>より、連続画像を選ぶ。Shiftを押しながら、複数画像を選択する。または、ドラッグ＆ドロップ。</span></li>
-<li><span style="color:#444C99;">左カラムのボタン、<code>Process all files</code>。しばらく待つ。結構時間が掛かる。数百枚を一気に行うと、途中でフリーズしたり、抜け落ちたりした。少しずつやっている。経験上、100枚ずつなら失敗なし。200, 250, 280枚でも大丈夫だった。300枚から抜け落ちが出始める。</span></li>
+<li><span style="color:#444C99;">左カラムのボタン、<code>Process all files</code>。しばらく待つ。結構時間が掛かる。数百枚を一気に行うと、途中でフリーズしたり、抜け落ちたりした。少しずつやっている。経験上、100枚ずつなら失敗なし。200, 250, 280枚でも大丈夫だった。300枚から抜け落ちが出始める。(2024.9.1, 約800枚、エラーなし。1.4.1b15-arm64, MacStudio)</span></li>
 <li><span style="color:#444C99;">Simple Segmentationの場合、出力されたtifファイルは、一見真っ黒である。一般の画像8bitでは、ピクセルは輝度0-255を持つ。Simple Segmentationでは、二値化され、画像は、0と1になっている。8bitで表記すると、00000000と00000001になっている。それぞれ、Training時のデフォルトLabelsのうち、Label1-黄色と、Label2-青色である。ImageJ/FIJIで開いて、カーソル位置の値をみると、Value1とValue2だけで構成された画像であることが確認できる。Finderで表示されるアイコンは真っ黒画像になるのでビックリするが、アイコンはそれでよい。のちに0,1を0,255に変換できる（下記）。直接Renormalize 0, 255するメニューはあるが、SimpleSegmentationでは効かなかった（上記 4.Prediction Export）。</span></li>
 </ul>
 <hr />
