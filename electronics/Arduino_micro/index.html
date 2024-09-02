@@ -1333,7 +1333,7 @@
 <p>Install library from SparkFun　ライブラリをインストールする</p>
 <ul>
 <li>
-<p>Arduino IDE &gt; Settings, paste an address below.</p>
+<p>Arduino IDE &gt; Preferences&gt; Settings, paste an address below.</p>
 </li>
 <li>
 <p><code>https://raw.githubusercontent.com/sparkfun/Arduino_Boards/master/IDE_Board_Manager/package_sparkfun_index.json</code></p>
@@ -1342,7 +1342,7 @@
 <p>Tools &gt;Boards &gt;Boards Manager…</p>
 </li>
 <li>
-<p>SparkFun AVR Baordsをinstall 1.1.13 (2023)</p>
+<p>SparkFun AVR BaordsをINSTALL 1.1.13 (2023, 2024)</p>
 </li>
 <li>
 <p>Tools &gt; Boardsに、Sparkfun AVR Boardsが表示される</p>
@@ -1360,6 +1360,9 @@
 </li>
 <li>
 <p>Upload　書き込む</p>
+</li>
+<li>
+<p>USBケーブルを外す</p>
 </li>
 </ul>
 </li>
@@ -1434,9 +1437,40 @@
 <p>RESETが一瞬で完了するようになる。8秒かからない。ダブルクリックで8秒。</p>
 </li>
 <li>
-<p>RX・TXのLEDが常時点灯するようになる</p>
+<p>RX・TXのLEDが常時点灯するようになる、内蔵LED緑色がふわふわと点滅する。</p>
 </li>
 </ul>
+</li>
+<li>
+<p>使用する</p>
+<ul>
+<li>
+<p>スケッチを用意する（2024.9 USB_CoMBI_v4）</p>
+</li>
+<li>
+<p>Tools&gt; Board&gt; SparkFun AVR boards&gt; SparkFun Pro Micro を選ぶ</p>
+</li>
+<li>
+<p>Tools&gt; Ports&gt; いつもの /dev/cu.usb... を選ぶ</p>
+</li>
+<li>
+<p>Tools&gt; Processor&gt; ATmega32U4(5V,16MHz) を選ぶ</p>
+</li>
+<li>
+<p>Tools&gt; Programmer&gt; いつもの　AVRISP mkII を選ぶ</p>
+</li>
+<li>
+<p>書き込む　</p>
+</li>
+</ul>
+<p>赤い文字で下記のように表示されたけど、microは正常に動作した。<br>microの状態は、TXとRXが点灯、内蔵LED緑はOFF、下面内蔵LED青は点灯（2024.9 v2.3.0）</p>
+<p><code>Connecting to programmer: .</code><br>
+<code>Found programmer: Id = "CATERIN"; type = S</code><br>
+<code>Software Version = 1.0; No Hardware Version given.</code><br>
+<code>Programmer supports auto addr increment.</code><br>
+<code>Programmer supports buffered memory access with buffersize=128 bytes.</code><br>
+<code>Programmer supports the following devices:</code><br>
+<code>Device code: 0x44</code><br></p>
 </li>
 </ol>
 <h2 id="references">References/参考</h2>
