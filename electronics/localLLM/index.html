@@ -1290,6 +1290,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#web-ui_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web UIにログインできない？
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1344,6 +1353,13 @@
 <li>Safariが立ち上がって、http://localhost:3000にアクセスする形で、WebUIが起動する。</li>
 <li>Select a model（llama3:70B, command-r-plus 104Bを、ollamaでインストールしておいた）</li>
 <li>会話する</li>
+</ol>
+<h2 id="web-ui_2">Web UIにログインできない？</h2>
+<ol>
+<li>Dockerで、コンテナ、イメージ、ボリュームのすべてから、WebUIを削除</li>
+<li>ターミナルからやり直す。docker run -d...（上記）</li>
+<li>Dockerのコンテナからlocalhostへ。アカウント登録作業をやり直す（上記）</li>
+<li>モデルは以前のままリストにでる。ollamaでダウンロードしたもの。</li>
 </ol>
 
 
