@@ -1272,6 +1272,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mac-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      MAC address
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      水温ログ
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1288,7 +1306,7 @@
 
 
 <h1 id="arduino-uno-r4-wifi">Arduino UNO R4 WiFi</h1>
-<p>2024.9.2 UNOを新調</p>
+<p>2024.9.2 UNOを新調、R4WiFi、2024.11.14 MAC</p>
 <h2 id="setup">Setup/初期設定</h2>
 <ol>
 <li>USB typeCでコンピュータに接続する</li>
@@ -1296,6 +1314,50 @@
 <li>ためしに、File&gt;Examples&gt;01.Basics&gt;Blink を開いて、書き込む。OK.</li>
 <li>出荷時のLEDデモに戻すには、File&gt;Examples&gt;LED_Matrix&gt;MatrixIntro を書き込む</li>
 </ol>
+<h2 id="mac-address">MAC address</h2>
+<ol>
+<li>https://forum.arduino.cc/t/finding-the-mac-address-of-the-arduino-uno-r4/1308027/6
+ここにあるコードをArduinoにアップロードする。シリアルモニタにて、通信速度をコードに記載の数値（115200 bps）に合わせて選ぶ。シリアルモニタのデフォルトは9600 bpsか。</li>
+</ol>
+<pre><code>    #include &lt;WiFiS3.h&gt;
+
+    void setup() {
+
+    Serial.begin(115200);
+    while (!Serial) ;
+    Serial.println(&quot;START&quot;);
+
+    WiFi.begin(&quot;dummy&quot;);
+
+    uint8_t mac[6];
+    WiFi.macAddress(mac);
+    Serial.print(&quot;Station MAC: &quot;);
+    printMacAddress(mac);
+    }
+
+    void loop() {
+    }
+
+    void printMacAddress(byte mac[]) {
+    for (int i = 0; i &lt; 6; i++) {
+        if (i &gt; 0) {
+        Serial.print(&quot;:&quot;);
+        }
+        if (mac[i] &lt; 16) {
+        Serial.print(&quot;0&quot;);
+        }
+        Serial.print(mac[i], HEX);
+    }
+    Serial.println();
+    }
+</code></pre>
+<ol>
+<li>シリアルモニタに表示される。コピペして、機関への申請等に利用する。</li>
+</ol>
+<p>上記とは別に、iPhoneのホットスポットに接続して、MACをみる方法も紹介されていたのでやってみたけど、フリーアプリ「Network Analyzer」はMACを表示できない。Apple社の方針らしい。</p>
+<h2 id="_1">水温ログ</h2>
+<p>これを作りたい。
+https://deviceplus.jp/arduino/arduino-uno-r4-wifi/</p>
 
 
 
