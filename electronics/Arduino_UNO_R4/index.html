@@ -1316,48 +1316,13 @@
 </ol>
 <h2 id="mac-address">MAC address</h2>
 <ol>
-<li>https://forum.arduino.cc/t/finding-the-mac-address-of-the-arduino-uno-r4/1308027/6
-ここにあるコードをArduinoにアップロードする。シリアルモニタにて、通信速度をコードに記載の数値（115200 bps）に合わせて選ぶ。シリアルモニタのデフォルトは9600 bpsか。</li>
-</ol>
-<pre><code>    #include &lt;WiFiS3.h&gt;
-
-    void setup() {
-
-    Serial.begin(115200);
-    while (!Serial) ;
-    Serial.println(&quot;START&quot;);
-
-    WiFi.begin(&quot;dummy&quot;);
-
-    uint8_t mac[6];
-    WiFi.macAddress(mac);
-    Serial.print(&quot;Station MAC: &quot;);
-    printMacAddress(mac);
-    }
-
-    void loop() {
-    }
-
-    void printMacAddress(byte mac[]) {
-    for (int i = 0; i &lt; 6; i++) {
-        if (i &gt; 0) {
-        Serial.print(&quot;:&quot;);
-        }
-        if (mac[i] &lt; 16) {
-        Serial.print(&quot;0&quot;);
-        }
-        Serial.print(mac[i], HEX);
-    }
-    Serial.println();
-    }
-</code></pre>
-<ol>
+<li><a href="https://forum.arduino.cc/t/finding-the-mac-address-of-the-arduino-uno-r4/1308027/7">Arduino Forum 2024.10.5 post #7</a>にあるコードをArduinoにアップロードする。シリアルモニタにて、通信速度をコードに記載の数値（115200 bps）に合わせて選ぶ。シリアルモニタのデフォルトは9600 bpsか</li>
 <li>シリアルモニタに表示される。コピペして、機関への申請等に利用する。</li>
 </ol>
 <p>上記とは別に、iPhoneのホットスポットに接続して、MACをみる方法も紹介されていたのでやってみたけど、フリーアプリ「Network Analyzer」はMACを表示できない。Apple社の方針らしい。</p>
 <h2 id="_1">水温ログ</h2>
 <p>これを作りたい。
-https://deviceplus.jp/arduino/arduino-uno-r4-wifi/</p>
+<a href="https://deviceplus.jp/arduino/arduino-uno-r4-wifi/">Devise Plus 2024.10.28</a></p>
 
 
 
