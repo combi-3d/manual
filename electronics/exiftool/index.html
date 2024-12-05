@@ -1320,6 +1320,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSVをエクセルでながめる
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1341,7 +1350,7 @@
 <p>https://exiftool.org</p>
 <h2 id="terminalapp">Terminal.app</h2>
 <p>cdで、フォルダまで行く。画像上でcmd+iでパス（フォルダ名まで）をコピーしてcdで指定する</p>
-<h2 id="1-csv">方法１　 csvファイルとして保存</h2>
+<h2 id="1-csv">方法１ csvファイルとして保存</h2>
 <p>exiftool -common -csv *.JPG  &gt; out.csv</p>
 <pre><code>基本的な１３項目だけが出力される。
 </code></pre>
@@ -1352,6 +1361,12 @@
 <p>exiftool -s *.JPG | pbcopy</p>
 <pre><code>その後なにかしらにペーストする。すべての情報が表示される。フォルダ内の画像分、列記される。
 </code></pre>
+<h2 id="csv">CSVをエクセルでながめる</h2>
+<p>時刻は、DateTimeOriginalという項目で、形式はyyyy<img alt="Ⓜ" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/24c2.svg" title=":m:" />d h<img alt="🇲🇲" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f1f2-1f1f2.svg" title=":mm:" />ssになる。差分（切片を取っていた時間）を知りたい時、エクセル関数で年月日が入っていると計算できない。そこで、いったん時刻だけを抽出してから差分をとる。
+1. =MID(E2, 12, 8) E列2行目で、12個目から8個の文字を抽出する。
+1. =N3-N2 ふつうの引き算。N列3行目から2行目を引く
+1. =COUNTIF(O3:O251, "&gt;=0:00:10") O列の3行目から251行目（このときは250枚の連続画像）にある差分の値のうち、10秒以上間隔があいた回数をかぞえる。
+1. または、書式設定で、10秒以上空いたところに色を付ける、などを施す。</p>
 
 
 
