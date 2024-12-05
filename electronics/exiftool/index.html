@@ -20,7 +20,7 @@
     
     
       
-        <title>画像情報EXIFをCSVへ - Manual of CoMBI</title>
+        <title>Output EXIF as CSV/画像情報EXIFをCSVへ - Manual of CoMBI</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exifcsv" class="md-skip">
+        <a href="#output-exif-as-csvexifcsv" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              画像情報EXIFをCSVへ
+              Output EXIF as CSV/画像情報EXIFをCSVへ
             
           </span>
         </div>
@@ -1285,9 +1285,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#install-exiftool" class="md-nav__link">
     <span class="md-ellipsis">
-      インストール
+      Install exiftool/インストール
     </span>
   </a>
   
@@ -1296,34 +1296,40 @@
         <li class="md-nav__item">
   <a href="#terminalapp" class="md-nav__link">
     <span class="md-ellipsis">
-      Terminal.app
+      Terminal.app/ターミナル
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Terminal.app/ターミナル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option1-save-as-csvcsv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option1 Save as csv/CSVファイルとして保存
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#1-csv" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#option2-copy-as-text" class="md-nav__link">
     <span class="md-ellipsis">
-      方法１ csvファイルとして保存
+      Option2 Copy as text/テキストとしてクリップボードにコピー
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      方法２ テキストとしてクリップボードにコピー
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#csv" class="md-nav__link">
+  <a href="#view-csv-by-excelcsv" class="md-nav__link">
     <span class="md-ellipsis">
-      CSVをエクセルで解析する
+      View CSV by Excel/エクセルでCSVを解析する
     </span>
   </a>
   
@@ -1344,24 +1350,21 @@
                   
 
 
-<h1 id="exifcsv">画像情報EXIFをCSVへ</h1>
+<h1 id="output-exif-as-csvexifcsv">Output EXIF as CSV/画像情報EXIFをCSVへ</h1>
 <p>画像情報をCSVに出力する方法。連続写真の撮影時刻を知りたい、切片を取った時刻と画像を知りたいとき。exiftoolというツール、ターミナル、エクセルを使う。（2024.12.5 学会後、連続撮影後）</p>
-<h2 id="_1">インストール</h2>
-<p>https://exiftool.org</p>
-<h2 id="terminalapp">Terminal.app</h2>
+<h2 id="install-exiftool">Install exiftool/インストール</h2>
+<p><a href="https://exiftool.org">https://exiftool.org</a></p>
+<h2 id="terminalapp">Terminal.app/ターミナル</h2>
 <p>cdで、連続画像が入っているフォルダまで行く。画像上でcmd+iでパス（フォルダ名まで）をコピーしてcdで指定する</p>
-<h2 id="1-csv">方法１ csvファイルとして保存</h2>
+<h3 id="option1-save-as-csvcsv">Option1 Save as csv/CSVファイルとして保存</h3>
 <p><code>exiftool -common -csv *.JPG  &gt; out.csv</code></p>
-<pre><code>おなじフォルダ内に、out.csvファイルができる。基本的な13項目だけが出力される。これで十分。
-</code></pre>
+<p>おなじフォルダ内に、out.csvファイルができる。基本的な13項目だけが出力される。これで十分。</p>
 <p><code>exiftool -csv *.JPG &gt; out.csv</code></p>
-<pre><code>330項目すべてが出力される。
-</code></pre>
-<h2 id="2">方法２ テキストとしてクリップボードにコピー</h2>
+<p>330項目すべてが出力される。</p>
+<h3 id="option2-copy-as-text">Option2 Copy as text/テキストとしてクリップボードにコピー</h3>
 <p><code>exiftool -s *.JPG | pbcopy</code></p>
-<pre><code>その後なにかしらにペーストして利用する。すべての情報が表示される。フォルダ内の画像分、列記される。連続画像には不向き。
-</code></pre>
-<h2 id="csv">CSVをエクセルで解析する</h2>
+<p>その後なにかしらにペーストして利用する。すべての情報が表示される。フォルダ内の画像分、列記される。連続画像には不向き。</p>
+<h2 id="view-csv-by-excelcsv">View CSV by Excel/エクセルでCSVを解析する</h2>
 <p>時刻は、DateTimeOriginalという項目にあり、形式は<code>yyyy:m:d h:mm:ss</code>で表示される。差分（切片を取っていた時間）を知りたい時、エクセル関数で年月日が入っていると計算できない。そこで、いったん時刻だけを抽出してから差分をとる。</p>
 <ol>
 <li>時刻だけ抽出。=MID(E2, 12, 8) E列2行目で、12個目から8個の文字を抽出する。</li>
