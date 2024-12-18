@@ -2195,7 +2195,7 @@ OS付属の機能を使用するメリットは、あらゆる動きが録画で
 </li>
 </ol>
 <p><span style="color:#444C99;">
-<br>ffmpegは、フレーム画像（連続 PNG）から動画に変換する追加機能。3D slicerアプリは、いったんPNG連続画像を生成してから、動画へと変換する。ffmpegをインストールしないで動画書き出しをやろうとすると、下記の手順ステップ2、▽<code>Advance</code>で赤字エラー<code>Set Valid ffmpeg executable path!</code>が現れる。その横にリンク<code>Help...</code>ができる。かつては、それをクリックすると3D Slicerサイトの解説ページにいけたが、2022.3 v4.11 ではリンクが微妙に切れている。こちらの<a href=https://slicer.readthedocs.io/en/latest/user_guide/modules/screencapture.html#setting-up-ffmpeg>新しい解説ページ</a>に従ってインストールする。ここではMacの手順を転記する。Intel MacとM1 macでは、ffmpegへのパスが異なるので注意。インストールには時間がかかる。Xcodeアップデート30分、homebrew30分、ffmpeg15分、計75分（自宅wifi夜）、大学LANでも合計16分間かかった。
+<br>ffmpegは、フレーム画像（連続 PNG）から動画に変換する追加機能。3D slicerアプリは、いったんPNG連続画像を生成してから、動画へと変換する。ffmpegをインストールしないで動画書き出しをやろうとすると、下記の手順ステップ2、▽<code>Advance</code>で赤字エラー<code>Set Valid ffmpeg executable path!</code>が現れる。その横にリンク<code>Help...</code>ができる。かつては、それをクリックすると3D Slicerサイトの解説ページにいけたが、2022.3 v4.11 ではリンクが微妙に切れている。こちらの<a href=https://slicer.readthedocs.io/en/latest/user_guide/modules/screencapture.html#setting-up-ffmpeg>新しい解説ページ</a>に従ってインストールする。2024.12 v5.6.2ではリンクが訂正されていた。ここではMacの手順を転記する。Intel MacとM1 macでは、ffmpegへのパスが異なるので注意。インストールには時間がかかる。Xcodeアップデート30分、homebrew30分、ffmpeg15分、計75分（自宅wifi夜）、大学LANでも合計16分間かかった。
 </span></p>
 <ol>
 <li><span style="color:#444C99;">アプリ<code>Terminal</code>を起動</span></li>
@@ -2207,9 +2207,9 @@ OS付属の機能を使用するメリットは、あらゆる動きが録画で
 </ol>
 </li>
 <li><span style="color:#444C99;">M1 macの場合（インストール先やバージョンが違うらしい 2022.5.26)</span><ol>
-<li><span style="color:#444C99;">Terminal.appで、<code>brew info ffmpeg</code>をうって、ffmpegへのパスを探すと、<code>/opt/homebrew/Cellar/ffmpeg/5.0.1</code>と表示される</span></li>
+<li><span style="color:#444C99;">Terminal.appで、<code>brew info ffmpeg</code>をうって、ffmpegへのパスを探すと、<code>/opt/homebrew/Cellar/ffmpeg/5.0.1</code>と表示される（2022）。<code>/opt/homebrew/Cellar/ffmpeg/7.1_3</code>（2024）その時々のバージョンによって異なる</span></li>
 <li><span style="color:#444C99;">3D slicer.appで、<code>ffmpeg executable</code>の欄に上記の表示されたアドレスをコピペ</span></li>
-<li><span style="color:#444C99;"><code>...</code>マークを押して別ウィンドウ。実行ファイルを探すと<code>/opt/homebrew/Cellar/ffmpeg/5.0.1/bin/ffmpeg</code>にあった！<code>Open</code>ボタンをおして指定する</span></li>
+<li><span style="color:#444C99;"><code>...</code>マークを押すと別ウィンドウが開く。フォルダbinのなかの実行ファイルffmpegを探すと<code>/opt/homebrew/Cellar/ffmpeg/5.0.1/bin/ffmpeg</code>にあった！これを選んで<code>Open</code>ボタンをおして指定する</span></li>
 <li><span style="color:#444C99;">これで動画書き出しができるようになります。</span></li>
 </ol>
 </li>
