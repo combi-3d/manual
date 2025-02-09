@@ -1532,7 +1532,7 @@
 
 <h1 id="kicad">KiCad</h1>
 <p>KiCad is a donation-ware to design circuit and PCB. KiCad was released in 1992 by a researcher; Jean-Pierre Charras in France. In 2013 the CERN started contributing to improve KiCad. KiCad is compatible with Win, Mac and Linux.</p>
-<p>(2023 KiCAD7 install, 2024.2.23-25 KiCAD7.0.8, 2024.7 8.0.4)</p>
+<p>(2023 KiCAD7 install, 2024.2.23-25 KiCAD7.0.8, 2024.7 8.0.4, 2025.2 8.0.4)</p>
 <p><span style="color:#444C99;">2021年からKiCadでCoMBIの回路やプリント基板をデザインしています。それ以前はCADLUS（Winのみ）を使っていましたが、私がWindows環境から離れつつあったため、KiCadへ移行しました。KiCadは1992年にフランスの研究者によってリリースされ、改良が続けられています。2013年からは欧州原子核研究機構が開発に参加するようになり、改良がより進むようになりました。KiCadは寄付または無料で利用できます。Win Mac Linuxに対応。2021年v6から日本語に対応。</span></p>
 <h2 id="installation">Installation/インストール</h2>
 <p>(2023 KiCad v7, 2024 v8)</p>
@@ -1594,10 +1594,71 @@ KiCadアプリをアップデートすると、追加したライブラリへの
 <li>ファイル *.kicad_schをダブルクリックして、回路図エディタを起動する</li>
 <li>回路図上の部品記号は「シンボル」、PCB上で部品の形状は「フットプリント」と呼ぶ。</li>
 <li>前項でのシンボルとフットプリントのライブラリを揃えておくこと</li>
-<li>ボタン「シンボルエディター　シンボルを作成削除編集」より、ウィンドウ「シンボルエディター」を開く。リストから使用したい部品を探し、ボタン「回路図にシンボルを追加」。</li>
-<li>もしくは、ボタン「シンボルを追加」より、ウィンドウ「シンボルを選択」を開く。リストから使用したい部品を探して「OK」。</li>
-<li>もしくは、ボタン「シンボルライブラリブラウザー　シンボルライブラリを参照する」より、ウィンドウ「シンボルライブラリブラウザー」を開く。リストから使用したい部品を探し、ボタン「回路図にシンボルを追加」。</li>
-<li>不要???(ボタン「フットプリント割り当てツール」では、部品一覧が出てくる。こちらのほうが便利。個々の部品のフットプリントを一つづつ設定する)</li>
+<li>
+<p><img alt="add symbol" src="../img/circuit_icon_add_symbol.jpg" title="add_symbol" />ボタン「シンボルを追加」より、ウィンドウ「シンボルを選択」を開く。リストから使用したい部品を探し、「OK」で回路に追加する。
+シンボルにフットプリントが指定されていない場合、プルダウンリストから適切なフットプリントを選んでから、「OK」を押して、回路に追加する。</p>
+<table>
+<thead>
+<tr>
+<th>Parts</th>
+<th>Symbol</th>
+<th>Foot print</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DC-DCconverter</td>
+<td>R-78E9.0-0.5</td>
+<td>Converter_DCDC:Converter_DCDC_RECOM_R-78E-0.5_THT</td>
+<td>Recomで検索</td>
+</tr>
+<tr>
+<td>DC-DCconverter</td>
+<td>R-78C5.0-1.0</td>
+<td>Converter_DCDC:Converter_DCDC_RECOM_R-78E-0.5_THT</td>
+<td></td>
+</tr>
+<tr>
+<td>Resistor</td>
+<td>Resistor</td>
+<td>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal</td>
+<td>小型1/4W抵抗、ピッチ5.08mm</td>
+</tr>
+<tr>
+<td>Resistor</td>
+<td>Resistor</td>
+<td>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</td>
+<td>通常サイズの1/2W抵抗</td>
+</tr>
+<tr>
+<td>Capacitor</td>
+<td>C</td>
+<td>Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm</td>
+<td>0.1µF、小さめのコンデンサ</td>
+</tr>
+<tr>
+<td>Capacitor</td>
+<td>C</td>
+<td>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm</td>
+<td>10µF</td>
+</tr>
+<tr>
+<td>Connecter</td>
+<td>Conn_01x02_Pin</td>
+<td>Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</td>
+<td>など</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>もしくは、「シンボルエディター　シンボルを作成削除編集」<img alt="add symbol" src="../img/circuit_icon_symbol_editor.jpg" title="add_symbol" />からもできる。ウィンドウ「シンボルエディター」を開き、使用したい部品を探し、ボタン「回路図にシンボルを追加」を押す</li>
+<li>もしくは、「シンボルライブラリブラウザー　シンボルライブラリを参照する」<img alt="add symbol" src="../img/circuit_icon_symbol_library_browser.jpg" title="add_symbol" />からもできる。ウィンドウ「シンボルライブラリブラウザー」を開き、使用したい部品を探し、ボタン「回路図にシンボルを追加」を押す</li>
+</ol>
+</li>
+<li>
+<p>部品を置き終えたら、結線する。ツール「ワイヤーを追加」<img alt="add wire" src="../img/circuit_icon_add_wire.jpg" title="add_wire" />を使用する。結線中の作業取り消しは、ESC。結線後にワイヤーを削除するときは、選択ツールで選択してdelete。</p>
+</li>
 </ol>
 <h2 id="pcb-parts-and-circuit">PCB, parts and circuit/基板をデザインする</h2>
 <ol>
