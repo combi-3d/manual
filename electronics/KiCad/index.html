@@ -1560,17 +1560,17 @@
 <li>シンボルライブラリを追加<ol>
 <li>設定＞シンボルライブラリを管理</li>
 <li>グローバルライブラリに追加する「＋」</li>
-<li>ニックネーム：「Arduino」</li>
+<li>ニックネーム: 「Arduino」</li>
 <li>ライブラリのパス：/Users/(user)/Documents/KiCad/kicad-lib-arduino-main/Arduino.lib</li>
-<li>ライブラリ形式：Legacy（忘れても自動でLegacyになる）</li>
+<li>ライブラリ形式: Legacy（忘れても自動でLegacyになる）</li>
 </ol>
 </li>
 <li>フットプリントライブラリを追加<ol>
 <li>設定＞フットプリントライブラリを管理</li>
 <li>グローバルライブラリに追加する「＋」</li>
-<li>ニックネーム：「Arduino」</li>
+<li>ニックネーム: 「Arduino」</li>
 <li>ライブラリのパス：/Users/(user)/Documents/KiCad/kicad-lib-arduino-main/Arduino.pretty</li>
-<li>ライブラリ形式：KiCad（デフォルトのまま）</li>
+<li>ライブラリ形式: KiCad（デフォルトのまま）</li>
 </ol>
 </li>
 </ol>
@@ -1578,9 +1578,9 @@
 </ol>
 <blockquote>
 <p>[NOTE]
-KiCadアプリをアップデートすると、追加したライブラリへのリンクが切れる場合がある。上記の設定３種を改めて行うこと。書類 /Document/KiCad/ に置いたライブラリファイルは残っているはず。パソコンを変えない限り。</p>
+KiCadアプリをアップデートすると、追加したライブラリへのリンクが切れる場合がある。上記の設定3種を改めて行うこと。書類 /Document/KiCad/ に置いたライブラリファイルは残っているはず。パソコンを変えない限り。</p>
 <p>[NOTE]
-回路図エディタにも、「設定（メニューバーの右から２つめ）＞　シンボルラブラリを管理　＞　フォルダマーク」がある。Openできるフォルダやファイルならいくつでもやっておく。PCBエディタにも、「設定（メニューバーの右から２つめ）＞　フットプリントラブラリを管理」がある。同様に設定できる。KiCadのはじめのウィンドウの「設定」のほうが3種ともあるので便利。</p>
+回路図エディタにも、「設定（メニューバーの右から２つめ）&gt; シンボルラブラリを管理 &gt; フォルダマーク」がある。Openできるフォルダやファイルならいくつでもやっておく。PCBエディタにも、「設定（メニューバーの右から2つめ）&gt; フットプリントラブラリを管理」がある。同様に設定できる。KiCadのはじめのウィンドウの「設定」のほうが3種ともあるので便利。</p>
 </blockquote>
 <p><span style="color:#444C99;"></span></p>
 <h2 id="new-project">New project/プロジェクトを新規作成</h2>
@@ -1649,12 +1649,26 @@ KiCadアプリをアップデートすると、追加したライブラリへの
 <td>Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical</td>
 <td>など</td>
 </tr>
+<tr>
+<td>LED</td>
+<td>LED</td>
+<td>LED_THT:LED_D5.0mm</td>
+<td>デフォルトのフットプリントがありません、とでるので適当なものを選ぶ</td>
+</tr>
+<tr>
+<td>1. もしくは、「シンボルエディター シンボルを作成削除編集」<img alt="add symbol" src="../img/circuit_icon_symbol_editor.jpg" title="add_symbol" />からもできる。ウィンドウ「シンボルエディター」を開き、使用したい部品を探し、ボタン「回路図にシンボルを追加」を押す</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1. もしくは、「シンボルライブラリブラウザー シンボルライブラリを参照する」<img alt="add symbol" src="../img/circuit_icon_symbol_library_browser.jpg" title="add_symbol" />からもできる。ウィンドウ「シンボルライブラリブラウザー」を開き、使用したい部品を探し、ボタン「回路図にシンボルを追加」を押す</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 </tbody>
 </table>
-<ol>
-<li>もしくは、「シンボルエディター　シンボルを作成削除編集」<img alt="add symbol" src="../img/circuit_icon_symbol_editor.jpg" title="add_symbol" />からもできる。ウィンドウ「シンボルエディター」を開き、使用したい部品を探し、ボタン「回路図にシンボルを追加」を押す</li>
-<li>もしくは、「シンボルライブラリブラウザー　シンボルライブラリを参照する」<img alt="add symbol" src="../img/circuit_icon_symbol_library_browser.jpg" title="add_symbol" />からもできる。ウィンドウ「シンボルライブラリブラウザー」を開き、使用したい部品を探し、ボタン「回路図にシンボルを追加」を押す</li>
-</ol>
 </li>
 <li>
 <p>部品を置き終えたら、結線する。ツール「ワイヤーを追加」<img alt="add wire" src="../img/circuit_icon_add_wire.jpg" title="add_wire" />を使用する。結線中の作業取り消しは、ESC。結線後にワイヤーを削除するときは、選択ツールで選択してdelete。</p>
