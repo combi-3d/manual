@@ -1566,7 +1566,7 @@
 </ol>
 </li>
 <li>フットプリントライブラリを追加<ol>
-<li>設定＞フットプリントライブラリを管理(v8 2024)。デザインブロックライブラリを管理(v9 2025)ではない。ツール＞フットプリントを割り当て＞ボタン、フットプリントライブラリを管理、へ移った(v9)。</li>
+<li>設定＞「フットプリントライブラリを管理」(v8 2024)。「デザインブロックライブラリを管理」(v9 2025)ではない。ツール＞「フットプリントを割り当て」＞「フットプリントライブラリを管理」 <img alt="footprint_manage" src="../img/circuit_icon_footprint_library_manage.png" title="footprint_manage" />へ移った(v9)。</li>
 <li>グローバルライブラリに追加する「＋」</li>
 <li>ニックネーム: 「Arduino」</li>
 <li>ライブラリのパス：/Users/(user)/Documents/KiCad/kicad-lib-arduino-main/Arduino.pretty</li>
@@ -1672,7 +1672,13 @@ KiCadアプリをアップデートすると、追加したライブラリへの
 <p>部品を区別するため、名称を記入する。例えば、緑LEDなら、リファレンス:D1、値:LEDとあったのを、リファレンス:Green、値:LEDとする。部品（シンボル）をクリックすると、左にプロパティが表示され、そこに記入する。</p>
 </li>
 <li>部品を置き終えたら、結線する。ツール「ワイヤーを追加」<img alt="add wire" src="../img/circuit_icon_add_wire.jpg" title="add_wire" />を使用する。結線中の作業取り消しは、ESC。結線後にワイヤーを削除するときは、選択ツールで選択してdelete。</li>
-<li>結線が終わったら、ERC(Electrical rule check)にかける。ボタン。</li>
+<li>結線が終わったら、ERC(Electrical rule check)にかける。<img alt="ERC" src="../img/circuit_icon_ERC.png" title="ERC" /><ol>
+<li>警告: フットプリントがない。上記ライブラリを追加</li>
+<li>エラー：重複: 抵抗やコンデンサの名称を区別する</li>
+<li>警告＆エラー: ゴミ配線や結線忘れ</li>
+<li>エラー: 電源のIN/OUTやArduino PINのIN/OUTのエラーはそのまま。</li>
+</ol>
+</li>
 </ol>
 <h2 id="pcb-parts-and-circuit">PCB, parts and circuit/基板をデザインする</h2>
 <ol>
@@ -1680,7 +1686,7 @@ KiCadアプリをアップデートすると、追加したライブラリへの
 <li>ボタン「回路図で行われた更新で基板を更新」</li>
 <li>すべての部品が現れる</li>
 <li>配置する</li>
-<li>配線する　表はF.Cu、裏はB.Cu　線幅は1mm/1A、シグナルは0.15〜0.5らしい。銅箔はデフォルト0.035 mm</li>
+<li>配線する。表はF.Cu、裏はB.Cu 線幅は1mm/1A、シグナルは0.15〜0.5らしい。銅箔はデフォルト0.035 mm</li>
 <li>シルク 表はF.SiikScreen、裏はB.SilkScreen</li>
 <li>ベタ（まだやったことない）</li>
 </ol>
