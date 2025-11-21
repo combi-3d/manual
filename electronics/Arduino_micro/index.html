@@ -1452,7 +1452,7 @@
 
 
 <h1 id="arduino-micro-a-modified-bootloader">Arduino micro, a modified bootloader</h1>
-<p>(231020、240211、240217 HPへ、240902)</p>
+<p>(231020、240211、240217 HPへ、240902、251121 10µF追記)</p>
 <p>The official bootloader of the Arduino micro takes 8 seconds to reset, because it reloads both the bootloader and the user code. SparkFun distributes "Pro micro" with a modified bootloader which reset a board within 0,75 sec. Arduino micro is compatible with SparkFun Pro micro, so it can share the modified bootloader.</p>
 <p>Arduino microの公式デフォルトブートローダでは、リセットに８秒かかる。BootloaderとUserCodeの両方を読み直すためらしい。SpatkFun社は、互換機"SparkFun Pro micro"を販売しており、改良されたBootloaderを配布している。リセットボタンを押す（シングルクリックする）とUserCodeだけ読み直し0.75secで再起動し、ダブルクリックでbootloaderから読み直す仕様になっている。Arduino microは、SparkFun Pro microとの互換性をもつので、改良されたbootloaderに書き換えられる。</p>
 <h2 id="preparations">Preparations/準備</h2>
@@ -1556,6 +1556,7 @@
 </tbody>
 </table>
 <ul>
+<li>Arduino UNO(Programmer)で、ResetとGNDをコンデンサ10µFでつなげる（2025.11追記　書き込めないエラーがでたとき、調べたこと）</li>
 <li>Arduino UNO(Programmer)を、PCにUSBでつなげる</li>
 </ul>
 </li>
